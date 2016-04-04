@@ -1,0 +1,14 @@
+* verificar o caminho da imagem que esta sendo exportada... esta indo o nome da imagem source
+* verificar o isActive dos componentes... é necessário?
+* verificar o data do texturecomponent... dá erro de filedescriptor no android
+* effects j3md nao estão sendo carregados no android
+
+
+* tutorial de gradle com android: http://www.vogella.com/tutorials/AndroidBuild/article.html
+
+
+12-24 18:45:16.071: E/com.jme3.app.AndroidHarness(20789): com.jme3.renderer.RendererException: OpenGL ES does not support 32-bit index buffers.Split your models to avoid going over 65536 vertices.
+
+
+war of honor
+at all costs

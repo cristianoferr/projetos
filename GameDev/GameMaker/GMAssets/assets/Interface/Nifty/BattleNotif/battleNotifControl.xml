@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<nifty-controls>
+
+<controlDefinition name="battleNotif2" controller="com.cristiano.jme3.ui.battleNotif.BattleNotifControl">
+<panel width="100%" height="100%" childLayout="absolute" >
+<text id="#notif" font="Interface/Fonts/Default.fnt" textHAlign="center" textVAlign="bottom" wrap="true" >
+<effect>
+<onCustom customKey="damage" name="move" mode="in" direction="top" length="1000" inherit="true"/>
+<onCustom customKey="damage" name="fade" start="#ff" end="#00" length="1000" />
+<onCustom customKey="shout" name="fade" start="#ff" end="#00" length="1000" />
+</effect>
+</text>
+</panel>
+</controlDefinition>
+
+<controlDefinition name="battleNotif" controller="com.cristiano.jme3.ui.battleNotif.BattleNotifControl">
+<panel width="100%" height="100%" childLayout="absolute" >
+<text id="#notif" font="Interface/Fonts/Default.fnt" textHAlign="center" textVAlign="top" wrap="true" >
+<effect>
+<onCustom customKey="damage" name="battleNotif" post="true" length="800" />
+<onCustom customKey="damage" name="textSize" startSize="0.1" endSize="1.0" length="100" />
+<onCustom customKey="damage" name="alphaHide"  length="400" />
+ 
+<onCustom customKey="critical" name="battleNotif" post="true" length="800" />
+<onCustom customKey="critical" name="textSize" startSize="0.1" endSize="2.0" length="100" />
+ 
+<onCustom customKey="shout" name="battleNotif" post="true" length="1000" />
+<onCustom customKey="shout" name="textSize" startSize="0.1" endSize="1.0" length="100" />
+</effect>
+</text>
+</panel>
+</controlDefinition>
+
+<controlDefinition name="battleNotif3" controller="com.cristiano.jme3.ui.battleNotif.BattleNotifControl">
+<panel width="100%" height="100%" childLayout="absolute" >
+<text id="#notif" font="Interface/Fonts/Default.fnt" textHAlign="center" textVAlign="top" wrap="true" >
+<effect>
+<onCustom customKey="damage" name="battleNotif" post="true" length="800" />
+<onCustom customKey="damage" name="move" mode="out" direction="top" length="300" startDelay="100" />
+<onCustom customKey="damage" name="textSize" startSize="0.1" endSize="1.0" length="100" neverStopRendering="true" />
+ 
+<onCustom customKey="critical" name="battleNotif" post="true" length="800" />
+<onCustom customKey="critical" name="move" mode="out" direction="top" length="100" startDelay="100" />
+<onCustom customKey="critical" name="textSize" startSize="0.1" endSize="2.0" length="100" neverStopRendering="true" />
+ 
+<onCustom customKey="shout" name="battleNotif" post="true" length="1000" />
+<onCustom customKey="shout" name="move" mode="out" direction="top" length="500" startDelay="0" />
+<onCustom customKey="shout" name="textSize" startSize="0.1" endSize="1.0" length="500" />
+</effect>
+</text>
+</panel>
+</controlDefinition>
+</nifty-controls>

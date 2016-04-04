@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.3">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>432</x>
+      <y>216</y>
+      <w>168</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Cyclone
+--
+EntityFactory entFac
+Vector&lt;SpaceGravity&gt; gravityEmitters
+ForceRegistry registry
+ModelContainer modelContainer
+Steering steering
+ContactResolver resolver
+CollisionData cData
+BVHNode bvnode
+--
++registerBody(RigidBody cp)
++update()
++generateContacts()
+-ApplyGravityEmitters(RigidBody receiver,float duration)
++update(float duration)
+-generateCollision(int i, RigidBody body)
+-fixRotation(int i)
+-verifyCollision(RigidBody b1,int ini)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>512</x>
+      <y>128</y>
+      <w>120</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>ModelContainer
+--
+objDatas (GeomOBJ)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>672</x>
+      <y>152</y>
+      <w>80</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>EntityFactory
+--
+items (RigidBody)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>576</x>
+      <y>232</y>
+      <w>136</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;120;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>576</x>
+      <y>160</y>
+      <w>112</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;80;96;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>912</x>
+      <y>232</y>
+      <w>128</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>ForceGenerator	
+--
+particle (RigidBody)
+fg (ForceGenerator)
+--
+updateForce(RigidBody,duration)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>864</x>
+      <y>248</y>
+      <w>64</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;32;48;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>696</x>
+      <y>224</y>
+      <w>192</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>ForceRegistry
+--
+registrations (ForceRegistrator)
+--
+add(RigidBody,ForceGenerator)
+remove(Rigidbody,ForceGenerator)
+clear()
+updateForces(duration)
+{innerclass
+ForceRegistrator
+--
+particle (RigidBody)
+fg (ForceGenerator)
+innerclass}
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>560</x>
+      <y>152</y>
+      <w>48</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;64;32;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>440</x>
+      <y>456</y>
+      <w>152</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>Steering
+--
+actuators (Actuator)
+groups (ActuatorGroup)
+--
++addGroup(String name, ActuatorGroup ag)
++addActuator(Vector3 position,Vector3 normal)
++initializeThrusters()
++updateForce(RigidBody body, double duration)
+-updateForceFromTensor(RigidBody body, double duration,Matrix3 tensor)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>480</x>
+      <y>392</y>
+      <w>72</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>56;24;24;64</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>696</x>
+      <y>448</y>
+      <w>208</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Actuator
+--
+Vector3 orientation,position
+--
++applyForce(RigidBody body,double force)
++activate(RigidBody body,double force)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>568</x>
+      <y>464</y>
+      <w>144</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;32;128;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>696</x>
+      <y>544</y>
+      <w>208</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>ActuatorGroup
+--
+Vector&lt;Actuator&gt; slots
+String type
+--
++addSlot(Actuator s)
++activate(RigidBody body,double force)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>568</x>
+      <y>536</y>
+      <w>144</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;128;32</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>320</x>
+      <y>160</y>
+      <w>104</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>ContactResolver
+--
+--
++resolveContacts(Vector&lt;Contact&gt; contacts,double duration)
+-prepareContacts(Vector&lt;Contact&gt; contacts,double duration)
+-adjustVelocities(Vector&lt;Contact&gt; c,double duration)
+-adjustPositions(Vector&lt;Contact&gt; c,double duration)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>344</x>
+      <y>184</y>
+      <w>104</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>88;128;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>256</x>
+      <y>352</y>
+      <w>104</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>CollisionData
+--
+Vector&lt;Contact&gt; contacts
+--
++reset(int maxContacts)
+addContacts(Contact contact)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>224</x>
+      <y>440</y>
+      <w>168</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Contact
+--
+RigidBody body[]
+Vector3 particleMovement[]
+Vector3 contactPoint
+Vector3 contactNormal
+--
++setBodyData(RigidBody one, RigidBody two,double friction, double restitution)
+calculateInternals(double duration)
+calculateSeparatingVelocity()
+swapBodies()
+matchAwakeState()
+calculateDesiredDeltaVelocity(double duration)
+calculateLocalVelocity(int bodyIndex, double duration)
+calculateContactBasis()
+applyVelocityChange(Vector3 velocityChange[], Vector3 rotationChange[])
+applyPositionChange(Vector3 linearChange[],Vector3 angularChange[],double penetration)
+-resolveVelocity(double duration)
+-resolveInterpenetration(double duration)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>312</x>
+      <y>296</y>
+      <w>136</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120;24;24;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>280</x>
+      <y>376</y>
+      <w>40</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;64</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>144</x>
+      <y>112</y>
+      <w>120</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>BVHNode
+--
+BVHNode children[2]
+BoundingSphere volume
+RigidBody body
+BVHNode parent
+--
++removeThis()
+isLeaf()
+getPotentialContacts(PotentialContact contacts, int limit)
++insert(RigidBody body,  BoundingSphere volume)
+overlaps( BVHNode other)
++getPotentialContactsWith( BVHNode other, PotentialContact contacts, int limit)
++recalculateBoundingVolume(boolean recurse)
++report(String token)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>40</x>
+      <y>120</y>
+      <w>80</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>PotentialContact
+--
+RigidBody body[2]
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>112</y>
+      <w>208</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>192;224;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>48</x>
+      <y>264</y>
+      <w>120</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>/BoundingVolumeClass/
+--
+Vector3 centre
+--
++overlaps( BoundingVolumeClass other)
++getSize()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>24</x>
+      <y>344</y>
+      <w>104</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>56;24;56;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>56</x>
+      <y>424</y>
+      <w>80</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>BoundingSphere
+--
+RigidBody body[2]
+--
++getGrowth( BoundingSphere other)
++getSize() </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>96</x>
+      <y>112</y>
+      <w>64</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>48;24;24;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>96</x>
+      <y>216</y>
+      <w>96</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80;24;24;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>88</x>
+      <y>584</y>
+      <w>120</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>RigidBody
+--
+Steering steering
+-RigidBody owner
+Matrix3 inverseInertiaTensor
+Vector3 position
+Quaternion orientation
+Vector3 velocity
+Vector3 rotation
+Matrix3 inverseInertiaTensorWorld
+Matrix4 transformMatrix
+Vector3 forceAccum
+Vector3 torqueAccum
+Vector3 acceleration
+Vector3 lastFrameAcceleration
+--
+-checkIfEmitsGravity()
++calculateDerivedData()
++integrate(double duration)
+fillsTransform(double matrix[])
++addForceAtPoint( Vector3 force,  Vector3 point)
++addForceAtBodyPoint( Vector3 force,  Vector3 point)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>184</x>
+      <y>568</y>
+      <w>272</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>256;24;24;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>120</x>
+      <y>216</y>
+      <w>120</w>
+      <h>384</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;368;96;304;104;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>0</x>
+      <y>80</y>
+      <w>744</w>
+      <h>576</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>720;72;728;24;24;32;24;560;88;560</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>184</x>
+      <y>272</y>
+      <w>792</w>
+      <h>416</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;400;176;344;736;392;776;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>360</x>
+      <y>640</y>
+      <w>160</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>/Geom/
+--
+PrimitiveType type
+Matrix4 offset
+--
++calculateMass()
++calculateInternals(RigidBody body)
+{innerclass
+PrimitiveType
+innerclass}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>352</x>
+      <y>712</y>
+      <w>104</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>64;24;48;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>336</x>
+      <y>768</y>
+      <w>120</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>GeomBox
+--
+Vector3 halfSize
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>328</x>
+      <y>856</y>
+      <w>120</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>GeomOBJ
+--
+ArrayList&lt;Tuple3&gt; verts
+ArrayList&lt;Tuple3&gt; indices
+Vector3 minPoint
+Vector3 maxPoint
+float scale
+--
+-loadModel(InputStream in)
++getVertices()
+-readTuple3(String line)
+-readFace(String line)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>344</x>
+      <y>792</y>
+      <w>96</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>56;24;48;64</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>184</x>
+      <y>680</y>
+      <w>192</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;176;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>424</x>
+      <y>152</y>
+      <w>216</w>
+      <h>760</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;744;200;712;192;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>512</x>
+      <y>768</y>
+      <w>96</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>GeomSphere
+--
+double radius
+--
++getRadius()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>464</x>
+      <y>712</y>
+      <w>96</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>24;24;80;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>160</x>
+      <y>536</y>
+      <w>80</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;48;64;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>176</x>
+      <y>184</y>
+      <w>176</w>
+      <h>272</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>72;256;24;96;160;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>248</x>
+      <y>272</y>
+      <w>104</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>/CollisionDetector/
+--
+--
++sphereAndHalfSpace(RigidBody sphere, CollisionPlane plane,CollisionData data)
++sphereAndSphere(RigidBody one,RigidBody two,CollisionData data)
++boxAndHalfSpace(RigidBody box,CollisionPlane plane,CollisionData data)
++boxAndBox(RigidBody one,RigidBody two,CollisionData data)
+contactPoint(Vector3 pOne,Vector3 dOne,double oneSize,Vector3 pTwo,Vector3 dTwo,double twoSize,boolean useOne)
+fillPointFaceBoxBox(RigidBody one,RigidBody two,Vector3 toCentre,CollisionData data,int best,double pen)
+penetrationOnAxis(RigidBody one,RigidBody two,Vector3 axis,Vector3 toCentre)
+transformToAxis(RigidBody box,Vector3 axis)
+tryAxis(RigidBody one,RigidBody two,Vector3 axis,Vector3 toCentre,int index)
++boxAndPoint(RigidBody box,Vector3 point,CollisionData data)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>328</x>
+      <y>288</y>
+      <w>120</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;24;104;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>88</x>
+      <y>280</y>
+      <w>176</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;304;160;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>272</x>
+      <y>296</y>
+      <w>56</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;56;40;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>960</x>
+      <y>344</y>
+      <w>80</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>SpaceGravity
+--
+RigidBody emiter
+--
++updateForce(RigidBody receiver, double duration)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>928</x>
+      <y>272</y>
+      <w>110</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>64;24;56;72</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1672</x>
+      <y>144</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Galactic
+--
+GameLogic gameLogic
+Sistema world
+--
++start()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1424</x>
+      <y>152</y>
+      <w>208</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>GameLogic
+--
+Sistema world
+ItemsController itemsController
+PhysicsLogicCyclone physicsSpace
+--
++initialize(Sistema world)
++update()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1608</x>
+      <y>144</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>64;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1256</x>
+      <y>152</y>
+      <w>128</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>PhysicsLogicCyclone
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>464</x>
+      <y>0</y>
+      <w>856</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;extends&gt;&gt;
+fg=red
+</panel_attributes>
+    <additional_attributes>32;216;24;48;840;32;840;152</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1360</x>
+      <y>160</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;64;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Interface</type>
+    <coordinates>
+      <x>1248</x>
+      <y>208</y>
+      <w>144</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>ItemHandler
+--
+createPhysicsFor( Item item )</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1272</x>
+      <y>320</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>/BasicHandler/
+--
+-GameLogic gameLogic
+-PhysicsItem itemPhysics
+-Item item
+--
++createPhysicsFor( Item item )</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1256</x>
+      <y>232</y>
+      <w>120</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;Implements&gt;&gt;</panel_attributes>
+    <additional_attributes>64;24;64;88</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,2362 @@
+//Defines
+
+//Blueprints
+@blueprint base
+	@domain type={all}
+	@output file='BluePrints.bpf'
+@end
+
+@blueprint GameFactories:base
+	@domain type+={gameData}
+@end
+
+@blueprint EntitiesGD:GameFactories
+	@domain type+={entity}
+@end
+
+@blueprint MobileEntitiesGD:EntitiesGD
+	@domain type+={mobile}
+@end
+
+@blueprint characterFactory:MobileEntitiesGD
+	@domain type+={mobile}
+	@property depth=3*$this.multiplier
+	@property height=0.5*$this.multiplier
+	@property meshFilter={}
+	@property meshTag={mesh mobile leaf $this.meshFilter $mapLocation.unitMeshFilter $gameGenre.vehicleMeshFilter}
+	@property multiplier=1 //may come from unitRole
+	@property width=$this.multiplier
+	@generator base=pickOne({character gameentity !combat})
+@end
+
+@factory combatCharacterFactory:characterFactory
+	@domain type+={combat}
+	@generator base=pickOne({character gameentity combat})
+@end
+
+@factory NonCombatCharacterFactory:characterFactory
+	@domain type+={nonCombat}
+@end
+
+@blueprint LightsGD:GameFactories
+	@domain type+={light}
+	@property color=hexColor($this.colorObj)
+	@property colorObj=pickFinal({random color})
+	@property lightTag={lightNode leaf directional}
+	@generator base=pickOne({lightComponent})
+@end
+
+@factory LightAmbient:LightsGD
+	@domain type+={ambient}
+	@property colorObj=pickFinal({whiteish color})
+	@property intensity=randf(0.9,1.3)
+	@property lightName='AmbientLight'
+	@property lightTag={lightNode leaf ambient}
+@end
+
+@factory LightMoon:LightsGD
+	@domain type+={moon}
+	@property castShadow=0
+	@property colorObj=pickFinal({yellow color})
+	@property direction.x=randf(-1,1)*10000
+	@property direction.y=randf(0.2,1)*10000
+	@property direction.z=randf(-1,1)*10000
+	@property intensity=randf(0.4,0.6)
+	@property lightName='MoonLight'
+@end
+
+@factory LightSun:LightsGD
+	@domain type+={sun}
+	@property castShadow=1
+	@property colorObj=pickFinal({whiteish color})
+	@property direction.x=randf(-1,1)*10000
+	@property direction.y=-randf(0.2,1)*10000
+	@property direction.z=randf(-1,1)*10000
+	@property intensity=randf(1,3)
+	@property lightName='SunLight'
+@end
+
+@blueprint MapDataGroup:GameFactories
+	@domain type+={map}
+@end
+
+@blueprint MapsGD:MapDataGroup
+	@domain type+={mapGD}
+	@property enviroSpacing=15 //Espa??amento minimo entre cada elemento
+	@property isRoomSizeRelative=1
+	@property length=$mapLength //tamanho do mapa= length x length
+	@property mapRoadFilter={default} //with roads and wall
+	@property populateMap={mapPopulate leaf} //game genre aplica o filtro da tag
+	@property roomFloorHeight=0
+	@property roomHeight=$mapLocation.maxHeight
+
+	@property roomDataFilter={default}
+	@property seed=rand(10000,10000000)
+	@generator base=pickOne({mapComponent leaf})
+	@property mapObjectives=pickFromList($gameGenre.gameObjectiveTag,{gameObjective leaf},rand(1,$gameGenre.maxObjectives))
+	@property mapOpposition=$gameGenre.gameOpposition
+	@mod modRoad=pickOne({mapMod road leaf $this.mapRoadFilter}) //MapModRoad
+	@mod modRoomData=pickOne({mapMod roomData leaf $this.roomDataFilter}) //defines how many rooms the map will have
+	@mod modSkybox=pickOne({mapMod skyBox leaf})
+	@mod modTerrain=pickOne({mapMod terrain leaf})
+@end
+
+@factory defaultMapsGD:MapsGD
+	@domain type+={default}
+	@property maxRooms=1
+@end
+
+@factory raceMapsGD:MapsGD
+	@domain type+={race}
+	@property lapDistance=rand($minLapDistance,$maxLapDistance) //defines the length of the lap
+	@property maxRooms=rand(5,7)
+	@property roomDataFilter={manyNoSize}
+@end
+
+@factory raceTestMapsGD:MapsGD
+	@domain type+={raceTestMap test}
+	@property lapDistance=rand($minLapDistance,$maxLapDistance) //defines the length of the lap
+	@property maxRooms=rand(5,7)
+	@property roomDataFilter={manyRoadSizeRooms}
+@end
+
+@factory shooterMapsGD:MapsGD
+	@domain type+={shooterMap}
+	@property mapLength=rand($minMapLength,$maxMapLength) //defines the length of the lap
+	@property maxRooms=rand(5,7)
+	@property roomDataFilter={manyNoSize}
+	@property mapRoadFilter={default}
+@end
+
+@factory AremaMapsGD:MapsGD
+	@domain type+={arenaMap}
+	@property mapLength=rand($minMapLength,$maxMapLength) //defines the length of the lap
+	@property length=500 //smaller maps
+	@property maxRooms=1
+	@property roomDataFilter={single}
+	@property mapRoadFilter={default}
+@end
+
+@factory TerrainTestMapsGD:MapsGD
+	@domain type+={terrainTest test}
+	@property lapDistance=rand($minLapDistance,$maxLapDistance) //defines the length of the lap
+	@property maxRooms=rand(5,7)
+	@property roomDataFilter={noWall}
+@end
+
+@factory TestingMap:MapsGD
+	@domain type+={test testing}
+	@property length=1500
+@end
+
+@blueprint MeshesGD:GameFactories
+	@domain type+={mesh}
+	@comment description='factories to generate meshes'
+@end
+
+@factory AddMeshFactory:MeshesGD
+	@domain type+={addMesh}
+	@generator base=pickOne($this.tag)
+	@comment description='used to solve the addMesh function'
+@end
+
+@factory MeshWall:MeshesGD
+	@domain type+={wall mesh}
+	@generator base=pickOne({mesh box leaf})
+	@material type={rock}
+@end
+
+@blueprint TerrainGD:GameFactories
+	@domain type+={terrainGD}
+	@property length=$terrainPower //tamanhoFinal=2^length
+	@property materialObj=pickFinal({terrain $materialRoot},textureTag=$this.textureTag)$final
+	@property softenArea=rand(100,200) //area na qual o terreno sera suavizado, a partir da room e road
+	@property terrainType=enumValue({terrain})
+	@generator base=pickOne({terrainComponent})
+@end
+
+@factory FlatTerrain:TerrainGD
+	@domain type+={flatMap}
+	@property defaultHeight=0 //altura padrao do mapa...
+	@property terrainType=enumValue({terrain flat})
+@end
+
+@factory HeightmapTerrain:TerrainGD
+	@domain type+={heightMap}
+	@property maxHeight=$mapLocation.maxHeight
+	@property noiseClass=enumInit({simplex noise})
+	@property terrainType=enumValue({terrain noise})
+@end
+
+@factory NoTerrain:TerrainGD
+	@domain type+={noTerrain}
+	@property terrainType=enumValue({terrain noTerrain})
+@end
+
+@blueprint testsGD:GameFactories
+	@domain type+={test}
+@end
+
+@blueprint EntitiesTest:testsGD
+	@domain type+={entities}
+	@property depth=20
+	@property height=20
+	@property mass=1
+	@property width=20
+@end
+
+@factory testBox:EntitiesTest
+	@domain type+={testBox}
+	@property depth=1
+	@property height=1
+	@property meshTag={box mesh leaf}
+	@property width=1
+	@generator base=pickOne({gameentity active})
+@end
+
+@factory testBoxGrande:EntitiesTest
+	@domain type+={testBoxGrande}
+	@property depth=10
+	@property height=50
+	@property meshTag={box mesh leaf}
+	@property width=30
+	@generator base=pickOne({gameentity active})
+@end
+
+@factory testBoxStatic:EntitiesTest
+	@domain type+={testBoxStatic}
+	@property depth=10
+	@property height=50
+	@property meshTag={box mesh leaf}
+	@property width=30
+	@generator base=pickOne({entity static})
+@end
+
+@factory testCone:EntitiesTest
+	@domain type+={testcone}
+	@property meshTag={cone mesh}
+	@generator base=pickOne({gameentity active})
+@end
+
+@factory testEsfera:EntitiesTest
+	@domain type+={testesfera}
+	@property depth=$this.size
+	@property height=$this.size
+	@property meshTag={primitive sphere leaf}
+	@property size=rand(10,30)
+	@property width=$this.size
+	@generator base=pickOne({gameentity active})
+@end
+
+@factory testHalteres:EntitiesTest
+	@domain type+={testhalteres}
+	@property depth=20
+	@property height=20
+	@property meshTag={halteres mesh leaf}
+	@property width=20
+	@generator base=pickOne({gameentity active})
+@end
+
+@factory testMoeda:EntitiesTest
+	@domain type+={testmoeda}
+	@property height=10
+	@property meshTag={moeda xy mesh leaf}
+	@property width=0.1
+	@generator base=pickOne({gameentity active})
+	@comment description='N??o ?? exatamente uma moeda...'
+@end
+
+@factory testMoedaXZ:EntitiesTest
+	@domain type+={testMoedaXZ1}
+	@property depth=20
+	@property height=0.2 //very thin coin by default
+	@property meshTag={moeda xz leaf}
+	@property width=20
+	@generator base=pickOne({gameentity active})
+@end
+
+@factory testParte:EntitiesTest
+	@domain type+={testParte}
+	@property meshTag={fuselagem planes mesh leaf}
+	@generator base=pickOne({gameentity active})
+@end
+
+@factory testPlane:EntitiesTest
+	@domain type+={testPlane}
+	@property depth=20 //usando medidas aproximadas de um f22
+	@property height=2
+	@property meshTag={fuselagem test mesh leaf}
+	@property width=5
+	@generator base=pickOne({gameentity active})
+@end
+
+@factory testPlano:EntitiesTest
+	@domain type+={testPlano}
+	@property depth=1024
+	@property height=1
+	@property meshTag={box mesh leaf}
+	@property width=1024
+	@generator base=pickOne({gameentity active})
+@end
+
+@factory testTank:EntitiesTest
+	@domain type+={testTank}
+	@property depth=20
+	@property height=5
+	@property meshTag={vehicle tank mesh leaf}
+	@property width=20
+	@generator base=pickOne({gameentity active})
+@end
+
+@factory testTankF:EntitiesTest
+	@domain type+={testTankF}
+	@property depth=20
+	@property height=5
+	@property meshTag={fuselagem tank mesh leaf}
+	@property width=20
+	@generator base=pickOne({gameentity active})
+@end
+
+@factory testTubo:EntitiesTest
+	@domain type+={testtubo}
+	@property meshTag={cilindro mesh keyword:cilindro}
+	@generator base=pickOne({gameentity active})
+@end
+
+@factory testWing:EntitiesTest
+	@domain type+={testwing}
+	@property depth=50
+	@property height=1
+	@property meshTag={wing mesh leaf}
+	@property width=50
+	@generator base=pickOne({gameentity active})
+@end
+
+@blueprint UIGameFactories:GameFactories
+	@domain type+={uigd}
+	@property visible=1
+@end
+
+@blueprint GameMechanics:base
+	@domain type+={gamemechanic}
+	@property components={}
+@end
+
+@blueprint ConstsDefs:GameMechanics
+	@domain type+={constsDefs}
+@end
+
+@blueprint GameConsts:ConstsDefs
+	@domain type+={gameConsts}
+	@property gravity=0
+	@property niftyControls='Interface/Nifty/nifty-controls.xml'
+	@property niftyStyle='Interface/Nifty/nifty-styles.xml'
+	@property radarRange=rand(200,300)
+	@property themeColor=pickFinal({themeColorEnum leaf})
+	@property themeColorKeyword=$this.themeColor.name
+	@property uiConsts=pickFinal({uiConsts leaf})
+	@define gameConsts=$this
+	@define inter=pickFinal({international gamemechanic})
+	@define uiConsts=$this.uiConsts
+@end
+
+@blueprint GameUIConsts:ConstsDefs
+	@domain type+={uiConsts}
+	@property familyFont=enumValue(fontFamily)
+	@property fontFilter=$this.familyFont+{textFont}
+	@property uiBattleNotifPanelID='battle_notif_panel'
+	@property uiDefaultFont=enumValue($this.fontFilter normal) //everyday font
+	@property uiHeaderFont=enumValue($this.fontFilter title) //used to show panel titles
+	@property uiScoreFont=enumValue($this.fontFilter normal)
+	@property uiTitleFont=enumValue($this.fontFilter big) //used to show the game name
+@end
+
+@blueprint International:ConstsDefs
+	@domain type+={international}
+	@property gameTitle=interText({gameTitle})
+	@property startGame=interText({startGame})
+@end
+
+@blueprint EnemyWaveDefs:GameMechanics
+	@domain type+={enemyWaveDef}
+@end
+
+@blueprint NoEnemyWave:EnemyWaveDefs
+	@domain type+={none}
+@end
+
+@blueprint EntityControl:GameMechanics
+	@domain type+={entityControl}
+@end
+
+@blueprint EntityActions:EntityControl
+	@domain type+={entityAction}
+	@property keysTags={}
+	@replicate keys=tagList($this.keysTags,{enum keys leaf})
+	@comment description='an action is anything that a entity can do atomically (moving forward,strafe left, shoot,jump, duck,etc). '
+@end
+
+@blueprint DuckAction:EntityActions
+	@domain type+={duck}
+	@property code=2
+	@property keysTags={KEY_C}
+	@property name='DUCK'
+@end
+
+@blueprint JumpAction:EntityActions
+	@domain type+={jump}
+	@property code=1
+	@property keysTags={KEY_SPACE}
+	@property name='JUMP'
+@end
+
+@blueprint MainAction1:EntityActions
+	@domain type+={mainAction1}
+	@property code=0
+	@property keysTags={KEY_J KEY_LCONTROL}
+	@property name='ACTION_1'
+@end
+
+@blueprint MainAction2:EntityActions
+	@domain type+={mainAction2}
+	@property code=0
+	@property keysTags={KEY_K}
+	@property name='ACTION_2'
+@end
+
+@blueprint MainAction3:EntityActions
+	@domain type+={mainAction3}
+	@property code=0
+	@property keysTags={KEY_L}
+	@property name='ACTION_3'
+@end
+
+@blueprint MoveBackWardAction:EntityActions
+	@domain type+={moveBackward MOVE_BACKWARD}
+	@property code=10
+	@property keysTags={KEY_DOWN KEY_G}
+	@property name='MOVE_BACKWARD'
+@end
+
+@blueprint MoveDownAction:EntityActions
+	@domain type+={moveDown MOVE_DOWN}
+	@property code=6
+	@property keysTags={KEY_LCONTROL KEY_X}
+	@property name='MOVE_DOWN'
+@end
+
+@blueprint MoveForwardAction:EntityActions
+	@domain type+={moveForward MOVE_FORWARD}
+	@property code=9
+	@property keysTags={KEY_UP KEY_T}
+	@property name='MOVE_FORWARD'
+@end
+
+@blueprint MoveUPAction:EntityActions
+	@domain type+={moveUp MOVE_UP}
+	@property code=5
+	@property keysTags={KEY_Z KEY_SPACE}
+	@property name='MOVE_UP'
+@end
+
+@blueprint RotateLeftAction:EntityActions
+	@domain type+={rotateLeft}
+	@property code=7
+	@property keysTags={KEY_LEFT KEY_F}
+	@property name='ROTATE_LEFT'
+@end
+
+@blueprint RotateRightAction:EntityActions
+	@domain type+={rotateRight}
+	@property code=8
+	@property keysTags={KEY_RIGHT KEY_H}
+	@property name='ROTATE_RIGHT'
+@end
+
+@blueprint StopMovementAction:EntityActions
+	@domain type+={stopMovement}
+	@property code=0
+	@property keysTags={null}
+	@property name='STOP_MOVEMENT'
+@end
+
+@blueprint StrafeLeftAction:EntityActions
+	@domain type+={strafeLeft}
+	@property code=3
+	@property keysTags={KEY_Q}
+	@property name='STRAFE_LEFT'
+@end
+
+@blueprint StrafeRightAction:EntityActions
+	@domain type+={strafeRight}
+	@property code=4
+	@property keysTags={KEY_E}
+	@property name='STRAFE_RIGHT'
+@end
+
+@blueprint TurnLeftAction:EntityActions
+	@domain type+={turnLeft}
+	@property code=13
+	@property keysTags={KEY_LEFT KEY_F}
+	@property name='TURN_LEFT'
+@end
+
+@blueprint TurnRightAction:EntityActions
+	@domain type+={turnRight}
+	@property code=14
+	@property keysTags={KEY_RIGHT KEY_H}
+	@property name='TURN_RIGHT'
+@end
+
+@blueprint EntityGroupActions:EntityControl
+	@domain type+={actionGroup}
+	@property actionTags={stopMovement mainAction1 mainAction2 mainAction3}
+	@replicate actions=tagList($this.actionTags,{entityAction gamemechanic leaf})
+	@comment description=' an actionGroup defines the actions for the given group'
+@end
+
+@blueprint HumanoidMovement:EntityGroupActions
+	@domain type+={humanoidMovement}
+	@property actionTags+={moveForward moveBackward rotateLeft rotateRight strafeLeft strafeRight jump duck}
+@end
+
+@blueprint VehicleMovement:EntityGroupActions
+	@domain type+={vehicleMovement}
+	@property actionTags+={moveForward moveBackward turnRight turnLeft}
+@end
+
+@blueprint FloatingVehicleMovement:VehicleMovement
+	@domain type+={floating}
+	@property actionTags+={rotateLeft rotateRight strafeLeft strafeRight}
+	@comment description='a floating vehicle has more freedom of movement'
+@end
+
+@blueprint SpaceVehicleMovement:VehicleMovement
+	@domain type+={space}
+	@property actionTags+={rotateLeft rotateRight strafeLeft strafeRight moveUp moveDown}
+@end
+
+@blueprint WheeledVehicleMovement:VehicleMovement
+	@domain type+={wheeled}
+	@property actionTags+={}
+@end
+
+@blueprint PhysicsControlType:EntityControl
+	@domain type+={physicsControlType}
+	@property actionGroup+=pickSingle({actionGroup $this.actionType leaf})
+	@property actionType={}
+	@property isGround=1 //1 if its a land vehicle, 2 if its a flying 3d space
+@end
+
+@blueprint CharacterPhysicsControlEnum:PhysicsControlType
+	@domain type+={humanoid}
+	@property actionType+={humanoidMovement}
+	@property init='com.cristiano.jme3.rigidBody.GMPhysicalCharacter'
+	@property value='HumanoidPhysics' //as is expected from a person
+@end
+
+@blueprint SimplePhysicsControlEnum:PhysicsControlType
+	@domain type+={simple}
+	@property init='com.cristiano.jme3.rigidBody.GMRigidBody'
+	@property value='SimplePhysics'
+@end
+
+@blueprint VehiclesControlEnum:PhysicsControlType
+	@domain type+={vehicle}
+	@property actionType+={vehicleMovement}
+@end
+
+@blueprint FloatingVehiclePhysicsControlEnum:VehiclesControlEnum
+	@domain type+={floating}
+	@property actionType+={floating}
+	@property init='com.cristiano.jme3.rigidBody.GMPhysicalHover'
+@end
+
+@blueprint SpaceVehiclePhysicsControlEnum:VehiclesControlEnum
+	@domain type+={space}
+	@property actionType+={space}
+	@property init='com.cristiano.jme3.rigidBody.GMPhysicalSpaceShip'
+	@property isGround=0
+@end
+
+@blueprint WheeledVehiclePhysicsControlEnum:VehiclesControlEnum
+	@domain type+={wheeled}
+	@property actionType+={wheeled}
+	@property init='com.cristiano.jme3.rigidBody.GMPhysicalVehicle'
+@end
+
+@blueprint PlayerControllers:EntityControl
+	@domain type+={playerController}
+@end
+
+@blueprint PlayerControllerData:PlayerControllers
+	@domain type+={playerControllerData}
+	@property actionController=pickFinal({playerControllerMod actionController $this.actionTag})
+	@property actionTag={leaf}
+	@property controllers=$this.actionController+$this.directionalController //all the controllers here will be instantiated
+	@property directionalController=pickFinal({$this.directionalRoot $this.directionalTag})
+	@property directionalRoot={playerControllerMod directionalController}
+	@property directionalTag={leaf}
+@end
+
+@blueprint DefaultPlayerController:PlayerControllerData
+	@domain type+={default}
+	@property directionalTag={virtualPad}
+	@property name='Direction Joystick' //TODO:internationalize this
+@end
+
+@blueprint RacingPlayerControllerData:PlayerControllerData
+	@domain type+={racePC}
+	@property actionTag={singleTouch forward}
+	@property directionalTag={gyroWheel}
+	@property name='Gyroscope Orientation' //TODO:internationalize this
+@end
+
+@blueprint ShooterPlayerControllerData:PlayerControllerData
+	@domain type+={shooterPC}
+	@property actionTag={singleTouch action1}
+	@property directionalTag={gyroAxis}
+	@property name='Shooter controller' //TODO:internationalize this
+@end
+
+@blueprint ArenaPlayerControllerData:PlayerControllerData
+	@domain type+={arenaPC}
+	@property actionTag={singleTouch action1}
+	@property directionalTag={multiGyro}
+	@property name='Arena controller' //TODO:internationalize this
+@end
+@blueprint PlayerControllersMods:PlayerControllers
+	@domain type+={playerControllerMod}
+@end
+
+@blueprint ActionController:PlayerControllersMods
+	@domain type+={actionController} //ways that the player can activate actions, such as a button
+@end
+
+@blueprint AllwaysPressedController:ActionController
+	@domain type+={allwaysPressed}
+	@property action=pickOne(entityAction $this.actionTag leaf).name
+	@property actionTag={}
+	@property class='allwaysPressed'
+@end
+
+@blueprint AllwaysPressedForwardController:AllwaysPressedController
+	@domain type+={forward allwaysPressedForward}
+	@property actionTag={moveForward}
+@end
+
+@blueprint AllwaysPressedUPController:AllwaysPressedController
+	@domain type+={up allwaysPressedUP}
+	@property actionTag={moveUp}
+@end
+
+@blueprint SingleTouchActionController:ActionController
+	@domain type+={touch single}
+	@property class='singleTouch' //TODO:implementar isso, ativa ao tocar em qualquer lugar da tela
+@end
+
+@blueprint SingleTouchController:ActionController
+	@domain type+={singleTouch}
+	@property action=pickOne(entityAction $this.actionTag leaf).name
+	@property actionTag={}
+	@property class='singleTouch'
+@end
+
+@blueprint SingleTouchForwardController:SingleTouchController
+	@domain type+={forward singleTouchForward}
+	@property actionTag={moveForward}
+@end
+
+@blueprint SingleTouchUPController:SingleTouchController
+	@domain type+={up singleTouchUP}
+	@property actionTag={moveUp}
+@end
+
+@blueprint DirectionalController:PlayerControllersMods
+	@domain type+={directionalController}
+@end
+
+@blueprint GyroWheelController:DirectionalController
+	@domain type+={gyroWheel}
+	@property class='gyroWheel'
+@end
+
+@blueprint GyroAxisController:DirectionalController
+	@domain type+={gyroAxis}
+	@property class='gyroAxis' //* The movement will happen in the given axis
+	@property axisMovement=$gameAxis.axisMovement
+	@property allowX=$gameAxis.allowX
+	@property allowY=$gameAxis.allowY
+	@property allowZ=$gameAxis.allowZ
+@end
+
+@blueprint MultiGyroAxisController:DirectionalController
+	@domain type+={multiGyro}
+	@property class='multiGyro' //* this controller allows more than one axis to be controlled
+	@property axisMovement=$gameAxis.axisMovement
+	@property allowX=$gameAxis.allowX
+	@property allowY=$gameAxis.allowY
+	@property allowZ=$gameAxis.allowZ
+@end
+
+
+
+@blueprint VirtualWheelController:DirectionalController
+	@domain type+={virtualPad}
+	@property class='virtualPad'
+	@property maxSize=150 //size cant be bigger than this
+	@property minSize=100
+	@property positionType=1 //left=1, right=2
+	@property relativeSize=0.2 //how much of the screen the joystick will get in relative size
+	@property spacing=20 //space between the border and the joystick
+@end
+
+@blueprint EnviroElements:GameMechanics
+	@domain type+={enviro}
+@end
+
+@blueprint EnviroEntities:EnviroElements
+	@domain type+={enviroEntity}
+	@property carrierTag={visible entity static} //carrier is the entity which will receive the mesh...
+	@property meshTag={}
+	@comment description=' points to meshes to be used...'
+@end
+
+@blueprint FloorEnviro:EnviroEntities
+	@domain type+={floor}
+@end
+
+@blueprint PoligonFloor:FloorEnviro
+	@domain type+={poligon}
+	@property meshTag={functions poligono xz leaf}
+@end
+
+@blueprint SquaredFloor:FloorEnviro
+	@domain type+={squared}
+	@property meshTag={mesh retangulo xz leaf}
+@end
+
+@blueprint MeshEntities:EnviroEntities
+	@domain type+={meshEnviro}
+@end
+
+@blueprint boxMesh:MeshEntities
+	@domain type+={box}
+	@property meshTag={mesh primitive box}
+@end
+
+@blueprint EmptyMesh:MeshEntities
+	@domain type+={none}
+	@property meshTag={}
+@end
+
+@blueprint SeparatorEnviro:EnviroEntities
+	@domain type+={separator}
+	@comment description=' separator are added to circumvent the area, a wall, for instance'
+@end
+
+@blueprint NoWallEnviro:SeparatorEnviro
+	@domain type+={noWall}
+	@property meshTag={null}
+@end
+
+@blueprint SimpleWallEnviro:SeparatorEnviro
+	@domain type+={wall}
+	@property meshTag={mesh wall leaf}
+	@property wallHeight=10
+	@property wallWidth=1
+@end
+
+@blueprint EnviroFitting:EnviroElements
+	@domain type+={enviroFitting}
+@end
+
+@blueprint bigFitting:EnviroFitting
+	@domain type+={big}
+	@property maxX=1500
+	@property maxY=1500
+	@property maxZ=1500
+	@property minX=250
+	@property minY=-1
+	@property minZ=250
+@end
+
+@blueprint FitAllEnviro:EnviroFitting
+	@domain type+={fitAll}
+	@property maxX=-1 //-1=nao tem limite=aceita qualquer valor
+	@property maxY=-1
+	@property maxZ=-1
+	@property minX=-1 //min e max indicam o tamanho m??nimo e maximo que o objeto aceita (para spawnar)
+	@property minY=-1
+	@property minZ=-1
+@end
+
+@blueprint smallFitting:EnviroFitting
+	@domain type+={small}
+	@property maxX=250
+	@property maxY=-1
+	@property maxZ=250
+	@property minX=5
+	@property minY=-1
+	@property minZ=5
+@end
+
+@blueprint EnviroObjects:EnviroElements
+	@domain type+={enviroObject}
+	@property entityObj=pickFinal(enviroEntity meshEnviro leaf $this.entityTag) //ok
+	@property entityTag={}
+	@property fitting=pickFinal($this.fittingTag) //ok
+	@property fittingTag={enviroFitting leaf}
+	@property floor=pickFinal($this.floorTag)
+	@property floorTag={enviroEntity floor leaf}
+	@property meshTag={}
+	@property properties=pickFinal($this.propertiesTag) //define how sub-bubbles are generated
+	@property propertiesTag={enviroProperties leaf}
+	@property separatorObj=pickFinal($this.separatorTag) //ok
+	@property separatorTag={enviroEntity separator leaf}
+@end
+
+@blueprint bigEnviros:EnviroObjects
+	@domain type+={bigEnviros}
+	@property entityTag={none}
+	@property fittingTag+={big}
+	@property propertiesTag+={sub}
+	@property separatorTag+={noWall}
+	@property subBubble+={smallEnviros}
+@end
+
+@blueprint RoomEnviros:EnviroObjects
+	@domain type+={roomEnviro}
+	@property entityTag={none}
+	@property fittingTag+={fitAll}
+	@property propertiesTag+={sub}
+	@property separatorTag+={}
+	@property subBubble+={smallEnviros bigEnviros} //tag used to choosed the enviros which will be spawned inside this bubble.  Cumulative: {squared circular} allows enviros tagged squared and/OR circular.
+	@comment description='room elements (the ones used to start a map)'
+@end
+
+@blueprint CircularRooms:RoomEnviros
+	@domain type+={circular}
+@end
+
+@blueprint CircularRoom:CircularRooms
+	@domain type+={circularRoom}
+	@property floorTag+={poligon}
+@end
+
+@blueprint NoWallCircularRoom:CircularRoom
+	@domain type+={noWall}
+	@property separatorTag+={noWall}
+@end
+
+@blueprint WalledCircularRoom:CircularRoom
+	@domain type+={walled}
+	@property separatorTag+={wall}
+@end
+
+@blueprint RectangularRoom:RoomEnviros
+	@domain type+={rectangle}
+	@property floorTag={squared}
+@end
+
+@blueprint NoWallRectangularRoom:RectangularRoom
+	@domain type+={noWall}
+	@property separatorTag+={noWall}
+@end
+
+@blueprint WalledRectangularRoom:RectangularRoom
+	@domain type+={walled}
+	@property separatorTag+={wall}
+@end
+
+@blueprint TestRoomBubble:RoomEnviros
+	@domain type+={test}
+	@property entityTag={box}
+	@property floorTag={squared}
+	@property separatorTag+={wall}
+@end
+
+@blueprint smallEnviros:EnviroObjects
+	@domain type+={smallEnviros}
+	@property fittingTag+={small}
+	@property propertiesTag+={noSub}
+	@property separatorTag+={noWall}
+@end
+
+@blueprint EmptyEnviro:smallEnviros
+	@domain type+={empty}
+	@property entityTag={none}
+@end
+
+@blueprint SolidBox:smallEnviros
+	@domain type+={box}
+	@property entityTag+={box}
+@end
+
+@blueprint SolidRock:smallEnviros
+	@domain type+={rock }
+	@property entityTag+={}
+@end
+
+@blueprint TrapEnviro:smallEnviros
+	@domain type+={trap notready}
+	@property entityTag+={} //TODO: generate trap models...
+@end
+
+@blueprint EnviroProperties:EnviroElements
+	@domain type+={enviroProperties}
+	@property isTerminal=0
+	@property maxDimensionRatio=randf(0.6,0.8)
+	@property minDimensionRatio=randf(0.6,0.8) //dimension size is multiplied by a random value between min and max
+	@property wallHeightMulti=randf(0.6,0.8)
+	@property wallWidth=1 //the width of the wall
+@end
+
+@blueprint NoSubEnviroProperties:EnviroProperties
+	@domain type+={noSub}
+	@property isTerminal=1
+@end
+
+@blueprint SubEnviroProperties:EnviroProperties
+	@domain type+={sub}
+	@property isTerminal=0
+	@property maxAreaPerc=20 //maximo que uma bubble pode ocupar de espa??o em percentual
+	@property maxUsedSpace=90
+	@property minArea=200
+	@property minEixo=150
+	@property minUsedArea=30
+	@property startingSolidChance=40
+@end
+
+@blueprint gameConditions:GameMechanics
+	@domain type+={gameCondition}
+@end
+
+@blueprint ConditionElement:gameConditions
+	@domain type+={conditionElement}
+	@comment description='this component will be filled by the checkCondition function'
+@end
+
+@blueprint VictoryConditions:gameConditions
+	@domain type+={victoryCondition}
+	@property finishConditions=[] //this will "finish" the current map
+	@property victoryConditions=[] //after finishing, these 2 conditions will be checked...
+@end
+
+@blueprint FirstPositionVC:VictoryConditions
+	@domain type+={firstPosition}
+	@property LiveResourceComponentLeft=0
+	@property finishConditions+=checkCondition({LapResourceComponent},#c0Value,>=,#c0MaxValue,'Laps Reached')
+	@property minPosition=1
+	@property name='firstPosition'
+	@property victoryConditions+=checkCondition({UnitPositionComponent},#c0Value,<=,1,'First Position')
+	@childproperty goalResources.goal[FinalPositionComponent]=$this.minPosition
+	@childproperty goalResources.negativeGoal[FinalPositionComponent]=$this.LiveResourceComponentLeft
+	@comment description=' for racing games'
+@end
+
+@blueprint FlagPointsCTF:VictoryConditions
+	@domain type+={flagPointsCTF}
+	@property PointsResourceComponentRequired=1+rand(2,9,2) //one of 3,5,7,9
+	@property name='flagPointsCTF'
+	@childproperty goalResources.goal[FlagResourceComponent]=$this.PointsResourceComponentRequired
+	@comment description='Condition that occurs in CTF games: first to reach specified PointsResourceComponent, wins'
+@end
+
+@blueprint LastStandingVC:VictoryConditions
+	@domain type+={lastStanding}
+	@property LiveResourceComponentLeft=0 //no respawn
+	@property name='lastStanding'
+	@childproperty goalResources.negativeGoal[LiveResourceComponent]=$this.LiveResourceComponentLeft
+@end
+
+@blueprint PointLimitVC:VictoryConditions
+	@domain type+={pointLimit}
+	@property name='pointLimit'
+	@property pointsRequired=rand(1,4)*1000 
+	@property finishConditions+=checkCondition({PointsResourceComponent},#c0Value,>=,$this.pointsRequired,'Score Reached!')
+	@property name='TimeResourceComponentup'
+	@property victoryConditions+=checkCondition({PointsResourceComponent},#c0Value,>=,$this.pointsRequired,'Score Reached!') //player allways lose...
+	
+@end
+
+@blueprint ReinforcementsVC:VictoryConditions
+	@domain type+={reinforcement}
+	@property LiveResourceComponentLeft=rand(3,10)
+	@property name='reinforcement'
+	@childproperty goalResources.negativeGoal[LiveResourceComponent]=$this.LiveResourceComponentLeft
+@end
+
+@blueprint TestVictoryCondition:VictoryConditions
+	@domain type+={testVictoryCondition test}
+	@property finishConditions+=checkCondition({LapResourceComponent},#c0Value,>=,#c0MaxValue,'valor>=max')
+	@property minPosition=1
+	@property name='firstPosition'
+	@property victoryConditions+=checkCondition({UnitPositionComponent},#c0Value,<=,$this.minPosition,'posicao<minPosition')
+@end
+
+@blueprint TimeupVC:VictoryConditions
+	@domain type+={TimeResourceComponentUP}
+	@property TimeResourceComponentLeft=rand(5,10)*30 //from 2.5 min to 5 min
+	@property finishConditions+=checkCondition({TimeResourceComponent},#c0Value,<=,0,'time <= 0')
+	@property name='TimeResourceComponentup'
+	@property victoryConditions+=checkCondition({TimeResourceComponent},1,>,0,'1>0') //player allways lose...
+	@comment description=' this is a time check... if the time is up the player loses (other checks must be done)'
+@end
+
+@blueprint GameEvents:GameMechanics
+	@domain type+={gameEvent}
+	@property ctfReward=0 //empty = no reward
+	@property hitPointReward=0
+	@property liveReward=0
+	@property multiByValue=0 //if true the reward will be multiplied by the value (which is normally dmg)
+	@property pointReward=0
+	@property showScrollingText=0
+	@property soundObj={} //will 'play' when the event happens...
+	@property timeReward=0
+	@replicate resource=oneForEach(ResourceComponent leaf)
+	@childproperty resource[FlagResourceComponent].reward=$this.ctfReward
+	@childproperty resource[HealthComponent].reward=$this.hitPointReward
+	@childproperty resource[LiveResourceComponent].reward=$this.liveReward
+	@childproperty resource[PointsResourceComponent].reward=$this.pointReward
+	@childproperty resource[TimeResourceComponent].reward=$this.timeReward
+	@comment description='Game Events defines what the entities can do influencing each other... example: if a entity shots another entity, what will happen? PointsResourceComponent earned? hp lost? the resources are defined by the gamegenre'
+@end
+
+@blueprint EnemyHit:GameEvents
+	@domain type+={enemyHit}
+	@property name='enemyHit'
+	@property showScrollingText=0
+	@property soundObj_disabled=pickSFX({click}) //TODO: remove this (or add a real sound)
+@end
+
+@blueprint EnemyKiled:GameEvents
+	@domain type+={enemyKilled}
+	@property name='enemyKilled'
+	@property showScrollingText=1
+@end
+
+@blueprint EntityHit:GameEvents
+	@domain type+={entityHit}
+	@property name='entityHit'
+	@property showScrollingText=1
+	@property soundObj_disabled=pickSFX({click}) //TODO: remove this (or add a real sound)
+@end
+
+@blueprint EntityKilled:GameEvents
+	@domain type+={entityKilled}
+	@property name='entityKilled'
+@end
+
+@blueprint FriendHit:GameEvents
+	@domain type+={friendHit}
+	@property name='friendHit'
+	@property showScrollingText=1
+@end
+
+@blueprint FriendKilled:GameEvents
+	@domain type+={friendKilled}
+	@property name='friendKilled'
+	@property showScrollingText=1
+@end
+
+@blueprint GameObjectives:GameMechanics
+	@domain type+={gameObjective}
+	@property maxConditions=1
+	@property minConditions=1
+	@property validVictoryConditions={} //victoryCondition
+	@property victoryConditions=pickFromList($this.validVictoryConditions,{victoryCondition leaf},rand($this.minConditions,$this.maxConditions))
+@end
+
+@blueprint CaptureTheFlag:GameObjectives
+	@domain type+={captureTheFlag}
+	@property name='ctf'
+	@property validVictoryConditions+={flagPointsCTF}
+@end
+
+@blueprint MultiFlag:CaptureTheFlag
+	@domain type+={multiFlag}
+	@property name='multiFlag'
+@end
+
+@blueprint SingleFlag:CaptureTheFlag
+	@domain type+={singleFlag}
+	@property name='singleFlag'
+@end
+
+@blueprint DefaultGameObjective:GameObjectives
+	@domain type+={default}
+	@property name='Default'
+	@property validVictoryConditions={}
+@end
+
+@blueprint DefeatEnemies:GameObjectives
+	@domain type+={defeatEnemies}
+	@property maxConditions=2
+	@property name='defeatEnemies'
+	@property validVictoryConditions+={lastStanding pointLimit reinforcement}
+@end
+
+@blueprint ArenaObjectives:GameObjectives
+	@domain type+={arenaObjectives}
+	@property maxConditions=2
+	@property name='ArenaObjectives'
+	@property validVictoryConditions+={pointLimit}
+@end
+
+@blueprint RaceObjectives:GameObjectives
+	@domain type+={racingObjectives}
+	@property maxConditions=2
+	@property minConditions=2
+	@property name='racingObjectives'
+	@property validVictoryConditions+={firstPosition}
+@end
+
+@blueprint ShooterObjectives:GameObjectives
+	@domain type+={shooterObjectives}
+	@property maxConditions=2
+	@property minConditions=2
+	@property name='shooterObjectives'
+	@property validVictoryConditions+={lastStanding}
+@end
+
+@blueprint TestObjectives:GameObjectives
+	@domain type+={testObjective test}
+	@property maxConditions=2
+	@property minConditions=1
+	@property name='TestObjectives'
+	@property validVictoryConditions+={testVictoryCondition}
+@end
+
+@blueprint GameOppositionGroup:GameMechanics
+	@domain type+={gameOppositionGroup}
+@end
+
+@blueprint GameOppositions:GameOppositionGroup
+	@domain type+={GameOpposition}
+	@property playerSide=pickFinal({gameSide leaf},lives=$this.playerLives,respawn=$this.respawnOnPlayerTeam,unitRoleTag=$this.unitRolePlayer)
+	@property enemySide=pickFinal({gameSide leaf},lives=$this.npcLives,respawn=$this.respawnOnNPCTeam,unitRoleTag=$this.unitRoleNPC)
+	@property choosingWeight=1 //TODO: usar essa propriedade para calcular o peso  da escolha...
+	@property unitRoleTag={combat}
+	@property unitRolePlayer=$this.unitRoleTag
+	@property unitRoleNPC=$this.unitRoleTag
+	@property countDownTimer=5
+	@property enemyWave=pickFinal({enemyWaveDef $this.enemyWaveTag})
+	@property enemyWaveTag={none}
+	@property initialUnits=5 //for each team
+	@property maxTeams=2
+	@property maxUnitsPerTeam=-1 //if either of these are defined, then each team will have a max and/or min units
+	@property minTeams=2
+	@property minUnitsPerTeam=-1
+	@property npcLives=-1
+	@property playerLives=-1 //if defined, the player has this many LiveResourceComponent...
+	@property playerOnlyTeam=0 //if true, then one team will have only the player
+	@property respawnOnNPCTeam=1 //valid for all non-player teams
+	@property respawnOnPlayerTeam=1 //valid for all entities on the player team (allied)
+	@property sameTeamRelation=enumValue(entityRelationEnum $this.sameTeamRelationTag)
+	@property sameTeamRelationTag={friend} //how they see each other in the same team... (used by the radarSystem), {friend},{enemy},{neutral}
+	@property startingPosition=pickSingle({enum startingPosition $this.startingPositionTag})
+	@property startingPositionTag={random}
+	@resource scopeGame={} //scope of resources define how they will distributed: if a scope is team then the resource will be shared with the team (LiveResourceComponent, for example): scopeGame is added to the map
+	@resource scopeTeam={PointsResourceComponent LiveResourceComponent FlagResourceComponent}
+	@resource scopeUnit={HealthComponent DPSComponent BatteryComponent SpeedComponent VictoryCheckInitComponent}
+@end
+
+@blueprint EmptyTeam:GameOppositions
+	@domain type+={empty}
+	@property choosingWeight=3
+	@property initialUnits=0
+	@property maxTeams=0
+	@property maxUnitsPerTeam=0
+	@property minTeams=0
+	@property name='emptyTeams'
+@end
+
+@blueprint FreeForAll:GameOppositions
+	@domain type+={freeforall}
+	@property choosingWeight=3
+	@property initialUnits=5
+	@property maxTeams=1
+	@property maxUnitsPerTeam=-1
+	@property minTeams=1
+	@property name='freeforall'
+	@property sameTeamRelationTag={enemy}
+	@resource scopeGame={TimeResourceComponent}
+	@resource scopeTeam={}
+	@resource scopeUnit={PointsResourceComponent LiveResourceComponent FlagResourceComponent HealthComponent DPSComponent BatteryComponent SpeedComponent VictoryCheckInitComponent}
+@end
+
+@blueprint MultiTeams:GameOppositions
+	@domain type+={multiTeams}
+	@property choosingWeight=2
+	@property maxTeams=rand($this.minTeams,$this.minTeams+3)
+	@property minTeams=rand(3,4)
+	@property name='multiTeams'
+	@comment description=' more than 2 sides'
+@end
+
+@blueprint PlayerVersus:GameOppositions
+	@domain type+={playerVersus}
+	@property budgetMultiPlayer=randf(3,6)
+	@property choosingWeight=3
+	@property initialUnits=20
+	@property maxTeams=2
+	@property minTeams=2
+	@property name='playerVersus'
+	@property playerOnlyTeam=1
+	@property respawnOnNPCTeam=0
+@end
+
+@blueprint RaceOpposition:GameOppositions
+	@domain type+={raceOpposition}
+	@property choosingWeight=3
+	@property initialUnits=rand(6,12,2)
+	@property maxTeams=1
+	@property maxUnitsPerTeam=-1
+	@property minTeams=1
+	@property name='raceOpposition'
+	@property sameTeamRelationTag={enemy}
+	@property startingPositionTag={grid}
+	@resource scopeGame={TimeResourceComponent}
+	@resource scopeTeam={}
+	@resource scopeUnit={PointsResourceComponent LiveResourceComponent HealthComponent DPSComponent BatteryComponent SpeedComponent UnitPositionComponent RaceGoalComponent LapResourceComponent}
+@end
+
+@blueprint RaceOppositionDual:RaceOpposition
+	@domain type+={dual}
+	@property initialUnits=2
+	@property maxUnitsPerTeam=2
+@end
+
+@blueprint RaceOppositionMulti:RaceOpposition
+	@domain type+={multi}
+	@property initialUnits=$this.maxUnitsPerTeam
+	@property maxUnitsPerTeam=rand(8,10,2)
+@end
+
+@blueprint VersusMode:GameOppositions
+	@domain type+={versus}
+	@property choosingWeight=1
+	@property initialUnits=1
+	@property maxTeams=2
+	@property maxUnitsPerTeam=1
+	@property minTeams=2
+	@property name='versus'
+	@comment description=' player versus another entity...'
+@end
+
+@blueprint VersusTeams:GameOppositions
+	@domain type+={versusTeams}
+	@property choosingWeight=3
+	@property initialUnits=rand(2,4)
+	@property maxTeams=2
+	@property maxUnitsPerTeam=$this.initialUnits
+	@property minTeams=2
+	@property name='versusTeams'
+@end
+
+@blueprint GameSide:GameOppositionGroup
+	@domain type+={gameSide}
+	@property unitRole=pickSingle({unitRole leaf $this.unitRoleTag})
+	@property minVariations=rand(2,4)
+@end
+
+@blueprint MacroObjects:GameMechanics
+	@domain type+={macroObjs}
+	@comment description=' Main objects which originate all the others'
+@end
+
+@blueprint GameGenre:MacroObjects
+	@domain type+={gameGenre}
+@end
+
+@blueprint GameGenreData:GameGenre
+	@domain type+={data}
+	@property gameAxisTag={2.5d}
+	@property gameAxis=pickSingle({gameAxis $this.gameAxisTag})
+	@property camType=$this.gameAxis.camType
+	@property eventFilter={}
+	@property gameCategory=pickFinal($this.gameCategoryTag)
+	@property gameCategoryTag={gameCategory enum leaf}
+	@property gameObjectiveTag={default} //solved at MapsGD
+	@property gameOppositionTag={}
+	@property gameOpposition=pickFinal({GameOpposition leaf $this.gameOppositionTag})
+	@property isListLevelActive=0 //if true, then user can see the levels
+	@property locationTag=default
+	@property mapFilter={default}
+	@property directorTag={null}
+	@property mapLocation=pickFinal({maplocation leaf data $this.locationTag})
+	@property maxObjectives=1 //used at MapsGD
+	@property npcBudget=100
+	@property playerBudget=100
+	@property playerController=pickFinal(playerControllerData leaf $this.playerControllerTag)
+	@property playerControllerTag={default}
+	@property startableNPCStates={NPCStateWander}
+	@property vehicleMeshFilter={wheeled} //TODO: remove this filter
+	@property worldTag={world leaf}
+	@define mapLocation=$this.mapLocation
+	@define gameAxis=$this.gameAxis
+	@mod event=pickOne({mod gameGenreMod event leaf $this.eventFilter}) //set by MacroDefinition
+	@validate validPlayerController=isNotNull($this.playerController)
+@end
+
+@blueprint DebugGameGenre:GameGenreData
+	@domain type+={debug}
+	@property eventFilter={battleArenaEvent}
+	@property worldTag+={debug}
+@end
+
+@blueprint GameGenreDefault:GameGenreData
+	@domain type+={default}
+	@property worldTag+={release}
+@end
+
+@blueprint GameGenreTerrainTest:GameGenreData
+	@domain type+={terrainTestGG test}
+	@property eventFilter={noGameEvent}
+	@property locationTag={terrainTestML}
+	@property mapFilter={terrainTest}
+	@property worldTag+={worldTest}
+@end
+
+@blueprint GameGenreTest:GameGenreData
+	@domain type+={test testingGG}
+	@property eventFilter={aiTestEvent}
+	@property gameOppositionTag={versus}
+	@property locationTag={arenaML}
+	@property mapFilter={test}
+	@property worldTag+={worldTest}
+@end
+
+@blueprint GameGenreArena:GameGenreData
+	@domain type+={arenaGG}
+	@property eventFilter={arenaGGE}
+	@property gameOppositionTag=randomTag({versusTeams freeforall})
+	@property locationTag={landArenaML}
+	@property mapFilter={arenaMap}
+	@property worldTag+={worldTest}
+	@property playerControllerTag={arenaPC}
+	@property gameAxisTag={2.5d}
+@property startableNPCStates={NPCStateWander NPCStatePatrol NPCStateHitRun}
+@end
+
+@blueprint GameGenreTestRace:GameGenreData
+	@domain type+={testRaceGG test}
+	@property eventFilter={raceGGE}
+	@property gameCategoryTag+={race}
+	@property gameOppositionTag={raceOpposition dual}
+	@property locationTag={raceTestML}
+	@property mapFilter={raceTestMap}
+	@property playerControllerTag={racePC} //RacingPlayerControllerData
+	@property startableNPCStates={NPCStateRaceDriver}
+	@property worldTag+={release}
+	@define textureTerrainLength=1 //I want no terrain processing...
+@end
+
+@blueprint GameGenreUITest:GameGenreData
+	@domain type+={uiTest}
+	@property worldTag+={screenTest}
+@end
+
+@blueprint MinimalGameGenre:GameGenreData
+	@domain type+={minimal}
+	@property eventFilter={aiTestEvent}
+	@property worldTag+={minimal}
+@end
+
+@blueprint ModelEditGameGenre:GameGenreData
+	@domain type+={modelEdit}
+	@property eventFilter={noGameEvent}
+	@property gameOppositionTag={null}
+	@property locationTag={raceTestML}
+	@property mapFilter={raceTestMap}
+	@property worldTag+={modelEdit}
+@end
+
+@blueprint PhysEditGameGenre:GameGenreData
+	@domain type+={physEdit}
+	@property eventFilter={noEvent}
+	@property gameOppositionTag={null}
+	@property locationTag={testingML}
+	@property mapFilter={testing}
+	@property worldTag+={physEdit}
+@end
+
+@blueprint RacingGenres:GameGenreData
+	@domain type+={race}
+	@property eventFilter={raceGGE}
+	@property gameCategoryTag+={race}
+	@property gameOppositionTag={raceOpposition leaf}
+	@property locationTag={raceML}
+	@property mapFilter={race}
+	@property playerControllerTag={racePC} //RacingPlayerControllerData
+	@property startableNPCStates={NPCStateRaceDriver}
+	@property worldTag+={release}
+@end
+
+@blueprint CombatRacing:RacingGenres
+	@domain type+={combat}
+	@property gameCategoryTag+={combat}
+@end
+
+@blueprint simpleRacing:RacingGenres
+	@domain type+={nonCombat}
+	@property gameCategoryTag+={nonCombat}
+	@comment description=' racing only, no fighting'
+@end
+
+@blueprint ShooterGenre:GameGenreData
+	@domain type+={shooterGG}
+	@property components+={ShooterDirectorComponent}
+	@property eventFilter={shooterGGE}
+	@property gameCategoryTag+={GAME_ACTION}
+	@property gameOppositionTag={playerVersus}
+	@property locationTag={shooterML}
+	@property mapFilter={shooterMap}
+	@property playerControllerTag={shooterPC} //Implementar a ação de tiro
+	@property startableNPCStates={NPCStateWander}
+	@property worldTag+={release}
+	@property gameAxisTag={platform upDown}//UpDownAxis
+	@property vehicleMeshFilter={flyer} //FlyerVehicles
+@end
+
+@blueprint MacroDefinitions:MacroObjects
+	@domain class='entity'
+	@domain type+={macroDefinition}
+	@property gameConsts=pickFinal({gameConsts leaf})
+	@property gameGenre=pickSingle({data gameGenre leaf $this.gameGenreTag})
+	@property gameGenreTag={default}
+	@property nameGen=pickFinal({nameGenEnum appNameGen $this.nameGenTag leaf})
+	@property nameGenTag={generic}
+	@property theme=pickFinal({$this.themeTag theme gamemechanic leaf})
+	@property themeTag={default}
+	@define gameGenre=$this.gameGenre
+	@define theme=$this.theme
+	@comment description='macrodefinitions is the responsible for defining how the world will be created...'
+@end
+
+@blueprint DebugMacroDefinitions:MacroDefinitions
+	@domain type+={debug}
+	@property gameGenreTag={debug}
+@end
+
+@blueprint MinimalMacroDefinitions:MacroDefinitions
+	@domain type+={minimal}
+	@property gameGenreTag={modelEdit}
+	@property themeTag={minimal}
+@end
+
+@blueprint ModelEditMacroDefinitions:MacroDefinitions
+	@domain type+={modelEdit}
+	@property gameGenreTag={modelEdit}
+	@property themeTag={minimal}
+@end
+
+@blueprint ModelPhysEditMacroDefinitions:MacroDefinitions
+	@domain type+={physEdit}
+	@property gameGenreTag={physEdit}
+	@property themeTag={minimal}
+@end
+
+@blueprint RacingGameDefinitions:MacroDefinitions
+	@domain type+={race}
+	@property gameGenreTag={race}
+	@property themeTag={aitestTheme}
+@end
+
+@blueprint RacingTestGameDefinitions:MacroDefinitions
+	@domain type+={raceTest test}
+	@property gameGenreTag={testRaceGG} //GameGenreTestRace
+@end
+
+@blueprint ReleaseMacroDefinitions:MacroDefinitions
+	@domain type+={release}
+	@property gameGenreTag={default}
+@end
+
+@blueprint ScreenNavigationDefinitions:MacroDefinitions
+	@domain type+={screenNavigation}
+	@property gameGenreTag={uiTest}
+	@property themeTag={screenTestTheme}
+@end
+
+@blueprint ShooterMacroDefinitions:MacroDefinitions
+	@domain type+={shooter}
+	@property gameGenreTag={shooterGG} //ShooterGenre
+@end
+
+@blueprint TerrainTestDefinition:MacroDefinitions
+	@domain type+={terrainTestMD test}
+	@property gameGenreTag={terrainTestGG}
+@end
+
+@blueprint ArenaDefinitions:MacroDefinitions
+	@domain type+={arena}
+	@property gameGenreTag={arenaGG} //GameGenreTest
+@end
+
+@blueprint TestMacroDefinitions:MacroDefinitions
+	@domain type+={testing test}
+	@property gameGenreTag={testingGG} //GameGenreTest
+@end
+
+@blueprint MapLocation:MacroObjects
+	@domain type+={maplocation}
+@end
+
+@blueprint MapLocationData:MapLocation
+	@domain type+={data}
+	@property mapSolverFilter={} //mapPopulate enum
+	@property maxHeight=150
+	@property locationFilter={land}
+	@property unitMeshFilter={} //not just for units... enviros as well
+	@mod location=pickOne({mapLocationMod mod where $this.locationFilter leaf})
+	@comment description='This set of elements is responsible for defining data about the map: gravity, skybox, terrain, etc#$#%contains data about the mapLocation being generated'
+	@property landMarkTag={null}
+	@property landmarks=pickFinal({landMarkGroup $this.landMarkTag leaf})
+@end
+
+@blueprint DefaultLocationML:MapLocationData
+	@domain type+={default}
+@end
+
+@blueprint RaceLocationML:MapLocationData
+	@domain type+={raceML}
+	@property mapSolverFilter+={raceMap}
+	@property roomBubbleFilter={circular noWall}
+	@property terrainTag={heightMap}
+	@property locationFilter={land}
+	@property maxHeight=10
+@end
+
+@blueprint RaceTestLocationML:MapLocationData
+	@domain type+={raceTestML test}
+	@property locationFilter={land}
+	@property mapSolverFilter+={raceMapTest}
+	@property roomBubbleFilter={default}
+	@property terrainTag={flatMap}
+@end
+
+@blueprint ShooterML:MapLocationData
+	@domain type+={shooterML}
+	@property locationFilter={space}
+	@property landMarkTag={surreal shooter}
+	@property minLength=10 //min axis, on a XY game, the Z axis will be this value
+	@property mapSolverFilter+={shooterSolver}
+	@property roomBubbleFilter={default}
+	@property terrainTag={noTerrain}
+@end
+
+@blueprint SpaceLocationML:MapLocationData
+	@domain type+={spaceML}
+	@property locationFilter={space}
+@end
+
+@blueprint TerrainTestLocationML:MapLocationData
+	@domain type+={terrainTestML}
+	@property locationFilter={land}
+	@property mapSolverFilter+={raceMap}
+	@property roomBubbleFilter={null}
+	@property terrainTag={heightMap}
+@end
+
+@blueprint LandArenaML:MapLocationData
+	@domain type+={landArenaML}
+	@property locationFilter={land}
+	@property landMarkTag={surreal arena}
+	@property mapSolverFilter+={arena}
+	@property maxHeight=10
+	@property roomBubbleFilter={default}
+	@property terrainTag={heightMap}
+@end
+
+@blueprint TestLocationML:MapLocationData
+	@domain type+={testingML test}
+	@property locationFilter={land}
+
+	@property mapSolverFilter+={aiTestMap}
+	@property roomBubbleFilter={null}
+	@property terrainTag={flatMap}
+@end
+
+@blueprint theme:MacroObjects
+	@domain type+={theme}
+	@property applyLights=$applyLights //definido no header
+	@property assetMaterial=pickFinal($materialRoot asset leaf,relativeSize=1.5) //used to make the 2d art
+	@property configScreenTag={screen config}
+	@property currentScreen=$this.startScreen //define a tela que o usu??rio v?? ao iniciar o jogo
+	@property debugScreenTag={screen debug}
+	@property failScreenTag={screen fail}
+	@property iconMaterial=pickFinal($materialRoot asset leaf) //used to make the 2d art
+	@property lights=pickFinal({sun light gameData})+pickFinal({moon light gameData})+pickFinal({ambient light gameData})
+	@property pauseScreenTag={screen pause}
+	@property runningScreenTag={screen running}
+	@property splashScreenTag={screen splash}
+	@property startScreenTag={screen start}
+	@property victoryScreenTag={screen victory}
+	@property visualTargetTag={none}
+	@property visualTargetType=enumValue({visualTargetTypeEnum $this.visualTargetTag})
+	@mod screenMods=pickOne({themeScreen default leaf})
+@end
+
+@blueprint AITestTheme:theme
+	@domain type+={aitestTheme}
+@end
+
+@blueprint DefaultTheme:theme
+	@domain type+={default}
+@end
+
+@blueprint MinimalTheme:theme
+	@domain type+={minimal}
+	@property runningScreenTag={null}
+	@property startScreenTag={null}
+@end
+
+@blueprint ScreenTestTheme:theme
+	@domain type+={screenTestTheme}
+@end
+
+@blueprint MapWorld:GameMechanics
+	@domain type+={mapWorld}
+	@property allowMapChoosing=0
+	@property currentMap=-1
+	@property mapSequence=enumValue(sequencingType serial)
+	@property mapsQty=rand(3,5)
+	@property terrainTag=$mapLocation.terrainTag
+	@object maps=pickOne({mapGD gameData leaf $gameGenre.mapFilter},terrainTag=$this.terrainTag)
+	@replicate maps=$this.mapsQty
+	@define mapWorld=$this
+@end
+
+@blueprint NPCRelated:GameMechanics
+	@domain type+={npcRelated}
+@end
+
+@blueprint NPCMode:NPCRelated
+	@domain type+={npcMode}
+	@comment description='Define o modo atual da unidade, se ela est?? atacando on sight, s?? retornando fogo, etc'
+@end
+
+@blueprint AttackAtWillMode:NPCMode
+	@domain type+={attackWill}
+	@property ident='attackAtWill'
+@end
+
+@blueprint HoldFireMode:NPCMode
+	@domain type+={holdFire}
+	@property ident='holdFire'
+@end
+
+@blueprint ReturnFireMode:NPCMode
+	@domain type+={returnFire}
+	@property ident='returnFire'
+@end
+
+@blueprint TargetFixation:NPCRelated
+	@domain type+={targetFixation}
+	@property TimeResourceComponentoutTarget=-1 //if the target is not visible, then the entity will forget about it in x seconds (-1=no forgetting)
+@end
+
+@blueprint AverageMemoryFixation:TargetFixation
+	@domain type+={average}
+	@property TimeResourceComponentoutTarget=40
+@end
+
+@blueprint LongMemoryFixation:TargetFixation
+	@domain type+={long}
+	@property TimeResourceComponentoutTarget=60
+@end
+
+@blueprint ShortMemoryFixation:TargetFixation
+	@domain type+={short}
+	@property TimeResourceComponentoutTarget=20
+@end
+
+@blueprint TargetSelection:NPCRelated
+	@domain type+={targetSelection}
+	@property selectionType='none'
+@end
+
+@blueprint FarthestTargetSelection:TargetSelection
+	@domain type+={farther}
+	@property selectionType='far'
+@end
+
+@blueprint nearestTargetSelection:TargetSelection
+	@domain type+={near}
+	@property selectionType='near'
+@end
+
+@blueprint randomTargetSelection:TargetSelection
+	@domain type+={random}
+	@property selectionType='random'
+@end
+
+@blueprint strongerTargetSelection:TargetSelection
+	@domain type+={stronger}
+	@property selectionType='stronger'
+@end
+
+@blueprint weakestTargetSelection:TargetSelection
+	@domain type+={weak}
+	@property selectionType='weak'
+@end
+
+@blueprint UnitRoles:NPCRelated
+	@domain type+={unitRole}
+	@property budgetMultiplier=1 //1=default value
+	@property dimensionMultiplier=1 //the unit size will be multiplied by this value (so as to create a huge boss or a small follower)
+	@property spawnChance=1 //1=100%
+	@property unitRootTag={mobile entity gameData leaf} //mobileEntity
+	@property gameOpposition=$gameGenre.gameOpposition
+	@replicate resources=oneForEach({ResourceComponent leaf})
+	@childproperty resources.startingValue[DPSComponent]=0
+	@childproperty resources.startingValue[HealthComponent]=100
+	@childproperty resources.startingValue[SpeedComponent]=3
+	@childproperty resources.weight[DPSComponent]=0
+	@childproperty resources.weight[HealthComponent]=1
+	@childproperty resources.weight[SpeedComponent]=1
+	@comment description='role representa o papel que a entidade pode assumir.#$#%'
+@end
+
+@blueprint CombatRoles:UnitRoles
+	@domain type+={combat}
+	@property bulletEntity=pickFinal({entity bullet leaf $this.bulletTag},radius=$this.bulletRadius)
+	@property bulletRadius=0.05
+	@property bulletTag={}
+	@property idealRange=$lowRange
+	@property maxCombatRange=$normalRange
+	@property minCombatRange=$meleeRange
+	@property rateOfFire=$weaponAvgROF
+	@property unitRootTag+={combat} //combatCharacterFactory
+	@childproperty resources.startingValue[DPSComponent]=10
+	@childproperty resources.weight[DPSComponent]=1
+	@comment description='NPCs com essa roles s??o npcs que atacam outros npcs e/ou jogador'
+@end
+
+@blueprint roleArtillery:CombatRoles
+	@domain type+={artillery}
+	@property budgetMultiplier=2
+	@property idealRange=$highRange
+	@property maxCombatRange=$highRange
+	@property minCombatRange=$normalRange
+	@property name='Artillery'
+	@property rateOfFire=$weaponLowROF
+	@property spawnChance=0.05
+	@childproperty resources.weight[DPSComponent]=3
+@end
+
+@blueprint roleHeavy:CombatRoles
+	@domain type+={heavy}
+	@property budgetMultiplier=2
+	@property idealRange=$lowRange
+	@property maxCombatRange=$normalRange
+	@property minCombatRange=$meleeRange
+	@property name='Heavy'
+	@property rateOfFire=$weaponHighROF
+	@property spawnChance=0.1
+	@childproperty resources.weight[DPSComponent]=2
+	@childproperty resources.weight[HealthComponent]=2
+@end
+
+@blueprint roleHighRange:CombatRoles
+	@domain type+={highRange}
+	@property budgetMultiplier=1.5
+	@property idealRange=$normalRange
+	@property maxCombatRange=$highRange
+	@property minCombatRange=$normalRange
+	@property name='HighRange'
+	@property rateOfFire=$weaponLowROF
+	@property spawnChance=0.1
+	@childproperty resources.weight[DPSComponent]=2
+@end
+
+@blueprint roleLowRange:CombatRoles
+	@domain type+={lowRange}
+	@property budgetMultiplier=1.5
+	@property idealRange=$lowRange
+	@property maxCombatRange=$normalRange
+	@property name='LowRange'
+	@property spawnChance=0.25
+@end
+
+@blueprint roleMediumRange:CombatRoles
+	@domain type+={mediumRange}
+	@property budgetMultiplier=1
+	@property idealRange=$normalRange
+	@property maxCombatRange=$normalRange
+	@property minCombatRange=$lowRange
+	@property name='NormalRange'
+	@property spawnChance=0.15
+@end
+
+@blueprint roleScout:CombatRoles
+	@domain type+={scout}
+	@property budgetMultiplier=0.5
+	@property idealRange=$lowRange
+	@property maxCombatRange=$normalRange
+	@property minCombatRange=$meleeRange
+	@property name='Scout'
+	@property spawnChance=0.05
+	@childproperty resources.weight[SpeedComponent]=2
+@end
+
+@blueprint NonCombatRoles:UnitRoles
+	@domain type+={nonCombat}
+	@property unitRootTag+={!combat}
+@end
+
+@blueprint test:base
+	@domain type+={test}
+@end
+
+@blueprint testaMirrorFilho:test
+	@domain type+={mirror filho}
+	@property pointList={ponto}
+	@object ponto=pickSingle({ponto})
+	@replicate ponto=3
+	@position ponto.x=-5+10*$index
+	@position ponto.y=-5+10*$index
+	@position ponto.z=-5+10*$index
+@end
+
+@blueprint testaMirrorPai:test
+	@domain type+={mirror pai}
+	@property height=100
+	@property objPonto=pickOne({mirror filho})
+	@property orientationX=0
+	@property orientationY=0
+	@property orientationZ=0
+	@property pointList={ponto}
+	@property qtdPontos=2
+	@object ponto=$this.objPonto
+	@replicate ponto=$this.qtdPontos
+	@childproperty ponto.mirrorX=mod($index,2)
+	@iterator ponto.angle.final=360
+	@iterator ponto.angle.initial=0
+	@orientation ponto.x=$angle
+	@orientation ponto.y=0
+	@orientation ponto.z=0
+	@position ponto.radius=$this.height
+	@comment description='Testando a cria????o de um objeto com 2 filhos, um de cada lado, os filhos devem ficar espelhados'
+@end
+
+@blueprint visual:base
+	@domain type+={visual}
+@end
+
+@blueprint Texturizer:visual
+	@domain type+={texturizer}
+	@comment description='Hierarquia com as definicoes de texturas procedurais'
+@end
+
+@blueprint ProceduralTexture:Texturizer
+	@domain type+={proceduralTexture deprecated}
+	@property blendTag={sum}
+	@property blending=pickSingle({textureBlending $this.blendTag})
+	@property color=hexColor(pickFinal({$this.colorTag color})) //color= cor da luz, nao eh a cor da textura
+	@property colorTag={whiteish}
+	@property intensity=1
+	@property layersTags={} //tags das layers devem ser unicas
+	@property mapType=enumValue(textureMapEnums $this.mapTypeTag)
+	@property mapTypeTag={}
+	@replicate textureLayers=tagList($this.layersTags,{textureLayer leaf})$final
+	@comment description=' proceduralTextures contain textureLayers, children of textureMat'
+@end
+
+@blueprint TextureLayer:Texturizer
+	@domain type+={textureLayer}
+	@property alphaFunction=1
+	@property blueFunction=$0
+	@property greenFunction=$0
+	@property redFunction=$0 //$0 = valor que n??o ser?? resolvido para nada... logo filhos devem usar += e ao concluir o $0 deve ser substituido por vazio.
+	@property textureType=enumInit({3d textureType})
+@end
+
+@blueprint adornoTextureLayer:TextureLayer
+	@domain type+={adorno}
+	@property blueFunction+=$this.val
+	@property greenFunction+=$this.val
+	@property radius=rand(3,5)*$length/100
+	@property redFunction+=$this.val
+	@property val=0
+	@property valOff=0
+	@property valOn=1
+	@property valOutside=-1
+	@comment description='inside=1, onradius=0, outside=-1'
+@end
+
+@blueprint BigCircleAdorno:adornoTextureLayer
+	@domain type+={circleAdorno}
+	@property dist=absf($this.distFromPoint-$this.distanceMiddle)
+	@property distFromPoint=distancePoint($i, $j,$this.distanceMiddle,$this.distanceMiddle)
+	@property distanceMiddle=$length/2-2
+	@property isInside=if($this.distFromPoint<$this.distanceMiddle,1,0)
+	@property isOn=if($this.dist<$this.radius,1,0)
+	@property val=if($this.isInside==1,if($this.isOn==1,$this.valOn,$this.valOff),$this.valOutside)
+@end
+
+@blueprint QuadradoAdorno:adornoTextureLayer
+	@domain type+={squareAdorno}
+	@property iF=if($i>=$length-$this.radius,1,0)
+	@property iI=if($i<=$this.radius,1,0)
+	@property jF=if($j>=$length-$this.radius,1,0)
+	@property jI=if($j<=$this.radius,1,0)
+	@property sum=$this.iI+$this.jI+$this.iF+$this.jF
+	@property val=if($this.sum>0,-1,1)
+@end
+
+@blueprint debugTextureLayer:TextureLayer
+	@domain type+={debug}
+	@property blueFunction+=$h
+	@property greenFunction+=$w
+	@property redFunction+=$d
+@end
+
+@blueprint MountainTextureLayer:TextureLayer
+	@domain type+={mountainTexture}
+	@property blueFunction+=0 //blue is the road
+	@property greenFunction+=if($h>=$this.offset+randf(-0.1,0.1),1,0)
+	@property offset=0.2
+	@property redFunction+=if($h<=$this.offset+randf(-0.1,0.1),1,0)
+	@comment description='Mountain: height< ,lowHeight=red,highHeight=green, road=blue'
+@end
+
+@blueprint noiseTextureLayer:TextureLayer
+	@domain type+={noiseTL}
+	@property amount=5
+	@property blueFunction+=$this.offset+rand($this.minAmount,$this.maxAmount)/100
+	@property greenFunction+=$this.offset+rand(-$this.minAmount,$this.maxAmount)/100
+	@property maxAmount=$this.amount
+	@property minAmount=-$this.amount
+	@property offset=0
+	@property redFunction+=$this.offset+rand(-$this.minAmount,$this.maxAmount)/100
+@end
+
+@blueprint defaultnoiseTextureLayer:noiseTextureLayer
+	@domain type+={noiseTextureLayer}
+@end
+
+@blueprint negativeNoiseTextureLayer:noiseTextureLayer
+	@domain type+={negativeNoise}
+	@property maxAmount=-$this.amount
+	@property minAmount=-$this.amount*2
+	@property offset=-0.4
+@end
+
+@blueprint positiveNoiseTextureLayer:noiseTextureLayer
+	@domain type+={positiveNoise}
+	@property maxAmount=$this.amount*3
+	@property minAmount=$this.amount*2
+	@property offset=0.4
+@end
+
+@blueprint PlaceholderTextureLayer:TextureLayer
+	@domain type+={placeholder}
+	@property blueFunction+=if($w<0,-1,1)
+	@property greenFunction+=if($d<0,-1,1)
+	@property redFunction+=if($h<0,-1,1)
+@end
+
+@blueprint randomTextureLayer:TextureLayer
+	@domain type+={random}
+	@property blueFunction+=randf(-1,1)
+	@property greenFunction+=randf(-1,1)
+	@property redFunction+=randf(-1,1)
+@end
+
+@blueprint RedishTLLayer:TextureLayer
+	@domain type+={redish}
+	@property blueFunction+=$this.valB
+	@property greenFunction+=$this.valG
+	@property redFunction+=$this.valR
+	@property valB=randf(0,0.2)
+	@property valG=randf(0,0.2)
+	@property valR=randf(0.7,1)
+@end
+
+@blueprint ShapesTL:TextureLayer
+	@domain type+={shape}
+@end
+
+@blueprint BigCircleLayer:ShapesTL
+	@domain type+={bigCircleTL}
+	@property blueFunction+=if($this.isOn,$this.valOn,$this.valOff)
+	@property dist=absf(distancePoint($i,$j,$length/2,$length/2)-$this.distanceMiddle)
+	@property distanceMiddle=$length/2
+	@property greenFunction+=if($this.isOn,$this.valOn,$this.valOff)
+	@property isOn=if($this.dist<$this.radius,1,0)
+	@property radius=2
+	@property redFunction+=if($this.isOn,$this.valOn,$this.valOff)
+	@property valOff=1
+	@property valOn=0
+@end
+
+@blueprint SquaredShapeTL:ShapesTL
+	@domain type+={squared}
+	@property blueFunction+=if($this.isOnX==1,$this.valOn,if($this.isOnY=1,$this.valOn,$this.valOff))
+	@property dist=10 //distance
+	@property greenFunction+=if($this.isOnX==1,$this.valOn,		if($this.isOnY==1,$this.valOn,$this.valOff))
+	@property isOnX=if(mod($i,$this.dist)<=$this.radius,1,0)
+	@property isOnY=if(mod($j,$this.dist)<=$this.radius,1,0)
+	@property radius=1 //0=1 pixel density
+	@property redFunction+=if($this.isOnX==1,$this.valOn,if($this.isOnY==1,$this.valOn,$this.valOff))
+	@property valOff=0
+	@property valOn=randf(-1,1)
+@end
+
+@blueprint simplexTextureLayer:TextureLayer
+	@domain type+={simplexTL}
+	@property largest=200
+@end
+
+@blueprint simpleXTextureLayer:simplexTextureLayer
+	@domain type+={simplexXTL}
+	@property blueFunction+=simplexNoise2d($seed,$this.largest,$i,$i,0,1)
+	@property greenFunction+=simplexNoise2d($seed,$this.largest,$i,$i,0,1)
+	@property redFunction+=simplexNoise2d($seed,$this.largest,$i,$i,0,1)
+@end
+
+@blueprint simpleXYRangeCenterTextureLayer:simplexTextureLayer
+	@domain type+={simplexXYRangeCenter}
+	@property blueFunction+=$this.simplex
+	@property distCenterI=absf($i-$length/2)
+	@property distCenterJ=absf($j-$length/2)
+	@property greenFunction+=$this.simplex1
+	@property redFunction+=$this.simplex2
+	@property simplex=simplexNoise2d($seed,$this.largest,$this.distCenterI,$this.distCenterJ,0,1)
+	@property simplex1=simplexNoise2d($seed,$this.largest/2,$this.distCenterI,$this.distCenterJ,0,1)
+	@property simplex2=simplexNoise2d($seed,$this.largest/4,$this.distCenterI,$this.distCenterJ,0,1)
+@end
+
+@blueprint simpleXYRangeDistanceTextureLayer:simplexTextureLayer
+	@domain type+={simplexXYRangeDistance}
+	@property blueFunction+=$this.simplex
+	@property dist=absf(distancePoint($i,$j,$length/2,$length/2)-$this.distanceMiddle)
+	@property distanceMiddle=$length/2
+	@property greenFunction+=$this.simple
+	@property redFunction+=$this.simplex2
+	@property simplex=simplexNoise2d($seed,$this.largest,$this.dist,$this.dist,0,1)
+	@property simplex1=simplexNoise2d($seed,$this.largest/2,$this.dist,$this.dist,0,1)
+	@property simplex2=simplexNoise2d($seed,$this.largest/4,$this.dist,$this.dist,0,1)
+@end
+
+@blueprint simpleXYRangeTextureLayer:simplexTextureLayer
+	@domain type+={simplexXYRange}
+	@property blueFunction+=$this.simplex
+	@property greenFunction+=$this.simplex1
+	@property redFunction+=$this.simplex2
+	@property simplex=simplexNoise2d($seed,$this.largest,$i,$j,0,1)
+	@property simplex1=simplexNoise2d($seed,$this.largest/2,$i,$j,0,1)
+	@property simplex2=simplexNoise2d($seed,$this.largest/4,$i,$j,0,1)
+@end
+
+@blueprint simpleXYTextureLayer:simplexTextureLayer
+	@domain type+={simplexXY}
+	@property blueFunction+=simplexNoise2d($seed,$this.largest,$i,$j,0,1)
+	@property greenFunction+=simplexNoise2d($seed,$this.largest,$i,$j,0,1)
+	@property redFunction+=simplexNoise2d($seed,$this.largest,$i,$j,0,1)
+@end
+
+@blueprint simpleXYZTextureLayer:simplexTextureLayer
+	@domain type+={simplexXYZTL}
+	@property blueFunction+=simplexNoise3d($seed,$this.largest,$h,$w,$d,0,1)
+	@property greenFunction+=simplexNoise3d($seed,$this.largest,$h,$w,$d,0,1)
+	@property redFunction+=simplexNoise3d($seed,$this.largest,$h,$w,$d,0,1)
+@end
+
+@blueprint simpleYTextureLayer:simplexTextureLayer
+	@domain type+={simplexYTL}
+	@property blueFunction+=simplexNoise2d($seed,$this.largest,$j,$j,0,1)
+	@property greenFunction+=simplexNoise2d($seed,$this.largest,$j,$j,0,1)
+	@property redFunction+=simplexNoise2d($seed,$this.largest,$j,$j,0,1)
+@end
+
+@blueprint somaTextureLayer:TextureLayer
+	@domain type+={sumTextureLayer}
+	@property blueFunction+=0
+	@property greenFunction+=$y
+	@property redFunction+=$x
+@end
+
+@blueprint strongBlackishLayer:TextureLayer
+	@domain type+={strongBlackish}
+	@property blueFunction+=$this.val1
+	@property greenFunction+=$this.val2
+	@property redFunction+=$this.val3
+	@property val1=randf(-1,-0.7)
+	@property val2=randf(-1,-0.7)
+	@property val3=randf(-1,-0.7)
+@end
+
+@blueprint strongWhiteishTLLayer:TextureLayer
+	@domain type+={strongWhiteish}
+	@property blueFunction+=$this.val1
+	@property greenFunction+=$this.val2
+	@property redFunction+=$this.val3
+	@property val1=randf(0.7,1)
+	@property val2=randf(0.7,1)
+	@property val3=randf(0.7,1)
+@end
+
+@blueprint TrigonometryTL:TextureLayer
+	@domain type+={trigonometry}
+@end
+
+@blueprint CosRTL:TrigonometryTL
+	@domain type+={cosr cosr2}
+	@property blueFunction+=cosr($i)+cosr($j)
+	@property greenFunction+=cosr($i)+cosr($j)
+	@property redFunction+=cosr($i)+cosr($j)
+@end
+
+@blueprint Sin2DTL:TrigonometryTL
+	@domain type+={sind sind2}
+	@property blueFunction+=(sind($i/$this.redux)+sind($j/$this.redux))
+	@property greenFunction+=(sind($i/$this.redux)+sind($j/$this.redux))
+	@property redFunction+=(sind($i/$this.redux)+sind($j/$this.redux))
+	@property redux=100
+@end
+
+@blueprint Sin2RTL:TrigonometryTL
+	@domain type+={sinr sinr2}
+	@property blueFunction+=sinr($i)+sinr($j)
+	@property greenFunction+=sinr($i)+sinr($j)
+	@property redFunction+=sinr($i)+sinr($j)
+@end
+
+@blueprint SinDTL:TrigonometryTL
+	@domain type+={sind sind1}
+	@property blueFunction+=sind($i)/100
+	@property greenFunction+=sind($i)/100
+	@property redFunction+=sind($i)/100
+@end
+
+@blueprint SinRTL:TrigonometryTL
+	@domain type+={sinr sinr1}
+	@property blueFunction+=sinr($i)
+	@property greenFunction+=sinr($i)
+	@property redFunction+=sinr($i)
+@end
+
+@blueprint TextureMat:Texturizer
+	@domain type+={textureMat}
+	@property castShadows=1
+	@property color=hexColor(pickFinal({color $this.colorTag}))
+	@property colorTag={whiteish} //changes the color... good to use with the perlin noise (grayscale)
+	@property diffuse={}
+	@property glow={}
+	@property height=1
+	@property length=$textureLength
+	@property normal={}
+	@property seed=rand(1,10000000)
+	@property shine={}
+	@property shineIntensity=rand(20,150)
+	@property specular={}
+	@property width=1
+	@comment description='produto final da textura, pronto para ser aplicado no modelo'
+@end
+
+@blueprint Material:TextureMat
+	@domain type+={material} //material uses proceduralTexture
+	@property blendTag={sum}
+	@property blending=pickSingle({textureBlending $this.blendTag})
+	@property density=1
+	@property isTransparent=0
+	@property materialType=enumValue({materialTypeEnum $materialTypeFilter})
+	@comment description='Material vai definir as propriedades b??sicas do objeto de como ele deve parecer ao ser renderizado..  Layers are: diffuse,glow,normal,shine,specular'
+@end
+
+@blueprint MaterialForAsset:Material
+	@domain type+={asset}
+	@property adornoOBJ+=textureLayer({adorno leaf}) //QuadradoAdorno
+	@property diffuse=$this.bgOBJ
+	@property materialType=enumValue({materialTypeEnum light})
+	@property mergeTag={divide} //sum,average,divide
+	@property merging=pickSingle({textureBlending $this.blendTag}) //merging is applied to the neighbour points from the FG and BG layers
+	@property normal=$this.adornoOBJ
+	@property relativeSize=1
+	@property shine=$this.fgOBJ
+	@comment description=' materials with asset art in mind. diffuse=FG, shine=BG'
+@end
+
+@blueprint MaterialBlackishAsset:MaterialForAsset
+	@domain type+={blackish dark}
+	@property bgOBJ+=textureLayer({strongBlackish})
+	@property fgOBJ+=textureLayer({strongWhiteish})
+@end
+
+@blueprint MaterialSimplexCenterAsset:MaterialForAsset
+	@domain type+={simplex center}
+	@property bgOBJ+=textureLayer({simplexXYRangeCenter},largest=100)
+	@property fgOBJ+=textureLayer({strongBlackish})
+@end
+
+@blueprint MaterialWhiteishAsset:MaterialForAsset
+	@domain type+={whiteish clear}
+	@property bgOBJ+=textureLayer({strongWhiteish})
+	@property fgOBJ+=textureLayer({strongBlackish})
+@end
+
+@blueprint MaterialForTerrains:Material
+	@domain type+={terrain}
+	@property length=$textureTerrainLength
+@end
+
+@blueprint MountainTerrainMaterial:MaterialForTerrains
+	@domain type+={mountainTex}
+	@property diffuse+=textureLayer({mountainTexture})
+	@property materialType=enumValue({materialTypeEnum terrain})
+	@comment description=' the length of the terrain is = to the terrain size'
+@end
+
+@blueprint MaterialGlass:Material
+	@domain type+={glass}
+	@property isTransparent=1
+	@property shine+=textureLayer({strongWhiteish})
+@end
+
+@blueprint MaterialGlassBlackish:MaterialGlass
+	@domain type+={blackish}
+	@property diffuse+=textureLayer({strongBlackish})
+@end
+
+@blueprint MaterialGlassRedish:MaterialGlass
+	@domain type+={redish}
+	@property diffuse+=textureLayer({redish})
+@end
+
+@blueprint MaterialGlassWhiteish:MaterialGlass
+	@domain type+={whiteish}
+	@property diffuse+=textureLayer({strongWhiteish})
+@end
+
+@blueprint MaterialMetal:Material
+	@domain type+={metal}
+	@property normal+=textureLayer(randomTag({negativeNoiseTextureLayer positiveNoiseTextureLayer none}))
+	@property shine+=textureLayer({strongWhiteish}) //metals shine
+@end
+
+@blueprint MaterialBlackMetal:MaterialMetal
+	@domain type+={blackish}
+	@property diffuse+=textureLayer({strongBlackish})
+@end
+
+@blueprint MaterialMetalSimplex:MaterialMetal
+	@domain type+={metalSimplex}
+	@property diffuse+=textureLayer({simplexXY},largest=$this.largest)
+	@property largest=rand(20,200)
+	@property normal+=textureLayer({simplexXY},largest=$this.largest)
+	@property shine+=textureLayer({simplexXY},largest=$this.largest)
+@end
+
+@blueprint MaterialWhiteMetal:MaterialMetal
+	@domain type+={whitish}
+	@property diffuse+=textureLayer({strongWhiteish})
+@end
+
+@blueprint MaterialPlastic:Material
+	@domain type+={plastic}
+	@property diffuse+=textureLayer({debug})
+	@property normal+=textureLayer({placeholder})
+	@property shine+=textureLayer({random})
+	@property specular+=textureLayer({random})
+@end
+
+@blueprint MaterialRock:Material
+	@domain type+={rock}
+	@property diffuse+=textureLayer(randomTag({strongWhiteish strongBlackish}))
+	@property normal+=textureLayer(randomTag({negativeNoise positiveNoise random}))
+@end
+
+@blueprint MaterialRockBasica:MaterialRock
+	@domain type+={rock1}
+	@property diffuse+=textureLayer(randomTag({strongWhiteish strongBlackish}))
+	@property normal+=textureLayer(randomTag({negativeNoise positiveNoise random}))
+@end
+
+@blueprint MaterialRockSimplex:MaterialRock
+	@domain type+={simplex}
+	@property diffuse+=textureLayer(randomTag({strongWhiteish strongBlackish}))
+	@property normal+=textureLayer({simplexXYRange})
+@end
+
+@blueprint MaterialRubber:Material
+	@domain type+={rubber}
+	@property diffuse+=textureLayer({strongBlackish})
+	@property normal+=textureLayer({positiveNoise})
+@end
+
+@blueprint MaterialRustedMetal:Material
+	@domain type+={rusted}
+	@property diffuse+=textureLayer({strongBlackish})
+	@property normal+=textureLayer({positiveNoise})
+@end
+
+@blueprint MaterialShape:Material
+	@domain type+={shape}
+@end
+
+@blueprint SquaredPlasticMaterial1:MaterialShape
+	@domain type+={square}
+	@property diffuse+=textureLayer({strongBlackish})+textureLayer({squared},dist=5,radius=1,valOn=randf(0.7,1))
+	@property normal+=textureLayer({squared},dist=5,valOn=1)
+	@property shine+=textureLayer({squared},dist=5,valOn=1)
+	@comment description='this looks like a quadriculated texture (with holes), where the mesh is made of plastic... nice effect'
+@end
+
+@blueprint SquaredPlasticMaterial2:MaterialShape
+	@domain type+={square}
+	@property diffuse+=textureLayer({strongWhiteish})+textureLayer({squared},dist=5,radius=1,valOn=randf(0.7,1))
+	@property normal+=textureLayer({squared},dist=5)
+	@property shine+=textureLayer({squared},dist=5)
+@end
+
+@blueprint MaterialTest:Material
+	@domain type+={test}
+	@property diffuse+=textureLayer({simplexXYZTL})
+@end
+
+@blueprint MaterialTexture:Material
+	@domain type+={materialTexture}
+	@property diffuse+=textureLayer($this.textureTag)
+	@property materialType=enumValue({materialTypeEnum light})
+	@property textureTag={}
+	@comment description=' material to be used on texture previews'
+@end
+
+@blueprint MaterialUnshaded:Material
+	@domain type+={unshaded}
+	@property castShadows=0
+	@property materialType=enumValue({materialTypeEnum unshaded})
+@end
+
+@blueprint FireMaterial:MaterialUnshaded
+	@domain type+={fire redish}
+	@property diffuse+=textureLayer({redish})
+@end
+
+@blueprint MaterialUnshadedTransparent:MaterialUnshaded
+	@domain type+={transparent}
+	@property isTransparent=1
+@end
+
+@blueprint MaterialRedishUnshadedTransparent:MaterialUnshadedTransparent
+	@domain type+={redish}
+	@property diffuse+=textureLayer({redish})
+@end
+
+@blueprint MaterialWhiteishUnshadedTransparent:MaterialUnshadedTransparent
+	@domain type+={whiteish}
+	@property diffuse+=textureLayer({strongWhiteish})
+@end
+
+@blueprint MaterialWood:Material
+	@domain type+={wood}
+@end
+
+@blueprint NoMaterial:Material
+	@domain type+={none}
+@end
+

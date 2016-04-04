@@ -1,0 +1,30 @@
+http://hub.jmonkeyengine.org/wiki/doku.php/jme3:faq    
+    
+Mudar a velocidade da camera:
+flyCam.setMoveSpeed(100f);    
+
+Custom Meshes:
+http://hub.jmonkeyengine.org/wiki/doku.php/jme3:advanced:custom_meshes
+
+Controles para jme:
+http://hub.jmonkeyengine.org/wiki/doku.php/jme3:advanced:custom_controls
+
+Exemplos de uso para controles:
+
+A WalkerNavControl, SwimmerNavControl, FlyerNavControl… that defines how a type of NPC finds their way around. All NPCs can walk, some can fly, others can swim, and some can all three, etc.
+A PlayerNavControl that is steered by user-configurable keyboard and mouse input.
+A generic animation control that acts as a common interface that triggers animations (walk, stand, attack, defend) for various entities.
+A DefensiveBehaviourControl that remote-controls NPC behaviour in fight situations.
+An IdleBehaviourControl that remote-controls NPC behaviour in neutral situations.
+A DestructionControl that automatically replaces a structure with an appropriate piece of debris after collision with a projectile…
+
+
+Controls serve para lidar com lógica interna do objeto
+--
+  towerNode.attachChild(dotNode);
+            tower_geo.setUserData("index", index);
+            tower_geo.setUserData("chargesNum", 0);
+            tower_geo.setUserData("towerHeight", towerHeight);
+            tower_geo.setUserData("dotNode",  dotNode);  
+            
+Use GeometryBatchFactory.optimize(node) to merge the meshes of the geometries contained in the given node into fewer batches, each based on common Materials used.             

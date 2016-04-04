@@ -1,0 +1,150 @@
+Options -Multiviews
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^js/minified.js?$ /build/final-min.js-inc [NC,L]
+    RewriteRule ^css/minified.css?$ /build/final-min.css-inc [NC,L]
+
+    RewriteRule ^css/(.*)/(.*).css?$ include/modulos/$1/css/$2.css [NC,L]
+    RewriteRule ^js/(.*)/(.*).js?$ include/modulos/$1/js/$2.js [NC,L]
+    RewriteRule ^js/(.*)/(.*).php?$ include/modulos/$1/js/$2.php [NC,L]
+    RewriteRule ^ckeditor(.*) include/modulos/default/pages/ckeditor/$1 [NC,L]
+    RewriteRule ^bootstrap(.*) include/modulos/bootstrap/pages/default/$1 [NC,L]
+    RewriteRule ^fonts/?(.*)$ css/fonts/$1 [NC,L]
+
+    RewriteRule ^mod_(.*)/(.*)?$ include/modulos/$1/pages/$2.php [NC,L]
+
+    RewriteRule ^admin/?(.*)$ include/modulos/admin/pages/$1 [NC,L]
+
+    RewriteRule ^widget/(.*)?$ include/modulos/default/pages/widget_viewer.php?$1 [L,NE,QSA]
+
+    ## CONSTRUBOOK
+    RewriteRule ^fornecedores/?$ include/modulos/construbook/pages/fornecedor.php?acao=consulta [NC,L]
+    RewriteRule ^fornecedores/novo$ include/modulos/construbook/pages/fornecedor.php?acao=novo [NC,L]
+    RewriteRule ^fornecedores/([0-9]+)?$ include/modulos/construbook/pages/fornecedor.php?acao=visualiza&fornecedor=$1 [NC,L]
+    RewriteRule ^fornecedores/([0-9]+)/([^/]*)?$ include/modulos/construbook/pages/fornecedor.php?acao=visualiza&fornecedor=$1&opcao=$2 [NC,L]
+    RewriteRule ^fornecedores/busca$ include/modulos/construbook/pages/fornecedor.php?acao=busca [NC,L]
+    RewriteRule ^fornecedores/([0-9]+)/produto/([0-9]+)([^/]*)?$ include/modulos/construbook/pages/fornecedor.php?acao=visualizaProduto&fornecedor=$1&idProduto=$2 [NC,L]
+
+    #Perfil
+    RewriteRule ^perfil/cliente$ include/modulos/construbook/pages/perfil.php?acao=mudaPerfilCliente& [NC,L]
+    RewriteRule ^perfil/([0-9]+)?$ include/modulos/construbook/pages/perfil.php?acao=mudaPerfilFornecedor&fornecedor=$1 [NC,L]
+
+    #Fornecedor
+    RewriteRule ^fornecedor$ include/modulos/construbook/pages/manterFornecedor.php [NC,L]
+    #Produto
+    RewriteRule ^fornecedor/produtos$ include/modulos/construbook/pages/manterProduto.php [NC,L]
+    RewriteRule ^fornecedor/produtos/([0-9]+)$ include/modulos/construbook/pages/manterProduto.php?idProduto=$1&opcao=editar [NC,L]
+    RewriteRule ^fornecedor/produtos/([0-9]+)/remover$ include/modulos/construbook/pages/manterProduto.php?idProduto=$1&opcao=remover [NC,L]
+
+    #Categoria
+    RewriteRule ^fornecedor/categorias$ include/modulos/construbook/pages/manterCategoria.php [NC,L]
+    RewriteRule ^fornecedor/categorias/([0-9]+)$ include/modulos/construbook/pages/manterCategoria.php?idCategoria=$1&opcao=editar [NC,L]
+    RewriteRule ^fornecedor/categorias/([0-9]+)/remover$ include/modulos/construbook/pages/manterCategoria.php?idCategoria=$1&opcao=remover [NC,L]
+
+    #Tabela Calculo
+    RewriteRule ^fornecedor/tabela$ include/modulos/construbook/pages/manterTabela.php [NC,L]
+    RewriteRule ^fornecedor/tabela/([0-9]+)$ include/modulos/construbook/pages/manterTabela.php?idTabela=$1&opcao=editar [NC,L]
+    RewriteRule ^fornecedor/tabela/([0-9]+)/remover$ include/modulos/construbook/pages/manterTabela.php?idTabela=$1&opcao=remover [NC,L]
+
+    
+    ##ABTEST
+    RewriteRule ^abtest/?$ include/modulos/abtesting/pages/abtests.php? [NC,L]
+    RewriteRule ^abtest/new?$ include/modulos/abtesting/pages/abtests.php?acao=novo [NC,L]
+    RewriteRule ^abtest/([0-9]+)?$ include/modulos/abtesting/pages/abtests.php?abtest=$1 [NC,L]
+    RewriteRule ^redir/([0-9]+)?$ include/modulos/abtesting/pages/redir.php?abtest=$1 [NC,L]
+
+    RewriteRule ^tipoabtest/?$ include/modulos/abtesting/pages/tipo_abtest.php? [NC,L]
+    RewriteRule ^tipoabtest/new?$ include/modulos/abtesting/pages/tipo_abtest.php?acao=novo [NC,L]
+
+    RewriteRule ^nyi/(.*)?$ include/modulos/abtesting/pages/nyi.php?feature=$1 [NC,L]
+
+    RewriteRule ^abtest/variacao?$ include/modulos/abtesting/pages/variacao.php [NC,L]
+    RewriteRule ^abtest/variacao/new/([0-9]+)?$ include/modulos/abtesting/pages/variacao.php?acao=novo&abtest=$1 [NC,L]
+    RewriteRule ^abtest/variacao/delete/([0-9]+)/([0-9]+)?$ include/modulos/abtesting/pages/variacao.php?acao=excluir&abtest=$1&variacao=$2 [NC,L]
+    RewriteRule ^abtest/variacao/([0-9]+)?$ include/modulos/abtesting/pages/variacao.php?abtest=$1 [NC,L]
+
+    ##DEFAULT
+
+
+    RewriteRule ^error/([0-9]+)?$ include/modulos/default/pages/erro.php?erro=$1 [NC,L]
+    RewriteRule ^alert/([0-9]+)?$ include/modulos/default/pages/aviso.php?erro=$1 [NC,L]
+
+
+    ##SITEMISC
+    RewriteRule ^login/reset/([A-Za-z0-9-]+)$ include/modulos/siteManager/pages/login.php?acao=resetForm&ticket=$1 [NC,L]
+    RewriteRule ^login/reset/$ include/modulos/siteManager/pages/login.php [NC,L]
+    RewriteRule ^logout$ include/modulos/siteManager/pages/login.php?acao=logout [NC,L]
+    RewriteRule ^login/forgot$ include/modulos/siteManager/pages/login.php?acao=forgot [NC,L]
+    RewriteRule ^login/new/([a-z0-9-]+)/([^/]*)/([a-z0-9-]+)?$ include/modulos/siteManager/pages/login.php?acao=novo&email=$2&erro=$1&nome=$3 [NC,L]
+    RewriteRule ^login/new/([a-z0-9-]+)/([^/]*)/([a-z0-9-]+) include/modulos/siteManager/pages/login.php?acao=novo&email=$2&erro=$1&nome=$3 [NC,L]
+    RewriteRule ^login/new$ include/modulos/siteManager/pages/login.php?acao=novo [NC,L]
+    RewriteRule ^login/new/error_([a-z0-9-]+)$ include/modulos/siteManager/pages/login.php?acao=novo&erro=$1 [NC,L]
+    RewriteRule ^login/error/([0-9]+)?$ include/modulos/siteManager/pages/login.php?erro=$1 [NC,L]
+    RewriteRule ^login/$ include/modulos/siteManager/pages/login.php [NC,L]
+    RewriteRule ^login$ include/modulos/siteManager/pages/login.php [NC,L]
+
+
+
+</IfModule>
+
+
+<IfModule mod_expires.c>
+
+ExpiresActive On
+
+    # Text
+
+    ExpiresByType textcss A31536000
+    ExpiresByType application/x-javascript A31536000
+    ExpiresByType text/html A3600
+    ExpiresByType text/richtext A3600
+    ExpiresByType text/plain A3600
+    ExpiresByType text/xml A3600
+
+    # Image
+    ExpiresByType image/gif A31536000
+    ExpiresByType image/x-icon A31536000
+    ExpiresByType image/jpeg A31536000
+    ExpiresByType image/png A31536000
+    ExpiresByType image/svg+xml A31536000
+
+    # Video
+    ExpiresByType video/asf A31536000
+    ExpiresByType video/avi A31536000
+    ExpiresByType video/quicktime A31536000
+    ExpiresByType video/mp4 A31536000
+    ExpiresByType video/mpeg A31536000
+
+    # PDF
+    ExpiresByType application/pdf A31536000
+
+    # Flash
+    ExpiresByType application/x-shockwave-flash A31536000
+
+    # Font
+    ExpiresByType application/x-font-ttf A31536000
+    ExpiresByType application/vnd.ms-fontobject A31536000
+    ExpiresByType application/x-font-otf A31536000
+
+    # Audio
+    ExpiresByType audio/mpeg A31536000
+
+    ExpiresByType audio/ogg A31536000
+
+    ExpiresByType audio/wav A31536000
+
+    ExpiresByType audio/wma A31536000
+
+
+
+    # Zip/Tar
+
+    ExpiresByType application/x-tar A31536000
+
+    ExpiresByType application/x-gzip A31536000
+
+    ExpiresByType application/zip A31536000
+
+</IfModule>
+

@@ -1,0 +1,25 @@
+
+
+/*
+task fatJar(type: Jar) {
+	manifest {
+        attributes 'Implementation-Title': 'Common',  
+        	'Implementation-Version': version
+    }
+    baseName = 'Common'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+*/
+
+task compile(dependsOn: ":libjars:compile") << {
+    println 'Compiling common: ' + rootProject.version
+}
+
+
+task copyToLib( type: Copy ) {
+    into "$project.jarPath"
+    from configurations.runtime
+}
+
+

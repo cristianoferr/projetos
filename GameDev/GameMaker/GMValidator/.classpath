@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/game_distribution"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/desktop_libraries"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_core"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_desktop"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_libs"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_physics"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_plugins"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_sound"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_3.1"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GMAssets"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

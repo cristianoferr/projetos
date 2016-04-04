@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/jme-physics.jar" sourcepath="e:/Java/lib/jme/jmephysics/jme-physics-2.1-src"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/jme-scene.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/jme-terrain.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/jmetest.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/jme-xml.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/jme.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/jme-audio.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/jme-awt.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/jme-collada.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/jme-editors.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/jme-effects.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/jme-font.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/jme-gamestates.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/jme-model.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/lib/odejava-jni.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="e:/Java/lib/jme/jmephysics/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/lib/jinput.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/lib/jogg-0.0.7.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/lib/jorbis-0.0.15.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/lib/junit-4.1.jar"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/lib/lwjgl.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="e:/Java/lib/jme/jmephysics"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmephysics/lib/lwjgl_util_applet.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Common"/>
+	<classpathentry kind="lib" path="E:/java/lib/jme/jmetest-data.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Java3DTestes"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

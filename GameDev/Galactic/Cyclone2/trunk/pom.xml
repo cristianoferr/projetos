@@ -1,0 +1,39 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.cristiano</groupId>
+  <artifactId>Cyclone2</artifactId>
+  <name>Cyclone</name>
+  <version>1.0</version>
+  <build>
+        <sourceDirectory>src</sourceDirectory>
+        <outputDirectory>bin</outputDirectory>
+        <plugins>
+           <plugin>
+             <groupId>org.codehaus.mojo</groupId>
+              <artifactId>build-helper-maven-plugin</artifactId>
+              <version>1.5</version>
+              <executions>
+                <execution>
+                  <id>add-source</id>
+                  <phase>generate-sources</phase>
+                  <goals>
+                      <goal>add-source</goal>
+                  </goals>
+                  <configuration>
+                      <sources>
+                          <source>../Common/src</source>
+                      </sources>
+                  </configuration>
+                </execution>
+              </executions>
+           </plugin>
+        </plugins>
+  </build>
+  <properties>
+    <sonar.dynamicAnalysis>false</sonar.dynamicAnalysis>
+    <sonar.phase>generate-sources</sonar.phase>
+  </properties>
+</project>

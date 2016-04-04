@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.3" timestamp="2012-04-11T17:37:02.229">
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\AppletGP.java">
+<violation beginline="37" endline="37" begincolumn="17" endcolumn="30" rule="SingularField" ruleset="Design Rules" package="cristiano.GenProg" class="AppletGP" variable="dbImage" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#SingularField" priority="4">
+Perhaps 'dbImage' could be replaced by a local variable.
+</violation>
+<violation beginline="38" endline="38" begincolumn="26" endcolumn="28" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="cristiano.GenProg" class="AppletGP" variable="dbg" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'dbg'.
+</violation>
+<violation beginline="65" endline="65" begincolumn="22" endcolumn="51" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="cristiano.GenProg" class="AppletGP" method="printThreadName" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'printThreadName(String)'.
+</violation>
+<violation beginline="67" endline="67" begincolumn="11" endcolumn="28" rule="SystemPrintln" ruleset="Java Logging Rules" package="cristiano.GenProg" class="AppletGP" method="printThreadName" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="78" endline="78" begincolumn="23" endcolumn="24" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="cristiano.GenProg" class="AppletGP" method="mousePressed" variable="pt" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'pt'.
+</violation>
+<violation beginline="117" endline="117" begincolumn="25" endcolumn="43" rule="AvoidPrintStackTrace" ruleset="Java Logging Rules" package="cristiano.GenProg" class="AppletGP" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+<violation beginline="211" endline="211" begincolumn="25" endcolumn="38" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="cristiano.GenProg" class="AppletGP" method="hasData" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'hasData(int)'.
+</violation>
+<violation beginline="212" endline="212" begincolumn="17" endcolumn="39" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg" class="AppletGP" method="hasData" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="310" endline="310" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="cristiano.GenProg" class="AppletGP" method="desenha" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\GeneticProgramming.java">
+<violation beginline="41" endline="41" begincolumn="17" endcolumn="28" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="41" endline="41" begincolumn="17" endcolumn="28" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="41" endline="41" begincolumn="40" endcolumn="51" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="50" endline="50" begincolumn="48" endcolumn="51" rule="FinalFieldCouldBeStatic" ruleset="Design Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#FinalFieldCouldBeStatic" priority="4">
+This final field could be made static
+</violation>
+<violation beginline="52" endline="52" begincolumn="13" endcolumn="26" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="52" endline="52" begincolumn="13" endcolumn="26" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="52" endline="52" begincolumn="44" endcolumn="57" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="54" endline="54" begincolumn="13" endcolumn="26" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="54" endline="54" begincolumn="13" endcolumn="26" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="54" endline="54" begincolumn="42" endcolumn="55" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="55" endline="55" begincolumn="13" endcolumn="26" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="55" endline="55" begincolumn="13" endcolumn="26" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="55" endline="55" begincolumn="40" endcolumn="53" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="56" endline="56" begincolumn="13" endcolumn="32" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="56" endline="56" begincolumn="13" endcolumn="32" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="56" endline="56" begincolumn="48" endcolumn="67" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="57" endline="57" begincolumn="13" endcolumn="26" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="57" endline="57" begincolumn="13" endcolumn="26" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="57" endline="57" begincolumn="38" endcolumn="51" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="59" endline="59" begincolumn="13" endcolumn="31" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="59" endline="59" begincolumn="13" endcolumn="31" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="59" endline="59" begincolumn="50" endcolumn="68" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="cristiano.GenProg" class="GeneticProgramming" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="98" endline="98" begincolumn="9" endcolumn="38" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg" class="GeneticProgramming" method="topG" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="100" endline="100" begincolumn="9" endcolumn="17" rule="UnnecessaryLocalBeforeReturn" ruleset="Design Rules" package="cristiano.GenProg" class="GeneticProgramming" method="topG" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UnnecessaryLocalBeforeReturn" priority="3">
+Consider simply returning the value vs storing it in local variable 'd'
+</violation>
+<violation beginline="137" endline="138" begincolumn="25" endcolumn="82" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg" class="GeneticProgramming" method="printCodigoFonte" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="138" endline="138" begincolumn="33" endcolumn="50" rule="SystemPrintln" ruleset="Java Logging Rules" package="cristiano.GenProg" class="GeneticProgramming" method="printCodigoFonte" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="197" endline="197" begincolumn="17" endcolumn="81" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg" class="GeneticProgramming" method="calcFitnessSingle" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="263" endline="263" begincolumn="17" endcolumn="28" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg" class="GeneticProgramming" method="endTurn" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="263" endline="263" begincolumn="43" endcolumn="54" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="cristiano.GenProg" class="GeneticProgramming" method="endTurn" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="413" endline="413" begincolumn="40" endcolumn="51" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg" class="GeneticProgramming" method="generateOffspring" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="413" endline="413" begincolumn="40" endcolumn="51" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg" class="GeneticProgramming" method="generateOffspring" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="449" endline="449" begincolumn="17" endcolumn="69" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg" class="GeneticProgramming" method="generateOffspring" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="496" endline="496" begincolumn="25" endcolumn="45" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg" class="GeneticProgramming" method="getNode" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="513" endline="513" begincolumn="23" endcolumn="43" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="cristiano.GenProg" class="GeneticProgramming" method="getCodeAtPos" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'getCodeAtPos(int)'.
+</violation>
+<violation beginline="618" endline="618" begincolumn="16" endcolumn="29" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg" class="GeneticProgramming" method="getCodigoFonte" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="618" endline="618" begincolumn="16" endcolumn="29" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg" class="GeneticProgramming" method="getCodigoFonte" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\Node\AI\NodeNeuron.java">
+<violation beginline="23" endline="23" begincolumn="1" endcolumn="6" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg.Node.AI" class="NodeNeuron" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="23" endline="23" begincolumn="1" endcolumn="6" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg.Node.AI" class="NodeNeuron" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="23" endline="23" begincolumn="20" endcolumn="25" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="cristiano.GenProg.Node.AI" class="NodeNeuron" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="76" endline="76" begincolumn="37" endcolumn="42" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="cristiano.GenProg.Node.AI" class="NodeNeuron" method="initWeights" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="91" endline="91" begincolumn="16" endcolumn="21" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg.Node.AI" class="NodeNeuron" method="getWeights" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="91" endline="91" begincolumn="16" endcolumn="21" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg.Node.AI" class="NodeNeuron" method="getWeights" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="95" endline="95" begincolumn="32" endcolumn="37" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg.Node.AI" class="NodeNeuron" method="setWeights" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="95" endline="95" begincolumn="32" endcolumn="37" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg.Node.AI" class="NodeNeuron" method="setWeights" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\Node\DadoNode.java">
+<violation beginline="35" endline="39" begincolumn="16" endcolumn="9" rule="UnusedFormalParameter" ruleset="Unused Code Rules" package="cristiano.GenProg.Node" class="DadoNode" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedFormalParameter" priority="3">
+Avoid unused constructor parameters such as 'nome'.
+</violation>
+<violation beginline="40" endline="44" begincolumn="16" endcolumn="9" rule="UnusedFormalParameter" ruleset="Unused Code Rules" package="cristiano.GenProg.Node" class="DadoNode" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedFormalParameter" priority="3">
+Avoid unused constructor parameters such as 'nome'.
+</violation>
+<violation beginline="46" endline="50" begincolumn="16" endcolumn="17" rule="UnusedFormalParameter" ruleset="Unused Code Rules" package="cristiano.GenProg.Node" class="DadoNode" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedFormalParameter" priority="3">
+Avoid unused constructor parameters such as 'nome'.
+</violation>
+<violation beginline="48" endline="48" begincolumn="22" endcolumn="35" rule="IntegerInstantiation" ruleset="Migration Rules" package="cristiano.GenProg.Node" class="DadoNode" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#IntegerInstantiation" priority="3">
+Avoid instantiating Integer objects. Call Integer.valueOf() instead.
+</violation>
+<violation beginline="53" endline="53" begincolumn="22" endcolumn="35" rule="IntegerInstantiation" ruleset="Migration Rules" package="cristiano.GenProg.Node" class="DadoNode" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#IntegerInstantiation" priority="3">
+Avoid instantiating Integer objects. Call Integer.valueOf() instead.
+</violation>
+<violation beginline="58" endline="58" begincolumn="22" endcolumn="34" rule="StringInstantiation" ruleset="String and StringBuffer Rules" package="cristiano.GenProg.Node" class="DadoNode" externalInfoUrl="http://pmd.sourceforge.net/rules/strings.html#StringInstantiation" priority="3">
+Avoid instantiating String objects; this is usually unnecessary.
+</violation>
+<violation beginline="61" endline="65" begincolumn="16" endcolumn="17" rule="UnusedFormalParameter" ruleset="Unused Code Rules" package="cristiano.GenProg.Node" class="DadoNode" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedFormalParameter" priority="3">
+Avoid unused constructor parameters such as 'nome'.
+</violation>
+<violation beginline="90" endline="90" begincolumn="26" endcolumn="33" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer Rules" package="cristiano.GenProg.Node" class="DadoNode" method="getInt" externalInfoUrl="http://pmd.sourceforge.net/rules/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;String&quot; appears 5 times in this file; the first occurrence is on line 90
+</violation>
+<violation beginline="93" endline="93" begincolumn="34" endcolumn="41" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer Rules" package="cristiano.GenProg.Node" class="DadoNode" method="getInt" externalInfoUrl="http://pmd.sourceforge.net/rules/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;Double&quot; appears 5 times in this file; the first occurrence is on line 93
+</violation>
+<violation beginline="96" endline="96" begincolumn="34" endcolumn="42" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer Rules" package="cristiano.GenProg.Node" class="DadoNode" method="getInt" externalInfoUrl="http://pmd.sourceforge.net/rules/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;Integer&quot; appears 5 times in this file; the first occurrence is on line 96
+</violation>
+<violation beginline="118" endline="118" begincolumn="16" endcolumn="28" rule="StringInstantiation" ruleset="String and StringBuffer Rules" package="cristiano.GenProg.Node" class="DadoNode" method="setString" externalInfoUrl="http://pmd.sourceforge.net/rules/strings.html#StringInstantiation" priority="3">
+Avoid instantiating String objects; this is usually unnecessary.
+</violation>
+<violation beginline="124" endline="124" begincolumn="22" endcolumn="35" rule="IntegerInstantiation" ruleset="Migration Rules" package="cristiano.GenProg.Node" class="DadoNode" method="setString" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#IntegerInstantiation" priority="3">
+Avoid instantiating Integer objects. Call Integer.valueOf() instead.
+</violation>
+<violation beginline="135" endline="135" begincolumn="22" endcolumn="35" rule="IntegerInstantiation" ruleset="Migration Rules" package="cristiano.GenProg.Node" class="DadoNode" method="setInt" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#IntegerInstantiation" priority="3">
+Avoid instantiating Integer objects. Call Integer.valueOf() instead.
+</violation>
+<violation beginline="146" endline="146" begincolumn="22" endcolumn="40" rule="IntegerInstantiation" ruleset="Migration Rules" package="cristiano.GenProg.Node" class="DadoNode" method="setDouble" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#IntegerInstantiation" priority="3">
+Avoid instantiating Integer objects. Call Integer.valueOf() instead.
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\Node\Functions\NodeTerminal.java">
+<violation beginline="38" endline="38" begincolumn="17" endcolumn="84" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node.Functions" class="NodeTerminal" method="getValue" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="39" endline="39" begincolumn="17" endcolumn="70" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node.Functions" class="NodeTerminal" method="getValue" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="40" endline="40" begincolumn="17" endcolumn="62" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node.Functions" class="NodeTerminal" method="getValue" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="41" endline="41" begincolumn="17" endcolumn="60" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node.Functions" class="NodeTerminal" method="getValue" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="47" endline="47" begincolumn="17" endcolumn="25" rule="UnnecessaryLocalBeforeReturn" ruleset="Design Rules" package="cristiano.GenProg.Node.Functions" class="NodeTerminal" method="copyNode" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UnnecessaryLocalBeforeReturn" priority="3">
+Consider simply returning the value vs storing it in local variable 'n'
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\Node\Logic\NodeAnd.java">
+<violation beginline="42" endline="42" begincolumn="25" endcolumn="79" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node.Logic" class="NodeAnd" method="getValue" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\Node\Logic\NodeEqual.java">
+<violation beginline="40" endline="40" begincolumn="25" endcolumn="79" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node.Logic" class="NodeEqual" method="getValue" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\Node\Logic\NodeNand.java">
+<violation beginline="43" endline="43" begincolumn="25" endcolumn="79" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node.Logic" class="NodeNand" method="getValue" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\Node\Logic\NodeNor.java">
+<violation beginline="40" endline="40" begincolumn="25" endcolumn="78" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node.Logic" class="NodeNor" method="getValue" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\Node\Logic\NodeOr.java">
+<violation beginline="37" endline="37" begincolumn="17" endcolumn="25" rule="UnnecessaryLocalBeforeReturn" ruleset="Design Rules" package="cristiano.GenProg.Node.Logic" class="NodeOr" method="copyNode" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UnnecessaryLocalBeforeReturn" priority="3">
+Consider simply returning the value vs storing it in local variable 'n'
+</violation>
+<violation beginline="44" endline="44" begincolumn="25" endcolumn="78" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node.Logic" class="NodeOr" method="getValue" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\Node\Memory\NodeSetVar.java">
+<violation beginline="46" endline="46" begincolumn="17" endcolumn="40" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node.Memory" class="NodeSetVar" method="getValue" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\Node\Node.java">
+<violation beginline="31" endline="31" begincolumn="17" endcolumn="28" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg.Node" class="Node" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="31" endline="31" begincolumn="17" endcolumn="28" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg.Node" class="Node" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="31" endline="31" begincolumn="40" endcolumn="51" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="cristiano.GenProg.Node" class="Node" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="74" endline="74" begincolumn="25" endcolumn="99" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node" class="Node" method="setParamNodes" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="79" endline="79" begincolumn="25" endcolumn="42" rule="SystemPrintln" ruleset="Java Logging Rules" package="cristiano.GenProg.Node" class="Node" method="setParamNodes" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="80" endline="80" begincolumn="29" endcolumn="29" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="cristiano.GenProg.Node" class="Node" method="setParamNodes" variable="x" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'x'.
+</violation>
+<violation beginline="98" endline="100" begincolumn="33" endcolumn="17" rule="EmptyIfStmt" ruleset="Basic Rules" package="cristiano.GenProg.Node" class="Node" method="drawGraph" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyIfStmt" priority="2">
+Avoid empty if statements
+</violation>
+<violation beginline="105" endline="107" begincolumn="33" endcolumn="17" rule="EmptyIfStmt" ruleset="Basic Rules" package="cristiano.GenProg.Node" class="Node" method="drawGraph" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyIfStmt" priority="2">
+Avoid empty if statements
+</violation>
+<violation beginline="156" endline="156" begincolumn="24" endcolumn="24" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="cristiano.GenProg.Node" class="Node" method="drawNode" variable="d" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'd'.
+</violation>
+<violation beginline="251" endline="251" begincolumn="25" endcolumn="80" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node" class="Node" method="setNodeAt" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="370" endline="370" begincolumn="9" endcolumn="68" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node" class="Node" method="getFunction" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="371" endline="371" begincolumn="9" endcolumn="58" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node" class="Node" method="getFunction" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="372" endline="372" begincolumn="9" endcolumn="50" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node" class="Node" method="getFunction" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="404" endline="404" begincolumn="22" endcolumn="33" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg.Node" class="Node" method="setNodes" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="404" endline="404" begincolumn="22" endcolumn="33" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg.Node" class="Node" method="setNodes" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="408" endline="408" begincolumn="8" endcolumn="19" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg.Node" class="Node" method="getNodes" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="408" endline="408" begincolumn="8" endcolumn="19" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg.Node" class="Node" method="getNodes" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\Node\NodeVariavel.java">
+<violation beginline="34" endline="34" begincolumn="17" endcolumn="25" rule="UnnecessaryLocalBeforeReturn" ruleset="Design Rules" package="cristiano.GenProg.Node" class="NodeVariavel" method="copyNode" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UnnecessaryLocalBeforeReturn" priority="3">
+Consider simply returning the value vs storing it in local variable 'n'
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\Node\SimpleMath\NodeDivision.java">
+<violation beginline="32" endline="32" begincolumn="17" endcolumn="25" rule="UnnecessaryLocalBeforeReturn" ruleset="Design Rules" package="cristiano.GenProg.Node.SimpleMath" class="NodeDivision" method="copyNode" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UnnecessaryLocalBeforeReturn" priority="3">
+Consider simply returning the value vs storing it in local variable 'n'
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\Node\SimpleMath\NodeMax.java">
+<violation beginline="39" endline="39" begincolumn="25" endcolumn="48" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node.SimpleMath" class="NodeMax" method="getValue" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\Node\SimpleMath\NodeMin.java">
+<violation beginline="34" endline="34" begincolumn="17" endcolumn="25" rule="UnnecessaryLocalBeforeReturn" ruleset="Design Rules" package="cristiano.GenProg.Node.SimpleMath" class="NodeMin" method="copyNode" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UnnecessaryLocalBeforeReturn" priority="3">
+Consider simply returning the value vs storing it in local variable 'n'
+</violation>
+<violation beginline="42" endline="42" begincolumn="25" endcolumn="49" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.Node.SimpleMath" class="NodeMin" method="getValue" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\rules\FitnessRule.java">
+<violation beginline="28" endline="28" begincolumn="25" endcolumn="61" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.rules" class="FitnessRule" method="checkRule" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="28" endline="28" begincolumn="25" endcolumn="61" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="cristiano.GenProg.rules" class="FitnessRule" method="checkRule" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+<violation beginline="31" endline="31" begincolumn="25" endcolumn="62" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.rules" class="FitnessRule" method="checkRule" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="31" endline="31" begincolumn="25" endcolumn="62" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="cristiano.GenProg.rules" class="FitnessRule" method="checkRule" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+<violation beginline="34" endline="34" begincolumn="25" endcolumn="55" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="cristiano.GenProg.rules" class="FitnessRule" method="checkRule" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="34" endline="34" begincolumn="25" endcolumn="55" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="cristiano.GenProg.rules" class="FitnessRule" method="checkRule" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\rules\FitnessRules.java">
+<violation beginline="15" endline="15" begincolumn="17" endcolumn="35" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg.rules" class="FitnessRules" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="15" endline="15" begincolumn="17" endcolumn="35" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg.rules" class="FitnessRules" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="17" endline="17" begincolumn="34" endcolumn="52" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="cristiano.GenProg.rules" class="FitnessRules" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+</file>
+<file name="D:\Java\workspaces\workdspace\GenProg\src\cristiano\GenProg\set\AbstractSet.java">
+<violation beginline="10" endline="10" begincolumn="13" endcolumn="26" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg.set" class="AbstractSet" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="10" endline="10" begincolumn="13" endcolumn="26" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg.set" class="AbstractSet" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="10" endline="10" begincolumn="42" endcolumn="55" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="cristiano.GenProg.set" class="AbstractSet" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="11" endline="11" begincolumn="13" endcolumn="26" rule="LooseCoupling" ruleset="Coupling Rules" package="cristiano.GenProg.set" class="AbstractSet" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="11" endline="11" begincolumn="13" endcolumn="26" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="cristiano.GenProg.set" class="AbstractSet" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="11" endline="11" begincolumn="40" endcolumn="53" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="cristiano.GenProg.set" class="AbstractSet" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+</file>
+</pmd>

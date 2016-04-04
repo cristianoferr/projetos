@@ -1,0 +1,57 @@
+
+funçoes uteis:
+
+writeDebug($log)
+executaSQL($sql)
+
+
+setDetalhesInclusao($flagVisivel,$flagRequired,$default)
+translateKey($key)
+
+valores de uma entidade:
+SELECT * 
+FROM valor v, registro r
+WHERE v.id_registro = r.id_registro
+AND r.id_entidade_pai =2
+order by r.id_registro
+
+----
+Input com mascara:
+depois ve isso aqui 
+
+http://jasny.github.io/bootstrap/javascript/#inputmask-examples 
+
+a estrategia que o cara fez pra por javascript nas tags 
+
+-----
+Dicas php:
+
+$array = array(
+    "foo" => "bar",
+    "bar" => "foo",
+);
+--
+foreach ($arr as $value) {
+    echo "Value: $value<br />\n";
+}
+
+--
+public function test(OtherClass $otherclass) {
+        echo $otherclass->var;
+    }
+--
+   public function __toString() {
+        return $this->idRegistro . " - " . $this->nmRegistro;
+    }
+
+
+---
+ /**
+     *    Will trigger a pass if the two parameters have
+     *    the same value only. Otherwise a fail.
+     *    @param mixed $first          Value to compare.
+     *    @param mixed $second         Value to compare.
+     *    @param string $message       Message to display.
+     *    @return boolean              True on pass
+     *    @access public
+     */

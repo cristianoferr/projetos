@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xml>
+<entitities>
+<entity id="132" name="Orca" owner="1" type="ET_SHIP">
+<model idShipWare="45" shipWare="Orca"/>
+<coord X="1.50295001E11" Y="0.0" Z="2000.0"/>
+<rotation X="0.0" Y="0.0" Z="0.0"/>
+<velocity X="0.0" Y="0.0" Z="0.0"/>
+<orientation I="0.0" J="0.0" K="0.0" R="1.0"/>
+</entity>
+<entity id="133" name="Providence" owner="1" type="ET_SHIP">
+<model idShipWare="52" shipWare="Providence"/>
+<coord X="1.50295001E11" Y="1500.0" Z="2000.0"/>
+<rotation X="0.0" Y="0.0" Z="0.0"/>
+<velocity X="0.0" Y="0.0" Z="0.0"/>
+<orientation I="0.0" J="0.0" K="0.0" R="1.0"/>
+</entity>
+<entity id="134" name="Megathron" owner="1" type="ET_SHIP">
+<model idShipWare="50" shipWare="Megathron"/>
+<coord X="1.50295001E11" Y="500.0" Z="1000.0"/>
+<rotation X="0.0" Y="0.0" Z="0.0"/>
+<velocity X="0.0" Y="0.0" Z="0.0"/>
+<orientation I="0.0" J="0.0" K="0.0" R="1.0"/>
+</entity>
+<entity id="135" name="Drake" owner="1" type="ET_SHIP">
+<model idShipWare="48" shipWare="Drake"/>
+<coord X="1.50295001E11" Y="0.0" Z="1000.0"/>
+<rotation X="0.0" Y="0.0" Z="0.0"/>
+<velocity X="0.0" Y="0.0" Z="0.0"/>
+<orientation I="0.0" J="0.0" K="0.0" R="1.0"/>
+</entity>
+<entity id="136" name="Velator" owner="1" type="ET_SHIP">
+<model idShipWare="49" shipWare="Velator"/>
+<coord X="1.50295000015E11" Y="150.0" Z="0.0"/>
+<rotation X="0.0" Y="0.0" Z="0.0"/>
+<velocity X="0.0" Y="0.0" Z="0.0"/>
+<orientation I="0.0" J="0.0" K="0.0" R="1.0"/>
+</entity>
+<entity id="137" name="Nova" owner="1" type="ET_SHIP">
+<model idShipWare="42" shipWare="Nova"/>
+<coord X="1.50295000015E11" Y="50.0" Z="0.0"/>
+<rotation X="0.0" Y="0.0" Z="0.0"/>
+<velocity X="0.0" Y="0.0" Z="0.0"/>
+<orientation I="0.0" J="0.0" K="0.0" R="1.0"/>
+</entity>
+<entity id="138" name="Buster" owner="1" type="ET_SHIP">
+<model idShipWare="41" shipWare="Buster"/>
+<coord X="1.50295000025E11" Y="50.0" Z="0.0"/>
+<rotation X="0.0" Y="0.0" Z="0.0"/>
+<velocity X="0.0" Y="0.0" Z="0.0"/>
+<orientation I="0.0" J="0.0" K="0.0" R="1.0"/>
+</entity>
+<entity id="139" name="Nave Jogador" owner="0" type="ET_SHIP">
+<model idShipWare="43" shipWare="Discoverer"/>
+<coord X="1.50295E11" Y="0.0" Z="0.0"/>
+<rotation X="0.0" Y="0.0" Z="0.0"/>
+<velocity X="0.0" Y="0.0" Z="0.0"/>
+<orientation I="0.0" J="0.0" K="0.0" R="1.0"/>
+</entity>
+<entity id="140" name="Avatar" owner="1" type="ET_SHIP">
+<model idShipWare="46" shipWare="Avatar"/>
+<coord X="1.50295015E11" Y="0.0" Z="-2000.0"/>
+<rotation X="0.0" Y="0.0" Z="0.0"/>
+<velocity X="0.0" Y="0.0" Z="0.0"/>
+<orientation I="0.0" J="0.0" K="0.0" R="1.0"/>
+</entity>
+<entity id="141" name="Erebus" owner="1" type="ET_SHIP">
+<model idShipWare="47" shipWare="Erebus"/>
+<coord X="1.50295015E11" Y="0.0" Z="-11000.0"/>
+<rotation X="0.0" Y="0.0" Z="0.0"/>
+<velocity X="0.0" Y="0.0" Z="0.0"/>
+<orientation I="0.0" J="0.0" K="0.0" R="1.0"/>
+</entity>
+<entity id="142" name="Ragnarok" owner="1" type="ET_SHIP">
+<model idShipWare="51" shipWare="Ragnarok"/>
+<coord X="1.50295015E11" Y="0.0" Z="-15000.0"/>
+<rotation X="0.0" Y="0.0" Z="0.0"/>
+<velocity X="0.0" Y="0.0" Z="0.0"/>
+<orientation I="0.0" J="0.0" K="0.0" R="1.0"/>
+</entity>
+</entitities>
+</xml>

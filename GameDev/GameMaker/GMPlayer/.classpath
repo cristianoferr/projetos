@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GMAssets"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JME3Utils"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JMonkeyTonegod"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_core"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_desktop"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_physics"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_plugins"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BluePrintOutput"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/desktop_libraries"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/gmassets_player"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_libs"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,30 @@
+    <script src="jquery-1.2.6.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+    
+    $(document).ready(function()
+      {
+        $.get('fotos.xml', function(d){
+        $('body').append('<h1> Recommended Web Development Photos </h1>');
+        $('body').append('<dl />');
+
+        $(d).find('photo').each(function(){
+
+            var $photo = $(this); 
+            var title = $photo.attr("title");
+            var description = $photo.find('description').text();
+            var imageurl = $photo.attr('imageurl');
+
+            var html = '<dt> <img class="photoImage" alt="" src="' + imageurl + '" /> </dt>';
+            html += '<dd> ';
+            html += '<p class="title">' + title + '</p>';
+            html += '<p> ' + description + '</p>' ;
+            html += '</dd>';
+
+            $('dl').append($(html));
+            
+        });
+    });
+});
+    </script>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/jme-audio.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/jme-awt.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/jme-collada.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/jme-editors.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/jme-effects.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/jme-font.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/jme-gamestates.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/jme-model.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/jme-ogrexml.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/jme-scene.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/jme-swt.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/jme-terrain.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/jme.jar" sourcepath="/jme"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/lib/lwjgl/jinput.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/lib/lwjgl/lwjgl_util.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/lib/lwjgl/lwjgl.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/lib/lwjgl/native/windows"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/lib/jogl/gluegen-rt.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/lib/jogl/jogl.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/lib/jorbis/jorbis-0.0.17.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/lib/swt/windows/swt_64.jar"/>
+	<classpathentry kind="lib" path="/lib/jme2/jME2_1_StableDistribution/jME2_1_StableDistribution/lib/swt/windows/swt.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Galactic"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JME2Libs"/>
+	<classpathentry kind="lib" path="/lib/nifty-gui/nifty-examples-1.3.1.jar" sourcepath="/lib/nifty-gui/nifty-examples-1.3.1-sources.jar"/>
+	<classpathentry kind="lib" path="/lib/nifty-gui/nifty-gui-1.3/nifty-1.3.jar" sourcepath="/lib/nifty-gui/nifty-gui-1.3/nifty-1.3-sources.jar"/>
+	<classpathentry kind="lib" path="/lib/nifty-gui/nifty-gui-1.3/nifty-default-controls-1.3.jar" sourcepath="/lib/nifty-gui/nifty-gui-1.3/nifty-default-controls-1.3-sources.jar"/>
+	<classpathentry kind="lib" path="/lib/nifty-gui/nifty-gui-1.3/nifty-default-controls-examples-1.3.jar"/>
+	<classpathentry kind="lib" path="/lib/nifty-gui/nifty-gui-1.3/nifty-lwjgl-renderer-1.3.jar" sourcepath="/lib/nifty-gui/nifty-gui-1.3/nifty-lwjgl-renderer-1.3-sources.jar"/>
+	<classpathentry kind="lib" path="/lib/nifty-gui/nifty-gui-1.3/nifty-lwjgl-slick-renderer-1.3.jar" sourcepath="/lib/nifty-gui/nifty-gui-1.3/nifty-lwjgl-slick-renderer-1.3-sources.jar"/>
+	<classpathentry kind="lib" path="/lib/nifty-gui/nifty-gui-1.3/nifty-slick-renderer-1.3.jar" sourcepath="/lib/nifty-gui/nifty-gui-1.3/nifty-slick-renderer-1.3-sources.jar"/>
+	<classpathentry kind="lib" path="/lib/nifty-gui/nifty-gui-1.3/nifty-style-black-1.3.jar"/>
+	<classpathentry kind="lib" path="/lib/log4j/apache-log4j-1.2.16/log4j-1.2.16.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GalacticEngine"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ViewLib"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,994 @@
+//Defines
+
+//Blueprints
+@blueprint meshBase:base
+	@domain type={all visual}
+	@output file='BluePrintMesh.bpf'
+@end
+
+@blueprint mesh:meshBase
+	@domain class='entity'
+	@domain init='GameEntity'
+	@domain type+={mesh}
+	@property defaultDepth=10
+	@property defaultHeight=10
+	@property defaultWidth=10
+	@property hullMaker=pickSingle({convex hullmaker leaf})
+	@property materialType=pickSingle($materialRoot $this#material.type)
+	@property pointList={}
+	@property subNodeType=enumValue({merge subnodetype})
+	@material type={}
+	@orientation x=0
+	@orientation y=0
+	@orientation z=0
+	@position x=0
+	@position y=0
+	@position z=0
+	@comment description='meshs s??o os modelos visuais das entidades do jogo... #$#%- Static s??o as entidades que n??o se movem (ou n??o devem se mover), exemplo: Pr??dios, ??rvores, rochas, etc#$#%- Mobile s??o as entidades m??veis, como ve??culos#$#%'
+@end
+
+@blueprint fullMesh:mesh
+	@domain type+={full}
+	@comment description='Uma fullmesh ?? uma mesh pronta para uso por uma entidade, uma full mesh pode ser composta por in??meras outras meshes, podendo ter v??rias subdivis??es para melhor definir o que pode ser selecionado'
+@end
+
+@blueprint meshBullets:fullMesh
+	@domain type+={bullet}
+	@material type={fire}
+@end
+
+@blueprint bulletEsferico:meshBullets
+	@domain type+={sphere}
+	@property meshTag={mesh primitive sphere leaf}
+	@property objectMesh=pickFinal($this.meshTag,width=$this.width,height=$this.height,depth=$this.depth)
+	@property pointList+={esfera}
+	@object esfera=$this.objectMesh
+	@replicate esfera=1
+	@material type={unshaded redish !transparent}
+	@nodetype esfera=enumValue({merge subnodetype})
+@end
+
+@blueprint meshMobile:fullMesh
+	@domain type+={mobile}
+	@property controlType={}
+	@property controller=pickFinal({physicsControlType $this.controlType leaf})
+	@material type={metal}
+@end
+
+@blueprint meshAnimais:meshMobile
+	@domain type+={organico notready}
+@end
+
+@blueprint meshHumanoide:meshMobile
+	@domain type+={humanoide notready}
+	@property controlType={humanoid}
+@end
+
+@blueprint Vehicles:meshMobile
+	@domain type+={vehicle}
+@end
+
+@blueprint FlyerVehicles:Vehicles
+	@domain type+={flyer}
+@end
+@blueprint AirVehicles:FlyerVehicles
+	@domain type+={air}
+@end
+
+@blueprint LandVehicles:Vehicles
+	@domain type+={land}
+	@property bodyObjTag={mesh fuselagem leaf}
+	@property controlType+={vehicle}
+	@property defaultDepth=24
+	@property defaultHeight=4
+	@property defaultWidth=10
+	@property name='Basic Vehicle'
+	@property pointList+={body}
+	@mod body=pickOne({$this.bodyObjTag})
+	@comment description='vehicles that walk on land'
+@end
+
+@blueprint TankVehicles:LandVehicles
+	@domain type+={tank}
+	@property bodyObjTag+={tank}
+	@property defaultDepth=10
+	@property defaultHeight=3
+	@property defaultWidth=3
+	@property turretLength=randf(0.4,0.8)*2
+	@mesh turret=addMesh({mesh turret top leaf},sizeX=randf(0.1,0.3),sizeY=randf(0.2,0.4),sizeZ=$this.turretLength,merge=0,posY=1,posZ=-randf(0.2,0.3))
+@end
+
+@blueprint FloatingTanks:TankVehicles
+	@domain type+={floating notready}
+	@property controlType+={floating}
+@end
+
+@blueprint TrackedVehicles:TankVehicles
+	@domain type+={tracked}
+	@property controlType+={floating}
+	@property pointList+={tankTrack}
+	@mesh track=addMesh({mesh tankTrack leaf},sizeX=randf(0.4,0.6),sizeY=randf(0.4,0.8),sizeZ=randf(1.2,1.6),replicate=2,mirrorX=mod(#index,2),maxAngle=180,merge=0,orientX=#angle,radius=$this.width*randf(0.5,0.7),posX=0,posY=randf(-0.5,0))
+@end
+
+@blueprint meshTrackedTank:TrackedVehicles
+	@domain type+={tank}
+@end
+
+@blueprint WheeledVehicles:TankVehicles
+	@domain type+={wheeled}
+	@property controlType+={wheeled}
+	@property protWheelSize=randf(1,1.2)
+	@property qtdWheels=4
+	@property wheelRadius=1 //isso vira a altura da roda
+	@property wheelWidth=randf(0.1,0.2) //since its rotated, the width must be applied to depth
+	@property wheelX=1.8
+	@property wheelY=0 //randf(-0.4,-0.1)
+	@property wheelZ=randf(0.5,1)
+	@material type={metal whitish}
+	@mesh protWheel=addMesh({mesh primitive sphere leaf},posZ=if(mod(#index,$this.qtdWheels/2)<$this.qtdWheels/4,$this.wheelZ,-$this.wheelZ),posY=$this.wheelY+$this.wheelRadius,posX=if(isTopQuadrant(#index)==1,$this.wheelX,-$this.wheelX),sizeZ=$this.protWheelSize,replicate=$this.qtdWheels,merge=1,sizeX=$this.protWheelSize,sizeY=$this.protWheelSize) //Ponto: serve para cobrir o topo da roda... que deve estar dentro do chassis sempre
+	@mesh wheel=addMesh({mesh wheel leaf},final=1,maxAngle=180,isFrontWheel=if(mod(#index,$this.qtdWheels/2)<1,1,0),mirrorX=mod(#index,2),posX=if(isTopQuadrant(#index)==1,$this.wheelX,-$this.wheelX),posZ=if(mod(#index,$this.qtdWheels/2)<1,$this.wheelZ,-$this.wheelZ),posY=$this.wheelY-$this.wheelRadius,rotY=90,merge=0,replicate=$this.qtdWheels,sizeX=$this.wheelRadius,sizeZ=$this.wheelWidth,sizeRadius=$this.wheelRadius*$this.height)
+@end
+
+@blueprint meshWheeledTank:WheeledVehicles
+	@domain type+={tank}
+@end
+
+@blueprint SpaceVehicles:Vehicles
+	@domain type+={space}
+	@property bodyObjTag+={space}
+	@property controlType+={space}
+@end
+
+@blueprint FightersShip:SpaceVehicles
+	@domain type+={fighter}
+	@property bodyObjTag+={fighter}
+@end
+
+@blueprint SimpleFighterShip:FightersShip
+	@domain type+={basic}
+	@mesh cockPit=addMesh({cockPit fighter leaf})
+@end
+
+@blueprint meshStatic:fullMesh
+	@domain type+={static}
+@end
+
+@blueprint meshGeneric:meshStatic
+	@domain type+={generic}
+	@comment description=' misc meshes'
+@end
+
+@blueprint meshGoalArrow:meshGeneric
+	@domain type+={goalArrow}
+	@property materialTag={unshaded transparent redish}
+	@material type=$this.materialTag
+	@mesh cilindro=addMesh({mesh cilindro simples leaf},sizeX=0.1,final=0,sizeY=0.1,sizeZ=1,merge=0,posZ=1,sizeRadius=1,material=$this.materialTag)
+	@mesh cone=addMesh({mesh cone leaf},sizeX=1,sizeY=0.4,final=0,sizeZ=0.5,merge=0,posZ=-0.5,sizeRadius=1.5,material=$this.materialTag)
+	@comment description=' a 3d arrow that can be used to point at stuff...'
+@end
+
+@blueprint meshRock:meshStatic
+	@domain type+={rock notready} //TODO: implementar a meshRock
+@end
+
+@blueprint meshTrap:meshStatic
+	@domain type+={trap notready} //TODO: implementar a meshTrap
+@end
+
+@blueprint meshWallDepth:meshStatic
+	@domain type+={z}
+@end
+
+@blueprint meshWallWidth:meshStatic
+	@domain type+={x}
+@end
+
+@blueprint partialMesh:mesh
+	@domain type+={partial}
+@end
+
+@blueprint meshFunctions:partialMesh
+	@domain type+={functions}
+	@comment description='Mesh functions n??o devem ser usadas diretamente e sim como complemento ?? meshes completas.'
+@end
+
+@blueprint circulo:meshFunctions
+	@domain type+={circulo}
+	@property objPonto=pickSingle({ponto})
+	@property orientationX=0
+	@property orientationY=0
+	@property orientationZ=0
+	@property pointList={ponto}
+	@property qtdPontos=rand(10,20)
+	@property radius=$this.height
+	@object ponto=$this.objPonto
+	@replicate ponto=$this.qtdPontos
+	@iterator ponto.angle.final=360
+	@iterator ponto.angle.initial=0
+	@orientation ponto.x=$angle
+	@orientation ponto.y=0
+	@orientation ponto.z=0
+	@position ponto.radius=$this.radius
+	@comment description='Cria um circulo...'
+@end
+
+@blueprint circuloDentado:circulo
+	@domain type+={dentado}
+	@property qtdPontos=rand(8,12)
+	@comment description='um c??rculo menos definido...'
+@end
+
+@blueprint circuloPerfeito:circulo
+	@domain type+={perfeito}
+	@property qtdPontos=rand(20,30)
+	@comment description='um c??rculo mais definido...'
+@end
+
+@blueprint lineFunctions:meshFunctions
+	@domain type+={line}
+	@property difX=($this.p1X-$this.p0X)/$this.qtdPts
+	@property difY=($this.p1Y-$this.p0Y)/$this.qtdPts
+	@property difZ=($this.p1Z-$this.p0Z)/$this.qtdPts
+	@property maiorDif=absMaior($this.difX,$this.difY,$this.difZ)
+	@property midPoint=round(randf($this.qtdPts/4,$this.qtdPts-$this.qtdPts/4))
+	@property objPonto=pickSingle({ponto})
+	@property p0X=0
+	@property p0Y=0
+	@property p0Z=0
+	@property p1X=0
+	@property p1Y=0
+	@property p1Z=0
+	@property pointList={ponto}
+	@property ptsDepois=$this.qtdPts-$this.midPoint
+	@property qtdPts=rand(5,20)
+	@object ponto=$this.objPonto
+	@replicate ponto=$this.qtdPts+1
+	@nodetype ponto=enumValue({merge subnodetype})
+	@position ponto.x=$this.p0X+$this.difX*$index
+	@position ponto.y=$this.p0Y+$this.difY*$index
+	@position ponto.z=$this.p0Z+$this.difZ*$index
+	@comment description='cria uma linha do ponto A ao ponto B, preencher as propriedadees p0 e p1'
+@end
+
+@blueprint curvedLineFunctionT1:lineFunctions
+	@domain type+={curved t1}
+	@property fatPerc=rand(-8,8)/10
+	@position ponto.x*=if($this.difX==$this.maiorDif,1,curveRatioSqr($index,$this.fatPerc,$this.midPoint,$this.ptsDepois))
+	@position ponto.y*=if($this.difY==$this.maiorDif,1,curveRatioSqr($index,$this.fatPerc,$this.midPoint,$this.ptsDepois))
+	@position ponto.z*=if($this.difZ==$this.maiorDif,1,curveRatioSqr($index,$this.fatPerc,$this.midPoint,$this.ptsDepois))
+@end
+
+@blueprint curvedLineFunctionT2:lineFunctions
+	@domain type+={curved t2}
+	@property fatPerc=rand(-8,8)/10
+	@position ponto.x*=if($this.difX==$this.maiorDif,1,curveRatio($index,$this.fatPerc,$this.midPoint,$this.ptsDepois))
+	@position ponto.y*=if($this.difY==$this.maiorDif,1,curveRatio($index,$this.fatPerc,$this.midPoint,$this.ptsDepois))
+	@position ponto.z*=if($this.difZ==$this.maiorDif,1,curveRatio($index,$this.fatPerc,$this.midPoint,$this.ptsDepois))
+@end
+
+@blueprint lineFunction:lineFunctions
+	@domain type+={straight}
+	@comment description='bp vazio apenas para ser chamado com leaf'
+@end
+
+@blueprint multiLineFunction:lineFunctions
+	@domain type+={multi}
+	@property midDifX=randf(0,$this.difX)
+	@property midDifY=randf(0,$this.difY)
+	@property midDifZ=randf(0,$this.difZ)
+	@property newPX=$this.midDifX*$this.qtdPts
+	@property newPY=$this.midDifY*$this.qtdPts
+	@property newPZ=$this.midDifZ*$this.qtdPts
+	@property objLine=pickOne({line functions leaf !multi})
+	@property pointList={line}
+	@object line=$this.objLine
+	@replicate line=2
+	@replicate ponto=0
+	@childproperty line.p0X=if($index==0,$this.p0X,$this.p0X+$this.newPX)
+	@childproperty line.p0Y=if($index==0,$this.p0Y,$this.p0Y+$this.newPY)
+	@childproperty line.p0Z=if($index==0,$this.p0Z,$this.p0Z+$this.newPZ)
+	@childproperty line.p1X=if($index==0,$this.p0X+$this.newPX,$this.p1X)
+	@childproperty line.p1Y=if($index==0,$this.p0Y+$this.newPY,$this.p1Y)
+	@childproperty line.p1Z=if($index==0,$this.p0Z+$this.newPZ,$this.p1Z)
+	@childproperty line.qtdPts=$this.qtdPts
+	@nodetype line=enumValue({merge subnodetype})
+@end
+
+@blueprint MeshFunctionCunhaXY:meshFunctions
+	@domain type+={cunha2d xz}
+	@property objPonto=pickSingle({ponto})
+	@property orientationX=0
+	@property orientationY=0
+	@property orientationZ=0
+	@property pointList+={pontoUp pontoDown}
+	@property qtdPontos=rand(10,20)
+	@object pontoDown=$this.objPonto
+	@object pontoUp=$this.objPonto
+	@replicate pontoDown=$this.qtdPontos
+	@replicate pontoUp=$this.qtdPontos
+	@iterator pontoDown.angle.final=360
+	@iterator pontoDown.angle.initial=180
+	@iterator pontoUp.angle.final=180
+	@iterator pontoUp.angle.initial=0
+	@orientation pontoDown.x=$angle
+	@orientation pontoDown.y=0
+	@orientation pontoDown.z=0
+	@orientation pontoUp.x=$angle
+	@orientation pontoUp.y=0
+	@orientation pontoUp.z=0
+	@position pontoDown.radius=-$this.width
+	@position pontoDown.y=$this.height/2
+	@position pontoUp.radius=$this.width
+	@position pontoUp.y=$this.height/2
+@end
+
+@blueprint meshRoundSquare:meshFunctions
+	@domain type+={roundSquare2d}
+@end
+
+@blueprint SquareRoundTopAndDownXY:meshRoundSquare
+	@domain type+={topdown xz}
+	@property distBorderY=randf(0.1,0.3)
+	@property objPonto=pickSingle({ponto})
+	@property orientationX=0
+	@property orientationY=0
+	@property orientationZ=0
+	@property pointList+={pontoDown pontoUp}
+	@property qtdPontos=rand(10,20)
+	@object pontoDown=$this.objPonto
+	@object pontoUp=$this.objPonto
+	@replicate pontoDown=$this.qtdPontos
+	@replicate pontoUp=$this.qtdPontos
+	@iterator pontoDown.angled.final=360
+	@iterator pontoDown.angled.initial=180
+	@iterator pontoUp.angle.final=180
+	@iterator pontoUp.angle.initial=0
+	@orientation pontoDown.x=$angled
+	@orientation pontoDown.y=0
+	@orientation pontoDown.z=0
+	@orientation pontoUp.x=$angle
+	@orientation pontoUp.y=0
+	@orientation pontoUp.z=0
+	@position pontoDown.radius=$this.width
+	@position pontoDown.y=-$this.height*$this.distBorderY
+	@position pontoUp.radius=$this.width*$this.distBorderY
+	@position pontoUp.y=$this.height*$this.distBorderY
+@end
+
+@blueprint poligonoFunction:meshFunctions
+	@domain type+={poligono}
+	@property depth=$this.radius
+	@property height=$this.radius
+	@property objPonto=pickSingle({ponto})
+	@property pointList={pontoPoli}
+	@property qtdPonto=rand(5,18)
+	@property radius=1 //no point in changing this
+	@property rotateX=0
+	@property rotateY=0
+	@property rotateZ=0
+	@property width=$this.radius //width/depth/height can be defined, they will change the final size (making a ellipse-like object)
+	@object pontoPoli=$this.objPonto
+	@replicate pontoPoli=$this.qtdPonto
+	@iterator pontoPoli.angle.final=360
+	@iterator pontoPoli.angle.initial=0
+	@orientation pontoPoli.x=$angle*$this.rotateX
+	@orientation pontoPoli.y=$angle*$this.rotateY
+	@orientation pontoPoli.z=$angle*$this.rotateZ
+	@position pontoPoli.radius=$this.radius
+	@comment description='funcao que gera um poligono 2D simples, o eixo do poligono depende da propriedade rotateX/Y/Z'
+@end
+
+@blueprint BasicPoligonoFunction:poligonoFunction
+	@domain type+={basic}
+@end
+
+@blueprint poligonoXZFunction:poligonoFunction
+	@domain type+={xz}
+	@property rotateY=1
+@end
+
+@blueprint poligonoYZFunction:poligonoFunction
+	@domain type+={yz}
+	@property rotateX=1
+@end
+
+@blueprint retanguloXZFunction:meshFunctions
+	@domain type+={retangulo xz}
+	@property objPonto=pickSingle({ponto})
+	@property pointList={ponto}
+	@property qtdPonto=4
+	@property radius=10
+	@property width=$this.radius //radius must be defined
+	@object ponto=$this.objPonto
+	@replicate ponto=$this.qtdPonto
+	@nodetype ponto=enumValue({merge subnodetype})
+	@position ponto.x=if(isTopQuadrant($index)==1,$this.width/2,-$this.width/2)
+	@position ponto.y=0
+	@position ponto.z=if(mod($index,$this.qtdPonto/2)<$this.qtdPonto/4,$this.depth/2,-$this.depth/2)
+	@comment description='retangulo deitado... como se fosse um teto ou ch??o...'
+@end
+
+@blueprint retanguloYZFunction:meshFunctions
+	@domain type+={retangulo yz}
+	@property objPonto=pickSingle({ponto})
+	@property pointList={ponto}
+	@property qtdPonto=4
+	@object ponto=$this.objPonto
+	@replicate ponto=$this.qtdPonto
+	@nodetype ponto=enumValue({merge subnodetype})
+	@position ponto.x=0
+	@position ponto.y=if(isTopQuadrant($index)==1,$this.height/2,-$this.height/2)
+	@position ponto.z=if(mod($index,$this.qtdPonto/2)<$this.qtdPonto/4,$this.depth/2,-$this.depth/2)
+	@comment description=' esse retangulo ?? colocado na lateral dos objetos (por exemplo, uma porta de uma carro)'
+@end
+
+@blueprint meshPrimitive:partialMesh
+	@domain type+={primitive}
+	@material type={none}
+@end
+
+@blueprint meshBox:meshPrimitive
+	@domain type+={box}
+	@property objPonto=pickSingle({ponto})
+	@property pointList={ponto}
+	@property qtdPonto=8
+	@object ponto=$this.objPonto
+	@replicate ponto=$this.qtdPonto
+	@material type={glass}
+	@nodetype ponto=enumValue({merge subnodetype})
+	@position ponto.x=if(mod($index,$this.qtdPonto/2)<$this.qtdPonto/4,$this.width/2,-$this.width/2)
+	@position ponto.y=if(isTopQuadrant($index)==1,$this.height/2,-$this.height/2)
+	@position ponto.z=if($index>=$this.qtdPonto/2,$this.depth/2,-$this.depth/2)
+	@comment description='retangulo 3d generico...'
+@end
+
+@blueprint meshCilindro:meshPrimitive
+	@domain type+={cilindro}
+	@property objCirculo=pickFinal({mesh circulo leaf},radius=$this.radius)
+	@property pointList={circulo}
+	@property qtdCirculos=2
+	@property radius=10
+	@object circulo=$this.objCirculo
+	@replicate circulo=$this.qtdCirculos
+	@iterator circulo.pos.final=$this.depth/2
+	@iterator circulo.pos.initial=-$this.depth/2
+	@nodetype circulo=enumValue({merge subnodetype})
+	@orientation circulo.x=0
+	@orientation circulo.y=0
+	@orientation circulo.z=0
+	@position circulo.x=0
+	@position circulo.y=0
+	@position circulo.z=$pos
+@end
+
+@blueprint meshCilindroSimples:meshCilindro
+	@domain keyword={cilindro}
+	@domain type+={simples}
+	@material type={none}
+@end
+
+@blueprint meshCone:meshCilindro
+	@domain keyword={cone}
+	@domain type+={cone}
+	@property radius=$this.height
+	@childproperty circulo.radius=if($index==0,0,$this.height)
+@end
+
+@blueprint meshHalteres:meshCilindro
+	@domain keyword={halteres notready}
+	@domain type+={halteres}
+	@property objCilindro=pickFinal({mesh moeda xy},height=$this.height,depth=$this.depth/10,width=$this.width)
+	@property pointList+={cilindro}
+	@property qtdCilindros=2
+	@object cilindro=$this.objCilindro
+	@replicate cilindro=$this.qtdCilindros
+	@childproperty circulo.depth=$this.depth/10
+	@childproperty circulo.height=$this.height/10
+	@childproperty circulo.width=$this.width/10
+	@iterator cilindro.pos.final=$this.depth/2
+	@iterator cilindro.pos.initial=-$this.depth/2
+	@nodetype cilindro=enumValue({newsubnode subnodetype})
+	@position cilindro.x=0
+	@position cilindro.y=0
+	@position cilindro.z=$pos
+@end
+
+@blueprint meshCunhaTopDown:meshPrimitive
+	@domain type+={cunhaBox xz}
+	@property objCirculo=pickFinal({mesh cunha2d xz functions leaf},radius=$this.width,subNodeType=enumValue({merge subnodetype}),qtdPontos=$this.points,width=$this.width,height=$this.height)
+	@property pointList={circulo}
+	@property points=rand(6,16)
+	@property qtdCirculos=2
+	@object circulo=$this.objCirculo
+	@replicate circulo=$this.qtdCirculos
+	@orientation circulo.x=0
+	@orientation circulo.y=0
+	@orientation circulo.z=0
+	@position circulo.x=0
+	@position circulo.y=0
+	@position circulo.z=$this.depth*$index/$this.qtdCirculos
+@end
+
+@blueprint meshEsfera:meshPrimitive
+	@domain type+={sphere}
+	@property objCirculo=pickFinal({mesh circulo leaf},radius=$this.height,width=$this.height,depth=$this.height)
+	@property pointList+={circulo}
+	@property qtdCirculos=8
+	@object circulo=$this.objCirculo
+	@replicate circulo=$this.qtdCirculos
+	@childproperty circulo.height=$this.height
+	@iterator circulo.angle.final=180
+	@iterator circulo.angle.initial=0
+	@material type={metal}
+	@nodetype circulo=enumValue({merge subnodetype})
+	@orientation circulo.x=0
+	@orientation circulo.y=$angle
+	@orientation circulo.z=0
+	@position circulo.x=0
+	@position circulo.y=0
+	@position circulo.z=0
+	@comment description='A partir de um ponto central eu crio v??rios circulos, girando os mesmos'
+@end
+
+@blueprint meshIrregularBox:meshPrimitive
+	@domain type+={irregularBox}
+	@property baseDepth=$this.depth
+	@property baseWidth=$this.width
+	@property pointList+={topPoli basePoli}
+	@property topDepth=$this.depth*$this.topSizeRatio
+	@property topSizeRatio=randf(0.5,0.6)
+	@property topWidth=$this.width/2
+	@object basePoli=pickOne({functions retangulo xz leaf})
+	@object topPoli=pickOne({functions retangulo xz leaf})
+	@replicate basePoli=1
+	@replicate topPoli=1
+	@childproperty basePoli.depth=$this.baseDepth
+	@childproperty basePoli.width=$this.baseWidth
+	@childproperty topPoli.depth=$this.topDepth
+	@childproperty topPoli.width=$this.topWidth
+	@material type={metal}
+	@position basePoli.y=-$this.height/2
+	@position topPoli.y=$this.height/2
+	@position topPoli.z=-$this.depth/2*(1-$this.topSizeRatio)
+@end
+
+@blueprint meshMoedaXY:meshPrimitive
+	@domain type+={moeda xy}
+	@property circuloSpacing=rand(10,20)
+	@property objCirculo=pickFinal({mesh circulo leaf},width=$this.width,height=$this.height,depth=$this.depth,radius=$this.height,subNodeType=enumValue({merge subnodetype}))
+	@property pointList={circulo}
+	@property qtdCirculos=2
+	@object circulo=$this.objCirculo
+	@replicate circulo=$this.qtdCirculos
+	@childproperty circulo.height=$this.height
+	@orientation circulo.x=0
+	@orientation circulo.y=0
+	@orientation circulo.z=0
+	@position circulo.x=0
+	@position circulo.y=0
+	@position circulo.z=$this.depth*$index/$this.qtdCirculos
+@end
+
+@blueprint meshMoedaXZ:meshPrimitive
+	@domain type+={moeda xz}
+	@property objCirculo=pickFinal({mesh poligono functions leaf},radius=$this.width,subNodeType=enumValue({merge subnodetype}),rotateY=1,qtdPonto=$this.points,radius=$this.width/2)
+	@property pointList={circulo}
+	@property points=rand(6,16)
+	@property qtdCirculos=2
+	@object circulo=$this.objCirculo
+	@replicate circulo=$this.qtdCirculos
+	@orientation circulo.x=0
+	@orientation circulo.y=0
+	@orientation circulo.z=0
+	@position circulo.x=0
+	@position circulo.y=$this.height*$index/$this.qtdCirculos
+	@position circulo.z=0
+@end
+
+@blueprint meshRoundedBoxTopDown:meshPrimitive
+	@domain type+={roundBox xz}
+	@property pointList={circulo}
+	@property points=rand(6,16)
+	@property qtdCirculos=2
+	@object circulo=pickFinal({roundSquare2d topdown leaf functions},radius=$this.width,qtdPontos=$this.points,width=$this.width,height=$this.height)
+	@replicate circulo=$this.qtdCirculos
+	@material type={metal}
+	@orientation circulo.x=0
+	@orientation circulo.y=0
+	@orientation circulo.z=0
+	@position circulo.x=0
+	@position circulo.y=0
+	@position circulo.z=$this.depth*$index/$this.qtdCirculos
+@end
+
+@blueprint ponto:meshPrimitive
+	@domain type+={ponto}
+	@property depth=1
+	@property height=1
+	@property width=1
+@end
+
+@blueprint verificaAddMesh:meshPrimitive
+	@domain type+={checkaddMesh}
+	@property defaultDepth=10
+	@property defaultHeight=10
+	@property defaultWidth=10
+	@mesh mesh0=addMesh({mesh box leaf},posX=1,posY=0,posZ=-0.5,merge=0,orientX=0,orientZ=0,orientX=#angle,replicate=10,minAngle=0,radius=$this.width*3,maxAngle=360)
+	@mesh mesh1=addMesh({mesh box leaf},posX=1,posY=0,posZ=-0.5,merge=0,orientX=0,orientZ=0,orientY=#angle,replicate=10,minAngle=0,radius=$this.width*3,maxAngle=360)
+@end
+
+@blueprint parte:partialMesh
+	@domain type+={parte}
+	@property comprimento=1
+	@property largura=1
+	@comment description='O modelo final de uma entidade pode ser composta de sub-partes.  Cada sub-parte deve saber como se desenhar.  Tentar usar essa se????o para partes funcionais, como rodas, asas, motores, cockpits, deixando o meshPrimitive para formas b??sicas.'
+@end
+
+@blueprint cannons:parte
+	@domain type+={cannon}
+	@material type={metal}
+@end
+
+@blueprint BasicCannon:cannons
+	@domain type+={basic}
+	@property defaultDepth=300
+	@property name='Basic Cannon'
+	@property qtdCirculos=5
+	@mesh cannon=addMesh({mesh circulo leaf},final=0,posZ=#index/$this.qtdCirculos,merge=1,replicate=$this.qtdCirculos,sizeY=if(#index<$this.qtdCirculos/2,1,(randf(1,1.4)-#index/$this.qtdCirculos)))
+@end
+
+@blueprint cockPit:parte
+	@domain type+={cockPit}
+	@property defaultDepth=20
+	@property defaultHeight=5
+	@property defaultWidth=10
+	@material type={metal}
+@end
+
+@blueprint FighterCockPits:cockPit
+	@domain type+={fighter}
+@end
+
+@blueprint FighterCockPit1:FighterCockPits
+	@domain type+={fighter1}
+	@property bottomDepth=randf(0.7,1.2)
+	@property bottomWidth=randf(0.8,1.1)
+	@property maxDepth=randf(1,2)
+	@property nacelleDepth=randf(0.3,$this.maxDepth)
+	@property nacelleInitAngle=0
+	@mesh bottomPoli=addMesh({functions retangulo xz leaf},merge=1,sizeX=$this.bottomWidth,sizeZ=$this.bottomDepth,posY=-1,posZ=0)
+	@mesh frontObj=addMesh({mesh primitive leaf},material={glass},merge=0,sizeY=randf(0.2,0.4),sizeRadius=randf(0.2,0.4),sizeX=randf(0.2,0.4),sizeZ=randf(0.2,0.4),posZ=randf(0.5,1.5))
+	@mesh mainCockPit=addMesh({irregularBox leaf},sizeY=0.5,merge=1)
+	@mesh nacelle=addMesh({nacelle parte leaf},posY=randf(-2,1),posZ=randf(-1,1),replicate=2,merge=0,radius=randf($this.width/2,$this.width*1.5),sizeRadius=$this.width*randf(0.1,0.2),orientX=#angle,sizeZ=$this.nacelleDepth,minAngle=$this.nacelleInitAngle,maxAngle=$this.nacelleInitAngle+180,mirrorX=mod(#index,2))
+	@mesh wing2=addMesh({wing parte leaf},sizeY=randf(0.1,0.3),sizeX=randf(1.5,$this.maxDepth),posY=randf(-1,1),posZ=randf(-1,-0.5),replicate=2,merge=0,radius=randf($this.width/2,$this.width*3),sizeRadius=$this.width*randf(0.1,0.2),orientX=#angle,sizeZ=randf(2,4),minAngle=$this.nacelleInitAngle,maxAngle=$this.nacelleInitAngle+180,mirrorX=mod(#index,2))
+	@comment description='in this one I will make a broad base and smaller top part'
+@end
+
+@blueprint conector:parte
+	@domain type+={conector}
+@end
+
+@blueprint emissorLuz:parte
+	@domain type+={emissorluz}
+@end
+
+@blueprint farol:emissorLuz
+	@domain type+={farol}
+@end
+
+@blueprint engineBlock:parte
+	@domain type+={engineBlock}
+	@comment description=' engineblock=motor de carro'
+@end
+
+@blueprint fuselagens:parte
+	@domain type+={fuselagem}
+	@property defaultDepth=20
+	@property defaultHeight=5
+	@property defaultWidth=10
+	@material type={metal whitish}
+@end
+
+@blueprint planeFuselages:fuselagens
+	@domain type+={planes}
+	@property defaultDepth=20
+	@property defaultHeight=2
+	@property defaultWidth=5
+@end
+
+@mod BasicPlaneFuselage:planeFuselages
+	@domain type+={basic}
+	@property bodyWidth=randf(0.3,0.5)
+	@mesh corpo=addMesh({mesh cilindro leaf keyword:cilindro},sizeRadius=$this.width*$this.bodyWidth)
+	@mesh wing=addMesh({mesh wing leaf},final=1,replicate=2,sizeX=randf(5,6),sizeZ=randf(2,3),mirrorX=mod(#index,2),maxAngle=180,merge=0,orientX=#angle,radius=$this.width*$this.bodyWidth)
+@end
+
+@blueprint SpaceShipsFuselages:fuselagens
+	@domain type+={space}
+@end
+
+@mod SpaceFighterFuselage:SpaceShipsFuselages
+	@domain type+={fighter}
+	@mesh corpo=addMesh({mesh cilindro leaf keyword:cilindro})
+@end
+
+@blueprint tankFuselages:fuselagens
+	@domain type+={tank}
+@end
+
+@mod BasicTankFuselage:tankFuselages
+	@domain type+={basic}
+	@mesh corpo=addMesh({mesh irregularBox leaf},merge=1)
+	@mesh frontObj=addMesh({mesh poligono yz leaf},sizeZ=randf(0.1,0.4),merge=1,sizeRadius=$this.width*randf(0.05,0.2),posY=randf(-0.5,0.5),posZ=randf(0.8,1.3))
+@end
+
+@mod TestFuselage:fuselagens
+	@domain type+={test}
+	@property bodyWidth=randf(0.3,0.5)
+	@mesh corpo=addMesh({mesh cilindro leaf keyword:cilindro},sizeRadius=$this.width*$this.bodyWidth)
+	@mesh wing=addMesh({mesh wing leaf},final=1,replicate=2,sizeX=randf(5,6),sizeZ=randf(2,3),mirrorX=mod(#index,2),maxAngle=180,merge=0,orientX=#angle,radius=$this.width*$this.bodyWidth)
+@end
+
+@blueprint movedor:parte
+	@domain type+={mover}
+	@material type={metal}
+@end
+
+@blueprint jetEngines:movedor
+	@domain type+={jetEngine}
+@end
+
+@blueprint BasicJetEngine:jetEngines
+	@domain type+={basic}
+	@property name='Basic Jet Engine'
+	@property objCirculo=pickOne({mesh circulo})
+	@property pointList={circulo}
+	@property qtdCirculos=10
+	@object circulo=$this.objCirculo
+	@replicate circulo=$this.qtdCirculos
+	@childproperty circulo.height=if($index<$this.qtdCirculos/2,$this.height,$this.height*($this.qtdCirculos-$index)/$this.qtdCirculos-$this.qtdCirculos/2)
+	@nodetype circulo=enumValue({merge subnodetype})
+	@orientation circulo.x=0
+	@orientation circulo.y=0
+	@orientation circulo.z=0
+	@position circulo.x=0
+	@position circulo.y=0
+	@position circulo.z=-$this.depth/2+$this.depth*$index/$this.qtdCirculos
+@end
+
+@blueprint nacelles:movedor
+	@domain type+={nacelle}
+@end
+
+@factory nacelle1:nacelles
+	@domain type+={nacelle1}
+	@property baseObj=pickOne({mesh cilindro leaf},dimensions($this))
+	@property frontPointObj=pickFinal({mesh primitive leaf},depth=$this.frontSize,height=$this.frontSize,width=$this.frontSize,radius=$this.frontSize)
+	@property frontPointRadius=randf(0.6,1)
+	@property frontSize=$this.radius*$this.frontPointRadius
+	@property pointList+={frontPoint circulo}
+	@property radius=$this.width
+	@object frontPoint=$this.frontPointObj
+	@replicate frontPoint=1
+	@generator base=$this.baseObj
+	@position frontPoint.z=$this.depth*randf(1.1,1.4)/2
+@end
+
+@blueprint wheels:movedor
+	@domain type+={wheel}
+	@property defaultDepth=10
+	@property defaultHeight=10
+	@property defaultWidth=10
+	@actuator wheel=pickFinal({$actuatorRoot wheel},isFrontWheel=$this.isFrontWheel,radius=$this.depth)
+	@material type={rubber}
+@end
+
+@blueprint BasicWheel:wheels
+	@domain type+={basic}
+	@property defaultDepth=1
+	@property pointList={cilindro}
+	@property radius=1
+	@object cilindro=pickFinal({blueprint cilindro mesh keyword:cilindro},radius=$this.radius,depth=$this.depth)
+	@replicate cilindro=1
+	@nodetype body=enumValue({merge subnodetype})
+@end
+
+@blueprint tailWing:parte
+	@domain type+={tailWing}
+	@comment description='Asa traseira do avi??o (vertical ou horizontal)'
+@end
+
+@blueprint tankTracks:parte
+	@domain type+={tankTrack}
+	@property base=pickOne({functions retangulo xz leaf})
+	@property baseDepth=$this.depth/2
+	@property bottom=pickOne({functions retangulo xz leaf})
+	@property bottomDepth=$this.depth*randf(0.5,1.2)
+	@property defaultDepth=20
+	@property defaultHeight=5
+	@property defaultWidth=10
+	@property frontDepth=if($this.bottomDepth<$this.baseDepth,$this.baseDepth*randf(1.2,1.4),$this.bottomDepth*randf(1.2,1.4)) //frontDepth tem que estar na frente de ambos os depths...
+	@property lineMultiDepthA=randf(0.8,1.2)
+	@property lineMultiDepthB=randf(0.8,1.2)
+	@property lineMultiHeight=randf(0.2,0.6)
+	@property lineMultiWidth=randf(0.3,0.6)
+	@property lineObj=pickOne({functions line leaf})
+	@property pointList+={basePoli bottom line}
+	@object basePoli=$this.base
+	@object bottom=$this.bottom
+	@object line#0=$this.lineObj //line#0 ?? a linha que fica na frente da esteira
+	@replicate basePoli=1
+	@replicate bottom=1
+	@childproperty basePoli.depth=$this.baseDepth
+	@childproperty basePoli.rotateY=1
+	@childproperty basePoli.width=$this.width
+	@childproperty bottom.depth=$this.bottomDepth
+	@childproperty bottom.rotateY=1
+	@childproperty bottom.width=$this.width*randf(0.6,1.0)
+	@childproperty line#0.p0X=-$this.width*$this.lineMultiWidth
+	@childproperty line#0.p0Y=-$this.height/2*$this.lineMultiHeight
+	@childproperty line#0.p0Z=$this.frontDepth*$this.lineMultiDepthA
+	@childproperty line#0.p1X=$this.width*$this.lineMultiWidth
+	@childproperty line#0.p1Y=-$this.height/2*$this.lineMultiHeight
+	@childproperty line#0.p1Z=$this.frontDepth*$this.lineMultiDepthB
+	@material type={metal}
+	@position basePoli.x=0
+	@position basePoli.y=0
+	@position basePoli.z=0
+	@position bottom.x=0
+	@position bottom.y=-$this.height
+	@position bottom.z=0
+	@position line#0.x=0
+	@position line#0.y=0
+	@position line#0.z=-$this.depth/2
+@end
+
+@blueprint turretBase:parte
+	@domain type+={turretBase}
+	@material type={metal}
+@end
+
+@blueprint HorizontalTurretBase:turretBase
+	@domain type+={horizontal}
+@end
+
+@blueprint HorizontalTurretBaseSimple:HorizontalTurretBase
+	@property qtdCirculos=10
+	@mesh mergeBase=addMesh({poligono xz leaf},sizeRadius=$this.width,merge=1,posY=-1)
+	@mesh turretBase=addMesh({poligono xz leaf},sizeRadius=randf($this.width*0.1,$this.width*0.4),merge=1,posY=0)
+@end
+
+@blueprint turretVeiculo:parte
+	@domain type+={turret}
+	@property angleLimit=180 //how many degrees the turret can turn...
+	@property bulletEffectType=enumValue(fireSmoke)
+	@property defaultDepth=50
+	@property defaultHeight=10
+	@property defaultWidth=10
+	@property mass=1
+	@property shotMargin=10
+	@property turnRate=100
+	@actuator weapon=pickFinal({$actuatorRoot weapon},angleLimit=$this.angleLimit,turnRate=$this.turnRate,mass=$this.mass,bulletEffectType=$this.bulletEffectType)
+	@material type={metal}
+@end
+
+@blueprint topTurrets:turretVeiculo
+	@domain type+={top}
+	@mesh turretBase=addMesh({horizontal turretBase leaf},sizeX=randf(0.7,1),depth=$this.width*randf(0.7,1),sizeY=randf(1.5,2))
+	@comment description='top is the vehicle position: top of it'
+@end
+
+@blueprint BasicTopTurret:topTurrets
+	@domain type+={basic}
+	@property cannonWidth=randf(0.3,0.5)
+	@property pointList+={weapon}
+	@mesh weapon=addMesh({cannon parte mesh leaf},posZ=0,merge=0,posY=1,sizeX=$this.cannonWidth,sizeY=$this.cannonWidth)
+@end
+
+@blueprint wings:parte
+	@domain type+={wing}
+	@property defaultDepth=20
+	@property defaultHeight=1
+	@property defaultWidth=10
+	@material type={metal}
+@end
+
+@blueprint BasicWing:wings
+	@domain type+={basic}
+	@property base=pickOne({functions retangulo yz leaf})
+	@property depthFront=randf($this.depth/2,$this.depth)
+	@property depthMeio=randf(-$this.depth/2,$this.depth/2)
+	@property depthTraseira=randf(-$this.depth/2,0)
+	@property engineHeight=randf($this.height*0.5,$this.height*1)
+	@property engineObj=pickFinal({jetEngine leaf},depth=randf($this.depth*0.2,$this.depth*0.3),height=$this.engineHeight,width=randf($this.width*0.1,$this.width*0.2))
+	@property enginePosX=randf($this.width*0.3,$this.width*0.5)
+	@property enginePosZ=randf($this.depthMeio*0.6,$this.depthFront*0.8)
+	@property larguraDireita=randf($this.width/2,$this.width)
+	@property lineObj=pickOne({functions line leaf})
+	@property pointList+={basePoli line engine}
+	@property qtdPonto=4
+	@object basePoli=$this.base
+	@object engine=$this.engineObj
+	@object line#0=$this.lineObj //vai da parte traseira,esquerda ao meio direita
+	@object line#1=$this.lineObj
+	@replicate basePoli=1
+	@replicate engine=1
+	@childproperty basePoli.depth=$this.depth/2
+	@childproperty basePoli.height=$this.height
+	@childproperty basePoli.rotateY=1
+	@childproperty basePoli.width=$this.width
+	@childproperty line#0.p0X=0
+	@childproperty line#0.p0Y=0
+	@childproperty line#0.p0Z=$this.depthTraseira
+	@childproperty line#0.p1X=$this.larguraDireita
+	@childproperty line#0.p1Y=0
+	@childproperty line#0.p1Z=$this.depthMeio
+	@childproperty line#1.p0X=0
+	@childproperty line#1.p0Y=0
+	@childproperty line#1.p0Z=$this.depthFront
+	@childproperty line#1.p1X=$this.larguraDireita
+	@childproperty line#1.p1Y=0
+	@childproperty line#1.p1Z=$this.depthMeio
+	@nodetype engine=enumValue({newsubnode subnodetype})
+	@position basePoli.x=0
+	@position basePoli.y=0
+	@position basePoli.z=0
+	@position engine.x=$this.enginePosX
+	@position engine.y=-$this.engineHeight
+	@position engine.z=$this.enginePosZ
+@end
+
+@blueprint testMeshes:mesh
+	@domain type+={test testMesh}
+@end
+
+@blueprint PoliTeste0:testMeshes
+	@domain type+={poli0}
+	@property defaultWidth=20
+	@property depth=10
+	@property height=10
+	@property width=20
+	@material type={glass}
+	@mesh mesh0=addMesh({mesh box !wall leaf},posX=0,posY=0,posZ=0,merge=1,orientX=0,orientZ=0,orientX=0,replicate=1,radius=0)
+	@mesh poli1=addMesh({mesh poli1 leaf},posX=3,posY=0,posZ=0,merge=0,sizeX=2,sizeY=0.5,sizeZ=0.5,orientX=0,orientZ=0,orientX=0,replicate=1)
+@end
+
+@blueprint PoliTeste1:testMeshes
+	@domain type+={poli1}
+	@property depth=5
+	@property height=5
+	@property width=5
+	@material type={glass}
+	@mesh mesh1=addMesh({mesh box !wall leaf},posX=0,posY=0,posZ=0,merge=1,orientX=0,orientZ=0,orientX=0,replicate=1,minAngle=0,radius=0,maxAngle=360)
+	@mesh poli2=addMesh({mesh poli2 leaf},posX=1.5,posY=0,posZ=0,merge=0,sizeX=0.5,sizeY=3,sizeZ=3,orientX=0,orientZ=0,orientX=0,replicate=1,radius=0)
+@end
+
+@blueprint PoliTeste2:testMeshes
+	@domain type+={poli2}
+	@property depth=20
+	@property height=20
+	@property width=20
+	@material type={glass}
+	@mesh mesh2=addMesh({mesh box !wall leaf},posX=0,posY=0,posZ=0,merge=0,orientX=0,orientZ=0,orientX=0,replicate=1,minAngle=0,radius=$this.width,maxAngle=360,radius=0)
+@end
+
+@blueprint WheeledTest:testMeshes
+	@domain type+={wheeledTest}
+	@property defaultDepth=10
+	@property defaultHeight=2
+	@property defaultWidth=5
+	@property depth=10
+	@property height=2
+	@property qtdWheels=4
+	@property wheelRadius=0.5 //isso vira a altura da roda
+	@property wheelWidth=0.1 //since its rotated, the width must be applied to depth
+	@property wheelX=2
+	@property wheelY=-0.3
+	@property wheelZ=0.8
+	@property width=5
+	@material type={glass}
+	@mesh meshBody=addMesh({mesh box leaf},posX=0,posY=0,posZ=0,merge=1,orientX=0,orientZ=0,orientX=0,replicate=1,minAngle=0,radius=0)
+	@mesh meshTopo=addMesh({mesh box leaf},posX=0,sizeX=0.5,sizeY=0.5,sizeZ=0.5,posY=1.5,posZ=0,merge=0,orientX=0,orientZ=0,orientX=0,replicate=1,radius=0)
+	@mesh wheel=addMesh({mesh wheel leaf},final=1,maxAngle=180,isFrontWheel=if(mod(#index,$this.qtdWheels/2)<1,1,0),mirrorX=mod(#index,2),posX=if(isTopQuadrant(#index)==1,$this.wheelX,-$this.wheelX),posZ=if(mod(#index,$this.qtdWheels/2)<1,$this.wheelZ,-$this.wheelZ),posY=$this.wheelY-$this.wheelRadius,rotY=90,merge=0,replicate=$this.qtdWheels,sizeX=$this.wheelRadius,minAngle=0,sizeZ=$this.wheelWidth,sizeRadius=$this.wheelRadius*$this.height)
+@end
+

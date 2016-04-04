@@ -1,0 +1,38 @@
+	
+	dependencies {
+		//Projetos
+		runtime files('../GMPlayer/bin;bin')
+		runtime files('../GMAssets/bin')
+		runtime files('../BluePrintOutput/bin')
+		runtime files('../BluePrintManager/bin')
+		runtime files('../../CodigosUteis/JME3Utils/bin')
+		runtime files('../../CodigosUteis/Common/bin')
+		runtime files('../../CodigosUteis/ProceduralUtils/bin')
+	
+		//Android
+	    runtime files('../../lib/jmonkey/jbullet.jar')
+	    runtime files('../../lib/jmonkey/jme3-android-3.1.0-snapshot-github.jar')
+	    runtime files('../../lib/jmonkey/jme3-core-3.1.0-snapshot-github.jar')
+	    runtime files('../../lib/jmonkey/jme3-effects-3.1.0-snapshot-github.jar')
+	    runtime files('../../lib/jmonkey/jme3-jbullet-3.1.0-snapshot-github.jar')
+	    runtime files('../../lib/jmonkey/jme3-jogg-3.1.0-snapshot-github.jar')
+	    runtime files('../../lib/jmonkey/jme3-jogl-3.1.0-snapshot-github.jar')
+	    runtime files('../../lib/jmonkey/jme3-plugins-3.1.0-snapshot-github.jar')
+	    runtime files('../../lib/jmonkey/libs/j-ogg-all-1.0.0.jar')
+	    runtime files('../../lib/json/json-simple-1.1.1.jar')
+	    runtime files('../../lib/jmonkey/libs/vecmath-1.3.1.jar')
+	    runtime files('../../lib/jmonkey/plugins/jME3-ai.jar')
+	    runtime files('../../lib/jmonkey/jme3-terrain-3.1.0-snapshot-github.jar')
+	    runtime files('../../lib/jmonkey/jme3-niftygui-3.1.0-snapshot-github.jar')
+	    runtime files('../../lib/jmonkey/libs/nifty-1.3.3.jar')
+	    runtime files('../../lib/jmonkey/libs/nifty-default-controls-1.3.3.jar')
+	    runtime files('../../lib/jmonkey/libs/nifty-style-black-1.3.3.jar')
+	    runtime files('../../lib/jmonkey/libs/xpp3-1.1.4c_Android.jar')
+	    runtime files('../../lib/jmonkey/libs/eventbus-1.4.jar')
+	    runtime files('../../lib/guava/guava-18.0.jar')
+	}
+
+
+task compile << {
+    println 'Compiling libjars: ' + rootProject.version
+}

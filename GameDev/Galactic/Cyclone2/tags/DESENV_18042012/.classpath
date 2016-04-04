@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/gluegen/gluegen-rt.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/jagatoo.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/math/openmali.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Common"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/xml/jibx/jibx-run.jar"/>
+	<classpathentry kind="lib" path="/lib/log4j/apache-log4j-1.2.16/log4j-1.2.16.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

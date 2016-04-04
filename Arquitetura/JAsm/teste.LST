@@ -1,0 +1,30 @@
+8051 Assembler           Version 1.00   07/11/105 16:57:41    Page 1
+F:\java\JAsm\teste.asm
+
+
+
+    1 0000 C8           XCH A, R0 
+    2 0001 19           DEC R1  
+    3 0002 6207         XRL 007, A 
+    4 0004 4A           ORL A, R2 
+    5 0005 AE16         MOV R6, 022 
+    6 0007 3E           ADDC A, R6 
+    7 0008 95C3         SUBB A, 195 
+    8 000A 00           NOP   
+    9 000B 48           ORL A, R0 
+   10 000C 2583         ADD A, 131 
+   11 000E 0E           INC R6  
+   12 000F CB           XCH A, R3 
+   13 0010 BB0AF7       CJNE R3, #10,10
+   14 0013 48           ORL A, R0 
+   15 0014 39           ADDC A, R1 
+   16 0015 5C           ANL A, R4 
+   17 0016 3F           ADDC A, R7 
+   18 0017 07           INC @R1  
+   19 0018 FE           MOV R6 A 
+   20 0019 05CB         INC 203  
+   21 001B DEED         DJNZ R6, 10 
+
+Defined Symbols:
+
+Defined Labels:

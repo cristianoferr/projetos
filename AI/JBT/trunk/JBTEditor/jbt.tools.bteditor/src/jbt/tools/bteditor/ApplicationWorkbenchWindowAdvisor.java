@@ -1,0 +1,43 @@
+/*******************************************************************************
+ * Copyright (c) 2010 Ricardo Juan Palma Durán.
+ * 
+ * This source file is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation, version 3 of
+ * the License. The text of the GNU Lesser General Public License 
+ * is included with this application in the file LICENSE.TXT.
+ * 
+ * This source file is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ ******************************************************************************/
+package jbt.tools.bteditor;
+
+import org.eclipse.ui.application.ActionBarAdvisor;
+import org.eclipse.ui.application.IActionBarConfigurer;
+import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
+import org.eclipse.ui.application.WorkbenchWindowAdvisor;
+
+public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
+
+	public ApplicationWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
+		super(configurer);
+	}
+
+	public ActionBarAdvisor createActionBarAdvisor(IActionBarConfigurer configurer) {
+		return new ApplicationActionBarAdvisor(configurer);
+	}
+
+	public void preWindowOpen() {
+		IWorkbenchWindowConfigurer configurer = getWindowConfigurer();
+
+		configurer.setShowCoolBar(true);
+		configurer.setShowMenuBar(true);
+		configurer.setShowStatusLine(true);
+	}
+
+	public void postWindowOpen() {
+		/* Maximize the window. */
+		getWindowConfigurer().getWindow().getShell().setMaximized(true);
+	}
+}

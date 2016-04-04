@@ -1,0 +1,5 @@
+ActionsAndConditionsGenerator
+-c ActionConditionsGen.xml -r ../../../GalacticEngine/db/behaviorTree
+
+BTLibraryGenerator
+-c BTLibrary.xml -r ../../../Galactic/db/behaviorTree -o

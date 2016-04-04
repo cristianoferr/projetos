@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>30</x>
+      <y>110</y>
+      <w>130</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>_Camada: Física_
+--
+itemsFísicos
+--
+update()
+checkCollision()
+applyForce()
+...
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>400</x>
+      <y>100</y>
+      <w>210</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>_Camada: Controle_
+--
+registeredViews
+registeredModels
+--
+propertyChange()
+addModel()
+addView()
+setModelProperty()
+registerItemVisual()
+registerItemLogico()
+processInput()
+...
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>410</x>
+      <y>350</y>
+      <w>180</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>_&lt;&lt;Interface&gt;&gt; View_
+--
+draw()
+registerItemVisual()
+unregisterItemVisual()
+sendInput()
+propertyChange()
+...
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>690</x>
+      <y>220</y>
+      <w>180</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>_View_
+--
+itemsVisuais
+--
+draw()
+(métodos gráficos)
+
+...
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>560</x>
+      <y>300</y>
+      <w>222</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;Implements&gt;&gt;</panel_attributes>
+    <additional_attributes>30;80;150;80;150;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>320</x>
+      <y>190</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>30;30;80;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>580</x>
+      <y>140</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>30;30;180;30;180;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>210</x>
+      <y>210</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_Camada: Modelo_
+--
+itemsLogicos
+--
+update()
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>320</x>
+      <y>210</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>80;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>130</x>
+      <y>90</y>
+      <w>290</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>30;30;270;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>580</x>
+      <y>120</y>
+      <w>220</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>200;100;200;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>150</x>
+      <y>60</y>
+      <w>60</w>
+      <h>490</h>
+    </coordinates>
+    <panel_attributes>lt=:</panel_attributes>
+    <additional_attributes>30;470;40;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>340</x>
+      <y>60</y>
+      <w>50</w>
+      <h>490</h>
+    </coordinates>
+    <panel_attributes>lt=:
+</panel_attributes>
+    <additional_attributes>30;470;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>20</x>
+      <y>370</y>
+      <w>150</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_ItemFisico_
+--
+vel,rot,pos,tipoObj,etc
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>60</x>
+      <y>200</y>
+      <w>60</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+m1=    *
+</panel_attributes>
+    <additional_attributes>30;170;40;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>230</x>
+      <y>250</y>
+      <w>50</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+m1=    *
+</panel_attributes>
+    <additional_attributes>30;130;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>200</x>
+      <y>380</y>
+      <w>150</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>_ItemLógico_
+--
+itemID
+nome,tipo,etc
+--
+(lógica interna)
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>140</x>
+      <y>360</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>30;30;60;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>140</x>
+      <y>400</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>60;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>690</x>
+      <y>410</y>
+      <w>170</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>_ItemVisual_
+--
+itemID
+--
+update() 
+draw()
+activateControl()
+...
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>770</x>
+      <y>300</y>
+      <w>50</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+m1=    *
+</panel_attributes>
+    <additional_attributes>30;110;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>20</x>
+      <y>570</y>
+      <w>360</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Note que eu mantive um link no ItemLogico para o 
+ItemFísico, idealmente não existiria tal link, ficando a 
+cargo do controller atualizar o ItemLogico.
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>620</x>
+      <y>80</y>
+      <w>60</w>
+      <h>450</h>
+    </coordinates>
+    <panel_attributes>lt=.
+Internet?
+LAN?
+Local?
+
+fg=red
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>430</x>
+      <y>540</y>
+      <w>450</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Desse lado nós temos uma interface View (IView) que contém 
+os métodos responsáveis pela parte visual do projeto.
+O ItemVisual é atualizado sempre que o status do jogo é alterado.
+Note que entre View e Controle podemos ter uma conexão: Internet, 
+rede local ou o mesmo computador.
+Ah, o update do ItemVisual é para sincronizar com a camada lógica
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>130</x>
+      <y>110</y>
+      <w>290</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>270;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>70</x>
+      <y>40</y>
+      <w>260</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Linhas continuas=Chamadas
+Linhas pontilhadas=retorno de função
+bg=orange
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>390</x>
+      <y>20</y>
+      <w>560</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Camadas à esquerda não conhecem as camadas à direita.
+A camada controle usa a interface view como base para comunicar com os clientes.
+bg=orange
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

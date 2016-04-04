@@ -1,0 +1,6 @@
+<?
+class AcessoColunaController extends BaseController{
+
+
+	}
+?>

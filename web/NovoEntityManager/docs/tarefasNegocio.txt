@@ -1,0 +1,18 @@
+Campanha:
+- criar grupos focados de palavras chave e usar essas palavras no titulo do anúncio
+- Capitalizar cada Palavra do Anúncio
+- (pesquisar) adicionar links para competidores na página principal.
+
+A FAZER:
+
+
+- definir os "planos" de uso do sistema
+
+- destacar melhor data input 
+
+SENDO FEITO:
+
+
+FEITO:
+
+- Split Testing: dividir usuários em grupos e dividir novas funcionalidade de forma a testar a eficácia das funcionalidades.

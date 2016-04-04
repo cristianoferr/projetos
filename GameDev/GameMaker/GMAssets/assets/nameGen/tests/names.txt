@@ -1,0 +1,3 @@
+The proper technique consist of parsing a text file to create probability tables. 
+These indicate the probability of a letter following another letter. 
+Something that says the letter A has 50% chance of being followed by E and 50% of being followed by F.

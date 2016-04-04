@@ -1,0 +1,27 @@
+
+
+BPM
+	Escolher um tipo de jogo
+	Criar o mapa teste do jogo
+	Criar as entidades NPCs do jogo
+		atribuir equipamento dinamicamente
+	definir os atributos do jogador
+	definir os objetivos do mapa: matar tudo? destruir base? capturar base? chegar ao fim? coletar pílulas? Todas as anteriores?
+	
+	
+Tester
+	Criar um ambiente simulador
+	Criar/determinar parametros de fitness, como: diversão, dificuldade, tédio, ações por minuto, etc.
+	Pegar as entidades do BPM e montar um jogo
+	Simular as ações do jogador
+	
+Artefinalização
+	Criar as texturas das peças
+	Criar o SFX
+	Criar a música do jogo de acordo com o que for requerido
+	Criar backgrounds
+	Criar arte dos menus
+	Criar logo
+	
+Cliente Cocos2d-X
+	Importar elementos do jogo selecionado pelo playtester 

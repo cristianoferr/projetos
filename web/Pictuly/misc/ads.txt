@@ -1,0 +1,9 @@
+horizontal:
+<!--JuicyAds v2.0-->
+<iframe border=0 frameborder=0 marginheight=0 marginwidth=0 width=476 height=68 scrolling=no allowtransparency=true src=http://adserver.juicyads.com/adshow.php?adzone=229084></iframe>
+<!--JuicyAds END-->
+
+vertical:
+<!--JuicyAds v2.0-->
+<iframe border=0 frameborder=0 marginheight=0 marginwidth=0 width=168 height=608 scrolling=no allowtransparency=true src=http://adserver.juicyads.com/adshow.php?adzone=229086></iframe>
+<!--JuicyAds END-->

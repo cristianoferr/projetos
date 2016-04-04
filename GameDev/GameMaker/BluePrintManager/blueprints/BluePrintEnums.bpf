@@ -1,0 +1,3095 @@
+//Defines
+
+//Blueprints
+@blueprint enums:base
+	@domain type+={enum all}
+	@output file='BluePrintEnums.bpf'
+@end
+
+@blueprint booleanEnum:enums
+	@domain type+={boolean}
+@end
+
+@blueprint booleanFalseEnum:booleanEnum
+	@domain type+={false}
+	@property value='false'
+@end
+
+@blueprint booleanTrueEnum:booleanEnum
+	@domain type+={true}
+	@property value='true'
+@end
+
+@blueprint DataSetsEnum:enums
+	@domain type+={dataSetEnum}
+	@comment description=' datasets are used to return data from a given component'
+@end
+
+@blueprint LapPositionDataSet:DataSetsEnum
+	@domain type+={lapPosition}
+	@property name='LapPosition'
+	@property value='2'
+@end
+
+@blueprint LapsDataSet:DataSetsEnum
+	@domain type+={laps}
+	@property name='Laps'
+	@property value='3'
+@end
+
+@blueprint ScoreDataSet:DataSetsEnum
+	@domain type+={score}
+	@property name='Points'
+	@property value='1'
+@end
+
+@blueprint EditorKeyWordsEnum:enums
+	@domain type+={editorKeyWords} //used to color words
+@end
+
+@blueprint FunctionsWords:EditorKeyWordsEnum
+	@domain type+={functions}
+	@property value={pickOne pickFinal pickSingle addMesh mod if randf rand enumValue}
+@end
+
+@blueprint RefWords:EditorKeyWordsEnum
+	@domain type+={ref}
+	@property value={this owner creator entity mapLocation gameGenre}
+@end
+
+@blueprint InputEnum:enums
+	@domain type+={inputEnum}
+@end
+
+@blueprint keysEnum:InputEnum
+	@domain type+={keys}
+	@comment description='Source: KeyInput'
+@end
+
+@blueprint alphaKeys:keysEnum
+	@domain type+={alpha}
+@end
+
+@blueprint functionkeys:keysEnum
+	@domain type+={function}
+@end
+
+@blueprint KeyF1:functionkeys
+	@domain type+={f1}
+	@property value=hex2dec(3B)
+@end
+
+@blueprint KeyF10:functionkeys
+	@domain type+={f10}
+	@property value=hex2dec(44)
+@end
+
+@blueprint KeyF11:functionkeys
+	@domain type+={f11}
+	@property value=hex2dec(57)
+@end
+
+@blueprint KeyF12:functionkeys
+	@domain type+={f12}
+	@property value=hex2dec(58)
+@end
+
+@blueprint KeyF2:functionkeys
+	@domain type+={f2}
+	@property value=hex2dec(3C)
+@end
+
+@blueprint KeyF3:functionkeys
+	@domain type+={f3}
+	@property value=hex2dec(3D)
+@end
+
+@blueprint KeyF4:functionkeys
+	@domain type+={f4}
+	@property value=hex2dec(3E)
+@end
+
+@blueprint KeyF5:functionkeys
+	@domain type+={f5}
+	@property value=hex2dec(3F)
+@end
+
+@blueprint KeyF6:functionkeys
+	@domain type+={f6}
+	@property value=hex2dec(40)
+@end
+
+@blueprint KeyF7:functionkeys
+	@domain type+={f7}
+	@property value=hex2dec(41)
+@end
+
+@blueprint KeyF8:functionkeys
+	@domain type+={f8}
+	@property value=hex2dec(42)
+@end
+
+@blueprint KeyF9:functionkeys
+	@domain type+={f9}
+	@property value=hex2dec(43)
+@end
+
+@blueprint KEY_0:keysEnum
+	@domain type+={KEY_0}
+	@property value=hex2dec(0B)
+@end
+
+@blueprint KEY_1:keysEnum
+	@domain type+={KEY_1}
+	@property value=hex2dec(02)
+@end
+
+@blueprint KEY_2:keysEnum
+	@domain type+={KEY_2}
+	@property value=hex2dec(03)
+@end
+
+@blueprint KEY_3:keysEnum
+	@domain type+={KEY_3}
+	@property value=hex2dec(04)
+@end
+
+@blueprint KEY_4:keysEnum
+	@domain type+={KEY_4}
+	@property value=hex2dec(05)
+@end
+
+@blueprint KEY_5:keysEnum
+	@domain type+={KEY_5}
+	@property value=hex2dec(06)
+@end
+
+@blueprint KEY_6:keysEnum
+	@domain type+={KEY_6}
+	@property value=hex2dec(07)
+@end
+
+@blueprint KEY_7:keysEnum
+	@domain type+={KEY_7}
+	@property value=hex2dec(08)
+@end
+
+@blueprint KEY_8:keysEnum
+	@domain type+={KEY_8}
+	@property value=hex2dec(09)
+@end
+
+@blueprint KEY_9:keysEnum
+	@domain type+={KEY_9}
+	@property value=hex2dec(0A)
+@end
+
+@blueprint KEY_A:keysEnum
+	@domain type+={KEY_A}
+	@property value=hex2dec(1E)
+@end
+
+@blueprint KEY_ADD:keysEnum
+	@domain type+={KEY_ADD}
+	@property value=hex2dec(4E)
+@end
+
+@blueprint KEY_APOSTROPHE:keysEnum
+	@domain type+={KEY_APOSTROPHE}
+	@property value=hex2dec(28)
+@end
+
+@blueprint KEY_AT:keysEnum
+	@domain type+={KEY_AT}
+	@property value=hex2dec(91)
+@end
+
+@blueprint KEY_AX:keysEnum
+	@domain type+={KEY_AX}
+	@property value=hex2dec(96)
+@end
+
+@blueprint KEY_B:keysEnum
+	@domain type+={KEY_B}
+	@property value=hex2dec(30)
+@end
+
+@blueprint KEY_BACK:keysEnum
+	@domain type+={KEY_BACK}
+	@property value=hex2dec(0E)
+@end
+
+@blueprint KEY_BACKSLASH:keysEnum
+	@domain type+={KEY_BACKSLASH}
+	@property value=hex2dec(2B)
+@end
+
+@blueprint KEY_C:keysEnum
+	@domain type+={KEY_C}
+	@property value=hex2dec(2E)
+@end
+
+@blueprint KEY_CAPITAL:keysEnum
+	@domain type+={KEY_CAPITAL}
+	@property value=hex2dec(3A)
+@end
+
+@blueprint KEY_CIRCUMFLEX:keysEnum
+	@domain type+={KEY_CIRCUMFLEX}
+	@property value=hex2dec(90)
+@end
+
+@blueprint KEY_COLON:keysEnum
+	@domain type+={KEY_COLON}
+	@property value=hex2dec(92)
+@end
+
+@blueprint KEY_COMMA:keysEnum
+	@domain type+={KEY_COMMA}
+	@property value=hex2dec(33)
+@end
+
+@blueprint KEY_CONVERT:keysEnum
+	@domain type+={KEY_CONVERT}
+	@property value=hex2dec(79)
+@end
+
+@blueprint KEY_D:keysEnum
+	@domain type+={KEY_D}
+	@property value=hex2dec(20)
+@end
+
+@blueprint KEY_DECIMAL:keysEnum
+	@domain type+={KEY_DECIMAL}
+	@property value=hex2dec(53)
+@end
+
+@blueprint KEY_DELETE:keysEnum
+	@domain type+={KEY_DELETE}
+	@property value=hex2dec(D3)
+@end
+
+@blueprint KEY_DIVIDE:keysEnum
+	@domain type+={KEY_DIVIDE}
+	@property value=hex2dec(B5)
+@end
+
+@blueprint KEY_DOWN:keysEnum
+	@domain type+={KEY_DOWN}
+	@property value=hex2dec(D0)
+@end
+
+@blueprint KEY_E:keysEnum
+	@domain type+={KEY_E}
+	@property value=hex2dec(12)
+@end
+
+@blueprint KEY_END:keysEnum
+	@domain type+={KEY_END}
+	@property value=hex2dec(CF)
+@end
+
+@blueprint KEY_EQUALS:keysEnum
+	@domain type+={KEY_EQUALS}
+	@property value=hex2dec(0D)
+@end
+
+@blueprint KEY_ESCAPE:keysEnum
+	@domain type+={KEY_ESCAPE}
+	@property value=hex2dec(01)
+@end
+
+@blueprint KEY_F:keysEnum
+	@domain type+={KEY_F}
+	@property value=hex2dec(21)
+@end
+
+@blueprint KEY_F1:keysEnum
+	@domain type+={KEY_F1}
+	@property value=hex2dec(3B)
+@end
+
+@blueprint KEY_F10:keysEnum
+	@domain type+={KEY_F10}
+	@property value=hex2dec(44)
+@end
+
+@blueprint KEY_F11:keysEnum
+	@domain type+={KEY_F11}
+	@property value=hex2dec(57)
+@end
+
+@blueprint KEY_F12:keysEnum
+	@domain type+={KEY_F12}
+	@property value=hex2dec(58)
+@end
+
+@blueprint KEY_F13:keysEnum
+	@domain type+={KEY_F13}
+	@property value=hex2dec(64)
+@end
+
+@blueprint KEY_F14:keysEnum
+	@domain type+={KEY_F14}
+	@property value=hex2dec(65)
+@end
+
+@blueprint KEY_F15:keysEnum
+	@domain type+={KEY_F15}
+	@property value=hex2dec(66)
+@end
+
+@blueprint KEY_F2:keysEnum
+	@domain type+={KEY_F2}
+	@property value=hex2dec(3C)
+@end
+
+@blueprint KEY_F3:keysEnum
+	@domain type+={KEY_F3}
+	@property value=hex2dec(3D)
+@end
+
+@blueprint KEY_F4:keysEnum
+	@domain type+={KEY_F4}
+	@property value=hex2dec(3E)
+@end
+
+@blueprint KEY_F5:keysEnum
+	@domain type+={KEY_F5}
+	@property value=hex2dec(3F)
+@end
+
+@blueprint KEY_F6:keysEnum
+	@domain type+={KEY_F6}
+	@property value=hex2dec(40)
+@end
+
+@blueprint KEY_F7:keysEnum
+	@domain type+={KEY_F7}
+	@property value=hex2dec(41)
+@end
+
+@blueprint KEY_F8:keysEnum
+	@domain type+={KEY_F8}
+	@property value=hex2dec(42)
+@end
+
+@blueprint KEY_F9:keysEnum
+	@domain type+={KEY_F9}
+	@property value=hex2dec(43)
+@end
+
+@blueprint KEY_G:keysEnum
+	@domain type+={KEY_G}
+	@property value=hex2dec(22)
+@end
+
+@blueprint KEY_GRAVE:keysEnum
+	@domain type+={KEY_GRAVE}
+	@property value=hex2dec(29)
+@end
+
+@blueprint KEY_H:keysEnum
+	@domain type+={KEY_H}
+	@property value=hex2dec(23)
+@end
+
+@blueprint KEY_HOME:keysEnum
+	@domain type+={KEY_HOME}
+	@property value=hex2dec(C7)
+@end
+
+@blueprint KEY_I:keysEnum
+	@domain type+={KEY_I}
+	@property value=hex2dec(17)
+@end
+
+@blueprint KEY_INSERT:keysEnum
+	@domain type+={KEY_INSERT}
+	@property value=hex2dec(D2)
+@end
+
+@blueprint KEY_J:keysEnum
+	@domain type+={KEY_J}
+	@property value=hex2dec(24)
+@end
+
+@blueprint KEY_K:keysEnum
+	@domain type+={KEY_K}
+	@property value=hex2dec(25)
+@end
+
+@blueprint KEY_KANA:keysEnum
+	@domain type+={KEY_KANA}
+	@property value=hex2dec(70)
+@end
+
+@blueprint KEY_KANJI:keysEnum
+	@domain type+={KEY_KANJI}
+	@property value=hex2dec(94)
+@end
+
+@blueprint KEY_L:keysEnum
+	@domain type+={KEY_L}
+	@property value=hex2dec(26)
+@end
+
+@blueprint KEY_LBRACKET:keysEnum
+	@domain type+={KEY_LBRACKET}
+	@property value=hex2dec(1A)
+@end
+
+@blueprint KEY_LCONTROL:keysEnum
+	@domain type+={KEY_LCONTROL}
+	@property value=hex2dec(1D)
+@end
+
+@blueprint KEY_LEFT:keysEnum
+	@domain type+={KEY_LEFT}
+	@property value=hex2dec(CB)
+@end
+
+@blueprint KEY_LMENU:keysEnum
+	@domain type+={KEY_LMENU}
+	@property value=hex2dec(38)
+@end
+
+@blueprint KEY_LSHIFT:keysEnum
+	@domain type+={KEY_LSHIFT}
+	@property value=hex2dec(2A)
+@end
+
+@blueprint KEY_M:keysEnum
+	@domain type+={KEY_M}
+	@property value=hex2dec(32)
+@end
+
+@blueprint KEY_MINUS:keysEnum
+	@domain type+={KEY_MINUS}
+	@property value=hex2dec(0C)
+@end
+
+@blueprint KEY_MULTIPLY:keysEnum
+	@domain type+={KEY_MULTIPLY}
+	@property value=hex2dec(37)
+@end
+
+@blueprint KEY_N:keysEnum
+	@domain type+={KEY_N}
+	@property value=hex2dec(31)
+@end
+
+@blueprint KEY_NEXT:keysEnum
+	@domain type+={KEY_NEXT}
+	@property value=hex2dec(D1)
+@end
+
+@blueprint KEY_NOCONVERT:keysEnum
+	@domain type+={KEY_NOCONVERT}
+	@property value=hex2dec(7B)
+@end
+
+@blueprint KEY_NUMLOCK:keysEnum
+	@domain type+={KEY_NUMLOCK}
+	@property value=hex2dec(45)
+@end
+
+@blueprint KEY_NUMPAD0:keysEnum
+	@domain type+={KEY_NUMPAD0}
+	@property value=hex2dec(52)
+@end
+
+@blueprint KEY_NUMPAD1:keysEnum
+	@domain type+={KEY_NUMPAD1}
+	@property value=hex2dec(4F)
+@end
+
+@blueprint KEY_NUMPAD2:keysEnum
+	@domain type+={KEY_NUMPAD2}
+	@property value=hex2dec(50)
+@end
+
+@blueprint KEY_NUMPAD3:keysEnum
+	@domain type+={KEY_NUMPAD3}
+	@property value=hex2dec(51)
+@end
+
+@blueprint KEY_NUMPAD4:keysEnum
+	@domain type+={KEY_NUMPAD4}
+	@property value=hex2dec(4B)
+@end
+
+@blueprint KEY_NUMPAD5:keysEnum
+	@domain type+={KEY_NUMPAD5}
+	@property value=hex2dec(4C)
+@end
+
+@blueprint KEY_NUMPAD6:keysEnum
+	@domain type+={KEY_NUMPAD6}
+	@property value=hex2dec(4D)
+@end
+
+@blueprint KEY_NUMPAD7:keysEnum
+	@domain type+={KEY_NUMPAD7}
+	@property value=hex2dec(47)
+@end
+
+@blueprint KEY_NUMPAD8:keysEnum
+	@domain type+={KEY_NUMPAD8}
+	@property value=hex2dec(48)
+@end
+
+@blueprint KEY_NUMPAD9:keysEnum
+	@domain type+={KEY_NUMPAD9}
+	@property value=hex2dec(49)
+@end
+
+@blueprint KEY_NUMPADCOMMA:keysEnum
+	@domain type+={KEY_NUMPADCOMMA}
+	@property value=hex2dec(B3)
+@end
+
+@blueprint KEY_NUMPADENTER:keysEnum
+	@domain type+={KEY_NUMPADENTER}
+	@property value=hex2dec(9C)
+@end
+
+@blueprint KEY_NUMPADEQUALS:keysEnum
+	@domain type+={KEY_NUMPADEQUALS}
+	@property value=hex2dec(8D)
+@end
+
+@blueprint KEY_O:keysEnum
+	@domain type+={KEY_O}
+	@property value=hex2dec(18)
+@end
+
+@blueprint KEY_P:keysEnum
+	@domain type+={KEY_P}
+	@property value=hex2dec(19)
+@end
+
+@blueprint KEY_PAUSE:keysEnum
+	@domain type+={KEY_PAUSE}
+	@property value=hex2dec(C5)
+@end
+
+@blueprint KEY_PERIOD:keysEnum
+	@domain type+={KEY_PERIOD}
+	@property value=hex2dec(34)
+@end
+
+@blueprint KEY_PGDN:keysEnum
+	@domain type+={KEY_PGDN}
+	@property value=hex2dec(D1)
+@end
+
+@blueprint KEY_PGUP:keysEnum
+	@domain type+={KEY_PGUP}
+	@property value=hex2dec(C9)
+@end
+
+@blueprint KEY_PRIOR:keysEnum
+	@domain type+={KEY_PRIOR}
+	@property value=hex2dec(C9)
+@end
+
+@blueprint KEY_Q:keysEnum
+	@domain type+={KEY_Q}
+	@property value=hex2dec(10)
+@end
+
+@blueprint KEY_R:keysEnum
+	@domain type+={KEY_R}
+	@property value=hex2dec(13)
+@end
+
+@blueprint KEY_RBRACKET:keysEnum
+	@domain type+={KEY_RBRACKET}
+	@property value=hex2dec(1B)
+@end
+
+@blueprint KEY_RCONTROL:keysEnum
+	@domain type+={KEY_RCONTROL}
+	@property value=hex2dec(9D)
+@end
+
+@blueprint KEY_RETURN:keysEnum
+	@domain type+={KEY_RETURN}
+	@property value=hex2dec(1C)
+@end
+
+@blueprint KEY_RIGHT:keysEnum
+	@domain type+={KEY_RIGHT}
+	@property value=hex2dec(CD)
+@end
+
+@blueprint KEY_RMENU:keysEnum
+	@domain type+={KEY_RMENU}
+	@property value=hex2dec(B8)
+@end
+
+@blueprint KEY_RSHIFT:keysEnum
+	@domain type+={KEY_RSHIFT}
+	@property value=hex2dec(36)
+@end
+
+@blueprint KEY_S:keysEnum
+	@domain type+={KEY_S}
+	@property value=hex2dec(1F)
+@end
+
+@blueprint KEY_SCROLL:keysEnum
+	@domain type+={KEY_SCROLL}
+	@property value=hex2dec(46)
+@end
+
+@blueprint KEY_SEMICOLON:keysEnum
+	@domain type+={KEY_SEMICOLON}
+	@property value=hex2dec(27)
+@end
+
+@blueprint KEY_SLASH:keysEnum
+	@domain type+={KEY_SLASH}
+	@property value=hex2dec(35)
+@end
+
+@blueprint KEY_SPACE:keysEnum
+	@domain type+={KEY_SPACE}
+	@property value=hex2dec(39)
+@end
+
+@blueprint KEY_STOP:keysEnum
+	@domain type+={KEY_STOP}
+	@property value=hex2dec(95)
+@end
+
+@blueprint KEY_SUBTRACT:keysEnum
+	@domain type+={KEY_SUBTRACT}
+	@property value=hex2dec(4A)
+@end
+
+@blueprint KEY_SYSRQ:keysEnum
+	@domain type+={KEY_SYSRQ}
+	@property value=hex2dec(B7)
+@end
+
+@blueprint KEY_T:keysEnum
+	@domain type+={KEY_T}
+	@property value=hex2dec(14)
+@end
+
+@blueprint KEY_TAB:keysEnum
+	@domain type+={KEY_TAB}
+	@property value=hex2dec(0F)
+@end
+
+@blueprint KEY_U:keysEnum
+	@domain type+={KEY_U}
+	@property value=hex2dec(16)
+@end
+
+@blueprint KEY_UNDERLINE:keysEnum
+	@domain type+={KEY_UNDERLINE}
+	@property value=hex2dec(93)
+@end
+
+@blueprint KEY_UNLABELED:keysEnum
+	@domain type+={KEY_UNLABELED}
+	@property value=hex2dec(97)
+@end
+
+@blueprint KEY_UP:keysEnum
+	@domain type+={KEY_UP}
+	@property value=hex2dec(C8)
+@end
+
+@blueprint KEY_V:keysEnum
+	@domain type+={KEY_V}
+	@property value=hex2dec(2F)
+@end
+
+@blueprint KEY_W:keysEnum
+	@domain type+={KEY_W}
+	@property value=hex2dec(11)
+@end
+
+@blueprint KEY_X:keysEnum
+	@domain type+={KEY_X}
+	@property value=hex2dec(2D)
+@end
+
+@blueprint KEY_Y:keysEnum
+	@domain type+={KEY_Y}
+	@property value=hex2dec(15)
+@end
+
+@blueprint KEY_YEN:keysEnum
+	@domain type+={KEY_YEN}
+	@property value=hex2dec(7D)
+@end
+
+@blueprint KEY_Z:keysEnum
+	@domain type+={KEY_Z}
+	@property value=hex2dec(2C)
+@end
+
+@blueprint InternationalEnums:enums
+	@domain type+={internationalEnums}
+@end
+
+@blueprint LanguageEnum:InternationalEnums
+	@domain type+={languageEnum}
+@end
+
+@blueprint DefaultLanguage:LanguageEnum
+	@domain type+={default en}
+	@property value='en'
+@end
+
+@blueprint PTBRLanguage:LanguageEnum
+	@domain type+={ptbr}
+	@property value='ptbr'
+@end
+
+@blueprint NameGeneratorEnums:InternationalEnums
+	@domain type+={nameGenEnum}
+	@property init='com.cristiano.proc.nameGen.AppNameGenerator'
+	@property minWords=1
+	@property maxWords=1
+	@property dictionary='dicts/appsDict.txt' //colocar , para separar
+@end
+
+@blueprint AppNameGenEnum:NameGeneratorEnums
+	@domain type+={appNameGen}
+	@property init='com.cristiano.proc.nameGen.AppNameGenerator'
+	@property nameCheck='dicts/checkApps.txt'
+@end
+
+@blueprint GenericNameGen:AppNameGenEnum
+	@domain type+={generic}
+@end
+
+@blueprint TextKeys:InternationalEnums
+	@domain type+={textKeysEnum}
+	@property textEN='undefined'
+	@property textPTBR='undefined'
+	@replicate translation=oneForEach({languageEnum leaf})
+	@childproperty translation.text[en]=$this.textEN
+	@childproperty translation.text[ptbr]=$this.textPTBR
+@end
+
+@blueprint gameConfigText:TextKeys
+	@domain type+={gameConfig}
+	@property name='gameConfig'
+	@property textEN='Configuration'
+	@property textPTBR='Configuração'
+@end
+
+@blueprint gameContinueText:TextKeys
+	@domain type+={gameContinue}
+	@property name='gameContinue'
+	@property textEN='Continue'
+	@property textPTBR='Continuar'
+@end
+
+@blueprint gameStartText:TextKeys
+	@domain type+={gameStart}
+	@property name='gameStart'
+	@property textEN='Start'
+	@property textPTBR='Começar'
+@end
+
+@blueprint gameTitleText:TextKeys
+	@domain type+={gameTitle}
+	@property name='gameTitle'
+	@property textEN='Placeholder Title'
+	@property textPTBR='Placeholder Title'
+@end
+
+@blueprint GOText:TextKeys
+	@domain type+={GO}
+	@property name='GO'
+	@property textEN='GO'
+	@property textPTBR='GO'
+	@comment description='used on game start'
+@end
+
+@blueprint LapsText:TextKeys
+	@domain type+={laps}
+	@property name='laps'
+	@property textEN='Laps'
+	@property textPTBR='Voltas'
+@end
+
+@blueprint MapFailText:TextKeys
+	@domain type+={mapFail}
+	@property name='mapFail'
+	@property textEN='Level Failed!'
+	@property textPTBR='Voce falhou!'
+@end
+
+@blueprint MapSuccessText:TextKeys
+	@domain type+={mapSuccess}
+	@property name='mapSuccess'
+	@property textEN='Level Complete!'
+	@property textPTBR='Nível Concluído!'
+@end
+
+@blueprint PositionText:TextKeys
+	@domain type+={position}
+	@property name='position'
+	@property textEN='Position'
+	@property textPTBR='Posição'
+@end
+
+@blueprint returnTitleText:TextKeys
+	@domain type+={returnTitle}
+	@property name='returnTitle'
+	@property textEN='Return'
+	@property textPTBR='Voltar'
+@end
+
+@blueprint ScoreText:TextKeys
+	@domain type+={score}
+	@property name='score'
+	@property textEN='Score'
+	@property textPTBR='Pontos'
+@end
+
+@blueprint TestText:TextKeys
+	@domain type+={testText}
+	@property name='testText'
+	@property textEN='Testing'
+	@property textPTBR='Testando'
+@end
+
+@blueprint MapPopulateEnum:enums
+	@domain type+={mapPopulate}
+@end
+
+@blueprint AITestMapEnum:MapPopulateEnum
+	@domain type+={aiTestMap}
+	@property init='com.cristiano.java.gm.builder.map.AITestMapSolver'
+	@property maxMapFillPerc=80
+	@property minMapFillPerc=60
+	@property value='arena'
+@end
+
+@blueprint ArenaMapEnum:MapPopulateEnum
+	@domain type+={arena}
+	@property init='com.cristiano.java.gm.builder.map.ArenaMapSolver'
+	@property maxMapFillPerc=90
+	@property minMapFillPerc=60 //min and max of the map will be filled by the arena... the rest is empty
+	@property value='arena'
+@end
+
+@blueprint BSPMapEnum:MapPopulateEnum
+	@domain type+={bsp}
+	@property init='com.cristiano.java.gm.builder.map.BSPTreeMapSolver'
+	@property leafSizeMultiplier=randf(1.5,2) //Multiplica o min e max room size
+	@property value='bsp'
+@end
+
+@blueprint DungeonMapEnum:MapPopulateEnum
+	@domain type+={dungeon notready}
+	@property value='dungeon'
+	@comment description='esse tipo de solver gera um mapa onde ?? preciso avan??ar e voltar, as salas s??o liberadas uma a uma'
+@end
+
+@blueprint LinearMapEnum:MapPopulateEnum
+	@domain type+={linear}
+	@property init='com.cristiano.java.gm.builder.map.LinearMapSolver'
+	@property lineFunctionTag={line functions leaf !straight !multi t2}
+	@property value='linear'
+	@comment description='mapa usado para gerar salas sequenciais... no backtracking by default'
+@end
+
+@blueprint MultiLinearMapEnum:MapPopulateEnum
+	@domain type+={multiLinear}
+	@property init='com.cristiano.java.gm.builder.map.MultiLinearMapSolver'
+	@property value='multiLinear'
+	@comment description='a room lead to many rooms, sequencially until the final room'
+@end
+
+@blueprint RaceMapEnum:MapPopulateEnum
+	@domain type+={raceMap}
+	@property init='com.cristiano.java.gm.builder.map.RaceMapSolver'
+	@property lineFunctionTag={line functions leaf}
+	@property value='raceMap'
+@end
+
+@blueprint RaceMapTestEnum:MapPopulateEnum
+	@domain type+={raceMapTest}
+	@property init='com.cristiano.java.gm.builder.map.RaceMapTest'
+	@property lineFunctionTag={line functions leaf}
+	@property value='raceMapTest'
+@end
+
+@blueprint RandomMapEnum:MapPopulateEnum
+	@domain type+={random test}
+	@property init='com.cristiano.java.gm.builder.map.RandomMapSolver'
+	@property value='randomMap'
+@end
+
+
+@blueprint ShooterSolverEnum:MapPopulateEnum
+	@domain type+={shooterSolver}
+	@property init='com.cristiano.java.gm.builder.map.ShooterMapSolver'
+	@property value='shooterSolver'
+@end
+
+@blueprint TestMapEnum:MapPopulateEnum
+	@domain type+={test}
+	@property init='com.cristiano.java.gm.builder.map.FixedTestMapSolver'
+	@property value='test'
+@end
+
+@blueprint MechanicsEnum:enums
+	@domain type+={mechanicsEnum}
+@end
+
+@blueprint bulletEnums:MechanicsEnum
+	@domain type+={bulletEnum}
+@end
+
+@blueprint bulletControllers:bulletEnums
+	@domain type+={controller}
+@end
+
+@blueprint defaultBulletController:bulletControllers
+	@domain type+={default}
+	@property init='com.cristiano.java.gm.units.controls.GMBombControl'
+@end
+
+@blueprint damageTypeEnum:MechanicsEnum
+	@domain type+={damageType}
+@end
+
+@blueprint coldDamageEnum:damageTypeEnum
+	@domain type+={cold}
+	@property value='cold'
+@end
+
+@blueprint fireDamageEnum:damageTypeEnum
+	@domain type+={fire}
+	@property value='fire'
+@end
+
+@blueprint EntityRelationEnum:MechanicsEnum
+	@domain type+={entityRelationEnum} //LogicConsts.RELATION_*
+@end
+
+@blueprint EnemyRelationEnum:EntityRelationEnum
+	@domain type+={enemy}
+	@property name='enemy'
+	@property value='1' //LogicConsts.RELATION_ENEMY
+@end
+
+@blueprint FriendRelationEnum:EntityRelationEnum
+	@domain type+={friend}
+	@property name='friend'
+	@property value='3' //LogicConsts.RELATION_FRIEND
+@end
+
+@blueprint NeutralRelationEnum:EntityRelationEnum
+	@domain type+={neutral}
+	@property name='neutral'
+	@property value='2' //LogicConsts.RELATION_NEUTRAL
+@end
+
+@blueprint GameScopeEnum:MechanicsEnum
+	@domain type+={gameScope}
+@end
+
+@blueprint GameScope:GameScopeEnum
+	@domain type+={game}
+	@property value='1'
+@end
+
+@blueprint TeamScope:GameScopeEnum
+	@domain type+={team}
+	@property value='2'
+@end
+
+@blueprint UnitScope:GameScopeEnum
+	@domain type+={unit}
+	@property value='3'
+@end
+
+@blueprint sound:MechanicsEnum
+	@domain type+={sound}
+	@property components={}
+@end
+
+@blueprint ambientSound:sound
+	@domain type+={ambient}
+@end
+
+@blueprint music:sound
+	@domain type+={music}
+@end
+
+@blueprint soundFX:sound
+	@domain type+={soundfx}
+@end
+
+@blueprint StartingPositionEnum:MechanicsEnum
+	@domain type+={startingPosition}
+@end
+
+@blueprint GridStartingPosition:StartingPositionEnum
+	@domain type+={grid}
+	@property name='grid'
+	@property width=10 //space horizontally
+	@property cols=2
+	@property depth=10 //space depth...
+@end
+
+@blueprint RandomStartingPosition:StartingPositionEnum
+	@domain type+={random}
+	@property name='random'
+@end
+
+@blueprint Weather:MechanicsEnum
+	@domain type+={weather}
+	@property components={}
+@end
+
+@blueprint FogWeather:Weather
+	@domain type+={foggy}
+	@property components+={FogFilterComponent}
+@end
+
+@blueprint SunnyWeather:Weather
+	@domain type+={sunny}
+	@property components+={LightScatteringComponent}
+@end
+
+@blueprint NoiseFunctionEnum:enums
+	@domain type+={noise}
+@end
+
+@blueprint SimplexNoiseFunction:NoiseFunctionEnum
+	@domain type+={simplex}
+	@property init='com.cristiano.proc.noise.SimplexNoise'
+	@property value='SimplexNoise'
+@end
+
+@blueprint queriesEnums:enums
+	@domain type+={queries}
+	@comment description='Quais queries podem ser feitas pelo sistema'
+@end
+
+@blueprint elementsWithTagsEnum:queriesEnums
+	@domain type+={elementsWithTags}
+	@property value='elementsWithTags'
+@end
+
+@blueprint sequencingTypeEnum:enums
+	@domain type+={sequencingType}
+@end
+
+@blueprint RandomSequencing:sequencingTypeEnum
+	@domain type+={random}
+	@property value='2'
+@end
+
+@blueprint SerialSequencing:sequencingTypeEnum
+	@domain type+={serial}
+	@property value='1'
+@end
+
+@blueprint storeEnums:enums
+	@domain type+={storeEnum}
+@end
+
+@blueprint GameCategory:storeEnums
+	@domain type+={gameCategory}
+@end
+
+@blueprint ActionCategory:GameCategory
+	@domain type+={GAME_ACTION}
+	@property value='GAME_ACTION'
+	@property name='Action'
+@end
+
+@blueprint AdventureCategory:GameCategory
+	@domain type+={GAME_ADVENTURE}
+	@property value='GAME_ADVENTURE'
+	@property name='Adventure'
+@end
+
+@blueprint ArcadeCategory:GameCategory
+	@domain type+={GAME_ARCADE}
+	@property value='GAME_ARCADE'
+	@property name='Arcade'
+@end
+
+@blueprint BoardCategory:GameCategory
+	@domain type+={GAME_BOARD}
+	@property value='GAME_BOARD'
+	@property name='Board'
+@end
+
+@blueprint CardCategory:GameCategory
+	@domain type+={GAME_CARD}
+	@property value='GAME_CARD'
+	@property name='Card'
+@end
+
+@blueprint CasinoCategory:GameCategory
+	@domain type+={GAME_CASINO}
+	@property value='GAME_CASINO'
+	@property name='Casino'
+@end
+
+@blueprint CasualCategory:GameCategory
+	@domain type+={GAME_CASUAL}
+	@property value='GAME_CASUAL'
+	@property name='Casual'
+@end
+
+@blueprint CombatRacingCategory:GameCategory
+	@domain type+={combat}
+@end
+
+@blueprint EducationalCategory:GameCategory
+	@domain type+={GAME_EDUCATIONAL}
+	@property value='GAME_EDUCATIONAL'
+	@property name='Educational'
+@end
+
+@blueprint FamilyCategory:GameCategory
+	@domain type+={GAME_FAMILY}
+	@property value='GAME_FAMILY'
+	@property name='Family'
+@end
+
+@blueprint MusicCategory:GameCategory
+	@domain type+={GAME_MUSIC}
+	@property value='GAME_MUSIC'
+	@property name='Music'
+@end
+
+@blueprint PuzzleCategory:GameCategory
+	@domain type+={GAME_PUZZLE}
+	@property value='GAME_PUZZLE'
+	@property name='Puzzle'
+@end
+
+@blueprint RacingCategory:GameCategory
+	@domain type+={GAME_RACING race inUse}
+	@property value='GAME_RACING'
+	@property name='Racing'
+@end
+
+@blueprint NonCombatRacingCategory:RacingCategory
+	@domain type+={nonCombat}
+@end
+
+@blueprint RoleCategory:GameCategory
+	@domain type+={GAME_ROLE_PLAYING}
+	@property value='GAME_ROLE_PLAYING'
+	@property name='Role Playing'
+@end
+
+@blueprint SimulationCategory:GameCategory
+	@domain type+={GAME_SIMULATION}
+	@property value='GAME_SIMULATION'
+	@property name='Simulation'
+@end
+
+@blueprint SportsCategory:GameCategory
+	@domain type+={GAME_SPORTS}
+	@property value='GAME_SPORTS'
+	@property name='Sports'
+@end
+
+@blueprint StrategyCategory:GameCategory
+	@domain type+={GAME_STRATEGY}
+	@property value='GAME_STRATEGY'
+	@property name='Strategy'
+@end
+
+@blueprint TriviaCategory:GameCategory
+	@domain type+={GAME_TRIVIA}
+	@property value='GAME_TRIVIA'
+	@property name='Trivia'
+@end
+
+@blueprint WordCategory:GameCategory
+	@domain type+={GAME_WORD}
+	@property value='GAME_WORD'
+	@property name='Word'
+@end
+
+@blueprint SystemEnums:enums
+	@domain type+={systemEnum}
+@end
+
+@blueprint SystemPriorityEnum:SystemEnums
+	@domain type+={systemPriorityEnum}
+@end
+
+@blueprint HighPriority:SystemPriorityEnum
+	@domain type+={high}
+	@property value=randf(0.2,0.3)
+@end
+
+@blueprint Lowestpriority:SystemPriorityEnum
+	@domain type+={lowest}
+	@property value=randf(1,2)
+@end
+
+@blueprint Lowpriority:SystemPriorityEnum
+	@domain type+={low}
+	@property value=randf(0.6,0.9)
+@end
+
+@blueprint MediumPriority:SystemPriorityEnum
+	@domain type+={medium average}
+	@property value=randf(0.4,0.6)
+@end
+
+@blueprint RealTimePriority:SystemPriorityEnum
+	@domain type+={realTime}
+	@property value=0 //randf(0,0.1)
+@end
+
+@blueprint SystemTargetEnum:SystemEnums
+	@domain type+={systemTargetEnum}
+@end
+
+@blueprint TargetDevelopmentEnum:SystemTargetEnum
+	@domain type+={dev}
+	@property value='dev'
+@end
+
+@blueprint TargetReleaseEnum:SystemTargetEnum
+	@domain type+={release}
+	@property value='release'
+@end
+
+@blueprint visualEnum:enums
+	@domain type+={visualEnum}
+@end
+
+@blueprint AmbienceEnums:visualEnum
+	@domain type+={ambienceEnum}
+@end
+
+@blueprint AmbienceTheme:AmbienceEnums
+	@domain type+={ambienceTheme}
+	@property skyBoxTag={}
+	@property skyBox=pickFinal({skybox leaf $this.skyBoxTag})
+	@property roadTexture=enumValue({$this.roadTag})
+	@property lowHeightTexture=enumValue({$this.lowHeightTag})
+	@property highHeightTexture=enumValue({$this.highHeightTag})
+	@property roadTag={terrainTexture road leaf}
+	@property lowHeightTag={terrainTexture leaf} //textures used on low elevations... example: grass
+	@property highHeightTag={terrainTexture leaf} //textures used on high elevations... example: snow
+	@validate checkSkyBox=isNotNull($this.skyBox)
+@end
+
+@blueprint DeserticAmbience:AmbienceTheme
+	@domain type+={desert}
+	@property name='desert'
+	@property skyBoxTag+={desert}
+	@property lowHeightTag+={rocky}
+	@property highHeightTag=$this.lowHeightTag //same tag but textures may differ
+@end
+
+@blueprint GrayishDeserticAmbience:DeserticAmbience
+	@domain type+={gray}
+	@property name='Grayish Desert'
+	@property skyBoxTag+={keyword:gray}
+	@property lowHeightTag+={rocky keyword:gray}
+@end
+
+@blueprint YelllowishDeserticAmbience:DeserticAmbience
+	@domain type+={yellow}
+	@property name='Yellowish Desert'
+	@property skyBoxTag+={keyword:yellow}
+	@property lowHeightTag+={keyword:yellow}
+@end
+
+@blueprint ShoreAmbience:AmbienceTheme
+	@domain type+={shore}
+	@property name='shore'
+	@property skyBoxTag+={shore}
+	@property lowHeightTag+={grass}
+	@property highHeightTag+={snow}
+	@comment description=' set in a shore-like situation (with mountains, water, etc)'
+@end
+
+@blueprint skyBox:AmbienceEnums
+	@domain class='skyBox'
+	@domain type+={skybox}
+@end
+
+@blueprint deserticSkyBoxes:skyBox
+	@domain type+={desert}
+@end
+
+@blueprint AlienShore:deserticSkyBoxes
+	@domain type+={bay}
+	@domain keyword+={water mountain day alien yellow}
+	@property image_down='Textures/Skybox/alienShore/trouble_dn.jpg'
+	@property image_east='Textures/Skybox/alienShore/trouble_bk.jpg'
+	@property image_north='Textures/Skybox/alienShore/trouble_lf.jpg'
+	@property image_south='Textures/Skybox/alienShore/trouble_rt.jpg'
+	@property image_up='Textures/Skybox/alienShore/trouble_up.jpg'
+	@property image_west='Textures/Skybox/alienShore/trouble_ft.jpg'
+@end
+
+@blueprint AridSkybox1:deserticSkyBoxes
+	@domain type+={arid}
+	@domain keyword+={day yellow}
+	@property image_down='Textures/Skybox/arid1/arid_dn.jpg'
+	@property image_east='Textures/Skybox/arid1/arid_bk.jpg'
+	@property image_north='Textures/Skybox/arid1/arid_lf.jpg'
+	@property image_south='Textures/Skybox/arid1/arid_rt.jpg'
+	@property image_up='Textures/Skybox/arid1/arid_up.jpg'
+	@property image_west='Textures/Skybox/arid1/arid_ft.jpg'
+@end
+
+@blueprint AridSkybox2:deserticSkyBoxes
+	@domain type+={arid}
+	@domain keyword+={yellow gray}
+	@property image_down='Textures/Skybox/arid2/arid2_dn.jpg'
+	@property image_east='Textures/Skybox/arid2/arid2_bk.jpg'
+	@property image_north='Textures/Skybox/arid2/arid2_lf.jpg'
+	@property image_south='Textures/Skybox/arid2/arid2_rt.jpg'
+	@property image_up='Textures/Skybox/arid2/arid2_up.jpg'
+	@property image_west='Textures/Skybox/arid2/arid2_ft.jpg'
+@end
+
+@blueprint DesertdawnSkybox3:deserticSkyBoxes
+	@domain type+={desertdawn}
+	@domain keyword+={night yellow}
+	@property image_down='Textures/Skybox/desertdawn/desertdawn_dn.jpg'
+	@property image_east='Textures/Skybox/desertdawn/desertdawn_bk.jpg'
+	@property image_north='Textures/Skybox/desertdawn/desertdawn_lf.jpg'
+	@property image_south='Textures/Skybox/desertdawn/desertdawn_rt.jpg'
+	@property image_up='Textures/Skybox/desertdawn/desertdawn_up.jpg'
+	@property image_west='Textures/Skybox/desertdawn/desertdawn_ft.jpg'
+@end
+
+@blueprint ShoreSkyBoxes:skyBox
+	@domain type+={shore}
+@end
+
+@blueprint ShoreSkybox1:ShoreSkyBoxes
+	@domain type+={bay}
+	@domain keyword+={water mountain day}
+	@property image_down='Textures/Skybox/shore1/bay_dn.jpg'
+	@property image_east='Textures/Skybox/shore1/bay_bk.jpg'
+	@property image_north='Textures/Skybox/shore1/bay_lf.jpg'
+	@property image_south='Textures/Skybox/shore1/bay_rt.jpg'
+	@property image_up='Textures/Skybox/shore1/bay_up.jpg'
+	@property image_west='Textures/Skybox/shore1/bay_ft.jpg'
+@end
+
+@blueprint ShoreSkybox2:ShoreSkyBoxes
+	@domain type+={bay}
+	@domain keyword+={water mountain day}
+	@property image_down='Textures/Skybox/shore2/serenity_dn.jpg'
+	@property image_east='Textures/Skybox/shore2/serenity_bk.jpg'
+	@property image_north='Textures/Skybox/shore2/serenity_lf.jpg'
+	@property image_south='Textures/Skybox/shore2/serenity_rt.jpg'
+	@property image_up='Textures/Skybox/shore2/serenity_up.jpg'
+	@property image_west='Textures/Skybox/shore2/serenity_ft.jpg'
+@end
+
+@blueprint ShoreSkybox3:ShoreSkyBoxes
+	@domain type+={bay}
+	@domain keyword+={water mountain day}
+	@property image_down='Textures/Skybox/shore3/humble_dn.jpg'
+	@property image_east='Textures/Skybox/shore3/humble_bk.jpg'
+	@property image_north='Textures/Skybox/shore3/humble_lf.jpg'
+	@property image_south='Textures/Skybox/shore3/humble_rt.jpg'
+	@property image_up='Textures/Skybox/shore3/humble_up.jpg'
+	@property image_west='Textures/Skybox/shore3/humble_ft.jpg'
+@end
+
+@blueprint TerrainTextures:AmbienceEnums
+	@domain type+={terrainTexture}
+	@comment description='textures used to fill the terrain (they will tile the terrain)'
+@end
+
+@blueprint GrassTexture:TerrainTextures
+	@domain type+={grass}
+@end
+
+@blueprint GrassTexture1:GrassTexture
+	@property value='Textures/terrain/grass/clover1.jpg'
+@end
+
+@blueprint GrassTexture2:GrassTexture
+	@property value='Textures/terrain/grass/grass1.jpg'
+@end
+
+@blueprint GrassTexture3:GrassTexture
+	@property value='Textures/terrain/grass/grass2.jpg'
+@end
+
+@blueprint GrassTexture4:GrassTexture
+	@property value='Textures/terrain/grass/grass3.jpg'
+@end
+
+@blueprint RoadTexture:TerrainTextures
+	@domain type+={road}
+@end
+
+@blueprint RoadTexture1:RoadTexture
+	@property value='Textures/terrain/road/paving5.jpg'
+@end
+
+@blueprint RoadTexture2:RoadTexture
+	@property value='Textures/terrain/road/stonewall8.jpg'
+@end
+
+@blueprint RoadTexture3:RoadTexture
+	@property value='Textures/terrain/road/tiledConcrete.jpg'
+@end
+
+@blueprint RoadTexture4:RoadTexture
+	@property value='Textures/terrain/road/thatch2.jpg'
+@end
+
+@blueprint RoadTexture5:RoadTexture
+	@property value='Textures/terrain/road/stoneWall3.jpg'
+@end
+
+@blueprint RockyTexture:TerrainTextures
+	@domain type+={rocky}
+@end
+
+@blueprint GrayishRockTexture:RockyTexture
+	@domain type+={gray}
+	@domain keyword+={gray}
+@end
+
+@blueprint GrayishRock1:GrayishRockTexture
+	@property value='Textures/terrain/rock/gray/CrackedConcreteWithBitsOfStone.jpg'
+@end
+
+@blueprint GrayishRock2:GrayishRockTexture
+	@property value='Textures/terrain/rock/gray/Pavement.jpg'
+@end
+
+@blueprint GrayishRock3:GrayishRockTexture
+	@property value='Textures/terrain/rock/gray/Pebbles2.jpg'
+@end
+
+@blueprint GrayishRock4:GrayishRockTexture
+	@property value='Textures/terrain/rock/gray/pockroof2.jpg'
+@end
+
+@blueprint GrayishRock5:GrayishRockTexture
+	@property value='Textures/terrain/rock/gray/SmallRocks.jpg'
+@end
+
+@blueprint GrayishRock6:GrayishRockTexture
+	@property value='Textures/terrain/rock/gray/WierdTexture2.jpg'
+@end
+
+@blueprint YellowishRockTexture:RockyTexture
+	@domain type+={yellow}
+	@domain keyword+={yellow}
+@end
+
+@blueprint YellowRock1:YellowishRockTexture
+	@property value='Textures/terrain/rock/yellow/PebbledWall.jpg'
+@end
+
+@blueprint YellowRock2:YellowishRockTexture
+	@property value='Textures/terrain/rock/yellow/Pebbles.jpg'
+@end
+
+@blueprint YellowRock3:YellowishRockTexture
+	@property value='Textures/terrain/rock/yellow/Rock1.jpg'
+@end
+
+@blueprint YellowRock4:YellowishRockTexture
+	@property value='Textures/terrain/rock/yellow/Rock9.jpg'
+@end
+
+@blueprint YellowRock5:YellowishRockTexture
+	@property value='Textures/terrain/rock/yellow/cleanSurfaceRocky.jpg'
+@end
+
+@blueprint YellowRock6:YellowishRockTexture
+	@property value='Textures/terrain/rock/yellow/SpeckledStone.jpg'
+@end
+
+@blueprint SnowTexture:TerrainTextures
+	@domain type+={snow}
+@end
+
+@blueprint SnowTexture1:SnowTexture
+	@property value='Textures/terrain/snow/snowRocks.jpg'
+@end
+
+@blueprint SnowTexture2:SnowTexture
+	@property value='Textures/terrain/snow/water.jpg' //looks like water...
+@end
+
+@blueprint assetsEnum:visualEnum
+	@domain type+={assetsEnum}
+@end
+
+@blueprint foldersEnum:assetsEnum
+	@domain type+={folder}
+@end
+
+@blueprint ImagesFolder:foldersEnum
+	@domain type+={image}
+	@property value='Interface/Images/'
+@end
+
+@blueprint SoundsEnum:foldersEnum
+	@domain type+={sound}
+	@property value='Sounds/'
+@end
+
+@blueprint SoundFX:SoundsEnum
+	@domain type+={fx}
+	@property value+='fx/'
+	@property loop=0
+	@property refDistance=10
+	@property maxDistance=100
+	@property volume=5
+	@property pitch=randf(0.7,1.6)
+@end
+
+@blueprint CarEngineFX:SoundFX
+	@domain type+={carEngine}
+	@property value+='carEngine/'
+	@property loop=1
+@end
+
+@blueprint CarEngine0:CarEngineFX
+	@domain type+={car0}
+	@property value+='loop_0.wav'
+@end
+
+@blueprint CarEngine1:CarEngineFX
+	@domain type+={car1}
+	@property value+='loop_1_0.wav'
+@end
+
+@blueprint CarEngine2:CarEngineFX
+	@domain type+={car2}
+	@property value+='loop_2_0.wav'
+@end
+
+@blueprint CarEngine3:CarEngineFX
+	@domain type+={car3}
+	@property value+='loop_3_0.wav'
+@end
+
+@blueprint CarEngine4:CarEngineFX
+	@domain type+={car4}
+	@property value+='loop_4_0.wav'
+@end
+
+@blueprint CarEngine5:CarEngineFX
+	@domain type+={car5}
+	@property value+='loop_5_0.wav'
+@end
+
+@blueprint ExplosionFX:SoundFX
+	@domain type+={explosion}
+	@property value+='explosions/'
+	@property loop=0
+	@property volume=9
+@end
+
+@blueprint ExplosionFX1:ExplosionFX
+	@domain type+={explosion1}
+	@property value+='boom1.wav'
+@end
+
+@blueprint ExplosionFX10:ExplosionFX
+	@domain type+={explosion10}
+	@property value+='explode_mono.wav'
+@end
+
+@blueprint ExplosionFX11:ExplosionFX
+	@domain type+={explosion11}
+	@property value+='explodemini_mono.wav'
+@end
+
+@blueprint ExplosionFX2:ExplosionFX
+	@domain type+={explosion2}
+	@property value+='boom2.wav'
+@end
+
+@blueprint ExplosionFX3:ExplosionFX
+	@domain type+={explosion3}
+	@property value+='boom3.wav'
+@end
+
+@blueprint ExplosionFX4:ExplosionFX
+	@domain type+={explosion4}
+	@property value+='boom4.wav'
+@end
+
+@blueprint ExplosionFX5:ExplosionFX
+	@domain type+={explosion5}
+	@property value+='boom5.wav'
+@end
+
+@blueprint ExplosionFX6:ExplosionFX
+	@domain type+={explosion6}
+	@property value+='boom6.wav'
+@end
+
+@blueprint ExplosionFX7:ExplosionFX
+	@domain type+={explosion7}
+	@property value+='boom7.wav'
+@end
+
+@blueprint ExplosionFX8:ExplosionFX
+	@domain type+={explosion8}
+	@property value+='boom8.wav'
+@end
+
+@blueprint ExplosionFX9:ExplosionFX
+	@domain type+={explosion9}
+	@property value+='boom9.wav'
+@end
+
+@blueprint GunShotFX:SoundFX
+	@domain type+={gunShot}
+	@property value+='gunShot/'
+	@property loop=0
+@end
+
+@blueprint GunShot1:GunShotFX
+	@domain type+={gunshot1}
+	@property value+='gun_fire.wav'
+@end
+
+@blueprint GunShot3:GunShotFX
+	@domain type+={gunshot3}
+	@property value+='rlaunch_mono.ogg'
+@end
+
+@blueprint InterfaceFX:SoundFX
+	@domain type+={interface}
+	@property value+='interface/'
+	@property loop=0
+@end
+
+@blueprint ClickSoundFX:InterfaceFX
+	@domain type+={click}
+	@property value+='click/'
+@end
+
+@blueprint ClickSoundFX1:ClickSoundFX
+	@domain type+={click}
+	@property value+='click_mono.wav'
+@end
+
+@blueprint ClickSoundFX2:ClickSoundFX
+	@domain type+={click}
+	@property value+='click2_mono.wav'
+@end
+
+@blueprint ClickSoundFX3:ClickSoundFX
+	@domain type+={click}
+	@property value+='click3_mono.ogg'
+@end
+
+@blueprint ClickSoundFX4:ClickSoundFX
+	@domain type+={click}
+	@property value+='click4_mono.wav'
+@end
+
+@blueprint ClickSoundFX5:ClickSoundFX
+	@domain type+={click}
+	@property value+='click5_mono.ogg'
+@end
+
+@blueprint ClickSoundFX6:ClickSoundFX
+	@domain type+={click}
+	@property value+='click6_mono.ogg'
+@end
+
+@blueprint ClickSoundFX7:ClickSoundFX
+	@domain type+={click}
+	@property value+='click7_mono.ogg'
+@end
+
+@blueprint SourceImagesFolder:foldersEnum
+	@domain type+={sourceImage}
+	@property value='Interface/Images/source/'
+@end
+
+@blueprint imagesEnum:assetsEnum
+	@domain type+={images}
+	@property folder=enumValue({image folder})
+	@property folderDest='gen/art/'
+	@property sourceFile=enumValue({sourceImage folder})+$this.value //'Interface/Images/source/tag/tag1.png'
+	@property value=''
+@end
+
+@blueprint closeImages:imagesEnum
+	@domain type+={close}
+	@property baseSize=128
+	@property folder+='close/'
+	@property value+='close/'
+@end
+
+@blueprint closeImage1:closeImages
+	@domain type+={close1}
+	@property value+='close1.png'
+@end
+
+@blueprint closeImage2:closeImages
+	@domain type+={close2}
+	@property value+='close2.png'
+@end
+
+@blueprint closeImage3:closeImages
+	@domain type+={close3}
+	@property value+='close3.png'
+@end
+
+@blueprint closeImage4:closeImages
+	@domain type+={close4}
+	@property value+='close4.png'
+@end
+
+@blueprint closeImage5:closeImages
+	@domain type+={close5}
+	@property value+='close5.png'
+@end
+
+@blueprint configImages:imagesEnum
+	@domain type+={config}
+	@property baseSize=128
+	@property folder+='config/'
+	@property value+='config/'
+@end
+
+@blueprint configImage1:configImages
+	@domain type+={config1}
+	@property value+='config1.png'
+@end
+
+@blueprint configImage2:configImages
+	@domain type+={config2}
+	@property value+='config2.png'
+@end
+
+@blueprint configImage3:configImages
+	@domain type+={config3}
+	@property value+='config3.png'
+@end
+
+@blueprint configImage4:configImages
+	@domain type+={config4}
+	@property value+='config4.png'
+@end
+
+@blueprint configImage5:configImages
+	@domain type+={config5}
+	@property value+='config5.png'
+@end
+
+@blueprint configImage6:configImages
+	@domain type+={config6}
+	@property value+='config6.png'
+@end
+
+@blueprint configImage7:configImages
+	@domain type+={config7}
+	@property value+='config7.png'
+@end
+
+@blueprint helpImages:imagesEnum
+	@domain type+={help}
+	@property baseSize=128
+	@property folder+='help/'
+	@property value+='help/'
+@end
+
+@blueprint helpImage1:helpImages
+	@domain type+={help1}
+	@property value+='help1.png'
+@end
+
+@blueprint helpImage2:helpImages
+	@domain type+={help2}
+	@property value+='help2.png'
+@end
+
+@blueprint homeImages:imagesEnum
+	@domain type+={home}
+	@property baseSize=128
+	@property folder+='home/'
+	@property value+='home/'
+@end
+
+@blueprint homeImage1:homeImages
+	@domain type+={home1}
+	@property value+='home1.png'
+@end
+
+@blueprint listImages:imagesEnum
+	@domain type+={list}
+	@property baseSize=128
+	@property folder+='list/'
+	@property value+='list/'
+@end
+
+@blueprint listImage1:listImages
+	@domain type+={list1}
+	@property value+='list1.png'
+@end
+
+@blueprint listImage2:listImages
+	@domain type+={list2}
+	@property value+='list2.png'
+@end
+
+@blueprint listImage3:listImages
+	@domain type+={list3}
+	@property value+='list3.png'
+@end
+
+@blueprint listImage4:listImages
+	@domain type+={list4}
+	@property value+='list4.png'
+@end
+
+@blueprint listImage5:listImages
+	@domain type+={list5}
+	@property value+='list5.png'
+@end
+
+@blueprint listImage6:listImages
+	@domain type+={list6}
+	@property value+='list6.png'
+@end
+
+@blueprint listImage7:listImages
+	@domain type+={list7}
+	@property value+='list7.png'
+@end
+
+@blueprint listImage8:listImages
+	@domain type+={list8}
+	@property value+='list8.png'
+@end
+
+@blueprint nextImages:imagesEnum
+	@domain type+={next}
+	@property baseSize=128
+	@property folder+='next/'
+	@property value+='next/'
+@end
+
+@blueprint nextmage1:nextImages
+	@domain type+={next1}
+	@property value+='next1.png'
+@end
+
+@blueprint nextmage2:nextImages
+	@domain type+={next2}
+	@property value+='next2.png'
+@end
+
+@blueprint nextmage3:nextImages
+	@domain type+={next3}
+	@property value+='next3.png'
+@end
+
+@blueprint nextmage4:nextImages
+	@domain type+={next4}
+	@property value+='next4.png'
+@end
+
+@blueprint nextmage5:nextImages
+	@domain type+={next5}
+	@property value+='next5.png'
+@end
+
+@blueprint pauseImages:imagesEnum
+	@domain type+={pause}
+	@property baseSize=128
+	@property folder+='pause/'
+	@property value+='pause/'
+@end
+
+@blueprint pauseImage1:pauseImages
+	@domain type+={pause1}
+	@property value+='pause1.png'
+@end
+
+@blueprint pauseImage2:pauseImages
+	@domain type+={pause2}
+	@property value+='pause2.png'
+@end
+
+@blueprint pauseImage3:pauseImages
+	@domain type+={pause3}
+	@property value+='pause3.png'
+@end
+
+@blueprint pauseImage4:pauseImages
+	@domain type+={pause4}
+	@property value+='pause4.png'
+@end
+
+@blueprint pauseImage5:pauseImages
+	@domain type+={pause5}
+	@property value+='pause5.png'
+@end
+
+@blueprint pauseImage6:pauseImages
+	@domain type+={pause6}
+	@property value+='pause6.png'
+@end
+
+@blueprint playImages:imagesEnum
+	@domain type+={play}
+	@property baseSize=128
+	@property folder+='play/'
+	@property value+='play/'
+@end
+
+@blueprint playImage1:playImages
+	@domain type+={play1}
+	@property value+='play1.png'
+@end
+
+@blueprint playImage2:playImages
+	@domain type+={play2}
+	@property value+='play2.png'
+@end
+
+@blueprint playImage3:playImages
+	@domain type+={play3}
+	@property value+='play3.png'
+@end
+
+@blueprint playImage4:playImages
+	@domain type+={play4}
+	@property value+='play4.png'
+@end
+
+@blueprint playImage5:playImages
+	@domain type+={play5}
+	@property value+='play5.png'
+@end
+
+@blueprint playImage6:playImages
+	@domain type+={play6}
+	@property value+='play6.png'
+@end
+
+@blueprint reloadImages:imagesEnum
+	@domain type+={reload}
+	@property baseSize=128
+	@property folder+='reload/'
+	@property value+='reload/'
+@end
+
+@blueprint reloadImage1:reloadImages
+	@domain type+={reload1}
+	@property value+='reload1.png'
+@end
+
+@blueprint reloadImage2:reloadImages
+	@domain type+={reload2}
+	@property value+='reload2.png'
+@end
+
+@blueprint reloadImage3:reloadImages
+	@domain type+={reload3}
+	@property value+='reload3.png'
+@end
+
+@blueprint reloadImage4:reloadImages
+	@domain type+={reload4}
+	@property value+='reload4.png'
+@end
+
+@blueprint returnImages:imagesEnum
+	@domain type+={return}
+	@property baseSize=128
+	@property folder+='return/'
+	@property value+='return/'
+@end
+
+@blueprint returnImage1:returnImages
+	@domain type+={return1}
+	@property value+='return1.png'
+@end
+
+@blueprint returnImage2:returnImages
+	@domain type+={return2}
+	@property value+='return2.png'
+@end
+
+@blueprint returnImage3:returnImages
+	@domain type+={return3}
+	@property value+='return3.png'
+@end
+
+@blueprint returnImage4:returnImages
+	@domain type+={return4}
+	@property value+='return4.png'
+@end
+
+@blueprint returnImage5:returnImages
+	@domain type+={return5}
+	@property value+='return5.png'
+@end
+
+@blueprint returnImage6:returnImages
+	@domain type+={return6}
+	@property value+='return6.png'
+@end
+
+@blueprint TestImages:imagesEnum
+	@domain type+={test}
+	@property baseSize=128
+	@property folder+='test/'
+	@property value+='test/'
+@end
+
+@blueprint testImage1:TestImages
+	@domain type+={test1}
+	@property value+='test1.png'
+@end
+
+@blueprint volumeImages:imagesEnum
+	@domain type+={volume}
+	@property baseSize=128
+	@property folder+='volume/'
+	@property value+='volume/'
+@end
+
+@blueprint volumeImage1:volumeImages
+	@domain type+={volume1}
+	@property value+='volume1.png'
+@end
+
+@blueprint volumeImage2:volumeImages
+	@domain type+={volume2}
+	@property value+='volume2.png'
+@end
+
+@blueprint volumeImage3:volumeImages
+	@domain type+={volume3}
+	@property value+='volume3.png'
+@end
+
+@blueprint volumeImage4:volumeImages
+	@domain type+={volume4}
+	@property value+='volume4.png'
+@end
+
+@blueprint volumeImage5:volumeImages
+	@domain type+={volume5}
+	@property value+='volume5.png'
+@end
+
+@blueprint gameAxis:visualEnum
+@domain type+={gameAxis}
+@property allowedCamTypes={} //* this refers to how the game is represented
+@property allowX=1 //0 to 1: this number will be multiplied to the roadWidth (defines how much can the player in the given axis)
+@property allowY=1
+@property allowZ=1
+@property camTypeTag=randomTag($this.allowedCamTypes) 
+@property camType=pickSingle(camType $this.camTypeTag leaf) 
+@property axisMovement={} //Direction that the player is moving
+@validate validCam=isNotNull($this.camType)
+@end
+
+@blueprint TopDownAxis:gameAxis
+@domain type+={topDown}
+@property allowedCamTypes+={follow topDown} //* games that are shown in a 3d environment
+@end
+
+@blueprint 2.5DGameAxis:gameAxis
+@domain type+={2.5d}//* games that are shown in a 3d environment, using a fake 3d (no up/down movement)
+@property allowY=0
+@property allowedCamTypes+={follow topDown}
+@property axisMovement={Z} //forward
+@end
+
+@blueprint 3DGameAxis:gameAxis
+@domain type+={3d}
+@property allowY=1//* full 3d environment
+@end
+
+@blueprint UpDownAxis:gameAxis
+@domain type+={upDown}
+@property allowedCamTypes+={upDownCamType}  //* for games with a up down representation
+@property allowX=1
+@property allowY=1
+@property allowZ=0
+
+@end
+
+@blueprint PlatformAxis:UpDownAxis
+@domain type+={platform}
+@property allowedCamTypes+={}  //* Only Up and down is allowed (example: r-type)
+@property allowX=0
+@property allowY=1
+@property allowZ=0
+@property axisMovement={X} //Left to Right
+@end
+
+@blueprint HorizontalAxisForward:UpDownAxis
+@domain type+={horizontal}
+@property allowedCamTypes+={}  //* Only left and right is allowed, going forward
+@property allowX=1
+@property allowY=0
+@property allowZ=0
+@property axisMovement={Z} //going forward
+@end
+@blueprint HorizontalAxisUP:UpDownAxis
+@domain type+={horizontal}
+@property allowedCamTypes+={}  //* Only left and right is allowed, going forward
+@property allowX=1
+@property allowY=0
+@property allowZ=0
+@property axisMovement={Y} //going "up"
+@end
+
+@blueprint camTypes:visualEnum
+	@domain type+={camType}
+	@property distX=0
+	@property distY=0
+	@property distZ=0
+	@property maxDist=$this.distZ*3
+	@property minDist=1
+	@property angleRotateX=90
+	@property angleRotateY=0
+	@property angleRotateZ=0
+@end
+
+@blueprint camTypeChase:camTypes
+	@domain type+={chase}
+	@property value='chase'
+@end
+
+@blueprint camTypeFirstPerson:camTypes
+	@domain type+={firstperson}
+	@property value='firstperson'
+@end
+
+@blueprint camTypeFollow:camTypes
+	@domain type+={follow}
+	@property value='follow'
+	@property distZ=5
+	@property distY=5
+	@property angleRotateX=0
+@end
+
+@blueprint camTypeTopDown:camTypes
+	@domain type+={topDown topdown}
+	@property value='follow'
+	@property distZ=8
+	@property distY=rand(140,180)
+	@property angleRotateX=90
+	@property angleRotateY=0
+	@property angleRotateZ=0
+@end
+
+@blueprint camTypeUpDown:camTypes
+	@domain type+={upDownCamType}
+	@property value='follow'
+	@property distX=rand(8,15) //* in this camera mode, the player is seen from the side, like in mario games
+	@property widthMult=1
+	@property angleRotateX=0
+	@property angleRotateY=-90
+	@property angleRotateZ=0
+@end
+
+
+@blueprint color:visualEnum
+	@domain class='color'
+	@domain type+={color}
+	@property a=0
+	@property b=0
+	@property g=0
+	@property name='Default Color'
+	@property r=0
+@end
+
+@blueprint colorBlueish:color
+	@domain type+={blueish}
+	@property a=1
+	@property b=randf(0.8,1)
+	@property g=randf(0,0.2)
+	@property name='Blueish'
+	@property r=randf(0,0.2)
+@end
+
+@blueprint colorClear:color
+	@domain type+={clear}
+@end
+
+@blueprint colorBlue:colorClear
+	@domain type+={blue}
+	@property a=1
+	@property b=randf(0.9,1)
+	@property g=randf(0,0.2)
+	@property name='Blue'
+	@property r=randf(0,0.2)
+@end
+
+@blueprint colorGrayish:colorClear
+	@domain type+={gray grayish}
+	@property a=1
+	@property b=$this.val
+	@property g=$this.val
+	@property name='Grayish'
+	@property r=$this.val
+	@property val=randf(0.6,0.7)
+@end
+
+@blueprint colorRed:colorClear
+	@domain type+={red}
+	@property a=1
+	@property b=randf(0,0.2)
+	@property g=randf(0,0.2)
+	@property name='Red'
+	@property r=randf(0.9,1)
+@end
+
+@blueprint colorWhite:colorClear
+	@domain type+={white}
+	@property a=1
+	@property b=1
+	@property g=1
+	@property name='White'
+	@property r=1
+@end
+
+@blueprint colorWhiteish:colorClear
+	@domain type+={whiteish}
+	@property a=1
+	@property b=randf(0.8,1)
+	@property g=randf(0.8,1)
+	@property name='Whiteish'
+	@property r=randf(0.8,1)
+@end
+
+@blueprint colorYellow:colorClear
+	@domain type+={yellow}
+	@property a=1
+	@property b=randf(0,1)
+	@property g=randf(0.8,1)
+	@property name='Yellow'
+	@property r=randf(0.8,1)
+@end
+
+@blueprint colorCold:color
+	@domain type+={cold}
+@end
+
+@blueprint colorDark:color
+	@domain type+={dark}
+@end
+
+@blueprint colorBlack:colorDark
+	@domain type+={black}
+	@property a=1
+	@property b=0
+	@property g=0
+	@property name='Black'
+	@property r=0
+@end
+
+@blueprint colorBlackish:colorDark
+	@domain type+={blackish}
+	@property a=1
+	@property b=randf(0,0.2)
+	@property g=randf(0,0.2)
+	@property name='Blackish'
+	@property r=randf(0,0.2)
+@end
+
+@blueprint colorGreenish:color
+	@domain type+={greenish}
+	@property a=1
+	@property b=randf(0,0.2)
+	@property g=randf(0.8,1)
+	@property name='Greenish'
+	@property r=randf(0,0.2)
+@end
+
+@blueprint colorHot:color
+	@domain type+={hot}
+@end
+
+@blueprint colorRandom:color
+	@domain type+={random}
+	@property a=1
+	@property b=randf(0,1)
+	@property g=randf(0,1)
+	@property name='Random'
+	@property r=randf(0,1)
+@end
+
+@blueprint EffectsEnum:visualEnum
+	@domain type+={effectsEnum}
+@end
+
+@blueprint NoFXEnum:EffectsEnum
+	@domain type+={nofx}
+	@property name='NoFX' //placeholder...
+	@property value='0'
+@end
+
+@blueprint VisualFX:EffectsEnum
+	@domain type+={visual}
+	@property isVisual=1
+	@property soundTag={null}
+	@property soundObj=pickSFX($this.soundTag)
+@end
+
+@blueprint ParticleEmitterFX:VisualFX
+	@domain type+={emitter}
+	@property defineColors=0 //if 1 then start and Colors are used...
+	@property endColor=hexColor(pickFinal({color $this.endColorTag}))
+	@property endColorTag={random}
+	@property gravity=0 //y vector
+	@property highLife=2
+	@property initialVelocity=0
+	@property isParticleEmitter=1
+	@property lowLife=2
+	@property material='Common/MatDefs/Misc/Particle.j3md'
+	@property numParticles=rand(80,140)
+	@property rotateSpeed=0
+	@property startColor=hexColor(pickFinal({color $this.startColorTag}))
+	@property startColorTag={random}
+	@property velocityVariation=1
+@end
+
+@blueprint DebrisEffectEnum:ParticleEmitterFX
+	@domain type+={debris}
+	@property defineColors=1
+	@property endColorTag={whiteish}
+	@property gravity=6
+	@property highLife=3
+	@property imagesX=3
+	@property imagesY=3
+	@property initialVelocity=4
+	@property lowLife=1
+	@property name='Debris'
+	@property numParticles=10
+	@property rotateSpeed=4
+	@property startColorTag={white}
+	@property texture='Effects/Explosions/Debris.png'
+	@property value='5'
+	@property velocityVariation=0.6
+@end
+
+@blueprint EngineExhaustEnum:ParticleEmitterFX
+	@domain type+={engineExhaust}
+	@property defineColors=1
+	@property endColorTag={black}
+	@property startColorTag={gray}
+	@property texture='Effects/exhaust.png'
+	@property imagesX=2
+	@property imagesY=1
+	@property name='EngineExhaust'
+	@property value='8'
+	@property soundTag={carEngine_notused}
+@end
+
+@blueprint ExhaustEnum:ParticleEmitterFX
+	@domain type+={exhaust}
+	@property defineColors=1
+	@property endColorTag={black}
+	@property imagesX=rand(12,18)
+	@property imagesY=2
+	@property name='Exhaust'
+	@property startColorTag={gray}
+	@property texture='Effects/exhaust.png'
+	@property value='1'
+@end
+
+@blueprint ExplosionEffectEnum:ParticleEmitterFX
+	@domain type+={explosion}
+	@property isVisual=0
+	@property value='9'
+	@property soundTag={explosion}
+@end
+
+@blueprint FireEffectEnum:ParticleEmitterFX
+	@domain type+={fire}
+	@property defineColors=1
+	@property endColorTag={red}
+	@property highLife=3
+	@property imagesX=2
+	@property imagesY=2
+	@property initialVelocity=2
+	@property lowLife=1
+	@property name='Fire'
+	@property numParticles=30
+	@property startColorTag={yellow}
+	@property texture='Effects/Explosions/flame.png'
+	@property value='4'
+	@property velocityVariation=0.3
+@end
+
+@blueprint FireSmokeEnum:ParticleEmitterFX
+	@domain type+={fireSmoke}
+	@property defineColors=1
+	@property endColorTag={red}
+	@property gravity=rand(-5,5)
+	@property highLife=1
+	@property imagesX=2
+	@property imagesY=2
+	@property soundTag={gunShot}
+	@property lowLife=0.5
+	@property name='FireSmoke'
+	@property numParticles=30
+	@property startColorTag={yellow}
+	@property texture='Effects/Explosions/flame.png'
+	@property value='6'
+@end
+
+@blueprint FlashEffectEnum:ParticleEmitterFX
+	@domain type+={flash}
+	@property defineColors=0
+	@property gravity=0
+	@property highLife=2
+	@property imagesX=2
+	@property imagesY=2
+	@property lowLife=1
+	@property name='Flash'
+	@property numParticles=30
+	@property texture='Effects/Explosions/flash.png'
+	@property value='7'
+@end
+
+@blueprint SmokeEnum:ParticleEmitterFX
+	@domain type+={smoke}
+	@property imagesX=2
+	@property imagesY=1
+	@property name='Smoke'
+	@property texture='Effects/smoke.png'
+	@property value='2'
+@end
+
+@blueprint hullMaker:visualEnum
+	@domain class='hullMaker'
+	@domain type+={hullmaker}
+@end
+
+@blueprint convexMaker:hullMaker
+	@domain type+={convex}
+@end
+
+@blueprint QuickHull:convexMaker
+	@domain className='com.cristiano.jme3.hull.convex.QuickHull3D'
+	@domain type+={quickhull}
+	@property name='QuickHull'
+@end
+
+@blueprint LightNode:visualEnum
+	@domain type+={lightNode}
+	@property castShadow=0
+	@property hasDirection=0 //dire????o indica um ponto de origem para a luz
+	@property intensity=1 //valor multiplicado pela cor para mudar a intensidade da mesma
+	@comment description='Tipo de luz disponivel'
+@end
+
+@blueprint AmbientLight:LightNode
+	@domain init='com.jme3.light.AmbientLight'
+	@domain type+={ambient}
+@end
+
+@blueprint DirectionalLight:LightNode
+	@domain init='com.jme3.light.DirectionalLight'
+	@domain type+={directional}
+	@property hasDirection=1
+@end
+
+@blueprint PointLight:LightNode
+	@domain init='com.jme3.light.PointLight'
+	@domain type+={point}
+	@property hasDirection=1
+@end
+
+@blueprint SpotLight:LightNode
+	@domain init='com.jme3.light.SpotLight'
+	@domain type+={spot}
+	@property hasDirection=1
+@end
+
+@blueprint MaterialTypes:visualEnum
+	@domain type+={materialTypeEnum}
+@end
+
+@blueprint MaterialLightEnum:MaterialTypes
+	@domain type+={light}
+	@property value=1
+@end
+
+@blueprint MaterialTerrainEnum:MaterialTypes
+	@domain type+={terrain}
+	@property value=2
+@end
+
+@blueprint MaterialTerrainUnshaded:MaterialTypes
+	@domain type+={unshaded}
+	@property value=3
+@end
+
+@blueprint NiftyEnums:visualEnum
+	@domain type+={niftyEnums}
+@end
+
+@blueprint alignmentEnum:NiftyEnums
+	@domain type+={align}
+@end
+
+@blueprint ChildLayoutEnum:alignmentEnum
+	@domain type+={childLayout}
+	@comment description='Define como ser??o posicionados os filhos, estou deixando apenas os enums dinamicos...'
+@end
+
+@blueprint AbsoluteChildLayout:ChildLayoutEnum
+	@domain type+={absolute}
+	@property value='absolute'
+@end
+
+@blueprint CenterChildLayout:ChildLayoutEnum
+	@domain type+={center}
+	@property value='center'
+@end
+
+@blueprint HorizontalChildLayout:ChildLayoutEnum
+	@domain type+={horizontal}
+	@property value='horizontal'
+@end
+
+@blueprint OverlayChildLayout:ChildLayoutEnum
+	@domain type+={overlay}
+	@property value='overlay'
+@end
+
+@blueprint VerticalChildLayout:ChildLayoutEnum
+	@domain type+={vertical}
+	@property value='vertical'
+@end
+
+@blueprint HorizontalAlignmentEnum:alignmentEnum
+	@domain type+={horizontalAlign}
+@end
+
+@blueprint centerHorizontalAlignment:HorizontalAlignmentEnum
+	@domain type+={center}
+	@property value='center'
+@end
+
+@blueprint leftAlignment:HorizontalAlignmentEnum
+	@domain type+={left}
+	@property value='left'
+@end
+
+@blueprint rightAlignment:HorizontalAlignmentEnum
+	@domain type+={right}
+	@property value='right'
+@end
+
+@blueprint VerticalAlignmentEnum:alignmentEnum
+	@domain type+={verticalAlign}
+@end
+
+@blueprint BottomAlignment:VerticalAlignmentEnum
+	@domain type+={bottom}
+	@property value='bottom'
+@end
+
+@blueprint centerVerticalAlignment:VerticalAlignmentEnum
+	@domain type+={center}
+	@property value='center'
+@end
+
+@blueprint TopAlignment:VerticalAlignmentEnum
+	@domain type+={top}
+	@property value='top'
+@end
+
+@blueprint FontFamilyEnum:NiftyEnums
+	@domain type+={fontFamily}
+@end
+
+@blueprint ActionJacksonFontFamily:FontFamilyEnum
+	@domain type+={actionJackson}
+	@property value={actionJackson}
+@end
+
+@blueprint AtariFontFamily:FontFamilyEnum
+	@domain type+={atari}
+	@property value={atari}
+@end
+
+@blueprint JerseyFontFamily:FontFamilyEnum
+	@domain type+={jersey}
+	@property value={jersey}
+@end
+
+@blueprint SolomonSmooseFontFamily:FontFamilyEnum
+	@domain type+={solomon}
+	@property value={solomon}
+@end
+
+@blueprint niftyEffectEvent:NiftyEnums
+	@domain type+={niftyEffectEvent}
+@end
+
+@blueprint OnClickNifty:niftyEffectEvent
+	@domain type+={click}
+	@property value='onClick'
+@end
+
+@blueprint OnFocusNifty:niftyEffectEvent
+	@domain type+={focus}
+	@property value='onFocus'
+@end
+
+@blueprint OnHoverNifty:niftyEffectEvent
+	@domain type+={hover}
+	@property value='onHover'
+@end
+
+@blueprint OnStartScreenNifty:niftyEffectEvent
+	@domain type+={startScreen}
+	@property value='onStartScreen'
+@end
+
+@blueprint niftyEffectParams:NiftyEnums
+	@domain type+={niftyEffectParam}
+@end
+
+@blueprint NiftyEffectNeverStopRendering:niftyEffectParams
+	@domain type+={neverStopRendering}
+	@property name='neverStopRendering' //'true'/'false'
+@end
+
+@blueprint NiftyEffectParamEnd:niftyEffectParams
+	@domain type+={end}
+	@property name='end' //starting color
+@end
+
+@blueprint NiftyEffectParamEndSize:niftyEffectParams
+	@domain type+={endSize}
+	@property name='endSize'
+@end
+
+@blueprint NiftyEffectParamLength:niftyEffectParams
+	@domain type+={length}
+	@property name='length'
+@end
+
+@blueprint NiftyEffectParamSound:niftyEffectParams
+	@domain type+={sound}
+	@property name='sound'
+@end
+
+@blueprint NiftyEffectParamStart:niftyEffectParams
+	@domain type+={start}
+	@property name='start' //starting color
+@end
+
+@blueprint NiftyEffectParamStartDelay:niftyEffectParams
+	@domain type+={startDelay}
+	@property name='startDelay'
+@end
+
+@blueprint NiftyEffectParamStartSize:niftyEffectParams
+	@domain type+={startSize}
+	@property name='startSize'
+@end
+
+@blueprint NiftyEffectsEnum:NiftyEnums
+	@domain type+={niftyEffectsEnum}
+@end
+
+@blueprint BattleNoftifEffect:NiftyEffectsEnum
+	@domain type+={battleNotifEffect}
+	@property name='battleNotif'
+	@property value='com.cristiano.jme3.ui.battleNotif.BattleNotifEffect'
+@end
+
+@blueprint niftyEffectType:NiftyEnums
+	@domain type+={niftyEffectType}
+	@property neverStopRendering=0
+	@property neverStopRenderingValue=if($this.neverStopRendering==1,'true','false')
+	@property paramsTags={neverStopRendering}
+	@replicate params=tagList($this.paramsTags,{enum niftyEffectParam leaf})
+	@childproperty params[endSize].value=$this.endSize
+	@childproperty params[end].value=$this.end
+	@childproperty params[length].value=$this.length
+	@childproperty params[neverStopRendering].value=$this.neverStopRenderingValue
+	@childproperty params[startDelay].value=$this.startDelay
+	@childproperty params[startSize].value=$this.startSize
+	@childproperty params[start].value=$this.start
+@end
+
+@blueprint FadeEffect:niftyEffectType
+	@domain type+={fade}
+	@property name='fade'
+	@property paramsTags+={start length startDelay end}
+@end
+
+@blueprint PlaySoundEffect:niftyEffectType
+	@domain type+={playSound}
+	@property name='playSound'
+	@property paramsTags+={sound}
+@end
+
+@blueprint textSizeEffect:niftyEffectType
+	@domain type+={textSize}
+	@property name='textSize'
+	@property paramsTags+={startSize endSize}
+@end
+
+@blueprint textFonts:NiftyEnums
+	@domain type+={textFont}
+@end
+
+@blueprint BigFonts:textFonts
+	@domain type+={big}
+@end
+
+@blueprint ActionJacksonBigFont:BigFonts
+	@domain type+={actionJackson}
+	@property value='Interface/Fonts/actionJackson_bold_50.fnt'
+@end
+
+@blueprint AtariBigFont:BigFonts
+	@domain type+={atari}
+	@property value='Interface/Fonts/atari_bold_50.fnt'
+@end
+
+@blueprint JerseyBigFont:BigFonts
+	@domain type+={jersey}
+	@property value='Interface/Fonts/jersey_bold_50.fnt'
+@end
+
+@blueprint SolomonBigFont:BigFonts
+	@domain type+={solomon}
+	@property value='Interface/Fonts/solomon_bold_50.fnt'
+@end
+
+@blueprint NormalFonts:textFonts
+	@domain type+={normal}
+@end
+
+@blueprint ActionJacksonNormalFont:NormalFonts
+	@domain type+={actionJackson}
+	@property value='Interface/Fonts/actionJackson_bold_26.fnt'
+@end
+
+@blueprint AtariNormalFont:NormalFonts
+	@domain type+={atari}
+	@property value='Interface/Fonts/atari_bold_26.fnt'
+@end
+
+@blueprint JerseyNormalFont:NormalFonts
+	@domain type+={jersey}
+	@property value='Interface/Fonts/jersey_bold_26.fnt'
+@end
+
+@blueprint SolomonNormalFont:NormalFonts
+	@domain type+={solomon}
+	@property value='Interface/Fonts/solomon_bold_26.fnt'
+@end
+
+@blueprint TitleFonts:textFonts
+	@domain type+={title}
+@end
+
+@blueprint ActionJacksonTitleFont:TitleFonts
+	@domain type+={actionJackson}
+	@property value='Interface/Fonts/actionJackson_bold_32.fnt'
+@end
+
+@blueprint AtariTitleFont:TitleFonts
+	@domain type+={atari}
+	@property value='Interface/Fonts/atari_bold_32.fnt'
+@end
+
+@blueprint JerseyTitleFont:TitleFonts
+	@domain type+={jersey}
+	@property value='Interface/Fonts/jersey_bold_32.fnt'
+@end
+
+@blueprint SolomonTitleFont:TitleFonts
+	@domain type+={solomon}
+	@property value='Interface/Fonts/solomon_bold_32.fnt'
+@end
+
+@blueprint NotifTypeEnum:visualEnum
+	@domain type+={notifTypeEnum}
+@end
+
+@blueprint DamageNotifTypeEnum:NotifTypeEnum
+	@domain type+={damage}
+	@property value=1
+@end
+
+@blueprint NoNotifTypeEnum:NotifTypeEnum
+	@domain type+={none}
+	@property value=0
+@end
+
+@blueprint ShoutNotifTypeEnum:NotifTypeEnum
+	@domain type+={shout}
+	@property value=2
+@end
+
+@blueprint scenefx:visualEnum
+	@domain class='sceneFX'
+	@domain type+={scenefx}
+@end
+
+@blueprint blur:scenefx
+	@domain type+={blur}
+@end
+
+@blueprint cartoony:scenefx
+	@domain type+={cartoony}
+@end
+
+@blueprint fog:scenefx
+	@domain type+={fog}
+@end
+
+@blueprint lightBeams:scenefx
+	@domain type+={lightbeams}
+@end
+
+@blueprint photoReal:scenefx
+	@domain type+={photoreal}
+@end
+
+@blueprint SubNodeType:visualEnum
+	@domain type+={subnodetype}
+	@property type='default'
+	@comment description='Define como ser?? feita a adi????o do mesh: se for merge ent??o os pontos do objeto atual ser?? somado com os pontos do objeto pai, se for new ent??o um novo node(mesh) ?? criado'
+@end
+
+@blueprint MergeSubNodeType:SubNodeType
+	@domain type+={merge}
+	@property value='merge'
+@end
+
+@blueprint NewSubNodeType:SubNodeType
+	@domain type+={newsubnode}
+	@property value='newsubnode'
+@end
+
+@blueprint TerrainEnum:visualEnum
+	@domain type+={terrain}
+@end
+
+@blueprint FlatTerrainEnum:TerrainEnum
+	@domain type+={flat}
+	@property value='flat'
+@end
+
+@blueprint NoiseTerrainEnum:TerrainEnum
+	@domain type+={noise}
+	@property value='noise'
+@end
+
+@blueprint NoTerrainEnum:TerrainEnum
+	@domain type+={noTerrain}
+	@property value='noTerrain'
+@end
+
+@blueprint PlaceHolderTerrainEnum:TerrainEnum
+	@domain type+={placeHolder test}
+	@property value='placeholder'
+@end
+
+@blueprint textureBlendingEnum:visualEnum
+	@domain type+={textureBlending}
+	@property calcB=0
+	@property calcG=0
+	@property calcR=0
+	@comment description='defines how the layers interact... vars: prev=value for that position in the previous layer,curr=value for the current layer'
+@end
+
+@blueprint AverageTB:textureBlendingEnum
+	@domain type+={average}
+	@property calcB=($prevB+$currB)/2
+	@property calcG=($prevG+$currG)/2
+	@property calcR=($prevR+$currR)/2
+	@property value='sum'
+@end
+
+@blueprint divideTB:textureBlendingEnum
+	@domain type+={divide}
+	@property calcB=if($prevB==0,0,$currG/$prevB)
+	@property calcG=if($prevG==0,0,$currG/$prevG)
+	@property calcR=if($prevR==0,0,$currR/$prevR)
+	@property value='divide'
+@end
+
+@blueprint multiplyTB:textureBlendingEnum
+	@domain type+={multiply}
+	@property calcB=$prevB*$currB
+	@property calcG=$prevG*$currG
+	@property calcR=$prevR*$currR
+	@property value='multiply'
+@end
+
+@blueprint replaceTB:textureBlendingEnum
+	@domain type+={replace}
+	@property calcB=$currB
+	@property calcG=$currG
+	@property calcR=$currR
+	@property value='replace'
+@end
+
+@blueprint sumTB:textureBlendingEnum
+	@domain type+={sum}
+	@property calcB=$prevB+$currB
+	@property calcG=$prevG+$currG
+	@property calcR=$prevR+$currR
+	@property value='sum'
+@end
+
+@blueprint TextureMapEnums:visualEnum
+	@domain type+={textureMapEnums}
+@end
+
+@blueprint DiffuseTMEnums:TextureMapEnums
+	@domain type+={diffuse}
+	@property value='diffuse'
+@end
+
+@blueprint GlowTMEnums:TextureMapEnums
+	@domain type+={glow}
+	@property value='glow'
+@end
+
+@blueprint NormalTMEnums:TextureMapEnums
+	@domain type+={normal}
+	@property value='normal'
+@end
+
+@blueprint ShineTMEnums:TextureMapEnums
+	@domain type+={shine}
+	@property value='shine'
+@end
+
+@blueprint SpecularTMEnums:TextureMapEnums
+	@domain type+={specular}
+	@property value='specular'
+@end
+
+@blueprint TextureTypeEnum:visualEnum
+	@domain type+={textureType}
+@end
+
+@blueprint TextureType3d:TextureTypeEnum
+	@domain type+={3d 3D}
+	@property init='com.cristiano.java.gm.builder.textures.ProceduralTexture3D'
+	@property value='3d'
+@end
+
+@blueprint themeColorsEnum:visualEnum
+	@domain type+={themeColorEnum}
+	@property hexColor=hexColor(pickSingle({color $this.colorTag})) //TODO: still needs yellow and pink and gray
+	@property name='indef' //name is used as keyword
+	@property oppositeColor=oppositeColor(pickFinal({color $this.colorTag}))
+	@comment description=' the theme will choose images and font color based on this setting...'
+@end
+
+@blueprint blackColorTheme:themeColorsEnum
+	@domain type+={black}
+	@property colorTag={blackish}
+	@property name='black'
+@end
+
+@blueprint blueColorTheme:themeColorsEnum
+	@domain type+={blue}
+	@property colorTag={blueish}
+	@property name='blue'
+@end
+
+@blueprint greenColorTheme:themeColorsEnum
+	@domain type+={green}
+	@property colorTag={greenish}
+	@property name='green'
+@end
+
+@blueprint whiteColorTheme:themeColorsEnum
+	@domain type+={white}
+	@property colorTag={whiteish}
+	@property name='white'
+@end
+
+@blueprint VisualTargetTypes:visualEnum
+	@domain type+={visualTargetTypeEnum}
+	@comment description=' this determines the type of image that shows when the player targets a entity'
+@end
+
+@blueprint ArrowTargetType:VisualTargetTypes
+	@domain type+={arrow}
+	@property value='arrow'
+@end
+
+@blueprint NoTargetTargetType:VisualTargetTypes
+	@domain type+={none}
+	@property value='none'
+@end
+
+@blueprint SquareTargetType:VisualTargetTypes
+	@domain type+={square}
+	@property value='square'
+@end
+
+@blueprint VisualTransformationsEnum:visualEnum
+	@domain type+={visualTransf}
+@end
+
+@blueprint RotateTransformation:VisualTransformationsEnum
+	@domain type+={rotate}
+	@property axisX=0
+	@property axisY=0
+	@property axisZ=0
+	@property value='rotate'
+@end
+
+@blueprint RotateXTransf:RotateTransformation
+	@domain type+={x}
+	@property axisX=1
+@end
+
+@blueprint RotateYTransf:RotateTransformation
+	@domain type+={y}
+	@property axisY=1
+@end
+
+@blueprint RotateZTransf:RotateTransformation
+	@domain type+={z}
+	@property axisZ=1
+@end
+
+@blueprint ScaleTransformation:VisualTransformationsEnum
+	@domain type+={scale}
+	@property destScale=randf(0.5,2)
+	@property value='scale'
+@end
+

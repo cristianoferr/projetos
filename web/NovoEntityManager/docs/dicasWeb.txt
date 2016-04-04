@@ -1,0 +1,31 @@
+Paginador ajax:
+
+
+<div id="paginator">
+<a href="pag.php?s=teste&pag=1">1</a>
+<a href="pag.php?s=teste&pag=2">2</a>
+<a href="pag.php?s=teste&pag=3">3</a>
+<a href="pag.php?s=teste&pag=4">4</a>
+</div>
+
+<script>
+$(document).ready(function(){
+      $("paginator a").click(function(){
+                 var url_pag = $(this).attr("href");
+ 
+                 $.ajax({
+                             url : url_pag,
+                             dataType: "HTML",
+                             beforeSend : function(){
+                                         $("#conteudo").html("Carregando...");
+                             },
+                             success : function(data){
+                                        $("#conteudo").html(data);
+                             },
+                             error : function(error){
+                                        $("#conteudo").html("Erro ao carregar a página !!!");
+                              }
+                  });
+      });
+});
+</script>

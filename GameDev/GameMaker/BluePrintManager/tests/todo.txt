@@ -1,0 +1,12 @@
+a fazer:
+- criar uma lista @define dentro da blueprint e onde os filhos do objeto terão acesso.
+	Ex: @define xpto=100, criando então a var $xpto para uso no objeto e em todos os @objects filhos.
+
+fazendo:
+- criar temas para o mapa: espaço, cidade, floresta, etc.  O mapa é construido com base nisso.
+
+feito:
+
+- criar uma lista @validate, para fazer validações em propriedades.
+	Ex: @validate checkNull=notNull($this.objeto)
+	Adicionar isso ao createFinalElement, se for inválido, recriar até um máximo de x tentativas.	

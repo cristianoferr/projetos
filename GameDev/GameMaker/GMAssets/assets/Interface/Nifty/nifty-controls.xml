@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty-controls>
+<!-- Esse arquivo contém os componentes usados por toda a aplicação -->
+  <!-- 
+  <useControls filename="com/cristiano/gamelib/nifty/progressBar/progressBarControl.xml" />
+  <useControls filename="com/cristiano/gamelib/nifty/targetInfo/targetInfoControl.xml" />
+  <useControls filename="com/cristiano/gamelib/nifty/overlay/overlayControl.xml" />
+  <useControls filename="com/cristiano/gamelib/nifty/overview/overviewControl.xml" />
+   -->
+   <useControls filename="Interface/Nifty/BattleNotif/battleNotifControl.xml" />
+   
+  <!--  <useControls filename="nifty-default-controls.xml" />-->
+  <useControls filename="nifty-controls/nifty-button.xml" />
+  <useControls filename="nifty-controls/nifty-label.xml" />
+
+</nifty-controls>

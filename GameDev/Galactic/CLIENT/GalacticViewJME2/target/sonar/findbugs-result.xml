@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://findbugs.sourceforge.net/xsl/default.xsl"?>
+
+<BugCollection version="1.3.9" sequence="0" timestamp="1336415125932" analysisTimestamp="1336743587106" release="">
+  <Project>
+    <Jar>D:\Java\workspaces\workspace_RCP\GalacticViewJME2\bin</Jar>
+    <AuxClasspathEntry>D:\DOCUME~1\cmm4\CONFIG~1\Temp\findbugs4243185611539142777.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>D:\DOCUME~1\cmm4\CONFIG~1\Temp\findbugs6408362520720357398.jar</AuxClasspathEntry>
+    <SrcDir>D:\Java\workspaces\workspace_RCP\GalacticViewJME2\src</SrcDir>
+    <WrkDir>D:\Java\workspaces\workspace_RCP\GalacticViewJME2\target</WrkDir>
+  </Project>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="3" abbrev="UPM" category="PERFORMANCE" instanceHash="b81b5a4be85260e43b730637499a5e1e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Private method is never called</ShortMessage>
+    <LongMessage>Private method com.cristiano.galactic.GalacticViewStarterJME2.startSingle() is never called</LongMessage>
+    <Class classname="com.cristiano.galactic.GalacticViewStarterJME2" primary="true">
+      <SourceLine classname="com.cristiano.galactic.GalacticViewStarterJME2" start="95" end="164" sourcefile="GalacticViewStarterJME2.java" sourcepath="com/cristiano/galactic/GalacticViewStarterJME2.java" relSourcepath="com\cristiano\galactic\GalacticViewStarterJME2.java">
+        <Message>At GalacticViewStarterJME2.java:[lines 95-164]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.GalacticViewStarterJME2</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.GalacticViewStarterJME2" name="startSingle" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.GalacticViewStarterJME2" start="146" end="159" startBytecode="0" endBytecode="183" sourcefile="GalacticViewStarterJME2.java" sourcepath="com/cristiano/galactic/GalacticViewStarterJME2.java" relSourcepath="com\cristiano\galactic\GalacticViewStarterJME2.java"/>
+      <Message>In method com.cristiano.galactic.GalacticViewStarterJME2.startSingle()</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.GalacticViewStarterJME2" start="146" end="159" startBytecode="0" endBytecode="183" sourcefile="GalacticViewStarterJME2.java" sourcepath="com/cristiano/galactic/GalacticViewStarterJME2.java" relSourcepath="com\cristiano\galactic\GalacticViewStarterJME2.java" synthetic="true">
+      <Message>At GalacticViewStarterJME2.java:[lines 146-159]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE" instanceHash="20a5aa022b1c6e3cea75ccec348d8de2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to maxDistanceObject in com.cristiano.galactic.ViewConsts.setMaxDistanceObject(double)</LongMessage>
+    <Class classname="com.cristiano.galactic.ViewConsts" primary="true">
+      <SourceLine classname="com.cristiano.galactic.ViewConsts" start="3" end="41" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java">
+        <Message>At ViewConsts.java:[lines 3-41]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.ViewConsts</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.ViewConsts" name="setMaxDistanceObject" signature="(D)V" isStatic="true" primary="true">
+      <SourceLine classname="com.cristiano.galactic.ViewConsts" start="36" end="37" startBytecode="0" endBytecode="2" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java"/>
+      <Message>In method com.cristiano.galactic.ViewConsts.setMaxDistanceObject(double)</Message>
+    </Method>
+    <LocalVariable name="maxDistanceObject" register="0" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named maxDistanceObject</Message>
+    </LocalVariable>
+    <Field classname="com.cristiano.galactic.ViewConsts" name="maxDistanceObject" signature="D" isStatic="true" role="FIELD_DID_YOU_MEAN">
+      <SourceLine classname="com.cristiano.galactic.ViewConsts" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java">
+        <Message>In ViewConsts.java</Message>
+      </SourceLine>
+      <Message>Did you mean to refer to the field com.cristiano.galactic.ViewConsts.maxDistanceObject?</Message>
+    </Field>
+    <SourceLine classname="com.cristiano.galactic.ViewConsts" primary="true" start="36" end="36" startBytecode="1" endBytecode="1" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java">
+      <Message>At ViewConsts.java:[line 36]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.TWO_STORES_MULTIPLE_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IS_PARAMETER" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.SHADOWS_FIELD" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="maxDistanceObject"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.COPY_VALUE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE" instanceHash="7b60b3ab3b3aec2b080119f411c166b5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to previousMaxDistanceObject in com.cristiano.galactic.ViewConsts.setPreviousMaxDistanceObject(double)</LongMessage>
+    <Class classname="com.cristiano.galactic.ViewConsts" primary="true">
+      <SourceLine classname="com.cristiano.galactic.ViewConsts" start="3" end="41" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java">
+        <Message>At ViewConsts.java:[lines 3-41]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.ViewConsts</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.ViewConsts" name="setPreviousMaxDistanceObject" signature="(D)V" isStatic="true" primary="true">
+      <SourceLine classname="com.cristiano.galactic.ViewConsts" start="26" end="27" startBytecode="0" endBytecode="2" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java"/>
+      <Message>In method com.cristiano.galactic.ViewConsts.setPreviousMaxDistanceObject(double)</Message>
+    </Method>
+    <LocalVariable name="previousMaxDistanceObject" register="0" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named previousMaxDistanceObject</Message>
+    </LocalVariable>
+    <Field classname="com.cristiano.galactic.ViewConsts" name="previousMaxDistanceObject" signature="D" isStatic="true" role="FIELD_DID_YOU_MEAN">
+      <SourceLine classname="com.cristiano.galactic.ViewConsts" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java">
+        <Message>In ViewConsts.java</Message>
+      </SourceLine>
+      <Message>Did you mean to refer to the field com.cristiano.galactic.ViewConsts.previousMaxDistanceObject?</Message>
+    </Field>
+    <SourceLine classname="com.cristiano.galactic.ViewConsts" primary="true" start="26" end="26" startBytecode="1" endBytecode="1" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java">
+      <Message>At ViewConsts.java:[line 26]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.TWO_STORES_MULTIPLE_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IS_PARAMETER" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.SHADOWS_FIELD" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="previousMaxDistanceObject"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.COPY_VALUE" value="true"/>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE" instanceHash="d6b5c2346cf237a4ac049c882159aba3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field isn&apos;t final and can&apos;t be protected from malicious code</ShortMessage>
+    <LongMessage>com.cristiano.galactic.ViewConsts.useScale isn&apos;t final and can&apos;t be protected from malicious code </LongMessage>
+    <Class classname="com.cristiano.galactic.ViewConsts" primary="true">
+      <SourceLine classname="com.cristiano.galactic.ViewConsts" start="3" end="41" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java">
+        <Message>At ViewConsts.java:[lines 3-41]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.ViewConsts</Message>
+    </Class>
+    <Field classname="com.cristiano.galactic.ViewConsts" name="useScale" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="com.cristiano.galactic.ViewConsts" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java">
+        <Message>In ViewConsts.java</Message>
+      </SourceLine>
+      <Message>Field com.cristiano.galactic.ViewConsts.useScale</Message>
+    </Field>
+    <SourceLine classname="com.cristiano.galactic.ViewConsts" primary="true" start="6" end="6" startBytecode="1" endBytecode="1" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java">
+      <Message>At ViewConsts.java:[line 6]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_ASSIGNMENT" priority="1" abbrev="SA" category="STYLE" instanceHash="1a28bbcb5e31412042e39f4cbadd876c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Self assignment of local variable</ShortMessage>
+    <LongMessage>Self assignment of local variable in com.cristiano.galactic.ViewConsts.setMaxDistanceObject(double)</LongMessage>
+    <Class classname="com.cristiano.galactic.ViewConsts" primary="true">
+      <SourceLine classname="com.cristiano.galactic.ViewConsts" start="3" end="41" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java">
+        <Message>At ViewConsts.java:[lines 3-41]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.ViewConsts</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.ViewConsts" name="setMaxDistanceObject" signature="(D)V" isStatic="true" primary="true">
+      <SourceLine classname="com.cristiano.galactic.ViewConsts" start="36" end="37" startBytecode="0" endBytecode="48" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java"/>
+      <Message>In method com.cristiano.galactic.ViewConsts.setMaxDistanceObject(double)</Message>
+    </Method>
+    <LocalVariable name="maxDistanceObject" register="0" pc="1" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named maxDistanceObject</Message>
+    </LocalVariable>
+    <SourceLine classname="com.cristiano.galactic.ViewConsts" primary="true" start="36" end="36" startBytecode="1" endBytecode="1" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java">
+      <Message>At ViewConsts.java:[line 36]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_ASSIGNMENT" priority="1" abbrev="SA" category="STYLE" instanceHash="6969fc9f36dc4d9c28313235cea55264" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Self assignment of local variable</ShortMessage>
+    <LongMessage>Self assignment of local variable in com.cristiano.galactic.ViewConsts.setPreviousMaxDistanceObject(double)</LongMessage>
+    <Class classname="com.cristiano.galactic.ViewConsts" primary="true">
+      <SourceLine classname="com.cristiano.galactic.ViewConsts" start="3" end="41" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java">
+        <Message>At ViewConsts.java:[lines 3-41]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.ViewConsts</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.ViewConsts" name="setPreviousMaxDistanceObject" signature="(D)V" isStatic="true" primary="true">
+      <SourceLine classname="com.cristiano.galactic.ViewConsts" start="26" end="27" startBytecode="0" endBytecode="48" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java"/>
+      <Message>In method com.cristiano.galactic.ViewConsts.setPreviousMaxDistanceObject(double)</Message>
+    </Method>
+    <LocalVariable name="previousMaxDistanceObject" register="0" pc="1" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named previousMaxDistanceObject</Message>
+    </LocalVariable>
+    <SourceLine classname="com.cristiano.galactic.ViewConsts" primary="true" start="26" end="26" startBytecode="1" endBytecode="1" sourcefile="ViewConsts.java" sourcepath="com/cristiano/galactic/ViewConsts.java" relSourcepath="com\cristiano\galactic\ViewConsts.java">
+      <Message>At ViewConsts.java:[line 26]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" instanceHash="57758fe88d3f2140f9762cb4e2c437e9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to newRot in com.cristiano.galactic.view.View.updateCamera(AbstractItemView)</LongMessage>
+    <Class classname="com.cristiano.galactic.view.View" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.View" start="1" end="509" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java">
+        <Message>At View.java:[lines 1-509]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.View</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.View" name="updateCamera" signature="(Lcom/cristiano/galactic/view/models/AbstractItemView;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.View" start="260" end="304" startBytecode="0" endBytecode="113" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java"/>
+      <Message>In method com.cristiano.galactic.view.View.updateCamera(AbstractItemView)</Message>
+    </Method>
+    <LocalVariable name="newRot" register="4" pc="199" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named newRot</Message>
+    </LocalVariable>
+    <SourceLine classname="com.cristiano.galactic.view.View" primary="true" start="292" end="292" startBytecode="197" endBytecode="197" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java">
+      <Message>At View.java:[line 292]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.TWO_STORES_MULTIPLE_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="newRot"/>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE" instanceHash="29429e65ee7b9b4fdc7c927064678a35" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field isn&apos;t final and can&apos;t be protected from malicious code</ShortMessage>
+    <LongMessage>com.cristiano.galactic.view.View.recursosPath isn&apos;t final and can&apos;t be protected from malicious code </LongMessage>
+    <Class classname="com.cristiano.galactic.view.View" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.View" start="1" end="509" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java">
+        <Message>At View.java:[lines 1-509]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.View</Message>
+    </Class>
+    <Field classname="com.cristiano.galactic.view.View" name="recursosPath" signature="Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.View" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java">
+        <Message>In View.java</Message>
+      </SourceLine>
+      <Message>Field com.cristiano.galactic.view.View.recursosPath</Message>
+    </Field>
+    <SourceLine classname="com.cristiano.galactic.view.View" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java" synthetic="true">
+      <Message>In View.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE" instanceHash="b7d313af147fb9c20d9ebcf8d2f1a534" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field com.cristiano.galactic.view.View.recursosPath from instance method new com.cristiano.galactic.view.View(String)</LongMessage>
+    <Class classname="com.cristiano.galactic.view.View" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.View" start="1" end="509" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java">
+        <Message>At View.java:[lines 1-509]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.View</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.View" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.View" start="84" end="86" startBytecode="0" endBytecode="224" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java"/>
+      <Message>In method new com.cristiano.galactic.view.View(String)</Message>
+    </Method>
+    <Field classname="com.cristiano.galactic.view.View" name="recursosPath" signature="Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.View" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java">
+        <Message>In View.java</Message>
+      </SourceLine>
+      <Message>Field com.cristiano.galactic.view.View.recursosPath</Message>
+    </Field>
+    <SourceLine classname="com.cristiano.galactic.view.View" primary="true" start="85" end="85" startBytecode="117" endBytecode="117" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java">
+      <Message>At View.java:[line 85]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" abbrev="UwF" category="STYLE" instanceHash="dac9f676e618f4599db2fb725f370f74" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor</ShortMessage>
+    <LongMessage>View.gameLogic not initialized in constructor</LongMessage>
+    <Class classname="com.cristiano.galactic.view.View" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.View" start="1" end="509" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java">
+        <Message>At View.java:[lines 1-509]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.View</Message>
+    </Class>
+    <Field classname="com.cristiano.galactic.view.View" name="gameLogic" signature="Lcom/cristiano/galactic/controller/GameLogic;" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.View" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java">
+        <Message>In View.java</Message>
+      </SourceLine>
+      <Message>Field com.cristiano.galactic.view.View.gameLogic</Message>
+    </Field>
+    <SourceLine classname="com.cristiano.galactic.view.View" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java" synthetic="true">
+      <Message>In View.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" abbrev="UwF" category="STYLE" instanceHash="62384422c225e2a48500fd64cd241531" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor</ShortMessage>
+    <LongMessage>View.itemsView not initialized in constructor</LongMessage>
+    <Class classname="com.cristiano.galactic.view.View" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.View" start="1" end="509" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java">
+        <Message>At View.java:[lines 1-509]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.View</Message>
+    </Class>
+    <Field classname="com.cristiano.galactic.view.View" name="itemsView" signature="Lcom/cristiano/galactic/view/ItemsViewManagerAbstract;" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.View" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java">
+        <Message>In View.java</Message>
+      </SourceLine>
+      <Message>Field com.cristiano.galactic.view.View.itemsView</Message>
+    </Field>
+    <SourceLine classname="com.cristiano.galactic.view.View" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java" synthetic="true">
+      <Message>In View.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" abbrev="UwF" category="STYLE" instanceHash="c73db26ba406f34868285dc733ab225c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor</ShortMessage>
+    <LongMessage>View.shipHud not initialized in constructor</LongMessage>
+    <Class classname="com.cristiano.galactic.view.View" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.View" start="1" end="509" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java">
+        <Message>At View.java:[lines 1-509]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.View</Message>
+    </Class>
+    <Field classname="com.cristiano.galactic.view.View" name="shipHud" signature="Lcom/cristiano/galactic/view/hud/ShipHud;" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.View" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java">
+        <Message>In View.java</Message>
+      </SourceLine>
+      <Message>Field com.cristiano.galactic.view.View.shipHud</Message>
+    </Field>
+    <SourceLine classname="com.cristiano.galactic.view.View" sourcefile="View.java" sourcepath="com/cristiano/galactic/view/View.java" relSourcepath="com\cristiano\galactic\view\View.java" synthetic="true">
+      <Message>In View.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" abbrev="Dm" category="I18N" instanceHash="6b335c5f42639f92029ad1a5168aa7e2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase</LongMessage>
+    <Class classname="com.cristiano.galactic.view.app.KeyMappingJME" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.app.KeyMappingJME" start="12" end="75" sourcefile="KeyMappingJME.java" sourcepath="com/cristiano/galactic/view/app/KeyMappingJME.java" relSourcepath="com\cristiano\galactic\view\app\KeyMappingJME.java">
+        <Message>At KeyMappingJME.java:[lines 12-75]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.app.KeyMappingJME</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.app.KeyMappingJME" name="getKeyInput" signature="(Ljava/lang/String;)I" isStatic="true" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.app.KeyMappingJME" start="17" end="63" startBytecode="0" endBytecode="825" sourcefile="KeyMappingJME.java" sourcepath="com/cristiano/galactic/view/app/KeyMappingJME.java" relSourcepath="com\cristiano\galactic\view\app\KeyMappingJME.java"/>
+      <Message>In method com.cristiano.galactic.view.app.KeyMappingJME.getKeyInput(String)</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.view.app.KeyMappingJME" primary="true" start="17" end="17" startBytecode="1" endBytecode="1" sourcefile="KeyMappingJME.java" sourcepath="com/cristiano/galactic/view/app/KeyMappingJME.java" relSourcepath="com\cristiano\galactic\view\app\KeyMappingJME.java">
+      <Message>At KeyMappingJME.java:[line 17]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE" instanceHash="48f481361c30849622ba6f8887d1f6be" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: com.cristiano.galactic.view.app.RotateCamera.distance</LongMessage>
+    <Class classname="com.cristiano.galactic.view.app.RotateCamera" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.app.RotateCamera" start="43" end="403" sourcefile="RotateCamera.java" sourcepath="com/cristiano/galactic/view/app/RotateCamera.java" relSourcepath="com\cristiano\galactic\view\app\RotateCamera.java">
+        <Message>At RotateCamera.java:[lines 43-403]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.app.RotateCamera</Message>
+    </Class>
+    <Field classname="com.cristiano.galactic.view.app.RotateCamera" name="distance" signature="F" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.app.RotateCamera" sourcefile="RotateCamera.java" sourcepath="com/cristiano/galactic/view/app/RotateCamera.java" relSourcepath="com\cristiano\galactic\view\app\RotateCamera.java">
+        <Message>In RotateCamera.java</Message>
+      </SourceLine>
+      <Message>Field com.cristiano.galactic.view.app.RotateCamera.distance</Message>
+    </Field>
+    <SourceLine classname="com.cristiano.galactic.view.app.RotateCamera" primary="true" start="201" end="201" startBytecode="40" endBytecode="40" sourcefile="RotateCamera.java" sourcepath="com/cristiano/galactic/view/app/RotateCamera.java" relSourcepath="com\cristiano\galactic\view\app\RotateCamera.java">
+      <Message>At RotateCamera.java:[line 201]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE" instanceHash="59a1c022f463f3cbe7eb1edf2af1792c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>com.cristiano.galactic.view.app.RotateMouseInput.MOUSE_BUTTON_LEFT isn&apos;t final but should be</LongMessage>
+    <Class classname="com.cristiano.galactic.view.app.RotateMouseInput" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.app.RotateMouseInput" start="18" end="115" sourcefile="RotateMouseInput.java" sourcepath="com/cristiano/galactic/view/app/RotateMouseInput.java" relSourcepath="com\cristiano\galactic\view\app\RotateMouseInput.java">
+        <Message>At RotateMouseInput.java:[lines 18-115]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.app.RotateMouseInput</Message>
+    </Class>
+    <Field classname="com.cristiano.galactic.view.app.RotateMouseInput" name="MOUSE_BUTTON_LEFT" signature="I" isStatic="true" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.app.RotateMouseInput" sourcefile="RotateMouseInput.java" sourcepath="com/cristiano/galactic/view/app/RotateMouseInput.java" relSourcepath="com\cristiano\galactic\view\app\RotateMouseInput.java">
+        <Message>In RotateMouseInput.java</Message>
+      </SourceLine>
+      <Message>Field com.cristiano.galactic.view.app.RotateMouseInput.MOUSE_BUTTON_LEFT</Message>
+    </Field>
+    <SourceLine classname="com.cristiano.galactic.view.app.RotateMouseInput" primary="true" start="28" end="28" startBytecode="1" endBytecode="1" sourcefile="RotateMouseInput.java" sourcepath="com/cristiano/galactic/view/app/RotateMouseInput.java" relSourcepath="com\cristiano\galactic\view\app\RotateMouseInput.java">
+      <Message>At RotateMouseInput.java:[line 28]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ICAST_IDIV_CAST_TO_DOUBLE" priority="2" abbrev="ICAST" category="STYLE" instanceHash="3d70d4ce1484fb3951556be061db54c6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>integral division result cast to double or float</ShortMessage>
+    <LongMessage>integral division result cast to double or float in com.cristiano.galactic.view.demos.HUDTutorial1.simpleInitGame()</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.HUDTutorial1" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial1" start="23" end="150" sourcefile="HUDTutorial1.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial1.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial1.java">
+        <Message>At HUDTutorial1.java:[lines 23-150]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.HUDTutorial1</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.demos.HUDTutorial1" name="simpleInitGame" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial1" start="51" end="140" startBytecode="0" endBytecode="741" sourcefile="HUDTutorial1.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial1.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial1.java"/>
+      <Message>In method com.cristiano.galactic.view.demos.HUDTutorial1.simpleInitGame()</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial1" primary="true" start="74" end="74" startBytecode="171" endBytecode="171" sourcefile="HUDTutorial1.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial1.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial1.java">
+      <Message>At HUDTutorial1.java:[line 74]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UI_INHERITANCE_UNSAFE_GETRESOURCE" priority="3" abbrev="UI" category="BAD_PRACTICE" instanceHash="c0ef07b203b2dff40c932fbb4aec4930" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Usage of GetResource may be unsafe if class is extended</ShortMessage>
+    <LongMessage>Usage of GetResource in com.cristiano.galactic.view.demos.HUDTutorial1.simpleInitGame() may be unsafe if class is extended</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.HUDTutorial1" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial1" start="23" end="150" sourcefile="HUDTutorial1.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial1.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial1.java">
+        <Message>At HUDTutorial1.java:[lines 23-150]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.HUDTutorial1</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.demos.HUDTutorial1" name="simpleInitGame" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial1" start="51" end="140" startBytecode="0" endBytecode="741" sourcefile="HUDTutorial1.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial1.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial1.java"/>
+      <Message>In method com.cristiano.galactic.view.demos.HUDTutorial1.simpleInitGame()</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial1" primary="true" start="80" end="80" startBytecode="206" endBytecode="206" sourcefile="HUDTutorial1.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial1.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial1.java">
+      <Message>At HUDTutorial1.java:[line 80]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" abbrev="UwF" category="STYLE" instanceHash="99f817faeda156a1771d0ad9d63f891b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor</ShortMessage>
+    <LongMessage>HUDTutorial1.cylinder not initialized in constructor</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.HUDTutorial1" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial1" start="23" end="150" sourcefile="HUDTutorial1.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial1.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial1.java">
+        <Message>At HUDTutorial1.java:[lines 23-150]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.HUDTutorial1</Message>
+    </Class>
+    <Field classname="com.cristiano.galactic.view.demos.HUDTutorial1" name="cylinder" signature="Lcom/jme/scene/shape/Cylinder;" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial1" sourcefile="HUDTutorial1.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial1.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial1.java">
+        <Message>In HUDTutorial1.java</Message>
+      </SourceLine>
+      <Message>Field com.cristiano.galactic.view.demos.HUDTutorial1.cylinder</Message>
+    </Field>
+    <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial1" sourcefile="HUDTutorial1.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial1.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial1.java" synthetic="true">
+      <Message>In HUDTutorial1.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ICAST_IDIV_CAST_TO_DOUBLE" priority="2" abbrev="ICAST" category="STYLE" instanceHash="87f2162443a04c50720ab533000f8312" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>integral division result cast to double or float</ShortMessage>
+    <LongMessage>integral division result cast to double or float in com.cristiano.galactic.view.demos.HUDTutorial2.simpleInitGame()</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.HUDTutorial2" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial2" start="21" end="139" sourcefile="HUDTutorial2.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial2.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial2.java">
+        <Message>At HUDTutorial2.java:[lines 21-139]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.HUDTutorial2</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.demos.HUDTutorial2" name="simpleInitGame" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial2" start="64" end="129" startBytecode="0" endBytecode="765" sourcefile="HUDTutorial2.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial2.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial2.java"/>
+      <Message>In method com.cristiano.galactic.view.demos.HUDTutorial2.simpleInitGame()</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial2" primary="true" start="88" end="88" startBytecode="194" endBytecode="194" sourcefile="HUDTutorial2.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial2.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial2.java">
+      <Message>At HUDTutorial2.java:[line 88]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UI_INHERITANCE_UNSAFE_GETRESOURCE" priority="2" abbrev="UI" category="BAD_PRACTICE" instanceHash="449c3ccbc8476e65a4e29ec40cd877d9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Usage of GetResource may be unsafe if class is extended</ShortMessage>
+    <LongMessage>Usage of GetResource in com.cristiano.galactic.view.demos.HUDTutorial2.simpleInitGame() may be unsafe if class is extended</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.HUDTutorial2" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial2" start="21" end="139" sourcefile="HUDTutorial2.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial2.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial2.java">
+        <Message>At HUDTutorial2.java:[lines 21-139]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.HUDTutorial2</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.demos.HUDTutorial2" name="simpleInitGame" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial2" start="64" end="129" startBytecode="0" endBytecode="765" sourcefile="HUDTutorial2.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial2.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial2.java"/>
+      <Message>In method com.cristiano.galactic.view.demos.HUDTutorial2.simpleInitGame()</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial2" primary="true" start="91" end="91" startBytecode="230" endBytecode="230" sourcefile="HUDTutorial2.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial2.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial2.java">
+      <Message>At HUDTutorial2.java:[line 91]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UI_INHERITANCE_UNSAFE_GETRESOURCE" priority="3" abbrev="UI" category="BAD_PRACTICE" instanceHash="2e5752bab54e496455f4a18ed1e1486e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Usage of GetResource may be unsafe if class is extended</ShortMessage>
+    <LongMessage>Usage of GetResource in com.cristiano.galactic.view.demos.HUDTutorial4.simpleInitGame() may be unsafe if class is extended</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.HUDTutorial4" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial4" start="8" end="68" sourcefile="HUDTutorial4.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial4.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial4.java">
+        <Message>At HUDTutorial4.java:[lines 8-68]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.HUDTutorial4</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.demos.HUDTutorial4" name="simpleInitGame" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial4" start="23" end="50" startBytecode="0" endBytecode="202" sourcefile="HUDTutorial4.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial4.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial4.java"/>
+      <Message>In method com.cristiano.galactic.view.demos.HUDTutorial4.simpleInitGame()</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial4" primary="true" start="35" end="35" startBytecode="30" endBytecode="30" sourcefile="HUDTutorial4.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial4.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial4.java">
+      <Message>At HUDTutorial4.java:[line 35]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" abbrev="UwF" category="STYLE" instanceHash="4682d1a620345d9b8245fd142e4fb817" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor</ShortMessage>
+    <LongMessage>HUDTutorial4.gaugeImage not initialized in constructor</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.HUDTutorial4" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial4" start="8" end="68" sourcefile="HUDTutorial4.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial4.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial4.java">
+        <Message>At HUDTutorial4.java:[lines 8-68]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.HUDTutorial4</Message>
+    </Class>
+    <Field classname="com.cristiano.galactic.view.demos.HUDTutorial4" name="gaugeImage" signature="Lcom/cristiano/galactic/view/demos/PaintedGauge;" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial4" sourcefile="HUDTutorial4.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial4.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial4.java">
+        <Message>In HUDTutorial4.java</Message>
+      </SourceLine>
+      <Message>Field com.cristiano.galactic.view.demos.HUDTutorial4.gaugeImage</Message>
+    </Field>
+    <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial4" sourcefile="HUDTutorial4.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial4.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial4.java" synthetic="true">
+      <Message>In HUDTutorial4.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" abbrev="UwF" category="STYLE" instanceHash="bed32b7f14a584df5c1a94ce6c444b17" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor</ShortMessage>
+    <LongMessage>HUDTutorial4.ts1 not initialized in constructor</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.HUDTutorial4" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial4" start="8" end="68" sourcefile="HUDTutorial4.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial4.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial4.java">
+        <Message>At HUDTutorial4.java:[lines 8-68]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.HUDTutorial4</Message>
+    </Class>
+    <Field classname="com.cristiano.galactic.view.demos.HUDTutorial4" name="ts1" signature="Lcom/jme/scene/state/TextureState;" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial4" sourcefile="HUDTutorial4.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial4.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial4.java">
+        <Message>In HUDTutorial4.java</Message>
+      </SourceLine>
+      <Message>Field com.cristiano.galactic.view.demos.HUDTutorial4.ts1</Message>
+    </Field>
+    <SourceLine classname="com.cristiano.galactic.view.demos.HUDTutorial4" sourcefile="HUDTutorial4.java" sourcepath="com/cristiano/galactic/view/demos/HUDTutorial4.java" relSourcepath="com\cristiano\galactic\view\demos\HUDTutorial4.java" synthetic="true">
+      <Message>In HUDTutorial4.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE" instanceHash="6b448a15266dc438cc11d5c16bc9577b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes System.exit(...)</ShortMessage>
+    <LongMessage>com.cristiano.galactic.view.demos.HelloLOD.simpleInitGame() invokes System.exit(...), which shuts down the entire virtual machine</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.HelloLOD" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HelloLOD" start="34" end="164" sourcefile="HelloLOD.java" sourcepath="com/cristiano/galactic/view/demos/HelloLOD.java" relSourcepath="com\cristiano\galactic\view\demos\HelloLOD.java">
+        <Message>At HelloLOD.java:[lines 34-164]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.HelloLOD</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.demos.HelloLOD" name="simpleInitGame" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HelloLOD" start="49" end="114" startBytecode="0" endBytecode="710" sourcefile="HelloLOD.java" sourcepath="com/cristiano/galactic/view/demos/HelloLOD.java" relSourcepath="com\cristiano\galactic\view\demos\HelloLOD.java"/>
+      <Message>In method com.cristiano.galactic.view.demos.HelloLOD.simpleInitGame()</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.view.demos.HelloLOD" primary="true" start="77" end="77" startBytecode="114" endBytecode="114" sourcefile="HelloLOD.java" sourcepath="com/cristiano/galactic/view/demos/HelloLOD.java" relSourcepath="com\cristiano\galactic\view\demos\HelloLOD.java">
+      <Message>At HelloLOD.java:[line 77]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" instanceHash="3edaf02d550d5597a364a7e54348634b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to map in com.cristiano.galactic.view.demos.HelloTerrain.homeGrownHeightMap()</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.HelloTerrain" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HelloTerrain" start="27" end="145" sourcefile="HelloTerrain.java" sourcepath="com/cristiano/galactic/view/demos/HelloTerrain.java" relSourcepath="com\cristiano\galactic\view\demos\HelloTerrain.java">
+        <Message>At HelloTerrain.java:[lines 27-145]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.HelloTerrain</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.demos.HelloTerrain" name="homeGrownHeightMap" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.HelloTerrain" start="46" end="63" startBytecode="0" endBytecode="84" sourcefile="HelloTerrain.java" sourcepath="com/cristiano/galactic/view/demos/HelloTerrain.java" relSourcepath="com\cristiano\galactic\view\demos\HelloTerrain.java"/>
+      <Message>In method com.cristiano.galactic.view.demos.HelloTerrain.homeGrownHeightMap()</Message>
+    </Method>
+    <LocalVariable name="map" register="1" pc="85" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named map</Message>
+    </LocalVariable>
+    <SourceLine classname="com.cristiano.galactic.view.demos.HelloTerrain" primary="true" start="46" end="46" startBytecode="84" endBytecode="84" sourcefile="HelloTerrain.java" sourcepath="com/cristiano/galactic/view/demos/HelloTerrain.java" relSourcepath="com\cristiano\galactic\view\demos\HelloTerrain.java">
+      <Message>At HelloTerrain.java:[line 46]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="map"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE" instanceHash="70a823cb538b6a5e625374a5e68b0c55" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to b in com.cristiano.galactic.view.demos.OBJLoader.simpleInitGame_()</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.OBJLoader" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.OBJLoader" start="29" end="236" sourcefile="OBJLoader.java" sourcepath="com/cristiano/galactic/view/demos/OBJLoader.java" relSourcepath="com\cristiano\galactic\view\demos\OBJLoader.java">
+        <Message>At OBJLoader.java:[lines 29-236]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.OBJLoader</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.demos.OBJLoader" name="simpleInitGame_" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.OBJLoader" start="208" end="236" startBytecode="0" endBytecode="129" sourcefile="OBJLoader.java" sourcepath="com/cristiano/galactic/view/demos/OBJLoader.java" relSourcepath="com\cristiano\galactic\view\demos\OBJLoader.java"/>
+      <Message>In method com.cristiano.galactic.view.demos.OBJLoader.simpleInitGame_()</Message>
+    </Method>
+    <LocalVariable name="b" register="1" pc="31" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named b</Message>
+    </LocalVariable>
+    <SourceLine classname="com.cristiano.galactic.view.demos.OBJLoader" primary="true" start="208" end="208" startBytecode="30" endBytecode="30" sourcefile="OBJLoader.java" sourcepath="com/cristiano/galactic/view/demos/OBJLoader.java" relSourcepath="com\cristiano\galactic\view\demos\OBJLoader.java">
+      <Message>At OBJLoader.java:[line 208]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="b"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE" instanceHash="b7faac0851d63e158f0a60bb29c93f7a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes System.exit(...)</ShortMessage>
+    <LongMessage>com.cristiano.galactic.view.demos.OBJLoader.simpleInitGame_() invokes System.exit(...), which shuts down the entire virtual machine</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.OBJLoader" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.OBJLoader" start="29" end="236" sourcefile="OBJLoader.java" sourcepath="com/cristiano/galactic/view/demos/OBJLoader.java" relSourcepath="com\cristiano\galactic\view\demos\OBJLoader.java">
+        <Message>At OBJLoader.java:[lines 29-236]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.OBJLoader</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.demos.OBJLoader" name="simpleInitGame_" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.OBJLoader" start="208" end="236" startBytecode="0" endBytecode="590" sourcefile="OBJLoader.java" sourcepath="com/cristiano/galactic/view/demos/OBJLoader.java" relSourcepath="com\cristiano\galactic\view\demos\OBJLoader.java"/>
+      <Message>In method com.cristiano.galactic.view.demos.OBJLoader.simpleInitGame_()</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.view.demos.OBJLoader" primary="true" start="226" end="226" startBytecode="158" endBytecode="158" sourcefile="OBJLoader.java" sourcepath="com/cristiano/galactic/view/demos/OBJLoader.java" relSourcepath="com\cristiano\galactic\view\demos\OBJLoader.java">
+      <Message>At OBJLoader.java:[line 226]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="3" abbrev="UPM" category="PERFORMANCE" instanceHash="a7c5cded23eda13c63f3c4ccddb39119" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Private method is never called</ShortMessage>
+    <LongMessage>Private method com.cristiano.galactic.view.demos.OBJLoader.getClodNodeFromParent(Node) is never called</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.OBJLoader" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.OBJLoader" start="29" end="236" sourcefile="OBJLoader.java" sourcepath="com/cristiano/galactic/view/demos/OBJLoader.java" relSourcepath="com\cristiano\galactic\view\demos\OBJLoader.java">
+        <Message>At OBJLoader.java:[lines 29-236]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.OBJLoader</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.demos.OBJLoader" name="getClodNodeFromParent" signature="(Lcom/jme/scene/Node;)Lcom/jme/scene/Node;" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.OBJLoader" start="178" end="200" startBytecode="0" endBytecode="264" sourcefile="OBJLoader.java" sourcepath="com/cristiano/galactic/view/demos/OBJLoader.java" relSourcepath="com\cristiano\galactic\view\demos\OBJLoader.java"/>
+      <Message>In method com.cristiano.galactic.view.demos.OBJLoader.getClodNodeFromParent(Node)</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.view.demos.OBJLoader" start="178" end="200" startBytecode="0" endBytecode="264" sourcefile="OBJLoader.java" sourcepath="com/cristiano/galactic/view/demos/OBJLoader.java" relSourcepath="com\cristiano\galactic\view\demos\OBJLoader.java" synthetic="true">
+      <Message>At OBJLoader.java:[lines 178-200]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="LG_LOST_LOGGER_DUE_TO_WEAK_REFERENCE" priority="1" abbrev="LG" category="EXPERIMENTAL" instanceHash="5c22be15657e60e4181f328b4d8f7675" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Potential lost logger changes due to weak reference in OpenJDK</ShortMessage>
+    <LongMessage>Changes to logger could be lost in com.cristiano.galactic.view.demos.TestHUD.simpleInitGame()</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.TestHUD" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.TestHUD" start="140" end="360" sourcefile="TestHUD.java" sourcepath="com/cristiano/galactic/view/demos/TestHUD.java" relSourcepath="com\cristiano\galactic\view\demos\TestHUD.java">
+        <Message>At TestHUD.java:[lines 140-360]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.TestHUD</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.demos.TestHUD" name="simpleInitGame" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.TestHUD" start="174" end="202" startBytecode="0" endBytecode="290" sourcefile="TestHUD.java" sourcepath="com/cristiano/galactic/view/demos/TestHUD.java" relSourcepath="com\cristiano\galactic\view\demos\TestHUD.java"/>
+      <Message>In method com.cristiano.galactic.view.demos.TestHUD.simpleInitGame()</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.view.demos.TestHUD" primary="true" start="177" end="177" startBytecode="51" endBytecode="51" sourcefile="TestHUD.java" sourcepath="com/cristiano/galactic/view/demos/TestHUD.java" relSourcepath="com\cristiano\galactic\view\demos\TestHUD.java">
+      <Message>At TestHUD.java:[line 177]</Message>
+    </SourceLine>
+    <SourceLine classname="com.cristiano.galactic.view.demos.TestHUD" start="178" end="178" startBytecode="62" endBytecode="62" sourcefile="TestHUD.java" sourcepath="com/cristiano/galactic/view/demos/TestHUD.java" relSourcepath="com\cristiano\galactic\view\demos\TestHUD.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at TestHUD.java:[line 178]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" abbrev="UwF" category="STYLE" instanceHash="8156e8bce37bf6c3be8f4843a6204af0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor</ShortMessage>
+    <LongMessage>TestHUD.hudController not initialized in constructor</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.TestHUD" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.TestHUD" start="140" end="360" sourcefile="TestHUD.java" sourcepath="com/cristiano/galactic/view/demos/TestHUD.java" relSourcepath="com\cristiano\galactic\view\demos\TestHUD.java">
+        <Message>At TestHUD.java:[lines 140-360]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.TestHUD</Message>
+    </Class>
+    <Field classname="com.cristiano.galactic.view.demos.TestHUD" name="hudController" signature="Lcom/cristiano/galactic/view/hud/HUDController;" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.TestHUD" sourcefile="TestHUD.java" sourcepath="com/cristiano/galactic/view/demos/TestHUD.java" relSourcepath="com\cristiano\galactic\view\demos\TestHUD.java">
+        <Message>In TestHUD.java</Message>
+      </SourceLine>
+      <Message>Field com.cristiano.galactic.view.demos.TestHUD.hudController</Message>
+    </Field>
+    <SourceLine classname="com.cristiano.galactic.view.demos.TestHUD" sourcefile="TestHUD.java" sourcepath="com/cristiano/galactic/view/demos/TestHUD.java" relSourcepath="com\cristiano\galactic\view\demos\TestHUD.java" synthetic="true">
+      <Message>In TestHUD.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" abbrev="UwF" category="STYLE" instanceHash="b950a4efe86c4d0338db1369786cc001" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor</ShortMessage>
+    <LongMessage>TestHUD.nifty not initialized in constructor</LongMessage>
+    <Class classname="com.cristiano.galactic.view.demos.TestHUD" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.TestHUD" start="140" end="360" sourcefile="TestHUD.java" sourcepath="com/cristiano/galactic/view/demos/TestHUD.java" relSourcepath="com\cristiano\galactic\view\demos\TestHUD.java">
+        <Message>At TestHUD.java:[lines 140-360]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.demos.TestHUD</Message>
+    </Class>
+    <Field classname="com.cristiano.galactic.view.demos.TestHUD" name="nifty" signature="Lde/lessvoid/nifty/Nifty;" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.demos.TestHUD" sourcefile="TestHUD.java" sourcepath="com/cristiano/galactic/view/demos/TestHUD.java" relSourcepath="com\cristiano\galactic\view\demos\TestHUD.java">
+        <Message>In TestHUD.java</Message>
+      </SourceLine>
+      <Message>Field com.cristiano.galactic.view.demos.TestHUD.nifty</Message>
+    </Field>
+    <SourceLine classname="com.cristiano.galactic.view.demos.TestHUD" sourcefile="TestHUD.java" sourcepath="com/cristiano/galactic/view/demos/TestHUD.java" relSourcepath="com\cristiano\galactic\view\demos\TestHUD.java" synthetic="true">
+      <Message>In TestHUD.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" abbrev="Dm" category="I18N" instanceHash="c615a482d665db88de5b70f21c8c61f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase</LongMessage>
+    <Class classname="com.cristiano.galactic.view.hud.ShipHud" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.hud.ShipHud" start="36" end="162" sourcefile="ShipHud.java" sourcepath="com/cristiano/galactic/view/hud/ShipHud.java" relSourcepath="com\cristiano\galactic\view\hud\ShipHud.java">
+        <Message>At ShipHud.java:[lines 36-162]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.hud.ShipHud</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.hud.ShipHud" name="sendConsoleCommand" signature="(Lde/lessvoid/nifty/controls/ConsoleExecuteCommandEvent;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.hud.ShipHud" start="109" end="118" startBytecode="0" endBytecode="179" sourcefile="ShipHud.java" sourcepath="com/cristiano/galactic/view/hud/ShipHud.java" relSourcepath="com\cristiano\galactic\view\hud\ShipHud.java"/>
+      <Message>In method com.cristiano.galactic.view.hud.ShipHud.sendConsoleCommand(ConsoleExecuteCommandEvent)</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.view.hud.ShipHud" primary="true" start="109" end="109" startBytecode="4" endBytecode="4" sourcefile="ShipHud.java" sourcepath="com/cristiano/galactic/view/hud/ShipHud.java" relSourcepath="com\cristiano\galactic\view\hud\ShipHud.java">
+      <Message>At ShipHud.java:[line 109]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="LG_LOST_LOGGER_DUE_TO_WEAK_REFERENCE" priority="1" abbrev="LG" category="EXPERIMENTAL" instanceHash="15cd63abb542d8667862027d94fdcb6a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Potential lost logger changes due to weak reference in OpenJDK</ShortMessage>
+    <LongMessage>Changes to logger could be lost in new com.cristiano.galactic.view.hud.ShipHud(View)</LongMessage>
+    <Class classname="com.cristiano.galactic.view.hud.ShipHud" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.hud.ShipHud" start="36" end="162" sourcefile="ShipHud.java" sourcepath="com/cristiano/galactic/view/hud/ShipHud.java" relSourcepath="com\cristiano\galactic\view\hud\ShipHud.java">
+        <Message>At ShipHud.java:[lines 36-162]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.hud.ShipHud</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.hud.ShipHud" name="&lt;init&gt;" signature="(Lcom/cristiano/galactic/view/View;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.hud.ShipHud" start="38" end="55" startBytecode="0" endBytecode="311" sourcefile="ShipHud.java" sourcepath="com/cristiano/galactic/view/hud/ShipHud.java" relSourcepath="com\cristiano\galactic\view\hud\ShipHud.java"/>
+      <Message>In method new com.cristiano.galactic.view.hud.ShipHud(View)</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.view.hud.ShipHud" primary="true" start="46" end="46" startBytecode="135" endBytecode="135" sourcefile="ShipHud.java" sourcepath="com/cristiano/galactic/view/hud/ShipHud.java" relSourcepath="com\cristiano\galactic\view\hud\ShipHud.java">
+      <Message>At ShipHud.java:[line 46]</Message>
+    </SourceLine>
+    <SourceLine classname="com.cristiano.galactic.view.hud.ShipHud" start="47" end="47" startBytecode="146" endBytecode="146" sourcefile="ShipHud.java" sourcepath="com/cristiano/galactic/view/hud/ShipHud.java" relSourcepath="com\cristiano\galactic\view\hud\ShipHud.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at ShipHud.java:[line 47]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" abbrev="UPM" category="PERFORMANCE" instanceHash="f822901e35b06d82624e5efd6626747f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Private method is never called</ShortMessage>
+    <LongMessage>Private method com.cristiano.galactic.view.models.ItemView.createBox(ModelData) is never called</LongMessage>
+    <Class classname="com.cristiano.galactic.view.models.ItemView" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.models.ItemView" start="29" end="236" sourcefile="ItemView.java" sourcepath="com/cristiano/galactic/view/models/ItemView.java" relSourcepath="com\cristiano\galactic\view\models\ItemView.java">
+        <Message>At ItemView.java:[lines 29-236]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.models.ItemView</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.models.ItemView" name="createBox" signature="(Lcom/cristiano/galactic/model/wares/ModelData;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.models.ItemView" start="148" end="153" startBytecode="0" endBytecode="179" sourcefile="ItemView.java" sourcepath="com/cristiano/galactic/view/models/ItemView.java" relSourcepath="com\cristiano\galactic\view\models\ItemView.java"/>
+      <Message>In method com.cristiano.galactic.view.models.ItemView.createBox(ModelData)</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.view.models.ItemView" start="148" end="153" startBytecode="0" endBytecode="179" sourcefile="ItemView.java" sourcepath="com/cristiano/galactic/view/models/ItemView.java" relSourcepath="com\cristiano\galactic\view\models\ItemView.java" synthetic="true">
+      <Message>At ItemView.java:[lines 148-153]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="3" abbrev="UPM" category="PERFORMANCE" instanceHash="2227cf0aa330219494a492fcc31a2512" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Private method is never called</ShortMessage>
+    <LongMessage>Private method com.cristiano.galactic.view.models.ItemView.initInfoNode() is never called</LongMessage>
+    <Class classname="com.cristiano.galactic.view.models.ItemView" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.models.ItemView" start="29" end="236" sourcefile="ItemView.java" sourcepath="com/cristiano/galactic/view/models/ItemView.java" relSourcepath="com\cristiano\galactic\view\models\ItemView.java">
+        <Message>At ItemView.java:[lines 29-236]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.models.ItemView</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.models.ItemView" name="initInfoNode" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.models.ItemView" start="115" end="122" startBytecode="0" endBytecode="150" sourcefile="ItemView.java" sourcepath="com/cristiano/galactic/view/models/ItemView.java" relSourcepath="com\cristiano\galactic\view\models\ItemView.java"/>
+      <Message>In method com.cristiano.galactic.view.models.ItemView.initInfoNode()</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.view.models.ItemView" start="115" end="122" startBytecode="0" endBytecode="150" sourcefile="ItemView.java" sourcepath="com/cristiano/galactic/view/models/ItemView.java" relSourcepath="com\cristiano\galactic\view\models\ItemView.java" synthetic="true">
+      <Message>At ItemView.java:[lines 115-122]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UI_INHERITANCE_UNSAFE_GETRESOURCE" priority="3" abbrev="UI" category="BAD_PRACTICE" instanceHash="f446a61336f1a7a4ba74e67c9d8bda9c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Usage of GetResource may be unsafe if class is extended</ShortMessage>
+    <LongMessage>Usage of GetResource in new com.cristiano.galactic.view.models.ProceduralPlanetView(View, double) may be unsafe if class is extended</LongMessage>
+    <Class classname="com.cristiano.galactic.view.models.ProceduralPlanetView" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.models.ProceduralPlanetView" start="19" end="67" sourcefile="ProceduralPlanetView.java" sourcepath="com/cristiano/galactic/view/models/ProceduralPlanetView.java" relSourcepath="com\cristiano\galactic\view\models\ProceduralPlanetView.java">
+        <Message>At ProceduralPlanetView.java:[lines 19-67]</Message>
+      </SourceLine>
+      <Message>In class com.cristiano.galactic.view.models.ProceduralPlanetView</Message>
+    </Class>
+    <Method classname="com.cristiano.galactic.view.models.ProceduralPlanetView" name="&lt;init&gt;" signature="(Lcom/cristiano/galactic/view/View;D)V" isStatic="false" primary="true">
+      <SourceLine classname="com.cristiano.galactic.view.models.ProceduralPlanetView" start="19" end="35" startBytecode="0" endBytecode="242" sourcefile="ProceduralPlanetView.java" sourcepath="com/cristiano/galactic/view/models/ProceduralPlanetView.java" relSourcepath="com\cristiano\galactic\view\models\ProceduralPlanetView.java"/>
+      <Message>In method new com.cristiano.galactic.view.models.ProceduralPlanetView(View, double)</Message>
+    </Method>
+    <SourceLine classname="com.cristiano.galactic.view.models.ProceduralPlanetView" primary="true" start="23" end="23" startBytecode="31" endBytecode="31" sourcefile="ProceduralPlanetView.java" sourcepath="com/cristiano/galactic/view/models/ProceduralPlanetView.java" relSourcepath="com\cristiano\galactic\view\models\ProceduralPlanetView.java">
+      <Message>At ProceduralPlanetView.java:[line 23]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy</Description>
+  </BugCategory>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="EXPERIMENTAL">
+    <Description>Experimental</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UPM_UNCALLED_PRIVATE_METHOD" abbrev="UPM" category="PERFORMANCE">
+    <ShortDescription>Private method is never called</ShortDescription>
+    <Details><![CDATA[
+
+<p> This private method is never called. Although it is
+possible that the method will be invoked through reflection,
+it is more likely that the method is never used, and should be
+removed.
+</p>
+
+]]></Details>
+  </BugPattern>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_SHOULD_BE_FINAL" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field isn&apos;t final but should be</ShortDescription>
+    <Details><![CDATA[
+
+   <p>
+ A mutable static field could be changed by malicious code or
+        by accident from another package.
+        The field could be made final to avoid
+        this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="LG_LOST_LOGGER_DUE_TO_WEAK_REFERENCE" abbrev="LG" category="EXPERIMENTAL">
+    <ShortDescription>Potential lost logger changes due to weak reference in OpenJDK</ShortDescription>
+    <Details><![CDATA[
+		  
+<p>OpenJDK introduces a potential incompatibility.
+ In particular, the java.util.logging.Logger behavior has
+  changed. Instead of using strong references, it now uses weak references
+  internally. That's a reasonable change, but unfortunately some code relies on
+  the old behavior - when changing logger configuration, it simply drops the
+  logger reference. That means that the garbage collector is free to reclaim
+  that memory, which means that the logger configuration is lost. For example,
+consider:
+</p>
+
+<p><pre>public static void initLogging() throws Exception {
+ Logger logger = Logger.getLogger("edu.umd.cs");
+ logger.addHandler(new FileHandler()); // call to change logger configuration
+ logger.setUseParentHandlers(false); // another call to change logger configuration
+}</pre></p>
+
+<p>The logger reference is lost at the end of the method (it doesn't
+escape the method), so if you have a garbage collection cycle just
+after the call to initLogging, the logger configuration is lost
+(because Logger only keeps weak references).</p>
+
+<p><pre>public static void main(String[] args) throws Exception {
+ initLogging(); // adds a file handler to the logger
+ System.gc(); // logger configuration lost
+ Logger.getLogger("edu.umd.cs").info("Some message"); // this isn't logged to the file as expected
+}</pre></p>
+<p><em>Ulf Ochsenfahrt and Eric Fellheimer</em></p>
+		  
+	  ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_EXIT" abbrev="Dm" category="BAD_PRACTICE" cweid="382">
+    <ShortDescription>Method invokes System.exit(...)</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Invoking System.exit shuts down the entire Java virtual machine. This
+   should only been done when it is appropriate. Such calls make it
+   hard or impossible for your code to be invoked by other code.
+   Consider throwing a RuntimeException instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+	<li>String.toUpperCase( Locale l )</li>
+	<li>String.toLowerCase( Locale l )</li>
+	</ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="URF_UNREAD_FIELD" abbrev="UrF" category="PERFORMANCE">
+    <ShortDescription>Unread field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UI_INHERITANCE_UNSAFE_GETRESOURCE" abbrev="UI" category="BAD_PRACTICE">
+    <ShortDescription>Usage of GetResource may be unsafe if class is extended</ShortDescription>
+    <Details><![CDATA[
+
+<p>Calling <code>this.getClass().getResource(...)</code> could give
+results other than expected if this class is extended by a class in
+another package.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables.  Because FindBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="ICAST_IDIV_CAST_TO_DOUBLE" abbrev="ICAST" category="STYLE">
+    <ShortDescription>integral division result cast to double or float</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This code casts the result of an integral division (e.g., int or long division)
+operation to double or 
+float.
+Doing division on integers truncates the result
+to the integer value closest to zero.  The fact that the result
+was cast to double suggests that this precision should have been retained.
+What was probably meant was to cast one or both of the operands to
+double <em>before</em> performing the division.  Here is an example:
+</p>
+<blockquote>
+<pre>
+int x = 2;
+int y = 5;
+// Wrong: yields result 0.0
+double value1 =  x / y;
+
+// Right: yields result 0.4
+double value2 =  x / (double) y;
+</pre>
+</blockquote>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SA_LOCAL_SELF_ASSIGNMENT" abbrev="SA" category="STYLE">
+    <ShortDescription>Self assignment of local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a self assignment of a local variable; e.g.</p>
+<pre>
+  public void foo() {
+    int x = 3;
+    x = x;
+  }
+</pre>
+<p>
+Such assignments are useless, and may indicate a logic error or typo.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_CANNOT_BE_FINAL" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field isn&apos;t final and can&apos;t be protected from malicious code</ShortDescription>
+    <Details><![CDATA[
+
+  <p>
+ A mutable static field could be changed by malicious code or
+        by accident from another package.
+   Unfortunately, the way the field is used doesn't allow
+   any easy fix to this problem.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ICAST" cweid="192">
+    <Description>Casting from integer values</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
+  <BugCode abbrev="UPM">
+    <Description>Private method is never called</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <BugCode abbrev="UI">
+    <Description>Unsafe inheritance</Description>
+  </BugCode>
+  <BugCode abbrev="LG">
+    <Description>Logger problem</Description>
+  </BugCode>
+  <BugCode abbrev="SA">
+    <Description>Useless self-operation</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="120">
+    <MissingClass>com.cristiano.comum.Formatacao</MissingClass>
+    <MissingClass>com.cristiano.comum.ObjetoBasico</MissingClass>
+    <MissingClass>com.cristiano.dados.GenericDTO</MissingClass>
+    <MissingClass>com.cristiano.galactic.Galactic</MissingClass>
+    <MissingClass>com.cristiano.galactic.Utils.Consts</MissingClass>
+    <MissingClass>com.cristiano.galactic.controller.GameLogic</MissingClass>
+    <MissingClass>com.cristiano.galactic.controller.ItemsController</MissingClass>
+    <MissingClass>com.cristiano.galactic.model.AbstractModel</MissingClass>
+    <MissingClass>com.cristiano.galactic.model.Entity.Abstract.Item</MissingClass>
+    <MissingClass>com.cristiano.galactic.model.Entity.SphereItem</MissingClass>
+    <MissingClass>com.cristiano.galactic.model.wares.ModelData</MissingClass>
+    <MissingClass>com.cristiano.galactic.view.IView</MissingClass>
+    <MissingClass>com.cristiano.galactic.view.ItemsViewManagerAbstract</MissingClass>
+    <MissingClass>com.cristiano.galactic.view.KeyMapping</MissingClass>
+    <MissingClass>com.cristiano.galactic.view.hud.HUDController</MissingClass>
+    <MissingClass>com.cristiano.galactic.view.hud.IShipHud</MissingClass>
+    <MissingClass>com.cristiano.galactic.view.models.AbstractItemView</MissingClass>
+    <MissingClass>com.cristiano.galactic.view.models.IShipView</MissingClass>
+    <MissingClass>com.cristiano.galactic.view.models.ISphereModel</MissingClass>
+    <MissingClass>com.cristiano.math.Quaternion</MissingClass>
+    <MissingClass>com.cristiano.math.Vector3</MissingClass>
+    <MissingClass>com.cristiano.performance.ClockWatch</MissingClass>
+    <MissingClass>com.jme.app.AbstractGame</MissingClass>
+    <MissingClass>com.jme.app.AbstractGame$ConfigShowMode</MissingClass>
+    <MissingClass>com.jme.app.SimpleGame</MissingClass>
+    <MissingClass>com.jme.bounding.BoundingBox</MissingClass>
+    <MissingClass>com.jme.bounding.BoundingSphere</MissingClass>
+    <MissingClass>com.jme.bounding.BoundingVolume</MissingClass>
+    <MissingClass>com.jme.curve.BezierCurve</MissingClass>
+    <MissingClass>com.jme.curve.Curve</MissingClass>
+    <MissingClass>com.jme.curve.CurveController</MissingClass>
+    <MissingClass>com.jme.image.Image</MissingClass>
+    <MissingClass>com.jme.image.Image$Format</MissingClass>
+    <MissingClass>com.jme.image.Texture</MissingClass>
+    <MissingClass>com.jme.image.Texture$MagnificationFilter</MissingClass>
+    <MissingClass>com.jme.image.Texture$MinificationFilter</MissingClass>
+    <MissingClass>com.jme.input.AbsoluteMouse</MissingClass>
+    <MissingClass>com.jme.input.InputHandler</MissingClass>
+    <MissingClass>com.jme.input.KeyBindingManager</MissingClass>
+    <MissingClass>com.jme.input.KeyInput</MissingClass>
+    <MissingClass>com.jme.input.Mouse</MissingClass>
+    <MissingClass>com.jme.input.MouseInput</MissingClass>
+    <MissingClass>com.jme.input.action.InputActionEvent</MissingClass>
+    <MissingClass>com.jme.input.action.InputActionInterface</MissingClass>
+    <MissingClass>com.jme.input.action.KeyExitAction</MissingClass>
+    <MissingClass>com.jme.input.action.KeyInputAction</MissingClass>
+    <MissingClass>com.jme.input.action.MouseInputAction</MissingClass>
+    <MissingClass>com.jme.input.controls.Binding</MissingClass>
+    <MissingClass>com.jme.input.controls.GameControl</MissingClass>
+    <MissingClass>com.jme.input.controls.GameControlManager</MissingClass>
+    <MissingClass>com.jme.input.controls.binding.MouseOffsetBinding</MissingClass>
+    <MissingClass>com.jme.input.controls.controller.Axis</MissingClass>
+    <MissingClass>com.jme.input.controls.controller.RotationController</MissingClass>
+    <MissingClass>com.jme.light.DirectionalLight</MissingClass>
+    <MissingClass>com.jme.light.Light</MissingClass>
+    <MissingClass>com.jme.math.FastMath</MissingClass>
+    <MissingClass>com.jme.math.Matrix3f</MissingClass>
+    <MissingClass>com.jme.math.Quaternion</MissingClass>
+    <MissingClass>com.jme.math.Vector2f</MissingClass>
+    <MissingClass>com.jme.math.Vector3f</MissingClass>
+    <MissingClass>com.jme.renderer.Camera</MissingClass>
+    <MissingClass>com.jme.renderer.ColorRGBA</MissingClass>
+    <MissingClass>com.jme.renderer.Renderer</MissingClass>
+    <MissingClass>com.jme.scene.CameraNode</MissingClass>
+    <MissingClass>com.jme.scene.Controller</MissingClass>
+    <MissingClass>com.jme.scene.Line</MissingClass>
+    <MissingClass>com.jme.scene.Node</MissingClass>
+    <MissingClass>com.jme.scene.Skybox</MissingClass>
+    <MissingClass>com.jme.scene.Skybox$Face</MissingClass>
+    <MissingClass>com.jme.scene.Spatial</MissingClass>
+    <MissingClass>com.jme.scene.Spatial$LightCombineMode</MissingClass>
+    <MissingClass>com.jme.scene.TexCoords</MissingClass>
+    <MissingClass>com.jme.scene.Text</MissingClass>
+    <MissingClass>com.jme.scene.TriMesh</MissingClass>
+    <MissingClass>com.jme.scene.lod.AreaClodMesh</MissingClass>
+    <MissingClass>com.jme.scene.lod.CollapseRecord</MissingClass>
+    <MissingClass>com.jme.scene.shape.Box</MissingClass>
+    <MissingClass>com.jme.scene.shape.Cylinder</MissingClass>
+    <MissingClass>com.jme.scene.shape.Quad</MissingClass>
+    <MissingClass>com.jme.scene.shape.Sphere</MissingClass>
+    <MissingClass>com.jme.scene.state.BlendState</MissingClass>
+    <MissingClass>com.jme.scene.state.BlendState$BlendEquation</MissingClass>
+    <MissingClass>com.jme.scene.state.BlendState$DestinationFunction</MissingClass>
+    <MissingClass>com.jme.scene.state.BlendState$SourceFunction</MissingClass>
+    <MissingClass>com.jme.scene.state.CullState</MissingClass>
+    <MissingClass>com.jme.scene.state.CullState$Face</MissingClass>
+    <MissingClass>com.jme.scene.state.LightState</MissingClass>
+    <MissingClass>com.jme.scene.state.MaterialState</MissingClass>
+    <MissingClass>com.jme.scene.state.RenderState</MissingClass>
+    <MissingClass>com.jme.scene.state.TextureState</MissingClass>
+    <MissingClass>com.jme.system.DisplaySystem</MissingClass>
+    <MissingClass>com.jme.util.TextureManager</MissingClass>
+    <MissingClass>com.jme.util.Timer</MissingClass>
+    <MissingClass>com.jme.util.export.Savable</MissingClass>
+    <MissingClass>com.jme.util.export.binary.BinaryImporter</MissingClass>
+    <MissingClass>com.jme.util.geom.BufferUtils</MissingClass>
+    <MissingClass>com.jmex.model.converters.FormatConverter</MissingClass>
+    <MissingClass>com.jmex.model.converters.ObjToJme</MissingClass>
+    <MissingClass>com.jmex.terrain.TerrainBlock</MissingClass>
+    <MissingClass>com.jmex.terrain.util.AbstractHeightMap</MissingClass>
+    <MissingClass>com.jmex.terrain.util.ImageBasedHeightMap</MissingClass>
+    <MissingClass>com.jmex.terrain.util.MidPointHeightMap</MissingClass>
+    <MissingClass>com.jmex.terrain.util.ProceduralTextureGenerator</MissingClass>
+    <MissingClass>de.lessvoid.nifty.Nifty</MissingClass>
+    <MissingClass>de.lessvoid.nifty.controls.ConsoleExecuteCommandEvent</MissingClass>
+    <MissingClass>de.lessvoid.nifty.jme.input.JmeInputSystem</MissingClass>
+    <MissingClass>de.lessvoid.nifty.jme.render.JmeRenderDevice</MissingClass>
+    <MissingClass>de.lessvoid.nifty.jme.sound.JmeSoundDevice</MissingClass>
+    <MissingClass>de.lessvoid.nifty.screen.ScreenController</MissingClass>
+    <MissingClass>de.lessvoid.nifty.spi.input.InputSystem</MissingClass>
+    <MissingClass>de.lessvoid.nifty.spi.render.RenderDevice</MissingClass>
+    <MissingClass>de.lessvoid.nifty.spi.sound.SoundDevice</MissingClass>
+    <MissingClass>de.lessvoid.nifty.tools.TimeProvider</MissingClass>
+    <MissingClass>jme2.effects.procedural.ProceduralPlanet</MissingClass>
+    <MissingClass>jme2.effects.textures.PerlinNoise</MissingClass>
+    <MissingClass>jme2.utils.Jme2Utils</MissingClass>
+    <MissingClass>niftylib.interfaces.IJogo</MissingClass>
+    <MissingClass>niftylib.interfaces.IObjeto</MissingClass>
+    <MissingClass>niftylib.propriedades.PropriedadesObjeto</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 7 May 2012 15:25:25 -0300" total_classes="34" referenced_classes="77" total_bugs="36" total_size="1735" num_packages="6" vm_version="20.0-b11" cpu_seconds="5.03" clock_seconds="9.34" peak_mbytes="123.05" alloc_mbytes="494.94" gc_seconds="0.69" priority_3="16" priority_2="12" priority_1="8">
+    <FileStats path="com/cristiano/galactic/GalacticViewStarterJME2.java" bugCount="1" size="76" bugHash="c637ccdc8719aea740a953e7a90c01d5"/>
+    <FileStats path="com/cristiano/galactic/ViewConsts.java" bugCount="5" size="29" bugHash="2cb06146263d194f0858939b6759e462"/>
+    <FileStats path="com/cristiano/galactic/view/ItemsViewManager.java" bugCount="0" size="59"/>
+    <FileStats path="com/cristiano/galactic/view/View.java" bugCount="6" size="269" bugHash="98ab877193c0a5ac07baec773781f1b1"/>
+    <FileStats path="com/cristiano/galactic/view/app/KeyMapInputAction.java" bugCount="0" size="8"/>
+    <FileStats path="com/cristiano/galactic/view/app/KeyMappingJME.java" bugCount="1" size="60" bugHash="de1b330761dff81161565947082fcb8c"/>
+    <FileStats path="com/cristiano/galactic/view/app/RotateCamera.java" bugCount="1" size="214" bugHash="544de039d2146924eb4496b4439ba039"/>
+    <FileStats path="com/cristiano/galactic/view/app/RotateMouseInput.java" bugCount="1" size="40" bugHash="2cda626aba7042ea852f581127568f57"/>
+    <FileStats path="com/cristiano/galactic/view/demos/HUDTutorial1.java" bugCount="3" size="75" bugHash="8c5b650630685a4587edf60b02d6a338"/>
+    <FileStats path="com/cristiano/galactic/view/demos/HUDTutorial2.java" bugCount="2" size="85" bugHash="f05bce74a88e58ec803ea675339b402c"/>
+    <FileStats path="com/cristiano/galactic/view/demos/HUDTutorial4.java" bugCount="3" size="36" bugHash="fb97e5baa9e445ee19066bf241918c16"/>
+    <FileStats path="com/cristiano/galactic/view/demos/HelloLOD.java" bugCount="1" size="82" bugHash="95d2779da010c95d78a4fcdf03757d5e"/>
+    <FileStats path="com/cristiano/galactic/view/demos/HelloTerrain.java" bugCount="1" size="68" bugHash="3f62673c6c5975ebdf95ffca90303830"/>
+    <FileStats path="com/cristiano/galactic/view/demos/OBJLoader.java" bugCount="3" size="96" bugHash="ae96cdec2c995b0973682942d3ff8036"/>
+    <FileStats path="com/cristiano/galactic/view/demos/PaintableImage.java" bugCount="0" size="29"/>
+    <FileStats path="com/cristiano/galactic/view/demos/PaintedGauge.java" bugCount="0" size="20"/>
+    <FileStats path="com/cristiano/galactic/view/demos/PaintedTexture.java" bugCount="0" size="15"/>
+    <FileStats path="com/cristiano/galactic/view/demos/TestHUD.java" bugCount="3" size="165" bugHash="fe2496875b1a46c2bf79a8dcd9e15c34"/>
+    <FileStats path="com/cristiano/galactic/view/hud/ShipHud.java" bugCount="2" size="80" bugHash="70b66a9dc01be418cbac7b86f1c523d8"/>
+    <FileStats path="com/cristiano/galactic/view/models/ItemView.java" bugCount="2" size="132" bugHash="7f2de31aa1aa84e7940918986c74dae6"/>
+    <FileStats path="com/cristiano/galactic/view/models/ProceduralPlanetView.java" bugCount="1" size="34" bugHash="e2ec967f861c7c26d2105cf35a355074"/>
+    <FileStats path="com/cristiano/galactic/view/models/ShipView.java" bugCount="0" size="48"/>
+    <FileStats path="com/cristiano/galactic/view/models/SphereModel.java" bugCount="0" size="15"/>
+    <PackageStats package="com.cristiano.galactic" total_bugs="6" total_types="3" total_size="105" priority_3="1" priority_2="1" priority_1="4">
+      <ClassStats class="com.cristiano.galactic.GalacticViewStarterJME2" sourceFile="GalacticViewStarterJME2.java" interface="false" size="31" bugs="1" priority_3="1"/>
+      <ClassStats class="com.cristiano.galactic.RunThread" sourceFile="GalacticViewStarterJME2.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.ViewConsts" sourceFile="ViewConsts.java" interface="false" size="29" bugs="5" priority_2="1" priority_1="4"/>
+    </PackageStats>
+    <PackageStats package="com.cristiano.galactic.view" total_bugs="6" total_types="2" total_size="328" priority_3="3" priority_2="3">
+      <ClassStats class="com.cristiano.galactic.view.ItemsViewManager" sourceFile="ItemsViewManager.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.View" sourceFile="View.java" interface="false" size="269" bugs="6" priority_3="3" priority_2="3"/>
+    </PackageStats>
+    <PackageStats package="com.cristiano.galactic.view.app" total_bugs="3" total_types="13" total_size="322" priority_3="1" priority_2="1" priority_1="1">
+      <ClassStats class="com.cristiano.galactic.view.app.KeyMapInputAction" sourceFile="KeyMapInputAction.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.app.KeyMappingJME" sourceFile="KeyMappingJME.java" interface="false" size="60" bugs="1" priority_3="1"/>
+      <ClassStats class="com.cristiano.galactic.view.app.RotateCamera" sourceFile="RotateCamera.java" interface="false" size="141" bugs="1" priority_2="1"/>
+      <ClassStats class="com.cristiano.galactic.view.app.RotateCamera$1" sourceFile="RotateCamera.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.app.RotateCamera$2" sourceFile="RotateCamera.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.app.RotateCamera$3" sourceFile="RotateCamera.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.app.RotateCamera$4" sourceFile="RotateCamera.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.app.RotateCamera$5" sourceFile="RotateCamera.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.app.RotateCamera$6" sourceFile="RotateCamera.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.app.RotateCamera$7" sourceFile="RotateCamera.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.app.RotateCamera$8" sourceFile="RotateCamera.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.app.RotateCamera$9" sourceFile="RotateCamera.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.app.RotateMouseInput" sourceFile="RotateMouseInput.java" interface="false" size="40" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.cristiano.galactic.view.demos" total_bugs="16" total_types="11" total_size="671" priority_3="8" priority_2="6" priority_1="2">
+      <ClassStats class="com.cristiano.galactic.view.demos.DummyItem" sourceFile="TestHUD.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.demos.HUDTutorial1" sourceFile="HUDTutorial1.java" interface="false" size="75" bugs="3" priority_3="2" priority_2="1"/>
+      <ClassStats class="com.cristiano.galactic.view.demos.HUDTutorial2" sourceFile="HUDTutorial2.java" interface="false" size="85" bugs="2" priority_2="2"/>
+      <ClassStats class="com.cristiano.galactic.view.demos.HUDTutorial4" sourceFile="HUDTutorial4.java" interface="false" size="36" bugs="3" priority_3="3"/>
+      <ClassStats class="com.cristiano.galactic.view.demos.HelloLOD" sourceFile="HelloLOD.java" interface="false" size="82" bugs="1" priority_2="1"/>
+      <ClassStats class="com.cristiano.galactic.view.demos.HelloTerrain" sourceFile="HelloTerrain.java" interface="false" size="68" bugs="1" priority_2="1"/>
+      <ClassStats class="com.cristiano.galactic.view.demos.OBJLoader" sourceFile="OBJLoader.java" interface="false" size="96" bugs="3" priority_3="1" priority_2="1" priority_1="1"/>
+      <ClassStats class="com.cristiano.galactic.view.demos.PaintableImage" sourceFile="PaintableImage.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.demos.PaintedGauge" sourceFile="PaintedGauge.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.demos.PaintedTexture" sourceFile="PaintedTexture.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.demos.TestHUD" sourceFile="TestHUD.java" interface="false" size="117" bugs="3" priority_3="2" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.cristiano.galactic.view.hud" total_bugs="2" total_types="1" total_size="80" priority_3="1" priority_1="1">
+      <ClassStats class="com.cristiano.galactic.view.hud.ShipHud" sourceFile="ShipHud.java" interface="false" size="80" bugs="2" priority_3="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.cristiano.galactic.view.models" total_bugs="3" total_types="4" total_size="229" priority_3="2" priority_2="1">
+      <ClassStats class="com.cristiano.galactic.view.models.ItemView" sourceFile="ItemView.java" interface="false" size="132" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="com.cristiano.galactic.view.models.ProceduralPlanetView" sourceFile="ProceduralPlanetView.java" interface="false" size="34" bugs="1" priority_3="1"/>
+      <ClassStats class="com.cristiano.galactic.view.models.ShipView" sourceFile="ShipView.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.cristiano.galactic.view.models.SphereModel" sourceFile="SphereModel.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteNonnullReturnValues" totalMilliseconds="12" invocations="34" avgMicrosecondsPerInvocation="354" maxMicrosecondsPerInvocation="3209" standardDeviationMircosecondsPerInvocation="723"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RepeatedConditionals" totalMilliseconds="12" invocations="34" avgMicrosecondsPerInvocation="356" maxMicrosecondsPerInvocation="1671" standardDeviationMircosecondsPerInvocation="389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BadResultSetAccess" totalMilliseconds="12" invocations="34" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="3360" standardDeviationMircosecondsPerInvocation="577"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LostLoggerDueToWeakReference" totalMilliseconds="12" invocations="34" avgMicrosecondsPerInvocation="360" maxMicrosecondsPerInvocation="1668" standardDeviationMircosecondsPerInvocation="402"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MutableStaticFields" totalMilliseconds="13" invocations="34" avgMicrosecondsPerInvocation="385" maxMicrosecondsPerInvocation="10133" standardDeviationMircosecondsPerInvocation="1699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNonShortCircuit" totalMilliseconds="13" invocations="34" avgMicrosecondsPerInvocation="391" maxMicrosecondsPerInvocation="1673" standardDeviationMircosecondsPerInvocation="437"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="14" invocations="34" avgMicrosecondsPerInvocation="421" maxMicrosecondsPerInvocation="1896" standardDeviationMircosecondsPerInvocation="430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.asm.ClassReaderAnalysisEngine" totalMilliseconds="14" invocations="457" avgMicrosecondsPerInvocation="32" maxMicrosecondsPerInvocation="7246" standardDeviationMircosecondsPerInvocation="414"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnconditionalWait" totalMilliseconds="16" invocations="34" avgMicrosecondsPerInvocation="483" maxMicrosecondsPerInvocation="13724" standardDeviationMircosecondsPerInvocation="2306"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="16" invocations="10" avgMicrosecondsPerInvocation="1671" maxMicrosecondsPerInvocation="2510" standardDeviationMircosecondsPerInvocation="730"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="16" invocations="34" avgMicrosecondsPerInvocation="498" maxMicrosecondsPerInvocation="3247" standardDeviationMircosecondsPerInvocation="742"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindFloatEquality" totalMilliseconds="17" invocations="34" avgMicrosecondsPerInvocation="500" maxMicrosecondsPerInvocation="7148" standardDeviationMircosecondsPerInvocation="1214"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="17" invocations="34" avgMicrosecondsPerInvocation="516" maxMicrosecondsPerInvocation="2454" standardDeviationMircosecondsPerInvocation="606"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="18" invocations="34" avgMicrosecondsPerInvocation="531" maxMicrosecondsPerInvocation="2358" standardDeviationMircosecondsPerInvocation="581"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="21" invocations="34" avgMicrosecondsPerInvocation="629" maxMicrosecondsPerInvocation="7014" standardDeviationMircosecondsPerInvocation="1221"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="21" invocations="34" avgMicrosecondsPerInvocation="634" maxMicrosecondsPerInvocation="3030" standardDeviationMircosecondsPerInvocation="684"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="22" invocations="34" avgMicrosecondsPerInvocation="660" maxMicrosecondsPerInvocation="3860" standardDeviationMircosecondsPerInvocation="860"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="23" invocations="34" avgMicrosecondsPerInvocation="680" maxMicrosecondsPerInvocation="3189" standardDeviationMircosecondsPerInvocation="713"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LoadedFieldSetFactory" totalMilliseconds="25" invocations="229" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="18805" standardDeviationMircosecondsPerInvocation="1243"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="26" invocations="34" avgMicrosecondsPerInvocation="784" maxMicrosecondsPerInvocation="7074" standardDeviationMircosecondsPerInvocation="2040"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="27" invocations="34" avgMicrosecondsPerInvocation="801" maxMicrosecondsPerInvocation="3286" standardDeviationMircosecondsPerInvocation="903"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="27" invocations="34" avgMicrosecondsPerInvocation="822" maxMicrosecondsPerInvocation="16508" standardDeviationMircosecondsPerInvocation="2760"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="27" invocations="228" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="1391" standardDeviationMircosecondsPerInvocation="213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="28" invocations="3525" avgMicrosecondsPerInvocation="8" maxMicrosecondsPerInvocation="6022" standardDeviationMircosecondsPerInvocation="108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSelfComparison" totalMilliseconds="29" invocations="34" avgMicrosecondsPerInvocation="874" maxMicrosecondsPerInvocation="17695" standardDeviationMircosecondsPerInvocation="2955"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="31" invocations="13" avgMicrosecondsPerInvocation="2388" maxMicrosecondsPerInvocation="11146" standardDeviationMircosecondsPerInvocation="2956"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="32" invocations="172" avgMicrosecondsPerInvocation="190" maxMicrosecondsPerInvocation="10523" standardDeviationMircosecondsPerInvocation="842"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="33" invocations="34" avgMicrosecondsPerInvocation="978" maxMicrosecondsPerInvocation="14402" standardDeviationMircosecondsPerInvocation="2482"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteLoop" totalMilliseconds="34" invocations="34" avgMicrosecondsPerInvocation="1023" maxMicrosecondsPerInvocation="18841" standardDeviationMircosecondsPerInvocation="3196"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="34" invocations="222" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="6065" standardDeviationMircosecondsPerInvocation="473"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="38" invocations="34" avgMicrosecondsPerInvocation="1134" maxMicrosecondsPerInvocation="9321" standardDeviationMircosecondsPerInvocation="1784"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="43" invocations="77" avgMicrosecondsPerInvocation="559" maxMicrosecondsPerInvocation="18845" standardDeviationMircosecondsPerInvocation="2302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SynchronizingOnContentsOfFieldToProtectField" totalMilliseconds="49" invocations="34" avgMicrosecondsPerInvocation="1452" maxMicrosecondsPerInvocation="40427" standardDeviationMircosecondsPerInvocation="6791"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="51" invocations="77" avgMicrosecondsPerInvocation="667" maxMicrosecondsPerInvocation="10343" standardDeviationMircosecondsPerInvocation="1544"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="56" invocations="77" avgMicrosecondsPerInvocation="732" maxMicrosecondsPerInvocation="18353" standardDeviationMircosecondsPerInvocation="2690"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="66" invocations="77" avgMicrosecondsPerInvocation="860" maxMicrosecondsPerInvocation="13768" standardDeviationMircosecondsPerInvocation="1938"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="85" invocations="15" avgMicrosecondsPerInvocation="5691" maxMicrosecondsPerInvocation="31358" standardDeviationMircosecondsPerInvocation="9787"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="87" invocations="229" avgMicrosecondsPerInvocation="381" maxMicrosecondsPerInvocation="15105" standardDeviationMircosecondsPerInvocation="1394"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="94" invocations="230" avgMicrosecondsPerInvocation="411" maxMicrosecondsPerInvocation="35521" standardDeviationMircosecondsPerInvocation="2356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="125" invocations="229" avgMicrosecondsPerInvocation="548" maxMicrosecondsPerInvocation="18457" standardDeviationMircosecondsPerInvocation="1776"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="126" invocations="77" avgMicrosecondsPerInvocation="1645" maxMicrosecondsPerInvocation="22165" standardDeviationMircosecondsPerInvocation="3326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="140" invocations="1582" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="7292" standardDeviationMircosecondsPerInvocation="311"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="148" invocations="77" avgMicrosecondsPerInvocation="1926" maxMicrosecondsPerInvocation="35611" standardDeviationMircosecondsPerInvocation="6221"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="149" invocations="158" avgMicrosecondsPerInvocation="943" maxMicrosecondsPerInvocation="33357" standardDeviationMircosecondsPerInvocation="2772"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="197" invocations="621" avgMicrosecondsPerInvocation="317" maxMicrosecondsPerInvocation="32057" standardDeviationMircosecondsPerInvocation="1604"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="213" invocations="77" avgMicrosecondsPerInvocation="2772" maxMicrosecondsPerInvocation="201940" standardDeviationMircosecondsPerInvocation="22847"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="240" invocations="228" avgMicrosecondsPerInvocation="1053" maxMicrosecondsPerInvocation="27729" standardDeviationMircosecondsPerInvocation="2691"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="248" invocations="236" avgMicrosecondsPerInvocation="1053" maxMicrosecondsPerInvocation="21626" standardDeviationMircosecondsPerInvocation="2832"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="262" invocations="34" avgMicrosecondsPerInvocation="7719" maxMicrosecondsPerInvocation="247595" standardDeviationMircosecondsPerInvocation="41762"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="310" invocations="325" avgMicrosecondsPerInvocation="954" maxMicrosecondsPerInvocation="36309" standardDeviationMircosecondsPerInvocation="2771"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="320" invocations="229" avgMicrosecondsPerInvocation="1400" maxMicrosecondsPerInvocation="31541" standardDeviationMircosecondsPerInvocation="3516"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="329" invocations="228" avgMicrosecondsPerInvocation="1444" maxMicrosecondsPerInvocation="46954" standardDeviationMircosecondsPerInvocation="4295"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="2898" invocations="623" avgMicrosecondsPerInvocation="4652" maxMicrosecondsPerInvocation="474762" standardDeviationMircosecondsPerInvocation="22290"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

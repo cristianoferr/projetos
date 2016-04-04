@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="game_builder" default="gameBuilder">
+	
+	
+	<property name="generatedGameAssets" location="../GMAssets/assets"/>
+	<property name="gmBuilderPath" location="../GMBuilder"/>
+	<property name="gameTag" value="gamemechanic macroDefinition raceTest leaf"/>
+	<property name="build" location="bin/build"/>
+	
+	<target name="cleanBuilder">
+		<echo>Cleaning Generated Assets...</echo>
+		<delete dir="${generatedGameAssets}/gen"/>
+		<delete file="${generatedGameAssets}/game-elementManager.json"/>
+		<delete file="${generatedGameAssets}/game-prop_ent_manager.json"/>
+		<delete file="${generatedGameAssets}/game-prop_factory.json"/>
+		<delete file="${generatedGameAssets}/game-world.json"/>
+		<delete file="${generatedGameAssets}/gen/${game.properties}"/>
+		<delete file="${generatedGameAssets}/test.json"/>
+		<mkdir dir="${generatedGameAssets}/gen"/>
+	</target>
+
+	<target name="-check-use-file" unless="file.exists">
+		<available property="file.exists" file="${generatedGameAssets}/gen/${game.properties}"/>
+	</target>
+	
+	<target name="gameBuilder" depends="-check-use-file" unless="${file.exists}">
+		<echo>Tag: ${gameTag}</echo>
+		<exec dir="${gmBuilderPath}" executable="cmd">
+			<arg line='/c runBuilder.bat headless tag "${gameTag}"'/> 
+		</exec>
+	
+	</target>	
+	
+	
+</project>

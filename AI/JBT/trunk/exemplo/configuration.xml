@@ -1,0 +1,11 @@
+<Configuration>
+<DomainFile>mmpmExemplo.xml</DomainFile>
+<ModelActionsPackage>mypackage.model</ModelActionsPackage>
+<ModelConditionsPackage>mypackage.model.condition</ModelConditionsPackage>
+<ModelActionsOutputDirectory>model/actions</ModelActionsOutputDirectory>
+<ModelConditionsOutputDirectory>model/conditions</ModelConditionsOutputDirectory>
+<ExecutionActionsPackage>mypackage.execution.action</ExecutionActionsPackage>
+<ExecutionConditionsPackage>mypackage.execution.condition</ExecutionConditionsPackage>
+<ExecutionActionsOutputDirectory>execution/actions</ExecutionActionsOutputDirectory>
+<ExecutionConditionsOutputDirectory>execution/conditions</ExecutionConditionsOutputDirectory>
+</Configuration>

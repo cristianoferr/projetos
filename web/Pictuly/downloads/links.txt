@@ -1,0 +1,2 @@
+star rating:
+http://www.yvoschaap.com/weblog/css_star_rater_ajax_version

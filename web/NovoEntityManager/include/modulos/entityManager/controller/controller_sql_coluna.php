@@ -1,0 +1,6 @@
+<?
+class SqlColunaController extends BaseController{
+
+
+	}
+?>

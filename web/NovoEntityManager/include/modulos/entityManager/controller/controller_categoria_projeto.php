@@ -1,0 +1,6 @@
+<?
+class CategoriaProjetoController extends BaseController{
+
+
+	}
+?>

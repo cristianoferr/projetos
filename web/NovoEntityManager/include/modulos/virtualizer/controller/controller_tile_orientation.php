@@ -1,0 +1,7 @@
+<?
+
+class TileOrientationController extends BaseController {
+    
+}
+
+?>

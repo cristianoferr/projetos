@@ -1,0 +1,1080 @@
+//Defines
+
+//Blueprints
+@blueprint gameUI
+	@domain type={all ui}
+	@output file='BluePrintUI.bpf'
+@end
+
+@blueprint BattleNotifProperties:gameUI
+	@domain type+={battleNotif}
+	@property label=''
+	@comment description=' this has data about the scrolling text used to display damage and other'
+@end
+
+@blueprint themeScreen:gameUI
+	@domain type={themeScreen}
+@end
+
+@mod DefaultScreens:themeScreen
+	@domain type+={default}
+	@property configScreen=pickSingle($this.configScreenTag)
+	@property debugScreen=pickSingle($this.debugScreenTag)
+	@property emptyScreen=pickSingle(screen empty)
+	@property failScreen=pickSingle($this.failScreenTag)
+	@property pauseScreen=pickSingle($this.pauseScreenTag)
+	@property runningScreen=pickSingle($this.runningScreenTag)
+	@property screens=$this.splashScreen+$this.startScreen+$this.pauseScreen+$this.runningScreen+$this.configScreen+$this.debugScreen+$this.victoryScreen+$this.failScreen+$this.emptyScreen //game screens
+	@property splashScreen=pickSingle($this.splashScreenTag)
+	@property startScreen=pickSingle($this.startScreenTag)
+	@property victoryScreen=pickSingle($this.victoryScreenTag)
+@end
+
+@blueprint UIBuilders:gameUI
+	@domain type+={UIBuilder}
+@end
+
+@blueprint ControlBuilders:UIBuilders
+	@domain type+={control}
+	@property label=''
+@end
+
+@blueprint ButtonUI:ControlBuilders
+	@domain className='de.lessvoid.nifty.controls.button.builder.ButtonBuilder'
+	@domain type+={button}
+@end
+
+@blueprint DropDownUI:ControlBuilders
+	@domain className='de.lessvoid.nifty.controls.dropdown.builder.DropDownBuilder'
+	@domain type+={dropDown}
+@end
+
+@blueprint ImageUI:ControlBuilders
+	@domain className='de.lessvoid.nifty.builder.ImageBuilder'
+	@domain type+={image}
+@end
+
+@blueprint LabelUI:ControlBuilders
+	@domain className='de.lessvoid.nifty.controls.label.builder.LabelBuilder'
+	@domain type+={label}
+@end
+
+@blueprint TextEditUI:ControlBuilders
+	@domain className='de.lessvoid.nifty.controls.textfield.builder.TextFieldBuilder'
+	@domain type+={textedit}
+	@property save=0
+@end
+
+@blueprint LayerUI:UIBuilders
+	@domain type+={layer}
+@end
+
+@blueprint PanelUI:UIBuilders
+	@domain type+={panel}
+@end
+
+@blueprint PropertiesUI:UIBuilders
+	@domain type+={properties}
+	@property key=''
+	@property value=''
+@end
+
+@blueprint directPropertiesUI:PropertiesUI
+	@domain type+={directValue}
+@end
+
+@blueprint actionProp:directPropertiesUI
+	@domain type+={actionProp}
+	@property action='action'
+@end
+
+@blueprint ColorProp:directPropertiesUI
+	@domain type+={colorProp}
+	@property value=''
+@end
+
+@blueprint backGroundColor:ColorProp
+	@domain type+={backGroundProp}
+	@property key='backgroundColor'
+	@property value=''
+@end
+
+@blueprint fileNameProp:directPropertiesUI
+	@domain type+={filenameProp}
+	@property key='filename'
+	@comment description='Used for images'
+@end
+
+@blueprint HeightProp:directPropertiesUI
+	@domain type+={heightProp}
+	@property key='height'
+	@comment description='Altura do objeto'
+@end
+
+@blueprint LabelProp:directPropertiesUI
+	@domain type+={labelProp}
+	@property key='label'
+	@comment description='Rotulo de botoes'
+@end
+
+@blueprint textProp:directPropertiesUI
+	@domain type+={textProp}
+	@property key='text'
+@end
+
+@blueprint WidthProp:directPropertiesUI
+	@domain type+={widthProp}
+	@property key='width'
+	@comment description='Largura do objeto'
+@end
+
+@blueprint subEnumPropertiesUI:PropertiesUI
+	@domain type+={enumValue}
+	@property subEnum={null}
+	@property value=if($this.generated==1,enumValue($this.enum $this.subEnum),'error')
+	@comment description='generated is defined from the component'
+@end
+
+@blueprint alignProp:subEnumPropertiesUI
+	@domain type+={alignProp}
+	@property enum={horizontalAlign}
+	@property key='align'
+@end
+
+@blueprint ChildLayoutProp:subEnumPropertiesUI
+	@domain type+={childLayoutProp}
+	@property enum={childLayout}
+	@property key='childLayout'
+@end
+
+@blueprint fontProp:subEnumPropertiesUI
+	@domain type+={fontProp}
+	@property enum={textFont}
+	@property key='font'
+	@property value=''
+@end
+
+@blueprint TextAlignHorizProp:subEnumPropertiesUI
+	@domain type+={textHAlignProp}
+	@property enum={horizontalAlign}
+	@property key='textHAlign'
+	@property value=enumValue($this.enum $this.subEnum)
+@end
+
+@blueprint TextAlignVertProp:subEnumPropertiesUI
+	@domain type+={textVAlignProp}
+	@property enum={verticalAlign}
+	@property key='textVAlign'
+	@property value=enumValue($this.enum $this.subEnum)
+@end
+
+@blueprint VerticalAlignProp:subEnumPropertiesUI
+	@domain type+={valignProp}
+	@property enum={verticalAlign}
+	@property key='valign'
+	@property value=enumValue($this.enum $this.subEnum)
+@end
+
+@blueprint ScreenUI:UIBuilders
+	@domain class='gameScreen'
+	@domain type+={screen}
+	@comment description='Tela do jogo indica em qual estado que o jogo pode ter, exemplo:#$#%- config: tela de configura????o#$#%- running: jogo est?? rodando#$#%- start: tela inicial'
+@end
+
+@blueprint UIGameFactories:gameUI
+	@domain type+={uigd}
+	@property visible=1
+@end
+
+@blueprint ControlsGD:UIGameFactories
+	@domain type+={control}
+	@property controlTag={control ui}
+	@property events+={} //used for nifty effects (no, really, niftygui effects)
+	@generator base=pickOne({UIControlComponent})
+@end
+
+@blueprint ButtonsGD:ControlsGD
+	@domain type+={button}
+	@property action='undefined'
+	@property controlTag+={button}
+	@property height=50%
+	@property isAnalog=1
+	@property textHAlign={center}
+	@property textVAlign={center}
+	@property width=30%
+@end
+
+@blueprint ConfigScreenButtons:ButtonsGD
+	@domain type+={configScreenButtons}
+@end
+
+@factory ButtonBenchmark:ConfigScreenButtons
+	@domain type+={buttonBenchmark}
+	@property action='act_benchmark'
+	@property align={center}
+	@property height=*
+	@property label='Benchmark'
+	@property name='btn_benchmark'
+	@property width=*
+@end
+
+@factory ButtonDebugFail:ConfigScreenButtons
+	@domain type+={buttonDebugFail}
+	@property action='act_debug_fail'
+	@property align={center}
+	@property height=*
+	@property label='Go to Fail Screen'
+	@property name='btn_debug_fail'
+	@property width=*
+@end
+
+@factory ButtonDebugGame:ConfigScreenButtons
+	@domain type+={buttonDebugGame}
+	@property action='act_debug_game'
+	@property align={center}
+	@property height=*
+	@property label='Debug'
+	@property name='btn_debug_game'
+	@property width=*
+@end
+
+@factory ButtonDebugSplash:ConfigScreenButtons
+	@domain type+={buttonDebugSplash}
+	@property action='act_debug_splash'
+	@property align={center}
+	@property height=*
+	@property label='Splash Screen'
+	@property name='btn_debug_splash'
+	@property width=*
+@end
+
+@factory ButtonDebugVictory:ConfigScreenButtons
+	@domain type+={buttonDebugVictory}
+	@property action='act_debug_victory'
+	@property align={center}
+	@property height=*
+	@property label='Go to Victory Screen'
+	@property name='btn_debug_victory'
+	@property width=*
+@end
+
+@blueprint DebugScreenButtons:ButtonsGD
+	@domain type+={debugScreenButtons}
+	@property height=100%
+	@property width=*
+@end
+
+@factory ButtonAddTag:DebugScreenButtons
+	@domain type+={buttonAddTag}
+	@property action='act_add_tag'
+	@property label='Add Tag'
+	@property name='btn_add_tag'
+	@property textEdit={txtEditTag}
+@end
+
+@factory buttonDiagnostico:DebugScreenButtons
+	@domain type+={buttonDiagnostico}
+	@property action='act_diagnostico'
+	@property label='F3 - Diagnostico'
+	@property name='btn_diagnostico'
+	@property shortCut=pickFinal({function keys f3},action=$this.action,isAnalog=$this.isAnalog)
+@end
+
+@factory ButtonLaunchBall:DebugScreenButtons
+	@domain type+={buttonLaunchBall}
+	@property action='act_launch_ball'
+	@property label='Dispara Bomba'
+	@property name='btn_launch_ball'
+	@property shortCut=pickFinal({function keys f7},action=$this.action,isAnalog=$this.isAnalog)
+@end
+
+@factory ButtonLoadEntity:DebugScreenButtons
+	@domain type+={buttonLoadEntity}
+	@property action='act_load_entity'
+	@property dropDownSource={DDentities}
+	@property label='Load Entity'
+	@property name='btn_load_entity'
+@end
+
+@factory ButtonResetPlayer:DebugScreenButtons
+	@domain type+={buttonResetPlayer}
+	@property action='act_reset_player'
+	@property label='F11 - Reset Player'
+	@property name='btn_reset_player'
+	@property shortCut=pickFinal({function keys f11},action=$this.action,isAnalog=$this.isAnalog)
+@end
+
+@factory ButtonReturnTitleFromDebug:DebugScreenButtons
+	@domain type+={buttonReturnTitleFromDebug}
+	@property action='act_return_title'
+	@property label='#returnTitle'
+	@property name='btn_return_title'
+@end
+
+@factory ButtonSaveState:DebugScreenButtons
+	@domain type+={buttonSaveState}
+	@property action='act_save_state'
+	@property label='F12 - Save State'
+	@property name='btn_save_state'
+	@property shortCut=pickFinal({function keys f12},action=$this.action,isAnalog=$this.isAnalog)
+@end
+
+@factory ButtonTeste:DebugScreenButtons
+	@domain type+={buttonTeste test}
+	@property label='Teste'
+	@property name='btn_teste'
+@end
+
+@factory ButtonToggleCamera:DebugScreenButtons
+	@domain type+={buttonToggleCamera}
+	@property action='act_toggle_camera'
+	@property label='F10 - Toggle Camera'
+	@property name='btn_toggle_camera'
+	@property shortCut=pickFinal({function keys f10},action=$this.action,isAnalog=$this.isAnalog)
+@end
+
+@factory ButtonToggleGravity:DebugScreenButtons
+	@domain type+={buttonToggleGravity}
+	@property action='act_toggle_gravity'
+	@property label='F9 - Toggle Gravity'
+	@property name='btn_toggle_gravity'
+	@property shortCut=pickFinal({function keys f9},action=$this.action,isAnalog=$this.isAnalog)
+@end
+
+@factory ButtonToggleMouse:DebugScreenButtons
+	@domain type+={buttonToggleMouse}
+	@property action='act_toggle_mouse'
+	@property label='F6 - Toggle Mouse'
+	@property name='btn_toggle_mouse'
+	@property shortCut=pickFinal({function keys f6},action=$this.action,isAnalog=$this.isAnalog)
+@end
+
+@factory ButtonTogglePhysDebug:DebugScreenButtons
+	@domain type+={buttonTogglePhysDebug}
+	@property action='act_toggle_phys_debug'
+	@property label='F8 - Toggle PhysDebug'
+	@property name='btn_toggle_phys_debug'
+	@property shortCut=pickFinal({function keys f8},action=$this.action,isAnalog=$this.isAnalog)
+	@property width=150
+@end
+
+@blueprint RunningScreenButtons:ButtonsGD
+	@domain type+={runningScreenButtons}
+@end
+
+@blueprint StartScreenButtons:ButtonsGD
+	@domain type+={startScreenButtons}
+	@property height=25%
+	@property width=100%
+@end
+
+@factory ButtonConfiguration:StartScreenButtons
+	@domain type+={buttonConfiguration}
+	@property action='act_game_config'
+	@property align={center}
+	@property font=$uiConsts.uiHeaderFont
+	@property label='#gameConfig'
+	@property name='btn_game_config'
+@end
+
+@factory ButtonContinueGame:StartScreenButtons
+	@domain type+={buttonContinueGame}
+	@property action='act_continue_game'
+	@property label='#gameContinue'
+	@property name='btn_continue_game'
+@end
+
+@factory ButtonStartGame:StartScreenButtons
+	@domain type+={buttonStartGame}
+	@property action='act_start_game'
+	@property align={center}
+	@property filename='Textures/mucha-window.png'
+	@property label='#gameStart'
+	@property name='btn_start_game'
+	@property textHAlign={center}
+	@property textVAlign={center}
+@end
+
+@blueprint DropDownGD:ControlsGD
+	@domain type+={dropDown}
+	@property controlTag+={dropDown}
+	@property height=30
+	@property width=130
+@end
+
+@factory EntitiesDropDown:DropDownGD
+	@domain type+={DDentities}
+	@property listFunction=elementsWithTags(test entities leaf)
+	@property name='dd_entities'
+@end
+
+@blueprint ImagesGD:ControlsGD
+	@domain type+={image}
+	@property controlTag+={image}
+	@property filename='none'
+@end
+
+@blueprint GeneratedImages:ImagesGD
+	@domain type+={generated}
+	@property filename=$this.image.sourceFile
+	@property folderDest=$this.image.folderDest
+	@property image=getImage($this.imageTag)
+	@property imageTag={null}
+@end
+
+@factory ImageConfig:GeneratedImages
+	@domain type+={imageConfig}
+	@property action='act_game_config'
+	@property events+=getTransparentEffect(9)
+	@property imageTag={config}
+	@property name='image_config'
+@end
+
+@factory ImageList:GeneratedImages
+	@domain type+={imageList}
+	@property action='act_list_levels'
+	@property align={center}
+	@property imageTag={list}
+	@property name='image_list_levels'
+@end
+
+@factory ImageNextLevel:GeneratedImages
+	@domain type+={imageNextLevel}
+	@property action='act_next_level'
+	@property align={center}
+	@property imageTag={next}
+	@property name='image_next'
+@end
+
+@factory ImagePause:GeneratedImages
+	@domain type+={imagePause}
+	@property action='act_pause_game'
+	@property events+=getTransparentEffect(6)
+	@property imageTag={pause}
+	@property name='image_pause'
+@end
+
+@factory ImagePlay:GeneratedImages
+	@domain type+={imagePlay}
+	@property action='act_start_game'
+	@property align={center}
+	@property imageTag={play}
+	@property name='image_play'
+@end
+
+@factory ImageReload:GeneratedImages
+	@domain type+={imageReload}
+	@property action='act_reload_game'
+	@property align={center}
+	@property imageTag={reload}
+	@property name='image_reload'
+@end
+
+@factory ImageReturnTitle:GeneratedImages
+	@domain type+={imageReturnTitle}
+	@property action='act_return_title'
+	@property align={center}
+	@property imageTag={return}
+	@property name='image_return_title'
+@end
+
+@factory ImageLogo:ImagesGD
+	@domain type+={imageLogo}
+	@property align={center}
+	@property filename='Textures/mucha-window.png'
+	@property name='image_logo'
+@end
+
+@factory ImageSplash:ImagesGD
+	@domain type+={imageSplash}
+	@property align={center}
+	@property filename='Textures/splash.png'
+	@property name='image_splash'
+@end
+
+@blueprint LabelsGD:ControlsGD
+	@domain type+={label}
+	@property controlTag+={label}
+	@property visible=1
+@end
+
+@factory labelConfiguration:LabelsGD
+	@domain type+={labelConfiguration}
+	@property align={center}
+	@property font=$uiConsts.uiHeaderFont
+	@property label='#gameConfig'
+	@property name='lbl_game_config'
+	@property textHAlign={center}
+	@property textVAlign={top}
+@end
+
+@factory LabelCountDown:LabelsGD
+	@domain type+={labelCountDown}
+	@property align={center}
+	@property font=$uiConsts.uiTitleFont
+	@property label=''
+	@property labelActive='#GO'
+	@property name='lbl_countdown'
+	@property textHAlign={center}
+@end
+
+@factory labelDatasetScore:LabelsGD
+	@domain type+={labelDatasetScore}
+	@property align={right}
+	@property font=$uiConsts.uiScoreFont
+	@property label='Score!'
+	@property labelSource=enumValue({dataSetEnum score})
+	@property name='lbl_game_score'
+	@property textHAlign={right}
+	@property textVAlign={top}
+@end
+
+@factory LabelEntities:LabelsGD
+	@domain type+={labelEntities}
+	@property label='Entities: '
+	@property name='lbl_entities'
+@end
+
+@factory labelFail:LabelsGD
+	@domain type+={labelFail}
+	@property align={center}
+	@property font=$uiConsts.uiTitleFont
+	@property label='#mapFail'
+	@property name='lbl_game_fail'
+	@property textHAlign={center}
+	@property textVAlign={top}
+@end
+
+@factory labelLapGoal:LabelsGD
+	@domain type+={labelDataSetLaps} //Format: '1/20' : 'position/maxPosition'
+	@property align={center}
+	@property font=$uiConsts.uiScoreFont
+	@property label='<laps here>'
+	@property labelSource=enumValue({dataSetEnum laps})
+	@property name='lbl_lap_goal'
+	@property textHAlign={center}
+	@property textVAlign={top}
+@end
+
+@factory LabelLaps:LabelsGD
+	@domain type+={labelLap}
+	@property align={center}
+	@property font=$uiConsts.uiScoreFont
+	@property label='#laps'
+	@property name='lbl_laps'
+	@property textHAlign={center}
+@end
+
+@factory LabelPosition:LabelsGD
+	@domain type+={labelPosition}
+	@property align={right}
+	@property font=$uiConsts.uiScoreFont
+	@property label='#position'
+	@property name='lbl_position'
+	@property textHAlign={right}
+@end
+
+@factory labelPositionData:LabelsGD
+	@domain type+={labelDataSetposition} //Format: '1/20' : 'position/maxPosition'
+	@property align={right}
+	@property font=$uiConsts.uiScoreFont
+	@property label='<position here>'
+	@property labelSource=enumValue({dataSetEnum lapPosition})
+	@property name='lbl_game_position'
+	@property textHAlign={right}
+	@property textVAlign={top}
+@end
+
+@factory LabelScore:LabelsGD
+	@domain type+={labelScore}
+	@property align={right}
+	@property font=$uiConsts.uiScoreFont
+	@property label='#score'
+	@property name='lbl_score'
+	@property textHAlign={right}
+@end
+
+@factory LabelTitle:LabelsGD
+	@domain type+={labelStart}
+	@property align={center}
+	@property font=$uiConsts.uiTitleFont
+	@property height=30%
+	@property label='#gameTitle'
+	@property name='lbl_game_title'
+	@property textHAlign={center}
+	@property textVAlign={center}
+	@property valign={center}
+	@property width=100%
+@end
+
+@factory labelVictory:LabelsGD
+	@domain type+={labelVictory}
+	@property align={center}
+	@property font=$uiConsts.uiTitleFont
+	@property label='#mapSuccess'
+	@property name='lbl_game_victory'
+	@property textHAlign={center}
+	@property textVAlign={top}
+@end
+
+@blueprint TextEditsGD:ControlsGD
+	@domain type+={textEdit}
+	@property controlTag+={textedit}
+	@property height=30
+	@property width=30
+@end
+
+@factory textEditTagGD:TextEditsGD
+	@domain type+={txtEditTag}
+	@property name='txt_edit_tag'
+	@property save=1
+	@property text='testentity'
+	@property width=120
+@end
+
+@blueprint LayersGD:UIGameFactories
+	@domain type+={layer}
+	@property layerTag={layer ui}
+	@generator base=pickOne({UILayerComponent})
+@end
+
+@factory BattleNotifLayer:LayersGD
+	@domain type+={battleNotifLayer}
+	@property childLayout={vertical}
+	@property name='battle_notif_layer'
+	@property panels+=pickFinal({battleNotifPanel})
+@end
+
+@factory ConfigLayer:LayersGD
+	@domain type+={configLayer}
+	@property align={center}
+	@property childLayout={center}
+	@property name='config_layer'
+	@property panels+=pickFinal({gameConfigPanel})+addNifty({returnPanel})
+	@property valign={center}
+@end
+
+@factory DebugLayer:LayersGD
+	@domain type+={debugLayer}
+	@property align={!center}
+	@property childLayout={!center}
+	@property height=5%
+	@property name='debug_layer'
+	@property panels+=addNifty({debugPanel})
+	@property valign={!center}
+@end
+
+@factory FailLayer:LayersGD
+	@domain type+={failLayer}
+	@property align={center}
+	@property childLayout={center}
+	@property name='fail_layer'
+	@property panels+=pickFinal({failPanel})
+	@property valign={center}
+@end
+
+@factory PauseLayer:LayersGD
+	@domain type+={pauseLayer}
+	@property align={center}
+	@property childLayout={center}
+	@property name='pause_layer'
+	@property panels+=addNifty({pausePanel})
+	@property valign={center}
+@end
+
+@factory RunningLayer:LayersGD
+	@domain type+={runningLayer}
+	@property childLayout={center}
+	@property height=100%
+	@property name='main_layer'
+	@property panels+=addNifty({runningPanel top})+addNifty({TimeCountdownPanel})
+	@property valign={top}
+	@property width=100%
+	@comment description='layer of the game running'
+@end
+
+@factory SplashLayer:LayersGD
+	@domain type+={splashLayer}
+	@property childLayout={center}
+	@property name='splash_layer'
+	@property panels+=pickFinal({gameSplashPanel})
+@end
+
+@factory StartLayer:LayersGD
+	@domain type+={startLayer}
+	@property childLayout={center}
+	@property name='start_layer'
+	@property panels+=pickFinal({gameStartPanel})+addNifty({gotoConfigPanel})
+@end
+
+@factory VictoryLayer:LayersGD
+	@domain type+={victoryLayer}
+	@property align={center}
+	@property childLayout={center}
+	@property name='victory_layer'
+	@property panels+=pickFinal({victoryPanel})
+	@property valign={center}
+@end
+
+@blueprint PanelsGD:UIGameFactories
+	@domain type+={panel}
+	@property height=0
+	@property layerTag={panel ui}
+	@property width=0
+	@generator base=pickOne({UIPanelComponent})
+@end
+
+@factory BattleNotifPanel:PanelsGD
+	@domain type+={battleNotifPanel}
+	@property childLayout={absolute}
+	@property height=0%
+	@property name=$uiConsts.uiBattleNotifPanelID
+	@property width=0%
+@end
+
+@blueprint ConfigPanelsGD:PanelsGD
+	@domain type+={configPanels}
+@end
+
+@factory GameConfigPanel:ConfigPanelsGD
+	@domain type+={gameConfigPanel}
+	@property align=randomTag({center top})
+	@property backgroundColor=$gameConsts.themeColor.oppositeColor
+	@property childLayout={center}
+	@property controls+=addNifty({labelConfiguration label},100%,35%,{center},{top})+addNifty({subConfigPanel},70%,70%,{center},{center})
+	@property height=50%
+	@property name='game_config_panel'
+	@property valign={top}
+	@property width=50%
+@end
+
+@factory ReturnMainScreenPanel:ConfigPanelsGD
+	@domain type+={returnPanel}
+	@property align={left}
+	@property childLayout={horizontal}
+	@property controls+=addNifty({imageReturnTitle},100%,100%)
+	@property height=10%
+	@property name='game_return_main_screen'
+	@property valign={top}
+	@property width=10%
+@end
+
+@factory subConfigPanel:ConfigPanelsGD
+	@domain type+={subConfigPanel}
+	@property align={center}
+	@property childLayout={vertical}
+	@property controls+=addNifty({buttonDebugGame},50%,10%,{center},{top})+addNifty({buttonDebugSplash},50%,10%,{center},{top})+addNifty({buttonDebugVictory},50%,10%,{center},{top})+addNifty({buttonDebugFail},50%,10%,{center},{top})+addNifty({buttonBenchmark},50%,30%,{center},{top})
+	@property height=80%
+	@property valign={center}
+	@property width=80%
+@end
+
+@factory DebugPanelConfig:PanelsGD
+	@domain type+={debugPanel}
+	@property align={left}
+	@property backgroundColor=hexColor(pickSingle({greenish color}))
+	@property childLayout={horizontal}
+	@property controls+=addNifty({buttonLoadEntity button})+pickFinal({buttonToggleMouse button})+pickFinal({buttonLaunchBall button})+pickFinal({buttonTogglePhysDebug button})+pickFinal({buttonToggleGravity button})+pickFinal({buttonToggleCamera button})+pickFinal({buttonResetPlayer button})+pickFinal({buttonSaveState button})+pickFinal({buttonReturnTitleFromDebug})+pickFinal({buttonDiagnostico})
+	@property height=5%
+	@property name='debug_panel'
+	@property valign={top}
+	@property width=100%
+@end
+
+@blueprint PausePanelsGD:PanelsGD
+	@domain type+={PausePanels}
+@end
+
+@factory PausePanel:PausePanelsGD
+	@domain type+={pausePanel}
+	@property align={left}
+	@property backgroundColor=$gameConsts.themeColor.oppositeColor
+	@property childLayout={center}
+	@property controls+=addNifty({subPausePanel},50%,50%,{center},{center})+addNifty(imageConfig image,20%,20%,{!center},{bottom})
+	@property height=100%
+	@property name='game_pause_panel'
+	@property width=30%
+@end
+
+@factory subPausePanel:PausePanelsGD
+	@domain type+={subPausePanel}
+	@property align={center}
+	@property childLayout={vertical}
+	@property controls+=addNifty({imagePlay},100%,50%)+addNifty({imageReload},100%,50%)
+	@property height=50%
+	@property name='sub_pause_panel'
+	@property valign={center}
+	@property width=50%
+@end
+
+@blueprint ResourcePanels:PanelsGD
+	@domain type+={resourcePanel}
+@end
+
+@blueprint LapPanel:ResourcePanels
+	@domain type+={lapPanel}
+	@property name='lap_panel'
+	@property visibleConditions={LapResourceComponent}
+@end
+
+@factory LapPanel1:LapPanel
+	@domain type+={type1 center}
+	@property align={center}
+	@property childLayout={vertical}
+	@property controls+=addNifty({labelLap},100%,50%)+pickFinal({labelDataSetLaps},width=100%,height=50%,textHAlign={center})
+	@property height=100%
+	@property textHAlign={center}
+	@property valign={top}
+	@property width=15%
+@end
+
+@blueprint LapPositionPanel:ResourcePanels
+	@domain type+={lapPositionPanel}
+	@property name='lap_pos_panel'
+	@property visibleConditions={UnitPositionComponent}
+@end
+
+@factory LapPositionPanel1:LapPositionPanel
+	@domain type+={type1 right}
+	@property align={right}
+	@property childLayout={vertical}
+	@property controls+=addNifty({labelPosition},100%,50%)+addNifty({labelDataSetposition},100%,50%)
+	@property height=100%
+	@property textHAlign={right}
+	@property valign={top}
+	@property width=15%
+@end
+
+@blueprint ScorePanels:ResourcePanels
+	@domain type+={scorePanel}
+	@property name='running_panel_score'
+	@property visibleConditions={PointsResourceComponent}
+@end
+
+@factory PanelScore1:ScorePanels
+	@domain type+={right}
+	@property align={right}
+	@property childLayout={vertical}
+	@property controls+=addNifty({labelScore},*,*)+addNifty({labelDatasetScore},*,*)
+	@property height=100%
+	@property textHAlign={right}
+	@property valign={top}
+	@property width=15%
+@end
+
+@blueprint RunningPanelsGD:PanelsGD
+	@domain type+={runningPanel}
+@end
+
+@factory RunningPanelLeft:RunningPanelsGD
+	@domain type+={left}
+	@property align={left}
+	@property childLayout={horizontal}
+	@property controls+=addNifty({imagePause},100%,100%)
+	@property height=100%
+	@property name='running_panel_left'
+	@property valign={top}
+	@property width=10%
+@end
+
+@factory RunningPanelMiddle:RunningPanelsGD
+	@domain type+={middle}
+	@property align={right}
+	@property childLayout={horizontal}
+	@property controls+=addNifty({lapPanel center leaf},100%,100)
+	@property height=100%
+	@property name='running_panel_mid'
+	@property valign={top}
+	@property width=*
+@end
+
+@factory RunningPanelRight:RunningPanelsGD
+	@domain type+={right}
+	@property align={right}
+	@property childLayout={vertical}
+	@property controls+=addNifty({scorePanel leaf},*,100)+addNifty({lapPositionPanel leaf},*,100)
+	@property height=100%
+	@property name='running_panel_right'
+	@property valign={top}
+	@property width=20%
+@end
+
+@factory RunningPanelTop:RunningPanelsGD
+	@domain type+={top}
+	@property align={center}
+	@property childLayout={horizontal}
+	@property controls+=addNifty({runningPanel left},$this.height,100%)+pickFinal({runningPanel middle})+pickFinal({runningPanel right})
+	@property height=10%
+	@property name='running_panel_top'
+	@property valign={top}
+	@property width=100%
+@end
+
+@factory SplashPanel:PanelsGD
+	@domain type+={gameSplashPanel}
+	@property align={center}
+	@property childLayout={center}
+	@property controls+=addNifty({imageSplash},100%,100%)
+	@property height=90%
+	@property name='game_splash_panel'
+	@property valign={center}
+	@property width=90%
+@end
+
+@blueprint StartPanelsGD:PanelsGD
+	@domain type+={startPanels}
+@end
+
+@factory GameStartPanel:StartPanelsGD
+	@domain type+={gameStartPanel}
+	@property align={center}
+	@property childLayout={vertical}
+	@property controls+=addNifty(labelStart,100%,50%)+addNifty({imagePlay},40%,40%)
+	@property height=40%
+	@property name='game_start_panel'
+	@property valign={center}
+	@property width=60%
+@end
+
+@factory GoToConfigPanel:StartPanelsGD
+	@domain type+={gotoConfigPanel}
+	@property align=randomTag({left right})
+	@property childLayout={horizontal}
+	@property controls+=addNifty({imageConfig},100%,100%)
+	@property height=10%
+	@property name='gotoConfigPanel'
+	@property valign={bottom}
+	@property width=10%
+@end
+
+@blueprint SubPanels:PanelsGD
+	@domain type+={subPanel}
+@end
+
+@factory TimeCountdownPanel:PanelsGD
+	@domain type+={TimeCountdownPanel}
+	@property align={center}
+	@property childLayout={center}
+	@property controls+=addNifty({labelCountDown},100%,100%,{center},{center})
+	@property height=20%
+	@property name='time_countdown_panel'
+	@property valign={center}
+	@property visible=0
+	@property width=50%
+@end
+
+@blueprint VictoryFailPanelsGD:PanelsGD
+	@domain type+={victoryFailPanels}
+@end
+
+@blueprint MainVictoryFailPanelsGD:VictoryFailPanelsGD
+	@domain type+={mainVictoryFailPanels}
+	@property align={center}
+	@property backgroundColor=$gameConsts.themeColor.oppositeColor
+	@property childLayout={center}
+	@property controls+=addNifty({$this.labelTag label},100%,35%,{center},{top})+addNifty({subVictoryFailPanels $this.panelTag},$uiIconSizeBig*2,*)+addNifty(imageConfig image,$uiIconSize,$uiIconSize,{!center},{bottom})
+	@property height=50%
+	@property valign={center}
+	@property width=60%
+@end
+
+@factory FailPanel:MainVictoryFailPanelsGD
+	@domain type+={failPanel}
+	@property labelTag={labelFail}
+	@property name='game_fail_panel'
+	@property panelTag={fail}
+@end
+
+@factory VictoryPanel:MainVictoryFailPanelsGD
+	@domain type+={victoryPanel}
+	@property labelTag={labelVictory}
+	@property name='game_victory_panel'
+	@property panelTag={victory}
+@end
+
+@blueprint SubVictoryFailPanelsGD:VictoryFailPanelsGD
+	@domain type+={subVictoryFailPanels}
+	@property align={center}
+	@property childLayout={horizontal}
+	@property controls=$this.listLevel+addNifty({imageReload},$uiIconSizeBig,$uiIconSizeBig,{center},{center})
+	@property height=$uiIconSize*2
+	@property listLevel=if($gameGenre.isListLevelActive==1,addNifty({imageList},$uiIconSizeBig,$uiIconSizeBig),'')
+	@property name='subVictoryPanel'
+	@property valign={center}
+	@property width=*
+@end
+
+@factory FailSubConfigPanel:SubVictoryFailPanelsGD
+	@domain type+={fail}
+	@property align={center}
+	@property valign={center}
+@end
+
+@factory VictorySubConfigPanel:SubVictoryFailPanelsGD
+	@domain type+={victory}
+	@property controls+=addNifty({imageNextLevel},$uiIconSizeBig,$uiIconSizeBig,{center},{center})
+@end
+
+@blueprint ScreensGD:UIGameFactories
+	@domain type+={screen}
+	@property layers+=[]
+	@generator base=pickOne({UIScreenComponent})
+@end
+
+@factory ScreenConfig:ScreensGD
+	@domain type+={config}
+	@property layers+=addNifty({configLayer})
+	@property name='config'
+@end
+
+@factory ScreenDebug:ScreensGD
+	@domain keyword={debug}
+	@domain type+={debug}
+	@property layers+=addNifty({debugLayer})+addNifty({battleNotifLayer})
+	@property name='debug'
+@end
+
+@factory ScreenEmpty:ScreensGD
+	@domain type+={empty}
+	@property name='empty'
+@end
+
+@factory ScreenFail:ScreensGD
+	@domain type+={fail}
+	@property layers+=addNifty({failLayer})
+	@property name='fail'
+@end
+
+@factory ScreenPause:ScreensGD
+	@domain type+={pause}
+	@property layers+=addNifty({pauseLayer})
+	@property name='pause'
+@end
+
+@factory ScreenRunning:ScreensGD
+	@domain keyword={}
+	@domain type+={running}
+	@property layers+=addNifty({battleNotifLayer})+addNifty({runningLayer})
+	@property name='running'
+	@comment description=' Tela que aparece quando o jogador est?? rodando o jogo'
+@end
+
+@factory ScreenSplash:ScreensGD
+	@domain type+={splash}
+	@property layers+=addNifty({splashLayer})
+	@property name='splash'
+	@comment description=' Tela que aparece quando esta carregando o jogo'
+@end
+
+@factory ScreenStart:ScreensGD
+	@domain type+={start}
+	@property layers+=addNifty({startLayer})
+	@property name='start'
+@end
+
+@factory ScreenVictory:ScreensGD
+	@domain type+={victory}
+	@property layers+=addNifty({victoryLayer})
+	@property name='victory'
+@end
+

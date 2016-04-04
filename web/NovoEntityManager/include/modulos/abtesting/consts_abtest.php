@@ -1,0 +1,5 @@
+<?
+
+define("ABTEST_ROTULO_PROJETO", 3);
+define("ABTEST_ROTULO_CRIAR_CONTA", 2);
+?>

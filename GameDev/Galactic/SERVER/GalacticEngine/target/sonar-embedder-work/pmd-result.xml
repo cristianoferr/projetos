@@ -1,0 +1,1716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.5" timestamp="2012-03-29T14:31:10.942">
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\Interface\controles\ProgressBarControl.java">
+<violation beginline="17" endline="17" begincolumn="27" endcolumn="38" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="Interface.controles" class="ProgressBarControl" variable="fundoElement" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'fundoElement'.
+</violation>
+<violation beginline="17" endline="17" begincolumn="19" endcolumn="39" rule="SingularField" ruleset="Design Rules" package="Interface.controles" class="ProgressBarControl" variable="fundoElement" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#SingularField" priority="4">
+Perhaps 'fundoElement' could be replaced by a local variable.
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\Galactic.java">
+<violation beginline="41" endline="41" begincolumn="16" endcolumn="33" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic" class="ThreadGameLogic" method="run" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="44" endline="44" begincolumn="14" endcolumn="31" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic" class="ThreadGameLogic" method="run" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="78" endline="78" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic" class="Galactic" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="84" endline="84" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic" class="Galactic" method="getInstance" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\Utils\AssocList.java">
+<violation beginline="94" endline="94" begincolumn="23" endcolumn="42" rule="AvoidThrowingNullPointerException" ruleset="Strict Exception Rules" package="galactic.Utils" class="AssocList" method="add" externalInfoUrl="http://pmd.sourceforge.net/rules/strictexception.html#AvoidThrowingNullPointerException" priority="3">
+Avoid throwing null pointer exceptions.
+</violation>
+<violation beginline="115" endline="115" begincolumn="23" endcolumn="42" rule="AvoidThrowingNullPointerException" ruleset="Strict Exception Rules" package="galactic.Utils" class="AssocList" method="set" externalInfoUrl="http://pmd.sourceforge.net/rules/strictexception.html#AvoidThrowingNullPointerException" priority="3">
+Avoid throwing null pointer exceptions.
+</violation>
+<violation beginline="118" endline="118" begincolumn="14" endcolumn="32" rule="CompareObjectsWithEquals" ruleset="Design Rules" package="galactic.Utils" class="AssocList" method="set" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#CompareObjectsWithEquals" priority="3">
+Use equals() to compare object references.
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\Utils\Consts.java">
+<violation beginline="77" endline="77" begincolumn="24" endcolumn="41" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.Utils" class="Consts" method="initPath" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\Utils\ItemFactory.java">
+<violation beginline="66" endline="67" begincolumn="17" endcolumn="62" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.Utils" class="ItemFactory" method="createEquipmentSlot" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="68" endline="69" begincolumn="17" endcolumn="61" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.Utils" class="ItemFactory" method="createEquipmentSlot" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="70" endline="71" begincolumn="17" endcolumn="59" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.Utils" class="ItemFactory" method="createEquipmentSlot" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="72" endline="73" begincolumn="17" endcolumn="59" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.Utils" class="ItemFactory" method="createEquipmentSlot" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="74" endline="75" begincolumn="17" endcolumn="59" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.Utils" class="ItemFactory" method="createEquipmentSlot" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\controller\AbstractController.java">
+<violation beginline="14" endline="14" begincolumn="13" endcolumn="47" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.controller" class="AbstractController" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'ArrayList'; use the interface instead
+</violation>
+<violation beginline="18" endline="18" begincolumn="9" endcolumn="69" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.controller" class="AbstractController" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'setRegisteredViews' called during object construction
+</violation>
+<violation beginline="36" endline="36" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.controller" class="AbstractController" method="addView" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="91" endline="91" begincolumn="40" endcolumn="74" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.controller" class="AbstractController" method="setRegisteredViews" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'ArrayList'; use the interface instead
+</violation>
+<violation beginline="96" endline="96" begincolumn="16" endcolumn="50" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.controller" class="AbstractController" method="getRegisteredViews" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'ArrayList'; use the interface instead
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\controller\GameLogic.java">
+<violation beginline="37" endline="37" begincolumn="17" endcolumn="28" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.controller" class="GameLogic" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="37" endline="37" begincolumn="17" endcolumn="28" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.controller" class="GameLogic" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="37" endline="37" begincolumn="48" endcolumn="59" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.controller" class="GameLogic" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="38" endline="38" begincolumn="17" endcolumn="28" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.controller" class="GameLogic" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="38" endline="38" begincolumn="17" endcolumn="28" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.controller" class="GameLogic" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="38" endline="38" begincolumn="42" endcolumn="53" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.controller" class="GameLogic" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="116" endline="116" begincolumn="25" endcolumn="44" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.controller" class="GameLogic" method="update" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="140" endline="140" begincolumn="33" endcolumn="77" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.controller" class="GameLogic" method="update" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\controller\ItemsController.java">
+<violation beginline="212" endline="212" begincolumn="17" endcolumn="32" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.controller" class="ItemsController" method="getCameraPosition" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="230" endline="230" begincolumn="17" endcolumn="28" rule="UnnecessaryLocalBeforeReturn" ruleset="Design Rules" package="galactic.controller" class="ItemsController" method="getEntityByID" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UnnecessaryLocalBeforeReturn" priority="3">
+Consider simply returning the value vs storing it in local variable 'item'
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\controller\PhysicsLogicCyclone.java">
+<violation beginline="28" endline="28" begincolumn="25" endcolumn="37" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.controller" class="PhysicsLogicCyclone" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'initPhysics' called during object construction
+</violation>
+<violation beginline="47" endline="47" begincolumn="25" endcolumn="42" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.controller" class="PhysicsLogicCyclone" method="initPhysics" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\controller\handlers\PhysicsItem.java">
+<violation beginline="32" endline="32" begincolumn="10" endcolumn="37" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.controller.handlers" class="PhysicsItem" method="setMass" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\controller\messenger\Coord.java">
+<violation beginline="27" endline="31" begincolumn="8" endcolumn="1" rule="CloneThrowsCloneNotSupportedException" ruleset="Clone Implementation Rules" package="galactic.controller.messenger" class="Coord" externalInfoUrl="http://pmd.sourceforge.net/rules/clone.html#CloneThrowsCloneNotSupportedException" priority="3">
+clone() method should throw CloneNotSupportedException
+</violation>
+<violation beginline="35" endline="35" begincolumn="16" endcolumn="36" rule="SuspiciousEqualsMethodName" ruleset="Naming Rules" package="galactic.controller.messenger" class="Coord" method="equals" externalInfoUrl="http://pmd.sourceforge.net/rules/naming.html#SuspiciousEqualsMethodName" priority="2">
+The method name and parameter number are suspiciously close to equals(Object)
+</violation>
+<violation beginline="59" endline="59" begincolumn="9" endcolumn="15" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.controller.messenger" class="Coord" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'setX' called during object construction
+</violation>
+<violation beginline="60" endline="60" begincolumn="9" endcolumn="15" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.controller.messenger" class="Coord" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'setY' called during object construction
+</violation>
+<violation beginline="61" endline="61" begincolumn="9" endcolumn="15" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.controller.messenger" class="Coord" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'setZ' called during object construction
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\controller\messenger\EvtUpdate.java">
+<violation beginline="7" endline="9" begincolumn="16" endcolumn="9" rule="UnusedFormalParameter" ruleset="Unused Code Rules" package="galactic.controller.messenger" class="EvtUpdate" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedFormalParameter" priority="3">
+Avoid unused constructor parameters such as 'obj'.
+</violation>
+<violation beginline="7" endline="9" begincolumn="16" endcolumn="9" rule="UnusedFormalParameter" ruleset="Unused Code Rules" package="galactic.controller.messenger" class="EvtUpdate" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedFormalParameter" priority="3">
+Avoid unused constructor parameters such as 'property'.
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\controller\messenger\ObjUpdate.java">
+<violation beginline="50" endline="50" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.controller.messenger" class="ObjUpdate" method="hasReached" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="59" endline="59" begincolumn="17" endcolumn="27" rule="UnnecessaryLocalBeforeReturn" ruleset="Design Rules" package="galactic.controller.messenger" class="ObjUpdate" method="getMsgTime" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UnnecessaryLocalBeforeReturn" priority="3">
+Consider simply returning the value vs storing it in local variable 'dif'
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\controller\messenger\StarMessenger.java">
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="17" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.controller.messenger" class="StarMessenger" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="17" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.controller.messenger" class="StarMessenger" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="10" endline="10" begincolumn="33" endcolumn="49" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.controller.messenger" class="StarMessenger" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="22" endline="22" begincolumn="33" endcolumn="50" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.controller.messenger" class="StarMessenger" method="turn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="28" endline="28" begincolumn="25" endcolumn="42" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.controller.messenger" class="StarMessenger" method="turn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Abstract\ArtificialEntity.java">
+<violation beginline="30" endline="30" begincolumn="1" endcolumn="23" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="30" endline="30" begincolumn="1" endcolumn="23" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="30" endline="30" begincolumn="38" endcolumn="60" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="33" endline="33" begincolumn="1" endcolumn="15" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="33" endline="33" begincolumn="1" endcolumn="15" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="33" endline="33" begincolumn="36" endcolumn="50" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="61" endline="63" begincolumn="17" endcolumn="39" rule="ForLoopsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" method="addActiveControl" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#ForLoopsMustUseBraces" priority="3">
+Avoid using for statements without curly braces
+</violation>
+<violation beginline="61" endline="63" begincolumn="59" endcolumn="39" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" method="addActiveControl" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="62" endline="63" begincolumn="25" endcolumn="39" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" method="addActiveControl" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="62" endline="63" begincolumn="25" endcolumn="39" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" method="addActiveControl" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+<violation beginline="92" endline="93" begincolumn="25" endcolumn="96" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" method="activateGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="98" endline="98" begincolumn="17" endcolumn="42" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" method="activateGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+<violation beginline="114" endline="114" begincolumn="8" endcolumn="23" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" method="getSlotsFromWareGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="114" endline="114" begincolumn="8" endcolumn="23" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" method="getSlotsFromWareGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="162" endline="162" begincolumn="17" endcolumn="68" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" method="getCMD" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="167" endline="167" begincolumn="17" endcolumn="68" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" method="getNextCMD" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="172" endline="172" begincolumn="17" endcolumn="58" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="ArtificialEntity" method="removeCMDQueue" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Abstract\Item.java">
+<violation beginline="41" endline="41" begincolumn="17" endcolumn="45" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.Abstract" class="Item" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="43" endline="43" begincolumn="22" endcolumn="38" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="galactic.model.Entity.Abstract" class="Item" variable="ultimoUpdateCoord" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'ultimoUpdateCoord'.
+</violation>
+<violation beginline="65" endline="65" begincolumn="17" endcolumn="43" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="Item" method="initializeProperty" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="78" endline="79" begincolumn="17" endcolumn="60" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="Item" method="setVelocity" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="83" endline="84" begincolumn="17" endcolumn="48" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="Item" method="setVelocity" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="87" endline="88" begincolumn="17" endcolumn="60" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="Item" method="setRotation" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="121" endline="121" begincolumn="18" endcolumn="34" rule="CompareObjectsWithEquals" ruleset="Design Rules" package="galactic.model.Entity.Abstract" class="Item" method="setWorld" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#CompareObjectsWithEquals" priority="3">
+Use equals() to compare object references.
+</violation>
+<violation beginline="161" endline="161" begincolumn="18" endcolumn="33" rule="CompareObjectsWithEquals" ruleset="Design Rules" package="galactic.model.Entity.Abstract" class="Item" method="setBody" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#CompareObjectsWithEquals" priority="3">
+Use equals() to compare object references.
+</violation>
+<violation beginline="225" endline="225" begincolumn="17" endcolumn="93" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="Item" method="getProperty" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="234" endline="234" begincolumn="17" endcolumn="93" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="Item" method="setProperty" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="246" endline="252" begincolumn="25" endcolumn="25" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="galactic.model.Entity.Abstract" class="Item" method="propagate_physics_properties" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+<violation beginline="351" endline="351" begincolumn="17" endcolumn="64" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="Item" method="getMass" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="402" endline="402" begincolumn="17" endcolumn="65" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="Item" method="isAlive" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="402" endline="402" begincolumn="33" endcolumn="65" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="Item" method="isAlive" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="402" endline="402" begincolumn="33" endcolumn="65" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="galactic.model.Entity.Abstract" class="Item" method="isAlive" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+<violation beginline="499" endline="499" begincolumn="30" endcolumn="33" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model.Entity.Abstract" class="Item" method="XMLLoader" variable="atrs" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'atrs'.
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Abstract\ObjectData.java">
+<violation beginline="19" endline="19" begincolumn="17" endcolumn="29" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.Entity.Abstract" class="ObjectData" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'setType' called during object construction
+</violation>
+<violation beginline="36" endline="37" begincolumn="17" endcolumn="93" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="ObjectData" method="setType" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Abstract\ObjetoPersistente.java">
+<violation beginline="14" endline="14" begincolumn="17" endcolumn="38" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="ObjetoPersistente" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="26" endline="27" begincolumn="17" endcolumn="93" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="ObjetoPersistente" method="setName" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="42" endline="42" begincolumn="17" endcolumn="38" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="ObjetoPersistente" method="setId" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="43" endline="44" begincolumn="17" endcolumn="86" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Abstract" class="ObjetoPersistente" method="setId" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Bullet.java">
+<violation beginline="13" endline="13" begincolumn="23" endcolumn="53" rule="SuspiciousConstantFieldName" ruleset="Naming Rules" package="galactic.model.Entity" class="Bullet" variable="BASIC_AMMO" externalInfoUrl="http://pmd.sourceforge.net/rules/naming.html#SuspiciousConstantFieldName" priority="3">
+The field name indicates a constant but its modifiers do not
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Commands\AbstractCommand.java">
+<violation beginline="16" endline="16" begincolumn="1" endcolumn="18" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.Commands" class="AbstractCommand" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="16" endline="16" begincolumn="1" endcolumn="18" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.Entity.Commands" class="AbstractCommand" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="16" endline="16" begincolumn="31" endcolumn="48" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.model.Entity.Commands" class="AbstractCommand" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="26" endline="26" begincolumn="9" endcolumn="32" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Commands" class="AbstractCommand" method="addParam" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="30" endline="30" begincolumn="9" endcolumn="27" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Commands" class="AbstractCommand" method="addParam" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="34" endline="34" begincolumn="9" endcolumn="27" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Commands" class="AbstractCommand" method="addParam" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="45" endline="45" begincolumn="8" endcolumn="25" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.Commands" class="AbstractCommand" method="getParams" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="45" endline="45" begincolumn="8" endcolumn="25" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.Entity.Commands" class="AbstractCommand" method="getParams" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Commands\CommandManager.java">
+<violation beginline="12" endline="12" begincolumn="1" endcolumn="14" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.Commands" class="CommandManager" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="12" endline="12" begincolumn="1" endcolumn="14" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.Entity.Commands" class="CommandManager" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="12" endline="12" begincolumn="29" endcolumn="42" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.model.Entity.Commands" class="CommandManager" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="38" endline="38" begincolumn="9" endcolumn="78" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Commands" class="CommandManager" method="createCMD" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="39" endline="39" begincolumn="9" endcolumn="82" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Commands" class="CommandManager" method="createCMD" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="45" endline="45" begincolumn="9" endcolumn="79" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Commands" class="CommandManager" method="createCMD" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="46" endline="46" begincolumn="9" endcolumn="83" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Commands" class="CommandManager" method="createCMD" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="53" endline="53" begincolumn="9" endcolumn="77" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Commands" class="CommandManager" method="createCMD" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="54" endline="54" begincolumn="9" endcolumn="81" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Commands" class="CommandManager" method="createCMD" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Logic\Fitting.java">
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="22" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.Logic" class="Fitting" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="39" endline="39" begincolumn="35" endcolumn="54" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.Entity.Logic" class="Fitting" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'createItemSlot' called during object construction
+</violation>
+<violation beginline="64" endline="64" begincolumn="9" endcolumn="97" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="Fitting" method="createItemSlot" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="65" endline="65" begincolumn="9" endcolumn="93" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="Fitting" method="createItemSlot" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="66" endline="66" begincolumn="9" endcolumn="93" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="Fitting" method="createItemSlot" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="67" endline="67" begincolumn="9" endcolumn="92" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="Fitting" method="createItemSlot" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="71" endline="71" begincolumn="8" endcolumn="23" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.Logic" class="Fitting" method="getSlotsInGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="71" endline="71" begincolumn="8" endcolumn="23" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.Entity.Logic" class="Fitting" method="getSlotsInGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="72" endline="72" begincolumn="9" endcolumn="24" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.Entity.Logic" class="Fitting" method="getSlotsInGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="72" endline="72" begincolumn="32" endcolumn="47" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.model.Entity.Logic" class="Fitting" method="getSlotsInGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="76" endline="76" begincolumn="17" endcolumn="72" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="Fitting" method="getSlotsInGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="85" endline="85" begincolumn="17" endcolumn="79" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="Fitting" method="getWareAtPosition" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="101" endline="101" begincolumn="9" endcolumn="37" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="Fitting" method="isWareCompatible" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="102" endline="102" begincolumn="9" endcolumn="36" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="Fitting" method="isWareCompatible" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="103" endline="103" begincolumn="9" endcolumn="43" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="Fitting" method="isWareCompatible" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="104" endline="104" begincolumn="9" endcolumn="70" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="Fitting" method="isWareCompatible" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="105" endline="105" begincolumn="9" endcolumn="83" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="Fitting" method="isWareCompatible" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Logic\InternalLogic.java">
+<violation beginline="20" endline="20" begincolumn="9" endcolumn="31" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.Logic" class="InternalLogic" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="36" endline="36" begincolumn="17" endcolumn="37" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.Entity.Logic" class="InternalLogic" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'resetProperties' called during object construction
+</violation>
+<violation beginline="72" endline="77" begincolumn="25" endcolumn="25" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="galactic.model.Entity.Logic" class="InternalLogic" method="turn" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+<violation beginline="135" endline="135" begincolumn="17" endcolumn="38" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="InternalLogic" method="getWareCargo" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="145" endline="145" begincolumn="17" endcolumn="73" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="InternalLogic" method="addCargo" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="158" endline="158" begincolumn="17" endcolumn="55" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="InternalLogic" method="removeCargo" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="160" endline="160" begincolumn="17" endcolumn="59" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="InternalLogic" method="removeCargo" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="200" endline="200" begincolumn="17" endcolumn="52" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="InternalLogic" method="addEnergy" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="208" endline="208" begincolumn="24" endcolumn="27" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model.Entity.Logic" class="InternalLogic" method="initMulti" variable="curr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'curr'.
+</violation>
+<violation beginline="209" endline="209" begincolumn="24" endcolumn="26" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model.Entity.Logic" class="InternalLogic" method="initMulti" variable="max" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'max'.
+</violation>
+<violation beginline="211" endline="211" begincolumn="24" endcolumn="30" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model.Entity.Logic" class="InternalLogic" method="initMulti" variable="baseStr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'baseStr'.
+</violation>
+<violation beginline="270" endline="270" begincolumn="25" endcolumn="70" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="InternalLogic" method="resetProperties" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Logic\Slot.java">
+<violation beginline="25" endline="25" begincolumn="17" endcolumn="71" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="Slot" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Logic\SlotGrouping.java">
+<violation beginline="17" endline="17" begincolumn="9" endcolumn="20" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.Logic" class="SlotGrouping" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="17" endline="17" begincolumn="9" endcolumn="20" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.Entity.Logic" class="SlotGrouping" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="17" endline="17" begincolumn="32" endcolumn="43" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.model.Entity.Logic" class="SlotGrouping" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="26" endline="26" begincolumn="17" endcolumn="44" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotGrouping" method="addSlot" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="35" endline="35" begincolumn="8" endcolumn="19" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.Logic" class="SlotGrouping" method="getSlots" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="35" endline="35" begincolumn="8" endcolumn="19" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.Entity.Logic" class="SlotGrouping" method="getSlots" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="51" endline="51" begincolumn="25" endcolumn="77" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotGrouping" method="activate" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+<violation beginline="53" endline="53" begincolumn="25" endcolumn="64" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotGrouping" method="activate" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Logic\SlotRule.java">
+<violation beginline="12" endline="12" begincolumn="1" endcolumn="14" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.Logic" class="SlotRule" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="12" endline="12" begincolumn="1" endcolumn="14" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.Entity.Logic" class="SlotRule" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="12" endline="12" begincolumn="26" endcolumn="39" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.model.Entity.Logic" class="SlotRule" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="28" endline="28" begincolumn="40" endcolumn="51" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="28" endline="28" begincolumn="40" endcolumn="51" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="28" endline="86" begincolumn="8" endcolumn="1" rule="NcssMethodCount" ruleset="Code Size Rules" package="galactic.model.Entity.Logic" class="SlotRule" externalInfoUrl="http://pmd.sourceforge.net/rules/codesize.html#NcssMethodCount" priority="3">
+The method applyRules() has an NCSS line count of 52
+</violation>
+<violation beginline="36" endline="36" begincolumn="25" endcolumn="48" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="45" endline="47" begincolumn="33" endcolumn="58" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="46" endline="47" begincolumn="37" endcolumn="58" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="46" endline="47" begincolumn="37" endcolumn="58" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+<violation beginline="48" endline="50" begincolumn="33" endcolumn="58" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="49" endline="50" begincolumn="37" endcolumn="58" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="49" endline="50" begincolumn="37" endcolumn="58" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+<violation beginline="57" endline="57" begincolumn="41" endcolumn="114" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="57" endline="57" begincolumn="41" endcolumn="114" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+<violation beginline="57" endline="57" begincolumn="46" endcolumn="94" rule="UnnecessaryCaseChange" ruleset="String and StringBuffer Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/strings.html#UnnecessaryCaseChange" priority="4">
+Using equalsIgnoreCase() is cleaner than using toUpperCase/toLowerCase().equals().
+</violation>
+<violation beginline="60" endline="60" begincolumn="41" endcolumn="99" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="60" endline="60" begincolumn="41" endcolumn="99" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+<violation beginline="65" endline="65" begincolumn="33" endcolumn="85" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="66" endline="66" begincolumn="33" endcolumn="85" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="67" endline="67" begincolumn="33" endcolumn="85" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="69" endline="69" begincolumn="41" endcolumn="70" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="69" endline="69" begincolumn="41" endcolumn="70" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+<violation beginline="72" endline="72" begincolumn="41" endcolumn="69" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="72" endline="72" begincolumn="41" endcolumn="69" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+<violation beginline="75" endline="75" begincolumn="41" endcolumn="69" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="75" endline="75" begincolumn="41" endcolumn="69" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+<violation beginline="78" endline="78" begincolumn="41" endcolumn="70" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="78" endline="78" begincolumn="41" endcolumn="70" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="galactic.model.Entity.Logic" class="SlotRule" method="applyRules" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Logic\representation\Memory.java">
+<violation beginline="55" endline="55" begincolumn="9" endcolumn="39" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.Logic.representation" class="Memory" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="61" endline="61" begincolumn="25" endcolumn="46" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.Entity.Logic.representation" class="Memory" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'getEntity' called during object construction
+</violation>
+<violation beginline="61" endline="61" begincolumn="25" endcolumn="46" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.Entity.Logic.representation" class="Memory" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'getEntity' called during object construction
+</violation>
+<violation beginline="61" endline="61" begincolumn="17" endcolumn="47" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.Entity.Logic.representation" class="Memory" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'setSelf' called during object construction
+</violation>
+<violation beginline="89" endline="89" begincolumn="17" endcolumn="68" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic.representation" class="Memory" method="getEntity" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="94" endline="94" begincolumn="17" endcolumn="68" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic.representation" class="Memory" method="getEntity" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="103" endline="145" begincolumn="16" endcolumn="9" rule="NcssMethodCount" ruleset="Code Size Rules" package="galactic.model.Entity.Logic.representation" class="Memory" externalInfoUrl="http://pmd.sourceforge.net/rules/codesize.html#NcssMethodCount" priority="3">
+The method getFact() has an NCSS line count of 61
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Logic\representation\MemoryDTO.java">
+<violation beginline="27" endline="28" begincolumn="9" endcolumn="39" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic.representation" class="MemoryDTO" method="getItem" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="33" endline="34" begincolumn="9" endcolumn="28" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic.representation" class="MemoryDTO" method="getVector" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Logic\representation\MemoryItem.java">
+<violation beginline="72" endline="72" begincolumn="9" endcolumn="35" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic.representation" class="MemoryItem" method="calcROCHorizontal" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="73" endline="73" begincolumn="9" endcolumn="40" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic.representation" class="MemoryItem" method="calcROCHorizontal" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="85" endline="85" begincolumn="9" endcolumn="35" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic.representation" class="MemoryItem" method="calcROCVertical" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="86" endline="86" begincolumn="9" endcolumn="38" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.Logic.representation" class="MemoryItem" method="calcROCVertical" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="188" endline="188" begincolumn="33" endcolumn="50" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.Entity.Logic.representation" class="MemoryItem" method="update" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Planet.java">
+<violation beginline="19" endline="19" begincolumn="9" endcolumn="20" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity" class="Planet" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="19" endline="19" begincolumn="9" endcolumn="20" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.Entity" class="Planet" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="19" endline="19" begincolumn="35" endcolumn="46" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.model.Entity" class="Planet" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="74" endline="75" begincolumn="17" endcolumn="147" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity" class="Planet" method="initializePlanet" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="76" endline="76" begincolumn="17" endcolumn="107" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity" class="Planet" method="initializePlanet" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="139" endline="140" begincolumn="9" endcolumn="58" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity" class="Planet" method="turn" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="152" endline="153" begincolumn="9" endcolumn="55" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity" class="Planet" method="turn" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\SphereItem.java">
+<violation beginline="15" endline="15" begincolumn="17" endcolumn="35" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.Entity" class="SphereItem" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'setTexture' called during object construction
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\Star.java">
+<violation beginline="51" endline="51" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.Entity" class="Star" method="createRandom" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\actuators\EngineSlot.java">
+<violation beginline="31" endline="31" begincolumn="17" endcolumn="51" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.actuators" class="EngineSlot" method="initialize" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\actuators\ItemSlot.java">
+<violation beginline="25" endline="25" begincolumn="17" endcolumn="45" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.actuators" class="ItemSlot" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="55" endline="55" begincolumn="17" endcolumn="39" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.actuators" class="ItemSlot" method="setWare" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="74" endline="74" begincolumn="17" endcolumn="100" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.actuators" class="ItemSlot" method="turn" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="76" endline="76" begincolumn="25" endcolumn="61" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.actuators" class="ItemSlot" method="turn" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="166" endline="166" begincolumn="16" endcolumn="45" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.Entity.actuators" class="ItemSlot" method="getDetails" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="170" endline="170" begincolumn="17" endcolumn="44" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.actuators" class="ItemSlot" method="setIntensity" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="171" endline="171" begincolumn="17" endcolumn="44" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.actuators" class="ItemSlot" method="setIntensity" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\actuators\ThrusterSlot.java">
+<violation beginline="32" endline="32" begincolumn="17" endcolumn="48" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.actuators" class="ThrusterSlot" method="turn" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\actuators\WeaponSlot.java">
+<violation beginline="29" endline="30" begincolumn="17" endcolumn="61" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.actuators" class="WeaponSlot" method="initialize" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="32" endline="33" begincolumn="17" endcolumn="57" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.actuators" class="WeaponSlot" method="initialize" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="52" endline="52" begincolumn="17" endcolumn="45" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.actuators" class="WeaponSlot" method="executeAction" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="66" endline="66" begincolumn="25" endcolumn="61" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.actuators" class="WeaponSlot" method="executeAction" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="76" endline="76" begincolumn="24" endcolumn="24" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model.Entity.actuators" class="WeaponSlot" method="executeAction" variable="s" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 's'.
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Entity\control\Control.java">
+<violation beginline="24" endline="24" begincolumn="10" endcolumn="32" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.Entity.control" class="Control" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'setIntensity' called during object construction
+</violation>
+<violation beginline="31" endline="31" begincolumn="10" endcolumn="32" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.Entity.control" class="Control" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'setIntensity' called during object construction
+</violation>
+<violation beginline="37" endline="37" begincolumn="10" endcolumn="32" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.Entity.control" class="Control" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'setIntensity' called during object construction
+</violation>
+<violation beginline="62" endline="62" begincolumn="10" endcolumn="37" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.control" class="Control" method="setIntensity" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="63" endline="63" begincolumn="10" endcolumn="37" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.Entity.control" class="Control" method="setIntensity" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\PropertyManager.java">
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="24" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="12" endline="12" begincolumn="1" endcolumn="14" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="12" endline="12" begincolumn="1" endcolumn="14" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="12" endline="12" begincolumn="35" endcolumn="48" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="142" endline="142" begincolumn="9" endcolumn="30" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="143" endline="143" begincolumn="9" endcolumn="42" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="145" endline="145" begincolumn="9" endcolumn="33" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="146" endline="146" begincolumn="9" endcolumn="35" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="147" endline="147" begincolumn="9" endcolumn="35" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="148" endline="148" begincolumn="9" endcolumn="36" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="149" endline="149" begincolumn="9" endcolumn="41" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="150" endline="150" begincolumn="9" endcolumn="39" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="151" endline="151" begincolumn="9" endcolumn="38" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="152" endline="152" begincolumn="9" endcolumn="35" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="153" endline="153" begincolumn="9" endcolumn="40" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="154" endline="154" begincolumn="9" endcolumn="34" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="158" endline="158" begincolumn="9" endcolumn="35" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="159" endline="159" begincolumn="9" endcolumn="35" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="160" endline="160" begincolumn="9" endcolumn="36" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="161" endline="161" begincolumn="9" endcolumn="41" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="162" endline="162" begincolumn="9" endcolumn="39" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="163" endline="163" begincolumn="9" endcolumn="38" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="164" endline="164" begincolumn="9" endcolumn="35" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="165" endline="165" begincolumn="9" endcolumn="34" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="168" endline="168" begincolumn="9" endcolumn="35" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="169" endline="169" begincolumn="9" endcolumn="35" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="170" endline="170" begincolumn="9" endcolumn="36" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="171" endline="171" begincolumn="9" endcolumn="41" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="172" endline="172" begincolumn="9" endcolumn="39" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="173" endline="173" begincolumn="9" endcolumn="38" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="174" endline="174" begincolumn="9" endcolumn="35" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="175" endline="175" begincolumn="9" endcolumn="34" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="177" endline="177" begincolumn="9" endcolumn="39" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="178" endline="178" begincolumn="9" endcolumn="39" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="179" endline="179" begincolumn="9" endcolumn="39" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="180" endline="180" begincolumn="9" endcolumn="40" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="181" endline="181" begincolumn="9" endcolumn="45" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="182" endline="182" begincolumn="9" endcolumn="43" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="183" endline="183" begincolumn="9" endcolumn="42" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="184" endline="184" begincolumn="9" endcolumn="38" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model" class="PropertyManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addProperty' called during object construction
+</violation>
+<violation beginline="205" endline="205" begincolumn="15" endcolumn="28" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model" class="PropertyManager" method="getShipProperties" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="205" endline="205" begincolumn="15" endcolumn="28" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model" class="PropertyManager" method="getShipProperties" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="213" endline="213" begincolumn="8" endcolumn="32" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model" class="PropertyManager" method="getProperties" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\Sistema.java">
+<violation beginline="63" endline="63" begincolumn="22" endcolumn="30" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="galactic.model" class="Sistema" variable="shipTeste" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'shipTeste'.
+</violation>
+<violation beginline="286" endline="286" begincolumn="22" endcolumn="38" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="galactic.model" class="Sistema" method="insertTestShips" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'insertTestShips()'.
+</violation>
+<violation beginline="353" endline="353" begincolumn="25" endcolumn="78" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model" class="Sistema" method="getEntityByID" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\XMLBuilder.java">
+<violation beginline="142" endline="142" begincolumn="25" endcolumn="26" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model" class="XMLBuilder" method="buildXMLModel3D" variable="el" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'el'.
+</violation>
+<violation beginline="188" endline="188" begincolumn="25" endcolumn="26" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model" class="XMLBuilder" method="buildXMLWare" variable="el" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'el'.
+</violation>
+<violation beginline="193" endline="193" begincolumn="38" endcolumn="43" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer Rules" package="galactic.model" class="XMLBuilder" method="buildXMLWare" externalInfoUrl="http://pmd.sourceforge.net/rules/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;name&quot; appears 4 times in this file; the first occurrence is on line 193
+</violation>
+<violation beginline="254" endline="254" begincolumn="57" endcolumn="80" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model" class="XMLBuilder" method="buildXMLProperty" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="257" endline="257" begincolumn="25" endcolumn="26" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model" class="XMLBuilder" method="buildXMLProperty" variable="el" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'el'.
+</violation>
+<violation beginline="275" endline="275" begincolumn="62" endcolumn="90" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model" class="XMLBuilder" method="buildXMLPropertyValue" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="278" endline="278" begincolumn="33" endcolumn="34" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model" class="XMLBuilder" method="buildXMLPropertyValue" variable="el" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'el'.
+</violation>
+<violation beginline="316" endline="316" begincolumn="17" endcolumn="18" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model" class="XMLBuilder" method="buildXMLGrupo" variable="el" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'el'.
+</violation>
+<violation beginline="317" endline="317" begincolumn="18" endcolumn="25" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model" class="XMLBuilder" method="buildXMLGrupo" variable="iterator" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'iterator'.
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\XMLReader.java">
+<violation beginline="78" endline="78" begincolumn="25" endcolumn="43" rule="AvoidPrintStackTrace" ruleset="Java Logging Rules" package="galactic.model" class="XMLReader" method="startXML" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+<violation beginline="97" endline="97" begincolumn="22" endcolumn="69" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="galactic.model" class="XMLReader" method="parseEntities" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'parseEntities(Element,Sistema)'.
+</violation>
+<violation beginline="120" endline="120" begincolumn="128" endcolumn="133" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer Rules" package="galactic.model" class="XMLReader" method="parseEntity" externalInfoUrl="http://pmd.sourceforge.net/rules/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;name&quot; appears 7 times in this file; the first occurrence is on line 120
+</violation>
+<violation beginline="132" endline="132" begincolumn="39" endcolumn="49" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer Rules" package="galactic.model" class="XMLReader" method="parseEntity" externalInfoUrl="http://pmd.sourceforge.net/rules/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;vlrPadrao&quot; appears 6 times in this file; the first occurrence is on line 132
+</violation>
+<violation beginline="186" endline="186" begincolumn="40" endcolumn="43" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model" class="XMLReader" method="parseModel3D" variable="geom" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'geom'.
+</violation>
+<violation beginline="188" endline="188" begincolumn="32" endcolumn="38" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model" class="XMLReader" method="parseModel3D" variable="density" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'density'.
+</violation>
+<violation beginline="193" endline="193" begincolumn="32" endcolumn="41" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model" class="XMLReader" method="parseModel3D" variable="nameWareTo" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'nameWareTo'.
+</violation>
+<violation beginline="269" endline="269" begincolumn="33" endcolumn="108" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model" class="XMLReader" method="parseRefineInto" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="270" endline="270" begincolumn="33" endcolumn="104" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model" class="XMLReader" method="parseRefineInto" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="271" endline="271" begincolumn="33" endcolumn="110" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model" class="XMLReader" method="parseRefineInto" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="300" endline="300" begincolumn="26" endcolumn="30" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model" class="XMLReader" method="parseGroup" variable="idPai" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'idPai'.
+</violation>
+<violation beginline="314" endline="315" begincolumn="33" endcolumn="111" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model" class="XMLReader" method="parseGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="329" endline="333" begincolumn="25" endcolumn="33" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model" class="XMLReader" method="parseGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="367" endline="367" begincolumn="21" endcolumn="22" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model" class="XMLReader" method="parseGroupProperty" variable="id" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'id'.
+</violation>
+<violation beginline="378" endline="378" begincolumn="17" endcolumn="55" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model" class="XMLReader" method="parseGroupProperty" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="379" endline="379" begincolumn="17" endcolumn="53" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model" class="XMLReader" method="parseGroupProperty" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\ItemExecutor.java">
+<violation beginline="46" endline="51" begincolumn="17" endcolumn="25" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt" class="ItemExecutor" method="turn" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="47" endline="51" begincolumn="25" endcolumn="25" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="galactic.model.bt" class="ItemExecutor" method="turn" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CMPT_FIND_NEAREST_ENEMY.java">
+<violation beginline="70" endline="70" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CMPT_FIND_NEAREST_ENEMY" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CMPT_SELECT_BEST_WEAPON_FIRE_ENEMY.java">
+<violation beginline="74" endline="74" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CMPT_SELECT_BEST_WEAPON_FIRE_ENEMY" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_ENGINE_10P.java">
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_ENGINE_10P" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_ENGINE_20P.java">
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_ENGINE_20P" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_ENGINE_30P.java">
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_ENGINE_30P" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_ENGINE_40P.java">
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_ENGINE_40P" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_ENGINE_50P.java">
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_ENGINE_50P" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_ENGINE_60P.java">
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_ENGINE_60P" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_ENGINE_70P.java">
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_ENGINE_70P" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_ENGINE_80P.java">
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_ENGINE_80P" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_ENGINE_90P.java">
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_ENGINE_90P" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_ENGINE_DEC.java">
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_ENGINE_DEC" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_ENGINE_INC.java">
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_ENGINE_INC" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_ENGINE_MAX.java">
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_ENGINE_MAX" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_ENGINE_STOP.java">
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_ENGINE_STOP" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_MOVE_DOWN.java">
+<violation beginline="70" endline="70" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_MOVE_DOWN" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_MOVE_LEFT.java">
+<violation beginline="70" endline="70" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_MOVE_LEFT" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_MOVE_RIGHT.java">
+<violation beginline="70" endline="70" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_MOVE_RIGHT" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_MOVE_UP.java">
+<violation beginline="68" endline="68" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_MOVE_UP" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_ROLL_LEFT.java">
+<violation beginline="70" endline="70" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_ROLL_LEFT" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_ROLL_RIGHT.java">
+<violation beginline="70" endline="70" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.action" class="CTL_ROLL_RIGHT" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\action\CTL_SHOOT.java">
+<violation beginline="42" endline="50" begincolumn="16" endcolumn="9" rule="UnusedFormalParameter" ruleset="Unused Code Rules" package="galactic.model.bt.execution.action" class="CTL_SHOOT" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedFormalParameter" priority="3">
+Avoid unused constructor parameters such as 'target'.
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\condition\SelfROCHorizIsLow.java">
+<violation beginline="54" endline="54" begincolumn="25" endcolumn="79" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt.execution.condition" class="SelfROCHorizIsLow" method="internalTick" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\condition\SelfROCVertIsLow.java">
+<violation beginline="54" endline="54" begincolumn="25" endcolumn="79" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt.execution.condition" class="SelfROCVertIsLow" method="internalTick" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\condition\SelfRotatingDown.java">
+<violation beginline="54" endline="54" begincolumn="25" endcolumn="79" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt.execution.condition" class="SelfRotatingDown" method="internalTick" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\condition\SelfRotatingLeft.java">
+<violation beginline="54" endline="54" begincolumn="25" endcolumn="79" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt.execution.condition" class="SelfRotatingLeft" method="internalTick" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\condition\SelfRotatingRight.java">
+<violation beginline="53" endline="53" begincolumn="25" endcolumn="79" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt.execution.condition" class="SelfRotatingRight" method="internalTick" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\condition\SelfRotatingUp.java">
+<violation beginline="53" endline="53" begincolumn="25" endcolumn="79" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt.execution.condition" class="SelfRotatingUp" method="internalTick" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\condition\SelfTooMuchRotation.java">
+<violation beginline="52" endline="52" begincolumn="25" endcolumn="79" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt.execution.condition" class="SelfTooMuchRotation" method="internalTick" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\condition\TargetAlmostAlignedHoriz.java">
+<violation beginline="56" endline="56" begincolumn="25" endcolumn="79" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt.execution.condition" class="TargetAlmostAlignedHoriz" method="internalTick" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\condition\TargetInFront.java">
+<violation beginline="50" endline="50" begincolumn="25" endcolumn="79" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt.execution.condition" class="TargetInFront" method="internalTick" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+<violation beginline="52" endline="52" begincolumn="25" endcolumn="79" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt.execution.condition" class="TargetInFront" method="internalTick" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\condition\TargetInRear.java">
+<violation beginline="38" endline="38" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.condition" class="TargetInRear" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="50" endline="50" begincolumn="25" endcolumn="79" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt.execution.condition" class="TargetInRear" method="internalTick" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+<violation beginline="52" endline="52" begincolumn="25" endcolumn="79" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt.execution.condition" class="TargetInRear" method="internalTick" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\condition\TargetInShortRange.java">
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.condition" class="TargetInShortRange" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\condition\TargetIsAligned.java">
+<violation beginline="53" endline="53" begincolumn="25" endcolumn="79" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt.execution.condition" class="TargetIsAligned" method="internalTick" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\condition\TargetIsBelow.java">
+<violation beginline="57" endline="57" begincolumn="25" endcolumn="79" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt.execution.condition" class="TargetIsBelow" method="internalTick" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\condition\TargetIsClose.java">
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.bt.execution.condition" class="TargetIsClose" method="internalSpawn" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\execution\condition\TargetToTheLeft.java">
+<violation beginline="51" endline="51" begincolumn="25" endcolumn="79" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.bt.execution.condition" class="TargetToTheLeft" method="internalTick" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\library\ItemBTLibrary.java">
+<violation beginline="20" endline="20" begincolumn="24" endcolumn="62" rule="SuspiciousConstantFieldName" ruleset="Naming Rules" package="galactic.model.bt.library" class="ItemBTLibrary" variable="CMD_ORIENT_TO" externalInfoUrl="http://pmd.sourceforge.net/rules/naming.html#SuspiciousConstantFieldName" priority="3">
+The field name indicates a constant but its modifiers do not
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\bt\queries\QueryCentral.java">
+<violation beginline="71" endline="71" begincolumn="25" endcolumn="33" rule="UnnecessaryLocalBeforeReturn" ruleset="Design Rules" package="galactic.model.bt.queries" class="QueryCentral" method="checkQuery" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UnnecessaryLocalBeforeReturn" priority="3">
+Consider simply returning the value vs storing it in local variable 'd'
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\containers\ControlManager.java">
+<violation beginline="34" endline="34" begincolumn="17" endcolumn="39" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.containers" class="ControlManager" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="47" endline="47" begincolumn="17" endcolumn="70" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.containers" class="ControlManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addControl' called during object construction
+</violation>
+<violation beginline="48" endline="48" begincolumn="17" endcolumn="71" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.containers" class="ControlManager" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addControl' called during object construction
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\containers\DataManager.java">
+<violation beginline="107" endline="107" begincolumn="11" endcolumn="19" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model.containers" class="DataManager" method="populate" variable="xmlReader" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'xmlReader'.
+</violation>
+<violation beginline="128" endline="128" begincolumn="22" endcolumn="35" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="galactic.model.containers" class="DataManager" method="sqlGrupoWare" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'sqlGrupoWare()'.
+</violation>
+<violation beginline="135" endline="135" begincolumn="44" endcolumn="52" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.containers" class="DataManager" method="sqlGrupoWare" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+<violation beginline="135" endline="135" begincolumn="59" endcolumn="88" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.containers" class="DataManager" method="sqlGrupoWare" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+<violation beginline="137" endline="137" begincolumn="15" endcolumn="32" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.containers" class="DataManager" method="sqlGrupoWare" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="143" endline="143" begincolumn="26" endcolumn="43" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.containers" class="DataManager" method="sqlGrupoWare" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="150" endline="150" begincolumn="22" endcolumn="30" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="galactic.model.containers" class="DataManager" method="sqlWare" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'sqlWare()'.
+</violation>
+<violation beginline="156" endline="156" begincolumn="24" endcolumn="24" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model.containers" class="DataManager" method="sqlWare" variable="s" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 's'.
+</violation>
+<violation beginline="158" endline="158" begincolumn="15" endcolumn="32" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.containers" class="DataManager" method="sqlWare" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="164" endline="164" begincolumn="26" endcolumn="43" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.containers" class="DataManager" method="sqlWare" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="171" endline="171" begincolumn="22" endcolumn="30" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="galactic.model.containers" class="DataManager" method="xmlWare" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'xmlWare()'.
+</violation>
+<violation beginline="177" endline="177" begincolumn="24" endcolumn="24" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model.containers" class="DataManager" method="xmlWare" variable="s" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 's'.
+</violation>
+<violation beginline="178" endline="178" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.containers" class="DataManager" method="xmlWare" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="179" endline="179" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.containers" class="DataManager" method="xmlWare" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="180" endline="180" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.containers" class="DataManager" method="xmlWare" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="181" endline="181" begincolumn="15" endcolumn="32" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.containers" class="DataManager" method="xmlWare" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="187" endline="187" begincolumn="26" endcolumn="43" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.containers" class="DataManager" method="xmlWare" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="191" endline="191" begincolumn="18" endcolumn="35" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.containers" class="DataManager" method="xmlWare" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="197" endline="197" begincolumn="22" endcolumn="36" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="galactic.model.containers" class="DataManager" method="sqlRefineInto" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'sqlRefineInto()'.
+</violation>
+<violation beginline="203" endline="203" begincolumn="24" endcolumn="24" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model.containers" class="DataManager" method="sqlRefineInto" variable="s" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 's'.
+</violation>
+<violation beginline="209" endline="209" begincolumn="15" endcolumn="32" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.model.containers" class="DataManager" method="sqlRefineInto" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\containers\Model3DManager.java">
+<violation beginline="19" endline="19" begincolumn="1" endcolumn="18" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.containers" class="Model3DManager" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="19" endline="19" begincolumn="1" endcolumn="18" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.containers" class="Model3DManager" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="19" endline="19" begincolumn="31" endcolumn="47" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.model.containers" class="Model3DManager" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="36" endline="36" begincolumn="21" endcolumn="36" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="galactic.model.containers" class="Model3DManager" method="getDataManager" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'getDataManager()'.
+</violation>
+<violation beginline="61" endline="61" begincolumn="17" endcolumn="63" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.containers" class="Model3DManager" method="getModelID" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="78" endline="78" begincolumn="8" endcolumn="24" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.containers" class="Model3DManager" method="getModels" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="78" endline="78" begincolumn="8" endcolumn="24" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.containers" class="Model3DManager" method="getModels" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\containers\WareManager.java">
+<violation beginline="14" endline="14" begincolumn="9" endcolumn="33" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.containers" class="WareManager" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="15" endline="15" begincolumn="9" endcolumn="28" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.containers" class="WareManager" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="40" endline="40" begincolumn="10" endcolumn="39" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.containers" class="WareManager" method="getWareID" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="55" endline="55" begincolumn="10" endcolumn="39" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.containers" class="WareManager" method="getWareGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="65" endline="66" begincolumn="9" endcolumn="53" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.containers" class="WareManager" method="addWare" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="92" endline="92" begincolumn="27" endcolumn="51" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.containers" class="WareManager" method="setWareGroups" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="95" endline="95" begincolumn="8" endcolumn="32" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.containers" class="WareManager" method="getWareGroups" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="98" endline="98" begincolumn="22" endcolumn="41" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.containers" class="WareManager" method="setWares" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="101" endline="101" begincolumn="8" endcolumn="27" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.containers" class="WareManager" method="getWares" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\wares\ModelData.java">
+<violation beginline="21" endline="21" begincolumn="17" endcolumn="28" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="ModelData" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="21" endline="21" begincolumn="17" endcolumn="28" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.wares" class="ModelData" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="29" endline="29" begincolumn="9" endcolumn="36" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="ModelData" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="40" endline="40" begincolumn="17" endcolumn="48" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.wares" class="ModelData" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'setDataManager' called during object construction
+</violation>
+<violation beginline="41" endline="41" begincolumn="17" endcolumn="44" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.wares" class="ModelData" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'setSlots' called during object construction
+</violation>
+<violation beginline="41" endline="41" begincolumn="30" endcolumn="41" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.model.wares" class="ModelData" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="61" endline="61" begincolumn="27" endcolumn="28" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.model.wares" class="ModelData" method="createSlotGrouping" variable="sr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'sr'.
+</violation>
+<violation beginline="91" endline="91" begincolumn="32" endcolumn="81" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.wares" class="ModelData" method="addWareGroupAtPos" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+<violation beginline="95" endline="95" begincolumn="22" endcolumn="90" rule="IfElseStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.wares" class="ModelData" method="addWareGroupAtPos" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+<violation beginline="103" endline="103" begincolumn="25" endcolumn="74" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.wares" class="ModelData" method="getSlotAtPosition" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="143" endline="143" begincolumn="30" endcolumn="41" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="ModelData" method="setSlots" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="143" endline="143" begincolumn="30" endcolumn="41" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.wares" class="ModelData" method="setSlots" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="148" endline="148" begincolumn="16" endcolumn="27" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="ModelData" method="getSlots" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="148" endline="148" begincolumn="16" endcolumn="27" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.wares" class="ModelData" method="getSlots" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="216" endline="216" begincolumn="16" endcolumn="44" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="ModelData" method="getSlotGrouping" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\wares\Property.java">
+<violation beginline="8" endline="8" begincolumn="20" endcolumn="24" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="galactic.model.wares" class="Property" variable="count" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'count'.
+</violation>
+<violation beginline="31" endline="33" begincolumn="1" endcolumn="1" rule="CloneMethodMustImplementCloneable" ruleset="Clone Implementation Rules" package="galactic.model.wares" class="Property" externalInfoUrl="http://pmd.sourceforge.net/rules/clone.html#CloneMethodMustImplementCloneable" priority="3">
+clone() method should be implemented only if implementing Cloneable interface
+</violation>
+<violation beginline="31" endline="33" begincolumn="8" endcolumn="1" rule="CloneThrowsCloneNotSupportedException" ruleset="Clone Implementation Rules" package="galactic.model.wares" class="Property" externalInfoUrl="http://pmd.sourceforge.net/rules/clone.html#CloneThrowsCloneNotSupportedException" priority="3">
+clone() method should throw CloneNotSupportedException
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\wares\PropertyValue.java">
+<violation beginline="24" endline="29" begincolumn="1" endcolumn="1" rule="CloneMethodMustImplementCloneable" ruleset="Clone Implementation Rules" package="galactic.model.wares" class="PropertyValue" externalInfoUrl="http://pmd.sourceforge.net/rules/clone.html#CloneMethodMustImplementCloneable" priority="3">
+clone() method should be implemented only if implementing Cloneable interface
+</violation>
+<violation beginline="24" endline="29" begincolumn="8" endcolumn="1" rule="CloneThrowsCloneNotSupportedException" ruleset="Clone Implementation Rules" package="galactic.model.wares" class="PropertyValue" externalInfoUrl="http://pmd.sourceforge.net/rules/clone.html#CloneThrowsCloneNotSupportedException" priority="3">
+clone() method should throw CloneNotSupportedException
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\wares\Ware.java">
+<violation beginline="17" endline="17" begincolumn="1" endcolumn="16" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="Ware" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="17" endline="17" begincolumn="1" endcolumn="16" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.wares" class="Ware" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="17" endline="17" begincolumn="31" endcolumn="46" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.model.wares" class="Ware" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="19" endline="19" begincolumn="9" endcolumn="37" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="Ware" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="99" endline="99" begincolumn="8" endcolumn="36" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="Ware" method="getProperty" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="113" endline="113" begincolumn="8" endcolumn="23" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="Ware" method="getRefineTo" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="113" endline="113" begincolumn="8" endcolumn="23" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.wares" class="Ware" method="getRefineTo" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="122" endline="124" begincolumn="17" endcolumn="17" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="galactic.model.wares" class="Ware" method="getModelData" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\model\wares\WareGroup.java">
+<violation beginline="13" endline="13" begincolumn="9" endcolumn="25" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="WareGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="13" endline="13" begincolumn="9" endcolumn="25" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.wares" class="WareGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="13" endline="13" begincolumn="44" endcolumn="60" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.model.wares" class="WareGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="14" endline="14" begincolumn="9" endcolumn="20" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="WareGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="14" endline="14" begincolumn="9" endcolumn="20" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.wares" class="WareGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="14" endline="14" begincolumn="32" endcolumn="43" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.model.wares" class="WareGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="15" endline="15" begincolumn="9" endcolumn="37" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="WareGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="29" endline="29" begincolumn="9" endcolumn="29" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.wares" class="WareGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'setGrupoPai' called during object construction
+</violation>
+<violation beginline="32" endline="32" begincolumn="9" endcolumn="30" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.wares" class="WareGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="39" endline="39" begincolumn="9" endcolumn="39" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.model.wares" class="WareGroup" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'addGroupInfo' called during object construction
+</violation>
+<violation beginline="46" endline="46" begincolumn="9" endcolumn="37" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.wares" class="WareGroup" method="isSubgroupOf" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="49" endline="49" begincolumn="17" endcolumn="41" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.wares" class="WareGroup" method="isSubgroupOf" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="68" endline="68" begincolumn="9" endcolumn="75" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.wares" class="WareGroup" method="addGroupInfo" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="88" endline="88" begincolumn="8" endcolumn="36" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="WareGroup" method="getGroupInfo" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="96" endline="96" begincolumn="9" endcolumn="101" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.model.wares" class="WareGroup" method="getDefaultWare" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="119" endline="119" begincolumn="29" endcolumn="45" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="WareGroup" method="setGruposFilhos" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="119" endline="119" begincolumn="29" endcolumn="45" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.wares" class="WareGroup" method="setGruposFilhos" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="123" endline="123" begincolumn="8" endcolumn="24" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="WareGroup" method="getGruposFilhos" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="123" endline="123" begincolumn="8" endcolumn="24" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.wares" class="WareGroup" method="getGruposFilhos" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="127" endline="127" begincolumn="22" endcolumn="33" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="WareGroup" method="setWares" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="127" endline="127" begincolumn="22" endcolumn="33" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.wares" class="WareGroup" method="setWares" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="131" endline="131" begincolumn="8" endcolumn="19" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.model.wares" class="WareGroup" method="getWares" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="131" endline="131" begincolumn="8" endcolumn="19" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.model.wares" class="WareGroup" method="getWares" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\view\IView.java">
+<violation beginline="15" endline="15" begincolumn="16" endcolumn="54" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view" class="IView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="16" endline="16" begincolumn="16" endcolumn="33" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view" class="IView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="17" endline="17" begincolumn="16" endcolumn="56" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view" class="IView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="18" endline="18" begincolumn="16" endcolumn="29" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view" class="IView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="19" endline="19" begincolumn="16" endcolumn="44" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view" class="IView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="20" endline="20" begincolumn="16" endcolumn="56" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view" class="IView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="21" endline="21" begincolumn="16" endcolumn="55" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view" class="IView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="22" endline="22" begincolumn="16" endcolumn="69" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view" class="IView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="27" endline="27" begincolumn="16" endcolumn="106" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view" class="IView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="28" endline="28" begincolumn="16" endcolumn="50" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view" class="IView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="29" endline="29" begincolumn="16" endcolumn="44" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view" class="IView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="31" endline="31" begincolumn="16" endcolumn="53" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view" class="IView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="32" endline="32" begincolumn="16" endcolumn="44" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view" class="IView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="33" endline="33" begincolumn="16" endcolumn="35" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view" class="IView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\view\ItemsViewManagerAbstract.java">
+<violation beginline="79" endline="79" begincolumn="28" endcolumn="35" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.view" class="ItemsViewManagerAbstract" method="sync" variable="itemView" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'itemView'.
+</violation>
+<violation beginline="88" endline="88" begincolumn="17" endcolumn="66" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.view" class="ItemsViewManagerAbstract" method="getItemViewFromItem" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="137" endline="137" begincolumn="17" endcolumn="37" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.view" class="ItemsViewManagerAbstract" method="modelPropertyChange" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="193" endline="193" begincolumn="17" endcolumn="43" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.view" class="ItemsViewManagerAbstract" method="getEntityByID" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="262" endline="262" begincolumn="25" endcolumn="42" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.view" class="ItemsViewManagerAbstract" method="sendConsoleCommand" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\view\KeyMapping.java">
+<violation beginline="13" endline="13" begincolumn="1" endcolumn="22" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'HashMap'; use the interface instead
+</violation>
+<violation beginline="15" endline="15" begincolumn="1" endcolumn="14" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="15" endline="15" begincolumn="1" endcolumn="14" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="15" endline="15" begincolumn="29" endcolumn="42" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+<violation beginline="20" endline="20" begincolumn="9" endcolumn="58" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="20" endline="20" begincolumn="9" endcolumn="58" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="21" endline="21" begincolumn="9" endcolumn="57" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="21" endline="21" begincolumn="9" endcolumn="57" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="22" endline="22" begincolumn="9" endcolumn="57" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="22" endline="22" begincolumn="9" endcolumn="57" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="23" endline="23" begincolumn="9" endcolumn="55" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="23" endline="23" begincolumn="9" endcolumn="55" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="24" endline="24" begincolumn="9" endcolumn="55" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="24" endline="24" begincolumn="9" endcolumn="55" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="25" endline="25" begincolumn="9" endcolumn="57" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="25" endline="25" begincolumn="9" endcolumn="57" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="26" endline="26" begincolumn="9" endcolumn="58" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="26" endline="26" begincolumn="9" endcolumn="58" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="27" endline="27" begincolumn="9" endcolumn="57" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="27" endline="27" begincolumn="9" endcolumn="57" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="28" endline="28" begincolumn="9" endcolumn="68" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="28" endline="28" begincolumn="9" endcolumn="68" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="29" endline="29" begincolumn="9" endcolumn="60" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="29" endline="29" begincolumn="9" endcolumn="60" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="30" endline="30" begincolumn="9" endcolumn="58" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="30" endline="30" begincolumn="9" endcolumn="58" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="31" endline="31" begincolumn="9" endcolumn="64" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="31" endline="31" begincolumn="9" endcolumn="64" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="32" endline="32" begincolumn="9" endcolumn="63" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="32" endline="32" begincolumn="9" endcolumn="63" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="galactic.view" class="KeyMapping" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="3">
+Overridable method 'registerKey' called during object construction
+</violation>
+<violation beginline="51" endline="52" begincolumn="17" endcolumn="63" rule="ForLoopsMustUseBraces" ruleset="Braces Rules" package="galactic.view" class="KeyMapping" method="pressKey2" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#ForLoopsMustUseBraces" priority="3">
+Avoid using for statements without curly braces
+</violation>
+<violation beginline="52" endline="52" begincolumn="25" endcolumn="63" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.view" class="KeyMapping" method="pressKey2" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="62" endline="63" begincolumn="9" endcolumn="67" rule="ForLoopsMustUseBraces" ruleset="Braces Rules" package="galactic.view" class="KeyMapping" method="releaseKey" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#ForLoopsMustUseBraces" priority="3">
+Avoid using for statements without curly braces
+</violation>
+<violation beginline="63" endline="63" begincolumn="17" endcolumn="67" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.view" class="KeyMapping" method="releaseKey" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="77" endline="77" begincolumn="17" endcolumn="61" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.view" class="KeyMapping" method="turn" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="79" endline="79" begincolumn="9" endcolumn="42" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.view" class="KeyMapping" method="turn" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="82" endline="82" begincolumn="8" endcolumn="21" rule="LooseCoupling" ruleset="Coupling Rules" package="galactic.view" class="KeyMapping" method="getAllKeys" externalInfoUrl="http://pmd.sourceforge.net/rules/coupling.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'Vector'; use the interface instead
+</violation>
+<violation beginline="82" endline="82" begincolumn="8" endcolumn="21" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.view" class="KeyMapping" method="getAllKeys" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="83" endline="83" begincolumn="9" endcolumn="22" rule="ReplaceVectorWithList" ruleset="Migration Rules" package="galactic.view" class="KeyMapping" method="getAllKeys" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#ReplaceVectorWithList" priority="3">
+Consider replacing this Vector with the newer java.util.List
+</violation>
+<violation beginline="83" endline="83" begincolumn="30" endcolumn="43" rule="UseArrayListInsteadOfVector" ruleset="Optimization Rules" package="galactic.view" class="KeyMapping" method="getAllKeys" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#UseArrayListInsteadOfVector" priority="3">
+Use ArrayList instead of Vector
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\view\hud\ElementController.java">
+<violation beginline="22" endline="22" begincolumn="13" endcolumn="30" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.view.hud" class="ElementController" method="bind" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="26" endline="26" begincolumn="13" endcolumn="30" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.view.hud" class="ElementController" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="30" endline="30" begincolumn="13" endcolumn="30" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.view.hud" class="ElementController" method="onStartScreen" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="34" endline="34" begincolumn="13" endcolumn="30" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.view.hud" class="ElementController" method="onFocus" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="42" endline="42" begincolumn="13" endcolumn="30" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.view.hud" class="ElementController" method="next" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\view\hud\HUDController.java">
+<violation beginline="65" endline="65" begincolumn="6" endcolumn="23" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.view.hud" class="Notify" method="perform" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="74" endline="74" begincolumn="19" endcolumn="41" rule="SingularField" ruleset="Design Rules" package="galactic.view.hud" class="HUDController" variable="consoleElement" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#SingularField" priority="4">
+Perhaps 'consoleElement' could be replaced by a local variable.
+</violation>
+<violation beginline="83" endline="83" begincolumn="41" endcolumn="68" rule="FinalFieldCouldBeStatic" ruleset="Design Rules" package="galactic.view.hud" class="HUDController" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#FinalFieldCouldBeStatic" priority="4">
+This final field could be made static
+</violation>
+<violation beginline="99" endline="99" begincolumn="63" endcolumn="71" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer Rules" package="galactic.view.hud" class="HUDController" method="bind" externalInfoUrl="http://pmd.sourceforge.net/rules/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;console&quot; appears 4 times in this file; the first occurrence is on line 99
+</violation>
+<violation beginline="129" endline="129" begincolumn="21" endcolumn="45" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.view.hud" class="HUDController" method="bind" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="150" endline="150" begincolumn="19" endcolumn="36" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.view.hud" class="HUDController" method="OverviewClick" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="162" endline="162" begincolumn="19" endcolumn="36" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.view.hud" class="HUDController" method="submit" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="216" endline="216" begincolumn="66" endcolumn="73" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer Rules" package="galactic.view.hud" class="HUDController" method="createHeader" externalInfoUrl="http://pmd.sourceforge.net/rules/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;border&quot; appears 4 times in this file; the first occurrence is on line 216
+</violation>
+<violation beginline="224" endline="224" begincolumn="35" endcolumn="41" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer Rules" package="galactic.view.hud" class="HUDController" method="createHeader" externalInfoUrl="http://pmd.sourceforge.net/rules/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;123px&quot; appears 4 times in this file; the first occurrence is on line 224
+</violation>
+<violation beginline="240" endline="240" begincolumn="31" endcolumn="31" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.view.hud" class="HUDController" method="createHeader" variable="l" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'l'.
+</violation>
+<violation beginline="265" endline="265" begincolumn="25" endcolumn="42" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.view.hud" class="HUDController" method="orderOverview" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="310" endline="310" begincolumn="31" endcolumn="31" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="galactic.view.hud" class="HUDController" method="addLabel" variable="l" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'l'.
+</violation>
+<violation beginline="361" endline="361" begincolumn="25" endcolumn="42" rule="SystemPrintln" ruleset="Java Logging Rules" package="galactic.view.hud" class="HUDController" method="overviewItemClick" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="390" endline="390" begincolumn="36" endcolumn="45" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer Rules" package="galactic.view.hud" class="HUDController" method="onConsoleCommand" externalInfoUrl="http://pmd.sourceforge.net/rules/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;inventar&quot; appears 4 times in this file; the first occurrence is on line 390
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\view\hud\IShipHud.java">
+<violation beginline="11" endline="11" begincolumn="16" endcolumn="52" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view.hud" class="IShipHud" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\view\models\IShipView.java">
+<violation beginline="7" endline="7" begincolumn="16" endcolumn="44" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view.models" class="IShipView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="9" endline="9" begincolumn="16" endcolumn="55" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view.models" class="IShipView" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\view\models\ISphereModel.java">
+<violation beginline="6" endline="6" begincolumn="16" endcolumn="34" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view.models" class="ISphereModel" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="7" endline="7" begincolumn="16" endcolumn="40" rule="UnusedModifier" ruleset="Controversial Rules" package="galactic.view.models" class="ISphereModel" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+</file>
+<file name="D:\Java\eclipse-rcp-helios-SR2-win32\workspace_RCP\GalacticEngine\src\galactic\view\models\ItemViewAbstract.java">
+<violation beginline="89" endline="90" begincolumn="17" endcolumn="60" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.view.models" class="ItemViewAbstract" method="getTexture" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="90" endline="90" begincolumn="25" endcolumn="60" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="galactic.view.models" class="ItemViewAbstract" method="getTexture" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="90" endline="90" begincolumn="25" endcolumn="60" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="galactic.view.models" class="ItemViewAbstract" method="getTexture" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="4">
+These nested if statements could be combined
+</violation>
+</file>
+</pmd>

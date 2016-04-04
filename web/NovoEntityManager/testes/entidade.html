@@ -1,0 +1,494 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="menu.css">
+		<link rel="stylesheet" href="../css/estilos.css">
+		<link rel="stylesheet" href="../css/estilos_layout.css">
+		<link rel="stylesheet" href="../css/estilos_inputs.css">
+		<link rel="stylesheet" href="../css/estilos_table.css">
+		<link rel="stylesheet" href="../css/estilos_uml.css">
+		<script src="../js/jquery.js" type="text/javascript"></script>
+		<title>Entity Manager</title>
+	</head>
+	<body>
+
+	<header>
+	<div class="fundo">
+	<div id="topMenu" class="caixa">
+		<ul>
+			<li><a href="#" id="raiz">Projetos </a></li>
+			<li><a href="#" id="current">Pictuly</a></li>
+			<li><a href="#">Tarefas</a></li>
+			<li><a href="#">UML</a></li>
+			<li><a href="#">Entidades</a></li>
+			<li><a href="#">Membros</a></li>
+		</ul>
+	</div>
+
+	<div id="rightMenu">
+		<ul>
+			<li><a href="#">cristianorj@gmail.com</a></li><li>
+			<li><a href="#">Logout</a></li>
+		</ul>
+	</div>
+	</div>
+
+
+	<div class="sideMenu caixa" id="sideMenu">
+		<ul >
+			<li><a href="#" id="raiz" onclick='alternaSideMenu();'>Entidades</a></li>
+			<li><a href="#" id="current">categoria</a></li>
+			<li><a href="#">categoria_tag</a></li>
+			<li><a href="#">feeder</a></li>
+			<li><a href="#">feeder_tag</a></li>
+			<li><a href="#">categoria_tag</a></li>
+			<li><a href="#">feeder</a></li>
+			<li><a href="#">feeder_tag</a></li>
+			<li><a href="#">categoria_tag</a></li>
+			<li><a href="#">feeder</a></li>
+			<li><a href="#">feeder_tag</a></li>
+			<li><a href="#">categoria_tag</a></li>
+			<li><a href="#">feeder</a></li>
+			<li><a href="#">feeder_tag</a></li>
+			<li><a href="#">categoria_tag</a></li>
+			<li><a href="#">feeder</a></li>
+		</ul>
+	</div>
+
+
+
+	<div class="hiddenMenu caixa" id="hiddenMenu">
+		<ul>
+			<li><a href="#" onclick='alternaSideMenu();' id="mostra">Entidades</a></li>
+		</ul>
+	</div>
+	</header>
+
+
+
+<section class="container destaque">
+
+
+
+
+				<table border=0 width=50%>
+					<caption>
+						categoria_tag
+					</caption>
+				<tr>
+					<th scope="row" class="specalt" width=100px>Entidade</th>
+					<td id='tdnm_entidade101' onclick="mostraInput('nm_entidade101');">
+			<div style="display:inline;"  id='valuenm_entidade101'>categoria_tag</div>
+			<div style="display:none;" id='divinputnm_entidade101'>
+				<textarea name=inputnm_entidade101 id=inputnm_entidade101 onchange="atualizaGenerico(this,'nm_entidade',101,'T','entidade');">categoria_tag</textarea>
+			</div>
+		</td>
+					</tr>
+				<tr>
+					<th scope="row" class="specalt" width=100px>Descrição</th>
+					<td id='tddesc_entidade101' onclick="mostraInput('desc_entidade101');">
+			<div style="display:inline;"  id='valuedesc_entidade101'>Tags por categoria</div>
+			<div style="display:none;" id='divinputdesc_entidade101'>
+				<textarea name=inputdesc_entidade101 id=inputdesc_entidade101 onchange="atualizaGenerico(this,'desc_entidade',101,'T','entidade');">Tags por categoria</textarea>
+			</div>
+		</td>
+					</tr>
+				<tr>
+					<th scope="row" class="specalt" width=100px>DB Name</th>
+					<td id='tddbname_entidade101' onclick="mostraInput('dbname_entidade101');">
+			<div style="display:inline;"  id='valuedbname_entidade101'>categoria_tag</div>
+			<div style="display:none;" id='divinputdbname_entidade101'>
+				<textarea name=inputdbname_entidade101 id=inputdbname_entidade101 onchange="atualizaGenerico(this,'dbname_entidade',101,'T','entidade');">categoria_tag</textarea>
+			</div>
+		</td>
+					</tr>				
+				<tr>
+					<th scope="row" class="specalt" width=100px>Class Name</th>
+					<td id='tdclassname_entidade101' onclick="mostraInput('classname_entidade101');">
+			<div style="display:inline;"  id='valueclassname_entidade101'></div>
+			<div style="display:none;" id='divinputclassname_entidade101'>
+				<textarea name=inputclassname_entidade101 id=inputclassname_entidade101 onchange="atualizaGenerico(this,'classname_entidade',101,'T','entidade');"></textarea>
+			</div>
+		</td>
+					</tr>				
+				<tr>
+					<th scope="row" class="specalt" width=100px>Package</th>
+					<td id='tdpackage_entidade101' onclick="mostraInput('package_entidade101');">
+			<div style="display:inline;"  id='valuepackage_entidade101'></div>
+			<div style="display:none;" id='divinputpackage_entidade101'>
+				<textarea name=inputpackage_entidade101 id=inputpackage_entidade101 onchange="atualizaGenerico(this,'package_entidade',101,'T','entidade');"></textarea>
+			</div>
+		</td>
+					</tr>
+				<tr>
+					<th scope="row" class="specalt" width=100px>Tipo de Entidade</th>
+					<td>		<select id=id_tipo_entidade name=id_tipo_entidade onchange="atualizaGenerico(this,'id_tipo_entidade',101,'F','entidade');">
+		<option value=null></option>
+			<option value=3 selected >Ambos (tabela e classe)</option>
+			<option value=2  >Classe somente</option>
+			<option value=1  >Tabela somente (dado)</option>
+						</select>
+	</td>
+				</tr>
+				<tr>
+					<th scope="row" class="specalt" width=100px>Coluna Chave</th>
+					<td>		<select name=id_coluna_pk onchange="atualizaGenerico(this,'id_coluna_pk',101,'F','entidade');">
+			<option value=null></option>
+			<option value=385  >id_categoria</option>
+			<option value=386  >id_tag</option>
+					</select>
+	</td>
+				</tr>
+				<tr>
+					<th scope="row" class="specalt" width=100px>Coluna Descrição</th>
+					<td>		<select name=id_coluna_desc onchange="atualizaGenerico(this,'id_coluna_desc',101,'F','entidade');">
+			<option value=null></option>
+			<option value=385  >id_categoria</option>
+			<option value=386  >id_tag</option>
+					</select>
+	</td>
+				</tr>
+				<tr>
+					<th scope="row" class="specalt" width=100px>Estende: </th>
+					<td>
+					<select name=id_entidade_extends onchange="atualizaGenerico(this,'id_entidade_extends',101,'F','entidade');">
+					<option value="null">Nenhuma</option>
+					<option value=100  >categoria</option>
+						<option value=101  >categoria_tag</option>
+						<option value=103  >comentario_media</option>
+						<option value=105  >feeder</option>
+						<option value=107  >feeder_tag</option>
+						<option value=111  >lingua</option>
+						<option value=127  >log_site</option>
+						<option value=96  >media</option>
+						<option value=116  >media_foto</option>
+						<option value=99  >media_tag</option>
+						<option value=113  >media_tag_usuario</option>
+						<option value=115  >partner</option>
+						<option value=108  >report</option>
+						<option value=106  >site_feeder</option>
+						<option value=112  >string_internacional</option>
+						<option value=95  >tag</option>
+						<option value=110  >texto_lang</option>
+						<option value=102  >tipo_media</option>
+						<option value=109  >tipo_report</option>
+						<option value=97  >usuario</option>
+						<option value=114  >voto_media</option>
+											</select>
+	</td>
+				</tr>
+				<tr>
+					<th scope="row" class="specalt" width=100px>Projeto: </th>
+					<td>		<select name=id_projeto id="id_projeto" onchange="atualizaGenerico(this,'id_projeto',101,'F','entidade');">
+		<option value=null>Nenhum</option>				<option value=16 >DefaultEntities</option>
+							<option value=6 >EntityManager</option>
+							<option value=10 >EntityManager.entidade</option>
+							<option value=14 >EntityManager.mindmap</option>
+							<option value=12 >EntityManager.Tarefa</option>
+							<option value=18 >GameFramework</option>
+							<option value=15 >GameFW.EntitySystem</option>
+							<option value=5 >Mages</option>
+							<option value=3 >MetaModelos</option>
+							<option value=4 >NodeWars</option>
+							<option value=23 selected>Pictuly</option>
+							<option value=26 >Pictuly.international</option>
+							<option value=24 >Pictuly.media</option>
+							<option value=1 >ProcGen</option>
+							<option value=9 >Projeto Teste</option>
+							<option value=25 >Reivindica</option>
+							<option value=2 >SimTrader</option>
+							<option value=8 >SIP1</option>
+					</select>
+						</td>
+				</tr>
+
+				
+
+			</table>	<table border=0  class="data">
+	<tr>
+
+			<th scope="col" class="nobg">#</th>
+			<th scope="col" >ID Coluna</th>
+			<th scope="col" >Ordem</th>
+			<th scope="col" >Nome</th>
+			<th scope="col" >DBName</th>
+			<th scope="col" >DataType</th>
+			<th scope="col" >Entidade Combo</th>
+			<th scope="col" >Comportamento</th>
+			<th scope="col" >Redirects</th>
+			<th scope="col" ></th>
+		</tr>
+					<tr id="row1">
+				<th scope="row" class="specalt">1</th>
+				<td>385</td>
+				<td><a href=# onclick="return changePosition('row1','row2');">Subir</a> - 
+				<a href=# onclick="return changePosition('row1','row2');">Descer</a> 
+				</td>
+				<td><input type=text name=nm_coluna id=nm_coluna385 value="id_categoria" onchange="atualizaColuna(this,'nm_coluna',385,'T');"></td>
+
+				<td><input type=text name=dbname_coluna value="id_categoria" onchange="atualizaColuna(this,'dbname_coluna',385,'T');"  onfocus="if (this.value==''){this.value=document.getElementById('nm_coluna385').value; this.onchange();}"></td>
+
+				<td>
+						<select name=id_datatype onchange="atualizaColuna(this,'id_datatype',385,'F');">
+			<option value="null">Nenhuma (erro)</option>
+			<optgroup label="Primary Key"><option value=24 selected >FK ID</option>
+				<option value=1  >ID (primary key auto increment)</option>
+				<option value=2  >TEXT PK</option>
+				</optgroup><optgroup label="Obrigatório"><option value=11  >BOOLEAN obrigatorio</option>
+				<option value=22  >Char Obrigatorio</option>
+				<option value=14  >Data Obrigatorio</option>
+				<option value=4  >DescriÃ§Ã£o obrigatoria (sem limite)</option>
+				<option value=20  >Descrição obrigatoria (250 chars)</option>
+				<option value=12  >FK ID Obrigatório</option>
+				<option value=18  >Float Obrigatorio</option>
+				<option value=6  >Inteiro obrigatorio</option>
+				<option value=3  >Nome (obrigatÃ³rio,50 chars)</option>
+				<option value=8  >Texto Curto Obrigatório</option>
+				</optgroup><optgroup label="Opcional"><option value=9  >BOOLEAN opcional</option>
+				<option value=23  >Char Opcional</option>
+				<option value=15  >Data Opcional</option>
+				<option value=5  >Descrição opcional</option>
+				<option value=21  >Descrição opcional (250 chars)</option>
+				<option value=13  >FK ID Opcional</option>
+				<option value=19  >Float Opcional</option>
+				<option value=7  >Inteiro opcional</option>
+				<option value=10  >Texto Curto opcional</option>
+						</select>					
+				</td>
+
+
+				<td>
+					<select name=id_entidade_combo onchange="atualizaColuna(this,'id_entidade_combo',385,'F')">
+					<option value="null">Nenhuma</option>
+					<option value=100 selected >categoria</option>
+						<option value=101  >categoria_tag</option>
+						<option value=103  >comentario_media</option>
+						<option value=105  >feeder</option>
+						<option value=107  >feeder_tag</option>
+						<option value=111  >lingua</option>
+						<option value=127  >log_site</option>
+						<option value=96  >media</option>
+						<option value=116  >media_foto</option>
+						<option value=99  >media_tag</option>
+						<option value=113  >media_tag_usuario</option>
+						<option value=115  >partner</option>
+						<option value=108  >report</option>
+						<option value=106  >site_feeder</option>
+						<option value=112  >string_internacional</option>
+						<option value=95  >tag</option>
+						<option value=110  >texto_lang</option>
+						<option value=102  >tipo_media</option>
+						<option value=109  >tipo_report</option>
+						<option value=97  >usuario</option>
+						<option value=114  >voto_media</option>
+											</select>
+					</td>
+
+				<td>
+					<select name=id_sql_coluna onchange="atualizaColuna(this,'id_sql_coluna',385,'F');">
+					<option value=1 selected >Cria coluna e Exporta</option>
+						<option value=2  >Não cria coluna nem Exporta (info)</option>
+						<option value=3  >Só cria coluna</option>
+											</select>
+				</td>
+
+				<td onclick="window.location='gerenciaRedirects.php?entidade=101&id_coluna=385'">
+									To: 0 - From: 0</td>
+
+				<td>
+					<form action=gerenciaEntidade.php method=get onsubmit="return confirmExclusao();">
+						<input type=hidden name=acao value=removeColuna>
+						<input type=hidden name=entidade value=101>
+						<input type=hidden name=id_coluna value=385>
+						<input type=submit value="Remove Coluna">
+					</form>
+				</td>
+				
+			</tr>
+			
+						<tr id="row2">
+				<th scope="row" class="specalt">2</th>
+				<td>386</td>
+				<td><a href=# onclick="return changePosition('row2','row1');">Subir</a> - 
+				<a href=# onclick="return changePosition('row2','row1');">Descer</a> 
+				</td>
+				<td><input type=text name=nm_coluna id=nm_coluna386 value="id_tag" onchange="atualizaColuna(this,'nm_coluna',386,'T');"></td>
+
+				<td><input type=text name=dbname_coluna value="id_tag" onchange="atualizaColuna(this,'dbname_coluna',386,'T');"  onfocus="if (this.value==''){this.value=document.getElementById('nm_coluna386').value; this.onchange();}"></td>
+
+				<td>
+						<select name=id_datatype onchange="atualizaColuna(this,'id_datatype',386,'F');">
+			<option value="null">Nenhuma (erro)</option>
+			<optgroup label="Primary Key"><option value=24 selected >FK ID</option>
+				<option value=1  >ID (primary key auto increment)</option>
+				<option value=2  >TEXT PK</option>
+				</optgroup><optgroup label="Obrigatório"><option value=11  >BOOLEAN obrigatorio</option>
+				<option value=22  >Char Obrigatorio</option>
+				<option value=14  >Data Obrigatorio</option>
+				<option value=4  >DescriÃ§Ã£o obrigatoria (sem limite)</option>
+				<option value=20  >Descrição obrigatoria (250 chars)</option>
+				<option value=12  >FK ID Obrigatório</option>
+				<option value=18  >Float Obrigatorio</option>
+				<option value=6  >Inteiro obrigatorio</option>
+				<option value=3  >Nome (obrigatÃ³rio,50 chars)</option>
+				<option value=8  >Texto Curto Obrigatório</option>
+				</optgroup><optgroup label="Opcional"><option value=9  >BOOLEAN opcional</option>
+				<option value=23  >Char Opcional</option>
+				<option value=15  >Data Opcional</option>
+				<option value=5  >Descrição opcional</option>
+				<option value=21  >Descrição opcional (250 chars)</option>
+				<option value=13  >FK ID Opcional</option>
+				<option value=19  >Float Opcional</option>
+				<option value=7  >Inteiro opcional</option>
+				<option value=10  >Texto Curto opcional</option>
+						</select>					
+				</td>
+
+
+				<td>
+					<select name=id_entidade_combo onchange="atualizaColuna(this,'id_entidade_combo',386,'F')">
+					<option value="null">Nenhuma</option>
+					<option value=100  >categoria</option>
+						<option value=101  >categoria_tag</option>
+						<option value=103  >comentario_media</option>
+						<option value=105  >feeder</option>
+						<option value=107  >feeder_tag</option>
+						<option value=111  >lingua</option>
+						<option value=127  >log_site</option>
+						<option value=96  >media</option>
+						<option value=116  >media_foto</option>
+						<option value=99  >media_tag</option>
+						<option value=113  >media_tag_usuario</option>
+						<option value=115  >partner</option>
+						<option value=108  >report</option>
+						<option value=106  >site_feeder</option>
+						<option value=112  >string_internacional</option>
+						<option value=95 selected >tag</option>
+						<option value=110  >texto_lang</option>
+						<option value=102  >tipo_media</option>
+						<option value=109  >tipo_report</option>
+						<option value=97  >usuario</option>
+						<option value=114  >voto_media</option>
+											</select>
+					</td>
+
+				<td>
+					<select name=id_sql_coluna onchange="atualizaColuna(this,'id_sql_coluna',386,'F');">
+					<option value=1 selected >Cria coluna e Exporta</option>
+						<option value=2  >Não cria coluna nem Exporta (info)</option>
+						<option value=3  >Só cria coluna</option>
+											</select>
+				</td>
+
+				<td onclick="window.location='gerenciaRedirects.php?entidade=101&id_coluna=386'">
+									To: 0 - From: 0</td>
+
+				<td>
+					<form action=gerenciaEntidade.php method=get onsubmit="return confirmExclusao();">
+						<input type=hidden name=acao value=removeColuna>
+						<input type=hidden name=entidade value=101>
+						<input type=hidden name=id_coluna value=386>
+						<input type=submit value="Remove Coluna">
+					</form>
+				</td>
+				
+			</tr>
+	</table>
+
+	<div><a href=entity.php?entidade=101 class="button-link">Entrada de Dados</a>
+	<a href=gerenciaEntidade.php?acao=novaColuna&id_entidade=101&ordem=2&878 class="button-link">Adicionar Nova coluna</a></div>
+		<table border=0  class="data">
+	<tr>
+
+			<th scope="col" class="nobg">#</th>
+			<th scope="col" >ID Função</th>
+			<th scope="col" >Ordem</th>
+			<th scope="col" >Nome</th>
+			<th scope="col" >Retorno Primitivo</th>
+			<th scope="col" >ou</th>
+			<th scope="col" >Retorno Entidade</th>
+			<th scope="col" >Params</th>
+			<th scope="col" ></th>
+		</th>
+						<tr><td colspan=11 onclick="window.location='gerenciaEntidade.php?acao=novaFuncao&id_entidade=101&ordem=0&419'"><a href=gerenciaEntidade.php?acao=novaFuncao&id_entidade=101&ordem=0&419>Adicionar Nova Função</a></td></tr>
+	</table>
+	<a name="#funcao">
+	
+
+
+
+	<table class="drag" border=0 id="entity28">
+    <tr>
+        <th scope="col" id="cell28">projeto <a class="button-link " href=gerenciaEntidade.php?entidade=28>Editar</a></th>
+    </tr>
+    <tr>
+        <td id="coluna119" class="cellUML primaryKey integerType" >
+			<strong>id_projeto</strong> <pk/>
+        </td>
+    </tr>
+								<tr>
+					<td id="coluna542" class="cellUML requiredKey booleanType" style='border-top: 2px solid black;'>
+						<strong>flag_publico</strong> <pk/>
+											</td>
+				</tr>
+
+
+								<tr>
+					<td id="coluna538" class="cellUML requiredKey integerType foreignKey" >
+                        <strong>id_metodologia</strong> <pk/>
+						 					</td>
+				</tr>
+
+
+								<tr>
+					<td id="coluna121" class="cellUML requiredKey stringType" >
+						<strong>nm_projeto</strong> <pk/>
+											</td>
+				</tr>
+
+
+								<tr>
+					<td id="coluna122" class="cellUML stringType" style='border-top: 2px solid black;'>
+						<strong>package_projeto</strong>  <pk/>
+											</td>
+				</tr>
+								<tr>
+					<td id="coluna120" class="cellUML stringType" >
+						<strong>iniciais_projeto</strong>  <pk/>
+                   </td>
+				</tr>
+								<tr>
+					<td id="coluna461" class="cellUML integerType foreignKey" >
+						<strong>id_tipo_banco</strong>  <pk/>
+						 					</td>
+				</tr>
+
+
+				
+	</table>
+</section>
+
+
+
+<script>
+function changePosition(element1,element2){
+	var node1=document.getElementById(element1);
+	var node2=document.getElementById(element2);
+    node2_copy = node2.cloneNode(true);
+    node1.parentNode.insertBefore(node2_copy, node1);
+    node2.parentNode.insertBefore(node1, node2);
+    node2.parentNode.replaceChild(node2, node2_copy);
+
+	return false;
+}
+
+
+	$("#hiddenMenu").toggle();
+	function alternaSideMenu(){
+		$("#sideMenu").toggle();
+		$("#hiddenMenu").toggle();
+	}
+	</script>
+		</body>	
+</html>
+

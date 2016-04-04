@@ -1,0 +1,52 @@
+apply plugin: 'android'
+
+signingConfigs {
+    release {
+        storeFile file(System.console().readLine("\n\$ Enter keystore path: "))
+        storePassword System.console().readPassword("\n\$ Enter keystore password: ")
+        keyAlias System.console().readLine("\n\$ Enter key alias: ")
+        keyPassword System.console().readPassword("\n\$ Enter key password: ")
+    }
+    
+    
+}
+
+
+
+android {
+    compileSdkVersion 16
+    buildToolsVersion "17.0.0"
+
+    defaultConfig {
+        packageName 'my package name'
+        versionName = "2.2"
+
+    }
+
+    signingConfigs{
+        release{
+            storeFile file("myKeystore")
+            storePassword = "myPassword"
+            keyAlias = "myAlias"
+            keyPassword = "myPassword"
+        }
+
+        unsigned{
+            storePassword = ""
+            keyAlias = ""
+            keyPassword = ""
+        }
+    }
+
+    productFlavors{
+        amazon{
+            versionCode = 9
+            signingConfig signingConfigs.unsigned
+        }
+        google{
+            versionCode = 26
+            signingConfig signingConfigs.release
+        }
+
+   }
+}

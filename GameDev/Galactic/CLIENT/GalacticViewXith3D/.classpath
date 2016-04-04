@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Cyclone2"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GalacticEngine"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JBTCore"/>
+	<classpathentry kind="lib" path="/lib/lwjgl-2.7.1/jar/lwjgl_test.jar"/>
+	<classpathentry kind="lib" path="/lib/lwjgl-2.7.1/jar/lzma.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/gluegen/gluegen-rt.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/jagatoo.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/jogl/jogl.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/lwjgl/jinput.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/lwjgl/lwjgl_util.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/lwjgl/lwjgl-debug.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/lwjgl/lwjgl.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="lib/xith3d-0.9.7-dev-B1831/third-party/lwjgl/natives"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/math/openmali.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/test/xith-test.jar" sourcepath="/lib/xith3d-0.9.7-dev-B1831/test/xith-test-source.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/test/xith-testres.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/libs/xith3d.jar" sourcepath="/lib/xith3d-0.9.7-dev-B1831/libs/xith3d-source.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/particles/jops.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Galactic"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

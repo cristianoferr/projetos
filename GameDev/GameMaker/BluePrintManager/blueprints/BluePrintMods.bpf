@@ -1,0 +1,196 @@
+//Defines
+
+//Blueprints
+@blueprint gameMods
+	@domain type={all gameMod}
+	@output file='BluePrintMods.bpf'
+@end
+
+@blueprint GameGenreMods:gameMods
+	@domain type+={gameGenreMod}
+@end
+
+@blueprint GameGenreEvents:GameGenreMods
+	@domain type+={event}
+	@property eventEntityHit=pickSingle({gameEvent entityHit},hitPointReward=-1,multiByValue=1) //define $dmgReceived as the damage sent (stored in value)
+	@property eventEnemyHit=pickSingle({gameEvent enemyHit},pointReward=100)
+	@property eventFriendHit=pickSingle({gameEvent friendHit},pointReward=-100)
+	@property gameEvents=$this.eventEntityHit
+@end
+
+@mod AITestEvent:GameGenreEvents
+	@domain type+={aiTestEvent test}
+	@property eventGenre='AI Test'
+	@property gameEvents+=$this.eventEnemyHit+$this.eventFriendHit
+	@property gameObjectiveTag={defeatEnemies}
+	@property gameOppositionTag={versus} //versus,versusTeams
+@end
+
+@mod BattleArenaEvent:GameGenreEvents
+	@domain type+={battleArenaEvent}
+	@property eventGenre='Battle Arena'
+	@property gameEvents=$this.eventEntityHit+$this.eventEnemyHit
+	@property gameObjectiveTag={defeatEnemies}
+	@property maxObjectives=2
+@end
+
+@mod CaptureTheFlagEvent:GameGenreEvents
+	@domain type+={ctfEvent}
+	@property eventGenre='CTF'
+	@property gameObjectiveTag={captureTheFlag}
+@end
+
+@mod DungeonEvent:GameGenreEvents
+	@domain type+={dungeonEvents notready} //TODO: finish this
+@end
+
+@mod LinearAdventureEvent:GameGenreEvents
+	@domain type+={linearAdventureEvents notready} //TODO: finish this
+@end
+
+@mod NoEvent:GameGenreEvents
+	@domain type+={noEvent test}
+	@property gameObjectiveTag={null}
+	@property gameOppositionTag={null}
+@end
+
+@mod NoGameEvent:GameGenreEvents
+	@domain type+={noGameEvent}
+	@property gameOppositionTag={empty} //EmptyTeam
+@end
+
+@mod RaceEvent:GameGenreEvents
+	@domain type+={raceGGE}
+	@property eventEnemyHit=pickFinal({gameEvent enemyHit},pointReward=100)
+	@property eventGenre='Race'
+	@property gameEvents=$this.eventEnemyHit+$this.eventEntityHit
+	@property gameObjectiveTag={racingObjectives}
+@end
+
+@mod ShooterEvents:GameGenreEvents
+	@domain type+={shooterGGE}
+	@property eventEnemyHit=pickFinal({gameEvent enemyHit},pointReward=100)
+	@property eventGenre='Shooter'
+	@property gameEvents=$this.eventEnemyHit+$this.eventEntityHit
+	@property gameObjectiveTag={shooterObjectives} //ShooterObjectives
+@end
+
+@mod ArenaEvents:GameGenreEvents
+	@domain type+={arenaGGE}
+@property gameEvents=$this.eventEntityHit+$this.eventEnemyHit
+	@property gameObjectiveTag={defeatEnemies}
+	@property maxObjectives=2
+	@property eventGenre='ArenaEvent'
+	@property gameEvents=$this.eventEnemyHit+$this.eventEntityHit
+	@property gameObjectiveTag={arenaObjectives} //ArenaObjectives
+
+@end
+
+@blueprint GameMaps:gameMods
+	@domain type+={gameMap}
+@end
+
+@blueprint MapLocationMods:GameMaps
+	@domain type+={mapLocationMod}
+@end
+
+
+@blueprint MLWhereMods:MapLocationMods
+	@domain type+={where}
+@end
+
+@mod MLSpaceWhereMods:MLWhereMods
+	@domain type+={space}
+	@property gravity=0
+	@property terrainTag={null}
+	@property unitMeshFilter+={space}
+@end
+
+@mod modLocationLand:MLWhereMods
+	@domain type+={land}
+	@property gravity=-10
+	@property unitMeshFilter+={land}
+@end
+
+@blueprint MapMods:GameMaps
+	@domain type={mapMod}
+@end
+
+
+@blueprint MapModRoad:MapMods
+	@domain type+={road}
+	@property roadWallEnviro=pickSingle($this.separatorRoot $this.separatorTag) //SeparatorEnviro
+	@property separatorRoot={enviroEntity separator leaf} //wall
+	@comment description='road connects rooms, only used when more than one rooom.'
+@end
+
+@mod DefaultMapModRoad:MapModRoad
+	@domain type+={default}
+	@property maxRoadsRoom=rand(2,3)
+	@property roadFunctionTag={line !multi functions leaf}
+	@property roadPoints=rand(4,6)
+	@property roadWidth=rand($minRoadwidth,$maxRoadwidth)
+	@property separatorTag={wall}
+@end
+
+@mod RoadWithoutwall:MapModRoad
+	@domain type+={noWall}
+	@property maxRoadsRoom=rand(2,3)
+	@property roadFunctionTag={line !multi functions leaf}
+	@property roadPoints=rand(4,6)
+	@property roadWidth=rand($minRoadwidth,$maxRoadwidth)
+	@property separatorTag={noWall}
+@end
+
+@blueprint MapModRoomData:MapMods
+	@domain type+={roomData} //Used in MapsGD
+@end
+
+@mod ManyRoomsModRoomData:MapModRoomData
+	@domain type+={many}
+	@property maxRoomSize=randf(0.3,0.4)
+	@property minRoomSize=randf(0.3,0.4)
+@end
+
+@mod ManyRoomsNoSizeData:MapModRoomData
+	@domain type+={manyNoSize}
+	@property maxRoomSize=0
+	@property minRoomSize=0
+@end
+
+@mod ManyRoomsRoadSizedData:MapModRoomData
+	@domain type+={manyRoadSizeRooms}
+	@property isRoomSizeRelative=0
+	@property maxRoomSize=$this.roadWidth*2
+	@property minRoomSize=$this.maxRoomSize
+@end
+
+@mod SingleRoomRoomData:MapModRoomData
+	@domain type+={single default}
+	@property maxRoomSize=randf($this.minRoomSize,0.8)
+	@property minRoomSize=randf(0.4,0.6)
+@end
+
+@blueprint MapModSkybox:MapMods
+	@domain type+={skyBox}
+	@property ambienceTheme=pickFinal({ambienceTheme $this.ambienceTag leaf}) //ambienceTheme is a way to filter skyboxes and Terrain textures, example: desert, florest, snow, etc.
+	@validate checkambience=isNotNull($this.ambienceTheme)
+@end
+
+@mod DefaultMapModSkybox:MapModSkybox
+	@domain type+={default}
+	@property ambienceTag={}
+	@property skyBox=$this.ambienceTheme.skyBox
+	@validate checkSkyBox=isNotNull($this.skyBox)
+@end
+
+@blueprint MapModTerrain:MapMods
+	@domain type+={terrain}
+@end
+
+@mod DefaultMapModTerrain:MapModTerrain
+	@domain type+={default}
+	@property terrain=pickFinal({terrainGD leaf $this.terrainTag},textureTag=$this.terrainTextureTag)$final
+	@property terrainTextureTag={mountainTex} //textureMatGD: test,placeHolder,random,mountainTex
+@end
+

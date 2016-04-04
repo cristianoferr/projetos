@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="tests/src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BluePrintManager"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JME3Utils"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_desktop"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_plugins"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_physics"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JMonkeyTonegod"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GMPlayer"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ProceduralUtils"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BluePrintOutput"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/desktop_libraries"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GMAssets"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_libs"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_3.1"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

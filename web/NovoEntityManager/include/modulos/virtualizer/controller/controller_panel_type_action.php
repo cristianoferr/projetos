@@ -1,0 +1,7 @@
+<?
+
+class PanelTypeActionController extends BaseController {
+    
+}
+
+?>

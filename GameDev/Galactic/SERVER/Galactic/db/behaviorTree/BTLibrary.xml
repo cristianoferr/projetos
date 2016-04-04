@@ -1,0 +1,13 @@
+<Configuration>
+<BTLibrary>
+	<BTFile>CMD_ORIENT_TO_guard.xbt</BTFile>
+	<BTFile>CMD_MOVE_TO_TARGET.xbt</BTFile>
+	<BTFile>CMD_ATTACK_TARGET.xbt</BTFile>
+	<DomainFile>ItemDomain.xml</DomainFile>
+	<ModelActionsPackage>com.cristiano.galactic.model.bt.model.action</ModelActionsPackage>
+	<ModelConditionsPackage>com.cristiano.galactic.model.bt.model.condition</ModelConditionsPackage>
+	<LibraryClassName>ItemBTLibrary</LibraryClassName>
+	<LibraryPackage>com.cristiano.galactic.model.bt.library</LibraryPackage>
+	<LibraryOutputDirectory>../../../GalacticEngine/src/com/cristiano/galactic/model/bt/library</LibraryOutputDirectory>
+</BTLibrary>
+</Configuration>

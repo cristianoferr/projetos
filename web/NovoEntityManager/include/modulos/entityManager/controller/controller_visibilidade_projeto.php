@@ -1,0 +1,6 @@
+<?
+class VisibilidadeProjetoController extends BaseController{
+
+
+	}
+?>

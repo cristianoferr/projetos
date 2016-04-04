@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty-controls>
+  <!-- this is our nifty little progressbar control -->
+  <controlDefinition name="shipinfo" controller="galactic.view.hud.controllers.ShipInfoControl">
+    <panel width="238px" height="60px" childLayout="horizontal">
+    	<image width="16px" height="16px" id="icone" x="0" y="0" filename="Interface/teste.gif" valign="center" align="center" />
+	    
+	    <panel height="100%" width="160px" childLayout="absolute" align="center">
+	    	<control id="objectName" x="0px" y="0px" name="label" color="#ffff" text="PlayerShip" width="100%" font="aurulent-sans-16.fnt" textHAlign="left" align="left" valign="top" />
+		    <control id="shield" x="0px" y="18px" name="progressbar" width="160px" height="12px" />
+		    <control id="hull" x="0px" y="-130px" name="progressbar" width="160px" height="60px" />
+		    <panel id="panelPlayer" x="0px" y="42px" width="160px" childLayout="horizontal" visible="true" height="12px">
+		    	<control id="speed" name="progressbar" align="left" valign="center" width="160px" height="12px" />
+		    </panel>
+		    <panel id="panelTarget" x="0px" y="38px" width="160px" childLayout="horizontal" visible="true" height="12px">
+		    	<control name="label" color="#ffff" text="Distance: " font="aurulent-sans-16.fnt" textHAlign="left" align="left" valign="top" />
+		    	<control id="distanceLabel" name="label" color="#ffff" text="()" width="100%" font="aurulent-sans-16.fnt" textHAlign="left" align="left" valign="top" />
+		    </panel>
+		    
+	    </panel>
+    </panel>
+  </controlDefinition>
+</nifty-controls>

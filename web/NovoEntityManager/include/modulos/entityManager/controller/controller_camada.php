@@ -1,0 +1,6 @@
+<?
+class CamadaController extends BaseController{
+
+
+}
+?>

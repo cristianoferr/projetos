@@ -1,0 +1,125 @@
+/******** ARQUIVO: TOGGLE.CSS ******/
+input[type=radio] {
+    display:none; 
+    margin:10px;
+}
+
+/*
+  Change the look'n'feel of labels (which are adjacent to radiobuttons).
+  Add some margin, padding to label
+*/
+input[type=radio] + label {
+    display:inline-block;
+    margin:1px 0px;
+    padding: 4px 2px;
+    width: auto;	height: auto;
+    border: 1px solid rgba(0,0,0,.3);
+    background: rgba(0,0,0,.05);
+    overflow: hidden;
+    color: rgba(0,0,0,.65);
+    font: bold 90% sans-serif;
+    cursor: pointer;
+
+}
+/*
+ Change background color for label next to checked radio button
+ to make it look like highlighted button
+*/
+input[type=radio]:checked + label { 
+    background:  #c75f3e;/* hsl(210, 90%, 60%) ;*/
+
+
+    color:white;
+}
+
+
+/**
+ * iOS 6 style switch checkboxes
+ * by Lea Verou http://lea.verou.me
+ */
+
+
+
+:root input[type="checkbox"] { /* :root here acting as a filter for older browsers */
+    position: absolute;
+    opacity: 0;
+}
+
+:root input[type="checkbox"].ios-switch + div {
+    display: inline-block;
+    vertical-align: middle;
+    width: 3em;	height: 1em;
+    border: 1px solid rgba(0,0,0,.3);
+    border-radius: 999px;
+    margin: 0 .5em;
+    background: white;
+    background-image: linear-gradient(rgba(0,0,0,.1), transparent),
+        linear-gradient(90deg, #c75f3e 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    background-origin: border-box;
+    background-clip: border-box;
+    overflow: hidden;
+    transition-duration: .4s;
+    transition-property: padding, width, background-position, text-indent;
+    /*box-shadow: 0 .1em .1em rgba(0,0,0,.2) inset,
+                0 .45em 0 .1em rgba(0,0,0,.05) inset;*/
+    font-size: 150%; /* change this and see how they adjust! */
+}
+
+:root input[type="checkbox"].ios-switch:checked + div {
+    padding-left: 2em;	
+    background-position: 0 0;
+}
+
+:root input[type="checkbox"].ios-switch + div:before {
+    float: left;
+    width: 1.65em; height: 1.65em;
+    margin: -.1em;
+    border: 1px solid rgba(0,0,0,.35);
+    border-radius: inherit;
+    background: white;
+    background-image: linear-gradient(rgba(0,0,0,.2), transparent);
+    box-shadow: 0 .1em .1em .1em hsla(0,0%,100%,.8) inset,
+        0 0 .5em rgba(0,0,0,.3);
+    color: white;
+    text-shadow: 0 -1px 1px rgba(0,0,0,.3);
+    text-indent: -2.5em;
+}
+
+:root input[type="checkbox"].ios-switch:active + div:before {
+    background-color: #eee;
+}
+
+:root input[type="checkbox"].ios-switch:focus + div {
+    box-shadow: 0 .1em .1em rgba(0,0,0,.2) inset,
+        0 .45em 0 .1em rgba(0,0,0,.05) inset,
+        0 0 .4em 1px rgba(255,0,0,.5);
+}
+
+:root input[type="checkbox"].ios-switch + div:before,
+:root input[type="checkbox"].ios-switch + div:after {
+    font: bold 60%/1.9 sans-serif;
+    text-transform: uppercase;
+}
+
+:root input[type="checkbox"].ios-switch + div:after {
+    float: left;
+    text-indent: .5em;
+    color: rgba(0,0,0,.45);
+    text-shadow: none;
+
+}
+
+/* Switch code ends here, from now on it’s just bling for the demo page */
+
+.ios-switch-div{
+    display:inline-block;
+}
+.ios-switch-div:after {
+    content: attr(textOff);
+}
+
+.ios-switch-div:before {
+    content: attr(textOn) ;
+}

@@ -1,0 +1,13 @@
+D:\Java\workspaces\workspace_RCP\BluePrintManager\misc\GerenciaBluePrint\GerenciaBluePrint\bin\Debug\GerenciaBluePrint.exe
+D:\Java\workspaces\workspace_RCP\BluePrintManager\misc\GerenciaBluePrint\GerenciaBluePrint\bin\Debug\GerenciaBluePrint.pdb
+D:\Java\workspaces\workspace_RCP\BluePrintManager\misc\GerenciaBluePrint\GerenciaBluePrint\bin\Debug\GerenciaBluePrint.xml
+D:\Java\workspaces\workspace_RCP\BluePrintManager\misc\GerenciaBluePrint\GerenciaBluePrint\obj\Debug\ResolveAssemblyReference.cache
+D:\Java\workspaces\workspace_RCP\BluePrintManager\misc\GerenciaBluePrint\GerenciaBluePrint\obj\Debug\BluePrintManager.BluePrintController.resources
+D:\Java\workspaces\workspace_RCP\BluePrintManager\misc\GerenciaBluePrint\GerenciaBluePrint\obj\Debug\BluePrintManager.frmPrincipal.resources
+D:\Java\workspaces\workspace_RCP\BluePrintManager\misc\GerenciaBluePrint\GerenciaBluePrint\obj\Debug\BluePrintManager.Resources.resources
+D:\Java\workspaces\workspace_RCP\BluePrintManager\misc\GerenciaBluePrint\GerenciaBluePrint\obj\Debug\BluePrintManager.parameterEditor.resources
+D:\Java\workspaces\workspace_RCP\BluePrintManager\misc\GerenciaBluePrint\GerenciaBluePrint\obj\Debug\GerenciaBluePrint.vbproj.GenerateResource.Cache
+D:\Java\workspaces\workspace_RCP\BluePrintManager\misc\GerenciaBluePrint\GerenciaBluePrint\obj\Debug\GerenciaBluePrint.exe
+D:\Java\workspaces\workspace_RCP\BluePrintManager\misc\GerenciaBluePrint\GerenciaBluePrint\obj\Debug\GerenciaBluePrint.xml
+D:\Java\workspaces\workspace_RCP\BluePrintManager\misc\GerenciaBluePrint\GerenciaBluePrint\obj\Debug\GerenciaBluePrint.pdb
+D:\Java\workspaces\workspace_RCP\BluePrintManager\misc\GerenciaBluePrint\GerenciaBluePrint\obj\Debug\BluePrintManager.ParamListController.resources

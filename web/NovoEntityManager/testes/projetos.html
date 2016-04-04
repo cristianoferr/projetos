@@ -1,0 +1,269 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="menu.css">
+		<link rel="stylesheet" href="../css/estilos.css">
+		<link rel="stylesheet" href="../css/estilos_layout.css">
+		<link rel="stylesheet" href="../css/estilos_inputs.css">
+		<link rel="stylesheet" href="../css/estilos_table.css">
+		<link rel="stylesheet" href="../css/projetos.css">
+		<script src="../js/jquery.js" type="text/javascript"></script>
+		<title>Entity Manager</title>
+	</head>
+	<body>
+
+	<header>
+	<div class="fundo">
+	<div id="topMenu" class="caixa">
+		<ul>
+			<li><a href="#" id="raiz">ModLay </a></li>
+			<li><a href="#" id="current">Pictuly</a></li>
+			<li><a href="#">Tarefas</a></li>
+			<li><a href="#">UML</a></li>
+			<li><a href="#">Entidades</a></li>
+			<li><a href="#">Membros</a></li>
+		</ul>
+	</div>
+
+	<div id="rightMenu">
+		<ul>
+			<li><a href="#">cristianorj@gmail.com</a></li><li>
+			<li><a href="#">Logout</a></li>
+		</ul>
+	</div>
+	</div>
+
+
+	<div class="sideMenu caixa" id="sideMenu">
+		<ul >
+			<li><a href="#" id="raiz_entidades" class="menu_expandido" onclick='alternaSideMenu();'></a>
+				<a href="#" id="raiz_entidades" class="item_link_raiz" >Entidades</a></li>
+		</ul>
+		<div id="conteudoMenu">
+			<ul id="projeto1">
+				<li class="">
+					<a href="#"  id="root_projeto1" class="raiz_projeto menu_expandido" onclick='alternaSideMenuProjeto(1);'>&nbsp;</a>
+					<a id="root_projeto1" class="raiz_projeto item_link" href="#" >Pictuly</a>
+				</li>
+			</ul>
+			<ul id="conteudo_projeto1">
+				<li><a href="#">categoria</a></li>
+				<li><a href="#">categoria_tag</a></li>
+				<li><a href="#">feeder</a></li>
+				<li><a href="#">feeder_tag</a></li>
+				<li><a href="#">lingua</a></li>
+				<li><a href="#">log_site</a></li>
+				<li><a href="#">media_tag_usuario</a></li>
+				<li><a href="#">partner</a></li>
+				<li><a href="#">report</a></li>
+				<li><a href="#">site_feeder</a></li>
+				<li><a href="#">tag</a></li>
+				<li><a href="#">tipo_report</a></li>
+				<li><a href="#">usuario</a></li>
+			</ul>
+
+			<ul id="projeto2">
+				<a href="#"  id="root_projeto1" class="raiz_projeto menu_expandido" onclick='alternaSideMenuProjeto(1);'>&nbsp;</a>
+					<a id="root_projeto1" class="raiz_projeto item_link" href="#" >international</a>
+				</li>
+			</ul>
+			<ul id="conteudo_projeto2">
+				<li><a href="#">string_internacional</a></li>
+				<li><a href="#">texto_lang</a></li>
+			</ul>
+
+			<ul id="projeto3">
+				<li><a href="#" id="root_projeto3" class="raiz_projeto menu_expandido" onclick='alternaSideMenuProjeto(3);'>media</a></li>
+			</ul>
+			<ul id="conteudo_projeto3">
+				<li><a href="#">comentario_media</a></li>
+				<li><a href="#">media</a></li>
+				<li><a href="#">media_foto</a></li>
+				<li><a href="#">media_tag</a></li>
+				<li><a href="#">tipo_media</a></li>
+				<li><a href="#">voto_media</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<script>
+	function alternaSideMenuProjeto(id_projeto){
+		var elemento="#conteudo_projeto"+id_projeto
+		var elementoLink="#root_projeto"+id_projeto
+		var elMenu=document.getElementById(elemento);
+		$(elemento).toggle();
+		if ($(elemento).is(":visible")){
+			$(elementoLink).addClass('menu_expandido');
+			$(elementoLink).removeClass('menu_contraido');
+		} else {
+			$(elementoLink).addClass('menu_contraido');
+			$(elementoLink).removeClass('menu_expandido');
+		}
+
+	}
+
+	function alternaSideMenu(){
+		$("#conteudoMenu").toggle();
+		if ($("#conteudoMenu").is(":visible")){
+			$("#raiz_entidades").addClass('menu_expandido');
+			$("#raiz_entidades").removeClass('menu_contraido');
+		} else {
+			$("#raiz_entidades").addClass('menu_contraido');
+			$("#raiz_entidades").removeClass('menu_expandido');
+		}
+
+	}
+	</script>
+	
+	</header>
+
+	<section class="container">
+		<h1 class="titulo">Projetos</h1>
+
+
+		<div id="img_thumbs">
+			<div class="mediathumb_row">
+				<span class="mediathumb_brdr" id="th_232148">
+					<div class='cardCaption'>
+						<a href="#">Pictuly</a> 
+					</div> 
+					<div class='dado'>
+						<a href="#">Entidades:</a> <div>9</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Tarefas Abertas:</a> <div>3</div>
+					</div>
+					<div class='dado'>
+						<a href="#">Sub-Projetos:</a> <div>2</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Metodologia:</a> <div>MVC</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Banco de Dados:</a> <div>SQLite</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Complexidade:</a> <div>96</div>
+					</div> 	
+					<div class='legenda'>
+						<a href="#" class="button-link button-card">UML</a>
+						<a href="#" class="button-link button-card">Build</a>
+					</div> 	
+				</span>
+				
+				<span class="mediathumb_brdr" id="th_232148">
+					<div class='cardCaption'>
+						<a href="#">Pictuly</a> 
+					</div> 
+					<div class='dado'>
+						<a href="#">Entidades:</a> <div>9</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Tarefas Abertas:</a> <div>3</div>
+					</div>
+					<div class='dado'>
+						<a href="#">Sub-Projetos:</a> <div>2</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Metodologia:</a> <div>MVC</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Banco de Dados:</a> <div>SQLite</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Complexidade:</a> <div>96</div>
+					</div> 	
+					<div class='legenda'>
+						<a href="#" class="button-link button-card">UML</a>
+						<a href="#" class="button-link button-card">Build</a>
+					</div> 	
+				</span>
+				
+				<span class="mediathumb_brdr" id="th_232148">
+					<div class='cardCaption'>
+						<a href="#">Pictuly</a> 
+					</div> 
+					<div class='dado'>
+						<a href="#">Entidades:</a> <div>9</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Tarefas Abertas:</a> <div>3</div>
+					</div>
+					<div class='dado'>
+						<a href="#">Sub-Projetos:</a> <div>2</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Metodologia:</a> <div>MVC</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Banco de Dados:</a> <div>SQLite</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Complexidade:</a> <div>96</div>
+					</div> 	
+					<div class='legenda'>
+						<a href="#" class="button-link button-card">UML</a>
+						<a href="#" class="button-link button-card">Build</a>
+					</div> 	
+				</span>
+				
+				<span class="mediathumb_brdr" id="th_232148">
+					<div class='cardCaption'>
+						<a href="#">Pictuly</a> 
+					</div> 
+					<div class='dado'>
+						<a href="#">Entidades:</a> <div>9</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Tarefas Abertas:</a> <div>3</div>
+					</div>
+					<div class='dado'>
+						<a href="#">Sub-Projetos:</a> <div>2</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Metodologia:</a> <div>MVC</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Banco de Dados:</a> <div>SQLite</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Complexidade:</a> <div>96</div>
+					</div> 	
+					<div class='legenda'>
+						<a href="#" class="button-link button-card">UML</a>
+						<a href="#" class="button-link button-card">Build</a>
+					</div> 	
+				</span>
+				
+				<span class="mediathumb_brdr" id="th_232148">
+					<div class='cardCaption'>
+						<a href="#">Pictuly</a> 
+					</div> 
+					<div class='dado'>
+						<a href="#">Entidades:</a> <div>9</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Tarefas Abertas:</a> <div>3</div>
+					</div>
+					<div class='dado'>
+						<a href="#">Sub-Projetos:</a> <div>2</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Metodologia:</a> <div>MVC</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Banco de Dados:</a> <div>SQLite</div>
+					</div> 	
+					<div class='dado'>
+						<a href="#">Complexidade:</a> <div>96</div>
+					</div> 	
+					<div class='legenda'>
+						<a href="#" class="button-link button-card">UML</a>
+						<a href="#" class="button-link button-card">Build</a>
+					</div> 	
+				</span>
+				
+			</div>
+		</div>
+</section>

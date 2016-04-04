@@ -1,0 +1,30 @@
+#dark {
+   
+}
+
+#dark #search {
+   
+
+}
+
+#dark #search input[type="text"] {
+    background: url(img/search-dark.png) no-repeat 10px 6px #FEFAC0;
+    border: 0 none;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    border-color: black;
+    color: black;
+    width: 150px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    }
+
+#dark #search input[type="text"]:focus {
+    width: 200px;
+    }

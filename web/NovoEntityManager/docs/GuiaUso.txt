@@ -1,0 +1,38 @@
+Chamando widgets na pagina atual:
+getWidgetManager()->showWidget(<nome widget>,<id do item>);
+
+Widgets atuais:
+WIDGET_LISTA_ARTIGOS_PAGINA
+WIDGET_EDIT_DIAGRAMA
+WIDGET_EDIT_ENTIDADE
+WIDGET_EDIT_DATATYPE
+WIDGET_EDIT_VIRTUAL_REGISTRO
+WIDGET_LISTA_ARTIGOS
+WIDGET_LISTA_ARTIGOS_PAGINA          --SANFONADO
+WIDGET_LISTA_ARTIGOS_PAGINA_SUMARIO  -- NÃO É SANFONADO
+WIDGET_EDIT_ARTIGO
+WIDGET_MOSTRA_ARTIGO
+WIDGET_NEW_ARTIGO
+
+WIDGET_EDIT_TAREFA
+WIDGET_EDIT_ENTREGAVEL
+--
+Para criar um novo widget:
+- Criar o widget dentro da pasta widget do modulo
+- Criar uma constante para o widget 
+- No widget_manager, criar um "if"  apontando para o widget
+
+--
+
+cria um botão para abrir o widget selecionado:
+getWidgetManager()->createButtonForWidget($nome, $idRegistro, $flagModal, $buttonClass, $buttonText)
+
+Out::createButton($link, $id, $formName, $linkClass = null, $linkText = null)
+----
+Painel:
+$painel->adicionaInputForm("projeto",$id_projeto);
+$painel->setWidgetId($id); //$id é o id do item sendo mostrado... util para adicionar um filho de um item, por exemplo.
+--
+
+TableManager:
+adicionaColunaComFK($table,$caption,$dbname,$flagReadonly,$flagAllowNull,$fktablename,$tipo)

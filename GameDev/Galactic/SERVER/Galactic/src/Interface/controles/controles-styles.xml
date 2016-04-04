@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty-styles>
+  <style id="shieldStyle" >
+    <attributes backgroundColor="#14DAD4"/>
+  </style>
+
+	<style id="hullStyle" >
+    <attributes backgroundColor="#32C44D"/>
+  </style>
+  
+  <style id="fundoSpeedStyle" >
+    <attributes backgroundColor="#DCE0DD"/>
+  </style>
+  
+  <style id="speedStyle" >
+    <attributes backgroundColor="#2C99C7"/>
+  </style>
+  
+  
+  <style id="transparente" >
+    <attributes backgroundColor="#00000040"/>
+  </style>
+  
+  
+  </nifty-styles>

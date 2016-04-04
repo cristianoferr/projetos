@@ -1,0 +1,326 @@
+/*Produto*/
+.thumb_produto{
+    width:100px;
+    height:100px;
+    padding-left: 0;
+    padding-right: 0;
+}
+.nomeProduto{
+    margin-top:0;
+}
+.corpoProduto{
+    display: block;
+}
+
+.descricaoProduto{
+}
+
+
+.nomeFornecedor,.nomeFornecedor h3{
+    margin-top:0;
+    position:absolute;
+    float:right;
+    top:3px;
+    right:3px;
+    padding-top:0px;
+    text-align: right;
+}
+
+.precoProduto{
+    float:right;
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/*Mural**/
+.titulo_area{
+    color: #959595;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin:0;
+    padding-top:5px;
+}
+ul.mural{
+   
+}
+div.mural,div.linhaFornecedor{
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    box-shadow: 1px 1px 1px #888888;
+    background-color: #F7F7DE;
+    padding-left:5px;
+    padding-top:3px;
+    padding-bottom:5px;
+    position:relative;
+    margin:5px 1px;
+    
+}
+
+div.mural:after{
+    position:absolute;
+    top:0px;
+    right:2px;
+    color: #959595;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.mural_tipo1:after{
+    content:"Mensagem";
+}
+.mural_tipo2:after{
+    content:"Produto Atualizado";
+}
+.mural_tipo3:after{
+    content:"Fornecedor Atualizado";
+}
+.mural_tipo4:after{
+    content:"Promoção";
+}
+
+/***/
+.logo_fornecedor{
+    height:100px;
+    width:100%;
+}
+
+.nomeFornecedorMural{
+    margin:5px 20px 5px 0px;
+}
+.pagina_fornecedor{
+    box-shadow: 1px 1px 1px #888888;
+    min-width: 800px;
+    min-height:40px;
+}
+
+.mural li a,.mural li{
+    padding:5px;
+
+}
+
+
+.mini_container{
+    margin: 0 auto;
+    width:100%;
+    display:block;
+}
+
+.lang_article{
+    position:relative;top:-1.5em;height:0;color:gray;
+}
+
+.inline{
+    display:inline;
+}
+.block{
+    display:block;
+}
+
+
+.hidden{
+    display:none;
+}
+
+.imgLink{
+    width:24px;
+    height:24px;
+    text-align: left;
+    float:left;
+    margin-right: 6px;
+    vertical-align: center;
+    position: relative;
+    top:-6px;
+}
+
+.imgTitulo{
+    width:24px;
+    height:24px;
+    text-align: left;
+    margin-right: 6px;
+    vertical-align: center;
+    position: relative;
+    top:5px;
+}
+
+.listaProduto{
+   min-height: 110px; 
+   margin-top: 5px;
+}
+
+.moduloideias{
+    float:left;
+    width:49%;
+}
+
+.lista li{
+    list-style-type:none;
+    padding-left: 34px;
+    font-size: 12px;
+    font-weight: normal;
+    padding-top: 5px;
+
+}
+.lista li a span{
+    background-color: #ccc;
+    border: 2px solid #ccc;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #888888;
+}
+
+
+
+table{
+    border-spacing:1px;
+    border-collapse: separate;
+}
+
+table caption{
+    color:#574d00;
+}
+
+
+h1{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:#574d00;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:#574d00;
+}
+
+h3{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:#574d00;
+}
+
+/*
+        position: absolute;
+
+*/
+
+
+footer{
+    margin-top: 300px;
+}
+
+/*section*/
+.destaque{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.semitransparente{
+    opacity:0.5;
+}
+
+
+/*aba*/
+.class_aba{
+    margin-top: 20px;
+}
+
+.borda{
+    border: 1px solid black;
+}
+
+.direita{
+    float: right;
+}
+
+.esquerda{
+    float: left;
+}
+
+
+
+.paddingmedio{
+    padding: 10px;
+}
+
+.centro{
+    text-align: center;
+}
+
+.texto_escuro{
+    color:#555;
+}
+
+/* //// */
+
+
+strong{
+    font-weight: bold;
+}
+
+
+b{
+    font-weight: bold;
+}
+
+
+.invisivel{
+    display: none;
+}
+.visivel{
+    display: inline;
+}
+
+label{
+    display:block;
+}
+
+a {
+    color: #c75f3e;
+    text-decoration: none;
+}
+
+
+
+.fundo{
+    background-color: #F7F7DE;
+}
+
+.fundoclaro{
+    background-color: #fefefa;
+}
+
+.caixa{
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    box-shadow: 1px 1px 1px #888888;
+}
+
+
+.titulo,caption{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0px; 
+    text-decoration:none;
+
+    padding-left: 10px;
+    /*padding-top: 20px;*/
+    text-align:left;
+}
+
+
+.subTitulo{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0px; 
+    text-decoration:none;
+    color:#555;
+    padding-left: 20px;
+
+}
+

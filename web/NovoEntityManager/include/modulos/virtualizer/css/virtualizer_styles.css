@@ -1,0 +1,8 @@
+.tile_row {
+    display: table-row;
+    border:black dotted 1px;
+}
+.tile_col {
+    display: table-cell;
+    border:black dotted 1px;
+}

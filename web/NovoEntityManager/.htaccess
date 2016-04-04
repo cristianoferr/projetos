@@ -1,0 +1,282 @@
+Options -Multiviews
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^js/minified.js?$ /build/final-min.js-inc [NC,L]
+    RewriteRule ^css/minified.css?$ /build/final-min.css-inc [NC,L]
+
+
+    RewriteRule ^css/(.*)/(.*).css?$ include/modulos/$1/css/$2.css [NC,L]
+    RewriteRule ^js/(.*)/(.*).js?$ include/modulos/$1/js/$2.js [NC,L]
+    RewriteRule ^js/(.*)/(.*).php?$ include/modulos/$1/js/$2.php [NC,L]
+    RewriteRule ^ckeditor(.*) include/modulos/default/pages/ckeditor/$1 [NC,L]
+    RewriteRule ^bootstrap(.*) include/modulos/bootstrap/pages/default/$1 [NC,L]
+    RewriteRule ^fonts/?(.*)$ css/fonts/$1 [NC,L]
+
+    RewriteRule ^mod_(.*)/(.*)?$ include/modulos/$1/pages/$2.php [NC,L]
+
+    RewriteRule ^admin/?(.*)$ include/modulos/admin/pages/$1 [NC,L]
+
+    RewriteRule ^widget/(.*)?$ include/modulos/default/pages/widget_viewer.php?$1 [L,NE,QSA]
+
+    ## SITE MANAGER
+    RewriteRule ^strings/?$ include/modulos/siteManager/pages/strings.php? [NC,L]
+    RewriteRule ^strings/new$ include/modulos/siteManager/pages/strings.php?acao=novo [NC,L]
+    RewriteRule ^strings/delete/(.*)?$ include/modulos/siteManager/pages/strings.php?acao=excluir&chave=$1 [NC,L]
+    RewriteRule ^strings/(.*)?$ include/modulos/siteManager/pages/strings.php?chave=$1 [NC,L]
+
+    RewriteRule ^paginas/?$ include/modulos/siteManager/pages/paginas.php? [NC,L]
+    RewriteRule ^paginas/new$ include/modulos/siteManager/pages/paginas.php?acao=novo [NC,L]
+    RewriteRule ^paginas/delete/([0-9]+)?$ include/modulos/siteManager/pages/paginas.php?acao=excluir&pagina=$1 [NC,L]
+    RewriteRule ^paginas/([0-9]+)?$ include/modulos/siteManager/pages/paginas.php?pagina=$1 [NC,L]
+
+    RewriteRule ^login/reset/([A-Za-z0-9-]+)$ include/modulos/siteManager/pages/login.php?acao=resetForm&ticket=$1 [NC,L]
+    RewriteRule ^login/reset/$ include/modulos/siteManager/pages/login.php [NC,L]
+    RewriteRule ^logout$ include/modulos/siteManager/pages/login.php?acao=logout [NC,L]
+    RewriteRule ^login/forgot$ include/modulos/siteManager/pages/login.php?acao=forgot [NC,L]
+    RewriteRule ^login/new/([a-z0-9-]+)/([^/]*)/([a-z0-9-]+)?$ include/modulos/siteManager/pages/login.php?acao=novo&email=$2&erro=$1&nome=$3 [NC,L]
+    RewriteRule ^login/new/([a-z0-9-]+)/([^/]*)/([a-z0-9-]+) include/modulos/siteManager/pages/login.php?acao=novo&email=$2&erro=$1&nome=$3 [NC,L]
+    RewriteRule ^login/new$ include/modulos/siteManager/pages/login.php?acao=novo [NC,L]
+    RewriteRule ^login/new/error_([a-z0-9-]+)$ include/modulos/siteManager/pages/login.php?acao=novo&erro=$1 [NC,L]
+    RewriteRule ^login/error/([0-9]+)?$ include/modulos/siteManager/pages/login.php?erro=$1 [NC,L]
+    RewriteRule ^login/$ include/modulos/siteManager/pages/login.php [NC,L]
+    RewriteRule ^login$ include/modulos/siteManager/pages/login.php [NC,L]
+    RewriteRule ^auth$ include/modulos/siteManager/pages/auth.php [NC,L]
+
+    RewriteRule ^profile$ include/modulos/siteManager/pages/usuario.php [NC,L]
+
+    ##ABTEST
+    RewriteRule ^abtest/?$ include/modulos/abtesting/pages/abtests.php? [NC,L]
+    RewriteRule ^abtest/new?$ include/modulos/abtesting/pages/abtests.php?acao=novo [NC,L]
+    RewriteRule ^abtest/([0-9]+)?$ include/modulos/abtesting/pages/abtests.php?abtest=$1 [NC,L]
+    RewriteRule ^redir/([0-9]+)?$ include/modulos/abtesting/pages/redir.php?abtest=$1 [NC,L]
+
+    RewriteRule ^tipoabtest/?$ include/modulos/abtesting/pages/tipo_abtest.php? [NC,L]
+    RewriteRule ^tipoabtest/new?$ include/modulos/abtesting/pages/tipo_abtest.php?acao=novo [NC,L]
+
+    RewriteRule ^nyi/(.*)?$ include/modulos/abtesting/pages/nyi.php?feature=$1 [NC,L]
+
+    RewriteRule ^abtest/variacao?$ include/modulos/abtesting/pages/variacao.php [NC,L]
+    RewriteRule ^abtest/variacao/new/([0-9]+)?$ include/modulos/abtesting/pages/variacao.php?acao=novo&abtest=$1 [NC,L]
+    RewriteRule ^abtest/variacao/delete/([0-9]+)/([0-9]+)?$ include/modulos/abtesting/pages/variacao.php?acao=excluir&abtest=$1&variacao=$2 [NC,L]
+    RewriteRule ^abtest/variacao/([0-9]+)?$ include/modulos/abtesting/pages/variacao.php?abtest=$1 [NC,L]
+
+    ##ENTITY MANAGER
+
+    RewriteRule ^project/new$ include/modulos/entityManager/pages/projeto.php?acao=novo [NC,L]
+    RewriteRule ^project/delete/([0-9]+)?$ include/modulos/entityManager/pages/projeto.php?acao=excluir&projeto=$1 [NC,L]
+    RewriteRule ^project/([0-9]+)/?$ include/modulos/entityManager/pages/projeto.php?projeto=$1 [NC,L]
+    RewriteRule ^project/?$ include/modulos/entityManager/pages/projeto.php? [NC,L]
+
+    RewriteRule ^property/$ include/modulos/entityManager/pages/coluna.php [NC,L]
+
+    RewriteRule ^layers/new/([0-9]+)?$ include/modulos/entityManager/pages/camadas.php?acao=novo&projeto=$1
+
+    RewriteRule ^entity/new/([0-9]+)?$ include/modulos/entityManager/pages/entidade.php?acao=novo&projeto=$1
+    RewriteRule ^entity/([0-9]+)/([0-9]+)?$ include/modulos/entityManager/pages/entidade.php?projeto=$1&entidade=$2 [NC,L]
+    RewriteRule ^entity/$ include/modulos/entityManager/pages/entidade.php [NC,L]
+
+    RewriteRule ^datatypes/new/([0-9]+)?$ include/modulos/entityManager/pages/data_type.php?acao=novo&projeto=$1 [NC,L]
+    RewriteRule ^datatypes/([0-9]+)/([0-9]+)?$ include/modulos/entityManager/pages/data_type.php?projeto=$1&id=$2 [NC,L]
+    RewriteRule ^datatypes/([0-9]+)?$ include/modulos/entityManager/pages/data_type.php?projeto=$1 [NC,L]
+
+    RewriteRule ^entities/([0-9]+)/?$ include/modulos/entityManager/pages/entidades.php?projeto=$1 [NC,L]
+
+    RewriteRule ^export/structure/([a-z0-9-]+)/?$ include/modulos/diagramas/pages/build.php?projeto=$1&aba=2 [NC,L]
+    RewriteRule ^export/content/([a-z0-9-]+)/?$ include/modulos/diagramas/pages/build.php?projeto=$1&aba=4 [NC,L]
+    RewriteRule ^export/([a-z0-9-]+)/([a-z0-9-]+)/?$ include/modulos/diagramas/pages/build.php?projeto=$1&aba=$2 [NC,L]
+    RewriteRule ^export/([a-z0-9-]+)/?$ include/modulos/diagramas/pages/build.php?projeto=$1 [NC,L]
+    RewriteRule ^export/([a-z0-9-]+)/([a-z0-9-]+)/([a-z0-9-]+)?$ include/modulos/diagramas/pages/build.php?projeto=$1&aba=$2&entregavel=$3 [NC,L]
+
+    RewriteRule ^members/new/([0-9]+)?$ include/modulos/entityManager/pages/membros.php?acao=novo&projeto=$1 [NC,L]
+    RewriteRule ^members/delete/([0-9]+)/([0-9]+)?$ include/modulos/entityManager/pages/membros.php?acao=excluir&projeto=$1&membro=$2& [NC,L]
+    RewriteRule ^members/([0-9]+)/([0-9]+)?$ include/modulos/entityManager/pages/membros.php?projeto=$1&membro=$2& [NC,L]
+    RewriteRule ^members/([0-9]+)?$ include/modulos/entityManager/pages/membros.php?projeto=$1 [NC,L]
+    RewriteRule ^members?$ include/modulos/entityManager/pages/membros.php [NC,L]
+
+    RewriteRule ^explore?$ include/modulos/entityManager/pages/projetos.php [NC,L]
+
+    RewriteRule ^projects/([0-9]+)?$ include/modulos/entityManager/pages/projetos.php?projeto=$1 [NC,L]
+    RewriteRule ^projects/$ include/modulos/entityManager/pages/projetos.php [NC,L]
+    RewriteRule ^projects$ include/modulos/entityManager/pages/projetos.php [NC,L]
+
+
+    RewriteRule ^property/new/([0-9]+)/([0-9]+)?$ include/modulos/entityManager/pages/coluna.php?acao=novo&projeto=$1&entidade=$2 [NC,L]
+    RewriteRule ^property/delete/([0-9]+)/([0-9]+)/([0-9]+)?$ include/modulos/entityManager/pages/coluna.php?acao=excluir&projeto=$1&entidade=$2&coluna=$3& [NC,L]
+    RewriteRule ^property/([0-9]+)/([0-9]+)/([0-9]+)?$ include/modulos/entityManager/pages/coluna.php?projeto=$1&entidade=$2&coluna=$3& [NC,L]
+    RewriteRule ^property?$ include/modulos/entityManager/pages/coluna.php [NC,L]
+
+    RewriteRule ^parameter/new/([0-9]+)/([0-9]+)/([0-9]+)?$ include/modulos/entityManager/pages/parametro.php?acao=novo&projeto=$1&entidade=$2&funcao=$3 [NC,L]
+    RewriteRule ^parameter/delete/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)?$ include/modulos/entityManager/pages/parametro.php?acao=excluir&projeto=$1&entidade=$2&funcao=$3&parametro=$4& [NC,L]
+    RewriteRule ^parameter/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)?$ include/modulos/entityManager/pages/parametro.php?projeto=$1&entidade=$2&funcao=$3&parametro=$4 [NC,L]
+    RewriteRule ^parameter/?$ /parametro.php [NC,L]
+    RewriteRule ^parameter?$ /parametro.php [NC,L]
+
+    RewriteRule ^view/new/([0-9]+)/([0-9]+)?$ include/modulos/virtual_entity/pages/visualiza.php?acao=novo&projeto=$1&entidade=$2 [NC,L]
+    RewriteRule ^view/delete/([0-9]+)/([0-9]+)/([0-9]+)?$ include/modulos/virtual_entity/pages/visualiza.php?acao=excluir&projeto=$1&entidade=$2&registro=$3 [NC,L]
+    RewriteRule ^view/([0-9]+)/([0-9]+)?$ include/modulos/virtual_entity/pages/visualiza.php?projeto=$1&entidade=$2 [NC,L]
+    RewriteRule ^view/?$ include/modulos/virtual_entity/pages/visualiza.php [NC,L]
+    RewriteRule ^view?$ include/modulos/virtual_entity/pages/visualiza.php [NC,L]
+
+    RewriteRule ^function/new/([0-9]+)/([0-9]+)?$ include/modulos/entityManager/pages/funcao.php?acao=novo&projeto=$1&entidade=$2 [NC,L]
+    RewriteRule ^function/delete/([0-9]+)/([0-9]+)/([0-9]+)?$ include/modulos/entityManager/pages/funcao.php?acao=excluir&projeto=$1&entidade=$2&funcao=$3& [NC,L]
+    RewriteRule ^function/([0-9]+)/([0-9]+)/([0-9]+)?$ include/modulos/entityManager/pages/funcao.php?projeto=$1&entidade=$2&funcao=$3& [NC,L]
+    RewriteRule ^function/?$ include/modulos/entityManager/pages/funcao.php [NC,L]
+    RewriteRule ^function?$ include/modulos/entityManager/pages/funcao.php [NC,L]
+    RewriteRule ^method/delete/([0-9]+)/?$ include/modulos/entityManager/pages/funcao.php?acao=excluir&funcao=$1
+
+    RewriteRule ^import/([0-9]+)?$ include/modulos/entityManager/pages/import.php?projeto=$1 [NC,L]
+    RewriteRule ^import?$ include/modulos/entityManager/pages/import.php [NC,L]
+
+    ##DEFAULT
+
+
+    RewriteRule ^error/([0-9]+)?$ include/modulos/default/pages/erro.php?erro=$1 [NC,L]
+    RewriteRule ^alert/([0-9]+)?$ include/modulos/default/pages/aviso.php?erro=$1 [NC,L]
+
+
+
+
+    ##TAREFAS
+
+
+    RewriteRule ^task/([0-9]+)/([0-9]+)?$ include/modulos/tarefa/pages/tarefas.php?projeto=$1&tarefa=$2 [NC,L]
+    RewriteRule ^task/prerequisite/delete/([0-9]+)/([0-9]+)/([0-9]+)?$ include/modulos/tarefa/pages/prereq.php?acao=excluir&projeto=$1&tarefa=$2&prereq=$3 [NC,L]
+    RewriteRule ^task/prerequisite?$ include/modulos/tarefa/pages/prereq.php [NC,L]
+
+    RewriteRule ^tasks/([0-9]+)/([a-z0-9-]+)?$ include/modulos/tarefa/pages/tarefas.php?projeto=$1&modo=$2 [NC,L]
+    RewriteRule ^tasks/([0-9]+)/([a-z0-9-]+)/all?$ include/modulos/tarefa/pages/tarefas.php?projeto=$1&modo=$2&filtro=all [NC,L]
+    RewriteRule ^tasks/([0-9]+)/([a-z0-9-]+)/open?$ include/modulos/tarefa/pages/tarefas.php?projeto=$1&modo=$2&filtro=open [NC,L]
+    RewriteRule ^tasks/([0-9]+)/([a-z0-9-]+)/closed?$ include/modulos/tarefa/pages/tarefas.php?projeto=$1&modo=$2&filtro=closed [NC,L]
+    RewriteRule ^tasks/([0-9]+)/([a-z0-9-]+)/canceled?$ include/modulos/tarefa/pages/tarefas.php?projeto=$1&modo=$2&filtro=canceled [NC,L]
+    RewriteRule ^tasks/([0-9]+)/([a-z0-9-]+)/notstarted?$ include/modulos/tarefa/pages/tarefas.php?projeto=$1&modo=$2&filtro=notstarted [NC,L]
+    RewriteRule ^tasks/([0-9]+)/([a-z0-9-]+)/started?$ include/modulos/tarefa/pages/tarefas.php?projeto=$1&modo=$2&filtro=started [NC,L]
+
+    RewriteRule ^tasks/cancel/([0-9]+)/([0-9]+)?$ include/modulos/tarefa/pages/tarefas.php?acao=cancelar&projeto=$1&tarefa=$2& [NC,L]
+    RewriteRule ^tasks/advance/([0-9]+)/([0-9]+)?$ include/modulos/tarefa/pages/tarefas.php?acao=avancar&projeto=$1&tarefa=$2& [NC,L]
+    RewriteRule ^tasks/new/([0-9]+)?$ include/modulos/tarefa/pages/tarefas.php?acao=novo&projeto=$1& [NC,L]
+    RewriteRule ^tasks/([0-9]+)/([a-z0-9-]+)?$ include/modulos/tarefa/pages/tarefas.php?projeto=$1&tarefa=$2& [NC,L]
+    RewriteRule ^tasks/([0-9]+)?$ include/modulos/tarefa/pages/tarefas.php?projeto=$1& [NC,L]
+    RewriteRule ^tasks/$ include/modulos/tarefa/pages/tarefas.php [NC,L]
+    RewriteRule ^tasks$ include/modulos/tarefa/pages/tarefas.php [NC,L]
+
+    RewriteRule ^deliverable/([0-9]+)/([a-z0-9-]+)?$ include/modulos/tarefa/pages/entregavel.php?projeto=$1&entregavel=$2 [NC,L]
+    RewriteRule ^deliverable/delete/([0-9]+)/([a-z0-9-]+)?$ include/modulos/tarefa/pages/entregavel.php?acao=excluir&projeto=$1&entregavel=$2 [NC,L]
+
+    RewriteRule ^deliverables/([0-9]+)/([a-z0-9-]+)?$ include/modulos/tarefa/pages/entregavel.php?projeto=$1&modo=$2 [NC,L]
+    RewriteRule ^deliverables/([0-9]+)/([a-z0-9-]+)/all?$ include/modulos/tarefa/pages/entregavel.php?projeto=$1&modo=$2&filtro=all [NC,L]
+    RewriteRule ^deliverables/([0-9]+)/([a-z0-9-]+)/open?$ include/modulos/tarefa/pages/entregavel.php?projeto=$1&modo=$2&filtro=open [NC,L]
+    RewriteRule ^deliverables/([0-9]+)/([a-z0-9-]+)/closed?$ include/modulos/tarefa/pages/entregavel.php?projeto=$1&modo=$2&filtro=closed [NC,L]
+    RewriteRule ^deliverables/([0-9]+)/([a-z0-9-]+)/canceled?$ include/modulos/tarefa/pages/entregavel.php?projeto=$1&modo=$2&filtro=canceled [NC,L]
+    RewriteRule ^deliverables/([0-9]+)/([a-z0-9-]+)/notstarted?$ include/modulos/tarefa/pages/entregavel.php?projeto=$1&modo=$2&filtro=notstarted [NC,L]
+    RewriteRule ^deliverables/([0-9]+)/([a-z0-9-]+)/started?$ include/modulos/tarefa/pages/entregavel.php?projeto=$1&modo=$2&filtro=started [NC,L]
+    RewriteRule ^deliverables/new/([0-9]+)?$ include/modulos/tarefa/pages/entregavel.php?acao=novo&projeto=$1& [NC,L]
+    RewriteRule ^deliverables/([0-9]+)?$ include/modulos/tarefa/pages/entregavel.php?projeto=$1& [NC,L]
+    RewriteRule ^deliverables$ include/modulos/tarefa/pages/entregavel.php [NC,L]
+
+    ##DIAGRAMAS
+
+    RewriteRule ^diagrams/([0-9]+)/([0-9]+)?$ include/modulos/diagramas/pages/diagramas.php?projeto=$1&diagrama=$2 [NC,L]
+    RewriteRule ^diagrams/matrix/([0-9]+)?$ include/modulos/diagramas/pages/matriz_dependencia.php?projeto=$1 [NC,L]
+    RewriteRule ^diagrams/([0-9]+)?$ include/modulos/diagramas/pages/diagramas.php?projeto=$1 [NC,L]
+
+    RewriteRule ^diagram/new/([0-9]+)?$ include/modulos/diagramas/pages/diagrama.php?acao=novo&projeto=$1& [NC,L]
+    RewriteRule ^diagram/delete/([0-9]+)/([0-9]+)?$ include/modulos/diagramas/pages/diagrama.php?projeto=$1&diagrama=$2&acao=excluir [NC,L]
+    RewriteRule ^diagram/([0-9]+)/([0-9]+)?$ include/modulos/diagramas/pages/diagrama.php?projeto=$1&diagrama=$2 [NC,L]
+    RewriteRule ^diagram?$ include/modulos/diagramas/pages/diagrama.php [NC,L]
+
+    RewriteRule ^diagram/field_seletor/([0-9]+)/([0-9]+)?$ ajax/diagrama/seletor_componentes_diagrama.php?projeto=$1&diagrama=$2 [NC,L]
+
+
+
+
+    ##### KNOWLEDGE BASE
+
+    RewriteRule ^article/([0-9]+)$ include/modulos/knowledge/pages/artigo.php?artigo=$1 [NC,L]
+    RewriteRule ^article$ include/modulos/knowledge/pages/artigo.php [NC,L]
+    RewriteRule ^article/delete/([0-9]+)$ include/modulos/knowledge/pages/artigo.php?acao=excluir&artigo=$1 [NC,L]
+    RewriteRule ^knowledge$ include/modulos/knowledge/pages/knowledgeBase.php [NC,L]
+
+
+    #### VIRTUALIZER
+    RewriteRule ^screens?$ include/modulos/virtualizer/pages/tela.php [NC,L]
+    RewriteRule ^screens/tile?$ include/modulos/virtualizer/pages/tile.php [NC,L]
+    RewriteRule ^screens/tile/delete/([0-9]+)/([0-9]+)?$ include/modulos/virtualizer/pages/tile.php?acao=excluir&projeto=$1&tile=$2 [NC,L]
+    RewriteRule ^screens/([0-9]+)?$ include/modulos/virtualizer/pages/tela.php?acao=lista&projeto=$1& [NC,L]
+    RewriteRule ^screens/([0-9]+)/([0-9]+)/P?$ include/modulos/virtualizer/pages/tela.php?acao=editar&projeto=$1&tela=$2&modo=P [NC,L]
+    RewriteRule ^screens/([0-9]+)/([0-9]+)/E?$ include/modulos/virtualizer/pages/tela.php?acao=editar&projeto=$1&tela=$2&modo=E [NC,L]
+    RewriteRule ^screens/([0-9]+)/([0-9]+)?$ include/modulos/virtualizer/pages/tela.php?acao=editar&projeto=$1&tela=$2 [NC,L]
+    RewriteRule ^screens/new/([0-9]+)?$ include/modulos/virtualizer/pages/tela.php?acao=novo&projeto=$1 [NC,L]
+    RewriteRule ^screens/delete/([0-9]+)/([0-9]+)?$ include/modulos/virtualizer/pages/tela.php?acao=excluir&projeto=$1&tela=$2 [NC,L]
+
+    RewriteRule ^paineis?$ include/modulos/virtualizer/pages/paineis.php [NC,L]
+    RewriteRule ^paineis/([0-9]+)?$ include/modulos/virtualizer/pages/paineis.php?acao=lista&painel=$1& [NC,L]
+    RewriteRule ^paineis/new?$ include/modulos/virtualizer/pages/paineis.php?acao=novo& [NC,L]
+    RewriteRule ^paineis/delete/([0-9]+)?$ include/modulos/virtualizer/pages/paineis.php?acao=excluir&painel=$1& [NC,L]
+
+    RewriteRule ^widgets/([0-9]+)?$ include/modulos/virtualizer/pages/widgets.php?acao=lista&projeto=$1& [NC,L]
+    RewriteRule ^widgets/([0-9]+)/([0-9]+)?$ include/modulos/virtualizer/pages/widgets.php?acao=editar&widget=$2&projeto=$1& [NC,L]
+
+
+</IfModule>
+
+
+<IfModule mod_expires.c>
+
+ExpiresActive On
+
+    # Text
+
+    ExpiresByType textcss A31536000
+    ExpiresByType application/x-javascript A31536000
+    ExpiresByType text/html A3600
+    ExpiresByType text/richtext A3600
+    ExpiresByType text/plain A3600
+    ExpiresByType text/xml A3600
+
+    # Image
+    ExpiresByType image/gif A31536000
+    ExpiresByType image/x-icon A31536000
+    ExpiresByType image/jpeg A31536000
+    ExpiresByType image/png A31536000
+    ExpiresByType image/svg+xml A31536000
+
+    # Video
+    ExpiresByType video/asf A31536000
+    ExpiresByType video/avi A31536000
+    ExpiresByType video/quicktime A31536000
+    ExpiresByType video/mp4 A31536000
+    ExpiresByType video/mpeg A31536000
+
+    # PDF
+    ExpiresByType application/pdf A31536000
+
+    # Flash
+    ExpiresByType application/x-shockwave-flash A31536000
+
+    # Font
+    ExpiresByType application/x-font-ttf A31536000
+    ExpiresByType application/vnd.ms-fontobject A31536000
+    ExpiresByType application/x-font-otf A31536000
+
+    # Audio
+    ExpiresByType audio/mpeg A31536000
+
+    ExpiresByType audio/ogg A31536000
+
+    ExpiresByType audio/wav A31536000
+
+    ExpiresByType audio/wma A31536000
+
+
+
+    # Zip/Tar
+
+    ExpiresByType application/x-tar A31536000
+
+    ExpiresByType application/x-gzip A31536000
+
+    ExpiresByType application/zip A31536000
+
+</IfModule>
+

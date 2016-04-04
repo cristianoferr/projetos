@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Common"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/jagatoo.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/math/openmali.jar"/>
+	<classpathentry kind="lib" path="/lib/hibernate-distribution-3.6.4.Final/lib2/required/javassist-3.12.0.GA.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/particles/jops.jar"/>
+	<classpathentry kind="lib" path="/lib/xith3d-0.9.7-dev-B1831/third-party/xml/jibx/jibx-run.jar"/>
+	<classpathentry kind="lib" path="/lib/hibernate-distribution-3.6.4.Final/lib2/optional/infinispan/infinispan-core-4.2.1.CR1.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Cyclone2"/>
+	<classpathentry kind="lib" path="/lib/log4j/apache-log4j-1.2.16/log4j-1.2.16.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CriacaoProcedural"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ViewLib"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_core"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_libs"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

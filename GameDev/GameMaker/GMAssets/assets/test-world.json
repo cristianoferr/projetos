@@ -1,0 +1,1 @@
+{"tags":["all","entity","world","final","template","leaf"],"id":157,"strID":"TEMPL157","properties":{"domain":{"class":"'entity'","className":"'GameEntity'","type":"{all entity world}"},"property":{"name":"'Basic Entity'","components":"{}","identifier":"'TestWorld'"},"object":{"systems#0":"[TEMPL158]"},"output":{"file":"'BluePrintTest.bpf'"}},"objectType":"template"}

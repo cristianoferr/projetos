@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tree>
+  <Node id="Node_0" name="CMD_MOVE_TO_TARGET" type="Root">
+    <Children>
+      <Node id="Node_2" type="UntilFail">
+        <Children>
+          <Node id="Node_3" type="SubtreeLookup">
+            <Parameters>
+              <Parameter name="subtreeName" fromcontext="false">CMD_ORIENT_TO</Parameter>
+            </Parameters>
+          </Node>
+        </Children>
+      </Node>
+    </Children>
+  </Node>
+</Tree>
+

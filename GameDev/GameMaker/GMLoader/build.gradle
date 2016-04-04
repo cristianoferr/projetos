@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+
+
+version = '1.1'
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+ext.jarPath = "$buildDir/../libs"
+
+dependencies {
+        compile project('libjars')
+        compile project('Common')
+
+}
+
+task compile << {
+    println 'Parent, compiling classes:' + rootProject.version
+}
+
+task list(dependsOn: configurations.compile) << {
+    println "classpath = ${configurations.compile.collect {File file -> file.name}}"
+}
+
+subprojects {
+    //task compile << { task -> println "Compiling $task.project.name..." }
+    apply plugin: 'java'
+	apply plugin: 'eclipse'
+}
+
+allprojects {
+}

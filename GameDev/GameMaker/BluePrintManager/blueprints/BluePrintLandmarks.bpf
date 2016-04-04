@@ -1,0 +1,108 @@
+//Defines
+
+//Blueprints
+@blueprint landMarkBase:base
+	@domain type+={all}
+	@output file='BluePrintLandmarks.bpf' //*LandMarks: Background elements of the map, obstacles: active components of the map 
+@end
+@blueprint SizeInfo:landMarkBase
+	@domain type+={sizeInfo} //* used by the defineSize function 
+@end
+
+
+@blueprint LandMarksTypeMods:landMarkBase
+@domain type+={landMarkType}
+@end
+
+@mod StaticDoodad:LandMarksTypeMods
+@domain type+={static}
+@end
+
+@mod ExplosiveDoodad:LandMarksTypeMods
+@domain type+={explosive}
+@end
+
+
+@blueprint Doodads:landMarkBase
+@domain type+={doodad} //* Doodads are the base on which landmarks and obstacles are build into...
+@property placeGround=1 //if 1 then the mesh can be placed on ground
+@property placeSky=1 //if 1 then the mesh can be placed on sky
+@property physics=1
+@property mass=0 //0=static, >0 is dynamic (gravity applies)
+@property modTag={static}
+@property meshTag={mesh leaf}
+@mod meshMod=pickOne({landMarkType $this.modTag leaf})
+
+@end
+
+@blueprint Obstacles:Doodads
+@domain type+={obstacle}
+@end
+
+@blueprint PrimitiveObstacles:Obstacles
+@domain type+={primitive}
+@property placeSky=0
+@end
+
+@blueprint BoxObstacle:PrimitiveObstacles
+@domain type+={box} 
+@property meshTag+={box}
+@property modTag={static}
+@end
+
+@blueprint ExplosiveBoxObstacle:PrimitiveObstacles
+@domain type+={explosiveBox} 
+@property meshTag+={box}
+@property modTag={explosive}
+@end
+
+
+@blueprint LandMarks:Doodads
+@domain type+={landMark}
+@end
+
+@blueprint GenericLandmarks:LandMarks
+@domain type+={generic} 
+
+@end
+
+@blueprint PrimitiveLandmark:GenericLandmarks
+@domain type+={primitive surreal} 
+@end
+
+@blueprint BoxLandmark:PrimitiveLandmark
+@domain type+={box} 
+@property meshTag+={box}
+@property placeSky=0
+@end
+
+
+@blueprint LandMarkInfo:landMarkBase
+@domain type+={landMarkInfo}
+@end
+
+@blueprint LandMarkGroups:landMarkBase
+@domain type+={landMarkGroup}
+@replicate landmarks=oneForEach({doodad landMark $this.landmarkTag leaf})
+@replicate obstacles=oneForEach({doodad obstacle $this.obstacleTag leaf})
+@end
+
+@blueprint SurrealLandMarkGroups:LandMarkGroups
+@domain type+={surreal}
+@property landmarkTag={null}
+	@property obstacleTag={primitive}
+	@property landMarkInfo=pickFinal({landMarkInfo leaf},maxQty=0,minQty=0,minSize=rand(10,50),maxSize=rand(50,80))
+	@property obstacleInfo=pickFinal({landMarkInfo leaf},maxQty=20,minQty=12,minSize=5,maxSize=20)
+@end
+
+
+@blueprint SurrealShooterLandMarkGroups:SurrealLandMarkGroups
+	@domain type+={shooter}
+	
+@end
+
+
+@blueprint SurrealArenaLandMarkGroups:SurrealLandMarkGroups
+	@domain type+={arena}
+	@property obstacleInfo=pickFinal({landMarkInfo leaf},maxQty=50,minQty=30,minSize=15,maxSize=40)
+@end

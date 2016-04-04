@@ -1,0 +1,75 @@
+checar:
+https://gist.github.com/erlend-sh/4252423
+-----
+@mod suffix=pickOne({mod weapon suffix})
+mods são aplicaveis a qualquer elemento agora
+-----
+addMesh:
+Vars:
+$index=indice do objeto atual
+$angle=angulo, default: min=0, max=360
+$relIndex=$amount
+
+params:
+posX/Y/Z:posicao do objeto em relacao ao pai, é relativo (1=width/2,-1=-width/2) -> @position
+orientX/Y/Z: define a orientacao -> @orientation
+sizeX/Y/Z: define o tamanho dos eixos, relativos
+'merge=0/1': se 1 então é merge senão é newnode
+amount=number: qtd de objetos que serão replicados
+minAngle/maxAngle: define min e max angle respectivamente, padrão: 0 e 360
+radius=usar para trabalhar com angulo, esse valor é adicionado à posição levando o angulo da orientacao em conta, vira @position mesh.radius
+sizeRadius=define a propriedade radius no elemento final
+
+nota: trocar $ por # para as variaveis para que a funcao possa ser resolvida
+
+Exemplo de uso:
+@mesh mesh1=addMesh({mesh primitive leaf},posX=1,posY=0,posZ=-0.5,merge=1,orientX=0,orientZ=0,orientY=#angle,amount=2,minAngle=0,maxAngle=180)
+
+----
+rand
+randf
+
+sinr:radian sin
+sind:degree sin
+cosr:
+cosd:
+tanr:
+tand:
+hex2dec:hex 2 decimal number
+pickFromList({tags},{baseTag},<opc>itens=1): escolhe aleatoriamente <itens> da lista <tags> e executa um pickFinal({tag1 baseTag)
+randomTag({tags}): retorna uma tag aleatoria da lista informada... só a tag
+simplexNoise2d(seed,featureSize,x,y,(opc)min,(opc)max):retorna um valor de noise (perlin noise), a partir da seed e posições informada, retorna um valor entre min e max
+simplexNoise3d(seed,featureSize,x,y,z,(opc)min,(opc)max): featureSize é usado para determinar o espaçamento... menor=mais caótico
+sqrt($val): raiz quadrada
+sqr($val): quadrado
+isEmpty($val):retorna 1 se o $val for vazio
+log($val): logaritmico
+round($val):arredonda
+
+
+listas:
+@orientation: muda a orientacao do ponto (TODO: melhorar isso)
+@rotation: muda a rotacao do node, foi preciso separar do orientation porque estava atrapalhando meshes com .radius definido
+
+
+
+Isso é possivel:
+@property obj=pickFinal(algumObj)
+@property valor=$obj.valor
+
+acessando uma lista:
+@property vlrLista=$this#lista.valor  //vira: 123
+@lista valor=123
+
+//Criando objetos macro:
+- Macrodefinition
+	- criar uma variação do macro definition
+	- apontar para o theme desejado: @property themeTag={minimal}
+	- apontar para o GameGenre desejado: gameGenreTag
+- GameGenre:
+	- Definir as propriedades:
+		@property worldTag+={worldTest} --define o world a ser usado
+		@property bubbleFilter={race}  --vai para MapLocationData, aponta para MapLocationMods/bubble, define qual o tipo de solver vai resolver o mapa
+		@property locationFilter={land}--vai para MapLocationData, aponta para MapLocationMods/where
+		@property eventFilter={race} --filtro do mod do GameGenreEvents, define o tipo de eventos que terá no jogo
+		@property gameOppositionTag={race}	-- define o tipo de GameOpposition que terá, oposition inicializa o time de acordo com os atributos

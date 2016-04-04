@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tree>
+  <Node id="Node_0" name="CMD_ATTACK_TARGET" type="Root">
+    <Children>
+      <Node id="Node_2" type="UntilFail">
+        <Children>
+          <Node id="Node_3" type="Parallel">
+            <Parameters>
+              <Parameter name="policy" fromcontext="false">selector</Parameter>
+            </Parameters>
+            <Children>
+              <Node id="Node_4" type="SubtreeLookup">
+                <Parameters>
+                  <Parameter name="subtreeName" fromcontext="false">CMD_MOVE_TO_TARGET</Parameter>
+                </Parameters>
+              </Node>
+              <Node id="Node_5" name="CTL_SHOOT" type="Action">
+                <Guard>
+                  <Node id="Node_7" type="Selector">
+                    <Children>
+                      <Node id="Node_8" type="Sequence">
+                        <Children>
+                          <Node id="Node_10" name="TargetInShortRange" type="Condition" />
+                          <Node id="Node_11" name="TargetIsAligned" type="Condition" />
+                        </Children>
+                      </Node>
+                    </Children>
+                  </Node>
+                </Guard>
+                <Parameters>
+                  <Parameter name="target" fromcontext="true">TARGET</Parameter>
+                </Parameters>
+              </Node>
+            </Children>
+          </Node>
+        </Children>
+      </Node>
+    </Children>
+  </Node>
+</Tree>
+

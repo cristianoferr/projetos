@@ -1,0 +1,6 @@
+<?
+class LinguagemController extends BaseController{
+
+
+	}
+?>

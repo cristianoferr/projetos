@@ -1,0 +1,69 @@
+Funções compiladas:
+rand(de,a,(opcional)multiplo): multiplo é usado para retornar somente valores multiplos, ex: 2= retorna só pares
+randf(de,a)
+pickOne(lista de tags)
+list(lista de tags): retorna uma lista no estilo [id1 id2] 
+if(condicao,then,else): retorna um valor dependendo do que foi informado
+count(lista de tags) conta quantos itens possui a lista informada.  Retorna um int
+sum(lista de tags,propriedade): retorna a soma de todos os elementos na propriedade selecionada.  Retorna um int.
+mod(int1,int2)=int1%int2, retorna o resto
+abs(valor)=retorna o valor absoluto inteiro
+absf(valor)=retorna o valor absoluto float
+
+
+funções na geração (quando gero o item final):
+@childproperty <nome objeto>=setProperty(qtdTeams=rand($minTeams,$maxTeams))
+
+Funções runtime:
+checkInventory(lista de tags,qtdNecessaria,flagConsomeSeOk): verifica o inventário do objeto pelo item informado, retorna true se tiver a quantidade informada, e se o flag for true, então a quantidade é reduzida do inventário.
+existsAlive(lista tag):verifica se existe algum game element vivo com a tag informada
+connectEvent(listaEventos,params) 
+connectAction(listaAcoes,params)
+oneForEach(lista de tags,params)=usado em conjunção com "@replicate" exemplo: @replicate roles=oneForEach(blueprint role), isso quer dizer que vai replicar um objeto para cada item da tag
+			quando informado, a lista @object é ignorado.
+			params, exemplo: ,param=123,total=rand(1,3).  Usado para repassar parametros
+			
+
+variáveis:
+$index:retorna o indice do objeto sendo gerado, por exemplo, 
+	se quatro objetos estão sendo replicado, então o index vai de 0 a 3.  Default é 0.
+$angleInc:retorna 360/qtd.objetos sendo replicados.
+$angle=$index*$angleInc
+$isFrontal=retorn 1 se o angulo for frontal
+$isLeftSide= retorna 1 se o angulo estiver à esquera do objeto
+$replicateOnly=var definida apenas na hora que os objetos são replicados... valor final é vazio
+
+@orientation <objeto>.maxAngle=90: define o angulo maximo como 180 ao inves de 360, usado em conjuncao com as variaveis acima
+	maxAngle=90 implica que o angulo pode variar de 45 a -45 
+
+"$this.": retorna a propriedade informada, apenas da lista property
+"$source.": retorna a propriedade informada do objeto extends
+"$owner.": retorna a propriedade informada do objeto owner (que instanciou o objeto em questao)
+
+
+
+Listas:
+
+@event: usado para conectar o objeto a um evento disparado in-game 
+@action é o que acontece quando esse evento dispara
+@validate: valida propriedades no createfinalelement.
+	 funções:
+	 	isNotNull
+	 	isEquals
+	 	isNull
+	 	isTrue:é valido se for "1" ou "true"
+@draw: lista usada para definir o tipo de desenho que será aplicado no objeto em questão.
+	ex: @draw type=pickOne(style draw city)	 	
+
+Por exemplo:
+
+@blueprint contactMine
+	@domain type=contact mine
+	@event explodeOn=pickOne(event contact)
+	@action explodeOn=pickOne(action explosion)
+	@property explosionPower=rand(10,100)
+@end 
+	
+@blueprint ContactEvent
+	
+@end 

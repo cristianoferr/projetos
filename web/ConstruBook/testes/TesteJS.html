@@ -1,0 +1,55 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <script>
+            var conta = 1;
+            var lock = false;
+            function delayedTask() {
+                conta = conta + 1;
+                document.write("conta:" + conta + "<br>");
+                lock = false;
+                startDelayedTask();
+                startDelayedTask();
+                startDelayedTask();
+            }
+
+            function startDelayedTask() {
+                if (!lock) {
+                    setTimeout('delayedTask()', 2000);
+                    lock = true;
+                }
+            }
+
+            startDelayedTask();
+            startDelayedTask();
+            startDelayedTask();
+            startDelayedTask();
+            startDelayedTask();
+            startDelayedTask();
+
+            /*
+             setTimeout(function() {
+             delayedStart()
+             }, 2000);
+             setTimeout(function() {
+             delayedStart()
+             }, 3000);
+             setTimeout(function() {
+             delayedStart()
+             }, 4000);
+             setTimeout(function() {
+             delayedStart()
+             }, 5000;*/
+        </script>
+        <input type="button" onclick="startDelayedTask();" value="Task">
+    </body>
+</html>

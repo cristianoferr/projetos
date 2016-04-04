@@ -1,0 +1,58 @@
+<Domain package="ItemDomain">
+	<ActionSet>
+		<Action name="CTL_TURN_LEFT"><Parameter name="intensity" type="FLOAT"/></Action>
+		<Action name="CTL_TURN_RIGHT"><Parameter name="intensity" type="FLOAT"/></Action>
+		<Action name="CTL_TURN_UP"><Parameter name="intensity" type="FLOAT"/></Action>
+		<Action name="CTL_TURN_DOWN"><Parameter name="intensity" type="FLOAT"/></Action>
+		<Action name="CTL_MOVE_LEFT"><Parameter name="intensity" type="FLOAT"/></Action>
+		<Action name="CTL_MOVE_RIGHT"><Parameter name="intensity" type="FLOAT"/></Action>
+		<Action name="CTL_MOVE_UP"><Parameter name="intensity" type="FLOAT"/></Action>
+		<Action name="CTL_MOVE_DOWN"><Parameter name="intensity" type="FLOAT"/></Action>
+		<Action name="CTL_ROLL_LEFT"><Parameter name="intensity" type="FLOAT"/></Action>
+		<Action name="CTL_ROLL_RIGHT"><Parameter name="intensity" type="FLOAT"/></Action>
+		<Action name="CTL_ENGINE_INC"></Action>
+		<Action name="CTL_ENGINE_DEC"></Action>
+		<Action name="CTL_ENGINE_10P"></Action>
+		<Action name="CTL_ENGINE_20P"></Action>
+		<Action name="CTL_ENGINE_30P"></Action>
+		<Action name="CTL_ENGINE_40P"></Action>
+		<Action name="CTL_ENGINE_50P"></Action>
+		<Action name="CTL_ENGINE_60P"></Action>
+		<Action name="CTL_ENGINE_70P"></Action>
+		<Action name="CTL_ENGINE_80P"></Action>
+		<Action name="CTL_ENGINE_90P"></Action>
+		<Action name="CTL_ENGINE_MAX"></Action>
+		<Action name="CTL_SHOOT"><Parameter name="target" type="ENTITY_ID"/></Action>
+		<Action name="CTL_ENGINE_STOP"><Parameter name="intensity" type="FLOAT"/></Action>
+		<Action name="CMPT_FIND_NEAREST_ENEMY"><Parameter name="maxDistance" type="FLOAT"/></Action>
+		<Action name="CMPT_SELECT_BEST_WEAPON_FIRE_ENEMY"><Parameter name="target" type="ENTITY_ID"/></Action>
+	</ActionSet>
+	<SensorSet>
+		<Sensor name="TargetInFront" type="BOOLEAN"/>
+		<Sensor name="TargetInRear" type="BOOLEAN"/>
+		<Sensor name="TargetToTheLeft" type="BOOLEAN"/>
+		<Sensor name="TargetToTheRight" type="BOOLEAN"/>
+		<Sensor name="TargetIsBelow" type="BOOLEAN"/>
+		<Sensor name="TargetIsAbove" type="BOOLEAN"/>
+		<Sensor name="SelfRotatingLeft" type="BOOLEAN"/>
+		<Sensor name="SelfRotatingRight" type="BOOLEAN"/>
+		<Sensor name="SelfRotatingUp" type="BOOLEAN"/>
+		<Sensor name="SelfRotatingDown" type="BOOLEAN"/>
+		<Sensor name="SelfTooMuchRotation" type="BOOLEAN"/>
+		<Sensor name="TargetAlmostAlignedVert" type="BOOLEAN"/>
+		<Sensor name="TargetAlmostAlignedHoriz" type="BOOLEAN"/>
+		<Sensor name="TargetInShortRange" type="BOOLEAN"/>
+		<Sensor name="TargetInWeaponsRange" type="BOOLEAN"/>
+		<Sensor name="TargetIsClose" type="BOOLEAN"/>
+		<Sensor name="TargetIsAligned" type="BOOLEAN"/>
+		<Sensor name="SelfROCHorizIsLow" type="BOOLEAN"/>
+		<Sensor name="SelfROCVertIsLow" type="BOOLEAN"/>
+		
+
+
+	</SensorSet>
+	<EntitySet>
+	</EntitySet>
+	<GoalSet>
+	</GoalSet>
+</Domain>

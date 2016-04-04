@@ -1,0 +1,11 @@
+G:\java\workspaces\workspace_RCP\NovoEntityManager\tools\Encolhedor\Encolhedor\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\java\workspaces\workspace_RCP\NovoEntityManager\tools\Encolhedor\Encolhedor\obj\x86\Debug\Encolhedor.Resources.resources
+G:\java\workspaces\workspace_RCP\NovoEntityManager\tools\Encolhedor\Encolhedor\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\java\workspaces\workspace_RCP\NovoEntityManager\tools\Encolhedor\Encolhedor\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\java\workspaces\workspace_RCP\NovoEntityManager\tools\Encolhedor\Encolhedor\bin\Debug\Encolhedor.exe
+G:\java\workspaces\workspace_RCP\NovoEntityManager\tools\Encolhedor\Encolhedor\bin\Debug\Encolhedor.pdb
+G:\java\workspaces\workspace_RCP\NovoEntityManager\tools\Encolhedor\Encolhedor\bin\Debug\Encolhedor.xml
+G:\java\workspaces\workspace_RCP\NovoEntityManager\tools\Encolhedor\Encolhedor\obj\x86\Debug\Encolhedor.exe
+G:\java\workspaces\workspace_RCP\NovoEntityManager\tools\Encolhedor\Encolhedor\obj\x86\Debug\Encolhedor.xml
+G:\java\workspaces\workspace_RCP\NovoEntityManager\tools\Encolhedor\Encolhedor\obj\x86\Debug\Encolhedor.pdb
+G:\java\workspaces\workspace_RCP\NovoEntityManager\tools\Encolhedor\Encolhedor\bin\Debug\config.ini

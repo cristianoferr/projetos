@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tree>
+  <Node id="Node_0" name="CMD_ORIENT_TO" type="Root">
+    <Children>
+      <Node id="Node_2" type="UntilFail">
+        <Children>
+          <Node id="Node_3" type="Parallel">
+            <Parameters>
+              <Parameter name="policy" fromcontext="false">selector</Parameter>
+            </Parameters>
+            <Children>
+              <Node id="Node_15" type="Selector">
+                <Children>
+                  <Node id="Node_58" type="Sequence">
+                    <Children>
+                      <Node id="Node_59" name="SelfTooMuchRotation" type="Condition" />
+                      <Node id="Node_64" type="StaticPriorityList">
+                        <Children>
+                          <Node id="Node_60" name="CTL_TURN_UP" type="Action">
+                            <Guard>
+                              <Node id="Node_62" name="SelfRotatingDown" type="Condition" />
+                            </Guard>
+                            <Parameters>
+                              <Parameter name="intensity" fromcontext="false">1</Parameter>
+                            </Parameters>
+                          </Node>
+                          <Node id="Node_61" name="CTL_TURN_DOWN" type="Action">
+                            <Guard>
+                              <Node id="Node_63" name="SelfRotatingUp" type="Condition" />
+                            </Guard>
+                            <Parameters>
+                              <Parameter name="intensity" fromcontext="false">1</Parameter>
+                            </Parameters>
+                          </Node>
+                        </Children>
+                      </Node>
+                    </Children>
+                  </Node>
+                  <Node id="Node_17" type="Selector">
+                    <Children>
+                      <Node id="Node_18" type="Sequence">
+                        <Children>
+                          <Node id="Node_21" name="SelfRotatingDown" type="Condition" />
+                          <Node id="Node_19" name="TargetAlmostAlignedVert" type="Condition" />
+                          <Node id="Node_132" name="CTL_TURN_UP" type="Action">
+                            <Parameters>
+                              <Parameter name="intensity" fromcontext="true">TargetAlignVert</Parameter>
+                            </Parameters>
+                          </Node>
+                        </Children>
+                      </Node>
+                      <Node id="Node_22" type="Sequence">
+                        <Children>
+                          <Node id="Node_16" name="TargetIsAbove" type="Condition" />
+                          <Node id="Node_23" type="Inverter">
+                            <Children>
+                              <Node id="Node_24" name="TargetAlmostAlignedVert" type="Condition" />
+                            </Children>
+                          </Node>
+                          <Node id="Node_25" name="CTL_TURN_UP" type="Action">
+                            <Parameters>
+                              <Parameter name="intensity" fromcontext="false">1</Parameter>
+                            </Parameters>
+                          </Node>
+                        </Children>
+                      </Node>
+                    </Children>
+                  </Node>
+                  <Node id="Node_29" type="Selector">
+                    <Children>
+                      <Node id="Node_30" type="Sequence">
+                        <Children>
+                          <Node id="Node_36" name="SelfRotatingUp" type="Condition" />
+                          <Node id="Node_35" name="TargetAlmostAlignedVert" type="Condition" />
+                          <Node id="Node_133" name="CTL_TURN_DOWN" type="Action">
+                            <Parameters>
+                              <Parameter name="intensity" fromcontext="true">TargetAlignVert</Parameter>
+                            </Parameters>
+                          </Node>
+                        </Children>
+                      </Node>
+                      <Node id="Node_31" type="Sequence">
+                        <Children>
+                          <Node id="Node_28" name="TargetIsBelow" type="Condition" />
+                          <Node id="Node_32" type="Inverter">
+                            <Children>
+                              <Node id="Node_33" name="TargetAlmostAlignedVert" type="Condition" />
+                            </Children>
+                          </Node>
+                          <Node id="Node_37" name="CTL_TURN_DOWN" type="Action">
+                            <Parameters>
+                              <Parameter name="intensity" fromcontext="false">1</Parameter>
+                            </Parameters>
+                          </Node>
+                        </Children>
+                      </Node>
+                    </Children>
+                  </Node>
+                </Children>
+              </Node>
+              <Node id="Node_65" type="Selector">
+                <Children>
+                  <Node id="Node_108" type="Sequence">
+                    <Children>
+                      <Node id="Node_109" name="SelfTooMuchRotation" type="Condition" />
+                      <Node id="Node_114" type="StaticPriorityList">
+                        <Children>
+                          <Node id="Node_115" name="CTL_TURN_LEFT" type="Action">
+                            <Guard>
+                              <Node id="Node_117" name="SelfRotatingRight" type="Condition" />
+                            </Guard>
+                            <Parameters>
+                              <Parameter name="intensity" fromcontext="false">1</Parameter>
+                            </Parameters>
+                          </Node>
+                          <Node id="Node_116" name="CTL_TURN_RIGHT" type="Action">
+                            <Guard>
+                              <Node id="Node_118" name="SelfRotatingLeft" type="Condition" />
+                            </Guard>
+                            <Parameters>
+                              <Parameter name="intensity" fromcontext="false">1</Parameter>
+                            </Parameters>
+                          </Node>
+                        </Children>
+                      </Node>
+                    </Children>
+                  </Node>
+                  <Node id="Node_67" type="Selector">
+                    <Children>
+                      <Node id="Node_68" type="Sequence">
+                        <Children>
+                          <Node id="Node_118" name="SelfRotatingLeft" type="Condition" />
+                          <Node id="Node_117" name="TargetAlmostAlignedHoriz" type="Condition" />
+                          <Node id="Node_119" name="CTL_TURN_RIGHT" type="Action">
+                            <Parameters>
+                              <Parameter name="intensity" fromcontext="false">1</Parameter>
+                            </Parameters>
+                          </Node>
+                        </Children>
+                      </Node>
+                      <Node id="Node_72" type="Sequence">
+                        <Children>
+                          <Node id="Node_120" name="TargetToTheRight" type="Condition" />
+                          <Node id="Node_73" type="Inverter">
+                            <Children>
+                              <Node id="Node_122" name="TargetAlmostAlignedHoriz" type="Condition" />
+                            </Children>
+                          </Node>
+                          <Node id="Node_121" name="CTL_TURN_RIGHT" type="Action">
+                            <Parameters>
+                              <Parameter name="intensity" fromcontext="false">1</Parameter>
+                            </Parameters>
+                          </Node>
+                        </Children>
+                      </Node>
+                    </Children>
+                  </Node>
+                  <Node id="Node_79" type="Selector">
+                    <Children>
+                      <Node id="Node_80" type="Sequence">
+                        <Children>
+                          <Node id="Node_123" name="SelfRotatingRight" type="Condition" />
+                          <Node id="Node_124" name="TargetAlmostAlignedHoriz" type="Condition" />
+                          <Node id="Node_125" name="CTL_TURN_LEFT" type="Action">
+                            <Parameters>
+                              <Parameter name="intensity" fromcontext="false">1</Parameter>
+                            </Parameters>
+                          </Node>
+                        </Children>
+                      </Node>
+                      <Node id="Node_81" type="Sequence">
+                        <Children>
+                          <Node id="Node_126" name="TargetToTheLeft" type="Condition" />
+                          <Node id="Node_82" type="Inverter">
+                            <Children>
+                              <Node id="Node_127" name="TargetAlmostAlignedHoriz" type="Condition" />
+                            </Children>
+                          </Node>
+                          <Node id="Node_129" name="CTL_TURN_LEFT" type="Action">
+                            <Parameters>
+                              <Parameter name="intensity" fromcontext="false">1</Parameter>
+                            </Parameters>
+                          </Node>
+                        </Children>
+                      </Node>
+                    </Children>
+                  </Node>
+                </Children>
+              </Node>
+            </Children>
+          </Node>
+        </Children>
+      </Node>
+    </Children>
+  </Node>
+</Tree>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="tests/src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BluePrintManager"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GMBuilder"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JME3Utils"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/GMAssets"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_core"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_desktop"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GMPlayer"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_testdata"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BluePrintOutput"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/desktop_libraries"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/gmassets_player"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JMonkey_sound"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

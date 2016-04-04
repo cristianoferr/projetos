@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!-- Configuration of the Ant build system to generate a Jar file --> 
+<project name="GMAssets" default="CreateAssetJar">
+    <property name="src" location="src"/>
+  	<property name="build" location="build"/>
+  	<property name="dist"  location="dist"/>
+  	<property name="genFolder"  location="assets/gen"/>
+  <target name="CreateAssetJar" description="Create Jar file" depends="init">
+  		<!--  excludes="Interface/Images/source/**" -->
+        <jar jarfile="dist/GMAssets_player.jar" basedir="." includes="assets/gen/**,assets/Interface/Nifty/**,assets/Interface/Fonts/**,assets/Effects/**,assets/game.json"/>
+  </target>
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${dist}"/>
+  </target>
+   <target name="clean"
+        description="clean up" >
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${dist}"/>
+  </target>
+</project>

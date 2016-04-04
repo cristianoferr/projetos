@@ -1,0 +1,1769 @@
+//Defines
+
+//Blueprints
+@blueprint ecsBase:base
+	@domain type={all}
+	@output file='BluePrintECS.bpf'
+@end
+
+@blueprint entity:ecsBase
+	@domain class='entity'
+	@domain className='GameEntity'
+	@domain type+={entity}
+	@property components+={}
+	@property name='Basic Entity'
+	@replicate components+=$this.components
+@end
+
+@blueprint item:entity
+	@domain type+={item}
+	@property name='Basic Item'
+	@property value=1
+	@property weight=1
+@end
+
+@blueprint combatItem:item
+	@domain type+={combat}
+@end
+
+@blueprint ammo:combatItem
+	@domain type+={ammo}
+	@property name='Basic Ammo'
+	@damage multiplier=1.1
+@end
+
+@blueprint bomb:combatItem
+	@domain type+={bomb}
+	@property explosionPower=rand(10,100)
+	@property explosionRadius=rand(1,10)
+@end
+
+@blueprint mina:bomb
+	@domain type+={mine}
+	@property components+={explosionComponent}
+	@property name='Basic Mine'
+@end
+
+@blueprint contactMine:mina
+	@domain type+={contact}
+	@property components+={ContactTriggerComponent}
+	@property name='Explode on Contact Mine'
+@end
+
+@blueprint TimeResourceComponentMine:mina
+	@domain type+={TimeResourceComponent}
+	@property components+={TimerComponent}
+	@property name='Timed Mine'
+	@childproperty components.TimeResourceComponent[TimerComponent]=20
+@end
+
+@blueprint weapon:combatItem
+	@domain type+={weapon}
+	@property components+={guncomponent}
+	@property name='Basic Weapon'
+	@damage DPSComponent=1
+	@damage bulletForce=$bulletForce
+	@damage coneOfFire=rand(0,$highConeOfFire)
+	@damage range=$meleeRange
+	@damage rateOfFire=1
+@end
+
+@blueprint rangedWeapon:weapon
+	@domain type+={ranged}
+	@damage ammo=checkInventory({item ammo},1,true)
+	@damage range=$lowRange
+@end
+
+@blueprint highRangeWeapon:rangedWeapon
+	@domain type+={highrange}
+	@damage coneOfFire=0
+	@damage range=rand($normalRange,$highRange)
+@end
+
+@blueprint rocketGun:highRangeWeapon
+	@domain type+={rocketgun}
+	@property name='Rocket Gun'
+	@damage DPSComponent=rand($weaponAvgDPS,$weaponHighDPS)
+	@damage rateOfFire=$weaponLowROF
+@end
+
+@blueprint lowRangeWeapon:rangedWeapon
+	@domain type+={lowrange}
+	@damage coneOfFire=rand(0,$highConeOfFire)
+	@damage range=rand($meleeRange,$lowRange)
+@end
+
+@blueprint flameThrower:lowRangeWeapon
+	@domain type+={flamethrower}
+	@property name='Flame Thrower'
+	@damage DPSComponent=rand($weaponAvgDPS,$weaponHighDPS)
+	@damage coneOfFire=$highConeOfFire
+	@damage rateOfFire=rand($weaponAvgROF,$weaponHighROF)
+@end
+
+@blueprint mediumRangeWeapon:rangedWeapon
+	@domain type+={mediumrange}
+	@damage coneOfFire=rand(0,$lowConeOfFire)
+	@damage range=rand($lowRange,$normalRange)
+@end
+
+@blueprint machineGun:mediumRangeWeapon
+	@domain type+={machinegun}
+	@property name='Machine Gun'
+	@damage DPSComponent=rand($weaponLowDPS,$weaponAvgDPS)
+	@damage rateOfFire=rand($weaponAvgROF,$weaponHighROF)
+@end
+
+@blueprint VisibleEntity:entity
+	@domain type+={visible}
+	@property components+={RenderComponent}
+	@property meshTag={full mesh}
+	@property objectMesh=pickFinal($this.meshTag,width=$this.width,height=$this.height,depth=$this.depth)
+	@entity isEntity=1
+	@childproperty components.meshSource[RenderComponent]=$this.objectMesh
+	@validate checkDepth=isNotNull($this.depth)
+	@validate checkHeight=isNotNull($this.height)
+	@validate checkWidth=isNotNull($this.width)
+@end
+
+@blueprint bulletEntity:VisibleEntity
+	@domain type+={bullet}
+	@property blastRadius=10 //a blast with this radius will be generated at contact point... dmg is relative to distance from center
+	@property bulletController=$this.bulletControllerElement.init
+	@property bulletControllerElement=pickFinal({default controller bulletEnum leaf})
+	@property bulletGravity=0
+	@property bulletMass=100
+	@property bulletSpeed=40 //eject velocity of the bullet
+	@property components+={TransientComponent}
+	@property depth=$this.radius
+	@property height=$this.radius
+	@property mass=1
+	@property meshTag={mesh bullet leaf}
+	@property proximityDetonation=3 //if distance<this then detonates
+	@property radius=0.5
+	@property width=$this.radius
+@end
+
+@blueprint GameEntity:VisibleEntity
+	@domain type+={gameentity}
+	@property components+={PhysicsComponent}
+	@property mass=500 //TODO: calc mass automatically
+	@childproperty components.isControllable[PhysicsComponent]=0
+	@childproperty components.mass[PhysicsComponent]=$this.mass
+@end
+
+@blueprint ActiveEntity:GameEntity
+	@domain type+={active}
+	@childproperty components.isControllable[PhysicsComponent]=0
+	@comment description='An active entity isnt controlled (have mass, forces can act, etc), for example: rocks, trees'
+@end
+
+@blueprint mobileEntity:GameEntity
+	@domain type+={mobile}
+	@property components+={TransientComponent BillboardComponent TargettingComponent TargetableComponent RadarComponent} //transient=not exported
+	@property meshTag+={mobile}
+	@childproperty components.isControllable[PhysicsComponent]=1
+@end
+
+@blueprint character:mobileEntity
+	@domain type+={character}
+	@property name='Basic Character'
+@end
+
+@blueprint CombatCharacter:character
+	@domain type+={combat}
+	@property components+={}
+	@property meshTag+={}
+	@property name='Basic Combat Character'
+@end
+
+@blueprint PickupEntity:GameEntity
+	@domain type+={pickUp}
+	@property components+={ContactTriggerComponent VisualTransformationComponent}
+	@property meshTag={mesh pickup leaf}
+	@comment description='A pickup entity is anything which can be picked up by a entity... basic examples are power ups such as HealthComponent, BatteryComponent, etc.'
+@end
+
+@blueprint staticEntity:GameEntity
+	@domain type+={static}
+	@property components+={}
+	@property mass=0
+	@property meshTag={mesh static leaf}
+@end
+
+@blueprint MeshOnlyEntity:VisibleEntity
+	@domain type+={meshOnly} //umbrella for meshes without physical representation
+@end
+
+@blueprint GoalArrowEntity:MeshOnlyEntity
+	@domain type+={arrowEntity}
+	@property depth=5
+	@property height=2
+	@property meshTag+={goalArrow}
+	@property width=2
+@end
+
+@blueprint UIEntity:VisibleEntity
+	@domain type+={uiEntity}
+	@property components+={GUIComponent}
+	@property meshTag={mesh generic leaf}
+	@comment description=' an entity added to the guinode (2d)'
+@end
+
+@blueprint world:entity
+	@domain type+={world}
+	@property components+={BuildManagerComponent GameConstsComponent InternationalComponent MapWorldComponent ThemeComponent ReuseManagerComponent FXLibraryComponent MapLocationComponent GameGenreComponent CamComponent UnitResourcesComponent BestiaryLibraryComponent PhysicsSpaceComponent BubbleDataComponent WorldComponent}
+	@property mapWorld=pickFinal({$this.mapWorldTag mapWorld leaf})
+	@property mapWorldTag={}
+	@property state+={physicsstate}
+	@property theme=$theme
+	@entity isEntity=1
+	@replicate states=$this.state
+	@replicate systems=oneForEach({gameSystem leaf})
+@end
+
+@blueprint worldDebug:world
+	@domain type+={debug}
+	@property components+={testcomponent}
+	@property state+={debugstate}
+	@childproperty components.valor1[testcomponent]=11111
+@end
+
+@blueprint worldScreenTest:worldDebug
+	@domain type+={screenTest test}
+	@property components={CamComponent GameConstsComponent PhysicsSpaceComponent ReuseManagerComponent ThemeComponent InternationalComponent FXLibraryComponent GameGenreComponent UnitResourcesComponent WorldComponent}
+	@property state+={}
+	@define textureLength=$textureLengthTest //no texture
+@end
+
+@blueprint worldMinimal:world
+	@domain type+={minimal}
+	@property components+={}
+	@property state+={debugstate}
+	@define textureLength=$textureLengthTest //no texture
+@end
+
+@blueprint worldModelEdit:world
+	@domain type+={modelEdit}
+	@property components={BloomFilterComponent GameConstsComponent CamComponent ReuseManagerComponent WorldComponent}
+	@property state={debugstate cameraLightState}
+	@define textureLength=$textureLengthEditor
+@end
+
+@blueprint worldPhysEdit:world
+	@domain type+={physEdit}
+	@property components+={}
+	@property state+={debugstate}
+	@define textureLength=$textureLengthEditor
+@end
+
+@blueprint worldRelease:world
+	@domain type+={release}
+	@comment description=' what would be expected from a final product'
+@end
+
+@blueprint worldTest:world
+	@domain type+={worldTest test}
+	@property components+={}
+	@property state+={debugstate}
+	@define textureLength=$textureLengthTest //no texture
+@end
+
+
+
+@blueprint entitySystem:ecsBase
+	@domain type+={entitysystem}
+@end
+
+@blueprint GameComponent:entitySystem
+	@domain class='GameComponent'
+	@domain package='' //definir aqui o pacote
+	@domain type+={component}
+	@comment description='Componentes s??o caracter??sticas que cada entidade pode assumir.  Por si s?? n??o fazem nada, s??o dados, precisando de um sistema para interagir com elas'
+@end
+
+@blueprint ArtComponents:GameComponent
+	@domain package+='art/'
+	@domain type+={artComp}
+@end
+
+@blueprint ImageRequestComponent:ArtComponents
+	@domain type+={ImageRequestComponent} //also in tests
+	@property assetRoot={assetsEnum images}
+	@property defaultSize=128
+	@property reusePreviousGen=1 //if true then the program will reuse a previous generated instead of generating everyTimeResourceComponent... set to 0 on production
+	@property saveFolder=enumValue({image folder})+'gen/'
+@end
+
+@blueprint effectsComponent:GameComponent
+	@domain package+='effects/'
+	@domain type+={effects}
+	@comment description='Effects cont??m efeitos visuais e de pouca import??ncia para a l??gica do jogo'
+@end
+
+@blueprint DamageEffectComponent:effectsComponent
+	@domain type+={DamageEffectComponent}
+	@property damage_type=pickFinal({damageType leaf})
+	@property name='Damage Effect Component'
+@end
+
+@blueprint LightComponent:effectsComponent
+	@domain type+={lightComponent}
+	@property intensity=1
+	@property lightObj=pickFinal($this.lightTag)
+	@property lightTag={lightNode leaf}
+	@property name='Light Component'
+	@childproperty properties.intensity[lightNode]=$this.intensity
+@end
+
+@blueprint RotationComponent:effectsComponent
+	@domain type+={rotationcomponent}
+	@property name='Rotation Component'
+@end
+
+@blueprint SpatialComponent:effectsComponent
+	@domain init='SpatialComponent'
+	@domain type+={spatialComponent}
+	@property name='Spatial Component'
+@end
+
+@blueprint ElementManagerComponent:GameComponent
+	@domain type+={elementManagerComponent}
+	@property name='ElementManager Component'
+	@comment description='objeto que contem o element manager'
+@end
+
+@blueprint GameMechanicComponents:GameComponent
+	@domain package+='mechanics/'
+	@domain type+={mechanics}
+@end
+
+@blueprint ApplyForceComponent:GameMechanicComponents
+	@domain init='ApplyForceComponent'
+	@domain type+={applyForceComponent}
+	@property name='Apply Force Component'
+	@comment description='Aplica uma for??a ao componente'
+@end
+
+@blueprint ContactTriggerComponent:GameMechanicComponents
+	@domain type+={ContactTriggerComponent}
+	@property name='Contact Trigger Component' //TODO: implementar
+@end
+
+@blueprint DamageOverTimeComponent:GameMechanicComponents
+	@domain init='DamageOverTimeComponent'
+	@domain type+={dotcomponent}
+	@property damage_type=pickFinal({damageType leaf})
+	@property name='Damage Over Time Component'
+@end
+
+@blueprint DamageReceivedComponent:GameMechanicComponents
+	@domain init='DamageReceivedComponent'
+	@domain type+={dmgcomponent}
+	@property damage=0
+	@property name='Damage Received Component'
+@end
+
+@blueprint DragComponent:GameMechanicComponents
+	@domain type+={dragcomponent}
+	@property name='drag Component'
+	@comment description='Drag Componente adiciona for??a de arrasto (do ar) ao objeto'
+@end
+
+@blueprint ExplosionComponent:GameMechanicComponents
+	@domain type+={explosionComponent}
+	@property damage_type=pickFinal({damageType leaf})
+	@property name='Explosion Component'
+@end
+
+@blueprint GameGenreComponent:GameMechanicComponents
+	@domain type+={GameGenreComponent}
+	@property gameGenre=$gameGenre
+	@property name='GameGenre Component'
+	@comment description=' contains data about the genre being generated...'
+@end
+
+@blueprint GravityComponent:GameMechanicComponents
+	@domain type+={gravitycomponent}
+	@property name='Gravity Component'
+	@comment description='Aplica gravidade no objeto (diferente de f??sica)'
+@end
+
+@blueprint LinkComponent:GameMechanicComponents
+	@domain type+={LinkComponent}
+	@property name='Link Component' //TODO: implementar
+	@comment description=' Usado principalmente para linkar uma entidade a outra, por exemplo um pickup estÃ¡ linkado a uma entidade que possui os componentes que serÃ£o adicionados a entidade que disparou'
+@end
+
+@blueprint MapLocationComponent:GameMechanicComponents
+	@domain type+={MapLocationComponent}
+	@property mapLocation=$mapLocation
+	@property name='MapLocation Component'
+	@comment description=' contains data about how the maps are generated...'
+@end
+
+@blueprint MapWorldComponent:GameMechanicComponents
+	@domain type+={MapWorldComponent}
+	@property mapWorld=$mapWorld
+	@property name='MapWorld Component'
+	@comment description=' contains data about how the maps are generated...'
+@end
+
+@blueprint PhysicsSpaceComponent:GameMechanicComponents
+	@domain type+={PhysicsSpaceComponent}
+	@property gravity=$mapLocation.gravity //default gravity value...
+	@property name='Physics Space Component'
+	@comment description='Access to the physics state...'
+@end
+
+@blueprint RespawnTimerComponent:GameMechanicComponents
+	@domain type+={RespawnTimerComponent}
+	@property name='Respawn Timer Component' //TODO: implementar
+@end
+
+@blueprint TerrainComponent:GameMechanicComponents
+	@domain type+={terrainComponent}
+	@property name='Terrain Component'
+	@property scale=1
+	@property seed=0
+	@property terrainType=enumValue({terrain})
+	@property y=1
+	@comment description='carrega o terreno do mapa'
+@end
+
+@blueprint TimerComponent:GameMechanicComponents
+	@domain type+={TimerComponent}
+	@property TimeResourceComponent=60
+	@property name='Timer Component'
+@end
+
+@blueprint VisualTransformationComponent:GameMechanicComponents
+	@domain type+={VisualTransformationComponent}
+	@property intensity=randf(0.1,1)
+	@property name='Visual Transformation Component' //TODO: implementar
+	@property visualTransf=pickOne(enum visualTransf leaf)
+	@comment description=' This component applies a transformation effect to the entity, for example: rotation, scale, movement, etc'
+@end
+
+@blueprint WorldComponent:GameMechanicComponents
+	@domain type+={WorldComponent}
+	@property name='World Component'
+	@comment description='this is the world...'
+@end
+
+@blueprint LifeCycleComponents:GameComponent
+	@domain package='lifeCycle/'
+	@domain type+={lifecyclecomps}
+@end
+
+@blueprint MeshLoaderComponent:LifeCycleComponents
+	@domain type+={meshloadercomponent}
+	@property name='Mesh Loader Component'
+	@comment description='Indica que a entidade precisa carregar/criar a mesh'
+@end
+
+@blueprint MacroComponents:GameComponent
+	@domain package='macro/'
+	@domain type+={macrocomps}
+@end
+
+@blueprint BestiaryLibraryComponent:MacroComponents
+	@domain type+={BestiaryLibraryComponent}
+	@property chanceNewEntity=rand(20,80) //define a chance que uma nova entidade ser?? gerada a partir da unitRole (ao inv??s de pega do conjunto existente)
+	@comment description=' Cont??m os dados das unidades, o sistema que preenche os dados ?? o queryBestiary'
+@end
+
+@blueprint BuildManagerComponent:MacroComponents
+	@domain type+={BuildManagerComponent}
+@end
+
+@blueprint DirectorComponent:MacroComponents
+	@domain type+={DirectorComponent}
+	@domain package+='directors/'
+@end
+
+@blueprint ShooterDirectorComponent:DirectorComponent
+	@domain type+={ShooterDirectorComponent}
+@end
+
+@blueprint GameEventComponent:MacroComponents
+	@domain type+={GameEventComponent}
+	@comment description=' will transmit game related events (enemy hit, entity killed, flag captured, etc)'
+@end
+
+@blueprint GameMasterComponent:MacroComponents
+	@domain type+={GameMasterComponent}
+	@property name='GameMaster Component'
+@end
+
+@blueprint GameObjectiveComponent:MacroComponents
+	@domain type+={GameObjectiveComponent} //start from a {gameObjective}
+@end
+
+@blueprint GameOppositionComponent:MacroComponents
+	@domain type+={GameOppositionComponent} //start from a {GameOpposition}, added to a mapComponent
+@end
+
+@blueprint GameStateComponent:MacroComponents
+	@domain type+={GameStateComponent}
+	@property name='Gamestate Component'
+	@comment description=' manages the game states. loading and saving states as requested'
+@end
+
+@blueprint QueryBestiaryComponent:MacroComponents
+	@domain type+={queryBestiaryComponent}
+	@property team=0
+@end
+
+@blueprint VictoryCheckingComponents:MacroComponents
+	@domain type+={victoryCheckGroup}
+@end
+
+@blueprint VictoryCheckerComponent:VictoryCheckingComponents
+	@domain type+={VictoryCheckerComponent}
+@end
+
+@blueprint VictoryCheckInitComponent:VictoryCheckingComponents
+	@domain type+={ResourceComponent VictoryCheckInitComponent}
+	@comment description='used to initialize victory check conditions (the system will copy the condition to the entity from the oppositionComponent)'
+@end
+
+@blueprint MapComponents:GameComponent
+	@domain package='map/'
+	@domain type+={mapComp}
+@end
+
+@blueprint LandmarksComponent:MapComponents
+	@domain type+={LandmarksComponent}//*This component will eventually replace the bubble mechanic
+	
+@end
+
+@blueprint BubbleComponent:MapComponents
+	@domain type+={bubbleComponent}
+	@property depth=0
+	@property height=0
+	@property posX=0
+	@property posY=0
+	@property posZ=0
+	@property width=0
+	@comment description='Esse componente ser?? 'estourado' e substitu??do por entidades s??lidas'
+@end
+
+@blueprint BubbleDataComponent:MapComponents
+	@domain type+={BubbleDataComponent}
+	@replicate enviros=oneForEach({enviroObject leaf})
+	@comment description='Esse componente guarda os dados necessarios para estourar as bolhas'
+@end
+
+@blueprint FlattenTerrainComponent:MapComponents
+	@domain type+={FlattenTerrainComponent}
+	@property name='Flatten Terrain Component'
+	@comment description='flatten a given area of the terrain...'
+@end
+
+@blueprint MapComponent:MapComponents
+	@domain type+={mapComponent}
+@end
+
+@blueprint RoadComponent:MapComponents
+	@domain type+={RoadComponent}
+	@comment description='Componente que define um caminho ligando 2 salas... podem haver multiplos caminhos entre salas.'
+@end
+
+@blueprint RoomComponent:MapComponents
+	@domain type+={RoomComponent}
+	@comment description='Componente que define uma room (sala), sala ?? qualquer local onde algo de importante acontece, seja boss, seja comeco e fim de nivel'
+@end
+
+@blueprint WaypointComponent:MapComponents
+	@domain type+={WaypointComponent}
+@end
+
+@blueprint materialsComponents:GameComponent
+	@domain package+='materials/'
+	@domain type+={materials}
+@end
+
+@blueprint MaterialComponent:materialsComponents
+	@domain type+={materialComponent}
+	@property name='Material Component'
+@end
+
+@blueprint TextureComponent:materialsComponents
+	@domain init='TextureComponent'
+	@domain type+={TextureComponent}
+	@property name='Texture Component'
+@end
+
+@blueprint miscComponents:GameComponent
+	@domain package+='misc/'
+	@domain type+={misccomps}
+@end
+
+@blueprint TestComponent1:miscComponents
+	@domain type+={testcomponent test1}
+	@property name='Test Component1'
+	@property valor=100
+	@property valorComp=100
+@end
+
+@blueprint PersistsComponents:GameComponent
+	@domain package+='persists/'
+	@domain type+={persistComps}
+	@comment description='Componentes relacionados ?? persist??ncia dos objetos'
+@end
+
+@blueprint AssetLoadRequestComponent:PersistsComponents
+	@domain type+={AssetLoadRequestComponent}
+	@comment description='sends a request for assert loading...'
+@end
+
+@blueprint CloneComponent:PersistsComponents
+	@domain type+={CloneComponent}
+	@property idMaster=0
+	@comment description='informa que a entidade ?? um clone de outra entidade'
+@end
+
+@blueprint GameConstsComponent:PersistsComponents
+	@domain type+={GameConstsComponent}
+	@property gameConsts=$gameConsts
+	@property mapLocation=$mapLocation
+	@property theme=$theme
+	@property uiConsts=$uiConsts
+	@comment description='stores consts related to the game, coming from the $gameConsts'
+@end
+
+@blueprint InternationalComponent:PersistsComponents
+	@domain type+={InternationalComponent}
+	@property currentLanguage=$this.defaultLanguage
+	@property defaultLanguage=enumValue({languageEnum leaf en})
+	@replicate languages=oneForEach({languageEnum leaf})
+	@replicate strings=oneForEach({textKeysEnum leaf})
+@end
+
+@blueprint MasterComponent:PersistsComponents
+	@domain type+={MasterComponent}
+	@comment description='A master is an entity used only for being cloned (and so it isnt added to the scene)'
+@end
+
+@blueprint ReuseManagerComponent:PersistsComponents
+	@domain type+={ReuseManagerComponent}
+	@comment description='this will store all reusable objects, like texture, materials, etc'
+@end
+
+@blueprint uiComponents:GameComponent
+	@domain package+='ui/'
+	@domain type+={uicomps}
+	@property action=''
+	@property align=''
+	@property backgroundColor=''
+	@property childLayout=''
+	@property color=''
+	@property filename=''
+	@property font=''
+	@property height=''
+	@property label=''
+	@property textHAlign=''
+	@property textVAlign=''
+	@property valign=''
+	@property width=''
+@end
+
+@blueprint GUIComponent:uiComponents
+	@domain type+={GUIComponent}
+	@property name='GUI Component'
+@end
+
+@blueprint NiftyComponent:uiComponents
+	@domain type+={NiftyComponent}
+	@property defaultHeight=720
+	@property defaultWidth=1280
+	@property name='Nifty UI Component'
+	@replicate effects=oneForEach(niftyEffectsEnum leaf)
+@end
+
+@blueprint NiftyElementComponent:uiComponents
+	@domain type+={NiftyElementComponent}
+	@property name='NiftyElement UI Component'
+@end
+
+@blueprint PropertyUIComponent:uiComponents
+	@domain type+={PropertyUIComponent}
+	@property key=''
+	@property name='Property Component'
+	@property value=''
+@end
+
+@blueprint ShortCutComponent:uiComponents
+	@domain type+={ShortCutComponent} //Atalhos do teclado...
+	@property action=''
+	@property name='ShortCut Component'
+	@property shortcut='none'
+@end
+
+@blueprint UIActionComponent:uiComponents
+	@domain type+={UIActionComponent}
+	@property action=''
+	@property name='UIAction Component'
+	@comment description='Grava a a????o enviada por alguma entidade... essa a????o ?? enviada na forma action(actionValue)
+@end
+
+@blueprint UINiftyComponent:uiComponents
+	@domain type+={UINiftyComponent}
+	@property childLayout={null}
+	@property textHAlignProp={null}
+	@property textVAlignProp={null}
+	@replicate properties=oneForEach(ui properties leaf) //rela????o de propertiesUI que ser??o aplicadas no objeto
+	@childproperty properties.generated=1
+	@childproperty properties.subEnum[alignProp]=$this.align
+	@childproperty properties.subEnum[childLayoutProp]=$this.childLayout
+	@childproperty properties.subEnum[colorProp]=$this.color
+	@childproperty properties.subEnum[textHAlignProp]=$this.textHAlign
+	@childproperty properties.subEnum[textVAlignProp]=$this.textVAlign
+	@childproperty properties.subEnum[valignProp]=$this.valign
+	@childproperty properties.value[actionProp]=$this.action
+	@childproperty properties.value[backGroundProp]=$this.backgroundColor
+	@childproperty properties.value[filenameProp]=$this.filename
+	@childproperty properties.value[fontProp]=$this.font
+	@childproperty properties.value[heightProp]=$this.height
+	@childproperty properties.value[labelProp]=$this.label
+	@childproperty properties.value[textProp]=$this.label
+	@childproperty properties.value[widthProp]=$this.width
+@end
+
+@blueprint UIControlComponent:UINiftyComponent
+	@domain type+={UIControlComponent}
+	@property controlObj=pickSingle($this.controlTag)
+	@property controlTag={control ui}
+	@property name='Control UI Component'
+@end
+
+@blueprint UILayerComponent:UINiftyComponent
+	@domain type+={UILayerComponent}
+	@property layerObj=pickSingle($this.layerTag)
+	@property layerTag={layer ui}
+	@property name='Layer Component'
+	@property panels=[] //rela????o de paineis...
+	@property properties+={childLayoutProp valignProp alignProp backGroundProp}
+@end
+
+@blueprint UIPanelComponent:UINiftyComponent
+	@domain type+={UIPanelComponent}
+	@property height=100
+	@property name='Panel Component'
+	@property panelObj=pickSingle($this.panelTag)
+	@property panelTag={panel ui}
+	@property properties+={alignProp childLayoutProp valignProp backGroundProp}
+	@property width=100
+@end
+
+@blueprint UIScreenComponent:UINiftyComponent
+	@domain type+={UIScreenComponent}
+	@property name='Screen Component' //name=id da screen
+	@property screenObj=pickFinal($this.screenTag)
+	@property screenTag={screen ui}
+@end
+
+@blueprint UnitComponents:GameComponent
+	@domain package+='unit/'
+	@domain type+={unitcomps}
+@end
+
+@blueprint AIComponent:UnitComponents
+	@domain type+={AIComponent}
+	@property name='AI Component'
+	@property startableStates=$gameGenre.startableNPCStates //TODO: talvez definir startablestate por role?
+	@replicate behaviours=oneForEach({NPCBehaviour unitcomps leaf})
+	@replicate conditions=oneForEach({npcCondition leaf})
+	@replicate states=oneForEach({NPCState leaf})
+	@comment description='entidade que tem esse componente ?? controlada pelo computador de acordo com a role do mesmo'
+@end
+
+@blueprint AtuadorComponents:UnitComponents
+	@domain package+='actuators/'
+	@domain type+={actuatorComponent}
+	@property addToAction=0 //if defined, then the actuator will be activated by the action defined (1/2/3 etc), actions for the user are the buttons that show on screen
+@end
+
+@blueprint WeaponComponent:AtuadorComponents
+	@domain type+={WeaponComponent weapon} //data comes from turretVeiculo:parte
+	@property addToAction=1
+	@property angleLimit=0
+	@property name='Weapon Component'
+	@property shotMargin=10 //if its "10" then the difference between current angle and shot angle must be below 10.
+	@property turnRate=0
+@end
+
+@blueprint WheelComponent:AtuadorComponents
+	@domain type+={WheelComponent wheel}
+	@property isFrontWheel=0
+	@property name='Wheel Component'
+@end
+
+@blueprint BulletComponent:UnitComponents
+	@domain type+={BulletComponent}
+	@property name='Bullet Component'
+@end
+
+@blueprint ChildComponent:UnitComponents
+	@domain type+={ChildComponent}
+	@property name='Child entity'
+	@comment description=' this entity belongs to a higgher one (like a wall belonging to a wall)'
+@end
+
+@blueprint DeathComponent:UnitComponents
+	@domain type+={deathcomponent}
+	@property actionOnDeath=pickOne({action death})
+	@property delay=2
+	@property name='Death Component'
+@end
+
+@blueprint DimensionComponent:UnitComponents
+	@domain type+={DimensionComponent}
+	@property name='Dimension Component'
+	@comment description=' dimension is the size of the object... not to be perfectly fit'
+@end
+
+@blueprint FollowerComponent:UnitComponents
+	@domain type+={followercomponent}
+	@property name='Follower Component'
+@end
+
+@blueprint FXComponents:UnitComponents
+	@domain package+='fx/'
+	@domain type+={fxComp}
+	@comment description='Efeitos visuais e sonoros...'
+@end
+
+@blueprint FXLibraryComponent:FXComponents
+	@domain type+={FXLibraryComponent}
+	@property damage_type=pickFinal({damageType leaf})
+	@property name='Damage Effect Component'
+	@replicate effects=oneForEach({effectsEnum leaf})
+@end
+
+@blueprint GunComponent:UnitComponents
+	@domain type+={guncomponent}
+	@property name='Gun Component'
+@end
+
+@blueprint JoystickComponent:UnitComponents
+	@domain type+={JoystickComponent}
+	@property name='Joystick Component'
+	@property playerController=$gameGenre.playerController
+	@replicate options=oneForEach(playerControllerData leaf)
+	@comment description=' defines the joystick being used by the game'
+@end
+
+@blueprint NPCBehaviours:UnitComponents
+	@domain package+='npcBehaviours/'
+	@domain type+={NPCBehaviour}
+@end
+
+@blueprint BehaviourChaseComp:NPCBehaviours
+	@domain type+={BehaviourChaseComp}
+	@property name='chase'
+@end
+
+@blueprint BehaviourFleeComp:NPCBehaviours
+	@domain type+={BehaviourFleeComp}
+	@property name='flee'
+@end
+
+@blueprint BehaviourFollowComp:NPCBehaviours
+	@domain type+={BehaviourFollowComp}
+	@property idealDistance=$gameConsts.radarRange/10
+	@property name='follow'
+@end
+
+@blueprint BehaviourFollowWaypointComponent:NPCBehaviours
+	@domain type+={BehaviourFollowWaypointComponent}
+	@property name='Follow Waypoint'
+@end
+
+@blueprint BehaviourWanderComp:NPCBehaviours
+	@domain type+={BehaviourWanderComp}
+	@property accelerationMult=0.6
+	@property angleLimit=90 //an arch in front of the entity...
+	@property jitterStrength=rand(150,250) //how many degrees the angle will change per second
+	@property name='wander'
+	@property wanderDistance=$this.wanderRadius+rand(3,10)
+	@property wanderRadius=rand(5,10)
+@end
+
+@blueprint NpcConditions:UnitComponents
+	@domain package+='npcConditions/'
+	@domain type+={npcCondition}
+	@property chance=1 //chance indicates the chance to activate this condition... a low value means that the entity may ignore this (not allways a npc will flee when low HealthComponent)
+	@property statusFalse={} //relation of components which activate this condition (cant have)...
+	@property statusTrue={} //relation of components which activate this condition (must have)...
+@end
+
+@blueprint ArmedAndEnemyNearCondition:NpcConditions
+	@domain type+={ArmedAndEnemyNearCondition}
+	@property statusTrue={EnemyNearStatusComponent WeaponComponent}
+@end
+
+@blueprint ArmedAndEnemySightedCondition:NpcConditions
+	@domain type+={ArmedAndEnemySightedCondition}
+	@property statusTrue={TargetVisibleComponent WeaponComponent}
+@end
+
+@blueprint HealthPackNearSafeCondition:NpcConditions
+	@domain type+={HealthPackNearSafeCondition}
+	@property statusFalse={TargetVisibleComponent}
+	@property statusTrue={HealthPackNearStatusComponent LowHealthStatusComponent}
+@end
+
+@blueprint LowHPAndEnemyNearCondition:NpcConditions
+	@domain type+={LowHPAndEnemyNearCondition}
+	@property chance=randf(0.1,0.3)
+	@property statusTrue={EnemyNearStatusComponent LowHealthStatusComponent}
+@end
+
+@blueprint NoEnemySightedCondition:NpcConditions
+	@domain type+={NoEnemySightedCondition}
+	@property statusFalse={TargetVisibleComponent}
+@end
+
+@blueprint NoTargetCondition:NpcConditions
+	@domain type+={NoTargetCondition}
+	@property statusFalse={TargetComponent}
+@end
+
+@blueprint UnarmedAndEnemyNearCondition:NpcConditions
+	@domain type+={UnarmedAndEnemyNearCondition}
+	@property statusFalse={WeaponComponent}
+	@property statusTrue={EnemyNearStatusComponent}
+	@status armed=0
+	@status enemyNear=1
+@end
+
+@blueprint NPCStates:UnitComponents
+	@domain package+='npcStates/'
+	@domain type+={NPCState} //GameComps is using
+	@property destinationStates={NPCStateAttack NPCStateRecoverHP} //to which state can the npc reach from here...
+	@property entryConditions={} //entryConditions: if ANY is true, then the state is accessible from the previous state, if none is true, then the entity will revert to the previous state
+	@property keepConditions=$this.entryConditions //keepConditions:if an entity is in a given state, keepConditions are checked to see if the entity doesnt go to a previous conditions... at least one must be true
+	@property name='state'
+	@comment description='define os estado que o npc pode assumir, cada estado difere em termos de objetivos e a????es que o npc pode executar.'
+@end
+
+@blueprint AbstractNPCStateComponent:NPCStates
+	@domain type+={AbstractNPCStateComponent}
+@end
+
+@blueprint MajorNPCStates:AbstractNPCStateComponent
+	@domain type+={major}
+	@comment description='Major States are states which are unique: a npc cant patrol and flee at the same TimeResourceComponent (only one major state is allowed at a TimeResourceComponent)'
+@end
+
+@blueprint NPCStateAttack:MajorNPCStates
+	@domain type+={NPCStateAttack}
+	@property entryConditions+=randomChoice({ArmedAndEnemyNearCondition},{ArmedAndEnemySightedCondition})
+	@property keepConditions={TargetComponent} //while there is a target, the state will remain...
+	@property name='attack'
+@end
+
+@blueprint NPCStateFlee:MajorNPCStates
+	@domain type+={NPCStateFlee}
+	@property entryConditions+={UnarmedAndEnemyNearCondition LowHPAndEnemyNearCondition}
+	@property name='flee'
+@end
+
+@blueprint NPCStateGuard:MajorNPCStates
+	@domain type+={NPCStateGuard}
+	@property name='guard'
+@end
+
+@blueprint NPCStateHitRun:MajorNPCStates
+	@domain type+={NPCStateHitRun}
+	@property name='hitrun'
+@end
+
+@blueprint NPCStateIdle:MajorNPCStates
+	@domain type+={NPCStateIdle}
+	@property name='idle'
+@end
+
+@blueprint NPCStatePatrol:MajorNPCStates
+	@domain type+={NPCStatePatrol}
+	@property entryConditions+={NoEnemySightedCondition}
+	@property name='patrol'
+@end
+
+@blueprint NPCStateRaceDriver:MajorNPCStates
+	@domain type+={NPCStateRaceDriver}
+	@property destinationStates={}
+	@property entryConditions+={RaceGoalComponent}
+	@property name='RaceDriver'
+@end
+
+@blueprint NPCStateRecoverHP:MajorNPCStates
+	@domain type+={NPCStateRecoverHP}
+	@property entryConditions+={HealthPackNearSafeCondition}
+	@property name='recoverHP'
+@end
+
+@blueprint NPCStateWander:MajorNPCStates
+	@domain type+={NPCStateWander}
+	@property entryConditions+={NoEnemySightedCondition}
+	@property name='NPCStateWander'
+@end
+
+@blueprint MinorNPCStates:AbstractNPCStateComponent
+	@domain type+={minor}
+	@comment description='Minor states are simple states, temporary in nature, for example: moveTo coordinate and in general have no entry condition'
+@end
+
+@blueprint NPCStateMoveTo:MinorNPCStates
+	@domain type+={NPCStateMoveTo}
+	@property name='MoveTo'
+@end
+
+@blueprint NPCStatusComponents:UnitComponents
+	@domain package+='npcStatus/'
+	@domain type+={npcStatusComp}
+	@comment description='status are dumb flags normally... defined and undefined by other systems...'
+@end
+
+@blueprint EnemyNearStatusComponent:NPCStatusComponents
+	@domain type+={EnemyNearStatusComponent} //Radar System is defining this
+	@property name='Enemy Near Component'
+	@comment description=' informs if the sighted enemy is near'
+@end
+
+@blueprint HealthPackNearStatusComponent:NPCStatusComponents
+	@domain type+={HealthPackNearStatusComponent} //TODO: use together with targgetingSystem
+	@property name='HealthPack Near Component'
+@end
+
+@blueprint LowHealthStatusComponent:NPCStatusComponents
+	@domain type+={LowHealthStatusComponent} //TODO: use together with HealthComponentSystem
+	@property name='LowHealth Near Component'
+@end
+
+@blueprint PhysicsComponent:UnitComponents
+	@domain type+={PhysicsComponent}
+	@property mass=0
+	@property name='Physics Component'
+	@comment description='physical object'
+@end
+
+@blueprint PlayerComponent:UnitComponents
+	@domain type+={PlayerComponent}
+	@property name='Player Component'
+@end
+
+@blueprint ResourceComponents:UnitComponents
+	@domain package+='resources/'
+	@domain type+={ResourceComponent}
+	@property budgetPrice=0
+	@property notificationType=enumValue({notifTypeEnum $this.notificationTypeTag}) //when this resource change, how to notify?
+	@property notificationTypeTag={none}
+	@property randomMulti=randf(0.8,1.2) //valor que aumenta ou diminui o resource baseado no budget
+	@property scope=enumValue({gameScope $this.scopeTag})
+	@property scopeTag={unit}
+	@property startingValue=0
+	@property value=0
+	@property weight=0
+@end
+
+@blueprint BatteryComponent:ResourceComponents
+	@domain type+={BatteryComponent}
+	@property budgetPrice=3
+	@property name='Battery Component'
+	@property rechargeSec=0
+	@comment description='Bateria armazena qualquer tipo de energia que se esvai e recupera com tempo. Exemplos: eletricidade e mana'
+@end
+
+@blueprint DPSComponent:ResourceComponents
+	@domain type+={DPSComponent}
+	@property budgetPrice=3
+	@property name='DPS Component'
+	@property weight=1
+@end
+
+@blueprint FlagResourceComponent:ResourceComponents
+	@domain type+={FlagResourceComponent}
+	@property name='CTF Flag Component'
+	@property scopeTag={team}
+	@property weight=0
+@end
+
+@blueprint HealthComponent:ResourceComponents
+	@domain type+={HealthComponent}
+	@property budgetPrice=1
+	@property lowHealthThreshold=randf(0.2,0.4)
+	@property name='HealthComponent'
+	@property notificationTypeTag={damage}
+	@property startingValue=50
+	@property weight=1
+@end
+
+@blueprint LapResourceComponent:ResourceComponents
+	@domain type+={LapResourceComponent}
+	@property name='LapResource Component'
+	@comment description='stores the current number of laps for the entity, the maxValue is the number os laps desired'
+@end
+
+@blueprint LiveResourceComponent:ResourceComponents
+	@domain type+={LiveResourceComponent}
+	@property name='LiveResource Component'
+	@property notificationTypeTag={shout}
+@end
+
+@blueprint PointsResourceComponent:ResourceComponents
+	@domain type+={PointsResourceComponent}
+	@property name='Points Component'
+	@property notificationTypeTag={shout}
+	@property scopeTag={team}
+@end
+
+@blueprint RaceGoalComponent:ResourceComponents
+	@domain type+={RaceGoalComponent}
+	@property arrowDistance=20
+	@property arrowScale=0.5
+	@property arrowTag={arrowEntity entity leaf}
+	@property arrowX=0.5
+	@property arrowY=0.1 //relative coordinates, from left bottom, size is defined on ArrowEntity
+	@property idealDistance=20 //if the unit gets to this distance then the next waypoint is selected
+	@property name='RaceGoal Component'
+	@comment description=' points to the next goal (normally a room)'
+@end
+
+@blueprint SpeedComponent:ResourceComponents
+	@domain type+={SpeedComponent}
+	@property budgetPrice=1
+	@property jumpStrength=randf(0.01,0.03) //when the character allows, this number will be multiplied by the mass...
+	@property movementStrength=randf(2,4)
+	@property name='Speed Component'
+	@property rotationStrength=randf(0.1,0.3)
+	@property startingValue=20
+	@property strafeStrength=randf(0.4,0.6) //the final value is multiplied by the SpeedComponent... so if forward SpeedComponent is 10 and strafeStr is 0.5 then strafe is 5(m/s).
+	@property weight=1
+@end
+
+@blueprint TimeResourceComponent:ResourceComponents
+	@domain type+={TimeResourceComponent}
+	@property name='Time Component'
+	@property scopeTag={game}
+	@property weight=0
+@end
+
+@blueprint UnitPositionComponent:ResourceComponents
+	@domain type+={UnitPositionComponent}
+	@property name='UnitPosition Component'
+@end
+
+@blueprint SensorialComponents:UnitComponents
+	@domain package+='sensors/'
+	@domain type+={sensorComponent}
+@end
+
+@blueprint RadarComponent:SensorialComponents
+	@domain type+={RadarComponent}
+	@property detectRange=$gameConsts.radarRange
+	@property name='Radar Component'
+	@property nearRange=$this.detectRange/2
+@end
+
+@blueprint TargetComponent:SensorialComponents
+	@domain type+={TargetComponent}
+	@property name='Target Component'
+	@comment description='target for the current entity'
+@end
+
+@blueprint TargetVisibleComponent:SensorialComponents
+	@domain type+={TargetVisibleComponent} //set by the radar system
+	@property name='Target Visible Component'
+	@comment description='indicates that the current entity can see the target '
+@end
+
+@blueprint TargetableComponent:UnitComponents
+	@domain type+={TargetableComponent}
+	@property name='Targetable Component'
+	@comment description='entidades com esse componente podem ser targeteadas'
+@end
+
+@blueprint TargettingComponent:UnitComponents
+	@domain type+={TargettingComponent}
+	@property name='Targetting Component'
+	@property targetFixation=pickSingle({targetFixation leaf})
+	@property targetSelection=pickSingle({targetSelection leaf})
+@end
+
+@blueprint TeamComponent:UnitComponents
+	@domain type+={TeamComponent}
+	@property name='Team Component'
+	@property teamID=-1
+@end
+
+@blueprint TeamMemberComponent:UnitComponents
+	@domain type+={TeamMemberComponent}
+	@property name='TeamMember Component'
+	@property teamID=-1
+	@comment description=' to avoid confusion... TeamComponent is the main component, TeamMember will point to it and will be added to all children of the team (and TeamComponent will not)'
+@end
+
+@blueprint TransientComponent:UnitComponents
+	@domain type+={TransientComponent}
+	@property name='Transient'
+	@comment description=' transient are entities which arent saved/exported (controllable entities for example, as these are spawned with a different mechanic)'
+@end
+
+@blueprint UnitClassComponent:UnitComponents
+	@domain type+={UnitClassComponent}
+@end
+
+@blueprint UnitResourcesComponent:UnitComponents
+	@domain type+={UnitResourcesComponent}
+	@replicate unitResources=oneForEach(ResourceComponent leaf) //ResourceComponents
+	@property gameOpposition=$gameGenre.gameOpposition
+@end
+
+@blueprint VisualEnhanceComponents:GameComponent
+	@domain package+='visual/'
+	@domain type+={visualEnchanceComp}
+@end
+
+@blueprint BillboardComponent:VisualEnhanceComponents
+	@domain type+={BillboardComponent}
+	@property name='BillBoard Component'
+	@comment description=' billboards show UI items such as health and position'
+@end
+
+@blueprint BloomFilterComponent:VisualEnhanceComponents
+	@domain type+={BloomFilterComponent}
+	@property blurScale=randf(1,2)
+	@property exposurePower=1
+	@property intensity=rand(2,5)
+	@property name='BloomFilter'
+@end
+
+@blueprint CamComponent:VisualEnhanceComponents
+	@domain type+={CamComponent}
+	@property camType=$gameGenre.camType
+	@property name='Camera Component'
+@end
+
+@blueprint CartoonEdgeFilterComponent:VisualEnhanceComponents
+	@domain type+={CartoonEdgeFilterComponent}
+	@property edgeIntensity=randf(0.5,2)
+	@property edgeWidth=randf(0.3,0.9)
+	@property name='CartoonEdgeFilter'
+	@property normalThreshold=randf(0.5,2)
+@end
+
+@blueprint DepthOfFieldComponent:VisualEnhanceComponents
+	@domain type+={DepthOfFieldComponent}
+	@property blurScale=randf(0.5,0,9)
+	@property focusDistance=20
+	@property focusRange=rand(25,75)
+	@property name='DepthOfField'
+@end
+
+@blueprint FogFilterComponent:VisualEnhanceComponents
+	@domain type+={FogFilterComponent}
+	@property density=randf(0.4,0.6)
+	@property distance=rand(100,200)
+	@property name='FogFilter'
+@end
+
+@blueprint LightScatteringComponent:VisualEnhanceComponents
+	@domain type+={LightScatteringComponent}
+	@property lightDensity=1
+	@property name='LightScattering'
+@end
+
+@blueprint OrientationComponent:VisualEnhanceComponents
+	@domain type+={OrientationComponent}
+	@property name='Orientation Component'
+@end
+
+@blueprint PositionComponent:VisualEnhanceComponents
+	@domain type+={PositionComponent}
+	@property name='Position Component'
+@end
+
+@blueprint RenderComponent:VisualEnhanceComponents
+	@domain type+={RenderComponent}
+	@property meshSource=pickOne({full mesh leaf})
+	@property name='Render Component'
+	@comment description='The object has a visual representation'
+@end
+
+@blueprint SkyBoxComponent:VisualEnhanceComponents
+	@domain type+={SkyBoxComponent}
+	@property name='SkyBox Component'
+@end
+
+@blueprint ThemeComponent:VisualEnhanceComponents
+	@domain type+={ThemeComponent}
+	@property theme=$theme
+@end
+
+@blueprint worldRelatedComponent:GameComponent
+	@domain type+={worldcomps}
+@end
+
+@blueprint gameSystem:entitySystem
+	@domain class='gameSystem'
+	@domain target={dev release}
+	@domain type+={gameSystem}
+	@domain requires={init start loading running paused} //init=opening the app, start=start screen, loading=after pressing play or when loading a new map, running=game running
+	@property priority=enumValue($this.priorityTag systemPriorityEnum)
+	@property priorityTag={medium}
+	@property requiresRunning=0 //if 1, then the system will only update when the game is running
+	@comment description='Systems interpretam os componentes e agem de acordo, tem uma vis??o mais geral sobre a entidade (menos at??micos, mas s?? podem ver o que os componentes dizem)'
+@end
+
+@blueprint ApplyForceSystem:gameSystem
+	@domain type+={ApplyForceSystem}
+	@domain requires={running}
+	@property name='Apply Force System'
+	@comment description='Aplica uma for??a ao objeto'
+@end
+
+@blueprint ArtSystems:gameSystem
+	@domain package+='art/'
+	@domain type+={artSystem}
+@end
+
+@blueprint ImageRequestSystem:ArtSystems
+	@domain target={dev}
+	@domain type+={ImageRequestSystem}
+	@property priorityTag={lowest}
+@end
+
+@blueprint TextureGeneratorSystem:ArtSystems
+	@domain target={dev}
+	@domain type+={TextureGeneratorSystem}
+	@property name='Texture Generator System'
+	@property priorityTag={lowest}
+@end
+
+@blueprint TextureLoaderSystem:ArtSystems
+	@domain target={release}
+	@domain type+={TextureLoaderSystem}
+	@domain requires={start loading running paused}
+	@property name='Texture Generator System'
+	@property priorityTag={lowest}
+@end
+
+@blueprint DamageCalculatorSystem:gameSystem
+	@domain type+={DamageCalculatorSystem}
+	@domain requires={running}
+	@property name='Damage Calculator'
+@end
+
+@blueprint DamageOverTimeSystem:gameSystem
+	@domain type+={DamageOverTimeSystem}
+	@domain requires={running}
+	@property name='Damage Over Time System'
+@end
+
+@blueprint LightSystem:gameSystem
+	@domain type+={LightSystem}
+	@domain requires={running paused}
+	@property name='Light System'
+	@property priorityTag={lowest}
+@end
+
+@blueprint LoadEntitySystem:gameSystem
+	@domain type+={LoadEntitySystem}
+	@domain requires={loading running paused}
+	@property name='LoadEntity System'
+@end
+
+@blueprint MacroSystems:gameSystem
+	@domain package+='macro/'
+	@domain type+={macroSystems}
+	@comment description='Sistemas envolvidos no gerenciamento do jogo'
+@end
+
+@blueprint BubblePopperSystem:MacroSystems
+	@domain target={dev}
+	@domain type+={BubblePopperSystem}
+@end
+
+@blueprint BuildManagerSystem:MacroSystems
+	@domain target={dev}
+	@domain type+={BuildManagerSystem}
+	@property priorityTag={lowest}
+@end
+
+@blueprint DirectorSystems:MacroSystems
+@domain package+='directors/'
+@end
+
+@blueprint DirectorSystem:DirectorSystems
+	@domain type+={DirectorSystem}
+	@domain requires={running}
+	@property priorityTag={low}
+@end
+
+@blueprint FlattenTerrainSystem:MacroSystems
+	@domain target={dev}
+	@domain type+={FlattenTerrainSystem}
+	@property name='FlattenTerrain System'
+@end
+
+@blueprint GameEventSystem:MacroSystems
+	@domain type+={GameEventSystem}
+	@domain requires={running}
+	@property name='GameEvent System'
+@end
+
+@blueprint GameStateSystem:MacroSystems
+	@domain type+={GameStateSystem}
+@end
+
+@blueprint QueryBestiarySystem:MacroSystems
+	@domain type+={QueryBestiarySystem}
+	@domain requires={loading running paused}
+	@property name='Query Bestiary System'
+@end
+
+@blueprint TeamSystem:MacroSystems
+	@domain type+={TeamSystem}
+	@domain requires={loading running paused}
+	@property priorityTag={lowest}
+@end
+
+@blueprint VictoryCheckerSystem:MacroSystems
+	@domain type+={VictoryCheckerSystem}
+	@domain requires={running}
+	@property name='VictoryChecker System'
+	@property priorityTag={lowest}
+	@comment description=' checks for victory conditions and updates points and remaining lifes...'
+@end
+
+@blueprint MapSystems:gameSystem
+	@domain package+='map/'
+	@domain type+={mapsystems}
+@end
+
+@blueprint MapLoaderSystem:MapSystems
+	@domain target={release dev}
+	@domain type+={MapLoaderSystem}
+	@domain requires={loading running paused}
+@end
+
+@blueprint MapWorldSystem:MapSystems
+	@domain type+={MapWorldSystem}
+	@domain requires={init start loading running paused}
+	@property priorityTag={low}
+@end
+
+@blueprint RoadSolverSystem:MapSystems
+	@domain target={dev}
+	@domain type+={RoadSolverSystem}
+@end
+
+@blueprint RoomSolverSystem:MapSystems
+	@domain target={dev}
+	@domain type+={RoomSolverSystem}
+@end
+
+@blueprint TerrainGeneratorSystem:MapSystems
+	@domain target={dev}
+	@domain type+={TerrainGeneratorSystem}
+	@property name='TerrainGenerator System'
+	@property priorityTag={lowest}
+@end
+
+@blueprint TerrainLoaderSystem:MapSystems
+	@domain target={release}
+	@domain type+={TerrainLoaderSystem}
+	@domain requires={loading running paused}
+	@property name='TerrainLoader System'
+	@property priorityTag={lowest}
+@end
+
+@blueprint MeshLoaderSystem:gameSystem
+	@domain target={dev}
+	@domain type+={MeshLoaderSystem}
+	@domain requires={start loading running paused}
+	@property name='Mesh Loader System'
+	@comment description='Carrega as meshes do objeto e carrega na node informada'
+@end
+
+@blueprint PersistsSystems:gameSystem
+	@domain package+='persists/'
+@end
+
+@blueprint AssetLoadRequestSystem:PersistsSystems
+	@domain type+={AssetLoadRequestSystem}
+@end
+
+@blueprint RenderSystem:gameSystem
+	@domain type+={RenderSystem}
+	@domain requires={start loading running paused}
+	@property name='Render System'
+	@property priorityTag={lowest}
+@end
+
+@blueprint SkyBoxSystem:gameSystem
+	@domain type+={SkyBoxSystem}
+	@domain requires={loading running}
+@end
+
+@blueprint SpatialSystem:gameSystem
+	@domain type+={SpatialSystem}
+	@domain requires={start loading running paused}
+	@property name='Spatial System'
+	@property priorityTag={lowest}
+@end
+
+@blueprint ThemeSystem:gameSystem
+	@domain type+={ThemeSystem}
+	@domain requires={init loading start}
+	@property priorityTag={lowest}
+@end
+
+@blueprint TimerSystem:gameSystem
+	@domain type+={TimerSystem}
+	@domain requires={running}
+	@property name='Timer System'
+	@comment description='will apply components to its owner after some TimeResourceComponent'
+@end
+
+@blueprint uiSystems:gameSystem
+	@domain package+='ui/'
+	@domain type+={uisystems}
+	@comment description='Sistemas envolvidas na gera????o da interface ao usu??rio'
+@end
+
+@blueprint ShortCutSystem:uiSystems
+	@domain type+={shortCutSystem}
+	@domain requires={init start loading running paused}
+	@property name='ShortCut System'
+	@property priorityTag={low}
+@end
+
+@blueprint UIActionListenerSystem:uiSystems
+	@domain type+={UIActionListenerSystem}
+	@domain requires={start running paused}
+@end
+
+@blueprint UIControlSystem:uiSystems
+	@domain type+={UIControlSystem}
+	@property name='UIControl System'
+	@property priorityTag={realTime}
+	@comment description='controller atachado ?? screen que gerenciar?? a atualiza????o dos r??tulos'
+@end
+
+@blueprint UILayerSystem:uiSystems
+	@domain type+={UILayerSystem}
+	@property name='Screen System'
+	@property priorityTag={medium}
+@end
+
+@blueprint UIPanelSystem:uiSystems
+	@domain type+={UIPanelSystem}
+	@property name='Panel System'
+	@property priorityTag={medium}
+@end
+
+@blueprint UIScreenSystem:uiSystems
+	@domain type+={UIScreenSystem}
+	@property name='Screen System'
+	@property priorityTag={medium}
+@end
+
+@blueprint UnitSystems:gameSystem
+	@domain package+='unit/'
+	@domain type+={unitSystems}
+	@comment description='Sistemas voltados ao andamento da unidade (npc)'
+@end
+
+@blueprint ActuatorSystems:UnitSystems
+	@domain package+='actuators/'
+	@domain type+={actuatorSystem}
+	@domain requires={running paused}
+@end
+
+@blueprint WeaponSystem:ActuatorSystems
+	@domain type+={WeaponSystem}
+	@domain requires={loading running paused}
+	@property name='Weapon System'
+	@property priorityTag={realTime}
+@end
+
+@blueprint AISystem:UnitSystems
+	@domain type+={AISystem}
+	@domain requires={running}
+	@property priorityTag={lowest}
+@end
+
+@blueprint BulletSystem:UnitSystems
+	@domain type+={BulletSystem}
+	@domain requires={running}
+	@property priorityTag={realTime}
+	@comment description=' system responsible for sending and managing bullets'
+@end
+
+@blueprint DeathSystem:UnitSystems
+	@domain type+={DeathSystem}
+	@domain requires={running}
+	@property name='Death System'
+@end
+
+@blueprint FXSystems:UnitSystems
+	@domain package+='fx/'
+	@domain type+={fxSystems}
+	@comment description='Sistemas voltados ao gerenciamento de efeitos (fx e sfx)'
+@end
+
+@blueprint FXLibrarySystem:FXSystems
+	@domain type+={FXLibrarySystem}
+	@domain requires={start loading running paused}
+	@property priorityTag={low}
+@end
+
+@blueprint JoystickSystem:UnitSystems
+	@domain type+={JoystickSystem}
+	@domain requires={running paused}
+	@property priorityTag={low}
+@end
+
+@blueprint NPCBehaviourSystems:UnitSystems
+	@domain package+='npcBehaviours/'
+	@domain type+={BehaviourSystems}
+	@domain requires={running}
+@end
+
+@blueprint BehaviourSystem:NPCBehaviourSystems
+	@domain type+={BehaviourSystem}
+	@domain requires={running}
+	@property priorityTag={realTime}
+@end
+
+@blueprint NPCStatesSystem:UnitSystems
+	@domain package+='npcStates/'
+	@domain type+={npcStateSystem}
+	@domain requires={running}
+	@property priorityTag={low} //npc states dont need much in termos of priority: they will check behaviours and states...
+@end
+
+@blueprint NPCStateManagerSystem:NPCStatesSystem
+	@domain type+={NPCStateManagerSystem} /* Check the npcstate and call the action in the component...
+@end
+
+@blueprint PhysicsSystem:UnitSystems
+	@domain type+={PhysicsSystem}
+	@domain requires={loading running}
+	@property name='Physics System'
+	@property priorityTag={realTime} //because of the bullets...
+@end
+
+@blueprint PlayerSystem:UnitSystems
+	@domain type+={PlayerSystem}
+	@domain requires={running paused}
+@end
+
+@blueprint ResourcesSystems:UnitSystems
+	@domain package+='resources/'
+	@domain type+={resourcesSystem}
+	@domain requires={running}
+@end
+
+@blueprint BatterySystem:ResourcesSystems
+	@domain type+={BatterySystem}
+	@property name='Battery System'
+@end
+
+@blueprint HealthSystem:ResourcesSystems
+	@domain type+={HealthSystem}
+	@property name='Health System'
+@end
+
+@blueprint RaceGoalSystem:ResourcesSystems
+	@domain type+={RaceGoalSystem}
+	@domain requires={running paused}
+	@property name='RaceGoal System'
+	@property priorityTag={high}
+@end
+
+@blueprint UnitPositionSystem:ResourcesSystems
+	@domain type+={UnitPositionSystem}
+	@domain requires={running}
+	@property name='UnitPosition System'
+	@property priorityTag={lowest}
+@end
+
+@blueprint SensorialSystems:UnitSystems
+	@domain package+='sensors/'
+	@domain type+={sensorSystems}
+	@domain requires={running}
+	@property priorityTag={lowest}
+@end
+
+@blueprint RadarSystem:SensorialSystems
+	@domain type+={RadarSystem}
+	@property name='Radar System'
+	@property priorityTag={low} //radar just checks for enemies, its not necessary for shooting calcs
+@end
+
+@blueprint TargetSystem:UnitSystems
+	@domain type+={TargetSystem}
+	@domain requires={running}
+	@property name='Target System'
+@end
+
+@blueprint TargettingSystem:UnitSystems
+	@domain type+={TargettingSystem}
+	@domain requires={running}
+	@property name='Targetting System'
+	@comment description='Will set the target based on definitions...'
+@end
+
+@blueprint UnitRoleSystem:UnitSystems
+	@domain type+={UnitRoleSystem}
+	@domain requires={loading running paused}
+	@property priorityTag={lowest}
+	@comment description='Inicializa a unitRole na entidade...'
+@end
+
+@blueprint VisualSystems:gameSystem
+	@domain package+='visual/'
+	@domain type+={visualSystems}
+	@comment description='Sistemas voltados ao visual do jogo'
+@end
+
+@blueprint BillboardSystem:VisualSystems
+	@domain type+={BillboardSystem}
+	@domain requires={running paused}
+	@property name='Billboard System'
+	@property priorityTag={lowest}
+@end
+
+@blueprint CameraSystem:VisualSystems
+	@domain type+={CameraSystem}
+	@domain requires={loading running paused}
+	@property name='Camera System'
+	@property priorityTag={lowest}
+@end
+
+@blueprint state:entitySystem
+	@domain type+={state}
+	@property components={}
+@end
+
+@blueprint GameState:state
+	@domain class='gameState'
+	@domain type+={game}
+@end
+
+@blueprint JMECameraLightState:GameState
+	@domain type+={cameraLightState}
+@end
+
+@blueprint JMEDebugState:GameState
+	@domain type+={debugstate}
+@end
+
+@blueprint JMEPhysicsSpaceState:GameState
+	@domain type+={physicsstate}
+@end

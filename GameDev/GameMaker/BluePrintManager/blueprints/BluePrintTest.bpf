@@ -1,0 +1,1108 @@
+//Defines
+
+//Blueprints
+@blueprint testBase
+	@domain type={all}
+	@output file='BluePrintTest.bpf'
+@end
+
+@blueprint color:testBase
+	@domain type+={color}
+@end
+
+@blueprint colorBlack:color
+	@domain type+={black}
+	@property a=1
+	@property b=0
+	@property g=0
+	@property name='black'
+	@property r=0
+@end
+
+@blueprint colorWhite:color
+	@domain type+={white}
+	@property a=1
+	@property b=1
+	@property g=1
+	@property name='White'
+	@property r=1
+@end
+
+@blueprint entity:testBase
+	@domain class='entity'
+	@domain className='GameEntity'
+	@domain type+={entity }
+	@property components+={}
+	@property name='Basic Entity'
+	@replicate components+=$this.components
+@end
+
+@blueprint defaultEntity:entity
+	@domain type+={entity visible static}
+@end
+
+@blueprint GoalArrowEntity:entity
+	@domain type+={arrowEntity uiEntity}
+	@property components+={GUIComponent}
+	@property meshTag={mesh generic leaf goalArrow}
+	@property width=2
+	@property height=2
+	@property depth=5
+@end
+
+@blueprint testEntity:entity
+	@domain type+={test testentity}
+	@property components+={GUIComponent ImageRequestComponent}
+	@childproperty components.valor=123
+	@childproperty components.valorHealth[GUIComponent]=155
+@end
+
+@blueprint TestWorld:entity
+	@domain type+={world}
+	@replicate states=$this.state
+	@replicate systems=oneForEach({gameSystem leaf})
+@end
+
+@blueprint entitySystem:testBase
+	@domain type+={entitysystem}
+@end
+
+@blueprint GameComponent:entitySystem
+	@domain type+={component}
+@end
+
+@blueprint AIComponent:GameComponent
+	@domain type+={AIComponent}
+	@property name='AI Component'
+@end
+
+@blueprint FXLibraryComponent:GameComponent
+	@domain type+={FXLibraryComponent}
+	@domain package='unit/fx/'
+	@property damage_type=pickFinal({damageType leaf})
+	@property name='Damage Effect Component'
+	@replicate effects=oneForEach({effectsEnum leaf})
+@end
+
+@blueprint GameGenreComponent:GameComponent
+	@domain type+={GameGenreComponent gameGenre}
+	@property name='GameGenre Component'
+	@property gameGenre=pickFinal({gameGenreData leaf})
+@end
+
+@blueprint GUIComponent:GameComponent
+	@domain type+={GUIComponent}
+	@property name='GUI Component'
+@end
+
+@blueprint GunComponent:GameComponent
+	@domain type+={guncomponent}
+	@property name='guncomponent'
+@end
+
+@blueprint HealthComponent:GameComponent
+	@domain type+={HealthComponent}
+	@property name='HealthComponent'
+@end
+
+@blueprint ImageRequestComponent:GameComponent
+	@domain type+={ImageRequestComponent}
+	@property assetRoot={assetsEnum images}
+	@property defaultSize=128
+	@property reusePreviousGen=1 //if true then the program will reuse a previous generated instead of generating everyTimeResourceComponent... set to 0 on production
+	@property saveFolder=enumValue({image folder})+'gen/'
+@end
+
+@blueprint ThemeComponent:GameComponent
+	@domain type+={ThemeComponent}
+	@property theme=pickFinal({theme gameData leaf})
+@end
+
+@blueprint UIControlComponent:GameComponent
+	@domain type+={UIControlComponent}
+	@property controlObj=pickSingle($this.controlTag)
+	@property controlTag={control ui}
+	@property name='Control UI Component'
+@end
+
+@blueprint UIScreenComponent:GameComponent
+	@domain type+={UIScreenComponent}
+	@property name='Screen Component' //name=id da screen
+	@property screenObj=pickFinal($this.screenTag)
+	@property screenTag={screen ui}
+@end
+
+@blueprint gameSystem:entitySystem
+	@domain class='gameSystem'
+	@domain type+={gameSystem}
+	@domain target={dev release}
+	@property priority=enumValue($this.priorityTag systemPriorityEnum)
+	@property priorityTag={medium}
+@end
+
+@blueprint HealthSystem:gameSystem
+	@domain type+={HealthSystemTest}
+	@property name='Health System'
+@end
+
+@blueprint enums:testBase
+	@domain type+={enum}
+@end
+
+@blueprint MapPopulateEnum:enums
+	@domain type+={mapPopulate}
+@end
+
+@blueprint ArenaMapEnum:MapPopulateEnum
+	@domain type+={arena}
+	@property init='com.cristiano.java.gm.builder.map.ArenaMapSolver'
+	@property maxMapFillPerc=50
+	@property minMapFillPerc=30 //min and max of the map will be filled by the arena... the rest is empty
+	@property value='arena'
+@end
+
+@blueprint ShooterSolverEnum:MapPopulateEnum
+	@domain type+={shooterSolver}
+	@property init='com.cristiano.java.gm.builder.map.ShooterMapSolver'
+	@property lineFunctionTag={line functions leaf}
+	@property value='shooterSolver'
+@end
+
+@blueprint RaceMapTestEnum:MapPopulateEnum
+	@domain type+={raceMapTest}
+	@property init='com.cristiano.java.gm.builder.map.RaceMapTest'
+	@property lineFunctionTag={line functions leaf}
+	@property value='raceMapTest'
+@end
+
+
+@blueprint assetsEnum:enums
+	@domain type+={assetsEnum}
+@end
+
+@blueprint foldersEnum:assetsEnum
+	@domain type+={folder}
+@end
+
+@blueprint ImagesFolder:foldersEnum
+	@domain type+={image}
+	@property value='Interface/Images/'
+@end
+
+@blueprint SourceImagesFolder:foldersEnum
+	@domain type+={sourceImage}
+	@property value='Interface/Images/source/'
+@end
+
+@blueprint imagesEnum:assetsEnum
+	@domain type+={images}
+	@property folder=enumValue({image folder})
+	@property folderDest='gen/art/'
+	@property sourceValue=enumValue({sourceImage folder})+$this.value //'Interface/Images/'
+	@property value=''
+@end
+
+@blueprint playImages:imagesEnum
+	@domain type+={test}
+	@property baseSize=128
+	@property folder+='test/'
+	@property value+='test/'
+@end
+
+@blueprint playImage1:playImages
+	@domain type+={test1}
+	@property value+='test1.png'
+@end
+
+@blueprint ChildLayoutEnum:enums
+	@domain type+={childLayout}
+@end
+
+@blueprint CenterChildLayout:ChildLayoutEnum
+	@domain type+={center}
+	@property value='center'
+@end
+
+@blueprint HorizontalChildLayout:ChildLayoutEnum
+	@domain type+={horizontal}
+	@property value='horizontal'
+@end
+
+@blueprint VerticalChildLayout:ChildLayoutEnum
+	@domain type+={vertical}
+	@property value='vertical'
+@end
+
+@blueprint EffectsEnum:enums
+	@domain type+={effectsEnum}
+@end
+
+@blueprint NoFXEnum:EffectsEnum
+	@domain type+={nofx}
+	@property name='NoFX' //placeholder...
+	@property value='0'
+@end
+
+@blueprint VisualFX:EffectsEnum
+	@domain type+={visual}
+	@property isVisual=1
+	@property soundTag={null}
+	@property soundObj=pickFinal({assetsEnum sound fx leaf $this.soundTag})
+	@property texture='Effects/Explosions/Debris.png'
+	@property material='Common/MatDefs/Misc/Particle.j3md'
+	@property value='1'
+@end
+
+@blueprint MaterialTypes:enums
+	@domain type+={materialTypeEnum}
+@end
+
+@blueprint MaterialLightEnum:MaterialTypes
+	@domain type+={light}
+	@property value=1
+@end
+
+@blueprint QuickHull:enums
+	@domain className='com.cristiano.jme3.hull.convex.QuickHull3D'
+	@domain type+={quickhull hullmaker convex}
+	@property name='QuickHull'
+@end
+
+@blueprint SubNodeType:enums
+	@domain type+={subnodetype}
+	@property type='default'
+	@comment description='Define como ser?? feita a adi????o do mesh: se for merge ent??o os pontos do objeto atual ser?? somado com os pontos do objeto pai, se for new ent??o um novo node(mesh) ?? criado'
+@end
+
+@blueprint MergeSubNodeType:SubNodeType
+	@domain type+={merge}
+	@property value='merge'
+@end
+
+@blueprint NewSubNodeType:SubNodeType
+	@domain type+={newsubnode}
+	@property value='newsubnode'
+@end
+
+@blueprint GameFactories:testBase
+	@domain type+={gameData}
+@end
+
+@blueprint theme:GameFactories
+	@domain type+={theme}
+	@property runningScreen=pickSingle($this.runningScreenTag)
+	@property runningScreenTag={screen test}
+	@property screens=$this.runningScreen //game screens
+	@property gameGenre=pickSingle({gameGenre leaf})
+@end
+
+@blueprint UIGameFactories:GameFactories
+	@domain type+={uigd}
+	@property visible=1
+@end
+
+@blueprint ControlsGD:UIGameFactories
+	@domain type+={control}
+	@property controlTag={control ui}
+	@property events+={} //used for nifty effects (no, really, niftygui effects)
+	@generator base=pickOne({UIControlComponent})
+@end
+
+@blueprint ButtonsGD:ControlsGD
+	@domain type+={button}
+	@property action='undefined'
+	@property controlTag+={button}
+	@property height=50%
+	@property textHAlign={center}
+	@property textVAlign={center}
+	@property width=30%
+@end
+
+@factory ButtonTeste:ButtonsGD
+	@domain type+={buttonTeste test}
+	@property label='Teste'
+	@property name='btn_teste'
+@end
+
+@blueprint ScreensGD:UIGameFactories
+	@domain type+={screen}
+	@property layers+=[]
+	@generator base=pickOne({UIScreenComponent})
+@end
+
+@factory ScreenTest:ScreensGD
+	@domain type+={test}
+	@property layers+=addNifty({testLayer})
+	@property name='test'
+@end
+
+@blueprint GameMechanics:testBase
+	@domain type+={mechanics}
+@end
+
+@blueprint GameEvents:GameMechanics
+	@domain type+={gameEvents}
+@end
+
+@blueprint EnemyHit:GameEvents
+	@domain type+={enemyHit}
+	@property name='enemyHit'
+	@property showScrollingText=0
+@end
+
+@blueprint GameGenreData:GameMechanics
+	@domain type+={gameGenreData}
+	@property gameEvents+=pickFinal(enemyHit gameEvents leaf)
+@end
+
+@blueprint ui:GameMechanics
+	@domain type+={ui}
+@end
+
+@blueprint ScreenUI:ui
+	@domain class='gameScreen'
+	@domain type+={screen}
+	@comment description='Tela do jogo indica em qual estado que o jogo pode ter, exemplo:#$#%- config: tela de configura????o#$#%- running: jogo est?? rodando#$#%- start: tela inicial'
+@end
+
+@blueprint PropertyStore:testBase
+	@domain type+={PropertyStore}
+	@property vf=10.123
+	@property vi=1004
+	@property vs='String de Teste'
+@end
+
+@blueprint test:testBase
+	@domain type+={teste}
+	@property valor=1
+	@validate checkNull=isNotNull($this.valor)
+@end
+
+@blueprint acessoFilho:test
+	@domain type+={acessoFilho}
+	@property value=123
+	@property value123=$this.value
+	@property valueM=-123
+@end
+
+@blueprint acessoLista:test
+	@domain type+={acessoLista}
+	@property valLista1=$this#lista1.valProp
+	@property valLista2=$this#lista2.valProp
+	@property valProp='p'
+	@lista1 valProp=1
+	@lista2 valProp=2
+@end
+
+@blueprint acessoPai:test
+	@domain type+={acessoPai}
+	@property obj=pickFinal({teste acessoFilho})
+	@property valFilho=$this.obj.value
+	@property valFilho123=$this.obj.value123
+@end
+
+@blueprint entidadeTeste:test
+	@domain type+={entidade test}
+	@object box=pickOne(visual test)
+@end
+
+@blueprint explosionActionTest:test
+	@domain type+={explosion test}
+	@property explosionPower=10
+	@property explosionRadius=10
+	@property name='Explosion'
+@end
+
+@blueprint FactoryModTest:test
+	@domain type+={factoryModTest}
+@end
+
+@blueprint CommonMod:FactoryModTest
+	@domain type+={modTest}
+	@property valCommonMod='mod-comum'
+@end
+
+@mod goalChooser:CommonMod
+	@domain type+={goal}
+	@property valGoal='goal'
+	@property splashScreen=pickFinal($this.tagProp)
+	@property splashScreen1=pickFinal($this.tagProp)
+	@property splashScreen2=pickFinal($this.tagProp)
+	@property startScreen=pickFinal($this.tagProp)
+	@property pauseScreen=pickFinal($this.tagProp null)
+	@property runningScreen=pickFinal($this.tagProp)
+	@property configScreen=pickFinal($this.tagProp)
+	@property debugScreen=pickFinal($this.tagProp)
+	@property victoryScreen=pickFinal($this.tagProp)
+	@property failScreen=pickFinal($this.tagProp)
+	@property emptyScreen=pickFinal($this.tagProp)
+	@property emptyScreen1=pickFinal($this.tagProp)
+	@property splashScreen3=pickFinal($this.tagProp)
+	@property screens=$this.splashScreen+$this.startScreen+$this.pauseScreen+$this.runningScreen+$this.configScreen+$this.debugScreen+$this.victoryScreen+$this.failScreen+$this.emptyScreen //game screens
+@end
+
+@mod temaChooser:CommonMod
+	@domain type+={theme}
+	@property valTheme='tema'
+@end
+
+@factory TesteFactory:FactoryModTest
+	@domain type+={factTest}
+	@property valFactory='factory'
+	@generator base=pickOne({acessoFilho leaf})
+	@mod goal=pickOne({modTest goal})
+	@mod theme=pickOne({modTest theme})
+@end
+
+@blueprint TesteModProp:FactoryModTest
+	@domain type+={testeModProp}
+	@property tagProp={visual test leaf}
+	@mod goal=pickOne({modTest goal})
+@end
+
+@blueprint gpbase:test
+	@domain type+={base gp}
+	@property filhos=rand(1,10)
+	@property name='gpBase'
+@end
+
+@blueprint gpfilho:gpbase
+	@domain type+={filho}
+	@property name='gpFilho'
+	@property valor=randf(10,20)
+@end
+
+@blueprint gppai:gpbase
+	@domain type+={pai}
+	@property name='gpPai'
+	@object filho_pai=pickOne(teste gp filho)
+	@replicate filho_pai=rand(5,8)
+@end
+
+@blueprint objetoTeste:test
+	@domain type+={visual test}
+	@property numFilhos=rand(3,9)
+	@property radius=1
+	@object triang=pickFinal({visual testfilho1})
+	@replicate triang=$this.numFilhos
+	@orientation triang=$angle
+	@position triang=$angle
+	@position triang.initialAngle=0
+	@position triang.radius=0.8
+@end
+
+@blueprint objetoTeste1:test
+	@domain type+={visual testfilho1}
+	@property name='filho1'
+	@property radius=1
+	@object ponto=pickFinal({visual testfilho2})
+	@replicate ponto=rand(3,6)
+	@orientation ponto=$angle
+	@position ponto=$angle
+	@position ponto.initialAngle=0
+	@position ponto.radius=0.2
+@end
+
+@blueprint objetoTeste2:test
+	@domain type+={visual testfilho2}
+	@property name='filho2'
+	@property radius=1
+	@object ponto=pickSingle(ponto)
+	@replicate ponto=rand(3,4)
+	@orientation ponto=$angle
+	@position ponto=$angle
+	@position ponto.initialAngle=0
+	@position ponto.radius=0.1
+@end
+
+@factory posicaoArmas:test
+	@domain type+={mod posicao fighter weapon}
+	@property weaponObject=pickFinal(blueprint fighter ready)
+	@object weapon=$this.weaponObject
+	@replicate weapon=$this.numWeapons
+	@orientation weapon=0
+	@position weapon=$this.inclinacaoAsa
+	@position weapon.limitToParent=0
+	@position weapon.radius=$index/$this.numWeapons*3+0.8
+@end
+
+@blueprint test2:test
+	@domain type+={teste2}
+	@property fixo=120
+	@property total=sum(teste blueprint soma,valorSoma)
+	@property valorSoma+=1.5
+	@object filhos=pickOne(testefilho)
+	@object outroFilho=pickOne(testefilho factory)
+	@replicate filhos=oneForEach(blueprint testefilho)
+	@replicate outroFilho=2
+	@childproperty filhos.valorFilho=100
+	@childproperty outroFilho.childprop=100
+	@childproperty outroFilho.childprop2=$this.fixo
+	@size filhos=100
+@end
+
+@factory testaChildPropertyNovaFactory:test
+	@domain type+={childproperty factory}
+	@generator base={childproperty pai}
+@end
+
+@blueprint testaChildPropertyNovaFilho:test
+	@domain type+={childproperty filho}
+	@property filho=pickFinal($this.filhoTag)
+	@property filhoTag={testfilho1}
+	@property objPonto=pickFinal({childproperty neto})
+	@property qtdPontos=1
+	@property valor1=1011010101
+	@property valor2=2222222
+	@object ponto=$this.objPonto
+	@replicate ponto=$this.qtdPontos
+	@childproperty ponto.position=$angle
+	@childproperty ponto.radius=$this.radius
+	@childproperty ponto.valorTeste=123
+	@iterator ponto.angle.final=360
+	@iterator ponto.angle.initial=0
+@end
+
+@blueprint testaChildPropertyNovaNeto:test
+	@domain type+={childproperty neto}
+	@property radius=1
+@end
+
+@blueprint testaChildPropertyNovaPai:test
+	@domain type+={childproperty pai}
+	@property objFilho=pickOne({childproperty filho})
+	@property qtdFilhos=4
+	@property radius=12345
+	@object filho=$this.objFilho
+	@replicate filho=$this.qtdFilhos
+	@childproperty filho.filhoTag={testfilho2}
+	@childproperty filho.radius=$this.radius
+	@childproperty filho.valor1=$index
+	@childproperty filho.valor2=$angle
+	@childproperty filho.valor3=3
+	@childproperty filho.valor4=4
+	@childproperty filho.var=$variavel
+	@childproperty filho.var2=$variavelDobro
+	@iterator filho.angle.final=360
+	@iterator filho.angle.initial=0
+	@iterator filho.variavel.final=360
+	@iterator filho.variavel.initial=0
+	@iterator filho.variavelDobro.calc=$index*$variavelDobroStep*2
+	@iterator filho.variavelDobro.final=360
+	@iterator filho.variavelDobro.initial=0
+@end
+
+@blueprint testaDomainMaiusculo:test
+	@domain type+={dOmAiN}
+@end
+
+@blueprint testaKeyPickFromList:test
+	@domain type+={testPickFromList}
+	@property pick=pickFromList({Key1 Key2 Key3},{palavraChave})
+	@property pick0=pickFromList({Key1 Key2 Key3},{palavraChave},0)
+	@property pick1=pickFromList({Key1 Key2 Key3},{palavraChave},1)
+	@property pick10=pickFromList({Key1 Key2 Key3},{palavraChave},10)
+	@property pick2=pickFromList({Key1 Key2 Key3},{palavraChave},2)
+	@property pick3=pickFromList({Key1 Key2 Key3},{palavraChave},3)
+	@comment description=' em uso pelo: testFunctionPickFromList'
+@end
+
+@blueprint testaKeyWord:test
+	@domain type+={palavraChave}
+@end
+
+@blueprint keywordKey1:testaKeyWord
+	@domain keyword+={key1}
+	@domain type+={palavraChave Key1}
+	@property name='key1'
+@end
+
+@blueprint keywordKey2:testaKeyWord
+	@domain keyword+={key2}
+	@domain type+={palavraChave Key2}
+	@property name='key2'
+@end
+
+@blueprint keywordKey3:testaKeyWord
+	@domain keyword+={key3}
+	@domain type+={palavraChave Key3}
+	@property name='key3'
+@end
+
+@blueprint testaNaoPronto:test
+	@domain type+={notready verificanaopronto}
+@end
+
+@blueprint testaRefresh:test
+	@domain type+={testRefresh}
+	@property valorOriginal=111
+	@property valorRef=$this.valorOriginal
+@end
+
+@blueprint testaSimplesChildPropertyFactoryPai:test
+	@domain type+={simpleschildproperty factoryPai}
+	@property objetoPai=pickOne({$this.tagTest})
+	@childproperty filho.valor6[filho]=123
+@end
+
+@factory testaSimplesChildPropertyFactory:testaSimplesChildPropertyFactoryPai
+	@domain type+={simpleschildproperty factory}
+	@property tagTest={testRefresh}
+	@childproperty filho.valor4=13245
+	@childproperty filho.valor5=$index*2
+	@childproperty filho.valor7[filho]=555
+	@childproperty filhoLista.enum[testef1]={damageType}
+	@childproperty filhoLista.valor4=132451
+	@childproperty filhoLista.valor6[filho]=1231
+	@childproperty filhoLista.valor7[filho]=5551
+	@childproperty filhoLista.valor8[testef1]=1
+	@generator base=pickOne({simpleschildproperty pai})
+@end
+
+@blueprint testaSimplesChildPropertyFilho1:test
+	@domain type+={simpleschildproperty filho testef1}
+	@property enum={boolean}
+	@property enumValue=enumValue($this.enum)
+	@property valor1=111
+	@property valor2=465498
+	@property valor3=654654
+	@property valor7=444
+@end
+
+@blueprint testaSimplesChildPropertyFilho2:test
+	@domain type+={simpleschildproperty filho testef2}
+	@property enum={boolean}
+	@property enumValue=enumValue($this.enum)
+	@property valor1=111
+	@property valor2=465498
+	@property valor3=654654
+	@property valor7=444
+@end
+
+@blueprint testaSimplesChildPropertyFilho3:test
+	@domain type+={simpleschildproperty filho testef3}
+	@property valor1=111
+	@property valor2=465498
+	@property valor3=654654
+	@property valor7=444
+@end
+
+@blueprint testaSimplesChildPropertyPai:test
+	@domain type+={simpleschildproperty pai}
+	@property objFilho=pickFinal({simpleschildproperty filho})
+	@property qtdFilhos=3
+	@property valorPai=555
+	@object filho=$this.objFilho
+	@replicate filho=$this.qtdFilhos
+	@replicate filhoLista={testef1 testef2 testef3}
+	@childproperty filho.valor1=5000
+	@childproperty filho.valor2=$this.valorPai
+	@childproperty filho.valor3=$index
+	@childproperty filhoLista.enum[testef2]={damageType}
+	@childproperty filhoLista.valor1=5000
+	@childproperty filhoLista.valor2=$this.valorPai
+	@childproperty filhoLista.valor3=123
+	@childproperty filhoLista.valor8[testef2]=2
+	@childproperty filhoLista.valor8[testef3]=3
+@end
+
+@blueprint testaUserFunction:test
+	@domain type+={testuserfunction}
+	@property valor1=2
+	@property valor2=4
+	@property valor3=5
+@end
+
+@blueprint testDefine:test
+	@domain type+={define}
+	@define defineTeste=123
+	@define defineThis=$this
+@end
+
+@blueprint testDefineFilho:test
+	@domain type+={defineobj filho}
+	@property pai=$defineMestre
+	@property valorFilho=$defineMestre.valorDefine+100
+@end
+
+@blueprint testDefinePerm:test
+	@domain type+={defineobj pai}
+	@property valorDefine=1000
+	@define defineMestre=$this
+@end
+
+@blueprint testDelecao:test
+	@domain type+={apagar}
+	@property name='elemento a apagar'
+@end
+
+@blueprint testDimensionsFunciton:test
+	@domain type+={dimensionFuncPai}
+	@property depth=3
+	@property height=2
+	@property obj=pickFinal({acessoFilho},dimensions($this))
+	@property width=1
+@end
+
+@blueprint testeEntidadeRefAMestre:test
+	@domain type+={entidade ref mestre}
+	@property valorMestre=12345
+	@entity isEntity=1
+	@object refFilho=pickOne(entidade teste ref filho)
+@end
+
+@blueprint testeEntidadeRefBFilho:test
+	@domain type+={entidade ref filho}
+	@property valorMestre=1000
+	@property valorTeste=$entity.valorMestre
+	@object refNeto=pickOne(entidade teste ref neto)
+@end
+
+@blueprint testeEntidadeRefCNeto:test
+	@domain type+={entidade ref neto}
+	@property valorMestre=1001
+	@property valorTeste=$entity.valorMestre
+@end
+
+@blueprint TestFactory_Ancestral:test
+	@domain type+={factoryProperties}
+	@property controls=pickFinal({elementoVazio1})
+@end
+
+@blueprint TestFactory_Base:TestFactory_Ancestral
+	@domain type+={base}
+	@property obj=pickFinal($this.tag)
+	@property tag={acessoLista}
+@end
+
+@factory TestFactory_Factory:TestFactory_Ancestral
+	@domain type+={fact}
+	@property controls+=pickFinal({elementoVazio2})
+	@property tag={acessoFilho}
+	@generator base=pickOne({factoryProperties base})
+@end
+
+@blueprint TestFactory_pickFinal:TestFactory_Ancestral
+	@domain type+={pickfinal}
+	@property factoryObj=pickFinal({factoryProperties fact})
+	@property tag={acessoLista}
+@end
+
+@blueprint TestFactory_elementoVazio1:test
+	@domain type+={elementoVazio1}
+@end
+
+@blueprint TestFactory_elementoVazio2:test
+	@domain type+={elementoVazio2}
+@end
+
+@blueprint TestFactory_elementoVazio3:test
+	@domain type+={elementoVazio3}
+@end
+
+@blueprint testfilho1:test
+	@domain type+={testefilho}
+	@property fixoPai=$owner.fixo
+	@property name='Filho1'
+	@property valorFilho=50
+@end
+
+@blueprint testfilho2:test
+	@domain type+={testefilho}
+	@property fixoPai=$owner.fixo
+	@property name='Filho2'
+	@property valorFilho=50
+@end
+
+@factory testfilhoFactory:test
+	@domain type+={factory testefilho}
+	@property valorFactory=80
+	@generator base=pickOne({testefilho !factory})
+@end
+
+@blueprint testGP1:test
+	@domain type+={gp}
+	@property valor=rand(1,10)
+@end
+
+@blueprint testLeaf:test
+	@domain type+={testaleaf}
+	@property name='testando leaf'
+@end
+
+@blueprint testMirrorIdenticoFilho:test
+	@domain type+={mirrorIdentico filho}
+	@property filhoObj=pickFinal({mirrorIdentico neto},valorNeto3=rand(1,100))
+	@property randomValueFilho=rand(1,100)
+	@object neto=$this.filhoObj
+	@replicate neto=1
+	@childproperty neto.valorNeto2=rand(1,100)
+@end
+
+@blueprint testMirrorIdenticoNeto:test
+	@domain type+={mirrorIdentico neto}
+	@property valorNeto1=rand(1,100)
+@end
+
+@blueprint testMirrorIdenticoPai:test
+	@domain type+={mirrorIdentico pai}
+	@property filhoObj=pickFinal({mirrorIdentico filho})
+	@object filho=$this.filhoObj
+	@replicate filho=2
+@end
+
+@blueprint testOneEachFilhos:test
+	@domain type+={filho oneeach}
+	@property filho=pickFinal($this.filhoTag)
+	@property filhoTag={testfilho1}
+@end
+
+@blueprint testOneEachFilho0:testOneEachFilhos
+	@domain type+={f1}
+	@property valorFilho='filho'
+	@property valorPai='erro1'
+@end
+
+@blueprint testOneEachFilho1:testOneEachFilhos
+	@domain type+={f2}
+	@property valorFilho='filho'
+	@property valorPai='erro2'
+@end
+
+@blueprint testOneEachPai:test
+	@domain type+={oneeach pai}
+	@property valorPai='pai'
+	@replicate filhos=oneForEach({filho oneeach leaf})
+	@childproperty filhos.filhoTag={testfilho2}
+	@childproperty filhos.valorPai=$this.valorPai
+	@childproperty filhos.valorTeste='teste'
+@end
+
+@blueprint testParamList:test
+	@domain type+={testParamList}
+	@property value={a b c teste}
+@end
+
+@blueprint testReplicate1:test
+	@domain type+={testreplicate1}
+	@property valor=1
+@end
+
+@blueprint testReplicate2:test
+	@domain type+={testreplicate2}
+	@property valor=2
+@end
+
+@blueprint testReplicate3:test
+	@domain type+={testreplicate3}
+	@property valor=3
+@end
+
+@blueprint testReplicateComponent:test
+	@domain type+={replicate}
+	@property components+={AIComponent guncomponent HealthComponent}
+	@property valorFilho='filho'
+	@property valorPai='erro2'
+	@replicate components=$this.components
+@end
+
+@blueprint testReplicateLista:test
+	@domain type+={testreplicatelista}
+	@replicate testes={testreplicate1 testreplicate2 testreplicate3}
+@end
+
+@blueprint testSomaPai:test
+	@domain type+={soma}
+	@property valorSoma=1
+	@validate checkNull=isNotNull($this.valor)
+@end
+
+@blueprint testSomaFilho:testSomaPai
+	@property valorSoma+=2.5
+	@validate checkNull=isNotNull($this.valor)
+@end
+
+@blueprint testValidator:test
+	@domain type+={testevalidate}
+	@property valor=1
+	@validate checkEquals=isEquals($this.valor,1)
+	@validate checkNotNull=isNotNull($this.valor)
+	@validate checkNull=isNull($this.xpto)
+	@validate checkTrue=isTrue($this.valor)
+@end
+
+@blueprint testValues:test
+	@domain type+={testValues}
+	@property paramsTags={filho}
+	@replicate params=tagList($this.paramsTags,{teste base gp leaf})
+	@childproperty params[filho].val1=$this.val1
+	@childproperty params[filho].val2=$this.val2
+	@childproperty params[filho].val3=$this.val3
+@end
+
+@blueprint trash:testBase
+	@domain type+={trash notready}
+@end
+
+@blueprint characterTest:trash
+	@domain type+={character test}
+	@property components+={RenderComponent AIComponent}
+	@property name='Basic Character Teste'
+@end
+
+@blueprint goal:trash
+	@domain type+={goal}
+	@property name='Basic Goal'
+	@goal defeat=false
+	@goal victory=false
+@end
+
+@blueprint killBossGoal:goal
+	@domain type+={combat boss ready}
+	@property name='Kill Boss'
+	@replicate boss=rand($minBoss,$maxBoss)
+	@goal victory=if(existsAlive({enemy npc boss final}),false,true)
+	@spawn boss=pickOne(blueprint enemy npc boss)
+@end
+
+@blueprint protectVIPGoal:goal
+	@domain type+={combat protect ready}
+	@property name='Protect VIPs'
+	@replicate vips=rand($minVips,$maxVips)
+	@goal defeat=if(existsAlive({ally npc vip final}),false,true)
+	@spawn vips=pickOne(blueprint ally npc vip)
+@end
+
+@blueprint visual:testBase
+	@domain type+={visual}
+@end
+
+@blueprint Material:visual
+	@domain type+={textureMat material}
+	@property materialType=enumValue({materialTypeEnum light})
+@end
+
+@blueprint MaterialGlass:Material
+	@domain type+={glass}
+	@property name='Glass'
+@end
+
+@blueprint MaterialNone:Material
+	@domain type+={none}
+	@property name='none'
+@end
+
+@blueprint mesh:visual
+	@domain type+={mesh}
+	@property hullMaker=pickSingle({convex hullmaker leaf})
+	@property materialType=pickSingle(textureMat material $this#material.type)
+	@material type={none}
+@end
+
+@blueprint partialMesh:mesh
+	@domain type+={partial}
+@end
+
+@blueprint meshPrimitive:partialMesh
+	@domain type+={primitive}
+@end
+
+@blueprint meshBox:meshPrimitive
+	@domain type+={box goalArrow}
+	@property objPonto=pickSingle({ponto})
+	@property pointList={ponto}
+	@property qtdPonto=8
+	@property width=10
+	@property depth=10
+	@property height=10
+	@object ponto=$this.objPonto
+	@replicate ponto=$this.qtdPonto
+	@nodetype ponto=enumValue({merge subnodetype})
+	@position ponto.x=if(mod($index,$this.qtdPonto/2)<$this.qtdPonto/4,$this.width/2,-$this.width/2)
+	@position ponto.y=if(isTopQuadrant($index)==1,$this.height/2,-$this.height/2)
+	@position ponto.z=if($index>=$this.qtdPonto/2,$this.depth/2,-$this.depth/2)
+	@comment description='retangulo 3d generico...'
+@end
+
+@blueprint meshCilindro:meshPrimitive
+	@domain type+={cilindro}
+	@property objCirculo=pickFinal({mesh circulo leaf},radius=$this.radius,qtdPontos=5)
+	@property pointList={circulo}
+	@property qtdCirculos=2
+	@property radius=10
+	@object circulo=$this.objCirculo
+	@replicate circulo=$this.qtdCirculos
+	@iterator circulo.pos.final=$this.depth/2
+	@iterator circulo.pos.initial=-$this.depth/2
+	@nodetype circulo=enumValue({merge subnodetype})
+	@orientation circulo.x=0
+	@orientation circulo.y=0
+	@orientation circulo.z=0
+	@position circulo.x=0
+	@position circulo.y=0
+	@position circulo.z=$pos
+@end
+
+@blueprint meshFunctions:meshPrimitive
+	@domain type+={functions}
+@end
+
+@blueprint circulo:meshFunctions
+	@domain type+={circulo}
+	@property objPonto=pickSingle({ponto})
+	@property orientationX=0
+	@property orientationY=0
+	@property orientationZ=0
+	@property pointList={ponto}
+	@property qtdPontos=rand(10,20)
+	@property radius=$this.height
+	@object ponto=$this.objPonto
+	@replicate ponto=$this.qtdPontos
+	@iterator ponto.angle.final=360
+	@iterator ponto.angle.initial=0
+	@orientation ponto.x=$angle
+	@orientation ponto.y=0
+	@orientation ponto.z=0
+	@position ponto.radius=$this.radius
+	@comment description='Cria um circulo...'
+@end
+
+@blueprint lineFunctions:meshFunctions
+	@domain type+={line}
+	@property difX=($this.p1X-$this.p0X)/$this.qtdPts
+	@property difY=($this.p1Y-$this.p0Y)/$this.qtdPts
+	@property difZ=($this.p1Z-$this.p0Z)/$this.qtdPts
+	@property maiorDif=absMaior($this.difX,$this.difY,$this.difZ)
+	@property midPoint=round(randf($this.qtdPts/4,$this.qtdPts-$this.qtdPts/4))
+	@property objPonto=pickSingle({ponto})
+	@property p0X=0
+	@property p0Y=0
+	@property p0Z=0
+	@property p1X=0
+	@property p1Y=0
+	@property p1Z=0
+	@property pointList={ponto}
+	@property ptsDepois=$this.qtdPts-$this.midPoint
+	@property qtdPts=rand(5,20)
+	@object ponto=$this.objPonto
+	@replicate ponto=$this.qtdPts+1
+	@nodetype ponto=enumValue({merge subnodetype})
+	@position ponto.x=$this.p0X+$this.difX*$index
+	@position ponto.y=$this.p0Y+$this.difY*$index
+	@position ponto.z=$this.p0Z+$this.difZ*$index
+	@comment description='cria uma linha do ponto A ao ponto B, preencher as propriedadees p0 e p1'
+@end
+
+@blueprint ponto:meshPrimitive
+	@domain type+={ponto}
+	@property depth=1
+	@property height=1
+	@property width=1
+@end
+
+@blueprint testMesh1:meshPrimitive
+	@domain type+={testMesh1}
+	@mesh subMesh=addMesh({mesh box leaf},posX=0,posY=0,posZ=0,merge=1,orientX=0,orientZ=0,orientX=0,replicate=1,radius=0)
+	@mesh mesh3=addMesh({mesh box leaf},posX=2,posY=0,posZ=0,merge=0,orientX=0,sizeX=1,sizeY=2,sizeZ=3,orientZ=0,orientX=0,replicate=1,radius=0)
+@end
+

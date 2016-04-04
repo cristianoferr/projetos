@@ -1,0 +1,153 @@
+FUTURO:
+
+- navegar por projetos públicos
+
+- na tela de projeto, colocar estatísticas ao invés de resumos.
+
+- gerenciar versões
+    - adicionar um "planejado para" no artefato, onde o usuário pode definir a versão na qual aquele artefato será entregue/faz parte
+    - gerar um histórico do que foi feito em cada versão
+    - gerar um diff entre versões para definir o que mudou
+   
+- logar ações do usuário, colocando o que foi feito e guardando como era antes, para poder desfazer caso necessário
+
+- usar icones para prioridades: uma barra no fundo: baixa prioridade e assim por diante
+
+- manter os widgets em algum lugar do sistema, e criar uma interface que permita que o usuário adicione widgets
+
+- implementar o slider de tarefa (a tela onde o usuário pode mover o status de um lado para o outro), listando todas as tarefas a partir de um entregável raiz.
+
+- mudar o menu lateral para mostrar os artefatos ao invés de só as entidades
+
+-------------------------------------
+
+
+A FAZER:
+
+
+- definir hints para os campos da propriedade
+
+
+- dividir a entidade em seções lógicas: banco, classe, geral
+
+- simplificar status
+
+- criar um programa que "compile" o código php, diminuindo a quantidade arquivos em uso, tanto php como css e js.
+
+- Permitir convidar usuários a partir da tela do projeto
+
+- Entregavel: Adicionar um % de completude de cada entregável, considerando os seus filhos.  
+
+- Grupos de usuários
+
+- mudar url amigavel: usar o cod_projeto na url ao inves do id_projeto, ficando o nome do projeto na url
+
+- Ao exportar o sql, perguntar ao usuário qual o entregável raiz que deve ser considerado... com essa informação só exportar a partir daquele entregável
+
+- EntidadeController: implementar filtro entregavelRaiz em "consultaEntidadesProjeto($id_projeto, $id_entregavel_raiz = null)"
+- adicionar versão ao projeto
+
+- a tarefa só fica disponível para ser feita caso o pré-requisito esteja ok
+
+- mostrar a noficação de convite de entrar no projeto para o usuário
+
+- Criar uma seção onde o usuário possa documentar o que é feito (knowledge base por projeto)
+- Permitir que o usuário adicione artigos nos itens (como tarefa, projeto, entidade, etc).
+
+- Criar uma tela com os totais HH e $
+    - Usar barra de progresso para esse modulo
+    - Criar widgets para essa tela
+
+- Comentários nos artefatos (elementos)
+    -permitir reply aos comentários
+
+-------------------------------------
+
+NECESS�RIO PARA LAN�AR:
+
+- linhas do diagrama funcionando corretamente (mobile tamb�m)
+
+- diagrama de classes: extends, implements, etc.	
+
+-------------------------------------
+
+
+SENDO FEITO:
+
+
+- Diagramas: Desenhar os diagramas
+    - corrigindo o diagrama: mobile e web
+    -wbs:
+        -aumentar a classe componente_model, permitindo encadear componentes em angulos, como: pai,filhos,anterior,proximo
+            - a idéia é que a partir disso se gere o desenho final
+            - criar metodos que determinam a largura e a altura em unidades
+    - falta corrigir as linhas
+
+
+FEITO:
+- defini��o de alguns testes ab para engajar os usu�rio
+    - criado abtest para ver qual frase "registrar agora" é melhor... teste inutil...
+
+- testar a funcionalidade das fun��es/propriedades: ver se est� ok.
+    - função sendo incluida
+    - propriedade sendo incluida
+
+- definir o texto da pagina inicial
+
+
+- verificar os pap�is dos usu�rios
+	- permitir definir papeis no projeto
+  -- DESATIVADO POR HORA: ATIVAR QUANDO POSSIVEL
+
+- Tela inicial definida para guest e para usu�rio logado
+
+- hh e $ não estáo sendo incluidos em tarefa e entregavel
+
+- telas secund�rias: sobre n�s, etc
+    - lógica implementada, falta definir o texto
+
+- fluxo envolvendo resetar senhar do usuário, incluindo enviar email, gerar ticket, etc
+
+- integrar o feedback
+    - por hora tá bom usando o getbarometer
+
+- subtitulo do site <title> pegando a partir da página atual... aproveitando que já tenho essa informação.
+
+- exportar os dados
+    - dados sendo exportados
+
+- criar uma forma para gerenciar os menus, adicionando links para os artigos
+    - links a partir do knowledge base... hardcoded por hora
+
+- criar testes unitários para cada módulo
+    - criado a lógica que permite gerar testes unitários por módulo
+
+- login integrado com google
+
+- simplificar urgencia e complexidade para: baixa, media, alta
+- substituir a traducao de media para medium
+
+- Combo de entregaveis hierarquico
+
+- Corrigir a codificação da fonte quando está em português
+
+- implementar ab testing
+    - gerenciamento implementado
+    - implementado tipo abtest
+    - implementado funções para determinar variações ativas para o usuário em questão
+    - implementado contador da variação
+    - implementado redirecionador de link: "/redir/<codigo abtest>"
+
+- criado uma lingua "lorem ipsum" que gera textos nesse estilo.
+
+- adicionar pré-requisitos à tarefa
+
+- mudar a lógica dos "artigos", ao inves de criar um artigo_local, o artigo é dado a opção de lingua, 
+- o usuário então seleciona a língua e o artigo só aparece na língua selecionada.
+
+-exportar a estrutura
+
+- Simplificar e unificar status tarefa e entregavel: A fazer, sendo feito, feito, entregue, cancelado, postergado
+ -- não foi exatamente feito... foi melhorado e adicionei percentual de completude no status
+
+- Criar um tipo de input  que quando selecionado, pergunta a qual entidade ele se refere.

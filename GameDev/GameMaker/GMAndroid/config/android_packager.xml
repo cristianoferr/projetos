@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This script takes a already generated game and generates its apk 
+Author: Cristiano  09/01/2015 
+
+- Também atualizar runBuilder com novas jars
+-->
+
+<project name="android_classpath" default="-pre-build">
+	<property name="generatedGameAssets" location="../GMAssets/assets"/>
+	<property name="build" location="bin/build"/>
+	<property name="libPath" location="../../lib"/>
+	<property name="gameAssetsPath" location="../GMAssets"/>
+	
+	<target name="checkGameGenerated">
+		<available file="${generatedGameAssets}/gen/${game.properties}" property="game.generated"/>
+		<fail unless="game.generated" message="${game.properties} not found."/>
+		<property file="${generatedGameAssets}/gen/${game.properties}" />
+		<echo>checkGameGenerated... GameTitle is: ${gameTitle}</echo>
+	</target>
+		  
+	<target name="preparePaths">
+		<antcall target="geraGMAssets"/>
+		<antcall target="updateManifest"/>
+	</target>
+	
+	<target name="-pre-compile">
+		<echo>***** -pre-compile: project.all.jars.path="${toString:project.all.jars.path}"</echo>
+		<path id="project.all.jars.path">
+			<pathelement location="${libPath}/jmonkey/jbullet.jar"/>
+			<pathelement location="${libPath}/jmonkey/jme3-android-3.1.0-snapshot-github.jar"/>
+			<pathelement location="${libPath}/jmonkey/jme3-core-3.1.0-snapshot-github.jar"/>
+			<pathelement location="${libPath}/jmonkey/jme3-effects-3.1.0-snapshot-github.jar"/>
+			<pathelement location="${libPath}/jmonkey/jme3-jbullet-3.1.0-snapshot-github.jar"/>
+			<pathelement location="${libPath}/jmonkey/jme3-jogg-3.1.0-snapshot-github.jar"/>
+			<pathelement location="${libPath}/jmonkey/jme3-jogl-3.1.0-snapshot-github.jar"/>
+			<pathelement location="${libPath}/jmonkey/jme3-plugins-3.1.0-snapshot-github.jar"/>
+			<pathelement location="${libPath}/jmonkey/libs/j-ogg-all-1.0.0.jar"/>
+			<pathelement location="${libPath}/json/json-simple-1.1.1.jar"/>
+			<pathelement location="${libPath}/jmonkey/libs/vecmath-1.3.1.jar"/>
+			<pathelement location="${libPath}/jmonkey/plugins/jME3-ai.jar"/>
+			
+			<pathelement location="${libPath}/jmonkey/jme3-terrain-3.1.0-snapshot-github.jar"/>
+			<pathelement location="${libPath}/jmonkey/jme3-niftygui-3.1.0-snapshot-github.jar"/>
+			<pathelement location="${libPath}/jmonkey/libs/nifty-1.3.3.jar"/>
+			<pathelement location="${libPath}/jmonkey/libs/nifty-default-controls-1.3.3.jar"/>
+			<pathelement location="${libPath}/jmonkey/libs/nifty-style-black-1.3.3.jar"/>
+			<pathelement location="${libPath}/jmonkey/libs/xpp3-1.1.4c_Android.jar"/>
+			<pathelement location="${libPath}/jmonkey/libs/eventbus-1.4.jar"/>
+			<pathelement location="${libPath}/guava/guava-18.0.jar"/>
+
+			<pathelement location="${dist}/GMAssets_player.jar"/>
+			<pathelement location="${dist}/Common.jar"/>
+			<pathelement location="${dist}/BluePrintOutput.jar"/>
+			<pathelement location="${dist}/GMAssets.jar"/>
+			<pathelement location="${dist}/GMPlayer.jar"/>
+			<pathelement location="${dist}/JME3Utils.jar"/>
+			<pathelement location="${dist}/JMonkeyTonegod.jar"/>
+			<pathelement location="${dist}/NativeLibs.jar"/>
+		</path>
+	</target>
+	
+	<target name="-pre-build" depends="gameBuilder,projectJars,preparePaths">
+		
+		<!--<path id="project.all.jars.path">
+            <path path="${toString:projectJarsPath}"/>
+		</path>-->
+	
+		
+		<!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+	</target>
+	
+	
+	<target name="updateManifest" depends="checkGameGenerated">
+	<echo>Updating Manifest... GameTitle is: ${gameTitle}</echo>
+		<copy file="config/AndroidManifestTemplate.xml" tofile="AndroidManifest.xml" overwrite="true" encoding="utf-8">
+		   <filterset>
+			  <filter token="CONFIG.APP_NAME" value="${gameTitle}" />
+		   </filterset>
+		</copy>
+		<delete dir="gen"/>
+		<mkdir dir="gen/com/cristiano/game/${gameTitle}"/>
+		<copy file="config/genFolder/BuildConfig.java" tofile="gen/com/cristiano/game/${gameTitle}/BuildConfig.java" overwrite="true" encoding="utf-8">
+		   <filterset>
+			  <filter token="CONFIG.APP_NAME" value="${gameTitle}" />
+		   </filterset>
+		</copy>
+		<copy file="config/genFolder/R.java" tofile="gen/com/cristiano/game/${gameTitle}/R.java" overwrite="true" encoding="utf-8">
+		   <filterset>
+			  <filter token="CONFIG.APP_NAME" value="${gameTitle}" />
+		   </filterset>
+		</copy>
+		<copy file="config/genFolder/GameActivity.java" tofile="src/com/cristiano/android/GameActivity.java" overwrite="true" encoding="utf-8">
+		   <filterset>
+			  <filter token="CONFIG.APP_NAME" value="${gameTitle}" />
+		   </filterset>
+		</copy>
+	</target>
+	  
+	<target name="installDebug">
+	<property file="${generatedGameAssets}/gen/${game.properties}" />
+		<exec dir="." executable="adb">
+			<arg line='-d install bin/GameActivity-debug.apk'/> 
+		</exec>
+	</target>
+	
+	<target name="installRelease">
+		<property file="${generatedGameAssets}/gen/${game.properties}" />
+		<exec dir="." executable="adb">
+			<arg line='-d install bin/GameActivity-release.apk'/> 
+		</exec>
+	</target>
+
+</project>

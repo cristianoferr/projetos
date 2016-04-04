@@ -1,0 +1,38 @@
+http://www.gradle.org/docs/current/userguide/dependency_management.html:
+51.4.4
+Criar um projeto e gerar os jars dos projetos de lá, especificando o caminho relativo das jar-libs
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+ 
+version = '1.0.'+ getDate()
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+ 
+//create a single Jar with all dependencies
+task fatJar(type: Jar) {
+	manifest {
+        attributes 'Implementation-Title': 'BluePrintOutput',  
+        	'Implementation-Version': version
+    }
+    baseName = project.name 
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+ 
+//Get dependencies from Maven central repository
+repositories {
+    mavenCentral()
+}
+ 
+//Project dependencies
+dependencies {
+	//compile 'ch.qos.logback:logback-classic:1.1.2'
+	compile project('Common')
+}
+
+def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMddHHmm')
+    return formattedDate
+}

@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://findbugs.sourceforge.net/xsl/default.xsl"?>
+
+<BugCollection version="1.3.9" sequence="0" timestamp="1333979586530" analysisTimestamp="1334176594450" release="">
+  <Project>
+    <Jar>D:\Java\workspaces\workdspace\GenProg\bin</Jar>
+    <AuxClasspathEntry>D:\DOCUME~1\cmm4\CONFIG~1\Temp\findbugs6292950433543734272.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>D:\DOCUME~1\cmm4\CONFIG~1\Temp\findbugs8735549471459727853.jar</AuxClasspathEntry>
+    <SrcDir>D:\Java\workspaces\workdspace\GenProg\src</SrcDir>
+    <WrkDir>D:\Java\workspaces\workdspace\GenProg\target</WrkDir>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" instanceHash="45b95355a75e43ea78505a0d27124793" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to pt in cristiano.GenProg.AppletGP.mousePressed(MouseEvent)</LongMessage>
+    <Class classname="cristiano.GenProg.AppletGP" primary="true">
+      <SourceLine classname="cristiano.GenProg.AppletGP" start="31" end="333" sourcefile="AppletGP.java" sourcepath="cristiano/GenProg/AppletGP.java" relSourcepath="cristiano\GenProg\AppletGP.java">
+        <Message>At AppletGP.java:[lines 31-333]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.AppletGP</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.AppletGP" name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.AppletGP" start="78" end="81" startBytecode="0" endBytecode="3" sourcefile="AppletGP.java" sourcepath="cristiano/GenProg/AppletGP.java" relSourcepath="cristiano\GenProg\AppletGP.java"/>
+      <Message>In method cristiano.GenProg.AppletGP.mousePressed(MouseEvent)</Message>
+    </Method>
+    <LocalVariable name="pt" register="2" pc="5" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named pt</Message>
+    </LocalVariable>
+    <SourceLine classname="cristiano.GenProg.AppletGP" primary="true" start="78" end="78" startBytecode="4" endBytecode="4" sourcefile="AppletGP.java" sourcepath="cristiano/GenProg/AppletGP.java" relSourcepath="cristiano\GenProg\AppletGP.java">
+      <Message>At AppletGP.java:[line 78]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="pt"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="3" abbrev="Se" category="BAD_PRACTICE" instanceHash="5f45f141fdb1e8bd95a4c797d2a0f99a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Non-transient non-serializable instance field in serializable class</ShortMessage>
+    <LongMessage>Class cristiano.GenProg.AppletGP defines non-transient non-serializable instance field img</LongMessage>
+    <Class classname="cristiano.GenProg.AppletGP" primary="true">
+      <SourceLine classname="cristiano.GenProg.AppletGP" start="31" end="333" sourcefile="AppletGP.java" sourcepath="cristiano/GenProg/AppletGP.java" relSourcepath="cristiano\GenProg\AppletGP.java">
+        <Message>At AppletGP.java:[lines 31-333]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.AppletGP</Message>
+    </Class>
+    <Field classname="cristiano.GenProg.AppletGP" name="img" signature="Ljava/awt/image/BufferedImage;" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.AppletGP" sourcefile="AppletGP.java" sourcepath="cristiano/GenProg/AppletGP.java" relSourcepath="cristiano\GenProg\AppletGP.java">
+        <Message>In AppletGP.java</Message>
+      </SourceLine>
+      <Message>Field cristiano.GenProg.AppletGP.img</Message>
+    </Field>
+    <SourceLine classname="cristiano.GenProg.AppletGP" sourcefile="AppletGP.java" sourcepath="cristiano/GenProg/AppletGP.java" relSourcepath="cristiano\GenProg\AppletGP.java" synthetic="true">
+      <Message>In AppletGP.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="3" abbrev="UPM" category="PERFORMANCE" instanceHash="c01ca0014d7adcff0cc90c1c6d4bc1ad" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Private method is never called</ShortMessage>
+    <LongMessage>Private method cristiano.GenProg.AppletGP.hasData(int) is never called</LongMessage>
+    <Class classname="cristiano.GenProg.AppletGP" primary="true">
+      <SourceLine classname="cristiano.GenProg.AppletGP" start="31" end="333" sourcefile="AppletGP.java" sourcepath="cristiano/GenProg/AppletGP.java" relSourcepath="cristiano\GenProg\AppletGP.java">
+        <Message>At AppletGP.java:[lines 31-333]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.AppletGP</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.AppletGP" name="hasData" signature="(I)Z" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.AppletGP" start="212" end="213" startBytecode="0" endBytecode="74" sourcefile="AppletGP.java" sourcepath="cristiano/GenProg/AppletGP.java" relSourcepath="cristiano\GenProg\AppletGP.java"/>
+      <Message>In method cristiano.GenProg.AppletGP.hasData(int)</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.AppletGP" start="212" end="213" startBytecode="0" endBytecode="74" sourcefile="AppletGP.java" sourcepath="cristiano/GenProg/AppletGP.java" relSourcepath="cristiano\GenProg\AppletGP.java" synthetic="true">
+      <Message>At AppletGP.java:[lines 212-213]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="3" abbrev="UPM" category="PERFORMANCE" instanceHash="506ff9633aca0ea0296bc733ebebdc30" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Private method is never called</ShortMessage>
+    <LongMessage>Private method cristiano.GenProg.AppletGP.printThreadName(String) is never called</LongMessage>
+    <Class classname="cristiano.GenProg.AppletGP" primary="true">
+      <SourceLine classname="cristiano.GenProg.AppletGP" start="31" end="333" sourcefile="AppletGP.java" sourcepath="cristiano/GenProg/AppletGP.java" relSourcepath="cristiano\GenProg\AppletGP.java">
+        <Message>At AppletGP.java:[lines 31-333]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.AppletGP</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.AppletGP" name="printThreadName" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.AppletGP" start="66" end="68" startBytecode="0" endBytecode="101" sourcefile="AppletGP.java" sourcepath="cristiano/GenProg/AppletGP.java" relSourcepath="cristiano\GenProg\AppletGP.java"/>
+      <Message>In method cristiano.GenProg.AppletGP.printThreadName(String)</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.AppletGP" start="66" end="68" startBytecode="0" endBytecode="101" sourcefile="AppletGP.java" sourcepath="cristiano/GenProg/AppletGP.java" relSourcepath="cristiano\GenProg\AppletGP.java" synthetic="true">
+      <Message>At AppletGP.java:[lines 66-68]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_NEXTINT_VIA_NEXTDOUBLE" priority="2" abbrev="Dm" category="PERFORMANCE" instanceHash="69a1db4f05e92766765ad9dfecf94f4c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Use the nextInt method of Random rather than nextDouble to generate a random integer</ShortMessage>
+    <LongMessage>Method cristiano.GenProg.GeneticProgramming.endTurn() uses the nextDouble method of Random to generate a random integer; using nextInt is more efficient</LongMessage>
+    <Class classname="cristiano.GenProg.GeneticProgramming" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="40" end="626" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+        <Message>At GeneticProgramming.java:[lines 40-626]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.GeneticProgramming</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.GeneticProgramming" name="endTurn" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="258" end="302" startBytecode="0" endBytecode="569" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java"/>
+      <Message>In method cristiano.GenProg.GeneticProgramming.endTurn()</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.GeneticProgramming" primary="true" start="283" end="283" startBytecode="112" endBytecode="112" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+      <Message>At GeneticProgramming.java:[line 283]</Message>
+    </SourceLine>
+    <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="285" end="285" startBytecode="138" endBytecode="138" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at GeneticProgramming.java:[line 285]</Message>
+    </SourceLine>
+    <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="287" end="287" startBytecode="158" endBytecode="158" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at GeneticProgramming.java:[line 287]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_NEXTINT_VIA_NEXTDOUBLE" priority="2" abbrev="Dm" category="PERFORMANCE" instanceHash="8fa68003e3b8562454a6fa9d8dfe05c1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Use the nextInt method of Random rather than nextDouble to generate a random integer</ShortMessage>
+    <LongMessage>Method cristiano.GenProg.GeneticProgramming.generateRandomNode() uses the nextDouble method of Random to generate a random integer; using nextInt is more efficient</LongMessage>
+    <Class classname="cristiano.GenProg.GeneticProgramming" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="40" end="626" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+        <Message>At GeneticProgramming.java:[lines 40-626]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.GeneticProgramming</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.GeneticProgramming" name="generateRandomNode" signature="()Lcristiano/GenProg/Node/Node;" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="585" end="600" startBytecode="0" endBytecode="115" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java"/>
+      <Message>In method cristiano.GenProg.GeneticProgramming.generateRandomNode()</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.GeneticProgramming" primary="true" start="585" end="585" startBytecode="12" endBytecode="12" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+      <Message>At GeneticProgramming.java:[line 585]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_NEXTINT_VIA_NEXTDOUBLE" priority="2" abbrev="Dm" category="PERFORMANCE" instanceHash="6657a3b5ee90d4ede8e3c274e5bc3925" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Use the nextInt method of Random rather than nextDouble to generate a random integer</ShortMessage>
+    <LongMessage>Method cristiano.GenProg.GeneticProgramming.generateRandomNode(Node, Node, String) uses the nextDouble method of Random to generate a random integer; using nextInt is more efficient</LongMessage>
+    <Class classname="cristiano.GenProg.GeneticProgramming" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="40" end="626" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+        <Message>At GeneticProgramming.java:[lines 40-626]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.GeneticProgramming</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.GeneticProgramming" name="generateRandomNode" signature="(Lcristiano/GenProg/Node/Node;Lcristiano/GenProg/Node/Node;Ljava/lang/String;)Lcristiano/GenProg/Node/Node;" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="527" end="577" startBytecode="0" endBytecode="626" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java"/>
+      <Message>In method cristiano.GenProg.GeneticProgramming.generateRandomNode(Node, Node, String)</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.GeneticProgramming" primary="true" start="529" end="529" startBytecode="19" endBytecode="19" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+      <Message>At GeneticProgramming.java:[line 529]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_NEXTINT_VIA_NEXTDOUBLE" priority="2" abbrev="Dm" category="PERFORMANCE" instanceHash="af12cf85b060a8dc44f98b5cb0623b07" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Use the nextInt method of Random rather than nextDouble to generate a random integer</ShortMessage>
+    <LongMessage>Method cristiano.GenProg.GeneticProgramming.mutateNode(Node) uses the nextDouble method of Random to generate a random integer; using nextInt is more efficient</LongMessage>
+    <Class classname="cristiano.GenProg.GeneticProgramming" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="40" end="626" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+        <Message>At GeneticProgramming.java:[lines 40-626]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.GeneticProgramming</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.GeneticProgramming" name="mutateNode" signature="(Lcristiano/GenProg/Node/Node;)Lcristiano/GenProg/Node/Node;" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="341" end="377" startBytecode="0" endBytecode="383" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java"/>
+      <Message>In method cristiano.GenProg.GeneticProgramming.mutateNode(Node)</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.GeneticProgramming" primary="true" start="354" end="354" startBytecode="75" endBytecode="75" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+      <Message>At GeneticProgramming.java:[line 354]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_STRINGS_WITH_EQ" priority="3" abbrev="ES" category="BAD_PRACTICE" instanceHash="8414381edd9373b099e3c53e90dda6f8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Comparison of String objects using == or !=</ShortMessage>
+    <LongMessage>Comparison of String objects using == or != in cristiano.GenProg.GeneticProgramming.printCodigoFonte() </LongMessage>
+    <Class classname="cristiano.GenProg.GeneticProgramming" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="40" end="626" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+        <Message>At GeneticProgramming.java:[lines 40-626]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.GeneticProgramming</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.GeneticProgramming" name="printCodigoFonte" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="136" end="140" startBytecode="0" endBytecode="23" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java"/>
+      <Message>In method cristiano.GenProg.GeneticProgramming.printCodigoFonte()</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="92" end="2973" sourcefile="String.java" sourcepath="java/lang/String.java">
+        <Message>At String.java:[lines 92-2973]</Message>
+      </SourceLine>
+      <Message>Actual type String</Message>
+    </Type>
+    <SourceLine classname="cristiano.GenProg.GeneticProgramming" primary="true" start="137" end="137" startBytecode="18" endBytecode="18" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+      <Message>At GeneticProgramming.java:[line 137]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_UNKNOWN" value="true"/>
+  </BugInstance>
+  <BugInstance type="FE_FLOATING_POINT_EQUALITY" priority="1" abbrev="FE" category="STYLE" instanceHash="5e32b3655f4a652a27cee518d31a0df9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Test for floating point equality</ShortMessage>
+    <LongMessage>Test for floating point equality in cristiano.GenProg.GeneticProgramming.calcFitnessSingle(int, double)</LongMessage>
+    <Class classname="cristiano.GenProg.GeneticProgramming" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="40" end="626" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+        <Message>At GeneticProgramming.java:[lines 40-626]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.GeneticProgramming</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.GeneticProgramming" name="calcFitnessSingle" signature="(ID)D" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="189" end="198" startBytecode="0" endBytecode="200" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java"/>
+      <Message>In method cristiano.GenProg.GeneticProgramming.calcFitnessSingle(int, double)</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.GeneticProgramming" primary="true" start="193" end="193" startBytecode="38" endBytecode="38" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+      <Message>At GeneticProgramming.java:[line 193]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="1" abbrev="NP" category="CORRECTNESS" instanceHash="70c890d0c173605c24604e77d0f5c5b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of nx in cristiano.GenProg.GeneticProgramming.mutateNodeFunction(Node, String)</LongMessage>
+    <Class classname="cristiano.GenProg.GeneticProgramming" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="40" end="626" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+        <Message>At GeneticProgramming.java:[lines 40-626]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.GeneticProgramming</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.GeneticProgramming" name="mutateNodeFunction" signature="(Lcristiano/GenProg/Node/Node;Ljava/lang/String;)Lcristiano/GenProg/Node/Node;" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="382" end="407" startBytecode="0" endBytecode="400" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java"/>
+      <Message>In method cristiano.GenProg.GeneticProgramming.mutateNodeFunction(Node, String)</Message>
+    </Method>
+    <LocalVariable name="nx" register="6" pc="120" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from nx</Message>
+    </LocalVariable>
+    <SourceLine classname="cristiano.GenProg.GeneticProgramming" primary="true" start="403" end="403" startBytecode="122" endBytecode="122" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at GeneticProgramming.java:[line 403]</Message>
+    </SourceLine>
+    <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="401" end="401" startBytecode="117" endBytecode="117" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at GeneticProgramming.java:[line 401]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" abbrev="SS" category="PERFORMANCE" instanceHash="614efa0e4e9eb6b8df3b3c6ba8c3e40e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field: should this field be static?</ShortMessage>
+    <LongMessage>Unread field: cristiano.GenProg.GeneticProgramming.GA_RANDOM_NODE_CHANCE; should this field be static?</LongMessage>
+    <Class classname="cristiano.GenProg.GeneticProgramming" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="40" end="626" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+        <Message>At GeneticProgramming.java:[lines 40-626]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.GeneticProgramming</Message>
+    </Class>
+    <Field classname="cristiano.GenProg.GeneticProgramming" name="GA_RANDOM_NODE_CHANCE" signature="D" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+        <Message>In GeneticProgramming.java</Message>
+      </SourceLine>
+      <Message>Field cristiano.GenProg.GeneticProgramming.GA_RANDOM_NODE_CHANCE</Message>
+    </Field>
+    <SourceLine classname="cristiano.GenProg.GeneticProgramming" primary="true" start="50" end="50" startBytecode="29" endBytecode="29" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+      <Message>At GeneticProgramming.java:[line 50]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE" instanceHash="85e56095c7b5efaae609b9d9717722d0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field cristiano.GenProg.Node.Node.count from instance method cristiano.GenProg.GeneticProgramming.endTurn()</LongMessage>
+    <Class classname="cristiano.GenProg.GeneticProgramming" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="40" end="626" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+        <Message>At GeneticProgramming.java:[lines 40-626]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.GeneticProgramming</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.GeneticProgramming" name="endTurn" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="258" end="302" startBytecode="0" endBytecode="569" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java"/>
+      <Message>In method cristiano.GenProg.GeneticProgramming.endTurn()</Message>
+    </Method>
+    <Field classname="cristiano.GenProg.Node.Node" name="count" signature="I" isStatic="true" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.Node" sourcefile="Node.java" sourcepath="cristiano/GenProg/Node/Node.java" relSourcepath="cristiano\GenProg\Node\Node.java">
+        <Message>In Node.java</Message>
+      </SourceLine>
+      <Message>Field cristiano.GenProg.Node.Node.count</Message>
+    </Field>
+    <SourceLine classname="cristiano.GenProg.GeneticProgramming" primary="true" start="258" end="258" startBytecode="1" endBytecode="1" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+      <Message>At GeneticProgramming.java:[line 258]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="3" abbrev="UPM" category="PERFORMANCE" instanceHash="326090927958aa82c4418cc98df62ca4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Private method is never called</ShortMessage>
+    <LongMessage>Private method cristiano.GenProg.GeneticProgramming.getCodeAtPos(int) is never called</LongMessage>
+    <Class classname="cristiano.GenProg.GeneticProgramming" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="40" end="626" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java">
+        <Message>At GeneticProgramming.java:[lines 40-626]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.GeneticProgramming</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.GeneticProgramming" name="getCodeAtPos" signature="(I)Lcristiano/GenProg/Node/Node;" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="514" end="517" startBytecode="0" endBytecode="119" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java"/>
+      <Message>In method cristiano.GenProg.GeneticProgramming.getCodeAtPos(int)</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.GeneticProgramming" start="514" end="517" startBytecode="0" endBytecode="119" sourcefile="GeneticProgramming.java" sourcepath="cristiano/GenProg/GeneticProgramming.java" relSourcepath="cristiano\GenProg\GeneticProgramming.java" synthetic="true">
+      <Message>At GeneticProgramming.java:[lines 514-517]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_FP_NUMBER_CTOR" priority="3" abbrev="Bx" category="PERFORMANCE" instanceHash="6733be02cd1b6beefe15a6ac1a0e41ac" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient floating-point Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>Method cristiano.GenProg.Node.AI.NodeNeuron.initWeights() invokes inefficient Double.valueOf(double) constructor; use NodeNeuron.java:[line 78] instead</LongMessage>
+    <Class classname="cristiano.GenProg.Node.AI.NodeNeuron" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.AI.NodeNeuron" start="23" end="97" sourcefile="NodeNeuron.java" sourcepath="cristiano/GenProg/Node/AI/NodeNeuron.java" relSourcepath="cristiano\GenProg\Node\AI\NodeNeuron.java">
+        <Message>At NodeNeuron.java:[lines 23-97]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.AI.NodeNeuron</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.AI.NodeNeuron" name="initWeights" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.AI.NodeNeuron" start="75" end="81" startBytecode="0" endBytecode="150" sourcefile="NodeNeuron.java" sourcepath="cristiano/GenProg/Node/AI/NodeNeuron.java" relSourcepath="cristiano\GenProg\Node\AI\NodeNeuron.java"/>
+      <Message>In method cristiano.GenProg.Node.AI.NodeNeuron.initWeights()</Message>
+    </Method>
+    <Method classname="java.lang.Double" name="&lt;init&gt;" signature="(D)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Double" start="550" end="552" startBytecode="0" endBytecode="41" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+      <Message>Called method new Double(double)</Message>
+    </Method>
+    <Method classname="java.lang.Double" name="valueOf" signature="(D)V" isStatic="false" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Double" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+      <Message>Should call Double.valueOf(double) instead</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.AI.NodeNeuron" primary="true" start="78" end="78" startBytecode="41" endBytecode="41" sourcefile="NodeNeuron.java" sourcepath="cristiano/GenProg/Node/AI/NodeNeuron.java" relSourcepath="cristiano\GenProg\Node\AI\NodeNeuron.java">
+      <Message>At NodeNeuron.java:[line 78]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_FP_NUMBER_CTOR" priority="3" abbrev="Bx" category="PERFORMANCE" instanceHash="9e90dcf68c5e61b628c94a09a043a055" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient floating-point Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>Method cristiano.GenProg.Node.AI.NodeNeuron.mutateNode() invokes inefficient Double.valueOf(double) constructor; use NodeNeuron.java:[line 58] instead</LongMessage>
+    <Class classname="cristiano.GenProg.Node.AI.NodeNeuron" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.AI.NodeNeuron" start="23" end="97" sourcefile="NodeNeuron.java" sourcepath="cristiano/GenProg/Node/AI/NodeNeuron.java" relSourcepath="cristiano\GenProg\Node\AI\NodeNeuron.java">
+        <Message>At NodeNeuron.java:[lines 23-97]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.AI.NodeNeuron</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.AI.NodeNeuron" name="mutateNode" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.AI.NodeNeuron" start="48" end="61" startBytecode="0" endBytecode="241" sourcefile="NodeNeuron.java" sourcepath="cristiano/GenProg/Node/AI/NodeNeuron.java" relSourcepath="cristiano\GenProg\Node\AI\NodeNeuron.java"/>
+      <Message>In method cristiano.GenProg.Node.AI.NodeNeuron.mutateNode()</Message>
+    </Method>
+    <Method classname="java.lang.Double" name="&lt;init&gt;" signature="(D)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Double" start="550" end="552" startBytecode="0" endBytecode="41" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+      <Message>Called method new Double(double)</Message>
+    </Method>
+    <Method classname="java.lang.Double" name="valueOf" signature="(D)V" isStatic="false" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Double" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+      <Message>Should call Double.valueOf(double) instead</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.AI.NodeNeuron" primary="true" start="58" end="58" startBytecode="94" endBytecode="94" sourcefile="NodeNeuron.java" sourcepath="cristiano/GenProg/Node/AI/NodeNeuron.java" relSourcepath="cristiano\GenProg\Node\AI\NodeNeuron.java">
+      <Message>At NodeNeuron.java:[line 58]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_FP_NUMBER_CTOR" priority="3" abbrev="Bx" category="PERFORMANCE" instanceHash="849299f7e786e651357e4e774faa6efc" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient floating-point Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>Method new cristiano.GenProg.Node.DadoNode(String, double) invokes inefficient Double.valueOf(double) constructor; use DadoNode.java:[line 63] instead</LongMessage>
+    <Class classname="cristiano.GenProg.Node.DadoNode" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="28" end="151" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+        <Message>At DadoNode.java:[lines 28-151]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.DadoNode</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.DadoNode" name="&lt;init&gt;" signature="(Ljava/lang/String;D)V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="62" end="65" startBytecode="0" endBytecode="129" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java"/>
+      <Message>In method new cristiano.GenProg.Node.DadoNode(String, double)</Message>
+    </Method>
+    <Method classname="java.lang.Double" name="&lt;init&gt;" signature="(D)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Double" start="550" end="552" startBytecode="0" endBytecode="41" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+      <Message>Called method new Double(double)</Message>
+    </Method>
+    <Method classname="java.lang.Double" name="valueOf" signature="(D)V" isStatic="false" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Double" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+      <Message>Should call Double.valueOf(double) instead</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.DadoNode" primary="true" start="63" end="63" startBytecode="27" endBytecode="27" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+      <Message>At DadoNode.java:[line 63]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_FP_NUMBER_CTOR" priority="3" abbrev="Bx" category="PERFORMANCE" instanceHash="1ed465f8b5fa80f216ddff91d80ebf86" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient floating-point Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>Method cristiano.GenProg.Node.DadoNode.setDouble(double) invokes inefficient Double.valueOf(double) constructor; use DadoNode.java:[line 143] instead</LongMessage>
+    <Class classname="cristiano.GenProg.Node.DadoNode" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="28" end="151" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+        <Message>At DadoNode.java:[lines 28-151]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.DadoNode</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.DadoNode" name="setDouble" signature="(D)V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="139" end="148" startBytecode="0" endBytecode="166" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java"/>
+      <Message>In method cristiano.GenProg.Node.DadoNode.setDouble(double)</Message>
+    </Method>
+    <Method classname="java.lang.Double" name="&lt;init&gt;" signature="(D)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Double" start="550" end="552" startBytecode="0" endBytecode="41" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+      <Message>Called method new Double(double)</Message>
+    </Method>
+    <Method classname="java.lang.Double" name="valueOf" signature="(D)V" isStatic="false" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Double" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+      <Message>Should call Double.valueOf(double) instead</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.DadoNode" primary="true" start="143" end="143" startBytecode="47" endBytecode="47" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+      <Message>At DadoNode.java:[line 143]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_FP_NUMBER_CTOR" priority="3" abbrev="Bx" category="PERFORMANCE" instanceHash="95e601c028220468ab062b904a93d41" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient floating-point Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>Method cristiano.GenProg.Node.DadoNode.setInt(int) invokes inefficient Double.valueOf(double) constructor; use DadoNode.java:[line 132] instead</LongMessage>
+    <Class classname="cristiano.GenProg.Node.DadoNode" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="28" end="151" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+        <Message>At DadoNode.java:[lines 28-151]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.DadoNode</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.DadoNode" name="setInt" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="128" end="137" startBytecode="0" endBytecode="166" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java"/>
+      <Message>In method cristiano.GenProg.Node.DadoNode.setInt(int)</Message>
+    </Method>
+    <Method classname="java.lang.Double" name="&lt;init&gt;" signature="(D)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Double" start="550" end="552" startBytecode="0" endBytecode="41" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+      <Message>Called method new Double(double)</Message>
+    </Method>
+    <Method classname="java.lang.Double" name="valueOf" signature="(D)V" isStatic="false" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Double" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+      <Message>Should call Double.valueOf(double) instead</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.DadoNode" primary="true" start="132" end="132" startBytecode="48" endBytecode="48" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+      <Message>At DadoNode.java:[line 132]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE" instanceHash="ee3e033f9f2bd2797dc61b890bd988a6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>Method new cristiano.GenProg.Node.DadoNode(int) invokes inefficient new Integer(int) constructor; use Integer.valueOf(int) instead</LongMessage>
+    <Class classname="cristiano.GenProg.Node.DadoNode" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="28" end="151" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+        <Message>At DadoNode.java:[lines 28-151]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.DadoNode</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.DadoNode" name="&lt;init&gt;" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="52" end="55" startBytecode="0" endBytecode="119" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java"/>
+      <Message>In method new cristiano.GenProg.Node.DadoNode(int)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method new Integer(int)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="false" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Should call Integer.valueOf(int) instead</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.DadoNode" primary="true" start="53" end="53" startBytecode="27" endBytecode="27" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+      <Message>At DadoNode.java:[line 53]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE" instanceHash="f0ed670b1c19a117a076877272297ce3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>Method new cristiano.GenProg.Node.DadoNode(String, int) invokes inefficient new Integer(int) constructor; use Integer.valueOf(int) instead</LongMessage>
+    <Class classname="cristiano.GenProg.Node.DadoNode" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="28" end="151" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+        <Message>At DadoNode.java:[lines 28-151]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.DadoNode</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.DadoNode" name="&lt;init&gt;" signature="(Ljava/lang/String;I)V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="47" end="50" startBytecode="0" endBytecode="129" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java"/>
+      <Message>In method new cristiano.GenProg.Node.DadoNode(String, int)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method new Integer(int)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="false" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Should call Integer.valueOf(int) instead</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.DadoNode" primary="true" start="48" end="48" startBytecode="27" endBytecode="27" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+      <Message>At DadoNode.java:[line 48]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE" instanceHash="5770afe8c29887cfa75d9e7b6371cf0d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>Method cristiano.GenProg.Node.DadoNode.setDouble(double) invokes inefficient new Integer(int) constructor; use Integer.valueOf(int) instead</LongMessage>
+    <Class classname="cristiano.GenProg.Node.DadoNode" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="28" end="151" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+        <Message>At DadoNode.java:[lines 28-151]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.DadoNode</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.DadoNode" name="setDouble" signature="(D)V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="139" end="148" startBytecode="0" endBytecode="166" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java"/>
+      <Message>In method cristiano.GenProg.Node.DadoNode.setDouble(double)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method new Integer(int)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="false" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Should call Integer.valueOf(int) instead</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.DadoNode" primary="true" start="146" end="146" startBytecode="73" endBytecode="73" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+      <Message>At DadoNode.java:[line 146]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" abbrev="Bx" category="PERFORMANCE" instanceHash="cd6e1818c0ff088559dd9503e674a887" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>Method cristiano.GenProg.Node.DadoNode.setInt(int) invokes inefficient new Integer(int) constructor; use Integer.valueOf(int) instead</LongMessage>
+    <Class classname="cristiano.GenProg.Node.DadoNode" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="28" end="151" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+        <Message>At DadoNode.java:[lines 28-151]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.DadoNode</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.DadoNode" name="setInt" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="128" end="137" startBytecode="0" endBytecode="166" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java"/>
+      <Message>In method cristiano.GenProg.Node.DadoNode.setInt(int)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="642" end="644" startBytecode="0" endBytecode="41" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method new Integer(int)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)V" isStatic="false" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Should call Integer.valueOf(int) instead</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.DadoNode" primary="true" start="135" end="135" startBytecode="73" endBytecode="73" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+      <Message>At DadoNode.java:[line 135]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE" instanceHash="39c8056423a10f452634dcaa9d228884" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient new String(String) constructor</ShortMessage>
+    <LongMessage>new cristiano.GenProg.Node.DadoNode(String) invokes inefficient new String(String) constructor</LongMessage>
+    <Class classname="cristiano.GenProg.Node.DadoNode" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="28" end="151" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+        <Message>At DadoNode.java:[lines 28-151]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.DadoNode</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.DadoNode" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="57" end="60" startBytecode="0" endBytecode="119" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java"/>
+      <Message>In method new cristiano.GenProg.Node.DadoNode(String)</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.DadoNode" primary="true" start="58" end="58" startBytecode="27" endBytecode="27" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+      <Message>At DadoNode.java:[line 58]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE" instanceHash="9fa8f6c709881e6091b5941d33155292" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient new String(String) constructor</ShortMessage>
+    <LongMessage>cristiano.GenProg.Node.DadoNode.setDouble(double) invokes inefficient new String(String) constructor</LongMessage>
+    <Class classname="cristiano.GenProg.Node.DadoNode" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="28" end="151" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+        <Message>At DadoNode.java:[lines 28-151]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.DadoNode</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.DadoNode" name="setDouble" signature="(D)V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="139" end="148" startBytecode="0" endBytecode="166" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java"/>
+      <Message>In method cristiano.GenProg.Node.DadoNode.setDouble(double)</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.DadoNode" primary="true" start="140" end="140" startBytecode="22" endBytecode="22" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+      <Message>At DadoNode.java:[line 140]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE" instanceHash="65ae3ae0a5e8b0db08b8887c3397eaa4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient new String(String) constructor</ShortMessage>
+    <LongMessage>cristiano.GenProg.Node.DadoNode.setInt(int) invokes inefficient new String(String) constructor</LongMessage>
+    <Class classname="cristiano.GenProg.Node.DadoNode" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="28" end="151" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+        <Message>At DadoNode.java:[lines 28-151]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.DadoNode</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.DadoNode" name="setInt" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="128" end="137" startBytecode="0" endBytecode="166" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java"/>
+      <Message>In method cristiano.GenProg.Node.DadoNode.setInt(int)</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.DadoNode" primary="true" start="129" end="129" startBytecode="22" endBytecode="22" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+      <Message>At DadoNode.java:[line 129]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE" instanceHash="b7baf7b4fc3fa1f59c0264f56e6c0b26" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient new String(String) constructor</ShortMessage>
+    <LongMessage>cristiano.GenProg.Node.DadoNode.setString(String) invokes inefficient new String(String) constructor</LongMessage>
+    <Class classname="cristiano.GenProg.Node.DadoNode" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="28" end="151" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+        <Message>At DadoNode.java:[lines 28-151]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.DadoNode</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.DadoNode" name="setString" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.DadoNode" start="117" end="126" startBytecode="0" endBytecode="162" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java"/>
+      <Message>In method cristiano.GenProg.Node.DadoNode.setString(String)</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.DadoNode" primary="true" start="118" end="118" startBytecode="19" endBytecode="19" sourcefile="DadoNode.java" sourcepath="cristiano/GenProg/Node/DadoNode.java" relSourcepath="cristiano\GenProg\Node\DadoNode.java">
+      <Message>At DadoNode.java:[line 118]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="FE_FLOATING_POINT_EQUALITY" priority="3" abbrev="FE" category="STYLE" instanceHash="1a9db5ca0784bd7d81048ee45e5ee8f8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Test for floating point equality</ShortMessage>
+    <LongMessage>Test for floating point equality in cristiano.GenProg.Node.Logic.NodeAnd.getValue()</LongMessage>
+    <Class classname="cristiano.GenProg.Node.Logic.NodeAnd" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.Logic.NodeAnd" start="26" end="45" sourcefile="NodeAnd.java" sourcepath="cristiano/GenProg/Node/Logic/NodeAnd.java" relSourcepath="cristiano\GenProg\Node\Logic\NodeAnd.java">
+        <Message>At NodeAnd.java:[lines 26-45]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.Logic.NodeAnd</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.Logic.NodeAnd" name="getValue" signature="()D" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.Logic.NodeAnd" start="37" end="45" startBytecode="0" endBytecode="177" sourcefile="NodeAnd.java" sourcepath="cristiano/GenProg/Node/Logic/NodeAnd.java" relSourcepath="cristiano\GenProg\Node\Logic\NodeAnd.java"/>
+      <Message>In method cristiano.GenProg.Node.Logic.NodeAnd.getValue()</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.Logic.NodeAnd" primary="true" start="42" end="42" startBytecode="44" endBytecode="44" sourcefile="NodeAnd.java" sourcepath="cristiano/GenProg/Node/Logic/NodeAnd.java" relSourcepath="cristiano\GenProg\Node\Logic\NodeAnd.java">
+      <Message>At NodeAnd.java:[line 42]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="FE_FLOATING_POINT_EQUALITY" priority="3" abbrev="FE" category="STYLE" instanceHash="f86444cc406c097a6e46e04ba8d6078d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Test for floating point equality</ShortMessage>
+    <LongMessage>Test for floating point equality in cristiano.GenProg.Node.Logic.NodeEqual.getValue()</LongMessage>
+    <Class classname="cristiano.GenProg.Node.Logic.NodeEqual" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.Logic.NodeEqual" start="25" end="43" sourcefile="NodeEqual.java" sourcepath="cristiano/GenProg/Node/Logic/NodeEqual.java" relSourcepath="cristiano\GenProg\Node\Logic\NodeEqual.java">
+        <Message>At NodeEqual.java:[lines 25-43]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.Logic.NodeEqual</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.Logic.NodeEqual" name="getValue" signature="()D" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.Logic.NodeEqual" start="36" end="43" startBytecode="0" endBytecode="157" sourcefile="NodeEqual.java" sourcepath="cristiano/GenProg/Node/Logic/NodeEqual.java" relSourcepath="cristiano\GenProg\Node\Logic\NodeEqual.java"/>
+      <Message>In method cristiano.GenProg.Node.Logic.NodeEqual.getValue()</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.Logic.NodeEqual" primary="true" start="40" end="40" startBytecode="40" endBytecode="40" sourcefile="NodeEqual.java" sourcepath="cristiano/GenProg/Node/Logic/NodeEqual.java" relSourcepath="cristiano\GenProg\Node\Logic\NodeEqual.java">
+      <Message>At NodeEqual.java:[line 40]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="FE_FLOATING_POINT_EQUALITY" priority="3" abbrev="FE" category="STYLE" instanceHash="a171cebcd69ae1351fa0d8287ae14a28" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Test for floating point equality</ShortMessage>
+    <LongMessage>Test for floating point equality in cristiano.GenProg.Node.Logic.NodeNand.getValue()</LongMessage>
+    <Class classname="cristiano.GenProg.Node.Logic.NodeNand" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.Logic.NodeNand" start="26" end="47" sourcefile="NodeNand.java" sourcepath="cristiano/GenProg/Node/Logic/NodeNand.java" relSourcepath="cristiano\GenProg\Node\Logic\NodeNand.java">
+        <Message>At NodeNand.java:[lines 26-47]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.Logic.NodeNand</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.Logic.NodeNand" name="getValue" signature="()D" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.Logic.NodeNand" start="38" end="47" startBytecode="0" endBytecode="198" sourcefile="NodeNand.java" sourcepath="cristiano/GenProg/Node/Logic/NodeNand.java" relSourcepath="cristiano\GenProg\Node\Logic\NodeNand.java"/>
+      <Message>In method cristiano.GenProg.Node.Logic.NodeNand.getValue()</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.Logic.NodeNand" primary="true" start="43" end="43" startBytecode="44" endBytecode="44" sourcefile="NodeNand.java" sourcepath="cristiano/GenProg/Node/Logic/NodeNand.java" relSourcepath="cristiano\GenProg\Node\Logic\NodeNand.java">
+      <Message>At NodeNand.java:[line 43]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" instanceHash="227faf020fd21aed8eba2c4c53727981" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to d in cristiano.GenProg.Node.Node.drawNode(Graphics, int, int)</LongMessage>
+    <Class classname="cristiano.GenProg.Node.Node" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.Node" start="30" end="420" sourcefile="Node.java" sourcepath="cristiano/GenProg/Node/Node.java" relSourcepath="cristiano\GenProg\Node\Node.java">
+        <Message>At Node.java:[lines 30-420]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.Node</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.Node" name="drawNode" signature="(Ljava/awt/Graphics;II)V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.Node" start="151" end="170" startBytecode="0" endBytecode="86" sourcefile="Node.java" sourcepath="cristiano/GenProg/Node/Node.java" relSourcepath="cristiano\GenProg\Node\Node.java"/>
+      <Message>In method cristiano.GenProg.Node.Node.drawNode(Graphics, int, int)</Message>
+    </Method>
+    <LocalVariable name="d" register="5" pc="54" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named d</Message>
+    </LocalVariable>
+    <SourceLine classname="cristiano.GenProg.Node.Node" primary="true" start="156" end="156" startBytecode="52" endBytecode="52" sourcefile="Node.java" sourcepath="cristiano/GenProg/Node/Node.java" relSourcepath="cristiano\GenProg\Node\Node.java">
+      <Message>At Node.java:[line 156]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="d"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" instanceHash="a92cce49894c707a91803ccc0e5ff402" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to i in cristiano.GenProg.Node.Node.setParamNodes()</LongMessage>
+    <Class classname="cristiano.GenProg.Node.Node" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.Node" start="30" end="420" sourcefile="Node.java" sourcepath="cristiano/GenProg/Node/Node.java" relSourcepath="cristiano\GenProg\Node\Node.java">
+        <Message>At Node.java:[lines 30-420]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.Node</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.Node" name="setParamNodes" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.Node" start="73" end="82" startBytecode="0" endBytecode="41" sourcefile="Node.java" sourcepath="cristiano/GenProg/Node/Node.java" relSourcepath="cristiano\GenProg\Node\Node.java"/>
+      <Message>In method cristiano.GenProg.Node.Node.setParamNodes()</Message>
+    </Method>
+    <LocalVariable name="i" register="1" pc="89" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named i</Message>
+    </LocalVariable>
+    <SourceLine classname="cristiano.GenProg.Node.Node" primary="true" start="80" end="80" startBytecode="89" endBytecode="89" sourcefile="Node.java" sourcepath="cristiano/GenProg/Node/Node.java" relSourcepath="cristiano\GenProg\Node\Node.java">
+      <Message>At Node.java:[line 80]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="i"/>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" abbrev="MS" category="MALICIOUS_CODE" instanceHash="50ca8ec6f568574db0dec013910b59fb" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field isn&apos;t final and can&apos;t be protected from malicious code</ShortMessage>
+    <LongMessage>cristiano.GenProg.Node.Node.count isn&apos;t final and can&apos;t be protected from malicious code </LongMessage>
+    <Class classname="cristiano.GenProg.Node.Node" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.Node" start="30" end="420" sourcefile="Node.java" sourcepath="cristiano/GenProg/Node/Node.java" relSourcepath="cristiano\GenProg\Node\Node.java">
+        <Message>At Node.java:[lines 30-420]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.Node</Message>
+    </Class>
+    <Field classname="cristiano.GenProg.Node.Node" name="count" signature="I" isStatic="true" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.Node" sourcefile="Node.java" sourcepath="cristiano/GenProg/Node/Node.java" relSourcepath="cristiano\GenProg\Node\Node.java">
+        <Message>In Node.java</Message>
+      </SourceLine>
+      <Message>Field cristiano.GenProg.Node.Node.count</Message>
+    </Field>
+    <SourceLine classname="cristiano.GenProg.Node.Node" primary="true" start="38" end="38" startBytecode="1" endBytecode="1" sourcefile="Node.java" sourcepath="cristiano/GenProg/Node/Node.java" relSourcepath="cristiano\GenProg\Node\Node.java">
+      <Message>At Node.java:[line 38]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE" instanceHash="69fb052f79e8c7920b9e5834c00ab468" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method concatenates strings using + in a loop</ShortMessage>
+    <LongMessage>Method cristiano.GenProg.Node.Node.getCodigoFonte() concatenates strings using + in a loop</LongMessage>
+    <Class classname="cristiano.GenProg.Node.Node" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.Node" start="30" end="420" sourcefile="Node.java" sourcepath="cristiano/GenProg/Node/Node.java" relSourcepath="cristiano\GenProg\Node\Node.java">
+        <Message>At Node.java:[lines 30-420]</Message>
+      </SourceLine>
+      <Message>In class cristiano.GenProg.Node.Node</Message>
+    </Class>
+    <Method classname="cristiano.GenProg.Node.Node" name="getCodigoFonte" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="cristiano.GenProg.Node.Node" start="279" end="293" startBytecode="0" endBytecode="312" sourcefile="Node.java" sourcepath="cristiano/GenProg/Node/Node.java" relSourcepath="cristiano\GenProg\Node\Node.java"/>
+      <Message>In method cristiano.GenProg.Node.Node.getCodigoFonte()</Message>
+    </Method>
+    <SourceLine classname="cristiano.GenProg.Node.Node" primary="true" start="284" end="284" startBytecode="95" endBytecode="95" sourcefile="Node.java" sourcepath="cristiano/GenProg/Node/Node.java" relSourcepath="cristiano\GenProg\Node\Node.java">
+      <Message>At Node.java:[line 284]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy</Description>
+  </BugCategory>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugPattern type="DM_FP_NUMBER_CTOR" abbrev="Bx" category="PERFORMANCE">
+    <ShortDescription>Method invokes inefficient floating-point Number constructor; use static valueOf instead</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+      Using <code>new Double(double)</code> is guaranteed to always result in a new object whereas
+      <code>Double.valueOf(double)</code> allows caching of values to be done by the compiler, class library, or JVM.
+      Using of cached values avoids object allocation and the code will be faster.
+      </p>
+      <p>
+      Unless the class must be compatible with JVMs predating Java 1.5,
+      use either autoboxing or the <code>valueOf()</code> method when creating instances of <code>Double</code> and <code>Float</code>.
+      </p>
+      
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_NEXTINT_VIA_NEXTDOUBLE" abbrev="Dm" category="PERFORMANCE">
+    <ShortDescription>Use the nextInt method of Random rather than nextDouble to generate a random integer</ShortDescription>
+    <Details><![CDATA[
+
+  <p>If <code>r</code> is a <code>java.util.Random</code>, you can generate a random number from <code>0</code> to <code>n-1</code>
+using <code>r.nextInt(n)</code>, rather than using <code>(int)(r.nextDouble() * n)</code>.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_STRING_CTOR" abbrev="Dm" category="PERFORMANCE">
+    <ShortDescription>Method invokes inefficient new String(String) constructor</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Using the <code>java.lang.String(String)</code> constructor wastes memory
+  because the object so constructed will be functionally indistinguishable
+  from the <code>String</code> passed as a parameter.&nbsp; Just use the
+  argument <code>String</code> directly.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="FE_FLOATING_POINT_EQUALITY" abbrev="FE" category="STYLE">
+    <ShortDescription>Test for floating point equality</ShortDescription>
+    <Details><![CDATA[
+   
+    <p>
+    This operation compares two floating point values for equality.
+    Because floating point calculations may involve rounding,
+   calculated float and double values may not be accurate.
+    For values that must be precise, such as monetary values,
+   consider using a fixed-precision type such as BigDecimal.
+    For values that need not be precise, consider comparing for equality
+    within some range, for example:
+    <code>if ( Math.abs(x - y) &lt; .0000001 )</code>.
+   See the Java Language Specification, section 4.2.4.
+    </p>
+    
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="SS_SHOULD_BE_STATIC" abbrev="SS" category="PERFORMANCE">
+    <ShortDescription>Unread field: should this field be static?</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class contains an instance final field that
+   is initialized to a compile-time static value.
+   Consider making the field static.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UPM_UNCALLED_PRIVATE_METHOD" abbrev="UPM" category="PERFORMANCE">
+    <ShortDescription>Private method is never called</ShortDescription>
+    <Details><![CDATA[
+
+<p> This private method is never called. Although it is
+possible that the method will be invoked through reflection,
+it is more likely that the method is never used, and should be
+removed.
+</p>
+
+]]></Details>
+  </BugPattern>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="ES_COMPARING_STRINGS_WITH_EQ" abbrev="ES" category="BAD_PRACTICE">
+    <ShortDescription>Comparison of String objects using == or !=</ShortDescription>
+    <Details><![CDATA[
+
+  <p>This code compares <code>java.lang.String</code> objects for reference
+equality using the == or != operators.
+Unless both strings are either constants in a source file, or have been
+interned using the <code>String.intern()</code> method, the same string
+value may be represented by two different String objects. Consider
+using the <code>equals(Object)</code> method instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_NUMBER_CTOR" abbrev="Bx" category="PERFORMANCE">
+    <ShortDescription>Method invokes inefficient Number constructor; use static valueOf instead</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+      Using <code>new Integer(int)</code> is guaranteed to always result in a new object whereas
+      <code>Integer.valueOf(int)</code> allows caching of values to be done by the compiler, class library, or JVM.
+      Using of cached values avoids object allocation and the code will be faster.
+      </p>
+      <p>
+      Values between -128 and 127 are guaranteed to have corresponding cached instances
+      and using <code>valueOf</code> is approximately 3.5 times faster than using constructor.
+      For values outside the constant range the performance of both styles is the same.
+      </p>
+      <p>
+      Unless the class must be compatible with JVMs predating Java 1.5,
+      use either autoboxing or the <code>valueOf()</code> method when creating instances of
+      <code>Long</code>, <code>Integer</code>, <code>Short</code>, <code>Character</code>, and <code>Byte</code>.
+      </p>
+      
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SBSC_USE_STRINGBUFFER_CONCATENATION" abbrev="SBSC" category="PERFORMANCE">
+    <ShortDescription>Method concatenates strings using + in a loop</ShortDescription>
+    <Details><![CDATA[
+
+<p> The method seems to be building a String using concatenation in a loop.
+In each iteration, the String is converted to a StringBuffer/StringBuilder,
+   appended to, and converted back to a String.
+   This can lead to a cost quadratic in the number of iterations,
+   as the growing string is recopied in each iteration. </p>
+
+<p>Better performance can be obtained by using
+a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
+
+<p> For example:</p>
+<pre>
+  // This is bad
+  String s = "";
+  for (int i = 0; i &lt; field.length; ++i) {
+    s = s + field[i];
+  }
+
+  // This is better
+  StringBuffer buf = new StringBuffer();
+  for (int i = 0; i &lt; field.length; ++i) {
+    buf.append(field[i]);
+  }
+  String s = buf.toString();
+</pre>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SE_BAD_FIELD" abbrev="Se" category="BAD_PRACTICE">
+    <ShortDescription>Non-transient non-serializable instance field in serializable class</ShortDescription>
+    <Details><![CDATA[
+
+<p> This Serializable class defines a non-primitive instance field which is neither transient,
+Serializable, or <code>java.lang.Object</code>, and does not appear to implement
+the <code>Externalizable</code> interface or the
+<code>readObject()</code> and <code>writeObject()</code> methods.&nbsp;
+Objects of this class will not be deserialized correctly if a non-Serializable
+object is stored in this field.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_NULL_ON_SOME_PATH" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Possible null pointer dereference</ShortDescription>
+    <Details><![CDATA[
+
+<p> There is a branch of statement that, <em>if executed,</em>  guarantees that
+a null value will be dereferenced, which
+would generate a <code>NullPointerException</code> when the code is executed.
+Of course, the problem might be that the branch or statement is infeasible and that
+the null pointer exception can't ever be executed; deciding that is beyond the ability of FindBugs.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables.  Because FindBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_CANNOT_BE_FINAL" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field isn&apos;t final and can&apos;t be protected from malicious code</ShortDescription>
+    <Details><![CDATA[
+
+  <p>
+ A mutable static field could be changed by malicious code or
+        by accident from another package.
+   Unfortunately, the way the field is used doesn't allow
+   any easy fix to this problem.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="SBSC">
+    <Description>String concatenation in loop using + operator</Description>
+  </BugCode>
+  <BugCode abbrev="Bx">
+    <Description>Questionable Boxing of primitive value</Description>
+  </BugCode>
+  <BugCode abbrev="Se">
+    <Description>Incorrect definition of Serializable class</Description>
+  </BugCode>
+  <BugCode abbrev="SS">
+    <Description>Unread field should be static</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="UPM">
+    <Description>Private method is never called</Description>
+  </BugCode>
+  <BugCode abbrev="FE">
+    <Description>Test for floating point equality</Description>
+  </BugCode>
+  <BugCode abbrev="ES" cweid="597">
+    <Description>Checking String equality using == or !=</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="3">
+    <MissingClass>comum.Objeto</MissingClass>
+    <MissingClass>cristiano.comum.Formatacao</MissingClass>
+    <MissingClass>cristiano.comum.ObjetoBasico</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 9 Apr 2012 10:53:06 -0300" total_classes="48" referenced_classes="259" total_bugs="34" total_size="1557" num_packages="10" vm_version="20.0-b11" cpu_seconds="5.41" clock_seconds="16.49" peak_mbytes="139.03" alloc_mbytes="494.94" gc_seconds="0.79" priority_3="13" priority_2="18" priority_1="3">
+    <FileStats path="cristiano/GenProg/AppletGP.java" bugCount="4" size="126" bugHash="d0451713bed9dd3df7359854fc5aec6c"/>
+    <FileStats path="cristiano/GenProg/GeneticProgramming.java" bugCount="10" size="331" bugHash="84ce0e184766e497aad8fb88e1216669"/>
+    <FileStats path="cristiano/GenProg/Node/AI/NodeNeuron.java" bugCount="2" size="51" bugHash="f0d4ccb65b4be788ca92144b68fd17af"/>
+    <FileStats path="cristiano/GenProg/Node/DadoNode.java" bugCount="11" size="83" bugHash="3b5e6a4cd5cd1d8da69c1d8ec34c3b84"/>
+    <FileStats path="cristiano/GenProg/Node/Functions/NodeAtuador.java" bugCount="0" size="24"/>
+    <FileStats path="cristiano/GenProg/Node/Functions/NodeTerminal.java" bugCount="0" size="22"/>
+    <FileStats path="cristiano/GenProg/Node/Logic/NodeAnd.java" bugCount="1" size="16" bugHash="adce80a9e59123773e021862a629ab2a"/>
+    <FileStats path="cristiano/GenProg/Node/Logic/NodeEqual.java" bugCount="1" size="15" bugHash="5975815909560dfb0bd60963ccb064dc"/>
+    <FileStats path="cristiano/GenProg/Node/Logic/NodeIf.java" bugCount="0" size="25"/>
+    <FileStats path="cristiano/GenProg/Node/Logic/NodeNand.java" bugCount="1" size="17" bugHash="3cbfa80100229cad7f4416de8f4c633b"/>
+    <FileStats path="cristiano/GenProg/Node/Logic/NodeNor.java" bugCount="0" size="15"/>
+    <FileStats path="cristiano/GenProg/Node/Logic/NodeOr.java" bugCount="0" size="16"/>
+    <FileStats path="cristiano/GenProg/Node/Logic/NodeXrl.java" bugCount="0" size="15"/>
+    <FileStats path="cristiano/GenProg/Node/Memory/NodeGetVar.java" bugCount="0" size="16"/>
+    <FileStats path="cristiano/GenProg/Node/Memory/NodeSetVar.java" bugCount="0" size="16"/>
+    <FileStats path="cristiano/GenProg/Node/Node.java" bugCount="4" size="233" bugHash="481f8885abe850538674c709ccf5084d"/>
+    <FileStats path="cristiano/GenProg/Node/NodeVariavel.java" bugCount="0" size="19"/>
+    <FileStats path="cristiano/GenProg/Node/ParameterNode.java" bugCount="0" size="5"/>
+    <FileStats path="cristiano/GenProg/Node/SimpleMath/NodeAbs.java" bugCount="0" size="14"/>
+    <FileStats path="cristiano/GenProg/Node/SimpleMath/NodeAddiction.java" bugCount="0" size="13"/>
+    <FileStats path="cristiano/GenProg/Node/SimpleMath/NodeAverage.java" bugCount="0" size="14"/>
+    <FileStats path="cristiano/GenProg/Node/SimpleMath/NodeCeil.java" bugCount="0" size="14"/>
+    <FileStats path="cristiano/GenProg/Node/SimpleMath/NodeDivision.java" bugCount="0" size="17"/>
+    <FileStats path="cristiano/GenProg/Node/SimpleMath/NodeFloor.java" bugCount="0" size="14"/>
+    <FileStats path="cristiano/GenProg/Node/SimpleMath/NodeMax.java" bugCount="0" size="17"/>
+    <FileStats path="cristiano/GenProg/Node/SimpleMath/NodeMin.java" bugCount="0" size="18"/>
+    <FileStats path="cristiano/GenProg/Node/SimpleMath/NodeMultiply.java" bugCount="0" size="15"/>
+    <FileStats path="cristiano/GenProg/Node/SimpleMath/NodePow.java" bugCount="0" size="16"/>
+    <FileStats path="cristiano/GenProg/Node/SimpleMath/NodeRound.java" bugCount="0" size="13"/>
+    <FileStats path="cristiano/GenProg/Node/SimpleMath/NodeSqr.java" bugCount="0" size="13"/>
+    <FileStats path="cristiano/GenProg/Node/SimpleMath/NodeSqrt.java" bugCount="0" size="13"/>
+    <FileStats path="cristiano/GenProg/Node/SimpleMath/NodeSubtract.java" bugCount="0" size="15"/>
+    <FileStats path="cristiano/GenProg/Node/Trig/NodeATan.java" bugCount="0" size="13"/>
+    <FileStats path="cristiano/GenProg/Node/Trig/NodeCos.java" bugCount="0" size="13"/>
+    <FileStats path="cristiano/GenProg/Node/Trig/NodeLog.java" bugCount="0" size="13"/>
+    <FileStats path="cristiano/GenProg/Node/Trig/NodeLog10.java" bugCount="0" size="13"/>
+    <FileStats path="cristiano/GenProg/Node/Trig/NodeSin.java" bugCount="0" size="13"/>
+    <FileStats path="cristiano/GenProg/Node/Trig/NodeTan.java" bugCount="0" size="13"/>
+    <FileStats path="cristiano/GenProg/Node/Trig/NodeToDegrees.java" bugCount="0" size="15"/>
+    <FileStats path="cristiano/GenProg/Node/Trig/NodeToRadians.java" bugCount="0" size="15"/>
+    <FileStats path="cristiano/GenProg/rules/FitnessRule.java" bugCount="0" size="28"/>
+    <FileStats path="cristiano/GenProg/rules/FitnessRules.java" bugCount="0" size="22"/>
+    <FileStats path="cristiano/GenProg/set/AISet.java" bugCount="0" size="9"/>
+    <FileStats path="cristiano/GenProg/set/AbstractSet.java" bugCount="0" size="25"/>
+    <FileStats path="cristiano/GenProg/set/LogicSet.java" bugCount="0" size="28"/>
+    <FileStats path="cristiano/GenProg/set/MathSet.java" bugCount="0" size="62"/>
+    <FileStats path="cristiano/GenProg/set/TrigonometrySet.java" bugCount="0" size="24"/>
+    <PackageStats package="cristiano.GenProg" total_bugs="14" total_types="3" total_size="457" priority_3="5" priority_2="6" priority_1="3">
+      <ClassStats class="cristiano.GenProg.AppletGP" sourceFile="AppletGP.java" interface="false" size="126" bugs="4" priority_3="3" priority_2="1"/>
+      <ClassStats class="cristiano.GenProg.GeneticProgramming" sourceFile="GeneticProgramming.java" interface="false" size="320" bugs="10" priority_3="2" priority_2="5" priority_1="3"/>
+      <ClassStats class="cristiano.GenProg.SortMethod" sourceFile="GeneticProgramming.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cristiano.GenProg.Node" total_bugs="15" total_types="4" total_size="340" priority_3="3" priority_2="12">
+      <ClassStats class="cristiano.GenProg.Node.DadoNode" sourceFile="DadoNode.java" interface="false" size="83" bugs="11" priority_3="3" priority_2="8"/>
+      <ClassStats class="cristiano.GenProg.Node.Node" sourceFile="Node.java" interface="false" size="233" bugs="4" priority_2="4"/>
+      <ClassStats class="cristiano.GenProg.Node.NodeVariavel" sourceFile="NodeVariavel.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.ParameterNode" sourceFile="ParameterNode.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cristiano.GenProg.Node.AI" total_bugs="2" total_types="1" total_size="51" priority_3="2">
+      <ClassStats class="cristiano.GenProg.Node.AI.NodeNeuron" sourceFile="NodeNeuron.java" interface="false" size="51" bugs="2" priority_3="2"/>
+    </PackageStats>
+    <PackageStats package="cristiano.GenProg.Node.Functions" total_bugs="0" total_types="2" total_size="46">
+      <ClassStats class="cristiano.GenProg.Node.Functions.NodeAtuador" sourceFile="NodeAtuador.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.Functions.NodeTerminal" sourceFile="NodeTerminal.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cristiano.GenProg.Node.Logic" total_bugs="3" total_types="7" total_size="119" priority_3="3">
+      <ClassStats class="cristiano.GenProg.Node.Logic.NodeAnd" sourceFile="NodeAnd.java" interface="false" size="16" bugs="1" priority_3="1"/>
+      <ClassStats class="cristiano.GenProg.Node.Logic.NodeEqual" sourceFile="NodeEqual.java" interface="false" size="15" bugs="1" priority_3="1"/>
+      <ClassStats class="cristiano.GenProg.Node.Logic.NodeIf" sourceFile="NodeIf.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.Logic.NodeNand" sourceFile="NodeNand.java" interface="false" size="17" bugs="1" priority_3="1"/>
+      <ClassStats class="cristiano.GenProg.Node.Logic.NodeNor" sourceFile="NodeNor.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.Logic.NodeOr" sourceFile="NodeOr.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.Logic.NodeXrl" sourceFile="NodeXrl.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cristiano.GenProg.Node.Memory" total_bugs="0" total_types="2" total_size="32">
+      <ClassStats class="cristiano.GenProg.Node.Memory.NodeGetVar" sourceFile="NodeGetVar.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.Memory.NodeSetVar" sourceFile="NodeSetVar.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cristiano.GenProg.Node.SimpleMath" total_bugs="0" total_types="14" total_size="206">
+      <ClassStats class="cristiano.GenProg.Node.SimpleMath.NodeAbs" sourceFile="NodeAbs.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.SimpleMath.NodeAddiction" sourceFile="NodeAddiction.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.SimpleMath.NodeAverage" sourceFile="NodeAverage.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.SimpleMath.NodeCeil" sourceFile="NodeCeil.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.SimpleMath.NodeDivision" sourceFile="NodeDivision.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.SimpleMath.NodeFloor" sourceFile="NodeFloor.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.SimpleMath.NodeMax" sourceFile="NodeMax.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.SimpleMath.NodeMin" sourceFile="NodeMin.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.SimpleMath.NodeMultiply" sourceFile="NodeMultiply.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.SimpleMath.NodePow" sourceFile="NodePow.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.SimpleMath.NodeRound" sourceFile="NodeRound.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.SimpleMath.NodeSqr" sourceFile="NodeSqr.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.SimpleMath.NodeSqrt" sourceFile="NodeSqrt.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.SimpleMath.NodeSubtract" sourceFile="NodeSubtract.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cristiano.GenProg.Node.Trig" total_bugs="0" total_types="8" total_size="108">
+      <ClassStats class="cristiano.GenProg.Node.Trig.NodeATan" sourceFile="NodeATan.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.Trig.NodeCos" sourceFile="NodeCos.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.Trig.NodeLog" sourceFile="NodeLog.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.Trig.NodeLog10" sourceFile="NodeLog10.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.Trig.NodeSin" sourceFile="NodeSin.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.Trig.NodeTan" sourceFile="NodeTan.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.Trig.NodeToDegrees" sourceFile="NodeToDegrees.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.Node.Trig.NodeToRadians" sourceFile="NodeToRadians.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cristiano.GenProg.rules" total_bugs="0" total_types="2" total_size="50">
+      <ClassStats class="cristiano.GenProg.rules.FitnessRule" sourceFile="FitnessRule.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.rules.FitnessRules" sourceFile="FitnessRules.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cristiano.GenProg.set" total_bugs="0" total_types="5" total_size="148">
+      <ClassStats class="cristiano.GenProg.set.AISet" sourceFile="AISet.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.set.AbstractSet" sourceFile="AbstractSet.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.set.LogicSet" sourceFile="LogicSet.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.set.MathSet" sourceFile="MathSet.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="cristiano.GenProg.set.TrigonometrySet" sourceFile="TrigonometrySet.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="11" invocations="48" avgMicrosecondsPerInvocation="248" maxMicrosecondsPerInvocation="2874" standardDeviationMircosecondsPerInvocation="552"/>
+      <ClassProfile name="edu.umd.cs.findbugs.NonReportingDetectorToDetector2Adapter" totalMilliseconds="12" invocations="3463" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="2668" standardDeviationMircosecondsPerInvocation="45"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="12" invocations="48" avgMicrosecondsPerInvocation="252" maxMicrosecondsPerInvocation="4934" standardDeviationMircosecondsPerInvocation="688"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CrossSiteScripting" totalMilliseconds="12" invocations="48" avgMicrosecondsPerInvocation="257" maxMicrosecondsPerInvocation="5785" standardDeviationMircosecondsPerInvocation="825"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSelfComparison" totalMilliseconds="12" invocations="48" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="2211" standardDeviationMircosecondsPerInvocation="399"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindFieldSelfAssignment" totalMilliseconds="12" invocations="48" avgMicrosecondsPerInvocation="263" maxMicrosecondsPerInvocation="5479" standardDeviationMircosecondsPerInvocation="806"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNakedNotify" totalMilliseconds="13" invocations="48" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="11197" standardDeviationMircosecondsPerInvocation="1594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteNonnullReturnValues" totalMilliseconds="13" invocations="48" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="3227" standardDeviationMircosecondsPerInvocation="488"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.asm.ClassReaderAnalysisEngine" totalMilliseconds="14" invocations="1071" avgMicrosecondsPerInvocation="13" maxMicrosecondsPerInvocation="7594" standardDeviationMircosecondsPerInvocation="233"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="15" invocations="48" avgMicrosecondsPerInvocation="313" maxMicrosecondsPerInvocation="3233" standardDeviationMircosecondsPerInvocation="555"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InvalidJUnitTest" totalMilliseconds="16" invocations="48" avgMicrosecondsPerInvocation="335" maxMicrosecondsPerInvocation="15712" standardDeviationMircosecondsPerInvocation="2242"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="16" invocations="48" avgMicrosecondsPerInvocation="339" maxMicrosecondsPerInvocation="7210" standardDeviationMircosecondsPerInvocation="1030"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.AppendingToAnObjectOutputStream" totalMilliseconds="17" invocations="48" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="8171" standardDeviationMircosecondsPerInvocation="1190"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNonShortCircuit" totalMilliseconds="17" invocations="48" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="8736" standardDeviationMircosecondsPerInvocation="1257"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="18" invocations="48" avgMicrosecondsPerInvocation="387" maxMicrosecondsPerInvocation="3426" standardDeviationMircosecondsPerInvocation="590"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NumberConstructor" totalMilliseconds="18" invocations="48" avgMicrosecondsPerInvocation="390" maxMicrosecondsPerInvocation="9454" standardDeviationMircosecondsPerInvocation="1369"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BooleanReturnNull" totalMilliseconds="20" invocations="48" avgMicrosecondsPerInvocation="432" maxMicrosecondsPerInvocation="18330" standardDeviationMircosecondsPerInvocation="2611"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsyncGet" totalMilliseconds="21" invocations="48" avgMicrosecondsPerInvocation="445" maxMicrosecondsPerInvocation="17230" standardDeviationMircosecondsPerInvocation="2451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteCheckReturnValue" totalMilliseconds="21" invocations="259" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="14866" standardDeviationMircosecondsPerInvocation="925"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ReturnPathTypeDataflowFactory" totalMilliseconds="21" invocations="1" avgMicrosecondsPerInvocation="21967" maxMicrosecondsPerInvocation="21967" standardDeviationMircosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteUnconditionalParamDerefs" totalMilliseconds="22" invocations="48" avgMicrosecondsPerInvocation="467" maxMicrosecondsPerInvocation="20136" standardDeviationMircosecondsPerInvocation="2870"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="22" invocations="48" avgMicrosecondsPerInvocation="471" maxMicrosecondsPerInvocation="8005" standardDeviationMircosecondsPerInvocation="1275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SynchronizeAndNullCheckField" totalMilliseconds="22" invocations="48" avgMicrosecondsPerInvocation="473" maxMicrosecondsPerInvocation="19873" standardDeviationMircosecondsPerInvocation="2830"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnrelatedTypesInGenericContainer" totalMilliseconds="22" invocations="48" avgMicrosecondsPerInvocation="475" maxMicrosecondsPerInvocation="16815" standardDeviationMircosecondsPerInvocation="2387"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="24" invocations="48" avgMicrosecondsPerInvocation="516" maxMicrosecondsPerInvocation="3279" standardDeviationMircosecondsPerInvocation="865"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="25" invocations="5491" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="6371" standardDeviationMircosecondsPerInvocation="93"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="26" invocations="48" avgMicrosecondsPerInvocation="543" maxMicrosecondsPerInvocation="13149" standardDeviationMircosecondsPerInvocation="1888"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSqlInjection" totalMilliseconds="26" invocations="48" avgMicrosecondsPerInvocation="549" maxMicrosecondsPerInvocation="16300" standardDeviationMircosecondsPerInvocation="2344"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteRecursiveLoop" totalMilliseconds="27" invocations="48" avgMicrosecondsPerInvocation="568" maxMicrosecondsPerInvocation="16099" standardDeviationMircosecondsPerInvocation="2320"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="27" invocations="48" avgMicrosecondsPerInvocation="574" maxMicrosecondsPerInvocation="10109" standardDeviationMircosecondsPerInvocation="1495"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="28" invocations="267" avgMicrosecondsPerInvocation="107" maxMicrosecondsPerInvocation="1967" standardDeviationMircosecondsPerInvocation="192"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindFloatEquality" totalMilliseconds="29" invocations="48" avgMicrosecondsPerInvocation="620" maxMicrosecondsPerInvocation="16529" standardDeviationMircosecondsPerInvocation="2422"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteLoop" totalMilliseconds="30" invocations="48" avgMicrosecondsPerInvocation="634" maxMicrosecondsPerInvocation="19364" standardDeviationMircosecondsPerInvocation="2760"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="31" invocations="48" avgMicrosecondsPerInvocation="659" maxMicrosecondsPerInvocation="16078" standardDeviationMircosecondsPerInvocation="2416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSelfComparison2" totalMilliseconds="31" invocations="48" avgMicrosecondsPerInvocation="661" maxMicrosecondsPerInvocation="27018" standardDeviationMircosecondsPerInvocation="3846"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="33" invocations="48" avgMicrosecondsPerInvocation="698" maxMicrosecondsPerInvocation="17335" standardDeviationMircosecondsPerInvocation="2496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="40" invocations="2383" avgMicrosecondsPerInvocation="16" maxMicrosecondsPerInvocation="20589" standardDeviationMircosecondsPerInvocation="438"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="40" invocations="267" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="21708" standardDeviationMircosecondsPerInvocation="1324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadForLoop" totalMilliseconds="41" invocations="48" avgMicrosecondsPerInvocation="864" maxMicrosecondsPerInvocation="29534" standardDeviationMircosecondsPerInvocation="4217"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SynchronizationOnSharedBuiltinConstant" totalMilliseconds="44" invocations="48" avgMicrosecondsPerInvocation="927" maxMicrosecondsPerInvocation="32392" standardDeviationMircosecondsPerInvocation="4617"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RepeatedConditionals" totalMilliseconds="49" invocations="48" avgMicrosecondsPerInvocation="1026" maxMicrosecondsPerInvocation="33265" standardDeviationMircosecondsPerInvocation="4849"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnconditionalWait" totalMilliseconds="49" invocations="48" avgMicrosecondsPerInvocation="1038" maxMicrosecondsPerInvocation="47033" standardDeviationMircosecondsPerInvocation="6710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LazyInit" totalMilliseconds="58" invocations="48" avgMicrosecondsPerInvocation="1227" maxMicrosecondsPerInvocation="57813" standardDeviationMircosecondsPerInvocation="8254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="62" invocations="259" avgMicrosecondsPerInvocation="240" maxMicrosecondsPerInvocation="29417" standardDeviationMircosecondsPerInvocation="1837"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="64" invocations="48" avgMicrosecondsPerInvocation="1351" maxMicrosecondsPerInvocation="21735" standardDeviationMircosecondsPerInvocation="4156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNonSerializableStoreIntoSession" totalMilliseconds="65" invocations="48" avgMicrosecondsPerInvocation="1365" maxMicrosecondsPerInvocation="62835" standardDeviationMircosecondsPerInvocation="8966"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="67" invocations="259" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="10251" standardDeviationMircosecondsPerInvocation="849"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="75" invocations="48" avgMicrosecondsPerInvocation="1569" maxMicrosecondsPerInvocation="58662" standardDeviationMircosecondsPerInvocation="8355"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="76" invocations="259" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="11088" standardDeviationMircosecondsPerInvocation="1227"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteCheckReturnValueAnnotations" totalMilliseconds="79" invocations="259" avgMicrosecondsPerInvocation="306" maxMicrosecondsPerInvocation="73421" standardDeviationMircosecondsPerInvocation="4552"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="96" invocations="310" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="15581" standardDeviationMircosecondsPerInvocation="1255"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="100" invocations="48" avgMicrosecondsPerInvocation="2097" maxMicrosecondsPerInvocation="72223" standardDeviationMircosecondsPerInvocation="10430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="113" invocations="259" avgMicrosecondsPerInvocation="437" maxMicrosecondsPerInvocation="26458" standardDeviationMircosecondsPerInvocation="2468"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="115" invocations="48" avgMicrosecondsPerInvocation="2408" maxMicrosecondsPerInvocation="36487" standardDeviationMircosecondsPerInvocation="7977"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="133" invocations="48" avgMicrosecondsPerInvocation="2786" maxMicrosecondsPerInvocation="83198" standardDeviationMircosecondsPerInvocation="13538"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="150" invocations="267" avgMicrosecondsPerInvocation="564" maxMicrosecondsPerInvocation="44739" standardDeviationMircosecondsPerInvocation="3858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="160" invocations="259" avgMicrosecondsPerInvocation="619" maxMicrosecondsPerInvocation="33813" standardDeviationMircosecondsPerInvocation="3047"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="167" invocations="267" avgMicrosecondsPerInvocation="627" maxMicrosecondsPerInvocation="47243" standardDeviationMircosecondsPerInvocation="4111"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="194" invocations="267" avgMicrosecondsPerInvocation="728" maxMicrosecondsPerInvocation="49342" standardDeviationMircosecondsPerInvocation="3810"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="199" invocations="15" avgMicrosecondsPerInvocation="13310" maxMicrosecondsPerInvocation="88425" standardDeviationMircosecondsPerInvocation="23520"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="214" invocations="214" avgMicrosecondsPerInvocation="1001" maxMicrosecondsPerInvocation="35891" standardDeviationMircosecondsPerInvocation="3417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="268" invocations="259" avgMicrosecondsPerInvocation="1038" maxMicrosecondsPerInvocation="81060" standardDeviationMircosecondsPerInvocation="5717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="270" invocations="268" avgMicrosecondsPerInvocation="1009" maxMicrosecondsPerInvocation="21114" standardDeviationMircosecondsPerInvocation="3071"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="288" invocations="267" avgMicrosecondsPerInvocation="1079" maxMicrosecondsPerInvocation="34490" standardDeviationMircosecondsPerInvocation="3670"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="297" invocations="396" avgMicrosecondsPerInvocation="751" maxMicrosecondsPerInvocation="19850" standardDeviationMircosecondsPerInvocation="2244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="413" invocations="267" avgMicrosecondsPerInvocation="1549" maxMicrosecondsPerInvocation="53003" standardDeviationMircosecondsPerInvocation="5671"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="417" invocations="267" avgMicrosecondsPerInvocation="1565" maxMicrosecondsPerInvocation="71398" standardDeviationMircosecondsPerInvocation="6108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="423" invocations="4773" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="38627" standardDeviationMircosecondsPerInvocation="885"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="436" invocations="259" avgMicrosecondsPerInvocation="1684" maxMicrosecondsPerInvocation="91832" standardDeviationMircosecondsPerInvocation="7779"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="761" invocations="1162" avgMicrosecondsPerInvocation="654" maxMicrosecondsPerInvocation="280985" standardDeviationMircosecondsPerInvocation="8585"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="7359" invocations="1164" avgMicrosecondsPerInvocation="6322" maxMicrosecondsPerInvocation="389464" standardDeviationMircosecondsPerInvocation="22538"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

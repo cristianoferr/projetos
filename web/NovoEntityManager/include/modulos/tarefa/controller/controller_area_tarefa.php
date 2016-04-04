@@ -1,0 +1,6 @@
+<?
+class AreaTarefaController extends BaseController{
+
+
+	}
+?>

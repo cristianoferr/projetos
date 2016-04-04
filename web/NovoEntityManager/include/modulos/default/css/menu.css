@@ -1,0 +1,175 @@
+	.setaOpen{
+		width:32px;
+		height:16px;
+		text-align: right;
+		float:right;
+		
+		
+	}
+	
+	 .panelsize{
+		width:100%;
+	}
+	.container{
+		margin: 0 auto;
+		width: 100%;
+	}
+
+
+ /* rightMenu starts here */
+	#rightMenu {
+		height:auto;
+		padding-top: 10px;
+		padding-right: 10px;
+	}
+	
+
+	.hiddenMenu {
+	width: 136px;
+	display: inline-block;
+	float:left;
+	top:0px;
+	position: relative;
+	display: inline-block;
+	margin-right:15px;
+
+
+	}
+
+	/* sideMenu starts here */
+	.sideMenu {
+	width: 100%;
+	float:left;
+	margin-right:15px;
+	white-space:nowrap;
+	overflow: hidden;
+	display: inline-block;
+	}
+
+	.sideMenu ul,.hiddenMenu ul
+	{
+	font-family: Arial, Helvetica, sans-serif;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+
+
+	}
+	.sideMenu li,.hiddenMenu li
+	{
+	display: inline;
+	/* for IE5 and IE6 */
+
+	}
+
+	.sideMenu a,.hiddenMenu a
+	{
+	color: #483000;
+	text-decoration: none;
+	font-size: 14px;
+	display: block;
+	
+	background-color: #F0F0D8;
+	border-bottom: 1px solid #fff;
+	}
+
+	.sideMenu a:link, .sideMenu a:visited,.hiddenMenu a:link,.hiddenMenu a:visited
+	{
+	text-decoration: none;
+	}
+
+	.sideMenu a:hover,.hiddenMenu a:hover
+	{
+	background-color: #487890 ;
+	color: #fff;
+	}
+
+	.sideMenu li a#current
+	{
+	border-bottom: 3px solid #C0C018;
+	background: #487890 ;
+	color: #fff;
+	}
+
+	.sideMenu li a#raiz_entidades,.hiddenMenu li a#mostra
+	{
+	background: #b8b890 ;
+	color: #fff;
+	font-weight:bold;
+	font-size: 14px;
+	border-bottom: 8px solid #d0d0d8;
+	padding: 5px;
+	}
+	/* Menu 2 ends here */
+
+	a.raiz_projeto{
+		background-color:#a8a890;
+		color: #fff;
+		text-decoration: underline;
+		
+		white-space:nowrap;
+		width: 100%;
+		
+	}
+
+	/*&#x25B6;*/
+	a.menu_expandido:before{
+	content:"\25BC";
+	right:0px;
+	position:relative;
+	padding-right: 5px;
+	}
+
+	a.menu_contraido:before{
+	content:"\25B6";
+	right:0px;
+	position:relative;
+	padding-right: 5px;
+
+	}
+
+	a.raiz_projeto:hover{
+		background-color:#574d00;
+		color: #fff;
+	}
+
+@media screen and (min-width: 720px) {
+	.panelsize{
+	/*	width:80%;*/
+	}
+
+	.container{
+		width: 80%;
+	}
+
+	.sideMenu{
+		visibility: visible;
+	}
+
+	.setaOpen{
+		width:16px;
+		height:16px;
+	}
+}
+
+
+@media screen and (min-width: 1025px) {
+	#rightMenu {
+		position:absolute;
+		right:0px;
+		top:0px;
+
+	}
+/*
+	#topMenu a,#rightMenu a
+	{
+		padding: 3px;
+		margin-right: 3px;
+	}*/
+
+	.sideMenu {
+		width: 136px;
+	}
+
+	
+}

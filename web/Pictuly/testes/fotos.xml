@@ -1,0 +1,15 @@
+<photos>
+    <photo title="CSS Mastery" imageurl="images/css.jpg" miniurl="images/css.jpg">
+    <description>
+    info goes here.
+    </description>
+    </photo>
+
+
+    <photo title="CSS Mastery" imageurl="images/css.jpg" miniurl="images/css.jpg">
+    <description>
+    outro livro
+    </description>
+    </photo>
+
+</photos>

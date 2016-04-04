@@ -1,0 +1,83 @@
+//Defines
+@define companyName=PlayLade
+@define metro=1
+@define maxGoals=5
+@define minGoals=1
+@define meleeRange=1
+@define lowRange=20
+@define normalRange=40
+@define highRange=60
+@define lowConeOfFire=2
+@define highConeOfFire=15
+@define bulletForce=1000
+@define weaponAvgROF=0.5
+@define weaponLowROF=0.8
+@define weaponHighROF=0.3
+@define minRoadwidth=100
+@define maxRoadwidth=200
+@define minLapDistance=3000
+@define maxLapDistance=5000
+@define minMapLength=3000
+@define maxMapLength=5000
+@define mapLength=4000
+@define testVar="OK"
+@define materialTypeFilter={unshaded}
+@define applyLights=0
+@define addMeshRoot={addMesh mesh}
+@define actuatorRoot={actuatorComponent}
+@define materialRoot={material textureMat leaf}
+@define textureMatRoot={textureMatGD leaf}
+@define proceduralTextureRoot={proceduralTexture leaf}
+@define textureLength=1
+@define textureLengthTest=1
+@define textureLengthEditor=1
+@define textureTerrainLength=128
+@define terrainPower=8
+@define isProduction=0
+@define uiIconSize=75
+@define uiIconSizeBig=150
+@function soma($a,$b)=$a+$b
+@function delta($a,$b)=abs($a-$b)
+@function soma($a,$b,$c)=$a+$b+$c
+@function soma($a,$b,$c,$d)=$a+$b+$c+$d
+@function soma($a,$b,$c,$d,$e)=$a+$b+$c+$d+$e
+@function mult($a,$b)=$a*$b
+@function testFunction($a,$b)=$a*$b/2
+@function absMaior($a,$b)=if(absf($a)>absf($b),$a,$b)
+@function absMaior($a,$b,$c)=absMaior(absMaior($a,$b),absf($c))
+@function maior($a,$b)=if($a>$b,$a,$b)
+@function maior($a,$b,$c)=maior(maior($a,$b),$c)
+@function menor($a,$b)=if($a<$b,$a,$b)
+@function menor($a,$b,$c)=menor(menor($a,$b),$c)
+@function randomChoice($a,$b)=if(rand(1,2)==1,$a,$b)
+@function randomChoice($a,$b,$c)=rand(rand($a,$b),rand($b,$c))
+@function dimensions($a)=width=$a.width,height=$a.height,depth=$a.depth
+@function testValor1($a)=$a.valor1
+@function igual($a,$b)=if($a==$b,1,0)
+@function enumValue($tag)=pickOne({$tag enum leaf}).value
+@function enumInit($tag)=toText(pickOne({$tag enum leaf}).init)
+@function toText($a)='$a'
+@function distancePoint($x,$y,$i,$j)=sqrt(sqr($x-$i)+sqr($y-$j))
+@function addNifty($tag,$w,$h)=pickFinal($tag,width=$w,height=$h)
+@function addNifty($tag,$width,$height,$ha,$va)=pickFinal($tag,width=$width,height=$height,align=$ha,valign=$va)
+@function addNifty($tag)=pickFinal($tag)
+@function textureLayer($tag)=pickFinal({$tag textureLayer leaf})
+@function textureLayer($tag,$par1)=pickFinal({$tag textureLayer leaf},$par1)
+@function textureLayer($tag,$par1,$par2,$par3)=pickFinal({$tag textureLayer leaf},$par1,$par2,$par3)
+@function textureLayer($tag,$par1,$par2,$par3,$par4)=pickFinal({$tag textureLayer leaf},$par1,$par2,$par3,$par4)
+@function textureLayer($tag,$par1,$par2)=pickFinal({$tag textureLayer leaf},$par1,$par2)
+@function hexColor($el)='#'&hex($el.r*255)&hex($el.g*255)&hex($el.b*255)
+@function oppositeColor($el)='#'&hex((1-$el.r)*255)&hex((1-$el.g)*255)&hex((1-$el.b)*255)
+@function isOdd($a)=if(mod($a,2)==0,1,0)
+@function getImage($type)=pickSingle({images leaf assetsEnum $type})
+@function curveRatio2($index,$fatPerc,$midPoint,$ptsDepois)=(1+log(abs($midPoint-$index)/($midPoint+$ptsDepois)*$fatPerc))
+@function curveRatioSqr($index,$fatPerc,$midPoint,$ptsDepois)=(1+if($index<=$midPoint,1-sqr(abs($midPoint-$index)/$midPoint),1-sqr(abs($midPoint-$index)/$ptsDepois))*$fatPerc)
+@function curveRatio($index,$fatPerc,$midPoint,$ptsDepois)=(1+if($index<=$midPoint,1-abs($midPoint-$index)/$midPoint,1-abs($midPoint-$index)/$ptsDepois)*$fatPerc)
+@function getNiftyEvent($event,$effect)=pickOne({niftyEffectType $effect},event=enumValue({niftyEffectEvent $event}))
+@function getTransparentEffect($val)=pickFinal(getNiftyEvent({startScreen},{fade}),start='#f',end='#$val',length=10,neverStopRendering=1,startDelay=0)
+@function testMultiplo($par1)=pickFinal(pickTestElement(),val2=2,val3=$par1)
+@function defineSize($minX,$maxX,$minY,$maxY,$minZ,$maxZ)=pickFinal({sizeInfo leaf},minX=$minX,maxX=$maxX,minY=$minY,maxY=$maxY,minZ=$minZ,maxZ=$maxZ)
+@function pickTestElement()=pickOne({testValues teste},val1=1)
+@function checkCondition($component,$check0,$oper,$check1,$name)=pickFinal({conditionElement leaf},components=$component,check0=$check0,oper=$oper,check1=$check1,name=$name)
+@function pickSFX($tag)=pickFinal({assetsEnum sound fx leaf $tag})
+

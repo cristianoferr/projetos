@@ -1,0 +1,134 @@
+/************ GENERICOS ************************/
+label,
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+  float:right;
+
+}
+.label-important,
+.badge-important {
+  background-color: #b94a48;
+    float:right;
+}
+
+.label-important[href],
+.badge-important[href] {
+  background-color: #953b39;
+    float:right;
+}
+
+.label-warning,
+.badge-warning {
+  background-color: #f89406;
+    float:right;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+  background-color: #c67605;
+    float:right;
+}
+
+.label-success,
+.badge-success {
+  background-color: #468847;
+    float:right;
+}
+
+.label-success[href],
+.badge-success[href] {
+  background-color: #356635;
+    float:right;
+}
+
+.label-info,
+.badge-info {
+  background-color: #3a87ad;
+  float:right;
+}
+
+.label-info[href],
+.badge-info[href] {
+  background-color: #2d6987;
+  float:right;
+}
+
+.label-inverse,
+.badge-inverse {
+  background-color: #333333;
+    float:right;
+}
+
+.label-inverse[href],
+.badge-inverse[href] {
+  background-color: #1a1a1a;
+    float:right;
+}
+
+
+/************ WALLPAPER ************************/
+
+
+
+.mediaimage{
+	display:block;
+	float:left;
+	padding-left:10px; 
+
+}
+
+.mediaimage img{
+	width:900px;
+	box-shadow: #000 2px 2px 7px;
+	-moz-box-shadow: #000 2px 2px 7px;
+	-webkit-box-shadow: #000 2px 2px 7px;
+
+
+}
+
+.infos{
+
+	height:100%; 
+	min-height:100%;
+	border-right:solid;
+	border-right-width:1px;
+	clear:both;
+	vertical-align:top;
+	
+	
+}
+
+.infos ul{
+	display: block;
+	margin:0px;
+	padding:0px;
+	width:100%;
+	color:black ;
+	list-style:none;
+	clear:both;
+
+}
+
+.infos ul li{
+	border:1px solid;
+	clear:both;
+	border-color:#fafafa;
+	padding:10px;
+
+}
+
+.infos ul li:hover{
+	background-color:#Fefac0;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+

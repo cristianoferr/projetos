@@ -1,0 +1,12 @@
+<Configuration>
+<DomainFile>ItemDomain.xml</DomainFile>
+
+<ModelActionsPackage>com.cristiano.galactic.model.bt.model.action</ModelActionsPackage>
+<ModelConditionsPackage>com.cristiano.galactic.model.bt.model.condition</ModelConditionsPackage>
+<ModelActionsOutputDirectory>../../../GalacticEngine/src/com/cristiano/galactic/model/bt/model/action</ModelActionsOutputDirectory>
+<ModelConditionsOutputDirectory>../../../GalacticEngine/src/com/cristiano/galactic/model/bt/model/condition</ModelConditionsOutputDirectory>
+<ExecutionActionsPackage>com.cristiano.galactic.model.bt.execution.action</ExecutionActionsPackage>
+<ExecutionConditionsPackage>com.cristiano.galactic.model.bt.execution.condition</ExecutionConditionsPackage>
+<ExecutionActionsOutputDirectory>../../../GalacticEngine/src/com/cristiano/galactic/model/bt/execution/action</ExecutionActionsOutputDirectory>
+<ExecutionConditionsOutputDirectory>../../../GalacticEngine/src/com/cristiano/galactic/model/bt/execution/condition</ExecutionConditionsOutputDirectory>
+</Configuration>

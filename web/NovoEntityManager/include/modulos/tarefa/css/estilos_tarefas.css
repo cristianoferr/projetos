@@ -1,0 +1,64 @@
+.deliverable{
+    padding-left:30px;
+    vertical-align: middle;
+}
+
+.del_tit{
+    vertical-align: middle;
+}
+
+.del_task{
+    margin-left:60px;
+
+    display:block;
+}
+
+.del_task:nth-child(even) {
+    background-color:#efefef;
+}
+
+.del_tasks{
+    display:block;
+    margin-left:60px;
+
+}
+
+.del_block{
+    padding-left:30px;
+    padding-top:30px;
+    background:  #c75f3e ;
+    display:inline-block;
+    vertical-align: middle;
+    margin-bottom:10px;
+    margin-right:5px;
+
+}
+
+.status_del_1{
+    background:  #a9b04f ;
+
+}
+
+.status_del_2{
+    background:  #dbc200 ;
+}
+
+.status_del_3{
+    background:  #ffe205 ;
+}
+
+.status_del_4{
+    background:  #33cc7d ;
+}
+
+.status_del_5{
+    background:  #3394cc ;
+}
+
+.status_del_6{
+    background:  #78a1dd ;
+}
+
+.status_del_7{
+    background:  #c3d8d8 ;
+}

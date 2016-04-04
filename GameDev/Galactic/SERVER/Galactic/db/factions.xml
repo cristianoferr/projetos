@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xml>
+<factions>
+<entity id="0" name="Player1" type="PLAYER"/>
+<entity id="1" name="Argon" type="NPC_CORP"/>
+<entity id="2" name="Boron" type="NPC_CORP"/>
+<entity id="3" name="Split" type="NPC_CORP"/>
+<entity id="4" name="Teladi" type="NPC_CORP"/>
+<entity id="5" name="Terran" type="NPC_CORP"/>
+<entity id="6" name="Xenon" type="NPC_CORP"/>
+<entity id="7" name="Paranid" type="NPC_CORP"/>
+</factions>
+</xml>

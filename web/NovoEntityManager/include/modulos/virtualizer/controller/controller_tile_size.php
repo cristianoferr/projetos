@@ -1,0 +1,7 @@
+<?
+
+class TileSizeController extends BaseController {
+    
+}
+
+?>

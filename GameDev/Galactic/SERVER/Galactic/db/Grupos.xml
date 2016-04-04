@@ -1,0 +1,1470 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xml>
+<waregroups>
+<group id="8" name="INTERNAL_FUNCTIONS">
+<properties>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="8.0"/>
+<property name="PROP_NAME" vlrPadrao="INTERNAL_FUNCTIONS"/>
+</properties>
+<wares/>
+<group id="9" idGrupoPai="8" idWareDefault="35" name="GRP_CAMERA" nameWareDefault="CAMERA">
+<properties>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="9.0"/>
+<property name="PROP_NAME" vlrPadrao="GRP_CAMERA"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+</properties>
+<wares>
+<ware id="35" idGrupo="9" name="CAMERA" qtdMinRefine="1" volume="0.0">
+<properties>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="35.0"/>
+<property name="PROP_NAME" vlrPadrao="CAMERA"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+</properties>
+</ware>
+</wares>
+</group>
+</group>
+<group id="10" name="WARE">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="10.0"/>
+<property name="PROP_NAME" vlrPadrao="WARE"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+<group id="11" idGrupoPai="10" name="ORE">
+<properties>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="11.0"/>
+<property name="PROP_NAME" vlrPadrao="ORE"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+</properties>
+<wares>
+<ware id="55" idGrupo="11" name="Veldspar" qtdMinRefine="333" volume="0.1">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="55.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@186d4c1"/>
+<property name="PROP_NAME" vlrPadrao="Veldspar"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="10.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="56" idGrupo="11" name="Scordite" qtdMinRefine="333" volume="0.15">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="56.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@f9f9d8"/>
+<property name="PROP_NAME" vlrPadrao="Scordite"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="57" idGrupo="11" name="Pyroxeres" qtdMinRefine="333" volume="0.3">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="57.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@1820dda"/>
+<property name="PROP_NAME" vlrPadrao="Pyroxeres"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="58" idGrupo="11" name="Plagioclase" qtdMinRefine="333" volume="0.35">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="58.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@15b7986"/>
+<property name="PROP_NAME" vlrPadrao="Plagioclase"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="59" idGrupo="11" name="Omber" qtdMinRefine="500" volume="0.6">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="59.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@87816d"/>
+<property name="PROP_NAME" vlrPadrao="Omber"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="60" idGrupo="11" name="Kernite" qtdMinRefine="400" volume="1.2">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="60.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@422ede"/>
+<property name="PROP_NAME" vlrPadrao="Kernite"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="61" idGrupo="11" name="Jaspet" qtdMinRefine="500" volume="2.0">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="61.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@112f614"/>
+<property name="PROP_NAME" vlrPadrao="Jaspet"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="62" idGrupo="11" name="Hemorphite" qtdMinRefine="500" volume="3.0">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="62.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@1d9dc39"/>
+<property name="PROP_NAME" vlrPadrao="Hemorphite"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="63" idGrupo="11" name="Hedbergite" qtdMinRefine="500" volume="3.0">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="63.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@93dcd"/>
+<property name="PROP_NAME" vlrPadrao="Hedbergite"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="64" idGrupo="11" name="Gneiss" qtdMinRefine="400" volume="5.0">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="64.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@111a3ac"/>
+<property name="PROP_NAME" vlrPadrao="Gneiss"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="65" idGrupo="11" name="Dark Ochre" qtdMinRefine="400" volume="8.0">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="65.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@a83b8a"/>
+<property name="PROP_NAME" vlrPadrao="Dark Ochre"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="66" idGrupo="11" name="Crokite" qtdMinRefine="250" volume="16.0">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="66.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@22c95b"/>
+<property name="PROP_NAME" vlrPadrao="Crokite"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="67" idGrupo="11" name="Spodumain" qtdMinRefine="250" volume="16.0">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="67.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@1d1acd3"/>
+<property name="PROP_NAME" vlrPadrao="Spodumain"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="68" idGrupo="11" name="Bistot" qtdMinRefine="200" volume="16.0">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="68.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@a981ca"/>
+<property name="PROP_NAME" vlrPadrao="Bistot"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="69" idGrupo="11" name="Arkonor" qtdMinRefine="200" volume="16.0">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="69.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@8814e9"/>
+<property name="PROP_NAME" vlrPadrao="Arkonor"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="70" idGrupo="11" name="Mercoxit" qtdMinRefine="250" volume="40.0">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="70.0"/>
+<property name="DTL_REFINE_INTO" vlrPadrao="com.cristiano.gamelib.propriedades.Propriedades@1a1c887"/>
+<property name="PROP_NAME" vlrPadrao="Mercoxit"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+</wares>
+<group id="12" idGrupoPai="11" name="Refined Ore">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="12.0"/>
+<property name="PROP_NAME" vlrPadrao="Refined Ore"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+<wares>
+<ware id="71" idGrupo="12" name="Tritanium" qtdMinRefine="1" volume="0.1">
+<properties>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="71.0"/>
+<property name="PROP_NAME" vlrPadrao="Tritanium"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="72" idGrupo="12" name="Pyerite" qtdMinRefine="1" volume="0.1">
+<properties>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="72.0"/>
+<property name="PROP_NAME" vlrPadrao="Pyerite"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="73" idGrupo="12" name="Mexallon" qtdMinRefine="1" volume="0.1">
+<properties>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="73.0"/>
+<property name="PROP_NAME" vlrPadrao="Mexallon"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="74" idGrupo="12" name="Isogen" qtdMinRefine="1" volume="0.1">
+<properties>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="74.0"/>
+<property name="PROP_NAME" vlrPadrao="Isogen"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="75" idGrupo="12" name="Nocxium" qtdMinRefine="1" volume="0.1">
+<properties>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="75.0"/>
+<property name="PROP_NAME" vlrPadrao="Nocxium"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="76" idGrupo="12" name="Zydrine" qtdMinRefine="1" volume="0.1">
+<properties>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="76.0"/>
+<property name="PROP_NAME" vlrPadrao="Zydrine"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="77" idGrupo="12" name="Megacyte" qtdMinRefine="1" volume="0.1">
+<properties>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="77.0"/>
+<property name="PROP_NAME" vlrPadrao="Megacyte"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="78" idGrupo="12" name="Morphite" qtdMinRefine="1" volume="0.1">
+<properties>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="PROP_ID" vlrPadrao="78.0"/>
+<property name="PROP_NAME" vlrPadrao="Morphite"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+</properties>
+</ware>
+</wares>
+</group>
+</group>
+<group id="13" idGrupoPai="10" name="Equipment">
+<properties>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="13.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Equipment"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+<group id="14" idGrupoPai="13" name="EnergyEquipment">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="14.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="EnergyEquipment"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+<group id="15" idGrupoPai="14" idWareDefault="37" name="Weapon" nameWareDefault="Basic Weapon">
+<properties>
+<property name="DTL_DMG_HULL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="15.0"/>
+<property name="DTL_LASER_ENERGY_SHOT" vlrPadrao="0.0"/>
+<property name="DTL_SPEED" vlrPadrao="0.0"/>
+<property name="DTL_DMG_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_RANGE" vlrPadrao="0.0"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="1.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="DTL_COOLDOWN" vlrPadrao="0.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Weapon"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+<wares>
+<ware id="37" idGrupo="15" name="Basic Weapon" qtdMinRefine="1" volume="10.0">
+<properties>
+<property name="DTL_DMG_HULL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="37.0"/>
+<property name="DTL_LASER_ENERGY_SHOT" vlrPadrao="0.0"/>
+<property name="DTL_SPEED" vlrPadrao="1000.0"/>
+<property name="DTL_DMG_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_RANGE" vlrPadrao="100000.0"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="1.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="10.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="DTL_COOLDOWN" vlrPadrao="300.0"/>
+<property name="PROP_NAME" vlrPadrao="Basic Weapon"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+</wares>
+<group id="16" idGrupoPai="15" idWareDefault="36" name="Laser" nameWareDefault="Basic Laser">
+<properties>
+<property name="DTL_DMG_HULL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="16.0"/>
+<property name="DTL_LASER_ENERGY_SHOT" vlrPadrao="0.0"/>
+<property name="DTL_SPEED" vlrPadrao="0.0"/>
+<property name="DTL_DMG_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_RANGE" vlrPadrao="0.0"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="1.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="DTL_COOLDOWN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Laser"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+<wares>
+<ware id="36" idGrupo="16" name="Basic Laser" qtdMinRefine="1" volume="10.0">
+<properties>
+<property name="DTL_DMG_HULL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="36.0"/>
+<property name="DTL_LASER_ENERGY_SHOT" vlrPadrao="0.0"/>
+<property name="DTL_SPEED" vlrPadrao="10000.0"/>
+<property name="DTL_DMG_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_RANGE" vlrPadrao="100000.0"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="1.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="30.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_COOLDOWN" vlrPadrao="300.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Basic Laser"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+</wares>
+</group>
+<group id="17" idGrupoPai="15" name="Missil">
+<properties>
+<property name="DTL_DMG_HULL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="17.0"/>
+<property name="DTL_LASER_ENERGY_SHOT" vlrPadrao="0.0"/>
+<property name="DTL_SPEED" vlrPadrao="0.0"/>
+<property name="DTL_DMG_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_RANGE" vlrPadrao="0.0"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="1.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_BLAST_RADIUS" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="DTL_COOLDOWN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Missil"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+<group id="18" idGrupoPai="17" name="Torpedo">
+<properties>
+<property name="DTL_DMG_HULL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="18.0"/>
+<property name="DTL_LASER_ENERGY_SHOT" vlrPadrao="0.0"/>
+<property name="DTL_SPEED" vlrPadrao="0.0"/>
+<property name="DTL_DMG_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_RANGE" vlrPadrao="0.0"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="1.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="0.0"/>
+<property name="DTL_BLAST_RADIUS" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="DTL_COOLDOWN" vlrPadrao="0.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Torpedo"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+</group>
+</group>
+</group>
+<group id="19" idGrupoPai="14" idWareDefault="40" name="Shield" nameWareDefault="Basic Shield">
+<properties>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="19.0"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELD" vlrPadrao="1.0"/>
+<property name="PROP_NAME" vlrPadrao="Shield"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+<wares>
+<ware id="40" idGrupo="19" name="Basic Shield" qtdMinRefine="1" volume="10.0">
+<properties>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="40.0"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELD" vlrPadrao="1.0"/>
+<property name="PROP_NAME" vlrPadrao="Basic Shield"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+</wares>
+</group>
+<group id="20" idGrupoPai="14" idWareDefault="54" name="Generator" nameWareDefault="Basic Generator">
+<properties>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CAPREGEN" vlrPadrao="1.0"/>
+<property name="PROP_ID" vlrPadrao="20.0"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Generator"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+<wares>
+<ware id="54" idGrupo="20" name="Basic Generator" qtdMinRefine="1" volume="10.0">
+<properties>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CAPREGEN" vlrPadrao="1.0"/>
+<property name="PROP_ID" vlrPadrao="54.0"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Basic Generator"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+</wares>
+</group>
+<group id="21" idGrupoPai="14" name="Movement">
+<properties>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="21.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Movement"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="1.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+<group id="22" idGrupoPai="21" idWareDefault="38" name="Engine" nameWareDefault="Basic Engine">
+<properties>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="22.0"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="1.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="1.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Engine"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+<wares>
+<ware id="38" idGrupo="22" name="Basic Engine" qtdMinRefine="1" volume="100.0">
+<properties>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="38.0"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="1.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="30.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="1.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Basic Engine"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="39" idGrupo="22" name="Capital Engine" qtdMinRefine="1" volume="100.0">
+<properties>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="39.0"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="1.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="30.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="1.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Capital Engine"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+</wares>
+</group>
+<group id="23" idGrupoPai="21" name="Thruster">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="23.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Thruster"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="1.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_ENERGY_USE_SEC" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+</group>
+</group>
+</group>
+<group id="24" idGrupoPai="13" name="PhysicalEquipment">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="24.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="PhysicalEquipment"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+<group id="25" idGrupoPai="24" idWareDefault="53" name="AMMO" nameWareDefault="Basic AMMO">
+<properties>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="25.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="AMMO"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+</properties>
+<wares>
+<ware id="53" idGrupo="25" name="Basic AMMO" qtdMinRefine="1" volume="0.1">
+<properties>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="53.0"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELD" vlrPadrao="100.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="3.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_BASE_ARMOR" vlrPadrao="100.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Basic AMMO"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+</ware>
+</wares>
+</group>
+<group id="26" idGrupoPai="24" name="HULL">
+<properties>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="26.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="HULL"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+</group>
+<group id="27" idGrupoPai="24" name="Turret">
+<properties>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="27.0"/>
+<property name="DTL_COOLDOWN" vlrPadrao="0.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="1.0"/>
+<property name="PROP_NAME" vlrPadrao="Turret"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+<group id="28" idGrupoPai="27" name="Fixed Turret">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="28.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="DTL_COOLDOWN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Fixed Turret"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+</group>
+<group id="29" idGrupoPai="27" name="Mobile Turret">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="29.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="1.0"/>
+<property name="DTL_COOLDOWN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Mobile Turret"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+</group>
+<group id="30" idGrupoPai="27" name="Missile Turret">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="30.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="DTL_COOLDOWN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Missile Turret"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+</group>
+</group>
+<group id="31" idGrupoPai="24" name="DockBay">
+<properties>
+<property name="DTL_CURR_VALUE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="31.0"/>
+<property name="DTL_MAX_VALUE" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="DockBay"/>
+<property name="DTL_AUTO_ACTIVATE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+</group>
+</group>
+</group>
+<group id="32" idGrupoPai="10" name="Artificial Entity">
+<properties>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="32.0"/>
+<property name="PROP_NAME" vlrPadrao="Artificial Entity"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+<group id="33" idGrupoPai="32" idWareDefault="52" name="Ship" nameWareDefault="Providence">
+<properties>
+<property name="DTL_CURR_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_TURN" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="33.0"/>
+<property name="DTL_BASE_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_CURR_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_BASE_TURN" vlrPadrao="0.0"/>
+<property name="DTL_BASE_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_BASE_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_MULT_TURN" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_THRUST_POWER_TEMP" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MULT_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Ship"/>
+<property name="DTL_CURR_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_MULT_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+<wares>
+<ware id="41" idGrupo="33" name="Buster" qtdMinRefine="1" volume="10000.0">
+<properties>
+<property name="DTL_CURR_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="41.0"/>
+<property name="DTL_BASE_CARGO" vlrPadrao="60.0"/>
+<property name="DTL_CURR_MAX_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="1.0"/>
+<property name="DTL_CURR_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="100000.0"/>
+<property name="DTL_CURR_MAX_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_BASE_CAPREGEN" vlrPadrao="80.0"/>
+<property name="DTL_CURR_MAX_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_BASE_TURN" vlrPadrao="10.0"/>
+<property name="DTL_BASE_ARMOR" vlrPadrao="100.0"/>
+<property name="DTL_CURR_MAX_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_BASE_ACCEL" vlrPadrao="223.0"/>
+<property name="DTL_MULT_TURN" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_THRUST_POWER_TEMP" vlrPadrao="3.0E7"/>
+<property name="DTL_CURR_MAX_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELD" vlrPadrao="180.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MULT_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELDREGEN" vlrPadrao="380.0"/>
+<property name="DTL_BASE_CAPACITOR" vlrPadrao="125.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Buster"/>
+<property name="DTL_MULT_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CARGO" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="42" idGrupo="33" name="Nova" qtdMinRefine="1" volume="10000.0">
+<properties>
+<property name="DTL_CURR_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="42.0"/>
+<property name="DTL_BASE_CARGO" vlrPadrao="80.0"/>
+<property name="DTL_CURR_MAX_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="2.0"/>
+<property name="DTL_CURR_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="150000.0"/>
+<property name="DTL_CURR_MAX_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_BASE_CAPREGEN" vlrPadrao="90.0"/>
+<property name="DTL_CURR_MAX_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_BASE_TURN" vlrPadrao="10.0"/>
+<property name="DTL_BASE_ARMOR" vlrPadrao="120.0"/>
+<property name="DTL_CURR_MAX_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_BASE_ACCEL" vlrPadrao="190.0"/>
+<property name="DTL_MULT_TURN" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_THRUST_POWER_TEMP" vlrPadrao="3.0E7"/>
+<property name="DTL_CURR_MAX_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELD" vlrPadrao="200.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MULT_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELDREGEN" vlrPadrao="440.0"/>
+<property name="DTL_BASE_CAPACITOR" vlrPadrao="125.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Nova"/>
+<property name="DTL_MULT_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CARGO" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="43" idGrupo="33" name="Discoverer" qtdMinRefine="1" volume="10000.0">
+<properties>
+<property name="DTL_CURR_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="43.0"/>
+<property name="DTL_BASE_CARGO" vlrPadrao="40.0"/>
+<property name="DTL_CURR_MAX_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="3.0"/>
+<property name="DTL_CURR_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="50000.0"/>
+<property name="DTL_CURR_MAX_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_BASE_CAPREGEN" vlrPadrao="60.0"/>
+<property name="DTL_CURR_MAX_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_BASE_TURN" vlrPadrao="10.0"/>
+<property name="DTL_BASE_ARMOR" vlrPadrao="80.0"/>
+<property name="DTL_CURR_MAX_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_BASE_ACCEL" vlrPadrao="439.0"/>
+<property name="DTL_MULT_TURN" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_THRUST_POWER_TEMP" vlrPadrao="3.0E7"/>
+<property name="DTL_CURR_MAX_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELD" vlrPadrao="160.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MULT_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELDREGEN" vlrPadrao="320.0"/>
+<property name="DTL_BASE_CAPACITOR" vlrPadrao="125.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Discoverer"/>
+<property name="DTL_MULT_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CARGO" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="44" idGrupo="33" name="DiscovererPirate" qtdMinRefine="1" volume="10000.0">
+<properties>
+<property name="DTL_CURR_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="44.0"/>
+<property name="DTL_BASE_CARGO" vlrPadrao="40.0"/>
+<property name="DTL_CURR_MAX_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="4.0"/>
+<property name="DTL_CURR_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="50000.0"/>
+<property name="DTL_CURR_MAX_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_BASE_CAPREGEN" vlrPadrao="60.0"/>
+<property name="DTL_CURR_MAX_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_BASE_TURN" vlrPadrao="10.0"/>
+<property name="DTL_BASE_ARMOR" vlrPadrao="80.0"/>
+<property name="DTL_CURR_MAX_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_BASE_ACCEL" vlrPadrao="410.0"/>
+<property name="DTL_MULT_TURN" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_THRUST_POWER_TEMP" vlrPadrao="3.0E7"/>
+<property name="DTL_CURR_MAX_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELD" vlrPadrao="160.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MULT_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELDREGEN" vlrPadrao="320.0"/>
+<property name="DTL_BASE_CAPACITOR" vlrPadrao="125.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="DiscovererPirate"/>
+<property name="DTL_MULT_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CARGO" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="45" idGrupo="33" name="Orca" qtdMinRefine="1" volume="10000.0">
+<properties>
+<property name="DTL_CURR_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="45.0"/>
+<property name="DTL_BASE_CARGO" vlrPadrao="30000.0"/>
+<property name="DTL_CURR_MAX_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="5.0"/>
+<property name="DTL_CURR_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="6.1E8"/>
+<property name="DTL_CURR_MAX_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_BASE_CAPREGEN" vlrPadrao="800.0"/>
+<property name="DTL_CURR_MAX_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_BASE_TURN" vlrPadrao="10.0"/>
+<property name="DTL_BASE_ARMOR" vlrPadrao="6900.0"/>
+<property name="DTL_CURR_MAX_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_BASE_ACCEL" vlrPadrao="60.0"/>
+<property name="DTL_MULT_TURN" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_THRUST_POWER_TEMP" vlrPadrao="3.0E7"/>
+<property name="DTL_CURR_MAX_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELD" vlrPadrao="10750.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MULT_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELDREGEN" vlrPadrao="800.0"/>
+<property name="DTL_BASE_CAPACITOR" vlrPadrao="4200.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Orca"/>
+<property name="DTL_MULT_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CARGO" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="46" idGrupo="33" name="Avatar" qtdMinRefine="1" volume="10000.0">
+<properties>
+<property name="DTL_CURR_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="46.0"/>
+<property name="DTL_BASE_CARGO" vlrPadrao="11250.0"/>
+<property name="DTL_CURR_MAX_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="6.0"/>
+<property name="DTL_CURR_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="5.0383183872E10"/>
+<property name="DTL_CURR_MAX_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_BASE_CAPREGEN" vlrPadrao="6750.0"/>
+<property name="DTL_CURR_MAX_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_BASE_TURN" vlrPadrao="10.0"/>
+<property name="DTL_BASE_ARMOR" vlrPadrao="1400000.0"/>
+<property name="DTL_CURR_MAX_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_BASE_ACCEL" vlrPadrao="105.0"/>
+<property name="DTL_MULT_TURN" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_THRUST_POWER_TEMP" vlrPadrao="3.0E7"/>
+<property name="DTL_CURR_MAX_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELD" vlrPadrao="580000.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MULT_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELDREGEN" vlrPadrao="37000.0"/>
+<property name="DTL_BASE_CAPACITOR" vlrPadrao="112500.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Avatar"/>
+<property name="DTL_MULT_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CARGO" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="47" idGrupo="33" name="Erebus" qtdMinRefine="1" volume="10000.0">
+<properties>
+<property name="DTL_CURR_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="47.0"/>
+<property name="DTL_BASE_CARGO" vlrPadrao="16250.0"/>
+<property name="DTL_CURR_MAX_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="7.0"/>
+<property name="DTL_CURR_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="4.86784E10"/>
+<property name="DTL_CURR_MAX_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_BASE_CAPREGEN" vlrPadrao="6480.0"/>
+<property name="DTL_CURR_MAX_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_BASE_TURN" vlrPadrao="10.0"/>
+<property name="DTL_BASE_ARMOR" vlrPadrao="1300000.0"/>
+<property name="DTL_CURR_MAX_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_BASE_ACCEL" vlrPadrao="70.0"/>
+<property name="DTL_MULT_TURN" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_THRUST_POWER_TEMP" vlrPadrao="3.0E7"/>
+<property name="DTL_CURR_MAX_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELD" vlrPadrao="680000.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MULT_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELDREGEN" vlrPadrao="40615.0"/>
+<property name="DTL_BASE_CAPACITOR" vlrPadrao="108000.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Erebus"/>
+<property name="DTL_MULT_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CARGO" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="48" idGrupo="33" name="Drake" qtdMinRefine="1" volume="10000.0">
+<properties>
+<property name="DTL_CURR_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="48.0"/>
+<property name="DTL_BASE_CARGO" vlrPadrao="345.0"/>
+<property name="DTL_CURR_MAX_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="8.0"/>
+<property name="DTL_CURR_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="2.5E7"/>
+<property name="DTL_CURR_MAX_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_BASE_CAPREGEN" vlrPadrao="750.0"/>
+<property name="DTL_CURR_MAX_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_BASE_TURN" vlrPadrao="10.0"/>
+<property name="DTL_BASE_ARMOR" vlrPadrao="3906.0"/>
+<property name="DTL_CURR_MAX_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_BASE_ACCEL" vlrPadrao="140.0"/>
+<property name="DTL_MULT_TURN" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_THRUST_POWER_TEMP" vlrPadrao="3.0E7"/>
+<property name="DTL_CURR_MAX_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELD" vlrPadrao="5469.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MULT_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELDREGEN" vlrPadrao="1400.0"/>
+<property name="DTL_BASE_CAPACITOR" vlrPadrao="2812.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Drake"/>
+<property name="DTL_MULT_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CARGO" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="49" idGrupo="33" name="Velator" qtdMinRefine="1" volume="10000.0">
+<properties>
+<property name="DTL_CURR_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="49.0"/>
+<property name="DTL_BASE_CARGO" vlrPadrao="120.0"/>
+<property name="DTL_CURR_MAX_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="9.0"/>
+<property name="DTL_CURR_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="250000.0"/>
+<property name="DTL_CURR_MAX_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_BASE_CAPREGEN" vlrPadrao="130.0"/>
+<property name="DTL_CURR_MAX_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_BASE_TURN" vlrPadrao="10.0"/>
+<property name="DTL_BASE_ARMOR" vlrPadrao="188.0"/>
+<property name="DTL_CURR_MAX_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_BASE_ACCEL" vlrPadrao="296.0"/>
+<property name="DTL_MULT_TURN" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_THRUST_POWER_TEMP" vlrPadrao="3.0E7"/>
+<property name="DTL_CURR_MAX_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELD" vlrPadrao="235.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MULT_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELDREGEN" vlrPadrao="625.0"/>
+<property name="DTL_BASE_CAPACITOR" vlrPadrao="125.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Velator"/>
+<property name="DTL_MULT_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CARGO" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="50" idGrupo="33" name="Megathron" qtdMinRefine="1" volume="10000.0">
+<properties>
+<property name="DTL_CURR_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="50.0"/>
+<property name="DTL_BASE_CARGO" vlrPadrao="675.0"/>
+<property name="DTL_CURR_MAX_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="10.0"/>
+<property name="DTL_CURR_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="1.05E8"/>
+<property name="DTL_CURR_MAX_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_BASE_CAPREGEN" vlrPadrao="1155.0"/>
+<property name="DTL_CURR_MAX_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_BASE_TURN" vlrPadrao="10.0"/>
+<property name="DTL_BASE_ARMOR" vlrPadrao="6641.0"/>
+<property name="DTL_CURR_MAX_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_BASE_ACCEL" vlrPadrao="105.0"/>
+<property name="DTL_MULT_TURN" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_THRUST_POWER_TEMP" vlrPadrao="3.0E7"/>
+<property name="DTL_CURR_MAX_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELD" vlrPadrao="6211.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MULT_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELDREGEN" vlrPadrao="2500.0"/>
+<property name="DTL_BASE_CAPACITOR" vlrPadrao="5625.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Megathron"/>
+<property name="DTL_MULT_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CARGO" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="51" idGrupo="33" name="Ragnarok" qtdMinRefine="1" volume="10000.0">
+<properties>
+<property name="DTL_CURR_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="51.0"/>
+<property name="DTL_BASE_CARGO" vlrPadrao="15000.0"/>
+<property name="DTL_CURR_MAX_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="11.0"/>
+<property name="DTL_CURR_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="4.86784E10"/>
+<property name="DTL_CURR_MAX_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_BASE_CAPREGEN" vlrPadrao="5940.0"/>
+<property name="DTL_CURR_MAX_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_BASE_TURN" vlrPadrao="10.0"/>
+<property name="DTL_BASE_ARMOR" vlrPadrao="700000.0"/>
+<property name="DTL_CURR_MAX_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_BASE_ACCEL" vlrPadrao="80.0"/>
+<property name="DTL_MULT_TURN" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_THRUST_POWER_TEMP" vlrPadrao="3.0E7"/>
+<property name="DTL_CURR_MAX_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELD" vlrPadrao="1280000.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MULT_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELDREGEN" vlrPadrao="44000.0"/>
+<property name="DTL_BASE_CAPACITOR" vlrPadrao="112500.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Ragnarok"/>
+<property name="DTL_MULT_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CARGO" vlrPadrao="0.0"/>
+</properties>
+</ware>
+<ware id="52" idGrupo="33" name="Providence" qtdMinRefine="1" volume="10000.0">
+<properties>
+<property name="DTL_CURR_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_ID" vlrPadrao="52.0"/>
+<property name="DTL_BASE_CARGO" vlrPadrao="750000.0"/>
+<property name="DTL_CURR_MAX_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="12.0"/>
+<property name="DTL_CURR_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_BASE_PRICE" vlrPadrao="7.76193984E8"/>
+<property name="DTL_CURR_MAX_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_BASE_CAPREGEN" vlrPadrao="231.0"/>
+<property name="DTL_CURR_MAX_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_BASE_TURN" vlrPadrao="10.0"/>
+<property name="DTL_BASE_ARMOR" vlrPadrao="24000.0"/>
+<property name="DTL_CURR_MAX_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_BASE_ACCEL" vlrPadrao="70.0"/>
+<property name="DTL_MULT_TURN" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CARGO" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_THRUST_POWER_TEMP" vlrPadrao="3.0E7"/>
+<property name="DTL_CURR_MAX_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELD" vlrPadrao="5000.0"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MULT_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_MAX_TURN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_BASE_SHIELDREGEN" vlrPadrao="1666.0"/>
+<property name="DTL_BASE_CAPACITOR" vlrPadrao="3750.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE"/>
+<property name="DTL_MULT_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_MULT_CAPACITOR" vlrPadrao="0.0"/>
+<property name="DTL_MULT_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELD" vlrPadrao="0.0"/>
+<property name="DTL_CURR_ACCEL" vlrPadrao="0.0"/>
+<property name="DTL_CURR_SHIELDREGEN" vlrPadrao="0.0"/>
+<property name="PROP_NAME" vlrPadrao="Providence"/>
+<property name="DTL_MULT_ARMOR" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_CURR_CARGO" vlrPadrao="0.0"/>
+</properties>
+</ware>
+</wares>
+</group>
+<group id="34" idGrupoPai="32" name="Station">
+<properties>
+<property name="DTL_BASE_PRICE" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MIN_PRICE" vlrPadrao="0.0"/>
+<property name="PROP_TYPE" vlrPadrao="ET_WARE_GROUP"/>
+<property name="PROP_ID" vlrPadrao="34.0"/>
+<property name="PROP_NAME" vlrPadrao="Station"/>
+<property name="DTL_WARE_CLASS" vlrPadrao="0.0"/>
+<property name="DTL_MODEL_ID" vlrPadrao="0.0"/>
+<property name="DTL_WARE_MAX_PRICE" vlrPadrao="0.0"/>
+</properties>
+<wares/>
+</group>
+</group>
+</group>
+</waregroups>
+</xml>

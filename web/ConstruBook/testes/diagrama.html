@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="menu.css">
+		<link rel="stylesheet" href="../css/estilos.css">
+		<link rel="stylesheet" href="../css/estilos_layout.css">
+		<link rel="stylesheet" href="../css/estilos_inputs.css">
+		<link rel="stylesheet" href="../css/estilos_table.css">
+		<link rel="stylesheet" href="../css/projetos.css">
+		<script src="../js/jquery.js" type="text/javascript"></script>
+		<title>Entity Manager</title>
+	</head>
+	<body>
+
+	<header>
+	<div class="fundo">
+	<div id="topMenu" class="caixa">
+		<ul>
+			<li><a href="#" id="raiz"><?echo SITE_NAME;?> </a></li>
+			<li><a href="#" id="current">Pictuly</a></li>
+			<li><a href="#">Tarefas</a></li>
+			<li><a href="#">UML</a></li>
+			<li><a href="#">Entidades</a></li>
+			<li><a href="#">Membros</a></li>
+		</ul>
+	</div>
+
+	<div id="rightMenu">
+		<ul>
+			<li><a href="#">cristianorj@gmail.com</a></li><li>
+			<li><a href="#">Logout</a></li>
+		</ul>
+	</div>
+	</div>
+
+
+
+
+	<script>
+	function alternaSideMenuProjeto(id_projeto){
+		var elemento="#conteudo_projeto"+id_projeto
+		var elementoLink="#root_projeto"+id_projeto
+		var elMenu=document.getElementById(elemento);
+		$(elemento).toggle();
+		if ($(elemento).is(":visible")){
+			$(elementoLink).addClass('menu_expandido');
+			$(elementoLink).removeClass('menu_contraido');
+		} else {
+			$(elementoLink).addClass('menu_contraido');
+			$(elementoLink).removeClass('menu_expandido');
+		}
+
+	}
+
+	function alternaSideMenu(){
+		$("#conteudoMenu").toggle();
+		if ($("#conteudoMenu").is(":visible")){
+			$("#raiz_entidades").addClass('menu_expandido');
+			$("#raiz_entidades").removeClass('menu_contraido');
+		} else {
+			$("#raiz_entidades").addClass('menu_contraido');
+			$("#raiz_entidades").removeClass('menu_expandido');
+		}
+
+	}
+	</script>
+	
+	</header>
+<div class="sideMenu caixa" id="sideMenu">
+			<div id="conteudoMenu">
+				<ul id="projeto1">
+					<li class="">
+						<a href="#"  id="root_projeto1" class="raiz_projeto menu_expandido" onclick='alternaSideMenuProjeto(1);'>Pictuly</a>
+					</li>
+				</ul>
+				<ul id="conteudo_projeto1">
+					<li><a href="#" id="entidade1" class="menu_contraido" onclick='return alternaSideMenuEntidade(1);'>categoria</a></li>
+					<div id="property_ent1">
+						<ul>
+							<li><a href="#" class="menu_contraido menu_propriedade">+property1</a></li>
+						</ul>
+					</div>
+					<div id="function_ent1">
+						<ul>
+							<li><a href="#" class="menu_contraido menu_funcao">function1()</a></li>
+						</ul>
+						
+					</div>
+					<li><a href="#" class="menu_contraido">categoria_tag</a></li>
+					<div id="property_div1">
+						aa
+					</div>
+					<li><a href="#" class="menu_contraido">feeder</a></li>
+					<li><a href="#" class="menu_contraido">feeder_tag</a></li>
+					<li><a href="#" class="menu_contraido">lingua</a></li>
+					<li><a href="#" class="menu_contraido">log_site</a></li>
+					<li><a href="#" class="menu_contraido">media_tag_usuario</a></li>
+					<li><a href="#" class="menu_contraido">partner</a></li>
+					<li><a href="#" class="menu_contraido">report</a></li>
+					<li><a href="#" class="menu_contraido">site_feeder</a></li>
+					<li><a href="#" class="menu_contraido">tag</a></li>
+					<li><a href="#" class="menu_contraido">tipo_report</a></li>
+					<li><a href="#" class="menu_contraido">usuario</a></li>
+				</ul>
+			</div>
+		</div>
+	<section class="container">
+		
+	</section>

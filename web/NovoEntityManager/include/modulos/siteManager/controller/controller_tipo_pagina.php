@@ -1,0 +1,7 @@
+<?
+
+class TipoPaginaController extends BaseController {
+    
+}
+
+?>

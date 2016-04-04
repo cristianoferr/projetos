@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This script takes a already generated game and generates its apk 
+Author: Cristiano  09/01/2015 
+
+- Também atualizar runBuilder com novas jars
+-->
+
+<project name="jar_package" default="-pre-build">
+	<property name="generatedGameAssets" location="../GMAssets/assets"/>
+  <property name="build" location="bin/build"/>
+  <property name="dist"  location="dist"/>
+  <property name="libPath" location="../../lib"/>
+  <property name="gameAssetsPath" location="../GMAssets"/>
+  
+  
+	<path id="classpath">
+		<fileset dir="${libPath}/jmonkey" includes="jbullet.jar"/>
+		<fileset dir="${libPath}/jmonkey" includes="jme3-android-3.1.0-snapshot-github.jar"/>
+		<fileset dir="${libPath}/jmonkey" includes="jme3-core-3.1.0-snapshot-github.jar"/>
+		<fileset dir="${libPath}/jmonkey" includes="jme3-effects-3.1.0-snapshot-github.jar"/>
+		<fileset dir="${libPath}/jmonkey" includes="jme3-jbullet-3.1.0-snapshot-github.jar"/>
+		<fileset dir="${libPath}/jmonkey" includes="jme3-jogg-3.1.0-snapshot-github.jar"/>
+		<fileset dir="${libPath}/jmonkey" includes="jme3-jogl-3.1.0-snapshot-github.jar"/>
+		<fileset dir="${libPath}/jmonkey" includes="jme3-plugins-3.1.0-snapshot-github.jar"/>
+		<fileset dir="${libPath}/jmonkey" includes="jme3-jogl-3.1.0-snapshot-github.jar"/>
+		<fileset dir="${libPath}/jmonkey" includes="jme3-jogl-3.1.0-snapshot-github.jar"/>	
+		<fileset dir="${libPath}/jmonkey" includes="jme3-terrain-3.1.0-snapshot-github.jar"/>	
+		<fileset dir="${libPath}/jmonkey" includes="jme3-niftygui-3.1.0-snapshot-github.jar"/>	
+		<fileset dir="${libPath}/jmonkey/plugins" includes="jME3-ai.jar"/>	
+		<fileset dir="${libPath}/jmonkey/libs" includes="vecmath-1.3.1.jar"/>	
+		<fileset dir="${libPath}/jmonkey/libs" includes="j-ogg-all-1.0.0.jar"/>
+		<fileset dir="${libPath}/jmonkey/libs" includes="nifty-1.3.3.jar"/>	
+		<fileset dir="${libPath}/jmonkey/libs" includes="nifty-default-controls-1.3.3.jar"/>	
+		<fileset dir="${libPath}/jmonkey/libs" includes="nifty-style-black-1.3.3.jar"/>	
+		<fileset dir="${libPath}/jmonkey/libs" includes="xpp3-1.1.4c_Android.jar"/>	
+		<fileset dir="${libPath}/jmonkey/libs" includes="eventbus-1.4.jar"/>	
+		
+		
+		<fileset dir="${libPath}/json" includes="**/*.jar"/>
+		<fileset dir="${libPath}/guava" includes="**/*.jar"/>
+		<fileset dir="${dist}" includes="**/*.jar"/>
+    </path>
+		  
+<target name="checkVars">
+	 <echo>${game.properties}</echo>
+	 <echo>${dist}</echo>
+</target>
+ 
+<target name="geraTonegod" >
+	<mkdir dir="${build}/JMonkeyTonegod"/>
+	<javac srcdir="../../CodigosUteis/JMonkeyTonegod/src/main" destdir="../../CodigosUteis/JMonkeyTonegod/bin" classpathref="classpath"/>
+	<jar jarfile="${dist}/JMonkeyTonegod.jar" basedir="../../CodigosUteis/JMonkeyTonegod/bin"/>
+</target>	
+
+<target name="geraProceduralUtils" >
+	<mkdir dir="${build}/ProceduralUtils"/>
+	<javac srcdir="../../CodigosUteis/ProceduralUtils/src/main" destdir="../../CodigosUteis/ProceduralUtils/bin" classpathref="classpath"/>
+	<jar jarfile="${dist}/ProceduralUtils.jar" basedir="../../CodigosUteis/ProceduralUtils/bin"/>
+</target>	
+<target name="geraCommon" >
+	<mkdir dir="${build}/Common"/>
+	<javac srcdir="../../CodigosUteis/Common/src/main" destdir="../../CodigosUteis/Common/bin" classpathref="classpath"/>
+	<jar jarfile="${dist}/Common.jar" basedir="../../CodigosUteis/Common/bin"/>
+</target>	
+
+<target name="geraJME3Utils" >
+	<mkdir dir="${build}/JME3Utils"/>
+	<javac srcdir="../../CodigosUteis/JME3Utils/src/main" destdir="${build}/JME3Utils" classpathref="classpath"/>
+	<jar jarfile="${dist}/JME3Utils.jar" basedir="../../CodigosUteis/JME3Utils/bin"/>
+</target>	
+
+<target name="geraBluePrintOutput" >
+	<mkdir dir="${build}/BluePrintOutput"/>
+	<javac srcdir="../BluePrintOutput/src/main" destdir="../BluePrintOutput/bin" classpathref="classpath"/>
+	<jar jarfile="${dist}/BluePrintOutput.jar" basedir="../BluePrintOutput/bin"/>
+</target>	
+
+<target name="geraGMPlayer" >
+	<mkdir dir="${build}/GMPlayer"/>
+	<javac srcdir="../GMPlayer/src/main" destdir="../GMPlayer/bin" classpathref="classpath"/>
+	<jar jarfile="${dist}/GMPlayer.jar" basedir="../GMPlayer/bin"/>
+</target>	
+
+<target name="geraGMAssets" >
+	<mkdir dir="${build}/GMAssets"/>
+	<javac srcdir="../GMAssets/src/main" destdir="${build}/GMAssets" classpathref="classpath"/>
+	<jar jarfile="${dist}/GMAssets.jar" basedir="../GMAssets/bin"/>
+	
+	<jar jarfile="${dist}/GMAssets_player.jar" basedir="${gameAssetsPath}" includes="assets/gen/**,assets/Interface/Nifty/**,assets/Interface/Fonts/**,assets/Effects/**,assets/game*.json,assets/Textures/splash.png"/>
+</target>	
+
+<target name="geraNativeLibs" >
+	<jar jarfile="${dist}/NativeLibs.jar" basedir="libs"/>
+</target>	
+
+	<target name="projectJars">
+		<antcall target="geraCommon"/>
+		<antcall target="geraGMAssets"/>
+		<antcall target="geraTonegod"/>
+		<antcall target="geraProceduralUtils"/>
+
+		<antcall target="geraJME3Utils"/>
+		<antcall target="geraBluePrintOutput"/>
+
+		<antcall target="geraGMPlayer"/>
+		<antcall target="geraNativeLibs"/>
+		
+		
+	</target>	
+		 
+	 <target name="-pre-clean" depends="cleanBuilder"
+        description="clean up" >
+		<delete dir="${build}"/>
+		
+		<delete file="${dist}/NativeLibs.jar"/>
+		<delete file="${dist}/GMAssets_player.jar"/>
+		<delete file="${dist}/GMAssets.jar"/>
+		<delete file="${dist}/GMPlayer.jar"/>
+		<delete file="${dist}/BluePrintOutput.jar"/>
+		<delete file="${dist}/JME3Utils.jar"/>
+		<delete file="${dist}/Common.jar"/>
+		<delete file="${dist}/ProceduralUtils.jar"/>
+		<delete file="${dist}/JMonkeyTonegod.jar"/>
+	</target>
+  
+	
+</project>

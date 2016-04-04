@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xml>
+<models3d>
+<modelData id="1" mass="4.48E8" path="models/egosoft/argon_m4/argon_m4.obj" scale="1.0">
+<slots>
+<slot defaultWare="Basic Shield" idWareGroup="19" orientation="UP" posX="0.0" posY="0.1" posZ="0.0"/>
+<slot defaultWare="Basic Generator" idWareGroup="20" orientation="UP" posX="0.0" posY="0.0" posZ="-0.1"/>
+<slot defaultWare="Basic Laser" idWareGroup="16" orientation="NORTH" posX="1.0" posY="0.0" posZ="-0.01"/>
+<slot defaultWare="Basic Weapon" idWareGroup="15" orientation="NORTH" posX="1.0" posY="0.0" posZ="0.01"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="-0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="-0.1"/>
+<slot defaultWare="CAMERA" idWareGroup="9" orientation="NORTH" posX="-2.4" posY="2.4" posZ="0.0"/>
+</slots>
+</modelData>
+<modelData id="2" mass="6.48E8" path="models/egosoft/argon_m3/argon_m3.obj" scale="0.1">
+<slots>
+<slot defaultWare="Basic Shield" idWareGroup="19" orientation="UP" posX="0.0" posY="0.1" posZ="0.0"/>
+<slot defaultWare="Basic Generator" idWareGroup="20" orientation="UP" posX="0.0" posY="0.0" posZ="-0.1"/>
+<slot defaultWare="Basic Laser" idWareGroup="16" orientation="NORTH" posX="1.0" posY="0.0" posZ="-0.01"/>
+<slot defaultWare="Basic Weapon" idWareGroup="15" orientation="NORTH" posX="1.0" posY="0.0" posZ="0.01"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="-0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="-0.1"/>
+<slot defaultWare="CAMERA" idWareGroup="9" orientation="NORTH" posX="-2.4" posY="2.4" posZ="0.0"/>
+</slots>
+</modelData>
+<modelData id="3" mass="2.48E8" path="models/egosoft/argon_m5/argon_m5.obj" scale="0.08">
+<slots>
+<slot defaultWare="Basic Shield" idWareGroup="19" orientation="UP" posX="0.0" posY="0.1" posZ="0.0"/>
+<slot defaultWare="Basic Generator" idWareGroup="20" orientation="UP" posX="0.0" posY="0.0" posZ="-0.1"/>
+<slot defaultWare="Basic Laser" idWareGroup="16" orientation="NORTH" posX="1.0" posY="0.0" posZ="-0.01"/>
+<slot defaultWare="Basic Weapon" idWareGroup="15" orientation="NORTH" posX="1.0" posY="0.0" posZ="0.01"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="-0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="-0.1"/>
+<slot defaultWare="CAMERA" idWareGroup="9" orientation="NORTH" posX="-2.4" posY="2.4" posZ="0.0"/>
+</slots>
+</modelData>
+<modelData id="4" mass="2.48E8" path="models/egosoft/argon_m5-pirate/argon_m5-pirate.obj" scale="0.08">
+<slots>
+<slot defaultWare="Basic Shield" idWareGroup="19" orientation="UP" posX="0.0" posY="0.1" posZ="0.0"/>
+<slot defaultWare="Basic Generator" idWareGroup="20" orientation="UP" posX="0.0" posY="0.0" posZ="-0.1"/>
+<slot defaultWare="Basic Laser" idWareGroup="16" orientation="NORTH" posX="1.0" posY="0.0" posZ="-0.01"/>
+<slot defaultWare="Basic Weapon" idWareGroup="15" orientation="NORTH" posX="1.0" posY="0.0" posZ="0.01"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="-0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="-0.1"/>
+<slot defaultWare="CAMERA" idWareGroup="9" orientation="NORTH" posX="-2.4" posY="2.4" posZ="0.0"/>
+</slots>
+</modelData>
+<modelData id="5" mass="2.5E11" path="models/EVE/Orca/Orca.obj" scale="1.0">
+<slots>
+<slot defaultWare="Basic Shield" idWareGroup="19" orientation="UP" posX="0.0" posY="0.1" posZ="0.0"/>
+<slot defaultWare="Basic Generator" idWareGroup="20" orientation="UP" posX="0.0" posY="0.0" posZ="-0.1"/>
+<slot defaultWare="Basic Laser" idWareGroup="16" orientation="NORTH" posX="1.0" posY="0.0" posZ="-0.01"/>
+<slot defaultWare="Basic Weapon" idWareGroup="15" orientation="NORTH" posX="1.0" posY="0.0" posZ="0.01"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="-0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="-0.1"/>
+<slot defaultWare="CAMERA" idWareGroup="9" orientation="NORTH" posX="-2.4" posY="2.4" posZ="0.0"/>
+</slots>
+</modelData>
+<modelData id="6" mass="2.278125056E12" path="models/EVE/Avatar/Avatar.obj" scale="1.0">
+<slots>
+<slot defaultWare="Basic Shield" idWareGroup="19" orientation="UP" posX="0.0" posY="0.1" posZ="0.0"/>
+<slot defaultWare="Basic Generator" idWareGroup="20" orientation="UP" posX="0.0" posY="0.0" posZ="-0.1"/>
+<slot defaultWare="Basic Laser" idWareGroup="16" orientation="NORTH" posX="1.0" posY="0.0" posZ="-0.01"/>
+<slot defaultWare="Basic Weapon" idWareGroup="15" orientation="NORTH" posX="1.0" posY="0.0" posZ="0.01"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="-0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="-0.1"/>
+<slot defaultWare="CAMERA" idWareGroup="9" orientation="NORTH" posX="-2.4" posY="2.4" posZ="0.0"/>
+</slots>
+</modelData>
+<modelData id="7" mass="2.379369984E12" path="models/EVE/Erebus/Erebus.obj" scale="1.0">
+<slots>
+<slot defaultWare="Basic Shield" idWareGroup="19" orientation="UP" posX="0.0" posY="0.1" posZ="0.0"/>
+<slot defaultWare="Basic Generator" idWareGroup="20" orientation="UP" posX="0.0" posY="0.0" posZ="-0.1"/>
+<slot defaultWare="Basic Laser" idWareGroup="16" orientation="NORTH" posX="1.0" posY="0.0" posZ="-0.01"/>
+<slot defaultWare="Basic Weapon" idWareGroup="15" orientation="NORTH" posX="1.0" posY="0.0" posZ="0.01"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="-0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="-0.1"/>
+<slot defaultWare="CAMERA" idWareGroup="9" orientation="NORTH" posX="-2.4" posY="2.4" posZ="0.0"/>
+</slots>
+</modelData>
+<modelData id="8" mass="1.401E10" path="models/EVE/Drake/Drake.obj" scale="1.0">
+<slots>
+<slot defaultWare="Basic Shield" idWareGroup="19" orientation="UP" posX="0.0" posY="0.1" posZ="0.0"/>
+<slot defaultWare="Basic Generator" idWareGroup="20" orientation="UP" posX="0.0" posY="0.0" posZ="-0.1"/>
+<slot defaultWare="Basic Laser" idWareGroup="16" orientation="NORTH" posX="1.0" posY="0.0" posZ="-0.01"/>
+<slot defaultWare="Basic Weapon" idWareGroup="15" orientation="NORTH" posX="1.0" posY="0.0" posZ="0.01"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="-0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="-0.1"/>
+<slot defaultWare="CAMERA" idWareGroup="9" orientation="NORTH" posX="-2.4" posY="2.4" posZ="0.0"/>
+</slots>
+</modelData>
+<modelData id="9" mass="1.148E9" path="models/EVE/Galente/Rookie/Rookie.obj" scale="1.0">
+<slots>
+<slot defaultWare="Basic Shield" idWareGroup="19" orientation="UP" posX="0.0" posY="0.1" posZ="0.0"/>
+<slot defaultWare="Basic Generator" idWareGroup="20" orientation="UP" posX="0.0" posY="0.0" posZ="-0.1"/>
+<slot defaultWare="Basic Laser" idWareGroup="16" orientation="NORTH" posX="1.0" posY="0.0" posZ="-0.01"/>
+<slot defaultWare="Basic Weapon" idWareGroup="15" orientation="NORTH" posX="1.0" posY="0.0" posZ="0.01"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="-0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="-0.1"/>
+<slot defaultWare="CAMERA" idWareGroup="9" orientation="NORTH" posX="-2.4" posY="2.4" posZ="0.0"/>
+</slots>
+</modelData>
+<modelData id="10" mass="9.84E10" path="models/EVE/Megathron/megathron.obj" scale="1.0">
+<slots>
+<slot defaultWare="Basic Shield" idWareGroup="19" orientation="UP" posX="0.0" posY="0.1" posZ="0.0"/>
+<slot defaultWare="Basic Generator" idWareGroup="20" orientation="UP" posX="0.0" posY="0.0" posZ="-0.1"/>
+<slot defaultWare="Basic Laser" idWareGroup="16" orientation="NORTH" posX="1.0" posY="0.0" posZ="-0.01"/>
+<slot defaultWare="Basic Weapon" idWareGroup="15" orientation="NORTH" posX="1.0" posY="0.0" posZ="0.01"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="-0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="-0.1"/>
+<slot defaultWare="CAMERA" idWareGroup="9" orientation="NORTH" posX="-2.4" posY="2.4" posZ="0.0"/>
+</slots>
+</modelData>
+<modelData id="11" mass="2.07562496E12" path="models/EVE/Ragnarok/ragnarok.obj" scale="1.0">
+<slots>
+<slot defaultWare="Basic Shield" idWareGroup="19" orientation="UP" posX="0.0" posY="0.1" posZ="0.0"/>
+<slot defaultWare="Basic Generator" idWareGroup="20" orientation="UP" posX="0.0" posY="0.0" posZ="-0.1"/>
+<slot defaultWare="Basic Laser" idWareGroup="16" orientation="NORTH" posX="1.0" posY="0.0" posZ="-0.01"/>
+<slot defaultWare="Basic Weapon" idWareGroup="15" orientation="NORTH" posX="1.0" posY="0.0" posZ="0.01"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="-0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="-0.1"/>
+<slot defaultWare="CAMERA" idWareGroup="9" orientation="NORTH" posX="-2.4" posY="2.4" posZ="0.0"/>
+</slots>
+</modelData>
+<modelData id="12" mass="1.124999936E12" path="models/EVE/Providence/providence.obj" scale="1.0">
+<slots>
+<slot defaultWare="Basic Shield" idWareGroup="19" orientation="UP" posX="0.0" posY="0.1" posZ="0.0"/>
+<slot defaultWare="Basic Generator" idWareGroup="20" orientation="UP" posX="0.0" posY="0.0" posZ="-0.1"/>
+<slot defaultWare="Basic Laser" idWareGroup="16" orientation="NORTH" posX="1.0" posY="0.0" posZ="-0.01"/>
+<slot defaultWare="Basic Weapon" idWareGroup="15" orientation="NORTH" posX="1.0" posY="0.0" posZ="0.01"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="-0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="-0.1"/>
+<slot defaultWare="CAMERA" idWareGroup="9" orientation="NORTH" posX="-2.4" posY="2.4" posZ="0.0"/>
+</slots>
+</modelData>
+<modelData id="13" mass="10000.0" path="models/shot/shot.obj" scale="0.2">
+<slots>
+<slot defaultWare="Basic Shield" idWareGroup="19" orientation="UP" posX="0.0" posY="0.1" posZ="0.0"/>
+<slot defaultWare="Basic Generator" idWareGroup="20" orientation="UP" posX="0.0" posY="0.0" posZ="-0.1"/>
+<slot defaultWare="Basic Laser" idWareGroup="16" orientation="NORTH" posX="1.0" posY="0.0" posZ="-0.01"/>
+<slot defaultWare="Basic Weapon" idWareGroup="15" orientation="NORTH" posX="1.0" posY="0.0" posZ="0.01"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="-0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="-0.1" posZ="0.1"/>
+<slot defaultWare="Basic Engine" idWareGroup="22" orientation="SOUTH" posX="-1.0" posY="0.1" posZ="-0.1"/>
+<slot defaultWare="CAMERA" idWareGroup="9" orientation="NORTH" posX="-2.4" posY="2.4" posZ="0.0"/>
+</slots>
+</modelData>
+</models3d>
+</xml>
