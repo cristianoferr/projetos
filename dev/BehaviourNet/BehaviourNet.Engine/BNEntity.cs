@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BehaviourNet.Engine
 {
-    public class Class1
+    public class BNEntity
     {
+        public string name { get; set; }
     }
 }

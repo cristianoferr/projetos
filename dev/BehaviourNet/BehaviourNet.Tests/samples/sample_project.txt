@@ -1,0 +1,10 @@
+﻿O sistema se chamará "AlunoWeb"
+
+O sistema terá as entidades:
+* aluno
+* curso
+* matricula
+
+aluno terá os campos:
+* id, inteiro
+* nome, texto

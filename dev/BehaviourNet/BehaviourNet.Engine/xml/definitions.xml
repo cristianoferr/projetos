@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<definitions>
+  <defaultEntities>
+    <entity name="Sistema"/>
+  </defaultEntities>
+<words>
+  <verbo class="BNVerbo">
+    <word name="ter">
+      <alt name="terá"/>
+    </word>
+    <word name="chamar">
+      <alt name="chamará"/>
+      <alt name="chamado"/>
+    </word>
+  </verbo>
+
+  <artigo class="BNArtigo">
+    <word name="o">
+      <alt name="a"/>
+    </word>
+  </artigo>
+
+  <pronome class="BNPronome">
+    <word name="se">
+      <alt name="será"/>
+    </word>
+    
+  </pronome>
+  
+</words>
+  <phrases>
+    <phrase example="O sistema se chamará XXX/alt: o sistema irá se chamar XXX">
+      <word expected="artigo" />
+      <word expected="validEntity" isTopic="true"/>
+      <word expected="pronome" validWords="se" target="self"/>
+      <word expected="verbo" validWords="chamar"/>
+      <word expected="text" toVar="nome"/>
+      <action value="$topic.name=$nome"/>
+    </phrase>
+  </phrases>
+</definitions>

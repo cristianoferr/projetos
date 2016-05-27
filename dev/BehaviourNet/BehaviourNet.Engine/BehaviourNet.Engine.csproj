@@ -40,9 +40,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BNLoader.cs" />
-    <Compile Include="BNModel.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="BNEntity.cs" />
+    <Compile Include="nlp\BNSubstantivo.cs" />
+    <Compile Include="nlp\BNVerbo.cs" />
+    <Compile Include="nlp\BNWord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="xml\definitions.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

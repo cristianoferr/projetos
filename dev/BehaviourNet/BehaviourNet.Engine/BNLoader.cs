@@ -15,17 +15,29 @@ namespace BehaviourNet.engine
 
         public int metaModelsCount { get { return models.Count; } }
 
-        private IList<BNModel> models_;
-        protected IList<BNModel> models
+        private IList<BNEntity> models_;
+        protected IList<BNEntity> models
         {
             get
             {
                 if (models_ == null)
                 {
-                    models_ = new List<BNModel>();
+                    models_ = new List<BNEntity>();
                 }
                 return models_;
             }
+        }
+
+        public void LoadDefaultDictionary()
+        {
+            throw new NotImplementedException();
+        }
+
+        public BNEntity currentTopic { get; set; }
+
+        public void AddMetaData(string metaData)
+        {
+            throw new NotImplementedException();
         }
     }
 }

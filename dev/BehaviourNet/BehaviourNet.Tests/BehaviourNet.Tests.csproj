@@ -87,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
+    <Content Include="samples\sample_project.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
