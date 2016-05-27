@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BehaviourNet", "BehaviourNet\BehaviourNet.csproj", "{6612ECD6-581A-411E-BA3E-29C9CCD71B31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BehaviourNet.Tests", "BehaviourNet.Tests\BehaviourNet.Tests.csproj", "{B894406D-02D9-46C6-A49E-36A05E221AAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BehaviourNet.Engine", "BehaviourNet.Engine\BehaviourNet.Engine.csproj", "{96EFA2FC-457D-4DB4-8EDF-796EFE16B9C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6612ECD6-581A-411E-BA3E-29C9CCD71B31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6612ECD6-581A-411E-BA3E-29C9CCD71B31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6612ECD6-581A-411E-BA3E-29C9CCD71B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6612ECD6-581A-411E-BA3E-29C9CCD71B31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B894406D-02D9-46C6-A49E-36A05E221AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B894406D-02D9-46C6-A49E-36A05E221AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B894406D-02D9-46C6-A49E-36A05E221AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B894406D-02D9-46C6-A49E-36A05E221AAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96EFA2FC-457D-4DB4-8EDF-796EFE16B9C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96EFA2FC-457D-4DB4-8EDF-796EFE16B9C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96EFA2FC-457D-4DB4-8EDF-796EFE16B9C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96EFA2FC-457D-4DB4-8EDF-796EFE16B9C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
