@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BehaviourNet.Engine
+namespace BehaviourNet.engine.nlp.phrase
 {
-    public class BNEntity
+    class PhraseAction
     {
-        public string name { get; set; }
+        public string value { get; set; }
     }
 }

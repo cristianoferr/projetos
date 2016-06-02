@@ -39,15 +39,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BNLoader.cs" />
-    <Compile Include="BNEntity.cs" />
-    <Compile Include="nlp\BNSubstantivo.cs" />
-    <Compile Include="nlp\BNVerbo.cs" />
-    <Compile Include="nlp\BNWord.cs" />
+    <Compile Include="BehaviourLoader.cs" />
+    <Compile Include="model\metamodel\ModelType.cs" />
+    <Compile Include="model\metamodel\MetaModelManager.cs" />
+    <Compile Include="model\nlp\phrase\PhraseInterpreter.cs" />
+    <Compile Include="utils\BNEnums.cs" />
+    <Compile Include="model\metamodel\MetaProperty.cs" />
+    <Compile Include="model\metamodel\MetaModel.cs" />
+    <Compile Include="business\BPDictionaryLoader.cs" />
+    <Compile Include="model\nlp\phrase\Phrase.cs" />
+    <Compile Include="model\nlp\phrase\PhraseAction.cs" />
+    <Compile Include="model\nlp\phrase\WordRule.cs" />
+    <Compile Include="model\nlp\phrase\PhraseManager.cs" />
+    <Compile Include="model\nlp\words\WordManager.cs" />
+    <Compile Include="model\nlp\words\WordHolder.cs" />
+    <Compile Include="model\nlp\words\Substantivo.cs" />
+    <Compile Include="model\nlp\words\Artigo.cs" />
+    <Compile Include="model\nlp\words\Pronome.cs" />
+    <Compile Include="model\nlp\words\Verbo.cs" />
+    <Compile Include="utils\BNConsts.cs" />
+    <Compile Include="model\nlp\words\Word.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="xml\definitions.xml" />
+    <Content Include="xml\definitions_test.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="xml\definitions.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

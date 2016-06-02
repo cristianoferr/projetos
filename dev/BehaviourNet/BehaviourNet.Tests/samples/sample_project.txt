@@ -1,4 +1,5 @@
-﻿O sistema se chamará "AlunoWeb"
+﻿O sistema seguirá o template SistemaWeb
+O sistema se chamará "AlunoWeb"
 
 O sistema terá as entidades:
 * aluno

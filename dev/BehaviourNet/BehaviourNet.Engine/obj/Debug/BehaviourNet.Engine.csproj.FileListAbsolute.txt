@@ -3,3 +3,10 @@ G:\java\repositorios\dotnet_local\projetos\BehaviourNet\BehaviourNet.Engine\bin\
 G:\java\repositorios\dotnet_local\projetos\BehaviourNet\BehaviourNet.Engine\bin\Debug\BehaviourNet.Engine.pdb
 G:\java\repositorios\dotnet_local\projetos\BehaviourNet\BehaviourNet.Engine\obj\Debug\BehaviourNet.Engine.dll
 G:\java\repositorios\dotnet_local\projetos\BehaviourNet\BehaviourNet.Engine\obj\Debug\BehaviourNet.Engine.pdb
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Engine\bin\Debug\xml\definitions.xml
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Engine\bin\Debug\BehaviourNet.Engine.dll
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Engine\bin\Debug\BehaviourNet.Engine.pdb
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Engine\obj\Debug\BehaviourNet.Engine.dll
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Engine\obj\Debug\BehaviourNet.Engine.pdb
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Engine\bin\Debug\xml\definitions_test.xml
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Engine\obj\Debug\BehaviourNet.Engine.csprojResolveAssemblyReference.cache

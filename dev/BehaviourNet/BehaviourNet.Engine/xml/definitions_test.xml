@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<definitions>
+  <metaModelsHierarchy>
+    <metaModel type="SistemaWeb" class="MetaModel">
+      <allowedChild type="EntityModels"/>
+    </metaModel>
+    <metaModel type="EntityModels" class="MetaModel">
+      <allowedChild type="EntityModel"/>
+    </metaModel>
+    <metaModel type="EntityModel" class="MetaModel">
+      <allowedChild type="EntityProperty"/>
+    </metaModel>
+
+  </metaModelsHierarchy>
+  <defaultEntities>
+    <entity name="Sistema" type="SistemaWeb"/>
+  </defaultEntities>
+  <words>
+    <verbo class="Verbo">
+      <word name="ter">
+        <alt name="terá"/>
+      </word>
+      <word name="chamar">
+        <alt name="chamará"/>
+        <alt name="chamado"/>
+      </word>
+    </verbo>
+
+    <artigo class="Artigo">
+      <word name="o">
+        <alt name="a"/>
+      </word>
+    </artigo>
+
+    <pronome class="Pronome">
+      <word name="se">
+        <alt name="será"/>
+      </word>
+
+    </pronome>
+
+  </words>
+  <phrases>
+    <phrase name="defineVerbo" example="O sistema se chamará XXX/alt: o sistema irá se chamar XXX" class="Phrase">
+      <word expected="artigo" validWords="o" />
+      <word expected="validEntity" isTopic="true"/>
+      <word expected="pronome" validWords="se" target="self" optional="true"/>
+      <word expected="verbo" isVerb="true"/>
+      <word expected="text" toVar="$text"/>
+      <action value="$verbo($topic,$text)"/>
+    </phrase>
+
+    <phrase name="defineTipoSistema" example="O sistema seguirá o template SistemaWeb" class="Phrase">
+      <word expected="artigo" validWords="o" />
+      <word expected="validEntity" isTopic="true"/>
+      <word expected="pronome" validWords="se" target="self" optional="true"/>
+      <word expected="verbo" isVerb="true"/>
+      <word expected="text" toVar="$text"/>
+      <action value="$verbo($topic,$text)"/>
+    </phrase>
+  </phrases>
+</definitions>
