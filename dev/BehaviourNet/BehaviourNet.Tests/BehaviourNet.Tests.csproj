@@ -82,9 +82,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\BNPhraseInterpreter.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\LibraryTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controllers\LinguaNaturalTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -101,6 +101,10 @@
     <ProjectReference Include="..\BehaviourNet\BehaviourNet.csproj">
       <Project>{6612ECD6-581A-411E-BA3E-29C9CCD71B31}</Project>
       <Name>BehaviourNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LinguaNatural\LinguaNatural.csproj">
+      <Project>{c68201d4-ea1f-4eaf-b79e-5aef8d958e2e}</Project>
+      <Name>LinguaNatural</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

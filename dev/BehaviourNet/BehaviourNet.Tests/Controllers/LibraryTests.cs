@@ -14,7 +14,7 @@ using BehaviourNet.engine.metamodel;
 namespace BehaviourNet.Tests.Controllers
 {
     [TestClass]
-    public class LibraryTests
+    public class LinguaNaturalTests
     {
         const string SISTEMA_TYPE = "SistemaWeb";
 

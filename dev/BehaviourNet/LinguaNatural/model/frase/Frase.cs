@@ -5,12 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BehaviourNet.engine.nlp
+namespace LinguaNatural
 {
-    public class Verbo:Word
+    public class Frase : ComposicaoFrase
     {
-        public Verbo():base(BNConsts.WORD_VERBO)
-        {
-        }
     }
 }

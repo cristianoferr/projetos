@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BehaviourNet.Tests", "Behav
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BehaviourNet.Engine", "BehaviourNet.Engine\BehaviourNet.Engine.csproj", "{96EFA2FC-457D-4DB4-8EDF-796EFE16B9C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinguaNatural", "LinguaNatural\LinguaNatural.csproj", "{C68201D4-EA1F-4EAF-B79E-5AEF8D958E2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{96EFA2FC-457D-4DB4-8EDF-796EFE16B9C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96EFA2FC-457D-4DB4-8EDF-796EFE16B9C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96EFA2FC-457D-4DB4-8EDF-796EFE16B9C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C68201D4-EA1F-4EAF-B79E-5AEF8D958E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C68201D4-EA1F-4EAF-B79E-5AEF8D958E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C68201D4-EA1F-4EAF-B79E-5AEF8D958E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C68201D4-EA1F-4EAF-B79E-5AEF8D958E2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

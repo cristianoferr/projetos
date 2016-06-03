@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LinguaNatural
 {
-    public class Condicional
+    public abstract class ComposicaoFrase
     {
 
         [System.ComponentModel.DefaultValue("")]

@@ -51,14 +51,7 @@
     <Compile Include="model\nlp\phrase\PhraseAction.cs" />
     <Compile Include="model\nlp\phrase\WordRule.cs" />
     <Compile Include="model\nlp\phrase\PhraseManager.cs" />
-    <Compile Include="model\nlp\words\WordManager.cs" />
-    <Compile Include="model\nlp\words\WordHolder.cs" />
-    <Compile Include="model\nlp\words\Substantivo.cs" />
-    <Compile Include="model\nlp\words\Artigo.cs" />
-    <Compile Include="model\nlp\words\Pronome.cs" />
-    <Compile Include="model\nlp\words\Verbo.cs" />
     <Compile Include="utils\BNConsts.cs" />
-    <Compile Include="model\nlp\words\Word.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
