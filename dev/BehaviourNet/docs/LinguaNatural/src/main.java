@@ -8,7 +8,7 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Oracao oracao=new Oracao("eu quero ser feliz.");
+		Oracao oracao=new Oracao("eu sou feliz.");
 		
 		oracao.parser();
 		

@@ -5,50 +5,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinguaNatural
+namespace LinguaNatural.model
 {
     public abstract class ComposicaoFrase
     {
 
-        [System.ComponentModel.DefaultValue("")]
-        public string palavra {get;set;}  // Palavra para verificar
+        public ComposicaoFrase()
+        {
+           
+            tipoPalavra = NLPConsts.tipoPalavra.VAZIO;
+            tempoSujeito = NLPConsts.tempoSujeito.VAZIO;
+            tipoSujeito = NLPConsts.tipoSujeito.VAZIO;
+            generoSujeito = NLPConsts.generoSujeito.VAZIO;
+            tipoAdjetivo = NLPConsts.tipoAdjetivo.VAZIO;
+            entreSujeitos = false;
+            tipoPessoa = -1;
+        }
 
-        [System.ComponentModel.DefaultValue(null)]
-        public string prePalavra { get; set; } //Palavra que vem antes
+        public bool entreSujeitos { get; set; }
+       
 
-        [System.ComponentModel.DefaultValue(null)]
-        public string novaPalavra { get; set; } // Palavra que estára substituindo
+        public NLPConsts.tipoPalavra tipoPalavra { get; set; }
 
-        //Exemplo: Verbo "canta", fimPalavra: a, fimPalavraNovo: ar, final: cantar
-        [System.ComponentModel.DefaultValue(null)]
-        public string fimPalavra { get; set; }
+        public NLPConsts.tempoSujeito tempoSujeito { get; set; }
 
-        [System.ComponentModel.DefaultValue(null)]
-        public string fimPalavraNovo { get; set; }
+        public NLPConsts.tipoSujeito tipoSujeito { get; set; }
 
-        [System.ComponentModel.DefaultValue(NLPConsts.tipo_palavra.VAZIO)]
-        public NLPConsts.tipo_palavra tipoPalavra { get; set; }
-
-        [System.ComponentModel.DefaultValue(NLPConsts.tempo_sujeito.VAZIO)]
-        public NLPConsts.tempo_sujeito tempoSujeito { get; set; }
-
-        [System.ComponentModel.DefaultValue(NLPConsts.tipo_sujeito.VAZIO)]
-        public NLPConsts.tipo_sujeito tipoSujeito { get; set; }
-
-        [System.ComponentModel.DefaultValue(-1)]
         public int tipoPessoa { get; set; }
 
-        [System.ComponentModel.DefaultValue(NLPConsts.tipo_genero.VAZIO)]
-        public NLPConsts.tipo_genero generoSujeito { get; set; }
+        public NLPConsts.generoSujeito generoSujeito { get; set; }
 
-        [System.ComponentModel.DefaultValue(NLPConsts.tipo_adjetivo.VAZIO)]
-        public NLPConsts.tipo_adjetivo tipoAdjetivo { get; set; }
+        public NLPConsts.tipoAdjetivo tipoAdjetivo { get; set; }
 
-        [System.ComponentModel.DefaultValue(0)]
-        public int relacaoVerbo { get; set; }//-1 = antes, 0=indiferente, 1=depois
-
-        [System.ComponentModel.DefaultValue(false)]
-        public bool entreSujeitos { get; set; }
+        
 
         /*
         public void setTipoSujeito(int tipoSujeito)

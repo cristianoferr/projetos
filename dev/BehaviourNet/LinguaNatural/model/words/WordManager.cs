@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BehaviourNet.utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,17 +10,17 @@ namespace BehaviourNet.engine.nlp
     public class WordManager
     {
 
-        Dictionary<string, WordHolder> words_ = new Dictionary<string, WordHolder>();
+        Dictionary<NLPConsts.tipoPalavra, WordHolder> words_ = new Dictionary<NLPConsts.tipoPalavra, WordHolder>();
         public int wordsCount { get { return words_.Count; } }
 
-        internal void AddWord(string tipo, Word objWord)
+        internal void AddWord(NLPConsts.tipoPalavra tipo, Word objWord)
         {
 
             WordHolder holder = GetHolder(tipo);
             holder.AddWord(objWord);
         }
 
-        private WordHolder GetHolder(string tipo)
+        private WordHolder GetHolder(NLPConsts.tipoPalavra tipo)
         {
             WordHolder holder = null;
             if (!words_.ContainsKey(tipo))
@@ -35,10 +36,20 @@ namespace BehaviourNet.engine.nlp
         }
 
 
-        public bool IsWordOfType(string word, string tipo)
+     /*   public bool IsWordOfType(string word, string tipo)
         {
             WordHolder holder = GetHolder(tipo);
             return holder.ContainsWord(word);
+        }*/
+
+        public void AddVerbo(Word p)
+        {
+            AddWord(NLPConsts.tipoPalavra.PALAVRA_VERBO, p);
+        }
+
+        public bool IsWord(NLPConsts.tipoPalavra tipoPalavra, string palavra)
+        {
+            return GetHolder(tipoPalavra).ContainsWord(palavra);
         }
     }
 }

@@ -2,518 +2,517 @@
 <definitions>
   <condicionais>
     <substantivos>
-      <condicional palavra="maria" tipoPalavra="palSubst" />
-      <condicional palavra="joão" tipoPalavra="palSubst" />
-      <condicional palavra="cristiano" tipoPalavra="palSubst" />
-      <condicional palavra="sistema" tipoPalavra="palSubst" />
+      <condicional palavra="ator" tipoPalavra="PALAVRA_SUBSTANTIVO" />
+      <condicional palavra="usuário" tipoPalavra="PALAVRA_SUBSTANTIVO" />
+      <condicional palavra="sistema" tipoPalavra="PALAVRA_SUBSTANTIVO" />
     </substantivos>
     <adjetivos>
-      <condicional palavra="vermelho" generoSujeito="genMasculino" tipoAdjetivo="adjCor" tipoPalavra="palAdj" />
-      <condicional palavra="vermelha" generoSujeito="genFeminino" tipoAdjetivo="adjCor" tipoPalavra="palAdj" />
-      <condicional palavra="amarelo" generoSujeito="genMasculino" tipoAdjetivo="adjCor" tipoPalavra="palAdj" />
-      <condicional palavra="amarela" generoSujeito="genFeminino" tipoAdjetivo="adjCor" tipoPalavra="palAdj" />
-      <condicional palavra="azul" tipoAdjetivo="adjCor" tipoPalavra="palAdj" />
-      <condicional palavra="quadrado" generoSujeito="genMasculino" tipoAdjetivo="adjForma" tipoPalavra="palAdj" />
-      <condicional palavra="quadrada" generoSujeito="genFeminino" tipoAdjetivo="adjForma" tipoPalavra="palAdj" />
-      <condicional palavra="redondo" generoSujeito="genMasculino" tipoAdjetivo="adjForma" tipoPalavra="palAdj" />
-      <condicional palavra="redonda" generoSujeito="genFeminino" tipoAdjetivo="adjForma" tipoPalavra="palAdj" />
-      <condicional palavra="triangular" tipoAdjetivo="adjForma" tipoPalavra="palAdj" />
-      <condicional palavra="quente" tipoAdjetivo="adjTemperatura" tipoPalavra="palAdj" />
-      <condicional palavra="frio" generoSujeito="genMasculino" tipoAdjetivo="adjTemperatura" tipoPalavra="palAdj" />
-      <condicional palavra="fria" generoSujeito="genFeminino" tipoAdjetivo="adjTemperatura" tipoPalavra="palAdj" />
-      <condicional palavra="morno" generoSujeito="genMasculino" tipoAdjetivo="adjTemperatura" tipoPalavra="palAdj" />
-      <condicional palavra="morna" generoSujeito="genFeminino" tipoAdjetivo="adjTemperatura" tipoPalavra="palAdj" />
-      <condicional palavra="gelado" generoSujeito="genMasculino" tipoAdjetivo="adjTemperatura" tipoPalavra="palAdj" />
-      <condicional palavra="gelada" generoSujeito="genFeminino" tipoAdjetivo="adjTemperatura" tipoPalavra="palAdj" />
-      <condicional palavra="forte" tipoAdjetivo="adjIntensidade" tipoPalavra="palAdj" />
-      <condicional palavra="fraco" generoSujeito="genMasculino" tipoAdjetivo="adjIntensidade" tipoPalavra="palAdj" />
-      <condicional palavra="fraca" generoSujeito="genFeminino" tipoAdjetivo="adjIntensidade" tipoPalavra="palAdj" />
-      <condicional palavra="moderado" generoSujeito="genMasculino" tipoAdjetivo="adjIntensidade" tipoPalavra="palAdj" />
-      <condicional palavra="moderada" generoSujeito="genFeminino" tipoAdjetivo="adjIntensidade" tipoPalavra="palAdj" />
-      <condicional palavra="grande" tipoAdjetivo="adjProporcao" tipoPalavra="palAdj" />
-      <condicional palavra="medio" generoSujeito="genMasculino" tipoAdjetivo="adjProporcao" tipoPalavra="palAdj" />
-      <condicional palavra="media" generoSujeito="genFeminino" tipoAdjetivo="adjProporcao" tipoPalavra="palAdj" />
-      <condicional palavra="pequeno" generoSujeito="genMasculino" tipoAdjetivo="adjProporcao" tipoPalavra="palAdj" />
-      <condicional palavra="pequena" generoSujeito="genFeminino" tipoAdjetivo="adjProporcao" tipoPalavra="palAdj" />
-      <condicional palavra="nanico" generoSujeito="genMasculino" tipoAdjetivo="adjProporcao" tipoPalavra="palAdj" />
-      <condicional palavra="nanica" generoSujeito="genFeminino" tipoAdjetivo="adjProporcao" tipoPalavra="palAdj" />
-      <condicional palavra="enorme" generoSujeito="genMasculino" tipoAdjetivo="adjProporcao" tipoPalavra="palAdj" />
-      <condicional palavra="bom" generoSujeito="genMasculino" tipoAdjetivo="adjQualidade" tipoPalavra="palAdj" />
-      <condicional palavra="bem" tipoAdjetivo="adjQualidade" tipoPalavra="palAdj" />
-      <condicional palavra="boa" generoSujeito="genFeminino" tipoAdjetivo="adjQualidade" tipoPalavra="palAdj" />
-      <condicional palavra="bonito" generoSujeito="genMasculino" tipoAdjetivo="adjQualidade" tipoPalavra="palAdj" />
-      <condicional palavra="amavel" tipoAdjetivo="adjQualidade" tipoPalavra="palAdj" />
-      <condicional palavra="bonita" generoSujeito="genFeminino" tipoAdjetivo="adjQualidade" tipoPalavra="palAdj" />
-      <condicional palavra="agradavel" tipoAdjetivo="adjQualidade" tipoPalavra="palAdj" />
-      <condicional palavra="mau" generoSujeito="genMasculino" tipoAdjetivo="adjDefeito" tipoPalavra="palAdj" />
-      <condicional palavra="ma" generoSujeito="genFeminino" tipoAdjetivo="adjDefeito" tipoPalavra="palAdj" />
-      <condicional palavra="ruim" tipoAdjetivo="adjDefeito" tipoPalavra="palAdj" />
-      <condicional palavra="feio" generoSujeito="genMasculino" tipoAdjetivo="adjDefeito" tipoPalavra="palAdj" />
-      <condicional palavra="feia" generoSujeito="genFeminino" tipoAdjetivo="adjDefeito" tipoPalavra="palAdj" />
-      <condicional palavra="horrivel" tipoAdjetivo="adjDefeito" tipoPalavra="palAdj" />
+      <condicional palavra="vermelho" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_COR" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="vermelha" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_COR" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="amarelo" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_COR" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="amarela" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_COR" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="azul" tipoAdjetivo="ADJETIVO_COR" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="quadrado" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_FORMA" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="quadrada" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_FORMA" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="redondo" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_FORMA" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="redonda" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_FORMA" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="triangular" tipoAdjetivo="ADJETIVO_FORMA" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="quente" tipoAdjetivo="ADJETIVO_TEMPERATURA" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="frio" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_TEMPERATURA" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="fria" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_TEMPERATURA" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="morno" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_TEMPERATURA" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="morna" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_TEMPERATURA" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="gelado" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_TEMPERATURA" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="gelada" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_TEMPERATURA" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="forte" tipoAdjetivo="ADJETIVO_INTENSIDADE" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="fraco" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_INTENSIDADE" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="fraca" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_INTENSIDADE" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="moderado" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_INTENSIDADE" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="moderada" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_INTENSIDADE" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="grande" tipoAdjetivo="ADJETIVO_PROPORCAO" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="medio" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_PROPORCAO" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="media" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_PROPORCAO" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="pequeno" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_PROPORCAO" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="pequena" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_PROPORCAO" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="nanico" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_PROPORCAO" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="nanica" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_PROPORCAO" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="enorme" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_PROPORCAO" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="bom" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_QUALIDADE" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="bem" tipoAdjetivo="ADJETIVO_QUALIDADE" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="boa" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_QUALIDADE" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="bonito" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_QUALIDADE" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="amavel" tipoAdjetivo="ADJETIVO_QUALIDADE" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="bonita" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_QUALIDADE" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="agradavel" tipoAdjetivo="ADJETIVO_QUALIDADE" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="mau" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_DEFEITO" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="ma" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_DEFEITO" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="ruim" tipoAdjetivo="ADJETIVO_DEFEITO" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="feio" generoSujeito="GENERO_MASCULINO" tipoAdjetivo="ADJETIVO_DEFEITO" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="feia" generoSujeito="GENERO_FEMININO" tipoAdjetivo="ADJETIVO_DEFEITO" tipoPalavra="PALAVRA_ADJETIVO" />
+      <condicional palavra="horrivel" tipoAdjetivo="ADJETIVO_DEFEITO" tipoPalavra="PALAVRA_ADJETIVO" />
     </adjetivos>
     <verbos_auxiliares>
-      <condicional palavra="sou" novaPalavra="ser" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="sou" novaPalavra="ser" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="estou" novaPalavra="estar" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="tenho" novaPalavra="ter" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="hei" novaPalavra="há" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="és" novaPalavra="ser" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="estas" novaPalavra="estar" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="tens" novaPalavra="ter" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="é" novaPalavra="ser" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="está" novaPalavra="estar" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="tem" novaPalavra="ter" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="há" novaPalavra="haver" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="somos" novaPalavra="ser" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="estamos" novaPalavra="estar" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="temos" novaPalavra="ter" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="havemos" novaPalavra="haver" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="sois" novaPalavra="ser" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="estais" novaPalavra="estar" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="tendes" novaPalavra="ter" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="haveis" novaPalavra="haver" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="sao" novaPalavra="ser" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="estao" novaPalavra="estar" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="tem" novaPalavra="ter" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="hao" novaPalavra="haver" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="era" novaPalavra="ser" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="estava" novaPalavra="estar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoSujeito="sujSimples" />
-      <condicional palavra="tinha" novaPalavra="ter" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoSujeito="sujSimples" />
-      <condicional palavra="havia" novaPalavra="haver" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoSujeito="sujSimples" />
-      <condicional palavra="eras" novaPalavra="ser" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="estavas" novaPalavra="estar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="tinhas" novaPalavra="ter" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="havias" novaPalavra="haver" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="eramos" novaPalavra="ser" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="estavamos" novaPalavra="estar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="tinhamos" novaPalavra="ter" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="haviamos" novaPalavra="haver" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="eram" novaPalavra="ser" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="estavam" novaPalavra="estar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="tinham" novaPalavra="ter" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="haviam" novaPalavra="haver" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="fui" novaPalavra="ser" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="estive" novaPalavra="estar" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="tive" novaPalavra="ter" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="houve" novaPalavra="haver" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="foste" novaPalavra="ser" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="estiveste" novaPalavra="estar" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="tiveste" novaPalavra="ter" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="houveste" novaPalavra="haver" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="foi" novaPalavra="ser" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="esteve" novaPalavra="estar" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="teve" novaPalavra="ter" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="houve" novaPalavra="haver" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="fomos" novaPalavra="ser" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="estivemos" novaPalavra="estar" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="tivemos" novaPalavra="ter" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="houvemos" novaPalavra="haver" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="fostes" novaPalavra="ser" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="estivestes" novaPalavra="estar" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="tivestes" novaPalavra="ter" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="houvestes" novaPalavra="haver" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="foram" novaPalavra="ser" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="estiveram" novaPalavra="estar" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="tiveram" novaPalavra="ter" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="houveram" novaPalavra="haver" tempoSujeito="tempoPreteritoPerfeitoSimples" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="fora" novaPalavra="ser" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="estivera" novaPalavra="estar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="tivera" novaPalavra="ter" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="houvera" novaPalavra="haver" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="foras" novaPalavra="ser" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="estiveras" novaPalavra="estar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="tiveras" novaPalavra="ter" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="houveras" novaPalavra="haver" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="foramos" novaPalavra="ser" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="estiveramos" novaPalavra="estar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="tiveramos" novaPalavra="ter" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="houveramos" novaPalavra="haver" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="foreis" novaPalavra="ser" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="estivereis" novaPalavra="estar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="tivereis" novaPalavra="ter" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="houvereis" novaPalavra="haver" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="foram" novaPalavra="ser" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="estiveram" novaPalavra="estar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="tiveram" novaPalavra="ter" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="houveram" novaPalavra="haver" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="serei" novaPalavra="ser" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="estarei" novaPalavra="estar" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="terei" novaPalavra="ter" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="haverei" novaPalavra="haver" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="seras" novaPalavra="ser" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="estaras" novaPalavra="estar" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="teras" novaPalavra="ter" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="haveras" novaPalavra="haver" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="sera" novaPalavra="ser" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="estara" novaPalavra="estar" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="tera" novaPalavra="ter" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="havera" novaPalavra="haver" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="seremos" novaPalavra="ser" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="estaremos" novaPalavra="estar" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="teremos" novaPalavra="ter" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="haveremos" novaPalavra="haver" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="sereis" novaPalavra="ser" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="estareis" novaPalavra="estar" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="tereis" novaPalavra="ter" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="havereis" novaPalavra="haver" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="serao" novaPalavra="ser" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="estarao" novaPalavra="estar" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="terao" novaPalavra="ter" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="haverao" novaPalavra="haver" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="seria" novaPalavra="ser" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="estaria" novaPalavra="estar" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="teria" novaPalavra="ter" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="haveria" novaPalavra="haver" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="serias" novaPalavra="ser" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="estarias" novaPalavra="estar" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="terias" novaPalavra="ter" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="haverias" novaPalavra="haver" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="seriamos" novaPalavra="ser" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="estariamos" novaPalavra="estar" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="teriamos" novaPalavra="ter" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="haveriamos" novaPalavra="haver" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="seriam" novaPalavra="ser" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="estariam" novaPalavra="estar" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="teriam" novaPalavra="ter" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="haveriam" novaPalavra="haver" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="sido" prePalavra="ter" novaPalavra="ser" tempoSujeito="tempoPreteritoComposto" tipoPalavra="palVerboAux" />
-      <condicional palavra="estado" prePalavra="ter" novaPalavra="estar" tempoSujeito="tempoPreteritoComposto" tipoPalavra="palVerboAux" />
-      <condicional palavra="tido" prePalavra="ter" novaPalavra="ter" tempoSujeito="tempoPreteritoComposto" tipoPalavra="palVerboAux" />
-      <condicional palavra="havido" prePalavra="ter" novaPalavra="haver" tempoSujeito="tempoPreteritoComposto" tipoPalavra="palVerboAux" />
-      <condicional palavra="seja" novaPalavra="ser" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="esteja" novaPalavra="estar" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="tenha" novaPalavra="ter" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="haja" novaPalavra="haver" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="sejas" novaPalavra="ser" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="estejas" novaPalavra="estar" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="tenhas" novaPalavra="ter" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="hajas" novaPalavra="haver" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="sejamos" novaPalavra="ser" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="estejamos" novaPalavra="estar" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="tenhamos" novaPalavra="ter" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="hajamos" novaPalavra="haver" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="sejais" novaPalavra="ser" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="estejais" novaPalavra="estar" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="tenhais" novaPalavra="ter" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="hajais" novaPalavra="haver" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="sejam" novaPalavra="ser" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="estejam" novaPalavra="estar" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="tenham" novaPalavra="ter" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="hajam" novaPalavra="haver" tempoSujeito="tempoPresente" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="fosse" novaPalavra="ser" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="estivesse" novaPalavra="estar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="tivesse" novaPalavra="ter" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="houvesse" novaPalavra="haver" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="fosses" novaPalavra="ser" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="estivesses" novaPalavra="estar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="tivesses" novaPalavra="ter" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="houvesses" novaPalavra="haver" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="fossemos" novaPalavra="ser" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="estivessemos" novaPalavra="estar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="tivessemos" novaPalavra="ter" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="houvessemos" novaPalavra="haver" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="fossem" novaPalavra="ser" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="estivessem" novaPalavra="estar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="tivessem" novaPalavra="ter" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="houvessem" novaPalavra="haver" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerboAux" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="for" prePalavra="se" novaPalavra="ser" tipoSujeito="sujSimples" />
-      <condicional palavra="fores" novaPalavra="ser" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="formos" novaPalavra="ser" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="forem" novaPalavra="ser" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="estiver" novaPalavra="estar" tipoSujeito="sujSimples" />
-      <condicional palavra="estiveres" novaPalavra="estar" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="estivermos" novaPalavra="estar" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="estiverem" novaPalavra="estar" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="tiver" novaPalavra="ter" tipoSujeito="sujSimples" />
-      <condicional palavra="tiveres" novaPalavra="ter" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="tivermos" novaPalavra="ter" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="tiverem" novaPalavra="ter" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="houver" novaPalavra="haver" tipoSujeito="sujSimples" />
-      <condicional palavra="houveres" novaPalavra="haver" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="houvermos" novaPalavra="haver" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="houverem" novaPalavra="haver" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="tiver" novaPalavra="ter" tipoSujeito="sujSimples" />
-      <condicional palavra="tiveres" novaPalavra="ter" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="tivermos" novaPalavra="ter" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="tiverem" novaPalavra="ter" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="ser" tipoPalavra="palVerboAux" />
-      <condicional palavra="haver" tipoPalavra="palVerboAux" />
-      <condicional palavra="ter" tipoPalavra="palVerboAux" />
-      <condicional palavra="estar" tipoPalavra="palVerboAux" />
+      <condicional palavra="sou" novaPalavra="ser" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="sou" novaPalavra="ser" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estou" novaPalavra="estar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tenho" novaPalavra="ter" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="hei" novaPalavra="há" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="és" novaPalavra="ser" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estas" novaPalavra="estar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tens" novaPalavra="ter" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="é" novaPalavra="ser" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="está" novaPalavra="estar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tem" novaPalavra="ter" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="há" novaPalavra="haver" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="somos" novaPalavra="ser" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estamos" novaPalavra="estar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="temos" novaPalavra="ter" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="havemos" novaPalavra="haver" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="sois" novaPalavra="ser" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estais" novaPalavra="estar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tendes" novaPalavra="ter" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="haveis" novaPalavra="haver" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="sao" novaPalavra="ser" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estao" novaPalavra="estar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tem" novaPalavra="ter" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="hao" novaPalavra="haver" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="era" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estava" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tinha" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="havia" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="eras" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estavas" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tinhas" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="havias" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="eramos" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estavamos" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tinhamos" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="haviamos" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="eram" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estavam" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tinham" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="haviam" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="fui" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estive" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tive" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="houve" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="foste" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estiveste" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tiveste" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="houveste" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="foi" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="esteve" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="teve" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="houve" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="fomos" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estivemos" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tivemos" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="houvemos" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="fostes" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estivestes" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tivestes" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="houvestes" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="foram" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estiveram" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tiveram" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="houveram" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_PERFEITO_SIMPLES" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="fora" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estivera" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tivera" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="houvera" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="foras" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estiveras" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tiveras" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="houveras" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="foramos" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estiveramos" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tiveramos" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="houveramos" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="foreis" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estivereis" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tivereis" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="houvereis" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="foram" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estiveram" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tiveram" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="houveram" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="serei" novaPalavra="ser" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estarei" novaPalavra="estar" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="terei" novaPalavra="ter" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="haverei" novaPalavra="haver" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="seras" novaPalavra="ser" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estaras" novaPalavra="estar" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="teras" novaPalavra="ter" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="haveras" novaPalavra="haver" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="sera" novaPalavra="ser" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estara" novaPalavra="estar" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tera" novaPalavra="ter" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="havera" novaPalavra="haver" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="seremos" novaPalavra="ser" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estaremos" novaPalavra="estar" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="teremos" novaPalavra="ter" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="haveremos" novaPalavra="haver" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="sereis" novaPalavra="ser" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estareis" novaPalavra="estar" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tereis" novaPalavra="ter" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="havereis" novaPalavra="haver" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="serao" novaPalavra="ser" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estarao" novaPalavra="estar" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="terao" novaPalavra="ter" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="haverao" novaPalavra="haver" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="seria" novaPalavra="ser" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estaria" novaPalavra="estar" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="teria" novaPalavra="ter" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="haveria" novaPalavra="haver" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="serias" novaPalavra="ser" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estarias" novaPalavra="estar" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="terias" novaPalavra="ter" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="haverias" novaPalavra="haver" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="seriamos" novaPalavra="ser" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estariamos" novaPalavra="estar" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="teriamos" novaPalavra="ter" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="haveriamos" novaPalavra="haver" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="seriam" novaPalavra="ser" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estariam" novaPalavra="estar" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="teriam" novaPalavra="ter" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="haveriam" novaPalavra="haver" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="sido" prePalavra="ter" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_COMPOSTO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" />
+      <condicional palavra="estado" prePalavra="ter" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_COMPOSTO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" />
+      <condicional palavra="tido" prePalavra="ter" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_COMPOSTO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" />
+      <condicional palavra="havido" prePalavra="ter" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_COMPOSTO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" />
+      <condicional palavra="seja" novaPalavra="ser" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="esteja" novaPalavra="estar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tenha" novaPalavra="ter" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="haja" novaPalavra="haver" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="sejas" novaPalavra="ser" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estejas" novaPalavra="estar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tenhas" novaPalavra="ter" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="hajas" novaPalavra="haver" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="sejamos" novaPalavra="ser" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estejamos" novaPalavra="estar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tenhamos" novaPalavra="ter" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="hajamos" novaPalavra="haver" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="sejais" novaPalavra="ser" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estejais" novaPalavra="estar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tenhais" novaPalavra="ter" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="hajais" novaPalavra="haver" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="sejam" novaPalavra="ser" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estejam" novaPalavra="estar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tenham" novaPalavra="ter" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="hajam" novaPalavra="haver" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="fosse" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estivesse" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tivesse" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="houvesse" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="fosses" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estivesses" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tivesses" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="houvesses" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="fossemos" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estivessemos" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tivessemos" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="houvessemos" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="fossem" novaPalavra="ser" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estivessem" novaPalavra="estar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tivessem" novaPalavra="ter" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="houvessem" novaPalavra="haver" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO_AUXILIAR" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="for" prePalavra="se" novaPalavra="ser" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="fores" novaPalavra="ser" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="formos" novaPalavra="ser" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="forem" novaPalavra="ser" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estiver" novaPalavra="estar" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estiveres" novaPalavra="estar" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="estivermos" novaPalavra="estar" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estiverem" novaPalavra="estar" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tiver" novaPalavra="ter" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tiveres" novaPalavra="ter" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tivermos" novaPalavra="ter" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tiverem" novaPalavra="ter" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="houver" novaPalavra="haver" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="houveres" novaPalavra="haver" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="houvermos" novaPalavra="haver" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="houverem" novaPalavra="haver" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tiver" novaPalavra="ter" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tiveres" novaPalavra="ter" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tivermos" novaPalavra="ter" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tiverem" novaPalavra="ter" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="ser" tipoPalavra="PALAVRA_VERBO_AUXILIAR" />
+      <condicional palavra="haver" tipoPalavra="PALAVRA_VERBO_AUXILIAR" />
+      <condicional palavra="ter" tipoPalavra="PALAVRA_VERBO_AUXILIAR" />
+      <condicional palavra="estar" tipoPalavra="PALAVRA_VERBO_AUXILIAR" />
     </verbos_auxiliares>
     <substantivos>
-      <condicional palavra="ela" generoSujeito="genFeminino" tipoPalavra="palArtDef" tipoSujeito="sujSimples" />
-      <condicional palavra="ele" generoSujeito="genMasculino" tipoPalavra="palArtDef" tipoSujeito="sujSimples" />
-      <condicional palavra="um" generoSujeito="genMasculino" tipoPalavra="palArtIndef" tipoSujeito="sujSimples" />
-      <condicional palavra="uma" generoSujeito="genFeminino" tipoPalavra="palArtIndef" tipoSujeito="sujSimples" />
-      <condicional palavra="ela" generoSujeito="genMasculino" tipoSujeito="sujSimples" />
-      <condicional palavra="elas" novaPalavra="ela" generoSujeito="genFeminino" tipoSujeito="sujComposto" />
-      <condicional palavra="umas" novaPalavra="uma" generoSujeito="genFeminino" tipoPalavra="palArtIndef" tipoSujeito="sujComposto" />
-      <condicional palavra="uns" novaPalavra="um" generoSujeito="genMasculino" tipoPalavra="palArtIndef" tipoSujeito="sujComposto" />
-      <condicional palavra="eles" novaPalavra="ele" generoSujeito="genMasculino" tipoSujeito="sujComposto" />
-      <condicional palavra="as" novaPalavra="a" generoSujeito="genFeminino" tipoPalavra="palArtDef" tipoSujeito="sujComposto" />
-      <condicional palavra="os" novaPalavra="o" generoSujeito="genMasculino" tipoPalavra="palArtDef" tipoSujeito="sujComposto" />
+      <condicional palavra="ela" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_ARTIGO_DEFINIDO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="ele" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_ARTIGO_DEFINIDO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="um" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_ARTIGO_INDEFINIDO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="uma" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_ARTIGO_INDEFINIDO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="ela" generoSujeito="GENERO_MASCULINO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="elas" novaPalavra="ela" generoSujeito="GENERO_FEMININO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="umas" novaPalavra="uma" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_ARTIGO_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="uns" novaPalavra="um" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_ARTIGO_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="eles" novaPalavra="ele" generoSujeito="GENERO_MASCULINO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="as" novaPalavra="a" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_ARTIGO_DEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="os" novaPalavra="o" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_ARTIGO_DEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
     </substantivos>
     <preposicoes>
-      <condicional palavra="ante" tipoPalavra="palPreposicao" />
-      <condicional palavra="após" tipoPalavra="palPreposicao" />
-      <condicional palavra="até" tipoPalavra="palPreposicao" />
-      <condicional palavra="com" tipoPalavra="palPreposicao" />
-      <condicional palavra="contra" tipoPalavra="palPreposicao" />
-      <condicional palavra="de" tipoPalavra="palPreposicao" />
-      <condicional palavra="desde" tipoPalavra="palPreposicao" />
-      <condicional palavra="em" tipoPalavra="palPreposicao" />
-      <condicional palavra="entre" tipoPalavra="palPreposicao" />
-      <condicional palavra="para" tipoPalavra="palPreposicao" />
-      <condicional palavra="per" tipoPalavra="palPreposicao" />
-      <condicional palavra="perante" tipoPalavra="palPreposicao" />
-      <condicional palavra="por" tipoPalavra="palPreposicao" />
-      <condicional palavra="sem" tipoPalavra="palPreposicao" />
-      <condicional palavra="sobre" tipoPalavra="palPreposicao" />
-      <condicional palavra="trás" tipoPalavra="palPreposicao" />
+      <condicional palavra="ante" tipoPalavra="PALAVRA_PREPOSICAO" />
+      <condicional palavra="após" tipoPalavra="PALAVRA_PREPOSICAO" />
+      <condicional palavra="até" tipoPalavra="PALAVRA_PREPOSICAO" />
+      <condicional palavra="com" tipoPalavra="PALAVRA_PREPOSICAO" />
+      <condicional palavra="contra" tipoPalavra="PALAVRA_PREPOSICAO" />
+      <condicional palavra="de" tipoPalavra="PALAVRA_PREPOSICAO" />
+      <condicional palavra="desde" tipoPalavra="PALAVRA_PREPOSICAO" />
+      <condicional palavra="em" tipoPalavra="PALAVRA_PREPOSICAO" />
+      <condicional palavra="entre" tipoPalavra="PALAVRA_PREPOSICAO" />
+      <condicional palavra="para" tipoPalavra="PALAVRA_PREPOSICAO" />
+      <condicional palavra="per" tipoPalavra="PALAVRA_PREPOSICAO" />
+      <condicional palavra="perante" tipoPalavra="PALAVRA_PREPOSICAO" />
+      <condicional palavra="por" tipoPalavra="PALAVRA_PREPOSICAO" />
+      <condicional palavra="sem" tipoPalavra="PALAVRA_PREPOSICAO" />
+      <condicional palavra="sobre" tipoPalavra="PALAVRA_PREPOSICAO" />
+      <condicional palavra="trás" tipoPalavra="PALAVRA_PREPOSICAO" />
     </preposicoes>
     <pessoas>
-      <condicional palavra="eu" tipoPalavra="palPronomePessoal" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="voce" tipoPalavra="palPronomePessoal" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="tu" tipoPalavra="palPronomePessoal" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="ele" generoSujeito="genMasculino" tipoPalavra="palPronomePessoal" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="ela" generoSujeito="genFeminino" tipoPalavra="palPronomePessoal" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="nos" tipoPalavra="palPronomePessoal" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="vos" tipoPalavra="palPronomePessoal" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="eles" generoSujeito="genMasculino" tipoPalavra="palPronomePessoal" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="elas" generoSujeito="genFeminino" tipoPalavra="palPronomePessoal" tipoPessoa="3" tipoSujeito="sujComposto" />
+      <condicional palavra="eu" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="voce" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="tu" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="ele" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="ela" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="nos" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="vos" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="eles" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="elas" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
     </pessoas>
     <pronomes>
-      <condicional palavra="e" entreSujeitos="true" tipoPalavra="palAdverbio" tipoSujeito="sujComposto" />
-      <condicional palavra="a" tipoPalavra="palPronomeDemonstrativo" tipoSujeito="sujComposto" />
-      <condicional palavra="algo" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="alguem" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="algum" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="alguma" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="algumas" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="alguns" generoSujeito="genFeminino" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="aquela" generoSujeito="genFeminino" tipoPalavra="palPronomeDemonstrativo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="aquelas" generoSujeito="genFeminino" tipoPalavra="palPronomeDemonstrativo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="aquele" generoSujeito="genFeminino" tipoPalavra="palPronomeDemonstrativo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="aqueles" tipoPalavra="palPronomeDemonstrativo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="aqui" generoSujeito="genFeminino" tipoPalavra="palPronomeDemonstrativo" tipoSujeito="sujComposto" />
-      <condicional palavra="aquilo" tipoPalavra="palPronomeDemonstrativo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="as" tipoPalavra="palPronomeDemonstrativo" tipoSujeito="sujComposto" />
-      <condicional palavra="bastante" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="bastantes" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="cada" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="certa" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="certas" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="certo" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="certos" generoSujeito="genMasculino" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="comigo" tipoPalavra="palPronomePessoal" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="como" generoSujeito="genMasculino" tipoPalavra="palPronomeInterrogativo" tipoSujeito="sujComposto" />
-      <condicional palavra="conosco" generoSujeito="genFeminino" tipoPalavra="palPronomePessoal" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="contigo" generoSujeito="genFeminino" tipoPalavra="palPronomePessoal" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="convosco" tipoPalavra="palPronomePessoal" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="demais" generoSujeito="genFeminino" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="ela" generoSujeito="genFeminino" tipoPalavra="palPronomePessoal" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="elas" generoSujeito="genFeminino" tipoPalavra="palPronomePessoal" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="ele" generoSujeito="genFeminino" tipoPalavra="palPronomePessoal" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="eles" generoSujeito="genFeminino" tipoPalavra="palPronomePessoal" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="essa" generoSujeito="genFeminino" tipoPalavra="palPronomeDemonstrativo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="essas" generoSujeito="genFeminino" tipoPalavra="palPronomeDemonstrativo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="esse" generoSujeito="genFeminino" tipoPalavra="palPronomeDemonstrativo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="esses" generoSujeito="genFeminino" tipoPalavra="palPronomeDemonstrativo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="estas" generoSujeito="genFeminino" tipoPalavra="palPronomeDemonstrativo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="este" generoSujeito="genFeminino" tipoPalavra="palPronomeDemonstrativo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="estes" generoSujeito="genMasculino" tipoPalavra="palPronomeDemonstrativo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="eu" generoSujeito="genFeminino" tipoPalavra="palPronomePessoal" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="isso" generoSujeito="genFeminino" tipoPalavra="palPronomeDemonstrativo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="isto" generoSujeito="genFeminino" tipoPalavra="palPronomeDemonstrativo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="lhe" generoSujeito="genFeminino" tipoPalavra="palPronomePessoal" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="lhes" tipoPalavra="palPronomePessoal" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="mais" generoSujeito="genMasculino" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="me" tipoPalavra="palPronomePessoal" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="menos" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="mesma" tipoPalavra="palPronomeDemonstrativo" tipoSujeito="sujComposto" />
-      <condicional palavra="mesmas" tipoPalavra="palPronomeDemonstrativo" tipoSujeito="sujComposto" />
-      <condicional palavra="mesmo" tipoPalavra="palPronomeDemonstrativo" tipoSujeito="sujComposto" />
-      <condicional palavra="mesmos" generoSujeito="genMasculino" tipoPalavra="palPronomeDemonstrativo" tipoSujeito="sujComposto" />
-      <condicional palavra="meu" generoSujeito="genMasculino" tipoPalavra="palPronomePossessivo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="meus" generoSujeito="genMasculino" tipoPalavra="palPronomePossessivo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="mim" generoSujeito="genMasculino" tipoPalavra="palPronomePessoal" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="minha" generoSujeito="genMasculino" tipoPalavra="palPronomePossessivo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="minhas" tipoPalavra="palPronomePossessivo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="muita" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="muitas" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="muito" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="muitos" generoSujeito="genFeminino" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="na" tipoPalavra="palPronomeDemonstrativo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="nada" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="nenhum" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="nenhuma" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="nenhumas" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="nenhuns" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="ninguem" generoSujeito="genMasculino" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="nós" tipoPalavra="palPronomePessoal" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="o" tipoPalavra="palPronomeDemonstrativo" tipoSujeito="sujComposto" />
-      <condicional palavra="os" tipoPalavra="palPronomeDemonstrativo" tipoSujeito="sujComposto" />
-      <condicional palavra="outra" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="outras" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="outrem" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="outro" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="outros" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="pouca" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="poucas" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="pouco" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="poucos" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="própria" tipoPalavra="palPronomeDemonstrativo" tipoSujeito="sujComposto" />
-      <condicional palavra="próprias" tipoPalavra="palPronomeDemonstrativo" tipoSujeito="sujComposto" />
-      <condicional palavra="próprio" tipoPalavra="palPronomeDemonstrativo" tipoSujeito="sujComposto" />
-      <condicional palavra="próprios" tipoPalavra="palPronomeDemonstrativo" tipoSujeito="sujComposto" />
-      <condicional palavra="quaisquer" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="qual" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="qualquer" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="quanta" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="quantas" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="quanto" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="quantos" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="que" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="quem" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="se" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="senhor" tipoPalavra="palPronomePessoal" tipoSujeito="sujComposto" />
-      <condicional palavra="senhora" tipoPalavra="palPronomePessoal" tipoSujeito="sujComposto" />
-      <condicional palavra="senhoras" tipoPalavra="palPronomePessoal" tipoSujeito="sujComposto" />
-      <condicional palavra="senhores" generoSujeito="genFeminino" tipoPalavra="palPronomePessoal" tipoSujeito="sujComposto" />
-      <condicional palavra="seu" generoSujeito="genFeminino" tipoPalavra="palPronomePossessivo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="seus" generoSujeito="genFeminino" tipoPalavra="palPronomePossessivo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="si" generoSujeito="genFeminino" tipoPalavra="palPronomePessoal" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="sua" generoSujeito="genFeminino" tipoPalavra="palPronomePossessivo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="suas" tipoPalavra="palPronomePossessivo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="tais" tipoPalavra="palPronomeDemonstrativo" tipoSujeito="sujComposto" />
-      <condicional palavra="tal" tipoPalavra="palPronomeDemonstrativo" tipoSujeito="sujComposto" />
-      <condicional palavra="tanta" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="tantas" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="tanto" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="tantos" generoSujeito="genFeminino" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="te" generoSujeito="genFeminino" tipoPalavra="palPronomePessoal" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="teu" generoSujeito="genFeminino" tipoPalavra="palPronomePossessivo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="teus" generoSujeito="genFeminino" tipoPalavra="palPronomePossessivo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="ti" tipoPalavra="palPronomePessoal" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="toda" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="todas" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="todo" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="todos" generoSujeito="genFeminino" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="tu" generoSujeito="genFeminino" tipoPalavra="palPronomePessoal" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="tua" generoSujeito="genFeminino" tipoPalavra="palPronomePossessivo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="tuas" tipoPalavra="palPronomePossessivo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="tudo" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="várias" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="vários" generoSujeito="genFeminino" tipoPalavra="palPronomeIndefinido" tipoSujeito="sujComposto" />
-      <condicional palavra="voce" generoSujeito="genFeminino" tipoPalavra="palPronomePessoal" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="voces" tipoPalavra="palPronomePessoal" tipoPessoa="2" tipoSujeito="sujComposto" />
+      <condicional palavra="e" entreSujeitos="true" tipoPalavra="PALAVRA_ADVERBIO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="a" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="algo" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="alguem" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="algum" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="alguma" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="algumas" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="alguns" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="aquela" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="aquelas" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="aquele" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="aqueles" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="aqui" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="aquilo" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="as" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="bastante" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="bastantes" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="cada" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="certa" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="certas" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="certo" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="certos" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="comigo" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="como" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_PRONOME_INTERROGATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="conosco" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="contigo" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="convosco" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="demais" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="ela" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="elas" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="ele" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="eles" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="essa" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="essas" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="esse" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="esses" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estas" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="este" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="estes" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="eu" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="isso" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="isto" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="lhe" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="lhes" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="mais" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="me" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="menos" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="mesma" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="mesmas" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="mesmo" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="mesmos" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="meu" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_PRONOME_POSSESSIVO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="meus" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_PRONOME_POSSESSIVO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="mim" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="minha" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_PRONOME_POSSESSIVO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="minhas" tipoPalavra="PALAVRA_PRONOME_POSSESSIVO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="muita" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="muitas" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="muito" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="muitos" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="na" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="nada" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="nenhum" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="nenhuma" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="nenhumas" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="nenhuns" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="ninguem" generoSujeito="GENERO_MASCULINO" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="nós" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="o" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="os" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="outra" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="outras" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="outrem" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="outro" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="outros" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="pouca" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="poucas" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="pouco" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="poucos" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="própria" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="próprias" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="próprio" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="próprios" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="quaisquer" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="qual" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="qualquer" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="quanta" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="quantas" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="quanto" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="quantos" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="que" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="quem" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="se" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="senhor" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="senhora" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="senhoras" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="senhores" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="seu" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_POSSESSIVO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="seus" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_POSSESSIVO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="si" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="sua" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_POSSESSIVO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="suas" tipoPalavra="PALAVRA_PRONOME_POSSESSIVO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tais" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tal" tipoPalavra="PALAVRA_PRONOME_DEMONSTRATIVO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tanta" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tantas" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tanto" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tantos" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="te" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="teu" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_POSSESSIVO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="teus" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_POSSESSIVO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="ti" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="toda" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="todas" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="todo" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="todos" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tu" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tua" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_POSSESSIVO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tuas" tipoPalavra="PALAVRA_PRONOME_POSSESSIVO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="tudo" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="várias" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="vários" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_INDEFINIDO" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="voce" generoSujeito="GENERO_FEMININO" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="voces" tipoPalavra="PALAVRA_PRONOME_PESSOAL" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
     </pronomes>
     <verbos>
-      <condicional palavra="" fimPalavra="a" fimPalavraNovo="ar" tempoSujeito="tempoPresente" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="ado" fimPalavraNovo="ar" tipoPalavra="palVerbo" />
-      <condicional palavra="" fimPalavra="ais" fimPalavraNovo="ar" tempoSujeito="tempoPresente" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="am" fimPalavraNovo="ar" tempoSujeito="tempoPresente" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="amos" fimPalavraNovo="ar" tempoSujeito="tempoPresente" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="ando" fimPalavraNovo="ar" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" />
-      <condicional palavra="" fimPalavra="ar" fimPalavraNovo="ar" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="ara" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoMQPerfeito" tipoPalavra="palVerbo" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="ará" fimPalavraNovo="ar" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="aram" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoPerfeito" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="aramos" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoMQPerfeito" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="arao" fimPalavraNovo="ar" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="aras" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoMQPerfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="arei" fimPalavraNovo="ar" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="areis" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoMQPerfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="arem" fimPalavraNovo="ar" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="aremos" fimPalavraNovo="ar" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="aria" fimPalavraNovo="ar" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="ariam" fimPalavraNovo="ar" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="ariamos" fimPalavraNovo="ar" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="arias" fimPalavraNovo="ar" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="arieis" fimPalavraNovo="ar" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="armos" fimPalavraNovo="ar" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="as" fimPalavraNovo="ar" tempoSujeito="tempoPresente" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="asse" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="assem" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="assemos" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="asses" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="aste" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoPerfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="astes" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoPerfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="ava" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="avam" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="avamos" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="avas" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="e" fimPalavraNovo="ar" tempoSujeito="tempoPresente" tipoPalavra="palVerbo" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="ei" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoPerfeito" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="eis" fimPalavraNovo="ar" tempoSujeito="tempoPresente" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="em" fimPalavraNovo="ar" tempoSujeito="tempoPresente" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="emos" fimPalavraNovo="ar" tempoSujeito="tempoPresente" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="endo" fimPalavraNovo="er" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" />
-      <condicional palavra="" fimPalavra="er" fimPalavraNovo="er" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="era" fimPalavraNovo="er" tempoSujeito="tempoPreteritoMQPerfeito" tipoPalavra="palVerbo" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="erá" fimPalavraNovo="er" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="eram" fimPalavraNovo="er" tempoSujeito="tempoPreteritoPerfeito" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="eramos" fimPalavraNovo="er" tempoSujeito="tempoPreteritoMQPerfeito" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="erao" fimPalavraNovo="er" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="eras" fimPalavraNovo="er" tempoSujeito="tempoPreteritoMQPerfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="erdes" fimPalavraNovo="er" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="erei" fimPalavraNovo="er" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="ereis" fimPalavraNovo="er" tempoSujeito="tempoPreteritoMQPerfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="erem" fimPalavraNovo="er" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="eremos" fimPalavraNovo="er" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="eria" fimPalavraNovo="er" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="eriam" fimPalavraNovo="er" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="eriamos" fimPalavraNovo="er" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="erias" fimPalavraNovo="er" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="erieis" fimPalavraNovo="er" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="ermos" fimPalavraNovo="er" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="es" fimPalavraNovo="ar" tempoSujeito="tempoPresente" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="esse" fimPalavraNovo="er" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="esseis" fimPalavraNovo="er" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="essem" fimPalavraNovo="er" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="essemos" fimPalavraNovo="er" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="esses" fimPalavraNovo="er" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="este" fimPalavraNovo="er" tempoSujeito="tempoPreteritoPerfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="estes" fimPalavraNovo="er" tempoSujeito="tempoPreteritoPerfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="eu" fimPalavraNovo="er" tempoSujeito="tempoPreteritoPerfeito" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="i" fimPalavraNovo="er" tempoSujeito="tempoPreteritoPerfeito" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="ia" fimPalavraNovo="er" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="iam" fimPalavraNovo="er" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="iamos" fimPalavraNovo="er" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="ias" fimPalavraNovo="er" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="ido" fimPalavraNovo="er" tipoPalavra="palVerbo" />
-      <condicional palavra="" fimPalavra="ieis" fimPalavraNovo="er" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="imos" fimPalavraNovo="ir" tempoSujeito="tempoPreteritoPerfeito" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="ir" fimPalavraNovo="ir" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="ira" fimPalavraNovo="ir" tempoSujeito="tempoPreteritoMQPerfeito" tipoPalavra="palVerbo" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="iram" fimPalavraNovo="ir" tempoSujeito="tempoPreteritoPerfeito" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="iramos" fimPalavraNovo="ir" tempoSujeito="tempoPreteritoMQPerfeito" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="irao" fimPalavraNovo="ir" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="iras" fimPalavraNovo="ir" tempoSujeito="tempoPreteritoMQPerfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="irdes" fimPalavraNovo="ir" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="irei" fimPalavraNovo="ir" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="ireis" fimPalavraNovo="ir" tempoSujeito="tempoPreteritoMQPerfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="irem" fimPalavraNovo="ir" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="iremos" fimPalavraNovo="ir" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="ires" fimPalavraNovo="ir" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="iria" fimPalavraNovo="ir" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="iriam" fimPalavraNovo="ir" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="iriamos" fimPalavraNovo="ir" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="irias" fimPalavraNovo="ir" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="irieis" fimPalavraNovo="ir" tempoSujeito="tempoFuturoPreterito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="irmos" fimPalavraNovo="ir" tempoSujeito="tempoFuturoPresente" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="isse" fimPalavraNovo="ir" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="0" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="isseis" fimPalavraNovo="ir" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="issem" fimPalavraNovo="ir" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="issemos" fimPalavraNovo="ir" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="isses" fimPalavraNovo="ir" tempoSujeito="tempoPreteritoImperfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="iste" fimPalavraNovo="ir" tempoSujeito="tempoPreteritoPerfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="istes" fimPalavraNovo="ir" tempoSujeito="tempoPreteritoPerfeito" tipoPalavra="palVerbo" tipoPessoa="2" tipoSujeito="sujComposto" />
-      <condicional palavra="" fimPalavra="iu" fimPalavraNovo="ir" tempoSujeito="tempoPreteritoPerfeito" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="o" fimPalavraNovo="ar" tempoSujeito="tempoPresente" tipoPalavra="palVerbo" tipoPessoa="1" tipoSujeito="sujSimples" />
-      <condicional palavra="" fimPalavra="ou" fimPalavraNovo="ar" tempoSujeito="tempoPreteritoPerfeito" tipoPalavra="palVerbo" tipoPessoa="3" tipoSujeito="sujSimples" />
+      <condicional palavra="" fimPalavra="a" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="ado" fimPalavraNovo="ar" tipoPalavra="PALAVRA_VERBO" />
+      <condicional palavra="" fimPalavra="ais" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="am" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="amos" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="ando" fimPalavraNovo="ar" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" />
+      <condicional palavra="" fimPalavra="ar" fimPalavraNovo="ar" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="ara" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_MAIS_QUE_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="ará" fimPalavraNovo="ar" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="aram" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="aramos" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_MAIS_QUE_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="arao" fimPalavraNovo="ar" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="aras" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_MAIS_QUE_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="arei" fimPalavraNovo="ar" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="areis" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_MAIS_QUE_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="arem" fimPalavraNovo="ar" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="aremos" fimPalavraNovo="ar" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="aria" fimPalavraNovo="ar" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="ariam" fimPalavraNovo="ar" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="ariamos" fimPalavraNovo="ar" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="arias" fimPalavraNovo="ar" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="arieis" fimPalavraNovo="ar" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="armos" fimPalavraNovo="ar" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="as" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="asse" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="assem" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="assemos" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="asses" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="aste" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="astes" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="ava" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="avam" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="avamos" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="avas" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="e" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="ei" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="eis" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="em" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="emos" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="endo" fimPalavraNovo="er" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" />
+      <condicional palavra="" fimPalavra="er" fimPalavraNovo="er" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="era" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_MAIS_QUE_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="erá" fimPalavraNovo="er" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="eram" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="eramos" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_MAIS_QUE_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="erao" fimPalavraNovo="er" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="eras" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_MAIS_QUE_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="erdes" fimPalavraNovo="er" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="erei" fimPalavraNovo="er" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="ereis" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_MAIS_QUE_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="erem" fimPalavraNovo="er" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="eremos" fimPalavraNovo="er" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="eria" fimPalavraNovo="er" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="eriam" fimPalavraNovo="er" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="eriamos" fimPalavraNovo="er" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="erias" fimPalavraNovo="er" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="erieis" fimPalavraNovo="er" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="ermos" fimPalavraNovo="er" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="es" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="esse" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="esseis" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="essem" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="essemos" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="esses" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="este" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="estes" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="eu" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="i" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="ia" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="iam" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="iamos" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="ias" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="ido" fimPalavraNovo="er" tipoPalavra="PALAVRA_VERBO" />
+      <condicional palavra="" fimPalavra="ieis" fimPalavraNovo="er" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="imos" fimPalavraNovo="ir" tempoSujeito="TEMPO_PRETERITO_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="ir" fimPalavraNovo="ir" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="ira" fimPalavraNovo="ir" tempoSujeito="TEMPO_PRETERITO_MAIS_QUE_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="iram" fimPalavraNovo="ir" tempoSujeito="TEMPO_PRETERITO_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="iramos" fimPalavraNovo="ir" tempoSujeito="TEMPO_PRETERITO_MAIS_QUE_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="irao" fimPalavraNovo="ir" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="iras" fimPalavraNovo="ir" tempoSujeito="TEMPO_PRETERITO_MAIS_QUE_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="irdes" fimPalavraNovo="ir" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="irei" fimPalavraNovo="ir" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="ireis" fimPalavraNovo="ir" tempoSujeito="TEMPO_PRETERITO_MAIS_QUE_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="irem" fimPalavraNovo="ir" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="iremos" fimPalavraNovo="ir" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="ires" fimPalavraNovo="ir" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="iria" fimPalavraNovo="ir" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="iriam" fimPalavraNovo="ir" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="iriamos" fimPalavraNovo="ir" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="irias" fimPalavraNovo="ir" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="irieis" fimPalavraNovo="ir" tempoSujeito="TEMPO_FUTURO_PRETERITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="irmos" fimPalavraNovo="ir" tempoSujeito="TEMPO_FUTURO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="isse" fimPalavraNovo="ir" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="0" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="isseis" fimPalavraNovo="ir" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="issem" fimPalavraNovo="ir" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="issemos" fimPalavraNovo="ir" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="isses" fimPalavraNovo="ir" tempoSujeito="TEMPO_PRETERITO_IMPERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="iste" fimPalavraNovo="ir" tempoSujeito="TEMPO_PRETERITO_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="istes" fimPalavraNovo="ir" tempoSujeito="TEMPO_PRETERITO_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="2" tipoSujeito="SUJEITO_COMPOSTO" />
+      <condicional palavra="" fimPalavra="iu" fimPalavraNovo="ir" tempoSujeito="TEMPO_PRETERITO_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="o" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRESENTE" tipoPalavra="PALAVRA_VERBO" tipoPessoa="1" tipoSujeito="SUJEITO_SIMPLES" />
+      <condicional palavra="" fimPalavra="ou" fimPalavraNovo="ar" tempoSujeito="TEMPO_PRETERITO_PERFEITO" tipoPalavra="PALAVRA_VERBO" tipoPessoa="3" tipoSujeito="SUJEITO_SIMPLES" />
     </verbos>
   </condicionais>
 </definitions>

@@ -177,6 +177,5 @@ Vector strings=new Vector();
 		out("Sujeito: "+frase.getSujeito());
 		out("Verbo: "+frase.getVerbo());
 		out("Predicado: "+frase.getPredicado());
-		
 	}
 }

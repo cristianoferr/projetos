@@ -40,21 +40,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="business\BPLanguageLoader.cs" />
+    <Compile Include="manager\CondicionalManager.cs" />
     <Compile Include="model\frase\ComposicaoFrase.cs" />
+    <Compile Include="model\frase\Oracao.cs" />
     <Compile Include="model\frase\Frase.cs" />
     <Compile Include="NLPLoader.cs" />
     <Compile Include="NLPConsts.cs" />
     <Compile Include="model\frase\Condicional.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="model\words\Artigo.cs" />
-    <Compile Include="model\words\Pronome.cs" />
-    <Compile Include="model\words\Substantivo.cs" />
-    <Compile Include="model\words\Verbo.cs" />
     <Compile Include="model\words\Word.cs" />
     <Compile Include="model\words\WordHolder.cs" />
     <Compile Include="model\words\WordManager.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{2635bb00-8c2a-4ecf-86b9-96bf3e77e4a0}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="xml\nlpdata.xml">
       <SubType>Designer</SubType>

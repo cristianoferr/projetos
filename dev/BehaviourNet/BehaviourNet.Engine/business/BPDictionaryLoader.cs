@@ -16,7 +16,7 @@ namespace BehaviourNet.engine.business
         {
             XElement root = XElement.Load(xmlFile);
             foreach (XElement words in root.Elements("words").Elements()){
-                AddWord(loader, words);
+           //     AddWord(loader, words);
             }
 
             foreach (XElement frases in root.Elements("phrases").Elements())
@@ -56,7 +56,7 @@ namespace BehaviourNet.engine.business
             loader.phraseManager.AddPhrase(objFrase);
         }
 
-        private void AddWord(engine.BehaviourLoader loader, XElement words)
+       /* private void AddWord(engine.BehaviourLoader loader, XElement words)
         {
             var type = Type.GetType(BNConsts.NLP_MODEL_NAMESPACE + "." + words.Attribute("class").Value);
 
@@ -76,6 +76,6 @@ namespace BehaviourNet.engine.business
                 loader.AddWord(objWord.tipo, objWord);
             }
 
-        }
+        }*/
     }
 }

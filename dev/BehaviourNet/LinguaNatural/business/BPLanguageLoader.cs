@@ -1,6 +1,7 @@
-﻿using BehaviourNet.engine.metamodel;
+﻿
 using BehaviourNet.engine.nlp;
 using BehaviourNet.utils;
+using LinguaNatural.model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using System.Xml.Linq;
 
 namespace LinguaNatural.business
 {
-    class BPDictionaryLoader
+    class BPLanguageLoader
     {
         internal void LoadFrom(NLPLoader loader, string xmlFile)
         {
@@ -20,7 +21,6 @@ namespace LinguaNatural.business
                 AddGruposCondicionais(loader, gruposPalavras);
             }
 
-           
 
         }
 
@@ -28,19 +28,11 @@ namespace LinguaNatural.business
         {
             foreach (XElement grupoPalavras in gruposPalavras.Elements())
             {
-                AddCondicionais(loader, grupoPalavras);
-                //Condicional cond = new Condicional();
-            }
-
-        }
-
-        private void AddCondicionais(NLPLoader loader, XElement grupoPalavras)
-        {
-            foreach (XElement elCond in grupoPalavras.Elements())
-            {
-                Condicional cond = new Condicional(elCond);
+                Condicional cond = new Condicional(grupoPalavras);
                 loader.AddCondicional(cond);
             }
+
         }
+
     }
 }

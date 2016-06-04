@@ -106,6 +106,10 @@
       <Project>{c68201d4-ea1f-4eaf-b79e-5aef8d958e2e}</Project>
       <Name>LinguaNatural</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{2635bb00-8c2a-4ecf-86b9-96bf3e77e4a0}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -10,3 +10,9 @@ G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Engine\obj\De
 G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Engine\obj\Debug\BehaviourNet.Engine.pdb
 G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Engine\bin\Debug\xml\definitions_test.xml
 G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Engine\obj\Debug\BehaviourNet.Engine.csprojResolveAssemblyReference.cache
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\BehaviourNet.Engine\bin\Debug\xml\definitions_test.xml
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\BehaviourNet.Engine\bin\Debug\xml\definitions.xml
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\BehaviourNet.Engine\bin\Debug\BehaviourNet.Engine.dll
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\BehaviourNet.Engine\bin\Debug\BehaviourNet.Engine.pdb
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\BehaviourNet.Engine\obj\Debug\BehaviourNet.Engine.dll
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\BehaviourNet.Engine\obj\Debug\BehaviourNet.Engine.pdb

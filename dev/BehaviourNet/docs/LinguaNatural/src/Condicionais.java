@@ -87,16 +87,9 @@ public void setVerbos(Verbos verbos) {
 			}
 		}
 		
-		
-
-		
-		
-		
-		
 		for (int i=0;i<condicionais.size();i++){
 			Condicional c=(Condicional)condicionais.elementAt(i);
 			Palavra p = (Palavra)frase.getPalavra();
-
 
 			// Desconjugando verbos
 			if (!c.getFimPalavra().equals("")) {

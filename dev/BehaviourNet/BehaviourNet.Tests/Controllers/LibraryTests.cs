@@ -14,7 +14,7 @@ using BehaviourNet.engine.metamodel;
 namespace BehaviourNet.Tests.Controllers
 {
     [TestClass]
-    public class LinguaNaturalTests
+    public class LibraryTests
     {
         const string SISTEMA_TYPE = "SistemaWeb";
 
@@ -59,7 +59,7 @@ namespace BehaviourNet.Tests.Controllers
 
         }
 
-        [TestMethod]
+      /*  [TestMethod]
         public void TestaCargaWords()
         {
             BehaviourLoader load = new BehaviourLoader();
@@ -80,7 +80,7 @@ namespace BehaviourNet.Tests.Controllers
             Assert.IsTrue(wm.IsWordOfType("SERÁ", BNConsts.WORD_PRONOME));
 
 
-        }
+        }*/
 
         [TestMethod]
         public void TestaCargaFrases()

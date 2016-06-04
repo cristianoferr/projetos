@@ -14,8 +14,6 @@ namespace BehaviourNet.engine
         PhraseManager phraseManager_ = new PhraseManager();
         public PhraseManager phraseManager { get { return phraseManager_; } }
 
-        WordManager wordManager_ = new WordManager();
-        public WordManager wordManager { get { return wordManager_; } }
         MetaModelManager metaModelManager_ = new MetaModelManager();
         public MetaModelManager metaModelManager { get { return metaModelManager_; } }
 
@@ -35,13 +33,6 @@ namespace BehaviourNet.engine
         {
             throw new NotImplementedException();
         }
-
-        
-        internal void AddWord(string tipo, Word objWord)
-        {
-            wordManager_.AddWord(tipo, objWord);
-        }
-
 
 
         internal void AddModelDefinition( ModelType modelDef)

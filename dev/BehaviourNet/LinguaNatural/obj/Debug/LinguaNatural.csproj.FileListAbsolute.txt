@@ -1,0 +1,8 @@
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\LinguaNatural\bin\Debug\xml\nlpdata.xml
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\LinguaNatural\bin\Debug\LinguaNatural.dll
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\LinguaNatural\bin\Debug\LinguaNatural.pdb
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\LinguaNatural\bin\Debug\Utils.dll
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\LinguaNatural\bin\Debug\Utils.pdb
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\LinguaNatural\obj\Debug\LinguaNatural.csprojResolveAssemblyReference.cache
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\LinguaNatural\obj\Debug\LinguaNatural.dll
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\LinguaNatural\obj\Debug\LinguaNatural.pdb

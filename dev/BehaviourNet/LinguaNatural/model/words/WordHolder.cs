@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BehaviourNet.utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,26 +10,28 @@ namespace BehaviourNet.engine.nlp
     public class WordHolder
     {
 
-        public WordHolder(string tipo)
+        public WordHolder(NLPConsts.tipoPalavra tipo)
         {
             this.tipo = tipo;
         }
 
         IList<Word> words = new List<Word>();
-        private string tipo;
+        private NLPConsts.tipoPalavra tipo;
         internal void AddWord(Word word)
         {
-            words.Add(word);
+            if (!ContainsWord(word))
+            {
+                words.Add(word);
+            }
         }
 
-        internal Word GetWord(string wordToFind)
+        public bool ContainsWord(Word word)
         {
-            return words.FirstOrDefault<Word>(item=>item.ContainsWord(wordToFind));
+            return words.Where(item => item.palavra == word.palavra).Any();
         }
-
-        internal bool ContainsWord(string wordToFind)
+        public bool ContainsWord(string word)
         {
-            return GetWord(wordToFind)!=null;
+            return words.Where(item => item.palavra == word).Any();
         }
     }
 }
