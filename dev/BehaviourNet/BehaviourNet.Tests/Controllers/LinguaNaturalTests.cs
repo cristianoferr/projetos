@@ -49,12 +49,12 @@ namespace BehaviourNet.Tests.Controllers
             Assert.IsNotNull(fraseAnalisada.frase.verbo);
             Assert.IsTrue(fraseAnalisada.frase.verbo.palavra=="ser");
 
-            fraseAnalisada = load.Interpretar("nós queremos um sistema");
+            fraseAnalisada = load.Interpretar("o sistema será chamado \"Sistema de Cadastro\"");
             Assert.IsNotNull(fraseAnalisada);
             Assert.IsNotNull(fraseAnalisada.frase);
-            Assert.IsTrue(fraseAnalisada.frase.tipoSujeito == NLPConsts.tipoSujeito.SUJEITO_SIMPLES, "TipoSujeito:" + fraseAnalisada.frase.tipoSujeito);
             Assert.IsNotNull(fraseAnalisada.frase.verbo);
-            Assert.IsTrue(fraseAnalisada.frase.verbo.palavra == "querer");
+            Assert.IsTrue(fraseAnalisada.frase.verbo.palavra == "chamar");
+            Assert.IsTrue(fraseAnalisada.frase.tipoSujeito == NLPConsts.tipoSujeito.SUJEITO_SIMPLES, "TipoSujeito:" + fraseAnalisada.frase.tipoSujeito);
         }
 
 
