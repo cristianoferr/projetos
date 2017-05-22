@@ -1,0 +1,7 @@
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler.Tests\obj\Debug\VirtualCompiler.Tests.csprojResolveAssemblyReference.cache
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler.Tests\bin\Debug\VirtualCompiler.Tests.dll
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler.Tests\bin\Debug\VirtualCompiler.Tests.pdb
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler.Tests\bin\Debug\VirtualCompiler.Components.dll
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler.Tests\bin\Debug\VirtualCompiler.Components.pdb
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler.Tests\obj\Debug\VirtualCompiler.Tests.dll
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler.Tests\obj\Debug\VirtualCompiler.Tests.pdb

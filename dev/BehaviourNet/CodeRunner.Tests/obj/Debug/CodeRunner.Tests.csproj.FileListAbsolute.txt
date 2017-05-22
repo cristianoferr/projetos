@@ -1,0 +1,9 @@
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\CodeRunner.Tests\obj\Debug\CodeRunner.Tests.csprojResolveAssemblyReference.cache
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\CodeRunner.Tests\bin\Debug\CodeRunner.Tests.dll
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\CodeRunner.Tests\bin\Debug\CodeRunner.Tests.pdb
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\CodeRunner.Tests\bin\Debug\CodeRunner.exe
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\CodeRunner.Tests\bin\Debug\Utils.dll
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\CodeRunner.Tests\bin\Debug\CodeRunner.pdb
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\CodeRunner.Tests\bin\Debug\Utils.pdb
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\CodeRunner.Tests\obj\Debug\CodeRunner.Tests.dll
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\CodeRunner.Tests\obj\Debug\CodeRunner.Tests.pdb

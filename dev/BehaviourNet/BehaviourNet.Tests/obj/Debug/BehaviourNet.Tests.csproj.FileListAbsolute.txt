@@ -157,3 +157,8 @@ F:\Java\repositorios\github\projetos\dev\BehaviourNet\BehaviourNet.Tests\bin\Deb
 F:\Java\repositorios\github\projetos\dev\BehaviourNet\BehaviourNet.Tests\obj\Debug\BehaviourNet.Tests.csprojResolveAssemblyReference.cache
 F:\Java\repositorios\github\projetos\dev\BehaviourNet\BehaviourNet.Tests\obj\Debug\BehaviourNet.Tests.dll
 F:\Java\repositorios\github\projetos\dev\BehaviourNet\BehaviourNet.Tests\obj\Debug\BehaviourNet.Tests.pdb
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Tests\bin\Debug\xml\nlpdata.xml
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Tests\bin\Debug\LinguaNatural.dll
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Tests\bin\Debug\Utils.dll
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Tests\bin\Debug\LinguaNatural.pdb
+G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\BehaviourNet.Tests\bin\Debug\Utils.pdb

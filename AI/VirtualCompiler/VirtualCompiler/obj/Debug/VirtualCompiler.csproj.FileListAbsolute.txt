@@ -1,0 +1,9 @@
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler\bin\Debug\VirtualCompiler.exe.config
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler\bin\Debug\VirtualCompiler.exe
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler\bin\Debug\VirtualCompiler.pdb
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler\obj\Debug\VirtualCompiler.csprojResolveAssemblyReference.cache
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler\obj\Debug\VirtualCompiler.Properties.Resources.resources
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler\obj\Debug\VirtualCompiler.csproj.GenerateResource.Cache
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler\obj\Debug\VirtualCompiler.exe
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler\obj\Debug\VirtualCompiler.pdb
+G:\java\repositorios\gitHub\projetos\AI\VirtualCompiler\VirtualCompiler\bin\Debug\programs\sample1.txt
