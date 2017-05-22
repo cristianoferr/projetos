@@ -1,0 +1,6 @@
+Line 47: Class WINSOCKLib.TCP of control TCP1 was not a loaded control class.
+Line 50: The property name _ExtentX in TCP1 is invalid.
+Line 51: The property name _ExtentY in TCP1 is invalid.
+Line 52: The property name RemoteHost in TCP1 is invalid.
+Line 53: The property name RemotePort in TCP1 is invalid.
+Line 54: The property name LocalPort in TCP1 is invalid.
