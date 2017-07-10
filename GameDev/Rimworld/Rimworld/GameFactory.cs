@@ -1,30 +1,40 @@
-﻿using Rimworld.model;
-using Rimworld.model.entities;
+﻿using Rimworld.model.entities;
 using Rimworld.model.entities.physical;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Rimworld
 {
     public class GameFactory
     {
-        public static HumanoidEntity SpawnPawn(int pointsToSpend)
+        public GameFactory(DataHolder holder)
         {
-            return new HumanoidEntity("Noname");
+            this.holder = holder;
+        }
+        public HumanoidEntity SpawnPawn(int pointsToSpend)
+        {
+            return holder.AddEntity(new HumanoidEntity()) as HumanoidEntity;
         }
 
-        public static model.entities.physical.GEStockPile SpawnStockPile(float x,float y,float width,float height)
+        public model.entities.physical.GEStockPile SpawnStockPile(float x, float y, float width, float height)
         {
             GEStockPile pile = new GEStockPile();
             pile.position.x = x;
             pile.position.y = y;
             pile.dimension.width = width;
             pile.dimension.height = height;
-            return pile;
+            return holder.AddEntity(pile) as GEStockPile;
 
         }
+
+        public GETownCenter SpawnTownCenter(string name, int x, int y)
+        {
+            GETownCenter pile = new GETownCenter();
+            pile.name = name;
+            pile.position.x = x;
+            pile.position.y = y;
+            holder.AddEntity(pile);
+            return pile;
+        }
+
+        public DataHolder holder { get; set; }
     }
 }

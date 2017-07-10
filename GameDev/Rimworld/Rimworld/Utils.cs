@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Rimworld
 {
-   public class Utils
+    public class Utils
     {
-       static Random rnd=new Random();
-        internal static int Random(int p1, int p2)
+        static Random rnd = new Random();
+        internal static int Random(float p1, float p2)
         {
-            return rnd.Next(p1, p2);
+            return rnd.Next((int)p1, (int)p2);
         }
     }
 }

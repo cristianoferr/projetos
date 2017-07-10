@@ -1,9 +1,9 @@
 ﻿
 namespace Rimworld.model.entities.physical
 {
-    public class GEStockPile : PhysicalEntity
+    public class GETownCenter : PhysicalEntity
     {
-        public GEStockPile()
+        public GETownCenter()
             : base()
         {
 

@@ -1,19 +1,20 @@
 ﻿using Rimworld.model.components.brain;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Rimworld.model.components
 {
     public class TraitManagerComponent : GameComponent
     {
-        public TraitManagerComponent(int pointsToDistribute)
+        public TraitManagerComponent()
             : base(GameConsts.COMPONENT_TYPE.TRAIT_MANAGER)
         {
             traits = new List<Trait>();
-            InitTraits(pointsToDistribute);
+
+        }
+
+        public override void Initialize()
+        {
+            InitTraits(GetValueAsInt(GameConsts.VAL_POINTS_TO_DISTRIBUTE));
         }
 
         private void InitTraits(int pointsToDistribute)
@@ -34,6 +35,6 @@ namespace Rimworld.model.components
         }
 
         public IList<Trait> traits { get; private set; }
-        
+
     }
 }

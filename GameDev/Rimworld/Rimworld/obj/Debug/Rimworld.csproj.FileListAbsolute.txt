@@ -3,3 +3,8 @@ F:\Java\repositorios\github\projetos\GameDev\Rimworld\Rimworld\bin\Debug\Rimworl
 F:\Java\repositorios\github\projetos\GameDev\Rimworld\Rimworld\obj\Debug\Rimworld.csprojResolveAssemblyReference.cache
 F:\Java\repositorios\github\projetos\GameDev\Rimworld\Rimworld\obj\Debug\Rimworld.dll
 F:\Java\repositorios\github\projetos\GameDev\Rimworld\Rimworld\obj\Debug\Rimworld.pdb
+G:\java\repositorios\gitHub\projetos\GameDev\Rimworld\Rimworld\bin\Debug\Rimworld.dll
+G:\java\repositorios\gitHub\projetos\GameDev\Rimworld\Rimworld\bin\Debug\Rimworld.pdb
+G:\java\repositorios\gitHub\projetos\GameDev\Rimworld\Rimworld\obj\Debug\Rimworld.csprojResolveAssemblyReference.cache
+G:\java\repositorios\gitHub\projetos\GameDev\Rimworld\Rimworld\obj\Debug\Rimworld.dll
+G:\java\repositorios\gitHub\projetos\GameDev\Rimworld\Rimworld\obj\Debug\Rimworld.pdb

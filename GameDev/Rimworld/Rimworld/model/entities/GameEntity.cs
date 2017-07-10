@@ -1,22 +1,40 @@
 ﻿using Rimworld.model.components;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Rimworld.model
 {
     //gameentity: qualquer coisa spawnavel.
-    public abstract class GameEntity
+    public abstract class GameEntity : TagObject
     {
         public GameEntity()
         {
-           // components = new List<GameComponent>();
+            // components = new List<GameComponent>();
         }
 
-        public IList<GameComponent> components { get; private set; }
+        public virtual void Initialize()
+        {
 
+        }
+
+        #region GameValues
+        public Dictionary<string, GameValue> values { get; private set; }
+
+        public void AddValue(string name, GameValue value)
+        {
+            if (values == null) { values = new Dictionary<string, GameValue>(); }
+            if (values.ContainsKey(name)) { values.Remove(name); }
+            values.Add(name, value);
+        }
+
+        public int GetValueAsInt(string name)
+        {
+            return (int)values[name].currValue;
+        }
+        #endregion GameValues
+
+        #region Components
+        public IList<GameComponent> components { get; private set; }
         public void AddComponent(GameComponent component)
         {
             if (components == null)
@@ -36,6 +54,7 @@ namespace Rimworld.model
             return components.Where(x => x.type == type).FirstOrDefault();
         }
 
-       
+        #endregion Components
+
     }
 }

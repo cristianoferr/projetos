@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,21 +40,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataHolder.cs" />
     <Compile Include="GameFactory.cs" />
-    <Compile Include="model\components\brain\Trait.cs" />
-    <Compile Include="model\components\brain\TraitManagerComponent.cs" />
-    <Compile Include="model\components\brain\BrainComponent.cs" />
+    <Compile Include="logic\TemplateInitializer.cs" />
+    <Compile Include="model\components\bodyparts\HeartComponent.cs" />
+    <Compile Include="model\components\GameValue.cs" />
+    <Compile Include="model\components\Trait.cs" />
+    <Compile Include="model\components\TraitManagerComponent.cs" />
+    <Compile Include="model\components\bodyparts\brain\BrainComponent.cs" />
+    <Compile Include="model\components\bodyparts\BodyPartsComponent.cs" />
     <Compile Include="model\components\GameComponent.cs" />
-    <Compile Include="model\components\StomachComponent.cs" />
-    <Compile Include="model\components\LegComponent.cs" />
+    <Compile Include="model\components\bodyparts\StomachComponent.cs" />
+    <Compile Include="model\components\bodyparts\LegComponent.cs" />
     <Compile Include="model\entities\physical\CreatureEntity.cs" />
     <Compile Include="model\entities\GameEntity.cs" />
+    <Compile Include="model\entities\physical\GETownCenter.cs" />
     <Compile Include="model\entities\physical\GEStockPile.cs" />
     <Compile Include="model\entities\physical\HumanoidEntity.cs" />
     <Compile Include="model\entities\physical\PhysicalEntity.cs" />
     <Compile Include="GameConsts.cs" />
     <Compile Include="model\Dimension.cs" />
+    <Compile Include="model\io\Property.cs" />
+    <Compile Include="model\io\Template.cs" />
+    <Compile Include="model\io\Templates.cs" />
     <Compile Include="model\Position.cs" />
+    <Compile Include="model\TagObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
