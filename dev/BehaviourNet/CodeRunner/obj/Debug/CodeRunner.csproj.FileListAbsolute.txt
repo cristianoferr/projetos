@@ -6,3 +6,6 @@ G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\CodeRunner\bin\Debug\CodeR
 G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\CodeRunner\bin\Debug\CodeRunner.pdb
 G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\CodeRunner\obj\Debug\CodeRunner.exe
 G:\java\repositorios\gitHub\projetos\dev\BehaviourNet\CodeRunner\obj\Debug\CodeRunner.pdb
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\CodeRunner\bin\Debug\CodeRunner.exe.config
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\CodeRunner\obj\Debug\CodeRunner.exe
+F:\Java\repositorios\github\projetos\dev\BehaviourNet\CodeRunner\obj\Debug\CodeRunner.pdb

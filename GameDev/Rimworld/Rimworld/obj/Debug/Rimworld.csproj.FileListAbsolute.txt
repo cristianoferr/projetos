@@ -1,0 +1,5 @@
+F:\Java\repositorios\github\projetos\GameDev\Rimworld\Rimworld\bin\Debug\Rimworld.dll
+F:\Java\repositorios\github\projetos\GameDev\Rimworld\Rimworld\bin\Debug\Rimworld.pdb
+F:\Java\repositorios\github\projetos\GameDev\Rimworld\Rimworld\obj\Debug\Rimworld.csprojResolveAssemblyReference.cache
+F:\Java\repositorios\github\projetos\GameDev\Rimworld\Rimworld\obj\Debug\Rimworld.dll
+F:\Java\repositorios\github\projetos\GameDev\Rimworld\Rimworld\obj\Debug\Rimworld.pdb
