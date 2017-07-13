@@ -1,7 +1,7 @@
 ﻿
 namespace Rimworld.model.entities
 {
-    public class HumanoidEntity : CreatureEntity
+    public class HumanoidEntity : MovableEntity
     {
         public HumanoidEntity()
             : base()

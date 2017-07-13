@@ -9,15 +9,16 @@ namespace Rimworld.model.io
     [DataContract]
     public class Templates
     {
-        public Templates()
+        public Templates(DataHolder holder)
         {
+            this.holder = holder;
             templates = new List<Template>();
         }
         [DataMember]
         public IList<Template> templates;
 
 
-        public static Templates LoadSaved()
+        public static Templates LoadSaved(DataHolder holder)
         {
             try
             {
@@ -25,6 +26,7 @@ namespace Rimworld.model.io
                 DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Templates));
                 Templates Templates = (Templates)ser.ReadObject(fileStream);
                 fileStream.Close();
+                Templates.holder = holder;
                 return Templates;
             }
             catch (System.Exception e)
@@ -68,5 +70,7 @@ namespace Rimworld.model.io
         {
             return GetTemplateWithTag(subComp.tagsAsText);
         }
+
+        public DataHolder holder { get; set; }
     }
 }

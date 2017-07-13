@@ -10,10 +10,10 @@ namespace Rimworld.logic
         public TemplateInitializer(DataHolder dataHolder)
         {
             this.dataHolder = dataHolder;
-            dataHolder.templates = Templates.LoadSaved();
-            //if (dataHolder.templates == null)
+            dataHolder.templates = Templates.LoadSaved(dataHolder);
+            if (dataHolder.templates == null)
             {
-                dataHolder.templates = new Templates();
+                dataHolder.templates = new Templates(dataHolder);
                 InitializeTemplates();
             }
         }
@@ -22,8 +22,20 @@ namespace Rimworld.logic
         {
             InitHumanoidTemplate();
 
+            InitNewTownTemplate();
 
 
+        }
+
+        private void InitNewTownTemplate()
+        {
+            Template template = templates.CreateTemplate("new town");
+            template.AddTag(GameConsts.TAG_STARTING_TOWN);
+            template.AddTag(GameConsts.TAG_HUMANOID);
+            template.entityToSpawn = typeof(PhysicalEntity);
+
+            Property humans = template.AddComponentWithTags(GameConsts.TAG_HUMANOID, GameConsts.TAG_PHYSICAL);
+            humans.howMuchToSpawn = new GameValue(GameConsts.DATA_TYPE.INT, 10, 20);
 
         }
 
@@ -32,12 +44,12 @@ namespace Rimworld.logic
             Template template = templates.CreateTemplate(GameConsts.TEMPL_HUMANOID_BODYPARTS);
             template.AddTag(GameConsts.TAG_BODYPARTS);
             template.AddTag(GameConsts.TAG_HUMANOID);
-            template.entityToSpawn = typeof(BodyPartsComponent);
+            template.entityToSpawn = typeof(BodyComponent);
 
             template.AddComponentWithTags(GameConsts.TAG_ORGAN, GameConsts.TAG_BRAIN).name = "BRAIN";
             template.AddComponentWithTags(GameConsts.TAG_ORGAN, GameConsts.TAG_HEART).name = "HEART";
 
-            Template templ = AddTemplate("brain", typeof(BodyPartsComponent), GameConsts.TAG_ORGAN, GameConsts.TAG_BRAIN);
+            Template templ = AddTemplate("brain", typeof(BodyComponent), GameConsts.TAG_ORGAN, GameConsts.TAG_BRAIN);
             templ = AddTemplate("heart", typeof(HeartComponent), GameConsts.TAG_ORGAN, GameConsts.TAG_HEART);
 
         }

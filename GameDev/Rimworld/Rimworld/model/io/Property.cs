@@ -20,5 +20,13 @@ namespace Rimworld.model.io
 
 
         public bool randomValue { get; set; }
+
+        public GameValue howMuchToSpawn { get; set; }
+
+        internal int CalcQtyToSpawn()
+        {
+            if (howMuchToSpawn == null) return 1;
+            return Utils.Random(howMuchToSpawn.minValue, howMuchToSpawn.maxValue);
+        }
     }
 }

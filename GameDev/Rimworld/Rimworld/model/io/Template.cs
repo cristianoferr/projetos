@@ -1,4 +1,5 @@
 ﻿using Rimworld.model.components;
+using Rimworld.model.entities;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -45,22 +46,46 @@ namespace Rimworld.model.io
             return prop;
         }
 
-        public GameEntity Spawn()
+        public GameEntity Spawn(World world, Position pos = null)
         {
+            Utils.Log("Spawning template: " + tagsAsText);
             GameEntity result = Activator.CreateInstance(entityToSpawn) as GameEntity;
+            PhysicalEntity physEnt = result as PhysicalEntity;
+            if (physEnt != null)
+            {
+
+                world.AddEntity(physEnt);
+                physEnt.PlaceNear(pos);
+            }
+
             ApplyValues(result);
 
             foreach (Property subComp in subComponents)
             {
-                Template subTempl = owner.GetTemplateWithTag(subComp);
-                if (subTempl == null)
+                int qtdToSpawn = subComp.CalcQtyToSpawn();
+                for (int i = 0; i < qtdToSpawn; i++)
                 {
-                    throw new Exception("Nenhum template com a tag '" + subComp.tagsAsText + "' encontrado!");
+                    SpawnSubComponent(world, pos, result, subComp);
                 }
-                result.AddComponent(subTempl.Spawn() as GameComponent);
+
             }
             result.Initialize();
             return result;
+        }
+
+        private void SpawnSubComponent(World world, Position pos, GameEntity result, Property subComp)
+        {
+            Template subTempl = owner.GetTemplateWithTag(subComp);
+            if (subTempl == null)
+            {
+                throw new Exception("Nenhum template com a tag '" + subComp.tagsAsText + "' encontrado!");
+            }
+            GameEntity subEnt = subTempl.Spawn(world, pos);
+            GameComponent gameComp = subEnt as GameComponent;
+            if (gameComp != null)
+            {
+                result.AddComponent(gameComp);
+            }
         }
 
         private void ApplyValues(GameEntity result)

@@ -12,3 +12,5 @@ G:\java\repositorios\gitHub\projetos\GameDev\Rimworld\Rimworld.test\bin\Debug\Ri
 G:\java\repositorios\gitHub\projetos\GameDev\Rimworld\Rimworld.test\obj\Debug\Rimworld.test.csprojResolveAssemblyReference.cache
 G:\java\repositorios\gitHub\projetos\GameDev\Rimworld\Rimworld.test\obj\Debug\Rimworld.test.dll
 G:\java\repositorios\gitHub\projetos\GameDev\Rimworld\Rimworld.test\obj\Debug\Rimworld.test.pdb
+G:\java\repositorios\gitHub\projetos\GameDev\Rimworld\Rimworld.test\bin\Debug\UnityEngine.dll
+G:\java\repositorios\gitHub\projetos\GameDev\Rimworld\Rimworld.test\bin\Debug\UnityEngine.xml
