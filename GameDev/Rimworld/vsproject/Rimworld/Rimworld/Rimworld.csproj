@@ -16,7 +16,8 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\output\bin\Debug\</OutputPath>
+    <IntermediateOutputPath>..\..\output\obj\</IntermediateOutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,12 +25,19 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\output\bin\Release\</OutputPath>
+    <IntermediateOutputPath>..\..\output\obj\</IntermediateOutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MoonSharp.Interpreter">
+      <HintPath>..\Assets\Plugins\MoonSharp.Interpreter.dll</HintPath>
+    </Reference>
+    <Reference Include="MoonSharp.RemoteDebugger">
+      <HintPath>..\Assets\Plugins\MoonSharp.RemoteDebugger.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -39,20 +47,26 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEditor">
-      <HintPath>..\..\..\..\..\..\..\pessoal\programas\Unity\Editor\Data\Managed\UnityEditor.dll</HintPath>
+      <HintPath>..\..\UnityLibs\UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\..\..\pessoal\programas\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>..\..\UnityLibs\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\UnityLibs\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controllers\BuildModeController.cs" />
+    <Compile Include="controllers\FurnitureSpriteController.cs" />
     <Compile Include="controllers\MouseController.cs" />
     <Compile Include="controllers\SpriteManager.cs" />
     <Compile Include="controllers\TileSpriteController.cs" />
     <Compile Include="controllers\WorldController.cs" />
     <Compile Include="DataHolder.cs" />
     <Compile Include="GameFactory.cs" />
+    <Compile Include="logic\Inventory.cs" />
+    <Compile Include="logic\ISelectableInterface.cs" />
     <Compile Include="logic\TemplateInitializer.cs" />
     <Compile Include="model\components\bodyparts\HeartComponent.cs" />
     <Compile Include="model\components\GameValue.cs" />
@@ -77,9 +91,13 @@
     <Compile Include="model\entities\map\Room.cs" />
     <Compile Include="model\entities\map\Tile.cs" />
     <Compile Include="model\entities\World.cs" />
+    <Compile Include="model\furniture\FurnitureActions.cs" />
     <Compile Include="model\io\Property.cs" />
     <Compile Include="model\io\Template.cs" />
     <Compile Include="model\io\Templates.cs" />
+    <Compile Include="model\job\Job.cs" />
+    <Compile Include="model\job\JobQueue.cs" />
+    <Compile Include="testScripts\TileTestController.cs" />
     <Compile Include="Utilities\Pathfinding\Path_AStar.cs" />
     <Compile Include="Utilities\Pathfinding\Path_Edge.cs" />
     <Compile Include="Utilities\Pathfinding\Path_Node.cs" />
@@ -91,6 +109,7 @@
     <Compile Include="Utilities\Priority_Queue\FastPriorityQueueNode.cs" />
     <Compile Include="Utilities\Priority_Queue\IPriorityQueue.cs" />
     <Compile Include="Utilities\Priority_Queue\SimplePriorityQueue.cs" />
+    <Compile Include="Utilities\SimplePool.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
