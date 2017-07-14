@@ -1,0 +1,9 @@
+*.meta
+
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+bin/
+obj/

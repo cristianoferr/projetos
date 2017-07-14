@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{BC717C06-882D-74F3-2951-01F05D126AD7}") = "Project Porcupine - Ep 063", "Assembly-CSharp.csproj", "{C817E77B-F829-D40F-ADA4-56730F71E91E}"
+EndProject
+Project("{BC717C06-882D-74F3-2951-01F05D126AD7}") = "Project Porcupine - Ep 063", "Assembly-CSharp-Editor.csproj", "{32308231-A77D-07C3-C166-78BDF5BA0046}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C817E77B-F829-D40F-ADA4-56730F71E91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C817E77B-F829-D40F-ADA4-56730F71E91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C817E77B-F829-D40F-ADA4-56730F71E91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C817E77B-F829-D40F-ADA4-56730F71E91E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32308231-A77D-07C3-C166-78BDF5BA0046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32308231-A77D-07C3-C166-78BDF5BA0046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32308231-A77D-07C3-C166-78BDF5BA0046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32308231-A77D-07C3-C166-78BDF5BA0046}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

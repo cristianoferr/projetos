@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{2286A723-2DED-0E6E-195A-C80A3A4CA679}") = "Project Porcupine - Ep 066", "Assembly-CSharp.csproj", "{9B53459C-41AA-0176-013A-E67C60435D73}"
+EndProject
+Project("{2286A723-2DED-0E6E-195A-C80A3A4CA679}") = "Project Porcupine - Ep 066", "Assembly-CSharp-Editor.csproj", "{E133EF4A-4944-97ED-8C26-2671495570DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B53459C-41AA-0176-013A-E67C60435D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B53459C-41AA-0176-013A-E67C60435D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B53459C-41AA-0176-013A-E67C60435D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B53459C-41AA-0176-013A-E67C60435D73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E133EF4A-4944-97ED-8C26-2671495570DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E133EF4A-4944-97ED-8C26-2671495570DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E133EF4A-4944-97ED-8C26-2671495570DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E133EF4A-4944-97ED-8C26-2671495570DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Controllers\FileLoadController.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Controllers\DialogBoxController.cs" Line="4" Column="1" />
+      <File FileName="Assets\Scripts\Controllers\SpriteManager.cs" Line="84" Column="60" />
+      <File FileName="Assets\UI\DialogListItem.cs" Line="8" Column="9" />
+      <File FileName="Assets\Scripts\Controllers\FileSaveController.cs" Line="72" Column="22" />
+      <File FileName="Assets\Scripts\Controllers\FileLoadController.cs" Line="105" Column="2" />
+      <File FileName="Assets\Scripts\Controllers\WorldController.cs" Line="86" Column="23" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
