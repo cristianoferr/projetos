@@ -1,10 +1,10 @@
-import { AngMaterialPage } from './app.po';
+import { App1Page } from './app.po';
 
-describe('ang-material App', function() {
-  let page: AngMaterialPage;
+describe('app1 App', function() {
+  let page: App1Page;
 
   beforeEach(() => {
-    page = new AngMaterialPage();
+    page = new App1Page();
   });
 
   it('should display message saying app works', () => {
